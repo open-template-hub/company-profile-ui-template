@@ -1,0 +1,75 @@
+<nav class="bottom-nav">
+  <a (click)="closeSettings()" *ngIf="currentUser && openSettings" href="javascript:void(0)">
+    <i class="material-icons">arrow_back_ios</i>
+    <span>
+        BACK
+    </span>
+  </a>
+  <a *ngIf="!openSettings" routerLink="{{URLS.dashboard.root}}">
+    <i class="material-icons">dashboard</i>
+    <span>
+        DASHBOARD
+    </span>
+  </a>
+  <a *ngIf="currentUser && userInfo.payload?.userProfileActivated && !openSettings" routerLink="{{URLS.dashboard.contribute}}">
+    <i class="material-icons">public</i>
+    <span>
+        CONTRIBUTE
+    </span>
+  </a>
+  <a *ngIf="!openSettings" routerLink="{{currentUser ? URLS.dashboard.learn : URLS.showroom}}">
+    <i class="material-icons">event</i>
+    <span>
+        EVENTS
+    </span>
+  </a>
+  <a (click)="openSettings = !openSettings" *ngIf="currentUser  && !openSettings" href="javascript:void(0)">
+    <i class="material-icons">settings</i>
+    <span>
+        SETTINGS
+    </span>
+  </a>
+  <a *ngIf="currentUser && openSettings && !openOtherSettings" routerLink="{{URLS.settings.editProfile}}">
+    <i class="material-icons">person</i>
+    <span>
+        EDIT PROFILE
+    </span>
+  </a>
+  <a *ngIf="currentUser && openSettings" routerLink="{{URLS.dashboard.privacy}}">
+    <i class="material-icons">privacy_tip</i>
+    <span>
+        PRIVACY
+    </span>
+  </a>
+  <a (click)="openOtherSettings = !openOtherSettings" *ngIf="currentUser && openSettings && !openOtherSettings"
+     href="javascript:void(0)">
+    <i class="material-icons">arrow_forward_ios</i>
+    <span>
+        MORE
+    </span>
+  </a>
+  <a (click)="switchTheme()" *ngIf="currentUser && openSettings && openOtherSettings" href="javascript:void(0)">
+    <i class="material-icons">invert_colors</i>
+    <span>
+        THEME
+    </span>
+  </a>
+  <a *ngIf="!currentUser  && !openSettings" routerLink="{{URLS.signup}}">
+    <i class="material-icons">person_add</i>
+    <span>
+        REGISTER
+    </span>
+  </a>
+  <a *ngIf="!currentUser  && !openSettings" class="login" routerLink="{{URLS.login}}">
+    <i class="material-icons">fingerprint</i>
+    <span>
+        LOG IN
+    </span>
+  </a>
+  <a (click)="logout()" *ngIf="currentUser  && openSettings && openOtherSettings" href="javascript:void(0)" id=logout>
+    <i class="material-icons">exit_to_app</i>
+    <span>
+        LOGOUT
+    </span>
+  </a>
+</nav>

@@ -1,0 +1,27 @@
+.showroom-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.showroom-items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-bottom: 200px;
+}
+
+@media only screen and (min-width: 1300px) {
+  .showroom-items app-card1 .content-column-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (hover: hover) {
+  .showroom-items app-card1:hover {
+  }
+}

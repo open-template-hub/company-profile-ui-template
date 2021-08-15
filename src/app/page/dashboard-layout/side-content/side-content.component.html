@@ -1,0 +1,66 @@
+<div class="side-content-wrapper">
+  <div class="side-content">
+    <app-search></app-search>
+    <app-card1 [bottomWrapper]="recommendedEvents?.length > 0" [enableHeader]="false" [isBackgroundColor]="true"
+               [isScrollable]="true"
+               [margin]="false"
+               [paddingContent]="false" [shadow]="false" class="upcoming-card">
+      <div body class="section">
+        <p *ngIf="recommendedEvents?.length > 0">Explore Events</p>
+        <hr *ngIf="recommendedEvents?.length > 0" style="width: 100%; border: 1px solid var(--brand-color); margin-top: 5px;"/>
+        <a *ngFor="let event of recommendedEvents">
+          <app-event-data (titleClicked)="openEventDetails($event)"
+                                 [attendeeButton]="false"
+                                 [category]="event.payload?.category"
+                                 [centeredTitle]="true"
+                                 [user]="event.user"
+                                 [count]="event.count"
+                                 [date]="event.date"
+                                 [description]="event.payload?.description"
+                                 [dropButton]="false"
+                                 [duration]="event.duration"
+                                 [id]="event._id"
+                                 [isBackgroundColor]="true"
+                                 [isLastItem]="recommendedEvents.indexOf(event) === recommendedEvents.length - 1"
+                                 [isPremium]="event.isPremium"
+                                 [isSmallTitle]="true"
+                                 [leafCategory]="event.payload?.leafCategory"
+                                 [link]="event.payload?.link"
+                                 [notFixedHeight]="true"
+                                 [price]="event.payload?.price"
+                                 [showCalendar]="false"
+                                 [subCategory]="event.payload?.subCategory"
+                                 [title]="event.title" [showHamburgerMenu]="false">
+          </app-event-data>
+        </a>
+        <p *ngIf="recommendedEventsByFollowingList?.length > 0">Followed Contributors</p>
+        <hr *ngIf="recommendedEventsByFollowingList?.length > 0" style="width: 100%; border: 1px solid var(--brand-color); margin-top: 5px;"/>
+        <a *ngFor="let event of recommendedEventsByFollowingList">
+          <app-event-data (titleClicked)="openEventDetails($event)"
+                                 [attendeeButton]="false"
+                                 [category]="event.payload?.category"
+                                 [centeredTitle]="true"
+                                 [user]="event.user"
+                                 [count]="event.count"
+                                 [date]="event.date"
+                                 [description]="event.payload?.description"
+                                 [dropButton]="false"
+                                 [duration]="event.duration"
+                                 [id]="event._id"
+                                 [isBackgroundColor]="true"
+                                 [isLastItem]="recommendedEventsByFollowingList.indexOf(event) === recommendedEventsByFollowingList.length - 1"
+                                 [isPremium]="event.isPremium"
+                                 [isSmallTitle]="true"
+                                 [leafCategory]="event.payload?.leafCategory"
+                                 [link]="event.payload?.link"
+                                 [notFixedHeight]="true"
+                                 [price]="event.payload?.price"
+                                 [showCalendar]="false"
+                                 [subCategory]="event.payload?.subCategory"
+                                 [title]="event.title" [inProgress]="event.inProgress" [showHamburgerMenu]="false">
+          </app-event-data>
+        </a>
+      </div>
+    </app-card1>
+  </div>
+</div>

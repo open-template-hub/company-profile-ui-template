@@ -1,0 +1,22 @@
+.rate-wrapper {
+  display: flex;
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 999px) {
+  .rate-badge-wrapper label {
+    font-size: 1.4em;
+  }
+
+  .rate-badge-wrapper {
+    left: 0;
+    width: 100%;
+    display: block;
+  }
+
+  .rate-wrapper {
+    width: -webkit-fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

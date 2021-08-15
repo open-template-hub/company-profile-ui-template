@@ -1,0 +1,30 @@
+name: On Version Update Workflows
+
+on:
+  push:
+    paths-ignore:
+      - 'package.json'
+    branches:
+      - "master"
+
+jobs:
+  bump-version:
+    name: "Update Version"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
+
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Bump Version and Create Tag
+        uses: phips28/gh-action-bump-version@master
+        with:
+          tag-prefix: ''
+          token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}

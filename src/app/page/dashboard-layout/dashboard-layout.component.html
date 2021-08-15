@@ -1,0 +1,16 @@
+<div [class.dark-theme]="darkTheme === 'true'" [class.side-nav-closed]="sideNavClosed === 'true'">
+  <app-dashboard-layout-top-nav></app-dashboard-layout-top-nav>
+  <app-dashboard-layout-side-nav></app-dashboard-layout-side-nav>
+  <app-side-content></app-side-content>
+  <div class="dashboard-layout-page">
+    <div [class.dashboard-layout-page-top-loading]="loading">
+    </div>
+    <div class="dashboard-layout-page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="footer-wrap">
+    <app-footer [hideShadow]="true"></app-footer>
+  </div>
+  <app-bottom-nav></app-bottom-nav>
+</div>

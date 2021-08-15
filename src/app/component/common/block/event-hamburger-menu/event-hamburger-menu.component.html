@@ -1,0 +1,40 @@
+<div #menu class="hamburger-menu">
+  <i class="material-icons" #icon>menu</i>
+  <div  *ngIf="display" class="menu-list">
+    <div class="share">
+      <p>Share</p>
+      <hr>
+      <div fxLayout="row" class="content">
+        <a class="twitter-area" (click)="shareViaClicked.emit( 'twitter' )">
+          <app-social-button [brand]="environment.social.twitter.cssClass"
+                             [circle]="true" [isSmallLogo]="true"></app-social-button>
+          <p>Twitter</p>
+        </a>
+        <a class="linkedin-area" style="margin-left: 30px;">
+          <a class="linkedin- area" (click)="shareViaClicked.emit( 'linkedin' )">
+            <app-social-button [brand]="environment.social.linkedin.cssClass"
+                               [circle]="true" [isSmallLogo]="true"></app-social-button>
+            <p>Linkedin</p>
+          </a>
+        </a>
+      </div>
+    </div>
+    <div class="calendar" *ngIf="showCalendar">
+      <p>Calendar</p>
+      <hr>
+      <div fxLayout="row" class="content">
+        <app-social-button (click)="calendarClicked.emit(true)" [brand]="environment.social.appleCalendar.cssClass"
+                           [flexStart]="true"
+                           [localImage]="environment.social.appleCalendar.logo"
+                           [noTextStyle]="true"
+                           class="apple-calendar"></app-social-button>
+        <app-social-button style="margin-left: 30px;" (click)="calendarClicked.emit(true)"
+                           [brand]="environment.social.googleCalendar.cssClass"
+                           [flexStart]="true"
+                           [localImage]="environment.social.googleCalendar.logo"
+                           [noTextStyle]="true"
+                           class="google-calendar"></app-social-button>
+      </div>
+    </div>
+  </div>
+</div>

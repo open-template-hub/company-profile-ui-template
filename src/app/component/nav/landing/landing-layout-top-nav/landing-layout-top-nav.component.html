@@ -1,0 +1,46 @@
+<nav class="top-nav rounded-box">
+  <a class="brand" routerLink="{{URLS.root}}">
+    <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
+    <h2>Open Template Hub</h2>
+  </a>
+  <a *ngIf="currentUser" routerLink="{{URLS.dashboard.root}}">
+    <i class="material-icons">dashboard</i>
+    <span>
+        DASHBOARD
+    </span>
+  </a>
+  <!--
+  <a *ngIf="!currentUser" routerLink="{{URLS.dashboard.createEvent}}">
+    <i class="material-icons">public</i>
+    <span>
+        CREATE EVENT
+    </span>
+  </a>
+  -->
+  <a *ngIf="!currentUser" routerLink="{{URLS.showroom}}">
+    <i class="material-icons">event</i>
+    <span>
+        EVENTS
+    </span>
+  </a>
+  <a *ngIf="!currentUser" routerLink="{{URLS.signup}}">
+    <i class="material-icons">person_add</i>
+    <span>
+        REGISTER
+    </span>
+  </a>
+  <a *ngIf="!currentUser" class="login" routerLink="{{URLS.login}}">
+    <i class="material-icons">fingerprint</i>
+    <span>
+        LOG IN
+    </span>
+  </a>
+  <a (click)="logout()" *ngIf="currentUser" href="javascript:void(0)" id=logout>
+    <i class="material-icons">exit_to_app</i>
+    <span>
+        LOGOUT
+    </span>
+  </a>
+</nav>
+<div [class.landing-layout-top-nav-loading]="loading">
+</div>

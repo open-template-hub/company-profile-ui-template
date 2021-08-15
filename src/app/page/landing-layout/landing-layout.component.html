@@ -1,0 +1,11 @@
+<div class="brand-in-page-wrapper">
+  <div class="brand-in-page">
+    <a class="brand" routerLink="{{URLS.root}}">
+      <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
+      <h2>OpenTemplateHub</h2>
+    </a>
+  </div>
+</div>
+<div [class.landing-layout-in-page-loading]="loading">
+</div>
+<router-outlet></router-outlet>

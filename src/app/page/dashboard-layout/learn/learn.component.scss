@@ -1,0 +1,149 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: initial;
+  margin-top: 1.5em;
+}
+
+.search-area {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  width: -webkit-fill-available;
+  max-width: 800px;
+  height: 120px;
+  z-index: 10;
+  background-color: var(--background-color);
+  padding-bottom: 10px;
+}
+
+.search-area ::placeholder {
+  color: var(--lighter-contrast);
+}
+
+.search-area input, .search-area ::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.search-area i {
+  cursor: pointer;
+  align-items: center;
+  padding: 4px;
+}
+
+.search-bar {
+  display: flex;
+  width: -webkit-fill-available;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.search-results {
+  min-height: 80px;
+  position: absolute;
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  top: 50px;
+  overflow-x: auto;
+  background-color: var(--background-color);
+  box-shadow: 0 0 5px var(--shadow);
+  z-index: 12;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow: auto;
+  max-height: min(calc(100vh - 260px), 640px);
+  font-size: 14px;
+}
+
+.search-results a {
+  box-sizing: border-box;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 80px;
+  border-bottom: 1px solid var(--darker-contrast);
+}
+
+.search-results app-label-with-icon-data i {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.input-without-icon {
+  margin-left: 45px;
+  margin-bottom: 0.5em;
+}
+
+.learn-page-events {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1600px) {
+
+}
+@media only screen and (min-width: 1000px) {
+  .learn-page {
+    display: block;
+    padding-top: 110px;
+    min-height: 100vh;
+  }
+
+  .learn-page .learn-card {
+    width: -webkit-fill-available;
+    min-width: 400px;
+  }
+
+  .learn-page .upcoming-card {
+    margin-left: 2em;
+  }
+
+  .learn-page .upcoming-card.sticky {
+    position: fixed;
+    top: 50px;
+    right: 32px;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .learn-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 85px;
+  }
+
+  .learn-page app-card1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+}
+
+@media (hover: hover) {
+  .search-results a:hover {
+    background-color: var(--overlay);
+  }
+
+  .search-area i:hover {
+    border-color: var(--brand-color)
+  }
+}

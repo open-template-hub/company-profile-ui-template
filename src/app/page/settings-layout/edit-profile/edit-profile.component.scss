@@ -1,0 +1,196 @@
+@import "../../../../styles/theme/themes";
+
+.interest-list app-label-with-icon-data {
+  margin: 20px;
+  min-width: -webkit-fit-content;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.interest-search-results {
+  cursor: pointer;
+}
+
+.interest-list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1000px) {
+  .dashboard-profile-page {
+    display: block;
+    align-items: center;
+    padding-top: 110px;
+  }
+
+  .dashboard-profile-page app-card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  app-card1 .img-with-size {
+    margin-bottom: 1.5em;
+    margin-top: 0.5em;
+    margin-left: 1em;
+    overflow-x: auto;
+    text-align: left;
+  }
+
+  app-card1 .img-with-size .profile-img-wrapper {
+    margin-left: 103px;
+  }
+
+  .section-output {
+    width: -webkit-fill-available;
+  }
+
+  .dashboard-layout-side-nav-search {
+    color: var(--color);
+  }
+
+  .interest-search-area {
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .interest-search-area input {
+    height: 38px;
+    margin-left: 10px;
+  }
+
+  .interest-search-results ::placeholder {
+    color: var(--lighter);
+  }
+
+  .interest-search-results input {
+    border-bottom: 1px solid var(--lighter);
+    width: 150px;
+  }
+
+  .interest-search-results input, .interest-search-results ::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .interest-search-results input:focus {
+    border-bottom: 1px solid var(--color);
+  }
+
+  .interest-search-results {
+    position: absolute;
+    max-height: 240px;
+    //width: 256px;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: auto;
+    background-color: var(--background-color);
+    box-shadow: 0 0 5px var(--shadow);
+    z-index: 12;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: auto;
+    margin-top: 50px;
+    margin-right: 45px;
+  }
+
+  .interest-search-results a {
+    box-sizing: border-box;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 80px;
+    border-bottom: 1px solid var(--darker-contrast);
+    cursor: pointer;
+  }
+
+  .interest-search-results .search-result-user-label {
+    box-sizing: border-box;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--contrast);
+    background-color: var(--color);
+    color: var(--contrast);
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .dashboard-profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 85px;
+  }
+
+  .dashboard-profile-page app-card1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  app-card1 .img-with-size {
+    margin-bottom: 1.5em;
+    margin-top: 0.5em;
+    overflow-x: auto;
+    text-align: center;
+    align-items: center;
+  }
+
+  .interest-search-area {
+    width: 100%;
+    position: relative;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .interest-search-area input {
+    height: 38px;
+    margin-left: 10px;
+  }
+
+  .interest-search-results {
+    position: absolute;
+    max-height: 240px;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-x: auto;
+    background-color: var(--background-color);
+    box-shadow: 0 0 5px var(--shadow);
+    z-index: 12;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: auto;
+    margin-top: 50px;
+    margin-right: 45px;
+  }
+
+  .interest-search-results a {
+    box-sizing: border-box;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 55px;
+    border-bottom: 1px solid var(--darker-contrast);
+  }
+
+  .interest-list {
+    flex-direction: column;
+  }
+}

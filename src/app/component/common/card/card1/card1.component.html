@@ -1,0 +1,43 @@
+<div [class.background-color]="isBackgroundColor" [class.card1-scrollable-content]="isScrollable"
+     [class.card1-small]="isSmall"
+     [class.no-margin]="!margin" [class.no-shadow]="!shadow" [style.height]="height ? height : ''"
+     [style.width]="width ? width : ''" class="card1">
+  <div *ngIf="topWrapper" [class.card1-top-wrapper-in-brand-color]="topWrapperInBrandColor"
+       class="card1-top-wrapper">
+  </div>
+  <div *ngIf="!headerProfileImg && enableHeader && !enableHeaderFullImg" class="card1-header rounded-box">
+    <h3>{{title}}</h3>
+  </div>
+
+  <div *ngIf="headerProfileImg && enableHeader" class="card1-header card1-header-img">
+    <div class="profile-img-wrapper">
+      <img [src]="headerProfileImg" alt="profile img" class="profile-img-full"/>
+    </div>
+  </div>
+
+  <div *ngIf="enableHeader && enableHeaderFullImg"
+       class="card1-header card1-header-img card1-header-full-img rounded-box" [class.max-height]="maxHeight"
+       [class.video]="containsVideo">
+    <ng-content select="[headerFullImg]"></ng-content>
+  </div>
+
+  <div *ngIf="subHeaderProfileImg" class="profile-img-wrapper card1-sub-header-profile-img">
+    <img [src]="subHeaderProfileImg" alt="profile img"
+         class="profile-img-full"/>
+  </div>
+
+  <div *ngIf="underHeaderProfileImg" class="profile-img-wrapper card1-under-header-profile-img">
+    <img [src]="underHeaderProfileImg" alt="profile img"
+         class="profile-img-full"/>
+  </div>
+
+  <div [class.no-padding]="!paddingContent" [class.no-top-padding]="!paddingTopContent"
+       [class.overflow-visible]="isCardContentOverflowVisible"
+       class="card1-content">
+    <ng-content select="[body]"></ng-content>
+  </div>
+  <div *ngIf="bottomWrapper" [class.card1-bottom-wrapper-in-brand-color]="bottomWrapperInBrandColor"
+       class="card1-bottom-wrapper">
+  </div>
+  <span *ngIf="ribbon.type" [attr.data-ribbon]="ribbon.text" [classList]="'ribbon ribbon-' + ribbon.type"></span>
+</div>

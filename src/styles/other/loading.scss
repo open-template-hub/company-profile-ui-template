@@ -1,0 +1,73 @@
+.dashboard-layout-top-nav-loading, .landing-layout-in-page-loading {
+  top: calc(55px + env(safe-area-inset-top));
+  left: 0;
+}
+
+.landing-layout-top-nav-loading {
+  top: calc(90px + env(safe-area-inset-top));
+  left: 0;
+}
+
+.dashboard-layout-page-top-loading {
+  top: env(safe-area-inset-top);
+  left: 256px;
+}
+
+.side-nav-closed .dashboard-layout-page-top-loading {
+  left: 80px;
+}
+
+.dashboard-layout-top-nav-loading, .landing-layout-in-page-loading, .landing-layout-top-nav-loading, .dashboard-layout-page-top-loading {
+  width: 100%;
+  height: 4px;
+  position: fixed;
+  background-color: var(--overlay);
+  overflow: hidden;
+  z-index: 12;
+}
+
+.dashboard-layout-top-nav-loading::after, .landing-layout-in-page-loading::after, .landing-layout-top-nav-loading::after, .dashboard-layout-page-top-loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  left: calc(-25%);
+  width: 50%;
+  height: 4px;
+  border-radius: 3px;
+  background-color: var(--brand-color);
+  animation: loading-bar 1.5s infinite ease-in-out;
+}
+
+@keyframes loading-bar {
+  50% {
+    left: 75%;
+    background: var(--brand-light);
+  }
+}
+
+@media only screen and (max-width: 999px) {
+
+  .dashboard-layout-page-top-loading, .landing-layout-top-nav-loading {
+    visibility: hidden;
+  }
+
+  .dashboard-layout-top-nav-loading, .landing-layout-in-page-loading {
+    visibility: visible;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .dashboard-layout-page-top-loading, .landing-layout-top-nav-loading {
+    visibility: visible;
+  }
+
+  .dashboard-layout-page .card-bottom-loading {
+    visibility: hidden;
+  }
+
+  .dashboard-layout-top-nav-loading, .landing-layout-in-page-loading {
+    visibility: hidden;
+  }
+}

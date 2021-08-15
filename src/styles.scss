@@ -1,0 +1,59 @@
+@import "themes";
+@import "styles/other/input";
+@import "alert";
+@import "loading";
+@import "brand";
+@import "social";
+@import "profile";
+@import "animation";
+@import "styles/other/util";
+@import "styles/other/page";
+
+html, body {
+  min-height: 100vh;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  overflow: auto;
+  font-size: 17px;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track:vertical {
+  background: var(--lighter-contrast);
+}
+
+body::-webkit-scrollbar-thumb:vertical {
+  background: var(--darker-contrast);
+}
+
+body::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+p {
+  word-break: break-all
+}
+
+p, a, h1, h2, h3, h4, h5, h6, label {
+  color: var(--color);
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+
+  a:hover {
+    color: var(--darker);
+    background: rgba(89, 118, 150, 0.2);
+  }
+}

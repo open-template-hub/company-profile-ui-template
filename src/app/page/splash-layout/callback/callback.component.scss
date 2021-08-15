@@ -1,0 +1,103 @@
+.splash-content {
+  margin-top: 30vh;
+}
+
+.splash-logos > * {
+  margin: 8px;
+}
+
+.splash-logos i {
+  font-size: 28px;
+}
+
+.splash-logos img {
+  height: 55px;
+}
+
+.splash-loading-bar {
+  width: 130px;
+  height: 2px;
+  background: #cfcfcf;
+  margin-top: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.splash-loading-bar::before {
+  content: "";
+  width: 68px;
+  height: 2px;
+  background: var(--brand-color);
+  position: absolute;
+  left: -34px;
+  animation: splash-loading-bar 1.5s infinite ease;
+}
+
+.splash-content .alert-with-icon {
+  margin-top: 22px;
+}
+
+// Social
+
+.twitter.splash-loading-bar {
+  --social: var(--twitter);
+}
+
+.google.splash-loading-bar {
+  --social: var(--google);
+}
+
+.facebook-f.splash-loading-bar {
+  --social: var(--facebook);
+}
+
+.linkedin-in.splash-loading-bar {
+  --social: var(--linkedin);
+}
+
+.vk.splash-loading-bar {
+  --social: var(--vk);
+}
+
+.twitch.splash-loading-bar {
+  --social: var(--twitch);
+}
+
+.dribbble.splash-loading-bar {
+  --social: var(--dribbble);
+}
+
+.reddit-alien.splash-loading-bar {
+  --social: var(--reddit);
+}
+
+.pinterest.splash-loading-bar {
+  --social: var(--pinterest);
+}
+
+.yandex.splash-loading-bar {
+  --social: var(--yandex);
+}
+
+.github.splash-loading-bar {
+  --social: var(--github);
+}
+
+.stripe-s.splash-loading-bar {
+  --social: var(--stripe);
+}
+
+.coinbase.splash-loading-bar {
+  --social: var(--coinbase);
+}
+
+.paypal.splash-loading-bar {
+  --social: var(--paypal);
+}
+
+@keyframes splash-loading-bar {
+  50% {
+    left: 96px;
+    background: var(--social);
+  }
+}

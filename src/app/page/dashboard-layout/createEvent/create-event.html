@@ -1,0 +1,133 @@
+<div class="contribute-page">
+  <app-card1 [enableHeader]="false" [paddingTopContent]="false" [isCardContentOverflowVisible]="true" [isScrollable]="true" class="contribute-card">
+    <div body class="section">
+      <!-- primary info fields -->
+      <form (ngSubmit)="onSubmit()" [formGroup]="contributeForm">
+        <div class="form-content">
+          <div class="left-column">
+            <div [class.input-error]="submitted && f.title.invalid" class="input-with-icon">
+              <input formControlName="title" placeholder="Make a event..." required type="text">
+              <i area-hidden="true" class="fas fa-clipboard fa-lg fa-fw"></i>
+            </div>
+            <div [class.input-error]="submitted && f.description.invalid" class="input-with-icon">
+              <textarea formControlName="description" maxlength="500" placeholder="Description..." rows="2"></textarea>
+              <i area-hidden="true" class="fas fa-comment fa-lg fa-fw"></i>
+            </div>
+            <div [class.input-error]="submitted && f.link.invalid" class="input-with-icon">
+              <input formControlName="link" placeholder="Link..." type="text">
+              <i area-hidden="true" class="fas fa-link fa-lg fa-fw"></i>
+            </div>
+            <div [class]="'interest-search-area'" class="input-with-icon">
+              <input #searchArea formControlName="category" (keyup)="search($event)" placeholder="Category..." type="text">
+              <i area-hidden="true" class="fas fa-book-open fa-lg fa-fw"></i>
+            </div>
+            <div *ngIf="(categorySearchResults.length > 0) && searchEnabled" class="contribute-search-results">
+              <a (click)="categorySearchResults = []; selectedCategory = result; f.category.setValue( this.defaultFormValues.category );" *ngFor="let result of categorySearchResults">
+                <app-label-data [data]="(result.category ? result.category.name : '') +
+          (result.subCategory ? ' - ' + result.subCategory.name : '') + (result.leafCategory ? ' - ' + result.leafCategory.name : '')"
+                                [noMargin]="true">
+                </app-label-data>
+              </a>
+            </div>
+            <div class="selected-category-area" [style.visibility]="f.category.touched ? 'visible' : 'hidden'">
+              <p style="margin-left: 45px;">{{ (selectedCategory.category ? selectedCategory.category.name : '') +
+                (selectedCategory.subCategory ? ' - ' + selectedCategory.subCategory.name : '') +
+              (selectedCategory.leafCategory ? ' - ' + selectedCategory.leafCategory.name : '') }}</p>
+            </div>
+          </div>
+          <div class="right-column">
+            <div [class.input-error]="submitted && f.date.invalid" class="input-with-icon">
+              <input #dateArea="dpDayPicker" [dpDayPicker]="dayPickerConfig" [mode]="'daytime'" [placeholder]="'Date...'"
+                     [theme]="'dp-material'" formControlName="date" type="text">
+              <i area-hidden="true" class="fas fa-calendar fa-lg fa-fw"></i>
+            </div>
+            <div *ngIf="f.isDurationActive.value" [class.input-error]="submitted && (f.durationMin.invalid || f.durationHour.invalid)"
+                 class="input-with-icon"
+                 style="width: 300px;">
+              <input formControlName="durationMin" placeholder="Minute..." (change)="f.durationHour.value === '' ? f.durationHour.setValue(0) : null" required type="text">
+              <p>:</p>
+              <input formControlName="durationHour" placeholder="Hour..." (change)="f.durationMin.value === '' ? f.durationMin.setValue(0) : null" required type="text">
+              <p style="min-width: 75px; margin-left: 14px;">Duration:</p>
+              <i area-hidden="true" class="fas fa-clock fa-lg fa-fw"></i>
+            </div>
+            <div *ngIf="f.isTrailerVideoLinkActive.value" [class.input-error]="submitted && f.trailerVideoLink.invalid" class="input-with-icon">
+              <input formControlName="trailerVideoLink" placeholder="Video trailer link..." type="text">
+              <i area-hidden="true" class="fab fa-youtube fa-lg fa-fw"></i>
+            </div>
+            <div *ngIf="f.isPremium.value" [class.input-error]="submitted && f.price.invalid" class="input-with-icon">
+              <input formControlName="price" placeholder="Price..." type="text">
+              <p>$</p>
+              <i area-hidden="true" class="fas fa-coins fa-lg fa-fw"></i>
+            </div>
+          </div>
+        </div>
+        <div class="section-footer">
+          <div class="section-footer-icons">
+            <span (click)="f.isEmailAllowed.setValue( !f.isEmailAllowed.value )"
+                  class="tooltip" show-delay="500" tooltip="Add my email address">
+                  <i area-hidden="true" class="fas fa-envelope fa-lg fa-fw" [class.button-active]="f.isEmailAllowed.value"></i>
+            </span>
+            <span (click)="f.isPremium.setValue( !f.isPremium.value )"
+                  class="tooltip" show-delay="500" tooltip="Premium">
+                  <i area-hidden="true" class="fas fa-crown fa-lg fa-fw" [class.button-active]="f.isPremium.value"></i>
+            </span>
+            <span (click)="f.isTrailerVideoLinkActive.setValue( !f.isTrailerVideoLinkActive.value )"
+                  class="tooltip" show-delay="500" tooltip="Add Youtube video trailer link">
+                  <i area-hidden="true" class="fab fa-youtube fa-lg fa-fw" [class.button-active]="f.isTrailerVideoLinkActive.value"></i>
+            </span>
+            <span (click)="f.isDurationActive.setValue( !f.isDurationActive.value )"
+                  class="tooltip" show-delay="500" tooltip="Add duration">
+                  <i area-hidden="true" class="fas fa-clock fa-lg fa-fw" [class.button-active]="f.isDurationActive.value"></i>
+            </span>
+          </div>
+          <div class="contribute-button-area">
+            <app-button1 class="contribute-button" [text]="'CONTRIBUTE'" [isContribute]="true"></app-button1>
+          </div>
+        </div>
+      </form>
+    </div>
+  </app-card1>
+  <div class="in-page-title" *ngIf="myRecentlyCompletedEvents.length > 0">
+    <h2>Recently Completed Events</h2>
+  </div>
+  <div *ngIf="myRecentlyCompletedEvents.length > 0" class="my-events">
+    <app-event-card (itemIdForFillingForm)="fillForm($event)" *ngFor="let event of myRecentlyCompletedEvents"
+                           [event]="event" [showCalendar]="false"
+                           (markAsCompletedButtonClicked)="markAsCompletedButtonClicked($event)"
+                           [markAsCompleted]="true"></app-event-card>
+  </div>
+  <div class="in-page-title" *ngIf="myUpcomingEvents.length > 0">
+    <h2>Your Upcoming Events</h2>
+  </div>
+
+  <div *ngIf="myUpcomingEvents.length <= 0" class="in-page-title">
+    <h3 class="dim">Nothing in here..</h3>
+  </div>
+
+  <div *ngIf="myUpcomingEvents.length > 0" class="my-events">
+    <app-event-card (itemIdForFillingForm)="fillForm($event)" *ngFor="let event of myUpcomingEvents"
+                           [event]="event" [inProgress]="event.inProgress"
+                           [isEditable]="true"></app-event-card>
+  </div>
+  <div class="in-page-title">
+    <h2>Your Passed Events</h2>
+  </div>
+  <!--SEARCH AREA-->
+  <div class="search-area">
+    <div class="search-bar">
+      <i class="material-icons">search</i>
+      <input #searchArea (keyup)="searchInAllEvents($event)" placeholder="ex. title.." type="text">
+    </div>
+    <app-button1 [hoverWithColor]="false" [isSleekButton]="true" [lighterContrast]="true" [text]="'Search'"
+                 [transparent]="true" (click)="searchInAllEvents(undefined)"></app-button1>
+  </div>
+  <!--END OF SEARCH AREA-->
+  <div class="searched-events" style="margin-top: 70px;">
+    <app-event-card *ngFor="let event of searchedEvents"
+                           [event]="event" [showCalendar]="false">
+    </app-event-card>
+  </div>
+  <div *ngIf="!loading && (searchedEvents?.length === 0 || searchedEvents?.length === 0)" class="in-page-title">
+    <h3 class="dim">No results were found</h3>
+  </div>
+</div>

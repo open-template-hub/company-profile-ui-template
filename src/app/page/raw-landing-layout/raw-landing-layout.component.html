@@ -1,0 +1,16 @@
+<a class="github-fork-ribbon" [attr.data-ribbon]="'Fork me on GitHub'" [classList]="'ribbon ribbon-premium ribbon-top'"
+   href="https://github.com/open-template-hub/web-ui-template" title="Fork me on GitHub">Fork
+  me on GitHub</a>
+<div [class.dark-theme]="darkTheme === 'true'">
+  <div class="raw-landing-layout-page">
+    <div class="header">
+      <app-landing-layout-top-nav></app-landing-layout-top-nav>
+    </div>
+    <div class="header-filler"></div>
+    <div class="raw-landing-layout-page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <app-footer [popupPadding]="true"></app-footer>
+  <app-bottom-nav></app-bottom-nav>
+</div>

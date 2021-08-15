@@ -1,0 +1,93 @@
+<div [class.background-color]="isBackgroundColor" [class.centered-title]="centeredTitle" [class.editable]="isEditable"
+     [class.is-small-title]="isSmallTitle" [class.not-fixed-height]="notFixedHeight" [class.max-height]="maxHeight"
+     [class.show-calendar]="(showCalendar || isEditable) && !notFixedHeight" [class.video]="containsVideo" [class.rate-height]="rateHeight" class="event">
+  <div *ngIf="title" class="event-header">
+    <div class="event-header-title" [class.remove-line-clamp]="removeLineClamp">
+      <h3 (click)="onClick()" >{{title}}</h3>
+      <app-event-hamburger-menu *ngIf="showHamburgerMenu" (shareViaClicked)="shareVia( $event )" [showCalendar]=" showCalendar || isEditable "
+                                       (calendarClicked)="createCalendarEvent()"></app-event-hamburger-menu>
+    </div>
+    <div class="event-sub-header-title dim">
+      <div class="event-sub-header-title-user">
+        <h4 *ngIf="user?.username">by <a
+            [routerLink]="(isPublicPage ? URLS.u : URLS.user.root) + '/' + user.username"
+            class="inline-a">{{isEditable ? 'you' : ( user.username.length > 12 ? user.username.slice( 0, 12 ) + '...' : user.username )}}</a>
+        </h4>
+        <h4 *ngIf="link && showCalendar"><a [href]="link" class="inline-a"><i [classList]="'fas fa-link fa-fw'"></i>join
+          meeting</a></h4>
+      </div>
+      <div class="event-sub-header-title-date">
+        <h4 *ngIf="date">{{dateItem}}</h4>
+        <h4 *ngIf="date">{{timeItem}}</h4>
+      </div>
+    </div>
+  </div>
+  <div class="event-content">
+    <div *ngIf="count !== undefined || duration !== undefined" class="content-information-row dim">
+      <div *ngIf="duration !== undefined" class="content-information-row-inner-row">
+        <i [classList]="'far fa-clock fa-lg fa-fw'"></i>
+        <p class="content-information-row-duration"><span class="content-information-row-data">{{duration}}</span>
+          Minutes</p>
+      </div>
+      <div *ngIf="count !== undefined" class="content-information-row-inner-row">
+        <i [classList]="'fas fa-users fa-lg fa-fw'"></i>
+        <p class="content-information-row-attendees"><span class="content-information-row-data">{{count}}</span>
+          Attendees</p>
+      </div>
+    </div>
+    <!--RATE-->
+    <div *ngIf="showRateBar" class="rate-badge-wrapper product-review-stars-input">
+      <input type="radio" [id]="'star5' + id" name="rating" class="visuallyHidden" (click)="onStarClick( 5 )"/>
+      <label class="far fa-sm fa-star" [for]="'star5' + id"></label>
+      <input type="radio" [id]="'star4' + id" name="rating" class="visuallyHidden" (click)="onStarClick( 4 )"/>
+      <label class="far fa-sm fa-star" [for]="'star4' + id"></label>
+      <input type="radio" [id]="'star3' + id" name="rating" class="visuallyHidden" (click)="onStarClick( 3 )"/>
+      <label class="far fa-sm fa-star" [for]="'star3' + id"></label>
+      <input type="radio" [id]="'star2' + id" name="rating" class="visuallyHidden" (click)="onStarClick( 2 )"/>
+      <label class="far fa-sm fa-star" [for]="'star2' + id"></label>
+      <input type="radio" [id]="'star1' + id" name="rating" class="visuallyHidden" (click)="onStarClick( 1 )"/>
+      <label class="far fa-sm fa-star" [for]="'star1' + id"></label>
+    </div>
+    <!--END OF RATE-->
+    <div class="event-description" [class.remove-line-clamp]="removeLineClamp" [class.video]="containsVideo"
+         [class.add-margin-to-description]="addMarginToDescription">
+      {{description}}
+    </div>
+  </div>
+  <div class="event-last-item">
+    <app-button1 (click)="onEditClick()" *ngIf="isEditable && !inProgress && !showRateBar && !completed"
+                 [brandColor]="true" [icon]="'pen'" [isSleekButton]="true" [text]="'Edit'">
+    </app-button1>
+    <app-button1 (click)="onBuyNowClick()" *ngIf="!isEditable && isPremium && attendeeButton && !showRateBar && !completed"
+                 [brandColor]="true" [icon]="'shopping-cart'" [isSleekButton]="true"
+                 [text]="'Buy Now ' + (price ? '(' + price + '$)' : '')">
+    </app-button1>
+    <app-button1 (click)="onAttendClick()" *ngIf="!isEditable && !isPremium && attendeeButton && !showRateBar && !completed"
+                 [brandColor]="true" [isSleekButton]="true" [text]="'Attend'">
+    </app-button1>
+    <app-button1 (click)="onDropClick()" *ngIf="!isEditable && dropButton && !showRateBar && !completed && !isPremium" [hoverWithColor]="false"
+                 [isSleekButton]="true" [lighterContrast]="true" [text]="'Drop'" [transparent]="true">
+    </app-button1>
+    <app-button1 (click)="onMarkAsCompletedClick()" *ngIf="markAsCompleted && !showRateBar && !completed"
+                 [brandColor]="true" [isSleekButton]="true" [text]="'Mark As Completed'" [icon]="'check'">
+    </app-button1>
+    <app-button1 *ngIf="!isEditable && dropButton && !showRateBar && !completed && isPremium" [brandLightColor]="true" [isSleekButton]="true" [text]="'Attended'">
+    </app-button1>
+    <app-button1 *ngIf="completed" [cursor]="'not-allowed'" [brandLightColor]="true" [isSleekButton]="true" [text]="'Completed'">
+    </app-button1>
+    <app-button1 (click)="onRateClick()" *ngIf="showRateBar"
+                 [brandColor]="true" [isSleekButton]="true" [text]="'Rate'">
+    </app-button1>
+    <app-button1 *ngIf="inProgress" [cursor]="'not-allowed'"
+                 [brandLightColor]="true" [isSleekButton]="true" [text]="'In Progress'" [icon]="'hourglass'">
+    </app-button1>
+    <div (click)="onCategoryClick()" class="event-categories">
+      <p *ngIf="category && !subCategory && !leafCategory"><a class="inline-a">{{'#' + category.name}}</a></p>
+      <p *ngIf="subCategory && !leafCategory"><a class="inline-a">{{'#' + subCategory.name}}</a></p>
+      <p *ngIf="leafCategory"><a class="inline-a">{{'#' + leafCategory.name}}</a></p>
+    </div>
+  </div>
+  <div *ngIf="!isLastItem" class="event-bottom-wrapper">
+  </div>
+  <span *ngIf="ribbon.type" [attr.data-ribbon]="ribbon.text" [classList]="'ribbon ribbon-' + ribbon.type"></span>
+</div>

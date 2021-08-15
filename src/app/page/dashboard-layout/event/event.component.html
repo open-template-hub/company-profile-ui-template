@@ -1,0 +1,21 @@
+<div class="event-page">
+  <div *ngIf="event">
+    <div class="event">
+      <app-event-card [maxHeight]="true" [profileImg]="!isProfileImageLoading ? profileImg : PROFILE_IMG"
+                             [addMarginToDescription]="true" [fillLayout]="true" [event]="event"
+                             [centeredTitle]="true" [isEditable]="!!event?.attendees" (itemIdForFillingForm)="fillForm()"
+                             [inProgress]="event.inProgress" [completed]="completed"></app-event-card>
+    </div>
+  </div>
+  <div *ngIf="event?.attendees" class="attendees-container">
+    <h2 style="text-align: center;">Attendees</h2>
+    <div class="attendees-area">
+      <div *ngFor="let user of event.attendees" class="attendees-name-area">
+        <a [href]="URLS.user.root + '/' + user">
+          {{ user }}
+        </a>
+      </div>
+      <h3 *ngIf="event?.attendees.length === 0" class="dim">None</h3>
+    </div>
+  </div>
+</div>

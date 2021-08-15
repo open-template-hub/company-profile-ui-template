@@ -1,0 +1,211 @@
+:root {
+  // [LIGHT MODE BEGIN]
+  // color scale
+  --lighter-light-mode: #797979;
+  --color-light-mode: #545454;
+  --darker-light-mode: #2b2b2b;
+
+  // contra color scale
+  --darker-contrast-light-mode: #efefef;
+  --contrast-light-mode: #e0e0e0;
+  --lighter-contrast-light-mode: #b4b4b4;
+
+  // information level colors
+  --success-light-mode: #228b22;
+  --error-light-mode: #E23237;
+  --warn-light-mode: #d28f29;
+  --info-light-mode: #5c98cd;
+
+  // event type colors
+  --premium-light-mode: #43b043;
+  --featured-light-mode: #d6b406;
+  --new-light-mode: #06b7d6;
+
+  // background
+  --background-color-light-mode: white;
+  --brand-background-text-light-mode: #e0e0e0;
+  --dark-nav-light-mode: #545454;
+  --card-light-mode: #fefffe;
+
+  --shadow-light-mode: rgba(155, 155, 155, 0.5);
+
+  --cropper-overlay-color-light-mode: var(--card);
+  --cropper-outline-color-light-mode: rgba(254, 255, 254, 0.7);
+  // [LIGHT MODE END]
+
+  // [DARK MODE BEGIN]
+  // color scale
+  --lighter-dark-mode: #cfcfcf;
+  --color-dark-mode: #e0e0e0;
+  --darker-dark-mode: #f0f0f0;
+
+  // contra color scale
+  --darker-contrast-dark-mode: #2b2b2b;
+  --contrast-dark-mode: #545454;
+  --lighter-contrast-dark-mode: #797979;
+
+  // information level colors
+  --success-dark-mode: #398039;
+  --error-dark-mode: #e04e52;
+  --warn-dark-mode: #cda05c;
+  --info-dark-mode: #3d79ac;
+
+  // event type colors
+  --premium-dark-mode: #43b043;
+  --featured-dark-mode: #b09404;
+  --new-dark-mode: #0499b3;
+
+  // background
+  --background-color-dark-mode: #353535;
+  --brand-background-dark-mode: #162416;
+  --dark-nav-dark-mode: #353735;
+  --card-dark-mode: #353735;
+
+  --shadow-dark-mode: rgba(25, 25, 25, 0.5);
+
+  --cropper-overlay-color-dark-mode: var(--card);
+  --cropper-outline-color-dark-mode: rgba(53, 55, 53, 0.5);
+  // [DARK MODE END]
+
+  // [CURRENT MODE BEGIN]
+  // color scale
+  --lighter: var(--lighter-light-mode);
+  --color: var(--color-light-mode);
+  --darker: var(--darker-light-mode);
+
+  // contra color scale
+  --darker-contrast: var(--darker-contrast-light-mode);
+  --contrast: var(--contrast-light-mode);
+  --lighter-contrast: var(--lighter-contrast-light-mode);
+
+  // information level colors
+  --success: var(--success-light-mode);
+  --error: var(--error-light-mode);
+  --warn: var(--warn-light-mode);
+  --info: var(--info-light-mode);
+
+  // event type colors
+  --premium: var(--premium-light-mode);
+  --featured: var(--featured-light-mode);
+  --new: var(--new-light-mode);
+
+  // background
+  --background-color: var(--background-color-light-mode);
+  --brand-background-text: var(--brand-background-text-light-mode);
+  --dark-nav: var(--dark-nav-light-mode);
+  --card: var(--card-light-mode);
+
+  --shadow: var(--shadow-light-mode);
+
+  --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
+  --cropper-outline-color: var(--cropper-outline-color-light-mode);
+
+
+  --always-contrast-light-mode: var(--contrast-light-mode);
+  --always-card-dark-mode: var(--card-dark-mode);
+  // [CURRENT MODE END]
+}
+
+.dark-theme {
+  // color scale
+  --lighter: var(--lighter-dark-mode);
+  --color: var(--color-dark-mode);
+  --darker: var(--darker-dark-mode);
+
+  // contra color scale
+  --darker-contrast: var(--darker-contrast-dark-mode);
+  --contrast: var(--contrast-dark-mode);
+  --lighter-contrast: var(--lighter-contrast-dark-mode);
+
+  // information level colors
+  --success: var(--success-dark-mode);
+  --error: var(--error-dark-mode);
+  --warn: var(--warn-dark-mode);
+  --info: var(--info-dark-mode);
+
+  // event type colors
+  --premium: var(--premium-dark-mode);
+  --featured: var(--featured-dark-mode);
+  --new: var(--new-dark-mode);
+
+  // background
+  --background-color: var(--background-color-dark-mode);
+  --brand-background: var(--brand-background-dark-mode);
+  --dark-nav: var(--dark-nav-dark-mode);
+  --card: var(--card-dark-mode);
+
+  --shadow: var(--shadow-dark-mode);
+
+  --cropper-overlay-color: var(--cropper-overlay-color-dark-mode);
+  --cropper-outline-color: var(--cropper-outline-color-dark-mode);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    // color scale
+    --lighter: var(--lighter-dark-mode);
+    --color: var(--color-dark-mode);
+    --darker: var(--darker-dark-mode);
+
+    // contra color scale
+    --darker-contrast: var(--darker-contrast-dark-mode);
+    --contrast: var(--contrast-dark-mode);
+    --lighter-contrast: var(--lighter-contrast-dark-mode);
+
+    // information level colors
+    --success: var(--success-dark-mode);
+    --error: var(--error-dark-mode);
+    --warn: var(--warn-dark-mode);
+    --info: var(--info-dark-mode);
+
+    // event type colors
+    --premium: var(--premium-dark-mode);
+    --featured: var(--featured-dark-mode);
+    --new: var(--new-dark-mode);
+
+    // background
+    --background-color: var(--background-color-dark-mode);
+    --brand-background: var(--brand-background-dark-mode);
+    --dark-nav: var(--dark-nav-dark-mode);
+    --card: var(--card-dark-mode);
+
+    --shadow: var(--shadow-dark-mode);
+
+    --cropper-overlay-color: var(--cropper-overlay-color-dark-mode);
+    --cropper-outline-color: var(--cropper-outline-color-dark-mode);
+  }
+
+  .dark-theme {
+    // color scale
+    --lighter: var(--lighter-light-mode);
+    --color: var(--color-light-mode);
+    --darker: var(--darker-light-mode);
+
+    // contra color scale
+    --darker-contrast: var(--darker-contrast-light-mode);
+    --contrast: var(--contrast-light-mode);
+    --lighter-contrast: var(--lighter-contrast-light-mode);
+
+    // information level colors
+    --success: var(--success-light-mode);
+    --error: var(--error-light-mode);
+    --warn: var(--warn-light-mode);
+    --info: var(--info-light-mode);
+
+    // event type colors
+    --premium: var(--premium-light-mode);
+    --featured: var(--featured-light-mode);
+    --new: var(--new-light-mode);
+
+    // background
+    --background-color: var(--background-color-light-mode);
+    --brand-background-text: var(--brand-background-text-light-mode);
+    --dark-nav: var(--dark-nav-light-mode);
+    --card: var(--card-light-mode);
+
+    --shadow: var(--shadow-light-mode);
+
+    --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
+    --cropper-outline-color: var(--cropper-outline-color-light-mode);
+  }
+}

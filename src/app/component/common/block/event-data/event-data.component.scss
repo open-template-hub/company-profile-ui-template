@@ -1,0 +1,257 @@
+//TODO: Remove unnecessary styles
+
+.event {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 360px;
+  padding: 0 1em 0;
+}
+
+.event.video {
+  height: 320px;
+}
+
+.event.not-fixed-height {
+  height: auto;
+}
+
+.event.max-height {
+  height: 600px;
+}
+
+.event.rate-height {
+  height: 270px;
+}
+
+.event-description.add-margin-to-description {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+
+.event-content {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.event-calendar {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.event-calendar.min-margin {
+  margin-bottom: 0.1em;
+}
+
+.apple-calendar {
+  margin-right: 1em;
+}
+
+.event.background-color {
+  background-color: var(--background-color);
+}
+
+.event-bottom-wrapper {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--darker-contrast);
+}
+
+.event-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  padding: 1em 0 0.5em;
+  border-bottom: 1px solid var(--lighter-contrast);
+  margin-bottom: 0.7em;
+}
+
+.centered-title h3, .centered-title h4 {
+  text-align: center;
+}
+
+.is-small-title.event h3 {
+  font-size: 1.2em;
+  padding-bottom: 2px;
+}
+
+.event-description {
+  color: var(--color);
+  font-size: 0.9em;
+  font-weight: 300;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.event-description.video {
+  -webkit-line-clamp: 3;
+}
+
+.event-description.remove-line-clamp, .show-calendar .event-description.remove-line-clamp {
+  -webkit-line-clamp: initial;
+}
+
+.show-calendar .event-description {
+  -webkit-line-clamp: 3; /* number of lines to show */
+}
+
+.show-calendar .event-description.video {
+  -webkit-line-clamp: 1;
+
+}
+
+.event-categories {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  font-size: 0.8em;
+  width: 100%;
+}
+
+.event-categories p {
+  margin-right: 5px;
+}
+
+.centered-title .event-header {
+  width: 75%;
+}
+
+.content-information-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-bottom: 0.5em;
+}
+
+.content-information-row-inner-row {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  width: 43%;
+  justify-content: center;
+  color: var(--lighter);
+}
+
+.content-information-row-duration {
+  margin-left: 4px;
+}
+
+.content-information-row-attendees {
+  margin-left: 7px;
+}
+
+.content-information-row-data {
+  color: var(--brand-color);
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+.event.editable .event-header-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.event-header-title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.event-header-title h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.event-header-title.remove-line-clamp h3 {
+  -webkit-line-clamp: initial;
+}
+
+.event-header-title i {
+  color: var(--color);
+}
+
+.event-last-item {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: 1em;
+  padding-top: 5px;
+}
+
+.event.editable i {
+  font-size: 1em;
+}
+
+.event-sub-header-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-sub-header-title-date, .event-sub-header-title-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-sub-header-title-date {
+  align-items: center;
+}
+
+.event h3 {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+.rate-badge-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+@media (hover: hover) {
+}
+
+@media only screen and (max-width: 999px) {
+
+  .event-header {
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .event app-button1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .event {
+    width: -webkit-fill-available;
+  }
+
+  .event-header {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .event-content .section-output {
+    max-width: 50%;
+  }
+}

@@ -1,0 +1,45 @@
+#header-img {
+  filter: opacity(70%);
+  cursor: pointer;
+}
+
+#trailer-video {
+  width: -webkit-fill-available;
+}
+
+@media only screen and (max-width: 999px) {
+  #header-img {
+    width: 75%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #header-img {
+    width: 90%;
+  }
+}
+
+@media (hover: hover) {
+  #header-img {
+    filter: opacity(50%);
+  }
+
+  #header-img.no-hover {
+    filter: initial;
+  }
+
+  #event-card.no-hover:hover, #event-card.no-hover:hover #header-img {
+    transform: initial;
+    transition: initial;
+    filter: initial;
+  }
+
+  #event-card:hover {
+    transform: scale(1.03);
+    transition: transform .5s;
+  }
+
+  #event-card:hover #header-img {
+    filter: opacity(75%);
+  }
+}

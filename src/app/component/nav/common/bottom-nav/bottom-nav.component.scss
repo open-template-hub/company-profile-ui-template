@@ -1,0 +1,61 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 55px;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  background-color: var(--background-color);
+  box-shadow: 0 0 5px var(--shadow);
+  z-index: 11;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.bottom-nav a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 25vw;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 13px;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.login {
+  color: var(--brand-color);
+  border-bottom: var(--brand-color) 1px solid;
+}
+
+.bottom-nav a i {
+  margin: 0.2em;
+  font-size: 19px;
+}
+
+@media only screen and (max-width: 999px) {
+  .bottom-nav {
+    visibility: visible;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .bottom-nav {
+    visibility: hidden;
+  }
+}
+
+@media (hover: hover) {
+
+  .bottom-nav a:hover {
+    background: var(--hover);
+  }
+
+  .bottom-nav .login:hover {
+    color: white;
+    background: var(--brand-color);
+  }
+}

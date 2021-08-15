@@ -1,0 +1,50 @@
+<div class="landing-form-page">
+  <app-card1 [isSmall]="true" [title]="'Log in'">
+    <div body>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <app-social-button (click)="socialLogin(environment.social.facebook)"
+                           [brand]="environment.social.facebook.cssClass"
+                           [circle]="true"></app-social-button>
+        <app-social-button (click)="socialLogin(environment.social.google)" [brand]="environment.social.google.cssClass"
+                           [circle]="true"></app-social-button>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center" style="margin-bottom: 1.5rem; margin-top: 0.5rem;">
+        <p>or</p>
+      </div>
+      <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <div class="section">
+          <div [class.input-error]="submitted && f.username.invalid" class="input-with-icon">
+            <input formControlName="username" placeholder="Username or Email..." required type="text">
+            <i area-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
+          </div>
+          <div [class.input-error]="submitted && f.password.invalid" class="input-with-icon">
+            <input formControlName="password" placeholder="Password..." required type="password">
+            <i area-hidden="true" class="fas fa-lock fa-lg fa-fw"></i>
+          </div>
+          <div class="input-checkbox">
+            <label class="input-checkbox-label">
+              <input formControlName="rememberMe" type="checkbox">
+              <span></span>
+              <p>Remember Me</p>
+            </label>
+          </div>
+        </div>
+        <div class="section-submit">
+          <app-button1 [brandColor]="true" [text]="'LOG IN'"></app-button1>
+          <p>
+            Don't have an account?
+            <a class="inline-a" href="" routerLink="{{URLS.signup}}">
+              Sign Up
+            </a>
+          </p>
+          <p>
+            <a class="inline-a" href="" routerLink="{{URLS.forgetPassword}}">
+              Forget password?
+            </a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </app-card1>
+  <app-cookies></app-cookies>
+</div>

@@ -1,0 +1,47 @@
+<!--SEARCH AREA-->
+<div class="search-area">
+  <div class="search-bar">
+    <i class="material-icons">search</i>
+    <input #searchArea (keyup)="search($event)" placeholder="ex. title, username.." type="text">
+  </div>
+  <app-button1 [hoverWithColor]="false" [isSleekButton]="true" [lighterContrast]="true" [text]="'Search'"
+               [transparent]="true" (click)="search(undefined)"></app-button1>
+  <div
+    *ngIf="(categorySearchResults.length > 0) && searchEnabled"
+    class="search-results">
+    <hr *ngIf="userSearchResults.length > 0 && categorySearchResults.length > 0">
+    <a (click)="categorySearchResults = []"
+       *ngFor="let result of categorySearchResults"
+       [queryParams]="{category: result.category.id, 'sub-category': result.subCategory?.id, 'leaf-category': result.leafCategory?.id}"
+       routerLink="{{URLS.dashboard.learn}}">
+      <app-label-with-icon-data [data]="(result.category ? result.category.name : '') +
+          (result.subCategory ? ' - ' + result.subCategory.name : '') + (result.leafCategory ? ' - ' + result.leafCategory.name : '')"
+                                [noMarginIcon]="true" [noMargin]="true" [solid]="'book-open'">
+      </app-label-with-icon-data>
+    </a>
+  </div>
+</div>
+<!--END OF SEARCH AREA-->
+<div class="learn-page">
+  <div class="in-page-title">
+    <h2>Events</h2>
+  </div>
+  <div *ngIf="!isSearchedWithCategory && !searchedEvents && recommendedEvents?.length > 0">
+    <div class="learn-page-events">
+      <app-event-card *ngFor="let event of recommendedEvents"
+                             [event]="event" [inProgress]="event.inProgress">
+      </app-event-card>
+    </div>
+  </div>
+
+  <div *ngIf="searchedEvents?.length > 0">
+    <div class="learn-page-events">
+      <app-event-card *ngFor="let event of searchedEvents" [event]="event"
+      ></app-event-card>
+    </div>
+  </div>
+
+  <div *ngIf="!loading && searchedEvents?.length === 0" class="in-page-title">
+    <h3 class="dim">No results were found</h3>
+  </div>
+</div>

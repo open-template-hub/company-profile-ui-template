@@ -1,0 +1,89 @@
+.raw-landing-layout-page {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-color: var(--background-color);
+}
+
+.raw-landing-raw-content-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 11;
+}
+
+.header-filler {
+  height: 90px;
+}
+
+.raw-landing-layout-page-content {
+  min-height: 120vh;
+}
+
+.policy-content a {
+  color: var(--brand-color);
+}
+
+@media only screen and (max-width: 999px) {
+  .raw-landing-raw-content-page {
+    font-size: 23px;
+  }
+
+  .header, .header-filler {
+    display: none;
+  }
+
+  .top-shadow {
+    display: block;
+    height: 2px;
+    padding: 0;
+    background-color: var(--brand-color);
+    box-shadow: 5px 0 10px var(--brand-color);
+  }
+
+  .policy-content {
+    padding: 18px;
+  }
+
+  .policy-content h5, .policy-content h6 {
+    padding-bottom: 12px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .raw-landing-raw-content-page {
+    font-size: 35px;
+  }
+
+  .header, .header-filler {
+    display: block;
+  }
+
+  .top-shadow {
+    display: none;
+  }
+
+  .policy-content {
+    padding: 60px;
+  }
+
+  .policy-content h5, .policy-content h6 {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-aspect-ratio: 4/3) {
+  .raw-landing-layout-page-content {
+    min-height: 200vh;
+  }
+}

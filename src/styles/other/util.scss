@@ -1,0 +1,38 @@
+.circle, .rounded-box.circle {
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+}
+
+.rounded-box {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.rounded-box:hover {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.circle:hover, .rounded-box.circle:hover {
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+@media only screen and (min-width: 1000px) {
+  app-event-card {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

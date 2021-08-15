@@ -1,0 +1,21 @@
+.profile-img-badge, .profile-img-full {
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: 99em;
+  border: 1px solid var(--contrast);
+}
+
+.profile-img-badge {
+  width: 38px;
+  height: 38px;
+  box-shadow: 0 3px 2px var(--shadow);
+}
+
+.profile-img-full {
+  width: 100px;
+  height: 100px;
+}

@@ -1,0 +1,223 @@
+.social-button {
+  width: 60px;
+  height: 60px;
+  font-size: 19px;
+  margin: 0.5rem 0 1em;
+  padding-left: 1px;
+  padding-top: 1px;
+  font-weight: 300;
+  background: var(--social);
+  border: 0;
+  border-bottom-color: var(--card);
+  color: whitesmoke;
+  cursor: pointer;
+  transition: 400ms ease-out;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+.social-button.small-logo {
+  width: 35px;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.social-button.no-text {
+  width: auto;
+  height: auto;
+  background: transparent;
+  margin: 0;
+}
+
+.social-button.no-text img {
+  width: 35px;
+}
+
+.social-button.donation-button {
+  background: transparent;
+  color: var(--social);
+  border: 1px solid;
+}
+
+.social-button.social-button-with-text {
+  text-align: left;
+  width: 80%;
+  padding: 0 1em;
+}
+
+.social-button.full-width, .social-button.full-width.social-button-with-text {
+  width: 80%;
+}
+
+.social-button.social-button-with-text i, .social-button.social-button-with-text img {
+  margin-right: 20px;
+}
+
+.social-button i {
+  font-size: 42px;
+  width: 42px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.social-button.small-logo i {
+  font-size: 23px;
+}
+
+.social-button img {
+  width: 42px;
+}
+
+.social-button:disabled {
+  pointer-events: none;
+  filter: opacity(60%);
+}
+
+.social-button-checked.social-button {
+  box-shadow: 0 4px 7px 0 var(--social);
+  border-bottom-color: var(--social);
+  background: whitesmoke;
+  color: var(--social);
+}
+
+.vertical-hr {
+  border: 0;
+  width: 2px;
+  background-color: var(--social);
+  filter: brightness(95%);
+  margin-right: 1em;
+  transition: 400ms ease-out;
+}
+
+// Social
+
+.twitter.social-button {
+  --social: var(--twitter);
+}
+
+.google.social-button {
+  --social: var(--google);
+}
+
+.facebook-f.social-button {
+  --social: var(--facebook);
+}
+
+.linkedin-in.social-button {
+  --social: var(--linkedin);
+}
+
+.vk.social-button {
+  --social: var(--vk);
+}
+
+.twitch.social-button {
+  --social: var(--twitch);
+}
+
+.dribbble.social-button {
+  --social: var(--dribbble);
+}
+
+.reddit-alien.social-button {
+  --social: var(--reddit);
+}
+
+.pinterest.social-button {
+  --social: var(--pinterest);
+}
+
+.yandex.social-button {
+  --social: var(--yandex);
+}
+
+.github.social-button {
+  --social: var(--github);
+}
+
+.stripe-s.social-button {
+  --social: var(--stripe);
+}
+
+.coinbase.social-button {
+  --social: var(--coinbase);
+}
+
+.paypal.social-button {
+  --social: var(--paypal);
+}
+
+.buymeacoffee.social-button {
+  --social: var(--buymeacoffee);
+}
+
+.patreon.social-button {
+  --social: var(--patreon);
+}
+
+.apple-calendar.social-button {
+  border-radius: 10px;
+  padding: 0;
+}
+
+.google-calendar.social-button {
+  border-radius: 3px;
+  padding: 0;
+}
+
+@media (hover: hover) {
+
+  .social-button:hover {
+    box-shadow: 0 3px 15px 1px var(--social);
+    background: whitesmoke;
+    border-bottom-color: var(--social);
+    color: var(--social);
+  }
+
+  .social-button.donation-button:hover {
+    background: transparent;
+    box-shadow: 0 3px 15px 1px var(--shadow);
+  }
+
+  .social-button.no-text {
+    background: transparent;
+    box-shadow: 0 3px 15px 1px var(--shadow);
+  }
+
+  .social-button:hover .vertical-hr {
+    background-color: whitesmoke;
+    filter: brightness(100%);
+  }
+
+  .social-button.donation-button:hover .vertical-hr {
+    background-color: var(--social);
+  }
+}
+
+@media only screen and (max-width: 1299px) {
+  .vertical-hr {
+    height: 45px;
+  }
+
+  .social-button.social-button-with-text {
+    height: 50px;
+    font-size: 17px;
+  }
+
+  .social-button.social-button-with-text img {
+    width: 32px;
+  }
+
+  .social-button.social-button-with-text i {
+    font-size: 32px;
+    width: 32px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .vertical-hr {
+    height: 55px;
+  }
+}

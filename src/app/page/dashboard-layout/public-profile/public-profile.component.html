@@ -1,0 +1,210 @@
+<div [class.is-public]="isPublic" class="public-profile-page">
+  <!--DASHBOARD CARD-->
+  <app-card1 [headerProfileImg]="profileImg">
+    <div body class="content-column-wrapper">
+      <div body class="rate-badge-wrapper">
+        <app-rate-bar [rate]="rateObject"></app-rate-bar>
+        <p class="badge-area">
+          <i *ngIf="topContributor !== undefined" style="margin-right: 5px;">
+            <span *ngIf="topContributor === 0">🥇</span>
+            <span *ngIf="topContributor === 1">🥈</span>
+            <span *ngIf="topContributor === 2">🥉</span>
+          </i>
+          <i *ngIf="numberOfEventsTaken !== undefined && numberOfEventsTaken > 10"
+             show-delay="500" tooltip="Curious" style="margin-right: 5px;">📚</i>
+          <i *ngIf="numberOfEventsMade != undefined && numberOfEventsMade < 5" show-delay="500" tooltip="New" style="margin-right: 5px;">👋</i>
+          <i *ngIf="userInfo?.isAcademical" show-delay="500" tooltip="Joined with .edu mail">🎓</i>
+        </p>
+      </div>
+      <div *ngIf="isFollowing !== null" class="follow-button-area">
+        <app-button1 (click)="follow()" *ngIf="isFollowing === false" [fixedWidth]="true" [hoverWithColor]="false"
+                     [icon]="'plus'" [mobileView]="true" [success]="true" [text]="'Follow'"
+                     [transparent]="true"></app-button1>
+        <app-button1 (click)="unfollow()" *ngIf="isFollowing === true" [fixedWidth]="true" [hoverWithColor]="false"
+                     [icon]="'ban'" [lighterContrast]="true" [mobileView]="true" [text]="'Unfollow'"
+                     [transparent]="true"></app-button1>
+      </div>
+      <div class="column-first" [class.with-rate]="formattedRateNumber">
+        <div class="section-header">
+          <p
+              class="dim">{{( userInfo?.payload?.firstName && userInfo?.payload?.lastName ) ?
+            ( userInfo.payload.firstName + ' ' + userInfo.payload.lastName + ' (@' + userInfo.username + ')' )
+            : ( userInfo?.username ? userInfo.username : '' ) }}
+          <hr>
+        </div>
+        <div *ngIf="userInfo" class="section-output" fxLayout="column">
+          <app-label-data *ngIf="userInfo?.payload?.bio"
+                          [data]="userInfo.payload.bio">
+          </app-label-data>
+          <app-label-with-icon-data *ngIf="userInfo?.payload?.location" [data]="userInfo.payload.location"
+                                    [solid]="'map-marker-alt'">
+          </app-label-with-icon-data>
+          <div *ngIf="followerCount !== undefined && followeeCount !== undefined" class="follower-following-count-area">
+            <div class="follower-count-area"><i class="follower-count">{{followerCount}}</i> Following</div>
+            <div class="following-count-area"><i class="following-count">{{followeeCount}}</i> Followers</div>
+            <div *ngIf="numberOfEventsMade !== undefined" class="events-count-area"><i class="event-count">{{ numberOfEventsMade }}</i> Events</div>
+          </div>
+        </div>
+        <div *ngIf="userInterests.length > 0"
+             class="section-header">
+          <p class="dim">Interests</p>
+          <hr/>
+        </div>
+        <div *ngIf="userInfo" [class]="'interest-list'" class="section-output">
+          <app-label-with-icon-data *ngFor="let result of userInterests" [data]="(!result.leafCategory && !result.subCategory && result.category ? result.category.name : '') +
+          (!result.leafCategory && result.subCategory ? result.subCategory.name : '') + (result.leafCategory ? result.leafCategory.name : '')"
+                                    [fixWidth]="true"
+                                    [noMarginIcon]="true"
+                                    [noMargin]="true"
+                                    [queryParams]="{category: result.category.id, 'sub-category': result.subCategory?.id, 'leaf-category': result.leafCategory?.id}"
+                                    [solid]="'bookmark'" [urlData]="URLS.dashboard.learn">
+          </app-label-with-icon-data>
+        </div>
+        <div
+            *ngIf="userInfo?.payload?.phone || userInfo?.payload?.website || userInfo?.payload?.social?.twitter || userInfo?.payload?.social?.facebook || userInfo?.payload?.social?.youtube"
+            class="section-header">
+          <p class="dim">Contact</p>
+          <hr/>
+        </div>
+        <div *ngIf="userInfo" class="section-output" fxLayout="column">
+          <app-label-with-icon-data *ngIf="userInfo?.payload?.phone" [data]="userInfo.payload.phone"
+                                    [highlight]="true" [isClickable]="true" [solid]="'phone-alt'"
+                                    [urlPrefix]="'tel:'">
+          </app-label-with-icon-data>
+          <app-label-with-icon-data *ngIf="userInfo?.payload?.website" [data]="userInfo.payload.website"
+                                    [highlight]="true" [isClickable]="true" [solid]="'globe'">
+          </app-label-with-icon-data>
+          <app-label-with-icon-data *ngIf="userInfo?.payload?.social?.twitter" [brand]="'twitter'"
+                                    [data]="userInfo.payload.social.twitter"
+                                    [urlPrefix]="environment.social.twitter.url">
+          </app-label-with-icon-data>
+          <app-label-with-icon-data *ngIf="userInfo?.payload?.social?.facebook" [brand]="'facebook'"
+                                    [data]="userInfo.payload.social.facebook"
+                                    [urlPrefix]="environment.social.facebook.url">
+          </app-label-with-icon-data>
+          <app-label-with-icon-data *ngIf="userInfo?.payload?.social?.youtube" [brand]="'youtube'"
+                                    [data]="userInfo.payload.social.youtube"
+                                    [urlPrefix]="environment.social.youtube.url + '/c'">
+
+          </app-label-with-icon-data>
+        </div>
+      </div>
+      <div *ngIf="userInfo?.payload?.userProfileActivated &&
+      (userInfo?.payload?.donationAccounts?.buymeacoffee || userInfo?.payload?.donationAccounts?.patreon)"
+           class="column-second">
+        <div class="section-header">
+          <p class="dim">Donation</p>
+          <hr/>
+        </div>
+        <div class="section-output donation-accounts" fxLayout="column" fxLayoutAlign="center center">
+          <app-social-button (click)="goToUrl(userInfo.payload.donationAccounts.buymeacoffee)"
+                             *ngIf="userInfo?.payload?.donationAccounts?.buymeacoffee"
+                             [brand]="environment.donation.buymeacoffee.cssClass" [flexStart]="true"
+                             [isDonationButtonStyle]="true" [localImage]="environment.donation.buymeacoffee.logo"
+                             [text]="'Buy Me A Coffee'"></app-social-button>
+          <app-social-button (click)="goToUrl(userInfo.payload.donationAccounts.patreon)"
+                             *ngIf="userInfo?.payload?.donationAccounts?.patreon"
+                             [brand]="'patreon'" [brand]="environment.donation.patreon.cssClass" [flexStart]="true"
+                             [isDonationButtonStyle]="true"
+                             [text]="'Patreon'"></app-social-button>
+        </div>
+      </div>
+    </div>
+  </app-card1>
+  <!--END OF DASHBOARD CARD-->
+  <!--LESSONS TAKEN CARD-->
+  <app-card1 *ngIf="lessonsInfo.length > 0" [title]="'Events Taken'">
+    <div *ngIf="!loadingLessonsTaken" [ngStyle]="{'height' : lessonsInfo.length * 50 + 'px'}" body class="chart-wrapper">
+      <br/>
+      <ngx-charts-bar-horizontal
+          [gradient]="gradient"
+          [customColors]="barCustomColors(lessonsInfo)"
+          [animations]="false"
+          [legend]="showLegend"
+          [results]="lessonsInfo"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="eventsTakenXAxisLabel"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis">
+      </ngx-charts-bar-horizontal>
+      <div class="color-text">
+
+        Less
+
+        <svg width="10" height="10" class="d-inline-block">
+          <rect width="10" height="10" style="fill: var(--brand-color-v4)"></rect>
+        </svg>
+        <svg width="10" height="10" class="d-inline-block">
+          <rect width="10" height="10" style="fill: var(--brand-color-v3)"></rect>
+        </svg>
+        <svg width="10" height="10" class="d-inline-block">
+          <rect width="10" height="10" style="fill: var(--brand-color-v2)"></rect>
+        </svg>
+        <svg width="10" height="10" class="d-inline-block">
+          <rect width="10" height="10" style="fill: var(--brand-color-v1)"></rect>
+        </svg>
+        <svg width="10" height="10" class="d-inline-block">
+          <rect width="10" height="10" style="fill: var(--brand-color)"></rect>
+        </svg>
+
+        More
+
+      </div>
+    </div>
+  </app-card1>
+  <app-card1 *ngIf="eventsInfo.length === 0" [title]="'Events Taken'">
+    <div body style="margin-left: 10px; padding-bottom: 20px;">
+      <h3 class="dim">No results found</h3>
+    </div>
+  </app-card1>
+  <!--END OF LESSONS TAKEN CARD-->
+
+  <!--CONTRIBUTIONS CARD-->
+  <app-card1 *ngIf="userInfo?.payload?.userProfileActivated && eventsInfo.length > 0" [title]="'Events'">
+    <div *ngIf="!loadingCount"
+         [ngStyle]="{'height' : eventsInfo.length * 50 + 'px'}" body class="chart-wrapper">
+      <br/>
+      <ngx-charts-bar-horizontal
+        [gradient]="gradient"
+        [customColors]="barCustomColors(eventsInfo)"
+        [animations]="false"
+        [legend]="showLegend"
+        [results]="eventsInfo"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxisLabel]="eventsXAxisLabel"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis">
+      </ngx-charts-bar-horizontal>
+      <div class="color-text">
+
+        Less
+
+        <svg width="10" height="10" class="d-inline-block">
+          <rect width="10" height="10" style="fill: var(--brand-color-v4)"></rect>
+        </svg>
+        <svg width="10" height="10" class="d-inline-block">
+          <rect width="10" height="10" style="fill: var(--brand-color-v3)"></rect>
+        </svg>
+        <svg width="10" height="10" class="d-inline-block">
+          <rect width="10" height="10" style="fill: var(--brand-color-v2)"></rect>
+        </svg>
+        <svg width="10" height="10" class="d-inline-block">
+          <rect width="10" height="10" style="fill: var(--brand-color-v1)"></rect>
+        </svg>
+        <svg width="10" height="10" class="d-inline-block">
+          <rect width="10" height="10" style="fill: var(--brand-color)"></rect>
+        </svg>
+
+        More
+
+      </div>
+    </div>
+  </app-card1>
+  <app-card1 *ngIf="userInfo?.payload?.userProfileActivated && eventsInfo.length === 0" [title]="'Events'">
+    <div body style="margin-left: 10px; padding-bottom: 20px;">
+      <h3 class="dim">No results found</h3>
+    </div>
+  </app-card1>
+</div>

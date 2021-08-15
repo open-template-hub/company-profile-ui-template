@@ -1,0 +1,56 @@
+<div class="landing-form-page">
+  <app-card1 [isSmall]="true" [title]="'Register'">
+    <div body>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <app-social-button (click)="socialLogin(environment.social.facebook)"
+                           [brand]="environment.social.facebook.cssClass"
+                           [circle]="true"></app-social-button>
+        <app-social-button (click)="socialLogin(environment.social.google)" [brand]="environment.social.google.cssClass"
+                           [circle]="true"></app-social-button>
+      </div>
+      <div class="login-page-middle-text" fxLayout="column" fxLayoutAlign="center center">
+        <p>or</p>
+      </div>
+      <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm">
+        <div class="section">
+
+          <div [class.input-error]="submitted && f.username.invalid" class="input-with-icon">
+            <input formControlName="username" placeholder="Username..." required type="text">
+            <i area-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
+          </div>
+          <div [class.input-error]="submitted && f.email.invalid" class="input-with-icon">
+            <input formControlName="email" placeholder="Email..." required type="email">
+            <i area-hidden="true" class="fas fa-envelope fa-lg fa-fw"></i>
+          </div>
+          <div [class.input-error]="submitted && f.password.invalid" class="input-with-icon">
+            <input formControlName="password" placeholder="Password..." required type="password">
+            <i area-hidden="true" class="fas fa-key fa-lg fa-fw"></i>
+          </div>
+          <div [class.input-error]="submitted && f.confirmPassword.invalid" class="input-with-icon">
+            <input formControlName="confirmPassword" placeholder="Confirm Password..." required type="password">
+            <i area-hidden="true" class="fas fa-lock fa-lg fa-fw"></i>
+          </div>
+        </div>
+        <div class="section-submit">
+          <app-button1 [brandColor]="true" [text]="'GET STARTED'"></app-button1>
+          <p>
+            <small class="dim">By signing up, you agree
+              <a class="inline-a" routerLink="{{URLS.terms}}" target="_blank">Terms of Use</a>,
+              <a class="inline-a" routerLink="{{URLS.privacyPolicy}}" target="_blank">Privacy Policy</a>
+              and
+              <a class="inline-a" routerLink="{{URLS.cookiePolicy}}" target="_blank">Cookie Policy</a>
+            </small>
+          </p>
+          <hr class="dim"/>
+          <p>
+            Already have an account?
+            <a class="inline-a" href="" routerLink="{{URLS.login}}">
+              Login
+            </a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </app-card1>
+  <app-cookies></app-cookies>
+</div>

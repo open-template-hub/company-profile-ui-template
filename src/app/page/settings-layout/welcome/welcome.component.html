@@ -1,0 +1,112 @@
+<div class="dashboard-welcome-page">
+  <app-card1 [title]="'Welcome 🎉'">
+    <div body>
+      <div class="img-with-size" fxLayout="column">
+
+        <div (click)="fileInput.click()" class="profile-img-wrapper" style="cursor: pointer">
+          <div class="shine-img circle">
+            <img [src]="profileImg" alt="profile img" class="profile-img-full"/>
+          </div>
+        </div>
+
+        <input #fileInput (change)="fileChangeEvent($event)" accept="image/*" hidden style="height: 0" type="file"/>
+
+        <image-cropper (cropperReady)="cropperReady()"
+                       (imageCropped)="imageCropped($event)"
+                       (imageLoaded)="imageLoaded()"
+                       (loadImageFailed)="loadImageFailed()"
+                       [aspectRatio]="1"
+                       [imageChangedEvent]="imageChangedEvent"
+                       [maintainAspectRatio]="true"
+                       [resizeToWidth]="400"
+                       [style]="imageChangedEvent ? 'display:block' : 'display:none'"
+                       format="png"
+                       outputType="file"
+                       style="max-width: 400px; padding: 0"
+        ></image-cropper>
+
+        <br/>
+
+        <p>upload a profile picture or update your profile details below</p>
+      </div>
+      <form (ngSubmit)="onSubmit()" [formGroup]="userInfoForm">
+        <div class="section-header">
+          <p class="dim">About</p>
+          <hr/>
+        </div>
+        <div class="section">
+          <!-- primary info fields -->
+          <div [class.input-error]="submitted && f.firstName.invalid" class="input-with-icon">
+            <input formControlName="firstName" placeholder="First name..." required type="text">
+            <i area-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
+          </div>
+          <div [class.input-error]="submitted && f.lastName.invalid" class="input-with-icon">
+            <input formControlName="lastName" placeholder="Last name..." required type="text">
+            <i area-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
+          </div>
+          <div [class.input-error]="submitted && f.bio.invalid" class="input-with-icon">
+            <textarea formControlName="bio" maxlength="500" placeholder="Bio..." rows="2"></textarea>
+            <i area-hidden="true" class="fas fa-address-book fa-lg fa-fw"></i>
+          </div>
+          <div [class.input-error]="submitted && f.location.invalid" class="input-with-icon">
+            <input formControlName="location" placeholder="Location..." type="text">
+            <i area-hidden="true" class="fas fa-map-marked-alt fa-lg fa-fw"></i>
+          </div>
+          <div [class.input-error]="submitted && f.phone.invalid" class="input-with-icon">
+            <input formControlName="phone" placeholder="Phone..." type="text">
+            <i area-hidden="true" class="fas fa-phone fa-lg fa-fw"></i>
+          </div>
+          <div [class.input-error]="submitted && f.website.invalid" class="input-with-icon">
+            <input formControlName="website" placeholder="Website..." type="text">
+            <i area-hidden="true" class="fas fa-globe fa-lg fa-fw"></i>
+          </div>
+        </div>
+        <div class="section-header">
+          <p class="dim">Interests</p>
+          <hr/>
+        </div>
+        <div class="section" style="align-items: flex-start; justify-content: flex-start;">
+          <!-- interest fields -->
+          <div [class]="'interest-search-area'" class="input-with-icon">
+            <input #searchArea (keyup)="search($event)" placeholder="Search..." type="text">
+            <i area-hidden="true" class="fas fa-book-open fa-lg fa-fw"></i>
+          </div>
+          <div *ngIf="(categorySearchResults.length > 0) && searchEnabled" class="interest-search-results">
+            <a (click)="categorySearchResults = []; addToInterestsList(result)"
+               *ngFor="let result of categorySearchResults">
+              <app-label-data [data]="(result.category ? result.category.name : '') +
+          (result.subCategory ? ' - ' + result.subCategory.name : '') + (result.leafCategory ? ' - ' + result.leafCategory.name : '')"
+                              [noMargin]="true">
+              </app-label-data>
+            </a>
+          </div>
+          <div class="interest-list">
+            <app-label-with-icon-data (click)="removeFromInterestList(result)" *ngFor="let result of interests"
+                                      [data]="(!result.leafCategory && !result.subCategory && result.category ? result.category.name : '') +
+          (!result.leafCategory && result.subCategory ? result.subCategory.name : '') + (result.leafCategory ? result.leafCategory.name : '')"
+                                      [fixWidth]="true" [noMarginIcon]="true" [noMargin]="true"
+                                      [solid]="'times'">
+            </app-label-with-icon-data>
+          </div>
+        </div>
+        <div class="section-header">
+          <p class="dim">Contributor</p>
+          <hr/>
+        </div>
+        <div class="section" style="align-items: initial">
+          <label class="input-checkbox-label" style="margin-bottom: 20px">
+            <input formControlName="userProfileActivated" type="checkbox">
+            <span></span>
+            <p>Activate user profile</p>
+          </label>
+        </div>
+        <div class="section-submit">
+          <app-button1 [text]="'DONE'"></app-button1>
+          <a href="" routerLink="{{URLS.dashboard.root}}">
+            skip for now
+          </a>
+        </div>
+      </form>
+    </div>
+  </app-card1>
+</div>

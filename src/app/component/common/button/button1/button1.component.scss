@@ -1,0 +1,100 @@
+.button1 {
+  border: none;
+  padding: 1.2em 2.2em;
+  font-weight: 300;
+  font-size: 14px;
+  background-color: var(--color);
+  color: var(--contrast);
+  cursor: pointer;
+  transition: 200ms ease;
+  margin: 0.25em 0.25em 1em;
+  vertical-align: text-bottom;
+}
+
+.button1.attendee {
+  padding: 0.3em;
+  margin: 0;
+}
+
+.button1.contribute {
+  padding: 1em;
+  margin: 0;
+}
+
+.button1.brand-color {
+  color: whitesmoke;
+  background-color: var(--brand-color);
+}
+
+.button1.brand-light-color {
+  color: whitesmoke;
+  background-color: var(--brand-light);
+}
+
+.button1.transparent {
+  background-color: transparent;
+}
+
+.button1.success {
+  border: 1px solid var(--success);
+  color: var(--success);
+}
+
+.button1.lighter-contrast {
+  border: 1px solid var(--lighter-contrast);
+  color: var(--lighter-contrast);
+}
+
+.button1:disabled {
+  pointer-events: none;
+  filter: opacity(60%);
+}
+
+.button1.fixed-width {
+  width: 160px;
+}
+
+.button1.sleek-button {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+}
+
+@media only screen and (max-width: 999px) {
+  .button1.mobile-view {
+    width: -webkit-fill-available;
+    min-width: -webkit-min-content;
+    padding: 0.5em;
+  }
+
+  .button1.sleek-button {
+    width: -webkit-fill-available;
+    min-width: -webkit-min-content;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .button1.sleek-button {
+    min-width: 220px;
+  }
+}
+
+@media (hover: hover) {
+  .button1.hover-with-color:hover {
+    color: var(--darker-contrast);
+  }
+
+  .button1:hover {
+    box-shadow: 0 3px 15px 1px var(--shadow);
+  }
+
+  .button1.brand-color:hover {
+    background-color: var(--brand-color);
+    color: white;
+  }
+
+  .button1.brand-light-color:hover {
+    background-color: var(--brand-light);
+    color: whitesmoke;
+    box-shadow: initial;
+  }
+}

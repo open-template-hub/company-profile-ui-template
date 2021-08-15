@@ -1,0 +1,16 @@
+<div class="splash-content" fxLayout="column" fxLayoutAlign="center center">
+  <div class="splash-logos" fxLayout="row" fxLayoutAlign="center center">
+    <img [src]="brand.brandLogo" alt="logo"/>
+    <i *ngIf="!error" class="fa fa-check-circle success-text"></i>
+    <i *ngIf="error" class="fa fa-times-circle error-text"></i>
+    <img [src]="payment ? payment.logo : social.logo" alt="social logo"/>
+  </div>
+  <div *ngIf="!error" [classList]="'splash-loading-bar ' + (payment ? payment.cssClass : social.cssClass)">
+  </div>
+  <div *ngIf="error" class="error-text alert-with-icon">
+    <p>
+      {{error}}
+    </p>
+    <i area-hidden="true" class="fas fa-exclamation-triangle fa-lg fa-fw"></i>
+  </div>
+</div>

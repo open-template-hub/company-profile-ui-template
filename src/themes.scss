@@ -1,0 +1,86 @@
+:root {
+  --lighter: #29607f;
+  --color: #1a4f6c;
+  --color-alpha-0-5: rgba(26, 79, 108, 0.5);
+  --color-alpha-0-13: rgba(26, 79, 108, 0.13);
+  --darker: #0f3d57;
+  --darker-contrast: #e7eef3;
+  --contrast: #cbdbe5;
+  --lighter-contrast: #abc3d2;
+  --background: #ffffff;
+  --background-img: url("./assets/landing.png");
+  --overlay: rgba(255, 255, 255, 0.7);
+  --shadow: rgba(155, 155, 155, 0.5);
+  --card: #ffffff;
+  --success: #228b22;
+  --error: #E23237;
+  --warn: #d28f29;
+  --cropper-overlay-color: #f7fdff;
+  --cropper-outline-color: rgba(255, 255, 255, 0.7);
+  --always-lighter: #29607f;
+}
+
+.dark-theme {
+  --lighter: #abc3d2;
+  --color: #cbdbe5;
+  --color-alpha-0-5: rgba(203, 219, 229, 0.5);
+  --color-alpha-0-13: rgba(203, 219, 229, 0.13);
+  --darker: #e7eef3;
+  --darker-contrast: #0f3d57;
+  --contrast: #1a4f6c;
+  --lighter-contrast: #29607f;
+  --background: #091d23;
+  --background-img: url("./assets/landing-dark.png");
+  --overlay: rgba(0, 0, 0, 0.5);
+  --shadow: rgba(76, 76, 76, 0.5);
+  --card: #0b252b;
+  --success: #398039;
+  --error: #e04e52;
+  --warn: #cda05c;
+  --cropper-overlay-color: #0b252b;
+  --cropper-outline-color: rgba(11, 37, 43, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lighter: #abc3d2;
+    --color: #cbdbe5;
+    --color-alpha-0-5: rgba(203, 219, 229, 0.5);
+    --color-alpha-0-13: rgba(203, 219, 229, 0.13);
+    --darker: #e7eef3;
+    --darker-contrast: #0f3d57;
+    --contrast: #1a4f6c;
+    --lighter-contrast: #29607f;
+    --background: #091d23;
+    --background-img: url("./assets/landing-dark.png");
+    --overlay: rgba(0, 0, 0, 0.5);
+    --shadow: rgba(76, 76, 76, 0.5);
+    --card: #0b252b;
+    --success: #398039;
+    --error: #e04e52;
+    --warn: #cda05c;
+    --cropper-overlay-color: #0b252b;
+    --cropper-outline-color: rgba(11, 37, 43, 0.5);
+  }
+
+  .dark-theme {
+    --lighter: #29607f;
+    --color: #1a4f6c;
+    --color-alpha-0-5: rgba(26, 79, 108, 0.5);
+    --color-alpha-0-13: rgba(26, 79, 108, 0.13);
+    --darker: #0f3d57;
+    --darker-contrast: #e7eef3;
+    --contrast: #cbdbe5;
+    --lighter-contrast: #abc3d2;
+    --background: #ffffff;
+    --background-img: url("./assets/landing.png");
+    --overlay: rgba(255, 255, 255, 0.7);
+    --shadow: rgba(155, 155, 155, 0.5);
+    --card: #ffffff;
+    --success: #228b22;
+    --error: #E23237;
+    --warn: #d28f29;
+    --cropper-overlay-color: #f7fdff;
+    --cropper-outline-color: rgba(255, 255, 255, 0.7);
+  }
+}

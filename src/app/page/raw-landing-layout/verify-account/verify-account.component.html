@@ -1,0 +1,22 @@
+<div class="raw-landing-raw-content-page">
+  <div class="top-shadow">
+  </div>
+  <div class="hero">
+    <div class="brand-logo-wrapper">
+      <div class="bounce-stage">
+        <img [src]="brand.brandLogo" alt="logo" class="bounce brand-logo" height="100"/>
+      </div>
+      <h2 *ngIf="loading">Verifying account..</h2>
+      <h2 *ngIf="!loading && error">An error occurred</h2>
+      <h2 *ngIf="!loading && !error">Account verified!</h2>
+    </div>
+    <h6 *ngIf="error" class="error-text">Sorry about that!</h6>
+    <h6 *ngIf="!loading && !error">Please proceed with login</h6>
+    <div *ngIf="!loading && !error" class="section-submit">
+      <app-button1 (click)="router.navigate(['/login'])" [text]="'LOG IN'"></app-button1>
+    </div>
+    <div *ngIf="!loading && error" class="section-submit">
+      <app-button1 (click)="router.navigate(['/'])" [text]="'HOME'"></app-button1>
+    </div>
+  </div>
+</div>

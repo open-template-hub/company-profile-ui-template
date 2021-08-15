@@ -1,0 +1,143 @@
+.side-nav-wrapper {
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  background-color: var(--card);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0 0 0 0;
+  box-shadow: 0 0 13px 2px var(--shadow);
+}
+
+.side-nav {
+  width: 256px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0 0 0 env(safe-area-inset-left);
+}
+
+.side-nav a, .side-nav .dashboard-layout-side-nav-search {
+  display: inline-flex;
+  width: 100%;
+  min-height: 80px;
+  height: 80px;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+}
+
+.side-nav .brand {
+  box-shadow: 0 0 5px var(--shadow);
+  border-radius: 0;
+}
+
+.side-nav .brand h2 {
+  color: var(--color);
+}
+
+#menu {
+  margin-top: auto;
+  margin-bottom: env(safe-area-inset-bottom);
+}
+
+.side-nav a i, .side-nav .dashboard-layout-side-nav-search i {
+  margin: 0 28px;
+}
+
+.side-nav a .brand-logo {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.side-nav .brand h2 {
+  margin: 0 0 0 3px;
+}
+
+.side-nav-closed .side-nav {
+  width: 80px;
+}
+
+.side-nav a .profile-img-small {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.side-nav-sub {
+  display: flex;
+  width: 100%;
+  min-height: 240px;
+  flex-direction: column;
+  box-shadow: 0 0 14px 0 var(--shadow);
+}
+
+.side-nav-brand-text {
+  text-align: center;
+  font-size: 19px;
+}
+
+.dashboard-layout-side-nav-search {
+  color: var(--color);
+}
+
+.dashboard-layout-side-nav-search ::placeholder {
+  color: var(--lighter);
+}
+
+.dashboard-layout-side-nav-search input {
+  border-bottom: 1px solid var(--lighter);
+  width: 150px;
+}
+
+.dashboard-layout-side-nav-search input, .dashboard-layout-side-nav-search ::placeholder {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dashboard-layout-side-nav-search input:focus {
+  border-bottom: 1px solid var(--color);
+}
+
+.dashboard-layout-side-nav-search i {
+  cursor: pointer;
+}
+
+#more-settings, #logout {
+  color: var(--lighter);
+}
+
+#more-settings {
+  border-top: 1px solid var(--darker-contrast);
+}
+
+@media only screen and (max-width: 999px) {
+  .side-nav-wrapper {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .side-nav, .side-nav-closed.side-nav {
+    width: 80px;
+  }
+
+  #menu {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .side-nav-wrapper {
+    visibility: visible;
+  }
+}
+
+@media (hover: hover) {
+
+  .side-nav a:hover {
+    background: var(--hover);
+  }
+}

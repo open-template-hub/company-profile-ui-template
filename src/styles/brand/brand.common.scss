@@ -1,0 +1,66 @@
+:root {
+}
+
+.brand-logo-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo-wrapper > * {
+  margin: 0.4em;
+}
+
+.brand-in-page-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  box-shadow: 5px 0 10px var(--shadow);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 12;
+  height: 55px;
+}
+
+.brand-in-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-in-page a {
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.brand-in-page a > * {
+  margin: 0.2em;
+}
+
+@media only screen and (max-width: 999px) {
+  .brand-logo-wrapper > * {
+    margin: 0.2em;
+  }
+
+  .brand-in-page-wrapper {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .brand-in-page-wrapper {
+    display: none;
+  }
+}
+
+@media (hover: hover) {
+
+  .brand-in-page a:hover {
+    background: none;
+  }
+}

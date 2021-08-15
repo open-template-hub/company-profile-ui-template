@@ -1,0 +1,12 @@
+{
+  "name": "Angular UI Template",
+  "description": "Angular UI Template",
+  "repository": "https://github.com/open-template-hub/web-ui-template",
+  "logo": "https://avatars2.githubusercontent.com/u/65504426?s=200&v=4",
+  "keywords": [
+    "angular",
+    "template",
+    "ui-components",
+    "angular-components"
+  ]
+}

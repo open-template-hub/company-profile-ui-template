@@ -1,0 +1,178 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 35px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.features > * {
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
+.feature svg {
+  max-width: 100%;
+  min-width: 40%;
+  height: auto;
+}
+
+.feature-reverse {
+  background-color: var(--brand-light);
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.feature-notes {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-wrapper {
+  margin-top: 20px;
+}
+
+.register-wrapper a {
+  border-radius: 3px;
+  padding: 10px 17px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--brand-color);
+  border: 1px solid var(--brand-color);
+}
+
+.register-wrapper a i {
+  margin-right: 0.5em;
+}
+
+.counters {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.counter-wrapper {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  color: var(--brand-color);
+  font-weight: 400;
+}
+
+.counter-wrapper h6 {
+  width: auto;
+  margin: 5px 30px 0;
+  padding-bottom: 9px;
+  border-bottom: 2px solid var(--brand-light);
+}
+
+#title-hero {
+  // TODO: Get url from production after release
+  background-image: url("https://wecontribute-develop.herokuapp.com/assets/common/map.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 999px) {
+  .home-page {
+    font-size: 23px;
+  }
+
+  .feature {
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+
+  .feature svg {
+    max-width: 360px;
+    max-height: 270px;
+    padding-bottom: 15px;
+  }
+
+  .features {
+    padding-bottom: 100px;
+  }
+
+  .features > * {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .register-wrapper {
+    margin-top: 20px;
+  }
+
+  .register-wrapper a {
+    font-size: 0.8em;
+  }
+
+  .register-wrapper a i {
+    font-size: 1.2em;
+  }
+
+  .counters {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+
+  .counter-wrapper {
+    height: 40vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .home-page {
+    font-size: 35px;
+  }
+
+  .features {
+    padding-bottom: 300px;
+  }
+
+  .register-wrapper {
+    margin-top: 50px;
+  }
+
+  .register-wrapper a {
+    font-size: 0.7em;
+  }
+
+  .register-wrapper a i {
+    font-size: 1em;
+  }
+
+  .counters {
+    padding-top: 190px;
+    padding-bottom: 0;
+    width: 60%;
+  }
+}
+
+@media (hover: hover) {
+  .register-wrapper a:hover {
+    box-shadow: 0 3px 15px 1px var(--shadow);
+  }
+}
+

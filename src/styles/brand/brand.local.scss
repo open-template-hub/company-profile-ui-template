@@ -1,0 +1,33 @@
+:root {
+  --brand-color: #d56666;
+  --brand-color-v1: #cf6e6e;
+  --brand-color-v2: #c57777;
+  --brand-color-v3: #bb8181;
+  --brand-color-v4: #b18b8b;
+
+  --brand-background: #b74d4d;
+  --brand-light: #e09f9f;
+  --hover: rgba(150, 89, 89, 0.2);
+  --overlay: rgba(224, 159, 159, 0.3);
+
+  // shine animation colors
+  --color-alpha-0-5: rgba(108, 26, 26, 0.5);
+  --color-alpha-0-13: rgba(108, 26, 26, 0.13);
+}
+
+.dark-theme {
+  --brand-light: #704f4f;
+  --overlay: rgba(105, 74, 74, 0.7);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-light: #704f4f;
+    --overlay: rgba(105, 74, 74, 0.7);
+  }
+
+  .dark-theme {
+    --brand-light: #e09f9f;
+    --overlay: rgba(224, 159, 159, 0.3);
+  }
+}

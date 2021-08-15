@@ -1,0 +1,111 @@
+.visuallyHidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.product-review-stars-input {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.product-review-stars-input label:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f005";
+  -webkit-transform: scale(4);
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  transition: all .4s;
+  opacity: 0;
+  color: inherit;
+  visibility: hidden;
+
+}
+
+.product-review-stars-input input:checked + label:after {
+  visibility: visible;
+  -webkit-transform: scale(1);
+  opacity: 1;
+}
+
+.rate-badge-wrapper {
+  unicode-bidi: bidi-override;
+  //width: 205px;
+  width: -webkit-fit-content;
+}
+
+.rate-badge-wrapper label {
+  font-family: "Font Awesome 5 Free";
+  content: "\f005";
+  font-size: 2em;
+  position: relative;
+  color: var(--contrast);
+}
+
+.product-review-stars-input label {
+  cursor: pointer;
+}
+
+.product-review-stars-input input:checked ~ label:after
+{
+  visibility: visible;
+  -webkit-transform: scale(1);
+  opacity: 1;
+}
+
+.rate-badge-wrapper input + label:nth-of-type(1):after {
+  color: var(--brand-color);
+}
+
+.rate-badge-wrapper input + label:nth-of-type(2):after {
+  color: var(--brand-color-v1);
+}
+
+.rate-badge-wrapper input + label:nth-of-type(3):after {
+  color: var(--brand-color-v2);
+}
+
+.rate-badge-wrapper input + label:nth-of-type(4):after {
+  color: var(--brand-color-v3);
+}
+
+.rate-badge-wrapper input + label:nth-of-type(5):after {
+  color: var(--brand-color-v4);
+}
+
+.rate:after {
+  content: "";
+  position: absolute;
+  left:0;
+  font-weight: 900;
+}
+
+.rate-full:after {
+  content: "\f005";
+}
+
+.rate-half:after {
+  content: "\f089";
+}
+
+.rate-1:after {
+  color: var(--brand-color-v4);
+}
+
+.rate-2:after {
+  color: var(--brand-color-v3);
+}
+
+.rate-3:after {
+  color: var(--brand-color-v2);
+}
+
+.rate-4:after {
+  color: var(--brand-color-v1);
+}
+
+.rate-5:after {
+  color: var(--brand-color);
+}

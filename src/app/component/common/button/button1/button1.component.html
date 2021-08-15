@@ -1,0 +1,10 @@
+<button [class.attendee]="isAttendee" [class.brand-color]="brandColor" [class.circle]="circle"
+        [class.fixed-width]="fixedWidth"
+        [class.hover-with-color]="hoverWithColor" [class.lighter-contrast]="lighterContrast"
+        [class.mobile-view]="mobileView"
+        [class.sleek-button]="isSleekButton" [class.success]="success" [class.transparent]="transparent"
+        [disabled]="loading" [class.contribute]="isContribute" class="button1 rounded-box" [style.cursor]='cursor'
+        [class.brand-light-color]="brandLightColor">
+  <i *ngIf="icon" [classList]="'fas fa-' + icon + ' fa-lg fa-fw'"></i>
+  {{text}}
+</button>

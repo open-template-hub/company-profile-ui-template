@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/"/>
+  <title>OpenTemplateHub - Dev</title>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content='width=device-width, initial-scale=1, viewport-fit=cover' name='viewport'>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link href="assets/staging/favicons/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/staging/favicons/favicon.png" rel="icon" type="image/x-icon">
+  <link href="assets/staging/favicons/site.webmanifest" rel="manifest">
+  <link color="#DFC36C" href="assets/staging/favicons/safari-pinned-tab.svg" rel="mask-icon">
+
+  <meta content="assets/staging/favicons/browserconfig.xml" name="msapplication-config"/>
+  <meta content="#e0c87d" name="msapplication-TileColor">
+
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      overflow: auto;
+    }
+
+    .index-splash-page {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: var(--background-color);
+      display: flex;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .index-splash-animation {
+      margin-top: 30vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .index-splash-animation img {
+      height: 55px;
+    }
+
+    .index-splash-animation h2 {
+      color: var(--color);
+      margin-top: 20px;
+    }
+
+    .index-splash-animation h3 {
+      color: #C39D2A;
+    }
+
+    .index-splash-bar {
+      width: 130px;
+      height: 2px;
+      background: #cfcfcf;
+      margin-top: 22px;
+      margin-bottom: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .index-splash-bar::before {
+      content: "";
+      width: 68px;
+      height: 2px;
+      background: #DFC36C;
+      position: absolute;
+      left: -34px;
+      animation: index-splash-bar 1.5s infinite ease;
+    }
+
+    @keyframes index-splash-bar {
+      50% {
+        left: 96px;
+        background: #C39D2A;
+      }
+    }
+
+    @media only screen and (max-width: 999px) {
+      .index-splash-animation {
+        max-width: 90%;
+      }
+    }
+
+    @media only screen and (min-width: 1000px) {
+      .index-splash-animation {
+        max-width: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+<app-root>
+  <div class="index-splash-page">
+    <div class="index-splash-animation">
+      <img alt="logo" src="./assets/staging/brand-logo.png"/>
+      <h2>OpenTemplateHub</h2>
+      <h3>(staging)</h3>
+      <div class="index-splash-bar">
+      </div>
+      <h2 id="quote"></h2>
+      <h3 id="author"></h3>
+    </div>
+  </div>
+</app-root>
+</body>
+</html>

@@ -1,0 +1,89 @@
+.alert-with-icon {
+  width: 100%;
+  position: relative;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.alert-with-icon p {
+  padding-left: 49px;
+}
+
+.alert-with-icon i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 7px;
+}
+
+.success-text, .success-text p, .success-text i {
+  color: var(--success);
+}
+
+.input-success input {
+  border-color: var(--success);
+}
+
+.input-success input::-webkit-input-placeholder {
+  color: var(--success);
+}
+
+.input-success input:focus {
+  border-color: var(--success);
+}
+
+.input-success.input-with-icon input:focus + i {
+  color: var(--success);
+}
+
+.input-success.input-with-icon i {
+  color: var(--success);
+}
+
+.error-text, .error-text p, .error-text h1, .error-text h2, .error-text h3, .error-text h4, .error-text h5, .error-text h6, .error-text i {
+  color: var(--error);
+}
+
+.input-error input {
+  border-color: var(--error);
+}
+
+.input-error input::-webkit-input-placeholder, .input-error p {
+  color: var(--error);
+}
+
+.input-error input:focus {
+  border-color: var(--error);
+}
+
+.input-error.input-with-icon input:focus + i {
+  color: var(--error);
+}
+
+.input-error.input-with-icon i {
+  color: var(--error);
+}
+
+.warn-text, .warn-text p, .warn-text i {
+  color: var(--warn);
+}
+
+.input-warn input {
+  border-color: var(--warn);
+}
+
+.input-warn input::-webkit-input-placeholder {
+  color: var(--warn);
+}
+
+.input-warn input:focus {
+  border-color: var(--warn);
+}
+
+.input-warn.input-with-icon input:focus + i {
+  color: var(--warn);
+}
+
+.input-warn.input-with-icon i {
+  color: var(--warn);
+}

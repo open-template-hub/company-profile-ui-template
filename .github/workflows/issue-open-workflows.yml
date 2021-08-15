@@ -1,0 +1,28 @@
+name: Issue Open Workflows
+
+on:
+  issues:
+    types: [ opened ]
+
+jobs:
+  automate-project-columns:
+    name: "Automate Project Columns"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Move Issue to In-Progress
+        uses: alex-page/github-project-automation-plus@v0.3.0
+        with:
+          project: Open Template Hub Servers
+          column: To do
+          repo-token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
+
+  milestone-binder:
+    name: "Milestone Binder"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set Milestone of the Issue
+        uses: Code-Hex/auto-milestone-binder@v1.0.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

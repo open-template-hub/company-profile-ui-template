@@ -1,0 +1,33 @@
+<div [class.dashboard-layout-top-nav-loading]="loading">
+</div>
+<nav class="dashboard-layout-top-nav">
+  <a routerLink="{{URLS.dashboard.root}}">
+    <img [src]="brand.brandLogo" alt="brand logo" class="brand-logo" width="40"/>
+  </a>
+  <div #searchArea class="input-with-icon">
+    <input (keyup)="search($event)" placeholder="Search..." type="text">
+    <i area-hidden="true" class="fas fa-search fa-lg fa-fw"></i>
+  </div>
+  <a routerLink="{{URLS.dashboard.myProfile}}">
+    <img [src]="profileImg" alt="profile img" class="profile-img-small"/>
+  </a>
+</nav>
+<div #searchArea *ngIf="(userSearchResults.length > 0 || categorySearchResults.length > 0) && searchEnabled"
+     class="dashboard-layout-top-nav-search-results">
+  <a (click)="userSearchResults = []" *ngFor="let result of userSearchResults"
+     routerLink="{{URLS.user.root + '/' + result.username}}">
+    <app-label-with-icon-data [data]="result.username" [isClickableWithinApp]="true" [noMargin]="'true'"
+                              [solid]="'user'" [urlPrefix]="URLS.user.root + '/'">
+    </app-label-with-icon-data>
+  </a>
+  <hr *ngIf="userSearchResults.length > 0 && categorySearchResults.length > 0">
+  <a (click)="categorySearchResults = []"
+     *ngFor="let result of categorySearchResults"
+     [queryParams]="{category: result.category.id, 'sub-category': result.subCategory?.id, 'leaf-category': result.leafCategory?.id}"
+     routerLink="{{URLS.dashboard.learn}}">
+    <app-label-with-icon-data [data]="(result.category ? result.category.name : '') +
+          (result.subCategory ? ' - ' + result.subCategory.name : '') + (result.leafCategory ? ' - ' + result.leafCategory.name : '')"
+                              [noMargin]="true" [solid]="'book-open'">
+    </app-label-with-icon-data>
+  </a>
+</div>

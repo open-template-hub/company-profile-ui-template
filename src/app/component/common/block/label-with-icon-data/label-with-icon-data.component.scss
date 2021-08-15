@@ -1,0 +1,44 @@
+.icon-data-block {
+  margin-bottom: 0.5em;
+  width: fit-content;
+  color: var(--color);
+  white-space: pre-line;
+}
+
+.icon-data-block a {
+  width: fit-content;
+}
+
+.icon-data-block.fix-width a, .icon-data-block.fix-width p {
+  width: 260px;
+}
+
+.icon-data-block.no-margin {
+  margin-bottom: 0;
+}
+
+.icon-data-block.no-margin-icon i {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.icon-data-block i {
+  margin-top: 0.2em;
+  margin-right: 0.5em;
+}
+
+.twitter.icon-data-block {
+  color: var(--twitter);
+}
+
+.facebook.icon-data-block {
+  color: var(--facebook);
+}
+
+.youtube.icon-data-block {
+  color: var(--youtube);
+}
+
+.times.icon-data-block {
+  color: var(--error);
+}

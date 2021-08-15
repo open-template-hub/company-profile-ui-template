@@ -1,0 +1,24 @@
+<div *ngIf="brand" [class.no-margin]="noMargin" [ngClass]="brand" class="icon-data-block" fxLayout="row">
+  <i [classList]="'fab fa-' + brand + ' fa-lg fa-fw'"></i>
+  <a [target]="target" class="inline-a" href="{{urlPrefix}}/{{data}}">{{data}}</a>
+</div>
+
+<div *ngIf="solid" [class.fix-width]="fixWidth" [class.no-margin-icon]="noMarginIcon" [class.no-margin]="noMargin"
+     [ngClass]="solid"
+     class="icon-data-block" fxLayout="row">
+  <i [classList]="'fas fa-' + solid + ' fa-lg fa-fw'"></i>
+  <p *ngIf="!isClickable && !isClickableWithinApp && !urlData">{{data}}</p>
+  <a *ngIf="isClickable" [class.inline-a]="highlight"
+     [href]="(data.startsWith('http://') || data.startsWith('https://')) ? data : urlPrefix + data"
+     [target]="target">
+    {{data}}
+  </a>
+  <a *ngIf="isClickableWithinApp" [class.inline-a]="highlight"
+     [routerLink]="(data.startsWith('http://') || data.startsWith('https://')) ? data : urlPrefix + data">
+    {{data}}
+  </a>
+  <a *ngIf="urlData && queryParams" [class.inline-a]="highlight"
+     [queryParams]="queryParams" [routerLink]="urlData">
+    {{data}}
+  </a>
+</div>

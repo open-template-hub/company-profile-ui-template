@@ -1,0 +1,75 @@
+.card-bottom-loading {
+  width: 100%;
+  height: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-bottom-loading-wrapper {
+  width: 100%;
+  height: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bottom-nav-loading {
+  width: 100%;
+  height: 5px;
+  position: fixed;
+  bottom: calc(50px + env(safe-area-inset-bottom));
+  left: 0;
+  overflow: hidden;
+  z-index: 11;
+}
+
+.card-bottom-loading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(-25%);
+  width: 50%;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--color);
+  animation: loading-bar 1.5s infinite ease-in-out;
+}
+
+.bottom-nav-loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  left: calc(-25%);
+  width: 50%;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--color);
+  animation: loading-bar 1.5s infinite ease-in-out;
+}
+
+@keyframes loading-bar {
+  50% {
+    left: 75%;
+    background: var(--lighter);
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .card-bottom-loading::after {
+    visibility: hidden;
+  }
+
+  .bottom-nav-loading::after {
+    visibility: visible;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .card-bottom-loading::after {
+    visibility: visible;
+  }
+
+  .bottom-nav-loading::after {
+    visibility: hidden;
+  }
+}

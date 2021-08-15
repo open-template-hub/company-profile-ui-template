@@ -1,0 +1,6 @@
+bug: 'bug/*'
+dependency: 'dependency/*'
+documentation: 'documentation/*'
+feature: 'feature/*'
+hotfix: 'hotfix/*'
+quality: 'quality/*'

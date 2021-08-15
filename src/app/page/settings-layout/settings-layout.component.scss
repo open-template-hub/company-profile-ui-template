@@ -1,0 +1,53 @@
+.settings-layout-page {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--background-color);
+  padding: 0.5rem 0 0 env(safe-area-inset-left);
+}
+
+.settings-layout-page-content {
+  padding: 0 2rem 2em;
+  min-height: 120vh;
+  overflow: auto;
+}
+
+@media only screen and (max-width: 999px) {
+  .settings-layout-page {
+    min-height: 200vh;
+    margin-top: 55px;
+  }
+
+  .settings-layout-page, .footer-wrap {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 1000px) {
+  .side-nav-closed .settings-layout-page, .side-nav-closed .footer-wrap, .settings-layout-page, .footer-wrap {
+    margin-left: 80px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .settings-layout-page, .footer-wrap {
+    margin-left: 256px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .settings-layout-page {
+    margin-top: 0;
+  }
+
+  .side-nav-closed .settings-layout-page, .side-nav-closed .footer-wrap {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (min-aspect-ratio: 4/3) {
+  .settings-layout-page-content {
+    min-height: 200vh;
+  }
+}

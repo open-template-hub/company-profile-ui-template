@@ -1,0 +1,27 @@
+.menu-list {
+  position: absolute;
+  right: 40px;
+  background-color: var(--card);
+  width: 140px;
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 3px 15px 0 var(--shadow);
+}
+
+.content {
+  margin-top: 10px;
+  text-align: center;
+  width: -webkit-fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 13px;
+}
+
+.calendar {
+  margin-top: 20px;
+}
+
+.hamburger-menu i {
+  color: var(--color);
+}

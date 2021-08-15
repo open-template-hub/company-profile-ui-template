@@ -1,0 +1,38 @@
+name: PR Open Workflows
+
+on:
+  pull_request:
+    types: [ opened ]
+
+jobs:
+  pr-labeler:
+    name: "Add Label to PR"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Add Label to PR
+        uses: TimonVS/pr-labeler-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  automate-project-columns:
+    name: "Automate Project Columns"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Move PR to In-Progress
+        uses: alex-page/github-project-automation-plus@v0.3.0
+        with:
+          project: Open Template Hub Servers
+          column: In progress
+          repo-token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
+
+  milestone-binder:
+    name: "Milestone Binder"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set Milestone of the PR
+        uses: Code-Hex/auto-milestone-binder@v1.0.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

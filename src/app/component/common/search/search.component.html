@@ -1,0 +1,35 @@
+<div class="search-area">
+  <i class="material-icons">search</i>
+  <input #searchArea (keyup)="search($event)" placeholder="Search..." type="text">
+  <div
+    *ngIf="(userSearchResults.length > 0 || categorySearchResults.length > 0 || eventSearchResults.length > 0) && searchEnabled"
+    class="search-results">
+    <a (click)="userSearchResults = []" *ngFor="let result of userSearchResults"
+       routerLink="{{URLS.user.root + '/' + result.username}}">
+      <app-label-with-icon-data [data]="result.username" [isClickableWithinApp]="true" [noMargin]="'true'"
+                                [solid]="'user'" [urlPrefix]="URLS.user.root + '/'">
+      </app-label-with-icon-data>
+    </a>
+    <hr *ngIf="userSearchResults.length > 0 && categorySearchResults.length > 0">
+    <a (click)="categorySearchResults = []"
+       *ngFor="let result of categorySearchResults"
+       [queryParams]="{category: result.category.id, 'sub-category': result.subCategory?.id, 'leaf-category': result.leafCategory?.id}"
+       routerLink="{{URLS.dashboard.learn}}">
+      <app-label-with-icon-data [data]="(result.category ? result.category.name : '') +
+          (result.subCategory ? ' - ' + result.subCategory.name : '') + (result.leafCategory ? ' - ' + result.leafCategory.name : '')"
+                                [noMarginIcon]="true" [noMargin]="true" [solid]="'book-open'">
+      </app-label-with-icon-data>
+    </a>
+    <hr
+      *ngIf="eventSearchResults.length > 0 && (categorySearchResults.length > 0 || userSearchResults.length > 0)">
+    <a (click)="eventSearchResults = []"
+       *ngFor="let result of eventSearchResults"
+       [queryParams]="{event_id: result._id}"
+       routerLink="{{URLS.dashboard.event}}">
+      <app-label-with-icon-data [data]="(result.payload.leafCategory ? result.payload.leafCategory.name :
+          result.payload.subCategory ? result.payload.subCategory.name : result.payload.category.name) + ': ' + result.title"
+                                [noMarginIcon]="true" [noMargin]="true" [solid]="'chalkboard-teacher'">
+      </app-label-with-icon-data>
+    </a>
+  </div>
+</div>

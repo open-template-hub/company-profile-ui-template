@@ -1,0 +1,18 @@
+<div class="raw-landing-raw-content-page">
+  <div *ngIf="topShadow" class="top-shadow">
+  </div>
+  <div class="hero">
+    <div class="brand-logo-wrapper">
+      <div class="bounce-stage">
+        <img [src]="brand.brandLogo" alt="logo" class="bounce brand-logo" height="100"/>
+      </div>
+      <h2>Under maintenance 🚧</h2>
+    </div>
+    <h6>Please check again later</h6>
+    <div class="section-submit">
+      <app-button1 (click)="router.navigate(['/'])" [text]="'HOME'"></app-button1>
+    </div>
+    <h2 class="quote">{{'"' + selectedQuote.quote + '"'}}</h2>
+    <h3 class="author">{{selectedQuote.author}}</h3>
+  </div>
+</div>

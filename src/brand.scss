@@ -1,0 +1,54 @@
+:root {
+  --brand-color: #e23237;
+}
+
+.brand-in-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-in-page a {
+  justify-content: center;
+  align-items: center;
+  padding: 10px 17px;
+  display: inline-flex;
+}
+
+.brand-in-page a > * {
+  margin: 0.2rem;
+}
+
+.brand-logo-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo-wrapper > * {
+  margin: 0.4em;
+}
+
+@media only screen and (max-width: 799px) {
+  .brand-logo-wrapper > * {
+    margin: 0.2em;
+  }
+
+  .brand-in-page {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .brand-in-page {
+    display: none;
+  }
+}
+
+@media (hover: hover) {
+
+  .brand-in-page a:hover {
+    background: none;
+  }
+}

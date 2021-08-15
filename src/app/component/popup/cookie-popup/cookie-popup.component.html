@@ -1,0 +1,9 @@
+<div *ngIf="!accepted" class="cookie-popup">
+  <h5 class="cookie-message">By continuing to use this site you agree to our <a class="inline-a"
+                                                                                routerLink="{{URLS.cookiePolicy}}"
+                                                                                target="_blank">Cookie Policy</a>.
+  </h5>
+  <div (click)="setAccepted()" class="accept">
+    <h5>Done</h5>
+  </div>
+</div>

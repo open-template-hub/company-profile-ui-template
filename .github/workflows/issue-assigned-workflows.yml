@@ -1,0 +1,18 @@
+name: Issue Assigned Workflows
+
+on:
+  issues:
+    types: [ assigned ]
+
+jobs:
+  automate-project-columns:
+    name: "Automate Project Columns"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Move Issue to In-Progress
+        uses: alex-page/github-project-automation-plus@v0.3.0
+        with:
+          project: Open Template Hub Servers
+          column: In progress
+          repo-token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}

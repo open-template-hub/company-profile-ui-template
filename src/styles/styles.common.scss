@@ -1,0 +1,116 @@
+@import "theme/themes";
+@import "other/input";
+@import "other/page";
+@import "other/alert";
+@import "other/loading";
+@import "brand/brand.common";
+@import "social/social";
+@import "other/profile";
+@import "other/animation";
+@import "other/util";
+@import "other/toastr";
+@import "other/ribbon";
+@import "other/rate";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
+
+html, body {
+  min-height: 100vh;
+  height: auto;
+}
+
+body {
+  margin: 0;
+  overflow: auto;
+  font-size: 17px;
+}
+
+body, textarea, input {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25em;
+}
+
+body::-webkit-scrollbar-track:vertical {
+  background: var(--lighter-contrast);
+}
+
+body::-webkit-scrollbar-thumb:vertical {
+  background: var(--darker-contrast);
+}
+
+body::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+div * {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: none !important;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0 !important;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+p, a, h1, h2, h3, h4, h5, h6, label, ul, li {
+  color: var(--color);
+  font-weight: 300;
+  word-break: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: 1px solid var(--lighter-contrast);
+}
+
+.dim {
+  color: var(--lighter-contrast);
+  border-color: var(--lighter-contrast);
+}
+
+.dim p, .dim a, .dim h1, .dim h2, .dim h3, .dim h4, .dim h5, .dim h6, .dim label, .dim ul, .dim li {
+  color: var(--lighter-contrast);
+  border-color: var(--lighter-contrast);
+}
+
+.shine {
+  color: var(--darker);
+}
+
+.inline-a, a.inline-a {
+  color: var(--brand-color);
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  body::-webkit-scrollbar-track:vertical {
+    background: var(--darker-contrast);
+  }
+
+  body::-webkit-scrollbar-thumb:vertical {
+    background: var(--lighter-contrast);
+  }
+}
+
+@media only screen and (max-width: 999px) {
+}
+
+@media (hover: hover) {
+
+  a:hover {
+    color: var(--darker);
+  }
+}

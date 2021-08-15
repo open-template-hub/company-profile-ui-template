@@ -1,0 +1,18 @@
+.label-data-block {
+  margin-bottom: 1em;
+  margin-left: 0.4em;
+}
+
+.label-data-block.no-margin {
+  margin-bottom: 0;
+}
+
+.label-data-block.contrast p {
+  color: var(--darker-contrast)
+}
+
+.label-data-block.left-top-margin {
+  margin-left: 35px;
+  margin-bottom: 0px;
+  margin-top: 7px;
+}

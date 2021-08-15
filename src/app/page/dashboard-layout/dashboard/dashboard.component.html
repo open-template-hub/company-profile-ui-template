@@ -1,0 +1,113 @@
+<div class="dashboard-page">
+  <!--DASHBOARD CARD-->
+  <app-card1 [headerProfileImg]="profileImg">
+    <div body class="content-column-wrapper">
+      <div body class="rate-badge-wrapper">
+        <app-rate-bar [rate]="rateObject"></app-rate-bar>
+        <p class="badge-area">
+          <i *ngIf="topContributor !== undefined" style="margin-right: 5px;">
+            <span *ngIf="topContributor === 0">🥇</span>
+            <span *ngIf="topContributor === 1">🥈</span>
+            <span *ngIf="topContributor === 2">🥉</span>
+          </i>
+          <i *ngIf="numberOfEventsTaken !== undefined && numberOfEventsTaken > 10"
+             show-delay="500" tooltip="Curious" style="margin-right: 5px;">📚</i>
+          <i *ngIf="numberOfEventsMade != undefined && numberOfEventsMade < 5" show-delay="500" tooltip="New" style="margin-right: 5px;">👋</i>
+          <i *ngIf="userInfo?.isAcademical" show-delay="500" tooltip="Joined with .edu mail">🎓</i>
+        </p>
+      </div>
+      <div class="column-first" [class.with-rate]="formattedRateNumber">
+        <div class="section-header">
+          <p class="dim">{{( userInfo?.payload?.firstName && userInfo?.payload?.lastName ) ?
+            ( userInfo.payload.firstName + ' ' + userInfo.payload.lastName + ' (@' + userInfo.username + ')' )
+            : ( userInfo?.username ? userInfo.username : '' ) }}
+          <hr/>
+        </div>
+        <div *ngIf="userInfo" class="section-output" fxLayout="column">
+          <app-label-data *ngIf="userInfo?.payload?.bio"
+                          [data]="userInfo.payload.bio">
+          </app-label-data>
+          <div *ngIf="followerCount !== undefined && followeeCount !== undefined" class="follower-following-count-area">
+            <div class="follower-count-area"><i class="follower-count">{{followerCount}}</i> Following</div>
+            <div class="following-count-area"><i class="following-count">{{followeeCount}}</i> Followers</div>
+            <div *ngIf="numberOfEventsMade !== undefined" class="events-count-area"><i class="event-count">{{ numberOfEventsMade }}</i> Events</div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="userInterests.length > 0" class="column-second">
+        <div class="section-header">
+          <p class="dim">Interests</p>
+          <hr/>
+        </div>
+        <div *ngIf="userInfo" [class]="'interest-list'" class="section-output">
+          <app-label-with-icon-data *ngFor="let result of userInterests" [data]="(!result.leafCategory && !result.subCategory && result.category ? result.category.name : '') +
+          (!result.leafCategory && result.subCategory ? result.subCategory.name : '') + (result.leafCategory ? result.leafCategory.name : '')"
+                                    [fixWidth]="true"
+                                    [noMarginIcon]="true"
+                                    [noMargin]="true"
+                                    [queryParams]="{category: result.category.id, 'sub-category': result.subCategory?.id, 'leaf-category': result.leafCategory?.id}"
+                                    [solid]="'bookmark'" [urlData]="URLS.dashboard.learn">
+          </app-label-with-icon-data>
+        </div>
+      </div>
+    </div>
+  </app-card1>
+  <!--END OF DASHBOARD CARD-->
+  <!--RECENTLY PASSED CONTRIBUTIONS-->
+  <div class="in-page-title" *ngIf="userInfo?.payload?.userProfileActivated && myRecentlyCompletedEvents.length > 0">
+    <h2>Recently Passed Events</h2>
+  </div>
+
+  <div *ngIf="userInfo?.payload?.userProfileActivated && myRecentlyCompletedEvents.length > 0" class="dashboard-page-events">
+    <app-event-card *ngFor="let event of myRecentlyCompletedEvents"
+                           [event]="event" [showCalendar]="false"
+                           (markAsCompletedButtonClicked)="markAsCompletedButtonClicked($event)"
+                           [markAsCompleted]="true">
+    </app-event-card>
+  </div>
+  <!--END OF RECENTLY PASSED CONTRIBUTIONS-->
+  <!--YOUR UPCOMING CONTRIBUTIONS-->
+  <div class="your-upcoming-events-area" *ngIf="userInfo?.payload?.userProfileActivated && myUpcomingEvents.length > 0">
+    <div class="in-page-title">
+      <h2>Your Upcoming Events</h2>
+    </div>
+
+    <div *ngIf="myUpcomingEvents.length <= 0" class="in-page-title">
+      <h3 class="dim">Nothing in here..</h3>
+    </div>
+
+    <div *ngIf="myUpcomingEvents.length > 0" class="dashboard-page-events">
+      <app-event-card *ngFor="let event of myUpcomingEvents"
+                             [event]="event" [inProgress]="event.inProgress" [isEditable]="true" (itemIdForFillingForm)="fillForm($event)">
+      </app-event-card>
+    </div>
+  </div>
+  <!--END OF YOUR UPCOMING CONTRIBUTIONS-->
+  <!--ATTENDED CONTRIBUTIONS-->
+  <div class="in-page-title">
+    <h2>Attended Events</h2>
+  </div>
+
+  <div *ngIf="attendedEvents?.length <= 0" class="in-page-title">
+    <h3 class="dim">Nothing in here..</h3>
+  </div>
+
+  <div *ngIf="attendedEvents?.length > 0" class="dashboard-page-events">
+    <app-event-card *ngFor="let event of attendedEvents"
+                           [event]="event" [inProgress]="event.inProgress"></app-event-card>
+  </div>
+  <!--END OF ATTENDED CONTRIBUTIONS-->
+  <!--UNRATED CONTRIBUTIONS-->
+  <div class="in-page-title" *ngIf="unratedEvents.length > 0">
+    <h2>Completed Events</h2>
+  </div>
+  <div *ngIf="unratedEvents?.length > 0" class="dashboard-page-events">
+    <app-event-card *ngFor="let event of unratedEvents" [event]="event"
+                           [showHamburgerMenu]="false" [showRateBar]="true"
+                           (rateButtonClicked)="fetchUnratedCompletedEvents()">
+    </app-event-card>
+  </div>
+  <!--END OF UNRATED CONTRIBUTIONS-->
+  <app-calendar (handleDateClick)="handleDateClick( $event )" (handleEventClick)="handleEventClick( $event )"
+                [calendarEvents]="events" (handleDatesSet)="datesSet( $event )"></app-calendar>
+</div>

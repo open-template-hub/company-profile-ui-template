@@ -1,0 +1,9 @@
+<div [class.contrast]="contrast" [class.dim]="dim" [class.left-top-margin]="leftTopMargin" [class.no-margin]="noMargin"
+     class="label-data-block" fxLayout="column">
+  <p>{{label}}</p>
+  <p *ngIf="!isClickable">{{data}}</p>
+  <a *ngIf="isClickable" [class.inline-a]="highlight"
+     [href]="(data.startsWith('http://') || data.startsWith('https://')) ? data : 'http://' + data" target="_blank">
+    {{data}}
+  </a>
+</div>

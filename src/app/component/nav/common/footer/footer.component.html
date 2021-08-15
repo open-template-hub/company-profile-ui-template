@@ -1,0 +1,65 @@
+<div [class.footer-hide-shadow]="hideShadow" [class.footer-popup-padding]="popupPadding" class="footer">
+  <a href="https://www.linkedin.com/company/open-template-hub" rel="noopener noreferrer" target="_blank">
+    <i class="material-icons">business</i>
+    <span>
+        ABOUT
+    </span>
+  </a>
+  <a routerLink="{{URLS.maintenance}}">
+    <i class="material-icons">chrome_reader_mode</i>
+    <span>
+        BLOG
+    </span>
+  </a>
+  <a routerLink="{{URLS.terms}}">
+    <i class="material-icons">policy</i>
+    <span>
+        TERMS & POLICIES
+    </span>
+  </a>
+  <a href="mailto:opentemplatehub@gmail.com" rel="noopener noreferrer">
+    <i class="material-icons">email</i>
+    <span>
+        CONTACT
+    </span>
+  </a>
+  <a routerLink="{{URLS.maintenance}}">
+    <i class="material-icons">work</i>
+    <span>
+        JOBS
+    </span>
+  </a>
+  <a href="https://github.com/open-template-hub" rel="noopener noreferrer" target="_blank">
+    <i class="material-icons">code</i>
+    <span>
+        OPEN SOURCE
+    </span>
+  </a>
+  <div class="footer-hr-row">
+    <hr/>
+  </div>
+  <div class="footer-brand-row">
+    <a class="brand" routerLink="{{URLS.root}}">
+      <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
+      <h2>OpenTemplateHub <span class="copyright">&#169; 2021</span></h2>
+    </a>
+    <div class="footer-social">
+      <a [href]="environment.social.twitter.url + '/' + environment.oth.social.twitter" target="_blank">
+        <i [classList]="'fab fa-' + environment.social.twitter.cssClass + ' fa-2x fa-fw'"></i>
+      </a>
+      <a [href]="'https://github.com/' + environment.oth.social.github"
+         target="_blank">
+        <i [classList]="'fab fa-' + environment.social.github.cssClass + ' fa-2x fa-fw'"></i>
+      </a>
+      <a [href]="'https://www.producthunt.com/' + environment.oth.social.productHunt"
+         target="_blank">
+        <i [classList]="'fab fa-' + environment.social.productHunt.cssClass + ' fa-2x fa-fw'"></i>
+      </a>
+      <a [href]="environment.social.linkedin.url + '/company/' + environment.oth.social.linkedin"
+         target="_blank">
+        <i [classList]="'fab fa-' + environment.social.linkedin.cssClass + ' fa-2x fa-fw'"></i>
+      </a>
+    </div>
+    <div class="footer-version">{{' v-' + appVersion}}</div>
+  </div>
+</div>

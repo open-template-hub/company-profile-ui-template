@@ -152,4 +152,4 @@ Check project's current **nodejs** and **npm** version from **[package.json](pac
 
 ## LICENSE
 
-The source code for this project is released under the [MIT License](LICENSE).
+The source code for this project is released under the [MIT License](LICENSE). 

@@ -6,8 +6,10 @@
 }
 
 .features {
+  padding-top: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .feature {
@@ -18,9 +20,14 @@
   justify-content: flex-start;
 }
 
-.features > * {
+.features h2, .features .feature {
   padding-left: 7vw;
   padding-right: 7vw;
+}
+
+.features h2 {
+  background-color: var(--brand-light);
+  padding-top: 50px;
 }
 
 .feature svg {
@@ -29,8 +36,11 @@
   height: auto;
 }
 
-.feature-reverse {
+.feature-left {
   background-color: var(--brand-light);
+}
+
+.feature-right {
   flex-direction: row-reverse;
   justify-content: space-between;
 }
@@ -91,6 +101,19 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+}
+
+.layers {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.layers svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100%;
 }
 
 @media only screen and (max-width: 999px) {
@@ -165,7 +188,7 @@
 
   .counters {
     padding-top: 190px;
-    padding-bottom: 0;
+    padding-bottom: 120px;
     width: 60%;
   }
 }

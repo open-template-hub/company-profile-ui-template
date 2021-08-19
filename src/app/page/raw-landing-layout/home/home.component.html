@@ -3,19 +3,19 @@
   </div>
   <div class="hero">
     <div id="title-hero">
-    <div class="brand-logo-wrapper">
-      <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="120"/>
-      <h1>Open Template Hub</h1>
-    </div>
-    <h6>Responsive web UI template with sign-up, login and social login functionality</h6>
-    <div class="register-wrapper">
-      <a routerLink="{{URLS.signup}}">
-        <i class="material-icons">person_add</i>
-        <span>
+      <div class="brand-logo-wrapper">
+        <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="120"/>
+        <h1>Open Template Hub</h1>
+      </div>
+      <h6>Responsive web UI template with sign-up, login and social login functionality</h6>
+      <div class="register-wrapper">
+        <a routerLink="{{URLS.signup}}">
+          <i class="material-icons">person_add</i>
+          <span>
         Sign Up
     </span>
-      </a>
-    </div>
+        </a>
+      </div>
     </div>
     <div class="counters">
       <div class="counter-wrapper">
@@ -43,11 +43,34 @@
         </h6>
       </div>
     </div>
+
+    <div class="layers">
+      <svg viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
+        <path
+            d="M0 60L33.3 61.7C66.7 63.3 133.3 66.7 200 70.7C266.7 74.7 333.3 79.3 400 78.7C466.7 78 533.3 72 600 64.5C666.7 57 733.3 48 800 48.5C866.7 49 933.3 59 966.7 64L1000 69L1000 201L966.7 201C933.3 201 866.7 201 800 201C733.3 201 666.7 201 600 201C533.3 201 466.7 201 400 201C333.3 201 266.7 201 200 201C133.3 201 66.7 201 33.3 201L0 201Z"
+            fill="#fa7268" style="fill: var(--brand-color);"></path>
+        <path
+            d="M0 95L33.3 92.5C66.7 90 133.3 85 200 86.2C266.7 87.3 333.3 94.7 400 92.8C466.7 91 533.3 80 600 79.5C666.7 79 733.3 89 800 90C866.7 91 933.3 83 966.7 79L1000 75L1000 201L966.7 201C933.3 201 866.7 201 800 201C733.3 201 666.7 201 600 201C533.3 201 466.7 201 400 201C333.3 201 266.7 201 200 201C133.3 201 66.7 201 33.3 201L0 201Z"
+            fill="#f16367" style="fill: var(--brand-color-v1);"></path>
+        <path
+            d="M0 96L33.3 97.7C66.7 99.3 133.3 102.7 200 104.2C266.7 105.7 333.3 105.3 400 105C466.7 104.7 533.3 104.3 600 102.3C666.7 100.3 733.3 96.7 800 95.8C866.7 95 933.3 97 966.7 98L1000 99L1000 201L966.7 201C933.3 201 866.7 201 800 201C733.3 201 666.7 201 600 201C533.3 201 466.7 201 400 201C333.3 201 266.7 201 200 201C133.3 201 66.7 201 33.3 201L0 201Z"
+            fill="#e85467" style="fill: var(--brand-color-v2);"></path>
+        <path
+            d="M0 126L33.3 127.5C66.7 129 133.3 132 200 131.8C266.7 131.7 333.3 128.3 400 125.3C466.7 122.3 533.3 119.7 600 117.8C666.7 116 733.3 115 800 119C866.7 123 933.3 132 966.7 136.5L1000 141L1000 201L966.7 201C933.3 201 866.7 201 800 201C733.3 201 666.7 201 600 201C533.3 201 466.7 201 400 201C333.3 201 266.7 201 200 201C133.3 201 66.7 201 33.3 201L0 201Z"
+            fill="#de4467" style="fill: var(--brand-color-v3);"></path>
+        <path
+            d="M0 137L33.3 140.8C66.7 144.7 133.3 152.3 200 152.2C266.7 152 333.3 144 400 143.2C466.7 142.3 533.3 148.7 600 150.3C666.7 152 733.3 149 800 149.3C866.7 149.7 933.3 153.3 966.7 155.2L1000 157L1000 201L966.7 201C933.3 201 866.7 201 800 201C733.3 201 666.7 201 600 201C533.3 201 466.7 201 400 201C333.3 201 266.7 201 200 201C133.3 201 66.7 201 33.3 201L0 201Z"
+            fill="#d23467" style="fill: var(--brand-color-v4);"></path>
+        <path
+            d="M0 160L33.3 160.5C66.7 161 133.3 162 200 164.5C266.7 167 333.3 171 400 171.8C466.7 172.7 533.3 170.3 600 170C666.7 169.7 733.3 171.3 800 170.3C866.7 169.3 933.3 165.7 966.7 163.8L1000 162L1000 201L966.7 201C933.3 201 866.7 201 800 201C733.3 201 666.7 201 600 201C533.3 201 466.7 201 400 201C333.3 201 266.7 201 200 201C133.3 201 66.7 201 33.3 201L0 201Z"
+            fill="#c62368" style="fill: var(--brand-light);"></path>
+      </svg>
+    </div>
   </div>
 
   <div class="features">
     <h2>Features</h2>
-    <div class="feature">
+    <div class="feature feature-left">
       <svg class="gridItem__media" fill="none" height="450" id="Layer_1" style="enable-background:new 0 0 1600 1200;"
            version="1.1"
            viewBox="0 0 1600 1200" width="600" x="0px" xml:space="preserve"
@@ -1332,7 +1355,7 @@
         </h6>
       </div>
     </div>
-    <div class="feature feature-reverse">
+    <div class="feature feature-right">
       <svg class="gridItem__media" fill="none" height="450" id="Layer_1" style="enable-background:new 0 0 1600 1200;"
            version="1.1"
            viewBox="0 0 1600 1200" width="600" x="0px" xml:space="preserve"

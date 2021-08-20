@@ -28,6 +28,31 @@
   color: var(--brand-color);
 }
 
+.layers {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.layers svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100%;
+  min-height: 250px;
+  max-height: 450px;
+}
+
+.hero .top-layer {
+  position: absolute;
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  padding-top: 8vh;
+}
+
 @media only screen and (max-width: 999px) {
   .in-page-title, .landing-title {
     margin: 0.5em;

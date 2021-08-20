@@ -1,6 +1,5 @@
-<a class="github-fork-ribbon" [attr.data-ribbon]="'Fork me on GitHub'" [classList]="'ribbon ribbon-premium ribbon-top'"
-   href="https://github.com/open-template-hub/web-ui-template" title="Fork me on GitHub">Fork
-  me on GitHub</a>
+<a *ngIf="environment.identity !== 'production'" [attr.data-ribbon]="environment.identity" [classList]="'ribbon ribbon-brand ribbon-top'"
+   href="https://github.com/open-template-hub/company-profile-ui-template" title="Identity"></a>
 <div [class.dark-theme]="darkTheme === 'true'">
   <div class="raw-landing-layout-page">
     <div class="header">

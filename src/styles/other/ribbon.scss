@@ -75,6 +75,10 @@
   background-color: var(--premium);
 }
 
+.ribbon.ribbon-brand:before {
+  background-color: var(--brand-color);
+}
+
 .ribbon.ribbon-featured:before {
   background-color: var(--featured);
 }

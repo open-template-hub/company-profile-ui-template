@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { environment } from '../../../environments/environment';
 import { version } from '../../../environments/version';
 
 @Injectable( {
@@ -53,7 +52,7 @@ export class ThemeService {
 
     this.sideNavClosedSubject = new BehaviorSubject<string>( sideNavClosedStorageItem );
     this.sideNavClosed = this.sideNavClosedSubject.asObservable();
-    this.brand.brandLogo = './assets/' + environment.identity + '/brand-logo.png';
+    this.brand.brandLogo = './assets/production/brand-logo.png';
 
     if ( version ) {
       this.appVersion = version;
@@ -100,7 +99,8 @@ export class ThemeService {
   }
 
   toggleSideNav() {
-    const sideNavClosedStorageItem = localStorage.getItem( 'sideNavClosed' ) ? localStorage.getItem( 'sideNavClosed' ) : sessionStorage.getItem( 'sideNavClosed' );
+    const sideNavClosedStorageItem = localStorage.getItem( 'sideNavClosed' ) ?
+        localStorage.getItem( 'sideNavClosed' ) : sessionStorage.getItem( 'sideNavClosed' );
     const toggledSideNavClosed = sideNavClosedStorageItem === 'true' ? 'false' : 'true';
 
     if ( localStorage.getItem( 'currentUser' ) ) {

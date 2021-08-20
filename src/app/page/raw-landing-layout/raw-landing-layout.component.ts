@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment';
 import { ThemeService } from '../../service/theme/theme.service';
 
 @Component( {
@@ -10,6 +11,8 @@ import { ThemeService } from '../../service/theme/theme.service';
 export class RawLandingLayoutComponent {
 
   darkTheme: string;
+
+  environment = environment;
 
   constructor(
       private router: Router,

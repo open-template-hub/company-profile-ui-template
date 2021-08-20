@@ -10,10 +10,6 @@
   margin: 0.2em;
 }
 
-.hero {
-  padding-top: 10vh;
-}
-
 .hero h2 {
   margin-bottom: 25px;
 }
@@ -35,10 +31,6 @@
 @media only screen and (max-width: 999px) {
   .in-page-title, .landing-title {
     margin: 0.5em;
-  }
-
-  .hero {
-    margin-top: 10vh;
   }
 
   .hero h2 {

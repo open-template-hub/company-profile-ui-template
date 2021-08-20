@@ -107,10 +107,12 @@
 
 #title-hero {
   // TODO: Get url from production after release
-  background-image: url("https://wecontribute-develop.herokuapp.com/assets/common/map.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+  // background-image: url("https://wecontribute-develop.herokuapp.com/assets/common/map.png");
+  // background-repeat: no-repeat;
+  // background-position: center center;
+  // background-size: contain;
+  z-index: 2;
+  margin-top: 8vh;
 }
 
 .layers {
@@ -125,6 +127,11 @@
   width: calc(100% + 1.3px);
   height: 100%;
   min-height: 250px;
+}
+
+.top-layer {
+  position: absolute;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 999px) {
@@ -193,8 +200,8 @@
   }
 
   .counters {
-    padding-top: 140px;
-    padding-bottom: 100px;
+    padding-top: 160px;
+    padding-bottom: 150px;
     width: 60%;
   }
 }

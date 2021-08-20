@@ -60,19 +60,19 @@
 }
 
 .rate-badge-wrapper input + label:nth-of-type(2):after {
-  color: var(--brand-color-v1);
+  color: var(--brand-color-lighter-1);
 }
 
 .rate-badge-wrapper input + label:nth-of-type(3):after {
-  color: var(--brand-color-v2);
+  color: var(--brand-color-lighter-2);
 }
 
 .rate-badge-wrapper input + label:nth-of-type(4):after {
-  color: var(--brand-color-v3);
+  color: var(--brand-color-lighter-3);
 }
 
 .rate-badge-wrapper input + label:nth-of-type(5):after {
-  color: var(--brand-color-v4);
+  color: var(--brand-color-lighter-4);
 }
 
 .rate:after {
@@ -91,19 +91,19 @@
 }
 
 .rate-1:after {
-  color: var(--brand-color-v4);
+  color: var(--brand-color-lighter-4);
 }
 
 .rate-2:after {
-  color: var(--brand-color-v3);
+  color: var(--brand-color-lighter-3);
 }
 
 .rate-3:after {
-  color: var(--brand-color-v2);
+  color: var(--brand-color-lighter-2);
 }
 
 .rate-4:after {
-  color: var(--brand-color-v1);
+  color: var(--brand-color-lighter-1);
 }
 
 .rate-5:after {

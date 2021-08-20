@@ -1,0 +1,43 @@
+:root {
+  --brand-color: #d6b140;
+  --brand-color-lighter-1: #d8b957;
+  --brand-color-lighter-2: #dabd67;
+  --brand-color-lighter-3: #dcc378;
+  --brand-color-lighter-4: #dcc784;
+  --brand-color-lighter-5: #ddc88c;
+
+  --brand-background: #ab881e;
+  --hover: rgba(150, 130, 89, 0.2);
+  --overlay: rgba(214, 177, 64, 0.3);
+
+  // shine animation colors
+  --color-alpha-0-5: rgba(108, 88, 26, 0.5);
+  --color-alpha-0-13: rgba(108, 85, 26, 0.13);
+}
+
+.dark-theme {
+  --brand-color-lighter-1: #c4a64a;
+  --brand-color-lighter-2: #b29849;
+  --brand-color-lighter-3: #95824a;
+  --brand-color-lighter-4: #85754a;
+  --brand-color-lighter-5: #675d41;
+
+  --overlay: rgba(88, 73, 27, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-color-lighter-1: #c4a64a;
+    --brand-color-lighter-2: #b29849;
+    --brand-color-lighter-3: #95824a;
+    --brand-color-lighter-4: #85754a;
+    --brand-color-lighter-5: #675d41;
+
+    --overlay: rgba(88, 73, 27, 0.6);
+  }
+
+  .dark-theme {
+    --brand-color-lighter-5: #ddc88c;
+    --overlay: rgba(214, 177, 64, 0.3);
+  }
+}

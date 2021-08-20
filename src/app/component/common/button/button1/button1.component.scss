@@ -28,7 +28,7 @@
 
 .button1.brand-light-color {
   color: whitesmoke;
-  background-color: var(--brand-light);
+  background-color: var(--brand-color-lighter-5);
 }
 
 .button1.transparent {
@@ -93,7 +93,7 @@
   }
 
   .button1.brand-light-color:hover {
-    background-color: var(--brand-light);
+    background-color: var(--brand-color-lighter-5);
     color: whitesmoke;
     box-shadow: initial;
   }

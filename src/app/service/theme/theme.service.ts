@@ -20,10 +20,10 @@ export class ThemeService {
 
   colors = [
     '--brand-color',
-    '--brand-color-v1',
-    '--brand-color-v2',
-    '--brand-color-v3',
-    '--brand-color-v4'
+    '--brand-color-lighter-1',
+    '--brand-color-lighter-2',
+    '--brand-color-lighter-3',
+    '--brand-color-lighter-4'
   ]
 
   constructor() {

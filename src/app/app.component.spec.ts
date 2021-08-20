@@ -20,16 +20,16 @@ describe( 'AppComponent', () => {
     expect( app ).toBeTruthy();
   } );
 
-  it( `should have as title 'web-ui-template'`, () => {
+  it( `should have as title 'company-profile-ui-template'`, () => {
     const fixture = TestBed.createComponent( AppComponent );
     const app = fixture.debugElement.componentInstance;
-    expect( app.title ).toEqual( 'web-ui-template' );
+    expect( app.title ).toEqual( 'company-profile-ui-template' );
   } );
 
   it( 'should render title', () => {
     const fixture = TestBed.createComponent( AppComponent );
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect( compiled.querySelector( '.content span' ).textContent ).toContain( 'web-ui-template app is running!' );
+    expect( compiled.querySelector( '.content span' ).textContent ).toContain( 'company-profile-ui-template app is running!' );
   } );
 } );

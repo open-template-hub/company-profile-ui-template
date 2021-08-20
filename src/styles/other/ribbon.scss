@@ -14,7 +14,6 @@
 
 .ribbon.ribbon-top {
   z-index: 10000;
-  position: fixed;
 }
 
 .ribbon.fixed {
@@ -81,6 +80,22 @@
 
 .ribbon.ribbon-featured:before {
   background-color: var(--featured);
+}
+
+.ribbon.ribbon-error:before {
+  background-color: var(--error);
+}
+
+.ribbon.ribbon-warn:before {
+  background-color: var(--warn);
+}
+
+.ribbon.ribbon-info:before {
+  background-color: var(--info);
+}
+
+.ribbon.ribbon-success:before {
+  background-color: var(--success);
 }
 
 .ribbon.ribbon-new:before {

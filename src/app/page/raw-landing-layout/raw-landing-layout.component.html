@@ -1,4 +1,6 @@
-<a *ngIf="environment.identity !== 'production'" [attr.data-ribbon]="environment.identity" [classList]="'ribbon ribbon-brand ribbon-top'"
+<a *ngIf="environment.identity !== 'production'" [attr.data-ribbon]="environment.identity"
+   [classList]="environment.identity === 'local' ? 'ribbon ribbon-error ribbon-top fixed' :
+   (environment.identity === 'staging' ? 'ribbon ribbon-warn ribbon-top fixed' : '')"
    href="https://github.com/open-template-hub/company-profile-ui-template" title="Identity"></a>
 <div [class.dark-theme]="darkTheme === 'true'">
   <div class="raw-landing-layout-page">

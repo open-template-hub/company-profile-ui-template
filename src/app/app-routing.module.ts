@@ -24,6 +24,7 @@ import { SignUpSuccessComponent } from './page/raw-landing-layout/sign-up-succes
 import { TermsComponent } from './page/raw-landing-layout/terms/terms.component';
 import { VerifyAccountComponent } from './page/raw-landing-layout/verify-account/verify-account.component';
 import { EditProfileComponent } from './page/settings-layout/edit-profile/edit-profile.component';
+import { EditThemeComponent } from './page/settings-layout/edit-theme/edit-theme.component';
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
 import { WelcomeComponent } from './page/settings-layout/welcome/welcome.component';
 import { CallbackComponent } from './page/splash-layout/callback/callback.component';
@@ -97,6 +98,7 @@ const routes: Routes = [
     children: [
       { path: 'welcome', component: WelcomeComponent, canActivate: [ AuthGuard ] },
       { path: 'edit-profile', component: EditProfileComponent, canActivate: [ AuthGuard ] },
+      { path: 'edit-theme', component: EditThemeComponent, canActivate: [ AuthGuard ] },
     ]
   },
   {

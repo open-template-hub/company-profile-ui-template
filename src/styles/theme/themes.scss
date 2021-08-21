@@ -104,6 +104,43 @@
   // [CURRENT MODE END]
 }
 
+.light-theme {
+  // color scale
+  --lighter: var(--lighter-light-mode);
+  --color: var(--color-light-mode);
+  --darker: var(--darker-light-mode);
+
+  // contra color scale
+  --darker-contrast: var(--darker-contrast-light-mode);
+  --contrast: var(--contrast-light-mode);
+  --lighter-contrast: var(--lighter-contrast-light-mode);
+
+  // information level colors
+  --success: var(--success-light-mode);
+  --error: var(--error-light-mode);
+  --warn: var(--warn-light-mode);
+  --info: var(--info-light-mode);
+
+  // event type colors
+  --premium: var(--premium-light-mode);
+  --featured: var(--featured-light-mode);
+  --new: var(--new-light-mode);
+
+  // background
+  --background-color: var(--background-color-light-mode);
+  --background-color-alpha: var(--background-color-alpha-light-mode);
+  --card: var(--card-light-mode);
+
+  --shadow: var(--shadow-light-mode);
+
+  --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
+  --cropper-outline-color: var(--cropper-outline-color-light-mode);
+
+
+  --always-contrast-light-mode: var(--contrast-light-mode);
+  --always-card-dark-mode: var(--card-dark-mode);
+}
+
 .dark-theme {
   // color scale
   --lighter: var(--lighter-dark-mode);
@@ -171,38 +208,5 @@
 
     --cropper-overlay-color: var(--cropper-overlay-color-dark-mode);
     --cropper-outline-color: var(--cropper-outline-color-dark-mode);
-  }
-
-  .dark-theme {
-    // color scale
-    --lighter: var(--lighter-light-mode);
-    --color: var(--color-light-mode);
-    --darker: var(--darker-light-mode);
-
-    // contra color scale
-    --darker-contrast: var(--darker-contrast-light-mode);
-    --contrast: var(--contrast-light-mode);
-    --lighter-contrast: var(--lighter-contrast-light-mode);
-
-    // information level colors
-    --success: var(--success-light-mode);
-    --error: var(--error-light-mode);
-    --warn: var(--warn-light-mode);
-    --info: var(--info-light-mode);
-
-    // event type colors
-    --premium: var(--premium-light-mode);
-    --featured: var(--featured-light-mode);
-    --new: var(--new-light-mode);
-
-    // background
-    --background-color: var(--background-color-light-mode);
-    --background-color-alpha: var(--background-color-alpha-light-mode);
-    --card: var(--card-light-mode);
-
-    --shadow: var(--shadow-light-mode);
-
-    --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
-    --cropper-outline-color: var(--cropper-outline-color-light-mode);
   }
 }

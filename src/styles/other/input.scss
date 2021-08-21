@@ -4,9 +4,11 @@ form {
 .section, .section-submit {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 1.5em;
+}
+
+.section-submit {
+  align-items: center;
 }
 
 .section-submit hr {

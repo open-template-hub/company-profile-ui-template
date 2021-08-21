@@ -8,7 +8,8 @@ import { ThemeService } from './service/theme/theme.service';
 } )
 export class AppComponent {
 
-  darkTheme: string;
+  darkLightSetting: string;
+  themeColorSetting: string;
 
   constructor(private themeService: ThemeService) {
     const head = document.getElementsByTagName( 'head' )[ 0 ];
@@ -20,8 +21,12 @@ export class AppComponent {
       }
     }
 
-    this.themeService.darkTheme.subscribe( darkTheme => {
-      this.darkTheme = darkTheme;
+    this.themeService.darkLightSetting.subscribe( darkLightSetting => {
+      this.darkLightSetting = darkLightSetting;
+    } );
+
+    this.themeService.themeColorSetting.subscribe( themeColorSetting => {
+      this.themeColorSetting = themeColorSetting;
     } );
   }
 }

@@ -8,14 +8,14 @@ import { ThemeService } from '../theme/theme.service';
 } )
 export class ToastService {
 
-  darkTheme: string;
+  darkLightSetting: string;
 
   constructor(
       private toastrService: ToastrService,
       private themeService: ThemeService ) {
 
-    this.themeService.darkTheme.subscribe( darkTheme => {
-      this.darkTheme = darkTheme;
+    this.themeService.darkLightSetting.subscribe( darkLightSetting => {
+      this.darkLightSetting = darkLightSetting;
     } );
   }
 
@@ -40,8 +40,11 @@ export class ToastService {
   }
 
   private applyTheme( override?: Partial<IndividualConfig> ) {
-    if ( override && this.darkTheme === 'true' ) {
+    if ( override && this.darkLightSetting === 'dark' ) {
       override.toastClass = 'ngx-toastr-dark-mode';
+    }
+    if ( override && this.darkLightSetting === 'light' ) {
+      override.toastClass = 'ngx-toastr-light-mode';
     }
     return override;
   }

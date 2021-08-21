@@ -1,5 +1,5 @@
-:root {
-  --brand-color: #43b043;
+:root, .light-theme {
+  --brand-color: var(--brand-color-default-theme);
   --brand-color-lighter-1: #64be65;
   --brand-color-lighter-2: #7ec87e;
   --brand-color-lighter-3: #a0d69f;
@@ -46,19 +46,5 @@
     --brand-color-lighter-9: #444644;
 
     --overlay: rgba(28, 76, 28, 0.6);
-  }
-
-  .dark-theme {
-    --brand-color-lighter-1: #64be65;
-    --brand-color-lighter-2: #7ec87e;
-    --brand-color-lighter-3: #a0d69f;
-    --brand-color-lighter-4: #b9e1ba;
-    --brand-color-lighter-5: #c9e8c9;
-    --brand-color-lighter-6: #d5ecd5;
-    --brand-color-lighter-7: #dff1df;
-    --brand-color-lighter-8: #eaf6ea;
-    --brand-color-lighter-9: #f7fbf8;
-
-    --overlay: rgba(67, 176, 67, 0.3);
   }
 }

@@ -48,7 +48,7 @@
         MORE
     </span>
   </a>
-  <a (click)="switchTheme()" *ngIf="currentUser && openSettings && openOtherSettings" href="javascript:void(0)">
+  <a *ngIf="currentUser && openSettings && openOtherSettings" routerLink="{{URLS.settings.editTheme}}">
     <i class="material-icons">invert_colors</i>
     <span>
         THEME

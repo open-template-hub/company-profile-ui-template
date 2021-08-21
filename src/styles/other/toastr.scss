@@ -120,6 +120,11 @@ button.toast-close-button {
   @extend .dark-theme;
 }
 
+.ngx-toastr-light-mode {
+  @extend .ngx-toastr;
+  @extend .light-theme;
+}
+
 .ngx-toastr::after {
   content: "";
   position: absolute;

@@ -7,14 +7,20 @@ import { version } from '../../../environments/version';
 } )
 export class ThemeService {
 
-  public darkTheme: Observable<string>;
+  public appVersion = '1.0.0';
+
+  public darkLightSetting: Observable<string>;
+  public themeColorSetting: Observable<string>;
   public sideNavClosed: Observable<string>;
+
+  private darkLightSettingSubject: BehaviorSubject<string>;
+  private themeColorSettingSubject: BehaviorSubject<string>;
+  private sideNavClosedSubject: BehaviorSubject<string>;
+
   public brand = {
     brandLogo: ''
   };
-  public appVersion = '1.0.0';
-  private darkThemeSubject: BehaviorSubject<string>;
-  private sideNavClosedSubject: BehaviorSubject<string>;
+
   private maxAspectRatioMedia;
   private maxHeightMedia;
 
@@ -29,14 +35,22 @@ export class ThemeService {
     '--brand-color-lighter-7',
     '--brand-color-lighter-8',
     '--brand-color-lighter-9'
-  ]
+  ];
 
   constructor() {
-    let darkThemeStorageItem = localStorage.getItem( 'darkTheme' ) ? localStorage.getItem( 'darkTheme' ) : sessionStorage.getItem( 'darkTheme' );
-    darkThemeStorageItem = darkThemeStorageItem ? darkThemeStorageItem : 'false';
+    let themeColorSettingStorageItem = localStorage.getItem( 'themeColorSetting' ) ?
+        localStorage.getItem( 'themeColorSetting' ) : sessionStorage.getItem( 'themeColorSetting' );
+    themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : 'auto';
 
-    this.darkThemeSubject = new BehaviorSubject<string>( darkThemeStorageItem );
-    this.darkTheme = this.darkThemeSubject.asObservable();
+    this.themeColorSettingSubject = new BehaviorSubject<string>( themeColorSettingStorageItem);
+    this.themeColorSetting = this.themeColorSettingSubject.asObservable();
+
+    let darkLightSettingStorageItem = localStorage.getItem( 'darkLightSetting' ) ?
+        localStorage.getItem( 'darkLightSetting' ) : sessionStorage.getItem( 'darkLightSetting' );
+    darkLightSettingStorageItem = darkLightSettingStorageItem ? darkLightSettingStorageItem : 'auto';
+
+    this.darkLightSettingSubject = new BehaviorSubject<string>(darkLightSettingStorageItem);
+    this.darkLightSetting = this.darkLightSettingSubject.asObservable();
 
     this.maxAspectRatioMedia = window.matchMedia( 'screen and (max-aspect-ratio: 1/1)' );
     this.maxHeightMedia = window.matchMedia( 'screen and (max-height: 999px)' );
@@ -64,16 +78,24 @@ export class ThemeService {
     }
   }
 
-  initTheme( darkThemePreferred: boolean ) {
-    const darkThemePreferredStorageItem = darkThemePreferred ? 'true' : 'false';
-
+  setDarkLightSetting( darkLightSetting: string ) {
     if ( localStorage.getItem( 'currentUser' ) ) {
-      sessionStorage.removeItem( 'darkTheme' );
-      localStorage.setItem( 'darkTheme', darkThemePreferredStorageItem );
+      sessionStorage.removeItem( 'darkLightSetting' );
+      localStorage.setItem( 'darkLightSetting', darkLightSetting );
     } else {
-      sessionStorage.setItem( 'darkTheme', darkThemePreferredStorageItem );
+      sessionStorage.setItem( 'darkLightSetting', darkLightSetting );
     }
-    this.darkThemeSubject.next( darkThemePreferredStorageItem );
+    this.darkLightSettingSubject.next( darkLightSetting );
+  }
+
+  setThemeColorSetting( themeColorSetting: string ) {
+    if ( localStorage.getItem( 'currentUser' ) ) {
+      sessionStorage.removeItem( 'themeColorSetting' );
+      localStorage.setItem( 'themeColorSetting', themeColorSetting );
+    } else {
+      sessionStorage.setItem( 'themeColorSetting', themeColorSetting );
+    }
+    this.themeColorSettingSubject.next( themeColorSetting );
   }
 
   initSideNavClosed( sideNavClosePreferred: boolean ) {
@@ -85,22 +107,7 @@ export class ThemeService {
     } else {
       sessionStorage.setItem( 'sideNavClosed', sideNavClosedStorageItem );
     }
-    this.darkThemeSubject.next( sideNavClosedStorageItem );
-  }
-
-  switchDarkTheme() {
-    const darkThemeStorageItem = localStorage.getItem( 'darkTheme' ) ?
-      localStorage.getItem( 'darkTheme' ) : sessionStorage.getItem( 'darkTheme' );
-    const switchedTheme = darkThemeStorageItem === 'true' ? 'false' : 'true';
-
-    if ( localStorage.getItem( 'currentUser' ) ) {
-      sessionStorage.removeItem( 'darkTheme' );
-      localStorage.setItem( 'darkTheme', switchedTheme );
-    } else {
-      sessionStorage.setItem( 'darkTheme', switchedTheme );
-    }
-
-    this.darkThemeSubject.next( switchedTheme );
+    this.sideNavClosedSubject.next( sideNavClosedStorageItem );
   }
 
   toggleSideNav() {
@@ -121,13 +128,16 @@ export class ThemeService {
 
   logout() {
     if ( localStorage.getItem( 'currentUser' ) ) {
-      localStorage.removeItem( 'darkTheme' );
+      localStorage.removeItem( 'darkLightSetting' );
+      localStorage.removeItem( 'themeColorSetting' );
       localStorage.removeItem( 'sideNavClosed' );
     }
-    sessionStorage.removeItem( 'darkTheme' );
+    sessionStorage.removeItem( 'darkLightSetting' );
+    sessionStorage.removeItem( 'themeColorSetting' );
     sessionStorage.removeItem( 'sideNavClosed' );
 
-    this.darkThemeSubject.next( 'false' );
+    this.darkLightSettingSubject.next( 'auto' );
+    this.themeColorSettingSubject.next( 'default' );
     this.sideNavClosedSubject.next( 'false' );
   }
 }

@@ -3,8 +3,8 @@
   padding: 1.2em 2.2em;
   font-weight: 300;
   font-size: 14px;
-  background-color: var(--color);
   color: var(--contrast);
+  background-color: var(--color);
   cursor: pointer;
   transition: 200ms ease;
   margin: 0.25em 0.25em 1em;
@@ -26,6 +26,16 @@
   background-color: var(--brand-color);
 }
 
+.button1.always-light {
+  color: var(--contrast-light-mode);
+  background-color: var(--color-light-mode);
+}
+
+.button1.always-dark {
+  color: var(--contrast-dark-mode);
+  background-color: var(--color-dark-mode);
+}
+
 .button1.brand-light-color {
   color: whitesmoke;
   background-color: var(--brand-color-lighter-5);
@@ -38,6 +48,10 @@
 .button1.success {
   border: 1px solid var(--success);
   color: var(--success);
+}
+
+.button1.selected {
+  box-shadow: 0 0 3px 3px var(--brand-color-lighter-1);
 }
 
 .button1.lighter-contrast {
@@ -96,5 +110,17 @@
     background-color: var(--brand-color-lighter-5);
     color: whitesmoke;
     box-shadow: initial;
+  }
+
+  .button1.hover-with-color.always-light:hover {
+    color: var(--darker-contrast-light-mode);
+  }
+
+  .button1.hover-with-color.always-dark:hover {
+    color: var(--darker-contrast-dark-mode);
+  }
+
+  .button1.selected:hover {
+    box-shadow: 0 0 3px 3px var(--brand-color-lighter-1);
   }
 }

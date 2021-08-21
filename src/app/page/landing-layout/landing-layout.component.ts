@@ -11,7 +11,6 @@ import { URLS } from '../../util/constant';
 } )
 export class LandingLayoutComponent {
 
-  darkTheme: string;
   loading = false;
 
   brand = {
@@ -25,10 +24,6 @@ export class LandingLayoutComponent {
       private themeService: ThemeService,
       private loadingService: LoadingService
   ) {
-    this.themeService.darkTheme.subscribe( darkTheme => {
-      this.darkTheme = darkTheme;
-    } );
-
     this.brand = this.themeService.brand;
 
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );

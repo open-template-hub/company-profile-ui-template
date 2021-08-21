@@ -1,0 +1,50 @@
+:root .blue-theme, .light-theme.blue-theme {
+  --brand-color: var(--brand-color-blue-theme);
+  --brand-color-lighter-1: #57abd8;
+  --brand-color-lighter-2: #67b7da;
+  --brand-color-lighter-3: #78c1dc;
+  --brand-color-lighter-4: #84c2dc;
+  --brand-color-lighter-5: #8cbedd;
+  --brand-color-lighter-6: #acd5e6;
+  --brand-color-lighter-7: #bedfeb;
+  --brand-color-lighter-8: #d9eef3;
+  --brand-color-lighter-9: #f0f8fa;
+
+  --brand-background: #1e7aab;
+  --hover: rgba(89, 129, 150, 0.2);
+  --overlay: rgba(64, 174, 214, 0.3);
+
+  // shine animation colors
+  --color-alpha-0-5: rgba(26, 89, 108, 0.5);
+  --color-alpha-0-13: rgba(26, 89, 108, 0.13);
+}
+
+.dark-theme.blue-theme {
+  --brand-color-lighter-1: #4a9fc4;
+  --brand-color-lighter-2: #498db2;
+  --brand-color-lighter-3: #4a7895;
+  --brand-color-lighter-4: #4a7785;
+  --brand-color-lighter-5: #415867;
+  --brand-color-lighter-6: #475a64;
+  --brand-color-lighter-7: #445058;
+  --brand-color-lighter-8: #41484d;
+  --brand-color-lighter-9: #404142;
+
+  --overlay: rgba(27, 67, 88, 0.6);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root .blue-theme {
+    --brand-color-lighter-1: #4a9fc4;
+    --brand-color-lighter-2: #498db2;
+    --brand-color-lighter-3: #4a7895;
+    --brand-color-lighter-4: #4a7785;
+    --brand-color-lighter-5: #415867;
+    --brand-color-lighter-6: #475a64;
+    --brand-color-lighter-7: #445058;
+    --brand-color-lighter-8: #41484d;
+    --brand-color-lighter-9: #404142;
+
+    --overlay: rgba(27, 67, 88, 0.6);
+  }
+}

@@ -19,6 +19,7 @@
   .section.horizontal {
     flex-direction: row;
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .section.horizontal app-button1 {

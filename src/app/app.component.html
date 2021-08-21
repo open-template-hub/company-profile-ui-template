@@ -1,4 +1,4 @@
 <div [class.dark-theme]="darkLightSetting === 'dark'" [class.light-theme]="darkLightSetting === 'light'"
-     [classList]="themeColorSetting ? themeColorSetting + '-theme' : ''">
+     [class]="themeColorSetting ? themeColorSetting + '-theme' : ''">
   <router-outlet></router-outlet>
 </div>

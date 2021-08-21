@@ -1,5 +1,5 @@
 <div [class.side-nav-closed]="sideNavClosed === 'true'" class="side-nav-wrapper">
-  <nav [class.dark-theme]="darkTheme === 'true'" class="side-nav">
+  <nav class="side-nav">
     <a (click)="toggleSideNav()" *ngIf="currentUser" class="brand" href="javascript:void(0)">
       <img [src]="brand.brandLogo" alt="logo" class="brand-logo" width="40"/>
       <h2 *ngIf="sideNavClosed === 'false'" class="side-nav-brand-text">Open Template Hub</h2>

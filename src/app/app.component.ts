@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ThemeService } from './service/theme/theme.service';
 
 @Component( {
   selector: 'app-root',
@@ -7,7 +8,9 @@ import { Component } from '@angular/core';
 } )
 export class AppComponent {
 
-  constructor() {
+  darkTheme: string;
+
+  constructor(private themeService: ThemeService) {
     const head = document.getElementsByTagName( 'head' )[ 0 ];
     const links = head.getElementsByTagName( 'link' );
     for ( let i = 0; i < links.length; ++i ) {
@@ -16,5 +19,9 @@ export class AppComponent {
         link.href = link.href + '?v=' + ( new Date() ).getTime();
       }
     }
+
+    this.themeService.darkTheme.subscribe( darkTheme => {
+      this.darkTheme = darkTheme;
+    } );
   }
 }

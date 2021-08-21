@@ -23,7 +23,12 @@ export class ThemeService {
     '--brand-color-lighter-1',
     '--brand-color-lighter-2',
     '--brand-color-lighter-3',
-    '--brand-color-lighter-4'
+    '--brand-color-lighter-4',
+    '--brand-color-lighter-5',
+    '--brand-color-lighter-6',
+    '--brand-color-lighter-7',
+    '--brand-color-lighter-8',
+    '--brand-color-lighter-9'
   ]
 
   constructor() {

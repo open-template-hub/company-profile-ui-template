@@ -43,7 +43,6 @@ import { ShowroomComponent } from './page/landing-layout/showroom/showroom.compo
 import { SignUpComponent } from './page/landing-layout/sign-up/sign-up.component';
 import { CookiePolicyComponent } from './page/raw-landing-layout/cookie-policy/cookie-policy.component';
 import { HomeComponent } from './page/raw-landing-layout/home/home.component';
-import { LoadingComponent } from './page/raw-landing-layout/loading/loading.component';
 import { MaintenanceComponent } from './page/raw-landing-layout/maintenance/maintenance.component';
 import { NotFoundComponent } from './page/raw-landing-layout/not-found/not-found.component';
 import { PrivacyPolicyComponent } from './page/raw-landing-layout/privacy-policy/privacy-policy.component';
@@ -111,7 +110,6 @@ FullCalendarModule.registerPlugins( [
     PrivacyPolicyComponent,
     TermsComponent,
     PublicProfileComponent,
-    LoadingComponent,
     EventDataComponent,
     SettingsLayoutComponent,
     SideContentComponent,

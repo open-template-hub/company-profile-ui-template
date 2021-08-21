@@ -19,8 +19,6 @@ export class MaintenanceComponent implements OnInit {
     author: ''
   };
 
-  topShadow = true;
-
   constructor(
       private route: ActivatedRoute,
       public router: Router,
@@ -30,8 +28,6 @@ export class MaintenanceComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.topShadow = this.route.snapshot.data.topShadow;
-
     const rand = Math.floor( Math.random() * 110 );
     this.selectedQuote = QUOTES[ rand ];
   }

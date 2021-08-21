@@ -5,6 +5,12 @@
   <div *ngIf="topWrapper" [class.card1-top-wrapper-in-brand-color]="topWrapperInBrandColor"
        class="card1-top-wrapper">
   </div>
+  <div *ngIf="topLayer" class="layers top-layer">
+    <svg viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+      <path d="M 0,250 1000,120 V 0 H 0 Z" style="fill: var(--brand-color-lighter-2);"></path>
+    </svg>
+  </div>
+
   <div *ngIf="!headerProfileImg && enableHeader && !enableHeaderFullImg" class="card1-header rounded-box">
     <h3>{{title}}</h3>
   </div>

@@ -43,13 +43,12 @@
   max-height: 450px;
 }
 
-.hero .top-layer {
+.top-layer {
   position: absolute;
-  z-index: 1;
+  left: 0;
 }
 
 .hero-content {
-  z-index: 2;
   padding-top: 8vh;
 }
 
@@ -83,6 +82,10 @@
   .in-page-title {
     padding-bottom: 50px;
   }
+
+  .top-layer {
+    top: 0;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -101,5 +104,9 @@
 
   .in-page-title {
     padding-bottom: 60px;
+  }
+
+  .top-layer {
+    top: 90px;
   }
 }

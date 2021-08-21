@@ -1,13 +1,5 @@
 <div class="home-page">
-  <div class="top-shadow">
-  </div>
   <div class="hero">
-    <div class="layers top-layer">
-      <svg viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
-        <path d="M 0,250 1000,120 V 0 H 0 Z" style="fill: var(--brand-color-lighter-2);"></path>
-      </svg>
-    </div>
-
     <div class="hero-content">
       <div class="brand-logo-wrapper">
         <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="120"/>
@@ -24,30 +16,32 @@
       </div>
     </div>
     <div class="counters">
-      <div class="counter-wrapper">
+      <a class="counter-wrapper" href="https://www.npmjs.com/package/@open-template-hub/server-generator"
+         target="_blank">
         <h4 id="npmCounterElement" class="counter">
           0
         </h4>
         <h6>
           Npm Downloads
         </h6>
-      </div>
-      <div class="counter-wrapper counter-alter">
+      </a>
+      <a class="counter-wrapper counter-alter"
+           href="https://github.com/open-template-hub/server-generator" target="_blank">
         <h4 id="githubStarCounterElement" class="counter">
           0
         </h4>
         <h6>
           Github Stars
         </h6>
-      </div>
-      <div class="counter-wrapper">
+      </a>
+      <a class="counter-wrapper" href="https://github.com/open-template-hub" target="_blank">
         <h4 id="serverTypesCounterElement" class="counter">
           0
         </h4>
         <h6>
           Server Types
         </h6>
-      </div>
+      </a>
     </div>
 
     <div class="layers">

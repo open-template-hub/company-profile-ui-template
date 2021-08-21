@@ -39,7 +39,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       { path: 'not-found', component: NotFoundComponent },
-      { path: 'maintenance', component: MaintenanceComponent, data: { topShadow: true } },
+      { path: 'maintenance', component: MaintenanceComponent },
       { path: 'signup-success', component: SignUpSuccessComponent },
       { path: 'verify-account', component: VerifyAccountComponent },
       { path: 'cookie-policy', component: CookiePolicyComponent },
@@ -87,7 +87,7 @@ const routes: Routes = [
       { path: 'learn', component: LearnComponent, canActivate: [ AuthGuard ] },
       { path: 'event', component: EventComponent, canActivate: [ AuthGuard ] },
       // TODO: Change MaintenanceComponent with PrivacySettingsComponent when implementation is done
-      { path: 'privacy', component: MaintenanceComponent, canActivate: [ AuthGuard ], data: { topShadow: false } }
+      { path: 'privacy', component: MaintenanceComponent, canActivate: [ AuthGuard ] }
     ]
   },
   {

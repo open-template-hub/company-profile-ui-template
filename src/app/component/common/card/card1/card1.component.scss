@@ -95,6 +95,7 @@
 .card1-content {
   padding: 3.5rem 1.25rem 1.25em;
   overflow: auto;
+  z-index: 2;
 }
 
 .card1-content.no-padding {
@@ -125,6 +126,11 @@
 .card1-under-header-profile-img {
   margin: -54px auto auto;
   z-index: 9;
+}
+
+.card1 .top-layer {
+  top: 0;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 999px) {

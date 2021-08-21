@@ -50,11 +50,6 @@
   background-color: var(--background-color);
 }
 
-.feature-right .feature {
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
-
 .feature-notes {
   display: flex;
   flex-direction: column;
@@ -174,6 +169,11 @@
     padding-top: 160px;
     padding-bottom: 160px;
     width: 60%;
+  }
+
+  .feature-right .feature {
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }
 

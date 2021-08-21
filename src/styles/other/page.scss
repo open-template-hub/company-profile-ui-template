@@ -50,6 +50,14 @@
 
 .hero-content {
   padding-top: 8vh;
+  display: flex;
+}
+
+.hero-content-left, .hero-content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 999px) {
@@ -86,6 +94,14 @@
   .top-layer {
     top: 0;
   }
+
+  .hero-content-left, .hero-content-right {
+    max-width: 90vw;
+  }
+
+  .hero-content {
+    flex-direction: column;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -108,5 +124,13 @@
 
   .top-layer {
     top: 90px;
+  }
+
+  .hero-content-left, .hero-content-right {
+    max-width: 45vw;
+  }
+
+  .hero-content {
+    flex-direction: row;
   }
 }

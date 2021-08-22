@@ -1,0 +1,29 @@
+.content-wrapper {
+  text-align: center;
+  font-size: 0.5em;
+}
+
+.review-area {
+  color: var(--lighter-contrast);
+  padding: 1.2em;
+}
+
+.icon-wrapper {
+  text-align: left;
+  padding: 1em 1em 0.1em;
+}
+
+.icon-wrapper i {
+  color: var(--brand-color);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  font-size: 0.6em;
+  margin-top: 3em;
+}
+
+.footer-social i {
+  color: var(--brand-color);
+}

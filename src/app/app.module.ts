@@ -69,6 +69,7 @@ import { SearchComponent } from './component/common/search/search.component';
 import { RateBarComponent } from './component/common/rate-bar/rate-bar.component';
 import { PricingComponent } from './page/raw-landing-layout/pricing/pricing.component';
 import { PricingCardComponent } from './component/common/card/pricing-card/pricing-card.component';
+import { TestimonialCardComponent } from './component/common/card/testimonial-card/testimonial-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -125,7 +126,8 @@ FullCalendarModule.registerPlugins( [
     RateBarComponent,
     EditThemeComponent,
     PricingComponent,
-    PricingCardComponent
+    PricingCardComponent,
+    TestimonialCardComponent
   ],
   imports: [
     BrowserModule,

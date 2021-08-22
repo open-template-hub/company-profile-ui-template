@@ -108,6 +108,15 @@
   justify-content: space-evenly;
 }
 
+.card-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 @media only screen and (max-width: 999px) {
   .home-page {
     font-size: 23px;
@@ -203,6 +212,12 @@
 
   .hero-content-left h6 {
     text-align: left;
+  }
+
+  app-testimonial-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

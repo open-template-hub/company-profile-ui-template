@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnChanges, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
 import { ThemeService } from '../../../service/theme/theme.service';
 
 export interface DropdownMenuOption {

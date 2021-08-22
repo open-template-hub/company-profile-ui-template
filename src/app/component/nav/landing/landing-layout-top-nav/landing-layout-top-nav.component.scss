@@ -13,35 +13,46 @@
   align-items: center;
   font-size: 14px;
   font-weight: 500;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
-.top-nav a:first-child {
-  margin-right: auto;
+.brand {
+  margin-right: 10px;
 }
 
-.top-nav .login {
+.top-nav .demo {
   color: var(--brand-color);
   border-radius: 0;
   border-bottom: var(--brand-color) 1px solid;
+  margin-right: 20px;
 }
 
-.top-nav .login:hover {
+.top-nav .demo:hover {
   color: white;
   border-radius: 3px;
   background: var(--brand-color);
+}
+
+.top-nav .contact-us {
+  background-color: var(--contrast);
 }
 
 .top-nav .brand > * {
   margin: 0.2em;
 }
 
-.top-nav a i {
-  margin: 0.35em;
+app-dropdown-menu i {
+  margin: 0.2em;
   font-size: 22px;
 }
 
-.top-nav a i {
+app-dropdown-menu i {
   margin-left: 0;
+}
+
+.top-nav .left-item-wrapper {
+  margin-right: auto;
 }
 
 @media only screen and (max-width: 999px) {
@@ -56,6 +67,12 @@
   }
 }
 
+@media only screen and (max-width: 1299px) {
+  .top-nav {
+    padding: 20px 40px;
+  }
+}
+
 @media (hover: hover) {
 
   .top-nav a:first-child:hover {
@@ -66,7 +83,7 @@
     background: var(--hover);
   }
 
-  .bottom-nav .login:hover {
+  .bottom-nav .demo:hover {
     color: white;
     background: var(--brand-color);
   }

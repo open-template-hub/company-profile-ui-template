@@ -1,0 +1,25 @@
+<div id=event-card>
+  <app-card1 [enableHeaderFullImg]="false" [height]="option.styles.height"
+             [paddingContent]="false"
+             [ribbon]="option.ribbon ? option.ribbon : RIBBONS.default"
+             [width]="option.styles.width" [maxHeight]="'500px'"
+             [containsVideo]="false" [enableHeader]="false" [style.font-size]="option.styles.fontSize">
+    <div body class="content-wrapper">
+      <p class="subscription-header">{{ option.title }}</p>
+      <div class="price-area">
+        <p class="currency">{{ option.price.currency }}</p>
+        <p class="price-value">{{ option.price.value }}</p>
+        <p class="subscription-time">{{ option.price.subscriptionTime }}</p>
+      </div>
+      <hr>
+      <div class="subscription-features" [style.height]="option.styles.featureHeight">
+        <p *ngFor="let feture of option.features">
+          <i class="material-icons">check</i>
+          <span>{{ feture }}</span>
+        </p>
+      </div>
+      <app-button1 (click)="routeToEvent(option.link ? option.link : URLS.maintenance)" [brandColor]="true" [isSleekButton]="true" [relativeToParent]="true" [text]="'SELECT'">
+      </app-button1>
+    </div>
+  </app-card1>
+</div>

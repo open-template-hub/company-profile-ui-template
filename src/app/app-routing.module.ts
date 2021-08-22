@@ -18,6 +18,7 @@ import { CookiePolicyComponent } from './page/raw-landing-layout/cookie-policy/c
 import { HomeComponent } from './page/raw-landing-layout/home/home.component';
 import { MaintenanceComponent } from './page/raw-landing-layout/maintenance/maintenance.component';
 import { NotFoundComponent } from './page/raw-landing-layout/not-found/not-found.component';
+import { PricingComponent } from './page/raw-landing-layout/pricing/pricing.component';
 import { PrivacyPolicyComponent } from './page/raw-landing-layout/privacy-policy/privacy-policy.component';
 import { RawLandingLayoutComponent } from './page/raw-landing-layout/raw-landing-layout.component';
 import { SignUpSuccessComponent } from './page/raw-landing-layout/sign-up-success/sign-up-success.component';
@@ -46,6 +47,7 @@ const routes: Routes = [
       { path: 'cookie-policy', component: CookiePolicyComponent },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'terms', component: TermsComponent },
+      { path: 'pricing', component: PricingComponent },
       {
         path: '',
         component: LandingLayoutComponent,

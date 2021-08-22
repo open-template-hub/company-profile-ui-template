@@ -59,8 +59,4 @@ export class LandingLayoutTopNavComponent {
     this.brand = this.themeService.brand;
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
   }
-
-  switchTheme() {
-    this.themeService.switchDarkTheme();
-  }
 }

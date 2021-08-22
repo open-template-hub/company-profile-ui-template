@@ -26,6 +26,19 @@ const settings = '/settings';
 const user = '/user';
 const callback = '/callback';
 
+export const DarkLightSettings = {
+  dark: 'dark',
+  light: 'light',
+  auto: 'auto'
+};
+
+export const ThemeColorSettings = {
+  default: 'default',
+  red: 'red',
+  yellow: 'yellow',
+  blue: 'blue'
+};
+
 export const URLS = {
   root: '/',
   u: '/u',
@@ -52,6 +65,7 @@ export const URLS = {
   settings: {
     welcome: settings + '/welcome',
     editProfile: settings + '/edit-profile',
+    editTheme: settings + '/edit-theme'
   },
   user: {
     root: user
@@ -2289,7 +2303,8 @@ for ( const category of CATEGORIES ) {
       leafCategories: new Map<number, any>()
     } );
     for ( const leafCategory of subCategory.leafCategories ) {
-      CATEGORIES_MAP_INIT.get( category.id ).subCategories.get( subCategory.id ).leafCategories.set( leafCategory.id, { name: leafCategory.name } );
+      CATEGORIES_MAP_INIT.get( category.id ).subCategories.get( subCategory.id )
+      .leafCategories.set( leafCategory.id, { name: leafCategory.name } );
     }
   }
 }

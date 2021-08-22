@@ -25,7 +25,6 @@ export class BottomNavComponent {
   constructor(
       private router: Router,
       private authenticationService: AuthenticationService,
-      private themeService: ThemeService,
       private loadingService: LoadingService,
       private basicInfoService: BasicInfoService
   ) {
@@ -48,10 +47,6 @@ export class BottomNavComponent {
     this.router.navigate( [ '/' ] ).then( () => {
       return true;
     } );
-  }
-
-  switchTheme() {
-    this.themeService.switchDarkTheme();
   }
 
   closeSettings() {

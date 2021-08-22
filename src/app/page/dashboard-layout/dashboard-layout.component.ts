@@ -10,7 +10,6 @@ import { ThemeService } from '../../service/theme/theme.service';
 } )
 export class DashboardLayoutComponent {
 
-  darkTheme: string;
   loading = false;
 
   brand = {
@@ -24,10 +23,6 @@ export class DashboardLayoutComponent {
       private themeService: ThemeService,
       private loadingService: LoadingService
   ) {
-    this.themeService.darkTheme.subscribe( darkTheme => {
-      this.darkTheme = darkTheme;
-    } );
-
     this.themeService.sideNavClosed.subscribe( sideNavClosed => {
       this.sideNavClosed = sideNavClosed;
     } );

@@ -10,7 +10,7 @@ describe( 'workspace-project App', () => {
 
   it( 'should display welcome message', () => {
     page.navigateTo();
-    expect( page.getTitleText() ).toEqual( 'web-ui-template app is running!' );
+    expect( page.getTitleText() ).toEqual( 'company-profile-ui-template app is running!' );
   } );
 
   afterEach( async () => {

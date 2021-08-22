@@ -6,8 +6,10 @@
 }
 
 .features {
+  padding-top: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .feature {
@@ -18,9 +20,20 @@
   justify-content: flex-start;
 }
 
-.features > * {
+.feature-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--brand-color-lighter-5);
+}
+
+.features h2, .features .feature {
   padding-left: 7vw;
   padding-right: 7vw;
+}
+
+.features h2 {
+  background-color: var(--brand-color-lighter-5);
+  padding-top: 80px;
 }
 
 .feature svg {
@@ -29,10 +42,12 @@
   height: auto;
 }
 
-.feature-reverse {
-  background-color: var(--brand-light);
-  flex-direction: row-reverse;
-  justify-content: space-between;
+.feature-left {
+  background-color: var(--brand-color-lighter-5);
+}
+
+.feature-right {
+  background-color: var(--background-color);
 }
 
 .feature-notes {
@@ -82,15 +97,15 @@
   width: auto;
   margin: 5px 30px 0;
   padding-bottom: 9px;
-  border-bottom: 2px solid var(--brand-light);
+  border-bottom: 2px solid var(--brand-color-lighter-5);
 }
 
-#title-hero {
-  // TODO: Get url from production after release
-  background-image: url("https://wecontribute-develop.herokuapp.com/assets/common/map.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+.home-page .hero-content {
+  display: flex;
+}
+
+.hero-content-left {
+  justify-content: space-evenly;
 }
 
 @media only screen and (max-width: 999px) {
@@ -113,11 +128,6 @@
     padding-bottom: 100px;
   }
 
-  .features > * {
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-
   .register-wrapper {
     margin-top: 20px;
   }
@@ -133,12 +143,20 @@
   .counters {
     width: 100%;
     flex-direction: column;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 0;
   }
 
   .counter-wrapper {
-    height: 40vw;
+    height: 20vw;
+  }
+
+  .demonstration {
+    max-width: 90vw;
+  }
+
+  .hero-content-left > * {
+    padding-bottom: 6vh;
   }
 }
 
@@ -152,7 +170,7 @@
   }
 
   .register-wrapper {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .register-wrapper a {
@@ -164,9 +182,27 @@
   }
 
   .counters {
-    padding-top: 190px;
-    padding-bottom: 0;
+    padding-top: 160px;
+    padding-bottom: 160px;
     width: 60%;
+  }
+
+  .feature-right .feature {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .demonstration {
+    max-width: 44vw;
+  }
+
+  .hero-content-left h1 {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .hero-content-left h6 {
+    text-align: left;
   }
 }
 

@@ -15,7 +15,6 @@ import { URLS } from '../../../util/constant';
 } )
 export class SideContentComponent {
 
-  darkTheme: string;
   userInfo: any = {};
   URLS = URLS;
   recommendedEvents: any = [];
@@ -33,10 +32,6 @@ export class SideContentComponent {
       private informationService: InformationService,
       private router: Router
   ) {
-    this.themeService.darkTheme.subscribe( darkTheme => {
-      this.darkTheme = darkTheme;
-    } );
-
     this.basicInfoService.userInfo.subscribe( userInfo => {
       this.userInfo = userInfo;
 

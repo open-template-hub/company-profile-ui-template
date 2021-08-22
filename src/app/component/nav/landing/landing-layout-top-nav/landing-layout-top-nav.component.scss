@@ -2,8 +2,10 @@
   height: 50px;
   padding: 20px 80px;
   display: flex;
-  background-color: var(--background-color);
   box-shadow: 5px 0 10px var(--shadow);
+  background-color: var(--background-color-alpha);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .top-nav a {

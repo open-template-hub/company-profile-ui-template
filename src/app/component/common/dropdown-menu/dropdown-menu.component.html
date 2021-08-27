@@ -3,7 +3,7 @@
     <ng-content (click)="toggleDropdown()"></ng-content>
   </div>
   <div *ngIf="isDropdownOpen" #dropdownContent class="dropdown-content">
-    <i class="material-icons">change_history</i>
+    <i aria-hidden="true" class="material-icons">change_history</i>
     <a *ngFor="let option of options; last as isLast" class="dropdown-item"
        (mouseover)="option.hover = true" (mouseleave)="option.hover = false"
        [ngStyle]="option?.hover && { 'background-color': option.backgroundColor }"

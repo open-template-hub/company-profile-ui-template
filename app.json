@@ -1,12 +1,15 @@
 {
-  "name": "Angular UI Template",
-  "description": "Angular UI Template",
+  "name": "Company Profile UI Template",
+  "description": "Company Profile UI Template in Angular",
   "repository": "https://github.com/open-template-hub/company-profile-ui-template",
   "logo": "https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/brand-logo.png?raw=true",
   "keywords": [
     "angular",
     "template",
     "ui-components",
-    "angular-components"
+    "angular-components",
+    "company-profile",
+    "company-ui",
+    "open-template-hub"
   ]
 }

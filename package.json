@@ -1,7 +1,16 @@
 {
   "name": "company-profile-ui-template",
+  "description": "Company Profile UI Template in Angular",
   "version": "2.2.0",
+  "license": "MIT",
   "scripts": {
+    "buildLocal": "node version-generator.ts > ./src/environments/version.ts && ng build --configuration=local",
+    "buildLocalToStagingApi": "node version-generator.ts > ./src/environments/version.ts && ng build --configuration=local-to-staging-api",
+    "buildStaging": "node version-generator.ts > ./src/environments/version.ts && ng build --configuration=staging",
+    "buildProd": "node version-generator.ts > ./src/environments/version.ts && ng build --prod",
+    "e2e": "ng e2e",
+    "heroku-postbuild": "bash heroku.sh",
+    "lint": "ng lint",
     "ng": "ng",
     "startLocal": "ng serve --configuration=local",
     "startLocalFromIPhone": "ng serve --configuration=local --host 0.0.0.0 --disable-host-check true",
@@ -9,16 +18,8 @@
     "startLocalFromIPhoneToStagingApi": "ng serve --configuration=local-to-staging-api --host 0.0.0.0 --disable-host-check true",
     "startStaging": "node server.js --configuration=staging",
     "start": "node server.js --configuration=production",
-    "buildLocal": "node version-generator.ts > ./src/environments/version.ts && ng build --configuration=local",
-    "buildLocalToStagingApi": "node version-generator.ts > ./src/environments/version.ts && ng build --configuration=local-to-staging-api",
-    "buildStaging": "node version-generator.ts > ./src/environments/version.ts && ng build --configuration=staging",
-    "buildProd": "node version-generator.ts > ./src/environments/version.ts && ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "heroku-postbuild": "bash heroku.sh"
+    "test": "ng test"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^12.1.1",
     "@angular/cdk": "^12.1.1",
@@ -74,5 +75,19 @@
     "ts-node": "~10.0.0",
     "tslint": "~6.1.0",
     "typescript": "~4.2.3"
-  }
+  },
+  "git repository": "https://github.com/open-template-hub/company-profile-ui-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-template-hub/company-profile-ui-template.git"
+  },
+  "keywords": [
+    "angular",
+    "template",
+    "ui-components",
+    "angular-components",
+    "company-profile",
+    "company-ui",
+    "open-template-hub"
+  ]
 }

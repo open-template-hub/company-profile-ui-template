@@ -5,18 +5,18 @@
 </p>
 
 <h1 align="center">
-Open Template Hub - Company Profile UI Template
+Open Template Hub - Company Profile UI Template v2
 </h1>
 
-[![License](https://img.shields.io/github/license/open-template-hub/company-profile-ui-template?color=2F7488&style=for-the-badge)](LICENSE)
-[![Issues](https://img.shields.io/github/issues/open-template-hub/company-profile-ui-template?color=2F7488&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/issues)
-[![PRCLosed](https://img.shields.io/github/issues-pr-closed-raw/open-template-hub/company-profile-ui-template?color=2F7488&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/pulls?q=is%3Apr+is%3Aclosed)
-[![LastCommit](https://img.shields.io/github/last-commit/open-template-hub/company-profile-ui-template?color=2F7488&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/commits/master)
-[![Release](https://img.shields.io/github/release/open-template-hub/company-profile-ui-template?include_prereleases&color=2F7488&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/releases)
+[![License](https://img.shields.io/github/license/open-template-hub/company-profile-ui-template?color=43b043&style=for-the-badge)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/open-template-hub/company-profile-ui-template?color=43b043&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/issues)
+[![PRCLosed](https://img.shields.io/github/issues-pr-closed-raw/open-template-hub/company-profile-ui-template?color=43b043&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/pulls?q=is%3Apr+is%3Aclosed)
+[![LastCommit](https://img.shields.io/github/last-commit/open-template-hub/company-profile-ui-template?color=43b043&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/commits/master)
+[![Release](https://img.shields.io/github/release/open-template-hub/company-profile-ui-template?include_prereleases&color=43b043&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/releases)
 [![SonarCloud](https://img.shields.io/sonar/quality_gate/open-template-hub_company-profile-ui-template?server=https%3A%2F%2Fsonarcloud.io&label=Sonar%20Cloud&style=for-the-badge&logo=sonarcloud)](https://sonarcloud.io/dashboard?id=open-template-hub_company-profile-ui-template)
 [![BTC](https://img.shields.io/badge/Donate-BTC-ORANGE?color=F5922F&style=for-the-badge&logo=bitcoin)](https://commerce.coinbase.com/checkout/8313af5f-de48-498d-b2cb-d98819ca7d5e)
 
-Responsive Company Profile UI template with sign-up, login and social login functionality
+Company Profile UI Template in Angular
 
 <h3 align="center">
   For demo click the image below ⬇️
@@ -36,7 +36,13 @@ Deploy this template to Heroku
 
 [![Deploy](https://img.shields.io/badge/Deploy_to-Heroku-7056bf.svg?style=for-the-badge&logo=heroku)](https://heroku.com/deploy?template=https://github.com/open-template-hub/company-profile-ui-template)
 
-### 2. GitHub Template
+### 2. Start with UI Generator
+
+Create your UI with UI Generator Package
+
+[![NPM](https://img.shields.io/badge/NPM-ui_generator-cb3837.svg?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/@open-template-hub/app-generator)
+
+### 3. GitHub Template
 
 Use this repository as a Template
 

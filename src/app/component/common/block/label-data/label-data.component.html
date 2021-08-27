@@ -3,7 +3,7 @@
   <p>{{label}}</p>
   <p *ngIf="!isClickable">{{data}}</p>
   <a *ngIf="isClickable" [class.inline-a]="highlight"
-     [href]="(data.startsWith('http://') || data.startsWith('https://')) ? data : 'http://' + data" target="_blank">
+     [href]="(data.startsWith('http://') || data.startsWith('https://')) ? data : 'http://' + data" target="_blank" rel=noopener>
     {{data}}
   </a>
 </div>

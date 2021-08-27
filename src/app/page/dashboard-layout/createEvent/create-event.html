@@ -7,25 +7,25 @@
           <div class="left-column">
             <div [class.input-error]="submitted && f.title.invalid" class="input-with-icon">
               <input formControlName="title" placeholder="Make a event..." required type="text">
-              <i area-hidden="true" class="fas fa-clipboard fa-lg fa-fw"></i>
+              <i aria-hidden="true" class="fas fa-clipboard fa-lg fa-fw"></i>
             </div>
             <div [class.input-error]="submitted && f.description.invalid" class="input-with-icon">
               <textarea formControlName="description" maxlength="500" placeholder="Description..." rows="2"></textarea>
-              <i area-hidden="true" class="fas fa-comment fa-lg fa-fw"></i>
+              <i aria-hidden="true" class="fas fa-comment fa-lg fa-fw"></i>
             </div>
             <div [class.input-error]="submitted && f.link.invalid" class="input-with-icon">
               <input formControlName="link" placeholder="Link..." type="text">
-              <i area-hidden="true" class="fas fa-link fa-lg fa-fw"></i>
+              <i aria-hidden="true" class="fas fa-link fa-lg fa-fw"></i>
             </div>
             <div [class]="'interest-search-area'" class="input-with-icon">
               <input #searchArea formControlName="category" (keyup)="search($event)" placeholder="Category..." type="text">
-              <i area-hidden="true" class="fas fa-book-open fa-lg fa-fw"></i>
+              <i aria-hidden="true" class="fas fa-book-open fa-lg fa-fw"></i>
             </div>
             <div *ngIf="(categorySearchResults.length > 0) && searchEnabled" class="contribute-search-results">
               <a (click)="categorySearchResults = []; selectedCategory = result; f.category.setValue( this.defaultFormValues.category );" *ngFor="let result of categorySearchResults">
                 <app-label-data [data]="(result.category ? result.category.name : '') +
           (result.subCategory ? ' - ' + result.subCategory.name : '') + (result.leafCategory ? ' - ' + result.leafCategory.name : '')"
-                                [noMargin]="true">
+                                [noMargin]="'true'">
                 </app-label-data>
               </a>
             </div>
@@ -39,7 +39,7 @@
             <div [class.input-error]="submitted && f.date.invalid" class="input-with-icon">
               <input #dateArea="dpDayPicker" [dpDayPicker]="dayPickerConfig" [mode]="'daytime'" [placeholder]="'Date...'"
                      [theme]="'dp-material'" formControlName="date" type="text">
-              <i area-hidden="true" class="fas fa-calendar fa-lg fa-fw"></i>
+              <i aria-hidden="true" class="fas fa-calendar fa-lg fa-fw"></i>
             </div>
             <div *ngIf="f.isDurationActive.value" [class.input-error]="submitted && (f.durationMin.invalid || f.durationHour.invalid)"
                  class="input-with-icon"
@@ -48,16 +48,16 @@
               <p>:</p>
               <input formControlName="durationHour" placeholder="Hour..." (change)="f.durationMin.value === '' ? f.durationMin.setValue(0) : null" required type="text">
               <p style="min-width: 75px; margin-left: 14px;">Duration:</p>
-              <i area-hidden="true" class="fas fa-clock fa-lg fa-fw"></i>
+              <i aria-hidden="true" class="fas fa-clock fa-lg fa-fw"></i>
             </div>
             <div *ngIf="f.isTrailerVideoLinkActive.value" [class.input-error]="submitted && f.trailerVideoLink.invalid" class="input-with-icon">
               <input formControlName="trailerVideoLink" placeholder="Video trailer link..." type="text">
-              <i area-hidden="true" class="fab fa-youtube fa-lg fa-fw"></i>
+              <i aria-hidden="true" class="fab fa-youtube fa-lg fa-fw"></i>
             </div>
             <div *ngIf="f.isPremium.value" [class.input-error]="submitted && f.price.invalid" class="input-with-icon">
               <input formControlName="price" placeholder="Price..." type="text">
               <p>$</p>
-              <i area-hidden="true" class="fas fa-coins fa-lg fa-fw"></i>
+              <i aria-hidden="true" class="fas fa-coins fa-lg fa-fw"></i>
             </div>
           </div>
         </div>
@@ -65,19 +65,19 @@
           <div class="section-footer-icons">
             <span (click)="f.isEmailAllowed.setValue( !f.isEmailAllowed.value )"
                   class="tooltip" show-delay="500" tooltip="Add my email address">
-                  <i area-hidden="true" class="fas fa-envelope fa-lg fa-fw" [class.button-active]="f.isEmailAllowed.value"></i>
+                  <i aria-hidden="true" class="fas fa-envelope fa-lg fa-fw" [class.button-active]="f.isEmailAllowed.value"></i>
             </span>
             <span (click)="f.isPremium.setValue( !f.isPremium.value )"
                   class="tooltip" show-delay="500" tooltip="Premium">
-                  <i area-hidden="true" class="fas fa-crown fa-lg fa-fw" [class.button-active]="f.isPremium.value"></i>
+                  <i aria-hidden="true" class="fas fa-crown fa-lg fa-fw" [class.button-active]="f.isPremium.value"></i>
             </span>
             <span (click)="f.isTrailerVideoLinkActive.setValue( !f.isTrailerVideoLinkActive.value )"
                   class="tooltip" show-delay="500" tooltip="Add Youtube video trailer link">
-                  <i area-hidden="true" class="fab fa-youtube fa-lg fa-fw" [class.button-active]="f.isTrailerVideoLinkActive.value"></i>
+                  <i aria-hidden="true" class="fab fa-youtube fa-lg fa-fw" [class.button-active]="f.isTrailerVideoLinkActive.value"></i>
             </span>
             <span (click)="f.isDurationActive.setValue( !f.isDurationActive.value )"
                   class="tooltip" show-delay="500" tooltip="Add duration">
-                  <i area-hidden="true" class="fas fa-clock fa-lg fa-fw" [class.button-active]="f.isDurationActive.value"></i>
+                  <i aria-hidden="true" class="fas fa-clock fa-lg fa-fw" [class.button-active]="f.isDurationActive.value"></i>
             </span>
           </div>
           <div class="contribute-button-area">
@@ -115,7 +115,7 @@
   <!--SEARCH AREA-->
   <div class="search-area">
     <div class="search-bar">
-      <i class="material-icons">search</i>
+      <i aria-hidden="true" class="material-icons">search</i>
       <input #searchArea (keyup)="searchInAllEvents($event)" placeholder="ex. title.." type="text">
     </div>
     <app-button1 [hoverWithColor]="false" [isSleekButton]="true" [lighterContrast]="true" [text]="'Search'"

@@ -4,7 +4,7 @@
         [class]="flexStart ? 'flex-start' : 'flex-center'"
         [disabled]="loading" [ngClass]="brand"
         class="social-button rounded-box">
-  <i aria-hidden=true *ngIf="!localImage" [class]="'fab fa-' + (placeholderIcon ? placeholderIcon : brand)"></i>
+  <i aria-hidden="true" *ngIf="!localImage" [class]="'fab fa-' + (placeholderIcon ? placeholderIcon : brand)"></i>
   <img *ngIf="localImage" alt="local image" src="{{localImage}}"/>
   <span *ngIf="flexStart && text !== '' && !isSmallLogo" class="vertical-hr"></span>
   {{text}}

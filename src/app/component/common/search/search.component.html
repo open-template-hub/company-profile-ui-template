@@ -1,5 +1,5 @@
 <div class="search-area">
-  <i aria-hidden=true class="material-icons">search</i>
+  <i aria-hidden="true" class="material-icons">search</i>
   <input #searchArea (keyup)="search($event)" placeholder="Search..." type="text">
   <div
     *ngIf="(userSearchResults.length > 0 || categorySearchResults.length > 0 || eventSearchResults.length > 0) && searchEnabled"

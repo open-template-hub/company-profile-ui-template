@@ -52,6 +52,11 @@ app-dropdown-menu i {
   margin-right: auto;
 }
 
+.top-nav a i {
+  font-size: 22px;
+  margin: 0.35em 0.35em 0.35em 0;
+}
+
 @media only screen and (max-width: 999px) {
   .top-nav {
     display: none;

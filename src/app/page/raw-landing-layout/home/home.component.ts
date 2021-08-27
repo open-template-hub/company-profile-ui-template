@@ -13,7 +13,6 @@ import { URLS } from '../../../util/constant';
 } )
 export class HomeComponent implements AfterViewInit {
 
-  // TODO: Will be initialized by apis
   downloadCounter = 2800;
   starsCounter = 7;
   userCounter = 5;

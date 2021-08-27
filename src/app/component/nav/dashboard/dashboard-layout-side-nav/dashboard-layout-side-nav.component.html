@@ -15,7 +15,7 @@
     <a *ngIf="currentUser" [display]="sideNavClosed==='true'" placement="right"
        routerLink="{{URLS.dashboard.root}}"
        show-delay="500" tooltip="dashboard">
-      <i class="material-icons">dashboard</i>
+      <i aria-hidden="true" class="material-icons">dashboard</i>
       <span *ngIf="sideNavClosed === 'false'">
         DASHBOARD
     </span>
@@ -24,7 +24,7 @@
     <a *ngIf="currentUser && userInfo.payload?.userProfileActivated" [display]="sideNavClosed==='true'" placement="right"
        routerLink="{{URLS.dashboard.createEvent}}"
        show-delay="500" tooltip="createEvent">
-      <i class="material-icons">public</i>
+      <i aria-hidden="true" class="material-icons">public</i>
       <span *ngIf="sideNavClosed === 'false'">
         CREATE EVENT
     </span>
@@ -33,7 +33,7 @@
     <a *ngIf="currentUser" [display]="sideNavClosed==='true'" placement="right" routerLink="{{URLS.dashboard.learn}}"
        show-delay="500"
        tooltip="learn">
-      <i class="material-icons">event</i>
+      <i aria-hidden="true" class="material-icons">event</i>
       <span *ngIf="sideNavClosed === 'false'">
         EVENTS
     </span>
@@ -41,7 +41,7 @@
     <a (click)="openSettings = !openSettings" *ngIf="currentUser" [display]="sideNavClosed==='true'"
        href="javascript:void(0)"
        placement="right" show-delay="500" tooltip="settings">
-      <i class="material-icons">settings</i>
+      <i aria-hidden="true" class="material-icons">settings</i>
       <span *ngIf="sideNavClosed === 'false'">
         SETTINGS
     </span>
@@ -50,7 +50,7 @@
       <a *ngIf="currentUser" [display]="sideNavClosed==='true'" placement="right"
          routerLink="{{URLS.settings.editProfile}}"
          show-delay="500" tooltip="edit profile">
-        <i class="material-icons">person</i>
+        <i aria-hidden="true" class="material-icons">person</i>
         <span *ngIf="sideNavClosed === 'false'">
         EDIT PROFILE
       </span>
@@ -58,7 +58,7 @@
       <a *ngIf="currentUser" [display]="sideNavClosed==='true'" placement="right"
          routerLink="{{URLS.dashboard.privacy}}"
          show-delay="500" tooltip="privacy">
-        <i class="material-icons">privacy_tip</i>
+        <i aria-hidden="true" class="material-icons">privacy_tip</i>
         <span *ngIf="sideNavClosed === 'false'">
         PRIVACY
     </span>
@@ -66,7 +66,7 @@
       <a *ngIf="currentUser && openOtherSettings" [display]="sideNavClosed==='true'"
          routerLink="{{URLS.settings.editTheme}}"
          placement="right" show-delay="500" tooltip="theme">
-        <i class="material-icons">invert_colors</i>
+        <i aria-hidden="true" class="material-icons">invert_colors</i>
         <span *ngIf="sideNavClosed === 'false'">
           THEME
         </span>
@@ -74,33 +74,33 @@
       <a (click)="logout()" *ngIf="currentUser && openOtherSettings" [display]="sideNavClosed==='true'"
          href="javascript:void(0)"
          id=logout placement="right" show-delay="500" tooltip="logout">
-        <i class="material-icons">exit_to_app</i>
+        <i aria-hidden="true" class="material-icons">exit_to_app</i>
         <span *ngIf="sideNavClosed === 'false'">
           LOGOUT
         </span>
       </a>
       <a (click)="openOtherSettings = !openOtherSettings" *ngIf="currentUser" href="javascript:void(0)"
          id=more-settings>
-        <i class="material-icons">{{!openOtherSettings ? 'expand_more' : 'expand_less'}}</i>
+        <i aria-hidden="true" class="material-icons">{{!openOtherSettings ? 'expand_more' : 'expand_less'}}</i>
         <span *ngIf="sideNavClosed === 'false'">
           {{!openOtherSettings ? 'MORE' : 'LESS'}}
         </span>
       </a>
     </div>
     <a *ngIf="!currentUser" routerLink="{{URLS.signup}}">
-      <i class="material-icons">person_add</i>
+      <i aria-hidden="true" class="material-icons">person_add</i>
       <span *ngIf="sideNavClosed === 'false'">
         REGISTER
       </span>
     </a>
     <a *ngIf="!currentUser" class="login" routerLink="{{URLS.login}}">
-      <i class="material-icons">fingerprint</i>
+      <i aria-hidden="true" class="material-icons">fingerprint</i>
       <span *ngIf="sideNavClosed === 'false'">
         LOG IN
       </span>
     </a>
     <a (click)="toggleSideNav()" *ngIf="currentUser" href="javascript:void(0)" id=menu>
-      <i class="material-icons">menu</i>
+      <i aria-hidden="true" class="material-icons">menu</i>
       <span>
       </span>
     </a>

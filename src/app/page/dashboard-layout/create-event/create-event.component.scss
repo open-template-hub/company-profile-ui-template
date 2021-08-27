@@ -164,7 +164,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow-x: auto;
     background-color: var(--background-color);
     box-shadow: 0 0 5px var(--shadow);
     z-index: 12;
@@ -209,9 +208,7 @@
     z-index: 12;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
-    overflow: auto;
     max-height: calc(100% - 200px);
-    width: -webkit-fill-available;
   }
 
   .contribute-search-results .search-result-user-label {
@@ -227,6 +224,7 @@
 
   .section .section-footer .section-footer-icons {
     margin-left: 0;
+    text-align: center;
   }
 
   .section .section-footer .section-footer-icons span {
@@ -246,10 +244,6 @@
 
   .contribute-button-area .contribute-button {
     margin: 0;
-  }
-
-  .section .section-footer .section-footer-icons {
-    text-align: center;
   }
 }
 

@@ -10,7 +10,7 @@
 }
 
 .product-review-stars-input label:after {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: 900;
   content: "\f005";
   -webkit-transform: scale(4);
@@ -37,7 +37,7 @@
 }
 
 .rate-badge-wrapper label {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Free", sans-serif;
   content: "\f005";
   font-size: 2em;
   position: relative;

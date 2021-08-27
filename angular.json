@@ -75,6 +75,11 @@
               ]
             },
             "local": {
+              "optimization": false,
+              "sourceMap": true,
+              "buildOptimizer": false,
+              "extractLicenses": false,
+              "vendorChunk": true,
               "assets": [
                 "src/favicon.ico",
                 "src/assets/common",
@@ -82,6 +87,11 @@
               ]
             },
             "local-to-staging-api": {
+              "optimization": false,
+              "sourceMap": true,
+              "buildOptimizer": false,
+              "extractLicenses": false,
+              "vendorChunk": true,
               "assets": [
                 "src/favicon.ico",
                 "src/assets/common",

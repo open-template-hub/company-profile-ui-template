@@ -7,6 +7,6 @@
         [style.color]="themeColor ? 'var(--brand-color-' + themeColor + '-theme)' : ''"
         [style.border-color]="themeColor ? 'var(--brand-color-' + themeColor + '-theme)' : ''"
         [disabled]="loading || disabled" [style.cursor]="cursor">
-  <i *ngIf="icon" [class]="'fas fa-' + icon + ' fa-lg fa-fw'"></i>
+  <i aria-hidden="true" *ngIf="icon" [class]="'fas fa-' + icon + ' fa-lg fa-fw'"></i>
   {{text}}
 </button>

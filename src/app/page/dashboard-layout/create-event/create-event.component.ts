@@ -19,7 +19,7 @@ import { environment } from '../../../../environments/environment';
 } )
 export class CreateEventComponent implements OnInit {
 
-  contributeForm: FormGroup;
+  form: FormGroup;
   submitted = false;
   loading = false;
   URLS = URLS;
@@ -102,12 +102,13 @@ export class CreateEventComponent implements OnInit {
       } );
     }
 
-    this.contributeForm = this.formBuilder.group( {
+    this.form = this.formBuilder.group( {
       _id: [ this.defaultFormValues._id ],
       title: [ this.defaultFormValues.title, Validators.required ],
       description: [ this.defaultFormValues.description, Validators.maxLength( 500 ) ],
       link: [ this.defaultFormValues.link, Validators.pattern( '^.+:\\/\\/.*$' ) ],
-      trailerVideoLink: [ this.defaultFormValues.trailerVideoLink, Validators.pattern( '^(https:\\/\\/www.)?youtube.com/watch\\?v=.{11}$' ) ],
+      trailerVideoLink: [ this.defaultFormValues.trailerVideoLink,
+        Validators.pattern( '^(https:\\/\\/www.)?youtube.com/watch\\?v=.{11}$' ) ],
       isTrailerVideoLinkActive: [ this.defaultFormValues.isTrailerVideoLinkActive ],
       date: [ this.defaultFormValues.date, Validators.required ],
       durationHour: [ this.defaultFormValues.durationHour, Validators.pattern('^([0-1]?[0-9]|2[0-3])$') ],
@@ -160,10 +161,6 @@ export class CreateEventComponent implements OnInit {
     this.isSticky = window.pageYOffset >= 90;
   }
 
-  get f() {
-    return this.contributeForm.controls;
-  }
-
   onSubmit() {
     if ( this.loading ) {
       return;
@@ -172,72 +169,57 @@ export class CreateEventComponent implements OnInit {
     this.submitted = true;
 
     // set errors manually
-    if ( this.f.isPremium.value && ( this.f.price.value === '' || parseFloat(this.f.price.value) < 5 ) ) {
-      this.f.price.setErrors({ incorrect: true } );
+    if ( this.form.controls.isPremium.value && ( this.form.controls.price.value === '' || parseFloat(this.form.controls.price.value) < 5 ) ) {
+      this.form.controls.price.setErrors({ incorrect: true } );
     }
 
-    if ( this.f.link.value === '' ) {
-      this.f.link.setErrors( { incorrect: true } );
+    if ( this.form.controls.link.value === '' ) {
+      this.form.controls.link.setErrors( { incorrect: true } );
     }
 
-    if ( this.f.isTrailerVideoLinkActive.value && this.f.trailerVideoLink.value === '' ) {
-      this.f.trailerVideoLink.setErrors( { incorrect: true } );
+    if ( this.form.controls.isTrailerVideoLinkActive.value && this.form.controls.trailerVideoLink.value === '' ) {
+      this.form.controls.trailerVideoLink.setErrors( { incorrect: true } );
     }
 
     // mark as valid if the activations not enabled
-    if ( !this.f.isTrailerVideoLinkActive.value ) {
-      this.f.trailerVideoLink.setValue( this.defaultFormValues.trailerVideoLink );
+    if ( !this.form.controls.isTrailerVideoLinkActive.value ) {
+      this.form.controls.trailerVideoLink.setValue( this.defaultFormValues.trailerVideoLink );
     }
 
     // for "Premium content cannot be changed to free"
-    this.previousPrice = this.f.price.value
-    if ( !this.f.isPremium.value ) {
-      this.f.price.setValue( this.defaultFormValues.price );
+    this.previousPrice = this.form.controls.price.value
+    if ( !this.form.controls.isPremium.value ) {
+      this.form.controls.price.setValue( this.defaultFormValues.price );
     }
 
-    // stop here if form is invalid
-    if ( this.contributeForm.invalid ) {
-      if ( this.f.title.invalid ) {
-        this.toastService.error( 'Please provide a title.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.date.invalid ) {
-        this.toastService.error( 'Please provide a date.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.durationMin.invalid || this.f.durationHour.invalid ) {
-        this.toastService.error( 'Please provide a valid duration.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.link.invalid ) {
-        this.toastService.error( 'Please provide a valid url (Ex. "https://opentemplatehub.com")', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.trailerVideoLink.invalid ) {
-        this.toastService.error( 'Please provide a valid youtube video url (Ex. "https://www.youtube.com/watch?v=11111111111")', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.price.invalid ) {
-        this.toastService.error( 'Price must be minimum 5.00$', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
+    const errorMessages = {
+      title: 'Please provide a title',
+      date: 'Please provide a date',
+      durationMin: 'Please provide a valid duration',
+      durationHour: 'Please provide a valid duration',
+      link: 'Please provide a valid url (Ex. "https://opentemplatehub.com")',
+      trailerVideoLink: 'Please provide a valid youtube video url (Ex. "https://www.youtube.com/watch?v=11111111111")',
+      price: 'Price must be minimum 5.00$'
+    };
+
+    if ( this.form.invalid ) {
+      for ( const control in this.form.controls ) {
+        if ( this.form.controls[ control ].invalid ) {
+          this.toastService.error( errorMessages[ control ], '', {
+            positionClass: this.route.parent.snapshot.data.layout,
+          } );
+        }
       }
       return;
     }
 
     this.addEditEvent();
-
   }
 
   resetEventForm() {
     this.cardTitle = 'Add Event';
     this.submitted = false;
-    this.contributeForm.reset( this.defaultFormValues );
+    this.form.reset( this.defaultFormValues );
     this.selectedCategory = { ...this.defaultCategory };
   }
 
@@ -251,7 +233,7 @@ export class CreateEventComponent implements OnInit {
   fillForm( id: string ): void {
     for ( const event of this.myUpcomingEvents ) {
       if ( event._id === id ) {
-        this.contributeForm = this.formBuilder.group( {
+        this.form = this.formBuilder.group( {
           _id: [ event._id ],
           title: [ event.title, Validators.required ],
           description: [ event.payload.description, Validators.maxLength( 500 ) ],
@@ -269,7 +251,7 @@ export class CreateEventComponent implements OnInit {
           category: [ event.category ]
         } );
 
-        this.contributeForm.controls.category.markAsTouched();
+        this.form.controls.category.markAsTouched();
 
         this.selectedCategory = {
           category: event.payload.category,
@@ -286,30 +268,31 @@ export class CreateEventComponent implements OnInit {
 
   private addEditEvent() {
     const payload: any = {
-      description: this.f.description.value,
+      description: this.form.controls.description.value,
       category: this.selectedCategory.category.id,
       subCategory: this.selectedCategory.subCategory?.id,
       leafCategory: this.selectedCategory.leafCategory?.id
     };
 
-    if ( this.f.isPremium.value ) {
-      payload.price = this.f.price.value;
+    if ( this.form.controls.isPremium.value ) {
+      payload.price = this.form.controls.price.value;
     }
 
-    if ( this.f.isTrailerVideoLinkActive.value ) {
-      payload.trailerVideoLink = this.f.trailerVideoLink.value.substr(-11, 11);
+    if ( this.form.controls.isTrailerVideoLinkActive.value ) {
+      payload.trailerVideoLink = this.form.controls.trailerVideoLink.value.substr(-11, 11);
     }
 
-    const date = new Date( this.f.date.value );
+    const date = new Date( this.form.controls.date.value );
 
     const event = {
-      _id: this.f._id.value,
-      title: this.f.title.value,
-      isPremium: this.f.isPremium.value,
+      _id: this.form.controls._id.value,
+      title: this.form.controls.title.value,
+      isPremium: this.form.controls.isPremium.value,
       date: date.toISOString(),
-      duration: this.f.isDurationActive.value ? (+this.f.durationHour.value) * 60 + (+this.f.durationMin.value) : 45,
-      isEmailAllowed: this.f.isEmailAllowed.value,
-      link: this.f.link.value,
+      duration: this.form.controls.isDurationActive.value ?
+          (+this.form.controls.durationHour.value) * 60 + (+this.form.controls.durationMin.value) : 45,
+      isEmailAllowed: this.form.controls.isEmailAllowed.value,
+      link: this.form.controls.link.value,
       payload,
       paymentConfigKey: environment.payment.stripe.tag,
       imageUrl: environment.eventImageUrl
@@ -325,8 +308,8 @@ export class CreateEventComponent implements OnInit {
         this.router.navigate( [ URLS.dashboard.contribute ] );
       }, ( error ) => {
         if ( error.error.message.startsWith( 'Premium content cannot be changed to free' ) ) {
-          this.f.isPremium.setValue( true )
-          this.f.price.setValue( this.previousPrice )
+          this.form.controls.isPremium.setValue( true )
+          this.form.controls.price.setValue( this.previousPrice )
         }
       } );
     } else {

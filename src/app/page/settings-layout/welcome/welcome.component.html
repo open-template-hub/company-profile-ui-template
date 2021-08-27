@@ -76,7 +76,7 @@
                *ngFor="let result of categorySearchResults">
               <app-label-data [data]="(result.category ? result.category.name : '') +
           (result.subCategory ? ' - ' + result.subCategory.name : '') + (result.leafCategory ? ' - ' + result.leafCategory.name : '')"
-                              [noMargin]="'true'">
+                              [noMargin]="true">
               </app-label-data>
             </a>
           </div>
@@ -84,7 +84,7 @@
             <app-label-with-icon-data (click)="removeFromInterestList(result)" *ngFor="let result of interests"
                                       [data]="(!result.leafCategory && !result.subCategory && result.category ? result.category.name : '') +
           (!result.leafCategory && result.subCategory ? result.subCategory.name : '') + (result.leafCategory ? result.leafCategory.name : '')"
-                                      [fixWidth]="true" [noMarginIcon]="true" [noMargin]="'true'"
+                                      [fixWidth]="true" [noMarginIcon]="true" [noMargin]="true"
                                       [solid]="'times'">
             </app-label-with-icon-data>
           </div>

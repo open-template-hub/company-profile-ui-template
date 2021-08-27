@@ -25,7 +25,7 @@
               <a (click)="categorySearchResults = []; selectedCategory = result; f.category.setValue( this.defaultFormValues.category );" *ngFor="let result of categorySearchResults">
                 <app-label-data [data]="(result.category ? result.category.name : '') +
           (result.subCategory ? ' - ' + result.subCategory.name : '') + (result.leafCategory ? ' - ' + result.leafCategory.name : '')"
-                                [noMargin]="'true'">
+                                [noMargin]="true">
                 </app-label-data>
               </a>
             </div>

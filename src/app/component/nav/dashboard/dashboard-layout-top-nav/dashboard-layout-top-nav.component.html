@@ -16,7 +16,7 @@
      class="dashboard-layout-top-nav-search-results">
   <a (click)="userSearchResults = []" *ngFor="let result of userSearchResults"
      routerLink="{{URLS.user.root + '/' + result.username}}">
-    <app-label-with-icon-data [data]="result.username" [isClickableWithinApp]="true" [noMargin]="'true'"
+    <app-label-with-icon-data [data]="result.username" [isClickableWithinApp]="true" [noMargin]="true"
                               [solid]="'user'" [urlPrefix]="URLS.user.root + '/'">
     </app-label-with-icon-data>
   </a>
@@ -27,7 +27,7 @@
      routerLink="{{URLS.dashboard.learn}}">
     <app-label-with-icon-data [data]="(result.category ? result.category.name : '') +
           (result.subCategory ? ' - ' + result.subCategory.name : '') + (result.leafCategory ? ' - ' + result.leafCategory.name : '')"
-                              [noMargin]="'true'" [solid]="'book-open'">
+                              [noMargin]="true" [solid]="'book-open'">
     </app-label-with-icon-data>
   </a>
 </div>

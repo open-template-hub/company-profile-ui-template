@@ -2,7 +2,6 @@ import { Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } fro
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ImageCroppedEvent } from 'ngx-image-cropper';
-import { environment } from '../../../../environments/environment';
 import { AuthToken } from '../../../model/AuthToken';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';

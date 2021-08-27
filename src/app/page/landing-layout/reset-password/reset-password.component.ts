@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { environment } from '../../../../environments/environment';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';

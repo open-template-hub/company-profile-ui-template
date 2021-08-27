@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ImageCroppedEvent } from 'ngx-image-cropper';
 import { Get as simpleIcons } from 'simple-icons';
-import { environment } from '../../../../environments/environment';
 import { AuthToken } from '../../../model/AuthToken';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
@@ -229,7 +228,7 @@ export class EditProfileComponent implements OnInit, OnDestroy {
       .subscribe( () => {
             this.basicInfoService.me().subscribe( result => {
               this.router.navigate( [ URLS.dashboard.root ] );
-            });
+            } );
           }
       );
     } );

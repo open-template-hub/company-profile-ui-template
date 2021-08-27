@@ -7,10 +7,14 @@
   display: flex;
   justify-content: flex-start;
   overflow-x: auto;
-  background-color: var(--background-color);
+
   box-shadow: 0 0 5px var(--shadow);
   z-index: 11;
   padding-bottom: env(safe-area-inset-bottom);
+
+  background-color: var(--background-color-alpha);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .bottom-nav a {

@@ -15,7 +15,6 @@ import { PROFILE_IMG, URLS } from '../../../../util/constant';
 } )
 export class DashboardLayoutSideNavComponent {
 
-  darkTheme: string;
   sideNavClosed = 'false';
   userInfo: any = {};
   profileImg = PROFILE_IMG;
@@ -47,10 +46,6 @@ export class DashboardLayoutSideNavComponent {
   ) {
     this.authenticationService.currentUser.subscribe( currentUser => {
       this.currentUser = currentUser;
-    } );
-
-    this.themeService.darkTheme.subscribe( darkTheme => {
-      this.darkTheme = darkTheme;
     } );
 
     this.themeService.sideNavClosed.subscribe( sideNavClosed => {
@@ -92,10 +87,6 @@ export class DashboardLayoutSideNavComponent {
     this.router.navigate( [ '/' ] ).then( () => {
       return true;
     } );
-  }
-
-  switchTheme() {
-    this.themeService.switchDarkTheme();
   }
 
   toggleSideNav() {

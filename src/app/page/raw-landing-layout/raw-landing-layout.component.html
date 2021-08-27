@@ -1,12 +1,18 @@
-<a class="github-fork-ribbon" [attr.data-ribbon]="'Fork me on GitHub'" [classList]="'ribbon ribbon-premium ribbon-top'"
-   href="https://github.com/open-template-hub/web-ui-template" title="Fork me on GitHub">Fork
-  me on GitHub</a>
-<div [class.dark-theme]="darkTheme === 'true'">
+<a *ngIf="environment.identity !== 'production'" [attr.data-ribbon]="environment.identity"
+   [class]="environment.identity === 'local' ? 'ribbon ribbon-error ribbon-top fixed' :
+   (environment.identity === 'staging' ? 'ribbon ribbon-warn ribbon-top fixed' : '')"
+   href="https://github.com/open-template-hub/company-profile-ui-template" title="Identity"></a>
+<div>
   <div class="raw-landing-layout-page">
     <div class="header">
       <app-landing-layout-top-nav></app-landing-layout-top-nav>
     </div>
     <div class="header-filler"></div>
+    <div class="layers top-layer">
+      <svg viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+        <path d="M 0,250 1000,120 V 0 H 0 Z" style="fill: var(--brand-color-lighter-2);"></path>
+      </svg>
+    </div>
     <div class="raw-landing-layout-page-content">
       <router-outlet></router-outlet>
     </div>

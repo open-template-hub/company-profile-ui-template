@@ -1,7 +1,7 @@
 <!--SEARCH AREA-->
 <div class="search-area">
   <div class="search-bar">
-    <i class="material-icons">search</i>
+    <i aria-hidden="true" class="material-icons">search</i>
     <input #searchArea (keyup)="search($event)" placeholder="ex. title, username.." type="text">
   </div>
   <app-button1 [hoverWithColor]="false" [isSleekButton]="true" [lighterContrast]="true" [text]="'Search'"

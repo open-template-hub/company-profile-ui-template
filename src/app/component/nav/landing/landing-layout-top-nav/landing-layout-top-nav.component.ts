@@ -43,8 +43,4 @@ export class LandingLayoutTopNavComponent {
       return true;
     } );
   }
-
-  switchTheme() {
-    this.themeService.switchDarkTheme();
-  }
 }

@@ -2,6 +2,7 @@ import { HttpClient, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { DarkLightSettings, ThemeColorSettings } from '../../util/constant';
 import { environment } from '../../../environments/environment';
 import { AuthToken } from '../../model/AuthToken';
 import { BasicInfoService } from '../basic-info/basic-info.service';
@@ -46,8 +47,8 @@ export class AuthenticationService {
       }
       this.currentUserSubject.next( currentUser );
 
-      // TODO: get second parameter from basic info db
-      this.themeService.initTheme( false );
+      this.themeService.setDarkLightSetting( DarkLightSettings.auto );
+      this.themeService.setThemeColorSetting( ThemeColorSettings.default );
       this.themeService.initSideNavClosed( false );
 
       return currentUser;
@@ -125,8 +126,8 @@ export class AuthenticationService {
       localStorage.setItem( 'currentUser', JSON.stringify( currentUser ) );
       this.currentUserSubject.next( currentUser );
 
-      // TODO: get second parameter from basic info db
-      this.themeService.initTheme( false );
+      this.themeService.setDarkLightSetting(DarkLightSettings.auto);
+      this.themeService.setThemeColorSetting(ThemeColorSettings.default);
       this.themeService.initSideNavClosed( false );
 
       return currentUser;

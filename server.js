@@ -8,9 +8,10 @@ const express = require( "express" );
 
 // express init
 const app = express();
+app.disable( "x-powered-by" );
 
 // directory that we will serve
-app.use( express.static( __dirname + "/dist/web-ui-template" ) );
+app.use( express.static( __dirname + "/dist/company-profile-ui-template" ) );
 
 app.get( "*", function ( req, res, next ) {
 
@@ -25,7 +26,7 @@ app.get( "*", function ( req, res, next ) {
 
 // redirect all requests to index.html
 app.get( "/*", function ( req, res ) {
-  res.sendFile( path.join( __dirname + "/dist/web-ui-template/index.html" ) );
+  res.sendFile( path.join( __dirname + "/dist/company-profile-ui-template/index.html" ) );
 } );
 
 // listen port

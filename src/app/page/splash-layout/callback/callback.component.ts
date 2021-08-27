@@ -40,30 +40,27 @@ export class CallbackComponent implements OnInit {
     this.social = this.route.snapshot.data.social;
     this.payment = this.route.snapshot.data.payment;
 
-    if (this.payment) {
+    if ( this.payment ) {
       const status = this.route.snapshot.queryParamMap.get( 'status' );
       const eventId = this.route.snapshot.queryParamMap.get( 'id' );
-      const transactionId = this.route.snapshot.queryParamMap.get( 'transaction_id' )
-      this.paymentCallback( this.payment , status, eventId, transactionId );
+      const transactionId = this.route.snapshot.queryParamMap.get( 'transaction_id' );
+      this.paymentCallback( this.payment, status, eventId, transactionId );
     } else {
       this.socialLoginCallback();
     }
   }
 
   private paymentCallback( paymentConfig: string, status: string, eventId: string, transactionId: string ) {
-    switch ( status ) {
-      case 'success':
-        this.paymentService.verify( paymentConfig, transactionId, eventId ).subscribe( response => {
-          this.informationService.setInformation( `Payment succeeded`, 'success' );
-          this.router.navigate( [ URLS.dashboard.event ], { queryParams: { event_id: eventId } } );
-        }, error => {
-          this.router.navigate( [ URLS.dashboard.learn ] );
-        } );
-        break;
-      default:
-        this.informationService.setInformation( `Payment canceled`, 'error' );
+    if ( status === 'success' ) {
+      this.paymentService.verify( paymentConfig, transactionId, eventId ).subscribe( response => {
+        this.informationService.setInformation( `Payment succeeded`, 'success' );
         this.router.navigate( [ URLS.dashboard.event ], { queryParams: { event_id: eventId } } );
-        break;
+      }, error => {
+        this.router.navigate( [ URLS.dashboard.learn ] );
+      } );
+    } else {
+      this.informationService.setInformation( `Payment canceled`, 'error' );
+      this.router.navigate( [ URLS.dashboard.event ], { queryParams: { event_id: eventId } } );
     }
   }
 

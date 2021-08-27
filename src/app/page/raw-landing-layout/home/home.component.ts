@@ -13,9 +13,8 @@ import { URLS } from '../../../util/constant';
 } )
 export class HomeComponent implements AfterViewInit {
 
-  // TODO: Will be initialized by apis
-  eventCounter = 2700;
-  studentCounter = 7;
+  downloadCounter = 2800;
+  starsCounter = 7;
   userCounter = 5;
 
   brand = {
@@ -53,31 +52,31 @@ export class HomeComponent implements AfterViewInit {
     };
 
     options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n, this.eventCounter );
+      return this.countUpFormatter( n, this.downloadCounter );
     };
 
-    if ( this.eventCounter < this.KILO ) {
+    if ( this.downloadCounter < this.KILO ) {
       options.duration = 2
-    } else if ( this.eventCounter < this.MILLION ) {
+    } else if ( this.downloadCounter < this.MILLION ) {
       options.duration = 3
     } else {
       options.duration = 4
     }
 
-    const eventCountUp = new CountUp( 'npmCounterElement', this.eventCounter, options );
+    const eventCountUp = new CountUp( 'npmCounterElement', this.downloadCounter, options );
 
     options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n, this.studentCounter );
+      return this.countUpFormatter( n, this.starsCounter );
     };
-    if ( this.studentCounter < this.KILO ) {
+    if ( this.starsCounter < this.KILO ) {
       options.duration = 2
-    } else if ( this.studentCounter < this.MILLION ) {
+    } else if ( this.starsCounter < this.MILLION ) {
       options.duration = 3
     } else {
       options.duration = 4
     }
 
-    const studentCountUp = new CountUp( 'githubStarCounterElement', this.studentCounter, options );
+    const studentCountUp = new CountUp( 'githubStarCounterElement', this.starsCounter, options );
 
     options.formattingFn = ( n: number ) => {
       return this.countUpFormatter( n, this.userCounter );

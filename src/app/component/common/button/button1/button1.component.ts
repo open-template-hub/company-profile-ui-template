@@ -22,7 +22,12 @@ export class Button1Component {
   @Input() fixedWidth = false;
   @Input() isAttendee = false;
   @Input() isSleekButton = false;
-  @Input() cursor = 'pointer'
+  @Input() alwaysLight = false;
+  @Input() alwaysDark = false;
+  @Input() cursor = 'pointer';
+  @Input() themeColor = '';
+  @Input() disabled = false;
+  @Input() selected = false;
 
   loading = false;
 

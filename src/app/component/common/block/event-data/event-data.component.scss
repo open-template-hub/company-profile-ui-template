@@ -1,5 +1,3 @@
-//TODO: Remove unnecessary styles
-
 .event {
   display: flex;
   flex-direction: column;
@@ -222,9 +220,6 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-}
-
-@media (hover: hover) {
 }
 
 @media only screen and (max-width: 999px) {

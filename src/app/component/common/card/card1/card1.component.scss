@@ -26,24 +26,16 @@
 }
 
 .card1-bottom-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }
 
 .card1-top-wrapper {
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
-}
-
-.card1-top-wrapper {
   position: absolute;
   top: 0;
-  left: 0;
-}
-
-.card1-bottom-wrapper {
-  position: absolute;
-  bottom: 0;
   left: 0;
 }
 
@@ -95,6 +87,7 @@
 .card1-content {
   padding: 3.5rem 1.25rem 1.25em;
   overflow: auto;
+  z-index: 2;
 }
 
 .card1-content.no-padding {
@@ -127,11 +120,16 @@
   z-index: 9;
 }
 
+.card1 .top-layer {
+  top: 0;
+  z-index: 1;
+}
+
 @media only screen and (max-width: 999px) {
   .card1 {
-    min-width: 95vw;
-    max-width: 95vw;
-    width: 95vw;
+    min-width: 94vw;
+    max-width: 94vw;
+    width: 94vw;
     margin-bottom: 50px;
   }
 

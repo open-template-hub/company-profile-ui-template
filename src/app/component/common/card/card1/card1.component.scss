@@ -26,6 +26,9 @@
 }
 
 .card1-bottom-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }
@@ -33,12 +36,6 @@
 .card1-top-wrapper {
   position: absolute;
   top: 0;
-  left: 0;
-}
-
-.card1-bottom-wrapper {
-  position: absolute;
-  bottom: 0;
   left: 0;
 }
 

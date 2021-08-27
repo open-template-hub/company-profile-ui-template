@@ -107,7 +107,8 @@ export class CreateEventComponent implements OnInit {
       title: [ this.defaultFormValues.title, Validators.required ],
       description: [ this.defaultFormValues.description, Validators.maxLength( 500 ) ],
       link: [ this.defaultFormValues.link, Validators.pattern( '^.+:\\/\\/.*$' ) ],
-      trailerVideoLink: [ this.defaultFormValues.trailerVideoLink, Validators.pattern( '^(https:\\/\\/www.)?youtube.com/watch\\?v=.{11}$' ) ],
+      trailerVideoLink: [ this.defaultFormValues.trailerVideoLink,
+        Validators.pattern( '^(https:\\/\\/www.)?youtube.com/watch\\?v=.{11}$' ) ],
       isTrailerVideoLinkActive: [ this.defaultFormValues.isTrailerVideoLinkActive ],
       date: [ this.defaultFormValues.date, Validators.required ],
       durationHour: [ this.defaultFormValues.durationHour, Validators.pattern('^([0-1]?[0-9]|2[0-3])$') ],
@@ -195,43 +196,41 @@ export class CreateEventComponent implements OnInit {
       this.f.price.setValue( this.defaultFormValues.price );
     }
 
-    // stop here if form is invalid
-    if ( this.contributeForm.invalid ) {
-      if ( this.f.title.invalid ) {
-        this.toastService.error( 'Please provide a title.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.date.invalid ) {
-        this.toastService.error( 'Please provide a date.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.durationMin.invalid || this.f.durationHour.invalid ) {
-        this.toastService.error( 'Please provide a valid duration.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.link.invalid ) {
-        this.toastService.error( 'Please provide a valid url (Ex. "https://opentemplatehub.com")', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.trailerVideoLink.invalid ) {
-        this.toastService.error( 'Please provide a valid youtube video url (Ex. "https://www.youtube.com/watch?v=11111111111")', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.price.invalid ) {
-        this.toastService.error( 'Price must be minimum 5.00$', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      return;
+    if (this.contributeForm.valid) {
+      this.addEditEvent();
+      return
     }
 
-    this.addEditEvent();
-
+    if ( this.f.title.invalid ) {
+      this.toastService.error( 'Please provide a title.', '', {
+        positionClass: this.route.parent.snapshot.data.layout
+      } );
+    }
+    if ( this.f.date.invalid ) {
+      this.toastService.error( 'Please provide a date.', '', {
+        positionClass: this.route.parent.snapshot.data.layout
+      } );
+    }
+    if ( this.f.durationMin.invalid || this.f.durationHour.invalid ) {
+      this.toastService.error( 'Please provide a valid duration.', '', {
+        positionClass: this.route.parent.snapshot.data.layout
+      } );
+    }
+    if ( this.f.link.invalid ) {
+      this.toastService.error( 'Please provide a valid url (Ex. "https://opentemplatehub.com")', '', {
+        positionClass: this.route.parent.snapshot.data.layout
+      } );
+    }
+    if ( this.f.trailerVideoLink.invalid ) {
+      this.toastService.error( 'Please provide a valid youtube video url (Ex. "https://www.youtube.com/watch?v=11111111111")', '', {
+        positionClass: this.route.parent.snapshot.data.layout
+      } );
+    }
+    if ( this.f.price.invalid ) {
+      this.toastService.error( 'Price must be minimum 5.00$', '', {
+        positionClass: this.route.parent.snapshot.data.layout
+      } );
+    }
   }
 
   resetEventForm() {

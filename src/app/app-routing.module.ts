@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { environment } from '../environments/environment';
 import { EventComponent } from './page/dashboard-layout/event/event.component';
-import { CreateEventComponent } from './page/dashboard-layout/createEvent/create-event.component';
+import { CreateEventComponent } from './page/dashboard-layout/create-event/create-event.component';
 import { DashboardLayoutComponent } from './page/dashboard-layout/dashboard-layout.component';
 import { DashboardComponent } from './page/dashboard-layout/dashboard/dashboard.component';
 import { LearnComponent } from './page/dashboard-layout/learn/learn.component';
@@ -87,7 +87,6 @@ const routes: Routes = [
       { path: 'contribute', component: CreateEventComponent, canActivate: [ AuthGuard ] },
       { path: 'learn', component: LearnComponent, canActivate: [ AuthGuard ] },
       { path: 'event', component: EventComponent, canActivate: [ AuthGuard ] },
-      // TODO: Change MaintenanceComponent with PrivacySettingsComponent when implementation is done
       { path: 'privacy', component: MaintenanceComponent, canActivate: [ AuthGuard ] }
     ]
   },

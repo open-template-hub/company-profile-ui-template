@@ -4,7 +4,6 @@ import { AuthToken } from '../../../../model/AuthToken';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
 import { LoadingService } from '../../../../service/loading/loading.service';
-import { ThemeService } from '../../../../service/theme/theme.service';
 import { URLS } from '../../../../util/constant';
 
 @Component( {

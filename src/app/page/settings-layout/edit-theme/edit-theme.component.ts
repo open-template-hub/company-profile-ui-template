@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ThemeService } from '../../../service/theme/theme.service';
 import { DarkLightSettings, ThemeColorSettings } from '../../../util/constant';
 
@@ -7,7 +7,7 @@ import { DarkLightSettings, ThemeColorSettings } from '../../../util/constant';
   templateUrl: './edit-theme.component.html',
   styleUrls: [ './edit-theme.component.scss' ]
 } )
-export class EditThemeComponent implements OnInit {
+export class EditThemeComponent {
 
   darkLightSetting: string;
   themeColorSetting: string;
@@ -27,8 +27,6 @@ export class EditThemeComponent implements OnInit {
       this.themeColorSetting = themeColorSetting;
     } );
   }
-
-  ngOnInit(): void {}
 
   setDarkLightSetting( darkLightSetting: string ) {
     this.themeService.setDarkLightSetting( darkLightSetting );

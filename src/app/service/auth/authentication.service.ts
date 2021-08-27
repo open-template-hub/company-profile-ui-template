@@ -47,7 +47,6 @@ export class AuthenticationService {
       }
       this.currentUserSubject.next( currentUser );
 
-      // TODO: get second parameter from basic info db
       this.themeService.setDarkLightSetting( DarkLightSettings.auto );
       this.themeService.setThemeColorSetting( ThemeColorSettings.default );
       this.themeService.initSideNavClosed( false );
@@ -127,7 +126,6 @@ export class AuthenticationService {
       localStorage.setItem( 'currentUser', JSON.stringify( currentUser ) );
       this.currentUserSubject.next( currentUser );
 
-      // TODO: get second parameter from basic info db
       this.themeService.setDarkLightSetting(DarkLightSettings.auto);
       this.themeService.setThemeColorSetting(ThemeColorSettings.default);
       this.themeService.initSideNavClosed( false );

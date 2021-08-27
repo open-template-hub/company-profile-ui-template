@@ -6,7 +6,7 @@
              [containsVideo]="event.payload?.trailerVideoLink" [enableHeader]="!showRateBar">
 
     <div *ngIf="event.payload?.trailerVideoLink" headerFullImg id=trailer-video>
-      <iframe title="Trailer Video" width="100%" style="height: -webkit-fill-available" [src]="safeYoutubeUrl" frameborder="0"
+      <iframe title="Trailer Video" width="100%" style="height: -webkit-fill-available" [src]="safeYoutubeUrl"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
     </div>

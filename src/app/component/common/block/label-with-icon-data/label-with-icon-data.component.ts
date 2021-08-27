@@ -12,7 +12,7 @@ export class LabelWithIconDataComponent {
   @Input() user = '';
   @Input() solid = '';
   @Input() urlPrefix = 'http://';
-  @Input() noMargin = true;
+  @Input() noMargin = false;
   @Input() isClickable = false;
   @Input() isClickableWithinApp = false;
   @Input() highlight = false;

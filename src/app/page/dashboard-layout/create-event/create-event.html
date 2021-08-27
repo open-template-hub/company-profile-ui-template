@@ -2,7 +2,7 @@
   <app-card1 [enableHeader]="false" [paddingTopContent]="false" [isCardContentOverflowVisible]="true" [isScrollable]="true" class="contribute-card">
     <div body class="section">
       <!-- primary info fields -->
-      <form (ngSubmit)="onSubmit()" [formGroup]="contributeForm">
+      <form (ngSubmit)="onSubmit()" [formGroup]="eventFormGroup">
         <div class="form-content">
           <div class="left-column">
             <div [class.input-error]="submitted && f.title.invalid" class="input-with-icon">

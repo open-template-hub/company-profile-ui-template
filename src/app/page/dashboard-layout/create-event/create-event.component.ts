@@ -19,7 +19,7 @@ import { environment } from '../../../../environments/environment';
 } )
 export class CreateEventComponent implements OnInit {
 
-  contributeForm: FormGroup;
+  eventFormGroup: FormGroup;
   submitted = false;
   loading = false;
   URLS = URLS;
@@ -102,7 +102,7 @@ export class CreateEventComponent implements OnInit {
       } );
     }
 
-    this.contributeForm = this.formBuilder.group( {
+    this.eventFormGroup = this.formBuilder.group( {
       _id: [ this.defaultFormValues._id ],
       title: [ this.defaultFormValues.title, Validators.required ],
       description: [ this.defaultFormValues.description, Validators.maxLength( 500 ) ],
@@ -162,7 +162,7 @@ export class CreateEventComponent implements OnInit {
   }
 
   get f() {
-    return this.contributeForm.controls;
+    return this.eventFormGroup.controls;
   }
 
   onSubmit() {
@@ -196,7 +196,7 @@ export class CreateEventComponent implements OnInit {
       this.f.price.setValue( this.defaultFormValues.price );
     }
 
-    if (this.contributeForm.valid) {
+    if (this.eventFormGroup.valid) {
       this.addEditEvent();
       return
     }
@@ -236,7 +236,7 @@ export class CreateEventComponent implements OnInit {
   resetEventForm() {
     this.cardTitle = 'Add Event';
     this.submitted = false;
-    this.contributeForm.reset( this.defaultFormValues );
+    this.eventFormGroup.reset( this.defaultFormValues );
     this.selectedCategory = { ...this.defaultCategory };
   }
 
@@ -250,7 +250,7 @@ export class CreateEventComponent implements OnInit {
   fillForm( id: string ): void {
     for ( const event of this.myUpcomingEvents ) {
       if ( event._id === id ) {
-        this.contributeForm = this.formBuilder.group( {
+        this.eventFormGroup = this.formBuilder.group( {
           _id: [ event._id ],
           title: [ event.title, Validators.required ],
           description: [ event.payload.description, Validators.maxLength( 500 ) ],
@@ -268,7 +268,7 @@ export class CreateEventComponent implements OnInit {
           category: [ event.category ]
         } );
 
-        this.contributeForm.controls.category.markAsTouched();
+        this.eventFormGroup.controls.category.markAsTouched();
 
         this.selectedCategory = {
           category: event.payload.category,

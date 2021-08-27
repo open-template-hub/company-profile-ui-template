@@ -6,7 +6,7 @@
   </a>
   <div #searchArea class="input-with-icon">
     <input (keyup)="search($event)" placeholder="Search..." type="text">
-    <i area-hidden="true" class="fas fa-search fa-lg fa-fw"></i>
+    <i aria-hidden="true" class="fas fa-search fa-lg fa-fw"></i>
   </div>
   <a routerLink="{{URLS.dashboard.myProfile}}">
     <img [src]="profileImg" alt="profile img" class="profile-img-small"/>
@@ -27,7 +27,7 @@
      routerLink="{{URLS.dashboard.learn}}">
     <app-label-with-icon-data [data]="(result.category ? result.category.name : '') +
           (result.subCategory ? ' - ' + result.subCategory.name : '') + (result.leafCategory ? ' - ' + result.leafCategory.name : '')"
-                              [noMargin]="true" [solid]="'book-open'">
+                              [noMargin]="'true'" [solid]="'book-open'">
     </app-label-with-icon-data>
   </a>
 </div>

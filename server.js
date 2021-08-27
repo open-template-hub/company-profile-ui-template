@@ -8,6 +8,7 @@ const express = require( "express" );
 
 // express init
 const app = express();
+app.disable( "x-powered-by" );
 
 // directory that we will serve
 app.use( express.static( __dirname + "/dist/company-profile-ui-template" ) );

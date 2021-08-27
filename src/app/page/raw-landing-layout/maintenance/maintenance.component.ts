@@ -28,7 +28,10 @@ export class MaintenanceComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const rand = Math.floor( Math.random() * 110 );
+    const array = new Uint32Array( 1 );
+    window.crypto.getRandomValues( array );
+
+    const rand = array[0] % 110;
     this.selectedQuote = QUOTES[ rand ];
   }
 }

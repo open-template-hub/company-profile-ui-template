@@ -1,36 +1,36 @@
 <div [class.footer-hide-shadow]="hideShadow" [class.footer-popup-padding]="popupPadding" class="footer">
   <a href="https://www.linkedin.com/company/open-template-hub" rel="noopener noreferrer" target="_blank" rel=noopener>
-    <i class="material-icons">business</i>
+    <i aria-hidden=true class="material-icons">business</i>
     <span>
         ABOUT
     </span>
   </a>
   <a routerLink="{{URLS.maintenance}}">
-    <i class="material-icons">chrome_reader_mode</i>
+    <i aria-hidden=true class="material-icons">chrome_reader_mode</i>
     <span>
         BLOG
     </span>
   </a>
   <a routerLink="{{URLS.terms}}">
-    <i class="material-icons">policy</i>
+    <i aria-hidden=true class="material-icons">policy</i>
     <span>
         TERMS & POLICIES
     </span>
   </a>
   <a href="mailto:opentemplatehub@gmail.com" rel="noopener noreferrer">
-    <i class="material-icons">email</i>
+    <i aria-hidden=true class="material-icons">email</i>
     <span>
         CONTACT
     </span>
   </a>
   <a routerLink="{{URLS.maintenance}}">
-    <i class="material-icons">work</i>
+    <i aria-hidden=true class="material-icons">work</i>
     <span>
         JOBS
     </span>
   </a>
   <a href="https://github.com/open-template-hub" rel="noopener noreferrer" target="_blank" rel=noopener>
-    <i class="material-icons">code</i>
+    <i aria-hidden=true class="material-icons">code</i>
     <span>
         OPEN SOURCE
     </span>
@@ -45,19 +45,19 @@
     </a>
     <div class="footer-social">
       <a [href]="environment.social.twitter.url + '/' + environment.oth.social.twitter" target="_blank" rel=noopener>
-        <i [class]="'fab fa-' + environment.social.twitter.cssClass + ' fa-2x fa-fw'"></i>
+        <i aria-hidden=true [class]="'fab fa-' + environment.social.twitter.cssClass + ' fa-2x fa-fw'"></i>
       </a>
       <a [href]="'https://github.com/' + environment.oth.social.github"
          target="_blank" rel=noopener>
-        <i [class]="'fab fa-' + environment.social.github.cssClass + ' fa-2x fa-fw'"></i>
+        <i aria-hidden=true [class]="'fab fa-' + environment.social.github.cssClass + ' fa-2x fa-fw'"></i>
       </a>
       <a [href]="'https://www.producthunt.com/' + environment.oth.social.productHunt"
          target="_blank" rel=noopener>
-        <i [class]="'fab fa-' + environment.social.productHunt.cssClass + ' fa-2x fa-fw'"></i>
+        <i aria-hidden=true [class]="'fab fa-' + environment.social.productHunt.cssClass + ' fa-2x fa-fw'"></i>
       </a>
       <a [href]="environment.social.linkedin.url + '/company/' + environment.oth.social.linkedin"
          target="_blank" rel=noopener>
-        <i [class]="'fab fa-' + environment.social.linkedin.cssClass + ' fa-2x fa-fw'"></i>
+        <i aria-hidden=true [class]="'fab fa-' + environment.social.linkedin.cssClass + ' fa-2x fa-fw'"></i>
       </a>
     </div>
     <div class="footer-version">{{' v-' + appVersion}}</div>

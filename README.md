@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.linkedin.com/company/open-template-hub">
-    <img src="https://avatars2.githubusercontent.com/u/65504426?s=200&v=4" alt="Logo">
+    <img src="https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/brand-logo.png?raw=true" alt="Logo" width=200>
   </a>
 </p>
 

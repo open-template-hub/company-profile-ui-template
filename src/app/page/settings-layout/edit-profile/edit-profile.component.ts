@@ -116,10 +116,6 @@ export class EditProfileComponent implements OnInit, OnDestroy {
     if ( this.form.invalid ) {
       for ( const control in this.form.controls ) {
         if ( this.form.controls[ control ].invalid ) {
-          if ( environment.identity !== 'production' ) {
-            console.error( errorMessages[ control ] );
-          }
-
           this.toastService.error( errorMessages[ control ], '', {
             positionClass: this.route.parent.snapshot.data.layout,
           } );

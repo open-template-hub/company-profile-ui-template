@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ImageCroppedEvent } from 'ngx-image-cropper';
 import { Get as simpleIcons } from 'simple-icons';
+import { environment } from '../../../../environments/environment';
 import { AuthToken } from '../../../model/AuthToken';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
@@ -21,7 +22,7 @@ import { PROFILE_IMG, URLS } from '../../../util/constant';
 export class EditProfileComponent implements OnInit, OnDestroy {
 
   currentUser: AuthToken;
-  userInfoForm: FormGroup;
+  form: FormGroup;
   submitted = false;
   loading = false;
   userInfo: any = {};
@@ -68,10 +69,6 @@ export class EditProfileComponent implements OnInit, OnDestroy {
     this.icon = simpleIcons( 'buymeacoffee' );
   }
 
-  get f() {
-    return this.userInfoForm.controls;
-  }
-
   @HostListener( 'document:click', [ '$event' ] )
   onDocumentClick( event ) {
     if ( this.searchArea.nativeElement.contains( event.target ) ) {
@@ -82,7 +79,7 @@ export class EditProfileComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.userInfoForm = this.formBuilder.group( {
+    this.form = this.formBuilder.group( {
       firstName: [ this.basicInfoService.userInfoValue?.payload?.firstName, Validators.required ],
       lastName: [ this.basicInfoService.userInfoValue?.payload?.lastName, Validators.required ],
       bio: [ this.basicInfoService.userInfoValue?.payload?.bio, Validators.maxLength( 500 ) ],
@@ -107,27 +104,26 @@ export class EditProfileComponent implements OnInit, OnDestroy {
 
     this.submitted = true;
 
-    // stop here if form is invalid
-    if ( this.userInfoForm.invalid ) {
-      if ( this.f.twitter.invalid || this.f.facebook.invalid || this.f.youtube.invalid ) {
-        this.toastService.error( 'Please provide a valid username.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.phone.invalid ) {
-        this.toastService.error( 'Please provide a valid phone number.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.lastName.invalid ) {
-        this.toastService.error( 'Please provide a last name.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.firstName.invalid ) {
-        this.toastService.error( 'Please provide a first name.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
+    const errorMessages = {
+      firstName: 'Please provide a first name',
+      lastName: 'Please provide a last name',
+      phone: 'Please provide a valid phone number',
+      twitter: 'Please provide a valid twitter username',
+      facebook: 'Please provide a valid facebook username',
+      youtube: 'Please provide a valid facebook youtube'
+    };
+
+    if ( this.form.invalid ) {
+      for ( const control in this.form.controls ) {
+        if ( this.form.controls[ control ].invalid ) {
+          if ( environment.identity !== 'production' ) {
+            console.error( errorMessages[ control ] );
+          }
+
+          this.toastService.error( errorMessages[ control ], '', {
+            positionClass: this.route.parent.snapshot.data.layout,
+          } );
+        }
       }
       return;
     }
@@ -218,16 +214,16 @@ export class EditProfileComponent implements OnInit, OnDestroy {
       interestIdList = interests;
 
       const payload = {
-        firstName: this.f.firstName.value,
-        lastName: this.f.lastName.value,
-        bio: this.f.bio.value,
-        location: this.f.location.value,
-        phone: this.f.phone.value,
-        website: this.f.website.value,
+        firstName: this.form.controls.firstName.value,
+        lastName: this.form.controls.lastName.value,
+        bio: this.form.controls.bio.value,
+        location: this.form.controls.location.value,
+        phone: this.form.controls.phone.value,
+        website: this.form.controls.website.value,
         social: {
-          twitter: this.f.twitter.value,
-          facebook: this.f.facebook.value,
-          youtube: this.f.youtube.value
+          twitter: this.form.controls.twitter.value,
+          facebook: this.form.controls.facebook.value,
+          youtube: this.form.controls.youtube.value
         },
         interests: interestIdList,
         profileImageId

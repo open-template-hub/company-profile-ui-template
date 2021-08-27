@@ -17,7 +17,7 @@ import { URLS } from '../../../util/constant';
 } )
 export class SignUpComponent implements OnInit, OnDestroy {
 
-  signUpForm: FormGroup;
+  form: FormGroup;
   submitted = false;
   environment = environment;
   loading = false;
@@ -44,7 +44,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.signUpForm = this.formBuilder.group( {
+    this.form = this.formBuilder.group( {
       username: [ '', Validators.required ],
       email: [ '', Validators.compose( [ Validators.required, Validators.email ] ) ],
       password: [ '', Validators.compose( [ Validators.required, Validators.minLength( 6 ) ] ) ],
@@ -67,14 +67,14 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
     const errorMessages = {
       username: 'Please provide a valid username',
-      email: 'Please provide a valid email address.',
-      password: 'Please provide a valid password (min length 6).',
-      confirmPassword: 'Please provide the same value for confirm password.'
+      email: 'Please provide a valid email address',
+      password: 'Please provide a valid password (min length 6)',
+      confirmPassword: 'Please provide the same value for confirm password'
     };
 
-    if ( this.signUpForm.invalid ) {
-      for ( const control in this.signUpForm.controls ) {
-        if ( this.signUpForm.controls[ control ].invalid ) {
+    if ( this.form.invalid ) {
+      for ( const control in this.form.controls ) {
+        if ( this.form.controls[ control ].invalid ) {
           if ( environment.identity !== 'production' ) {
             console.error( errorMessages[ control ] );
           }
@@ -88,9 +88,9 @@ export class SignUpComponent implements OnInit, OnDestroy {
     }
 
     this.authenticationService.signUp(
-        this.signUpForm.controls.username.value,
-        this.signUpForm.controls.email.value,
-        this.signUpForm.controls.password.value )
+        this.form.controls.username.value,
+        this.form.controls.email.value,
+        this.form.controls.password.value )
     .pipe( first() )
     .subscribe(
         data => {

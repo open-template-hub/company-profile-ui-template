@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { environment } from '../../../../environments/environment';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
@@ -15,7 +16,7 @@ import { URLS } from '../../../util/constant';
 } )
 export class ResetPasswordComponent implements OnInit, OnDestroy {
 
-  resetPasswordForm: FormGroup;
+  form: FormGroup;
   submitted = false;
   token = '';
   username = '';
@@ -40,18 +41,13 @@ export class ResetPasswordComponent implements OnInit, OnDestroy {
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
   }
 
-  // convenience getter for easy access to form fields
-  get f() {
-    return this.resetPasswordForm.controls;
-  }
-
   ngOnInit() {
     this.route.queryParams.subscribe( params => {
       this.token = params.token;
       this.username = params.username;
     } );
 
-    this.resetPasswordForm = this.formBuilder.group( {
+    this.form = this.formBuilder.group( {
       password: [ '', Validators.compose( [ Validators.required, Validators.minLength( 6 ) ] ) ],
       confirmPassword: [ '', Validators.required ]
     }, {
@@ -70,22 +66,31 @@ export class ResetPasswordComponent implements OnInit, OnDestroy {
 
     this.submitted = true;
 
-    if ( this.resetPasswordForm.invalid ) {
-      if ( this.f.confirmPassword.invalid ) {
-        this.toastService.error( 'Please provide the same value for confirm password.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.password.invalid ) {
-        this.toastService.error( 'Please provide a valid password (min length 6).', '', {
-          positionClass: this.route.parent.snapshot.data.layout,
-        } );
+    const errorMessages = {
+      password: 'Please provide a valid password (min length 6)',
+      confirmPassword: 'Please provide the same value for confirm password'
+    };
+
+    if ( this.form.invalid ) {
+      for ( const control in this.form.controls ) {
+        if ( this.form.controls[ control ].invalid ) {
+          if ( environment.identity !== 'production' ) {
+            console.error( errorMessages[ control ] );
+          }
+
+          this.toastService.error( errorMessages[ control ], '', {
+            positionClass: this.route.parent.snapshot.data.layout,
+          } );
+        }
       }
       return;
     }
 
-    this.authenticationService.resetPassword( this.username, this.token, this.f.password.value )
-    .pipe( first() )
+    this.authenticationService.resetPassword(
+        this.username,
+        this.token,
+        this.form.controls.password.value
+    ).pipe( first() )
     .subscribe(
         () => {
           this.success = true;

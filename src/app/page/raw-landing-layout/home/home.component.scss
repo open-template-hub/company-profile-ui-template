@@ -6,7 +6,6 @@
 }
 
 .features {
-  padding-top: 0;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -26,14 +25,20 @@
   background-color: var(--brand-color-lighter-5);
 }
 
-.features h2, .features .feature {
+.features h4, .features .feature {
   padding-left: 7vw;
   padding-right: 7vw;
 }
 
-.features h2 {
-  background-color: var(--brand-color-lighter-5);
-  padding-top: 80px;
+.features h4 {
+  color: var(--brand-color);
+}
+
+.features h5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: normal;
+  color: var(--brand-color);
 }
 
 .feature svg {
@@ -158,6 +163,15 @@
   .hero-content-left > * {
     padding-bottom: 6vh;
   }
+
+  .features {
+    padding-top: 6vh;
+  }
+
+  .features h4 {
+    padding-bottom: 20px;
+    text-align: center;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -167,6 +181,11 @@
 
   .features {
     padding-bottom: 300px;
+    padding-top: 150px;
+  }
+
+  .features h4 {
+    padding-bottom: 40px;
   }
 
   .register-wrapper {

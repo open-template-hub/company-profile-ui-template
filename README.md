@@ -25,7 +25,7 @@ Company Profile UI Template in Angular
 
 <p align="center">
   <a href="https://oth-company-profile.herokuapp.com">
-    <img src="https://github.com/open-template-hub/company-profile-ui-template/blob/develop/src/assets/common/demonstration.png?raw=true" alt="Screenshot" width="800px">
+    <img src="https://github.com/open-template-hub/company-profile-ui-template/blob/develop/src/assets/common/demonstration/demonstration-main.png?raw=true" alt="Screenshot" width="800px">
   </a>
 </p>
 

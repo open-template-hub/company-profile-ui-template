@@ -83,7 +83,10 @@ export class LoginComponent implements OnInit, OnDestroy {
       }
       return;
     }
+    this.login();
+  }
 
+  private login() {
     this.authenticationService.login(
         this.form.controls.username.value,
         this.form.controls.password.value,
@@ -92,40 +95,44 @@ export class LoginComponent implements OnInit, OnDestroy {
     .subscribe(
         () => {
           if ( this.returnUrl !== URLS.dashboard.root ) {
-            // Special case for initialization (if return url is else than dashboard)
-            this.basicInfoService.me()
-            .subscribe( userInfo => {
-                  this.router.navigateByUrl( this.returnUrl );
-                  if ( !userInfo.payload ) {
-                    this.basicInfoService.createMyInfo()
-                    .subscribe( () => {
-                          this.router.navigate( [ URLS.settings.welcome ] );
-                        }
-                    );
-                  } else {
-                    this.fileStorageService.downloadProfileImage( userInfo.payload.profileImageId ).subscribe();
+            this.loginWithoutOpeningDashboard();
+          } else {
+            this.router.navigate( [ this.returnUrl ] );
+          }
+        }
+    );
+  }
 
-                    const userInterests = userInfo?.payload?.interests;
-                    const categories: any[] = [];
-
-                    if ( userInterests && userInterests.length > 0 ) {
-                      for ( const interest of userInterests ) {
-                        categories.push(
-                            {
-                              category: interest.category,
-                              subCategory: interest.subCategory,
-                              leafCategory: interest.leafCategory
-                            }
-                        );
-                      }
-                    }
-
-                    this.eventService.initSearchEvents( categories );
-                  }
+  private loginWithoutOpeningDashboard() {
+    // Special case for initialization (if return url is else than dashboard)
+    this.basicInfoService.me()
+    .subscribe( userInfo => {
+          this.router.navigateByUrl( this.returnUrl );
+          if ( !userInfo.payload ) {
+            this.basicInfoService.createMyInfo()
+            .subscribe( () => {
+                  this.router.navigate( [ URLS.settings.welcome ] );
                 }
             );
           } else {
-            this.router.navigate( [ this.returnUrl ] );
+            this.fileStorageService.downloadProfileImage( userInfo.payload.profileImageId ).subscribe();
+
+            const userInterests = userInfo?.payload?.interests;
+            const categories: any[] = [];
+
+            if ( userInterests && userInterests.length > 0 ) {
+              for ( const interest of userInterests ) {
+                categories.push(
+                    {
+                      category: interest.category,
+                      subCategory: interest.subCategory,
+                      leafCategory: interest.leafCategory
+                    }
+                );
+              }
+            }
+
+            this.eventService.initSearchEvents( categories );
           }
         }
     );

@@ -113,6 +113,10 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
           this.numberOfEventsTaken = result[0].numberOfEventsTaken
         })
 
+        this.numberOfEventsMade = undefined;
+        this.rateObject = undefined;
+        this.topContributor = undefined;
+
         if ( visitedUserInfo.payload?.userProfileActivated ) {
           this.userActivityService.getNumberOfEventsMade( visitedUserInfo.username ).subscribe( result => {
             this.numberOfEventsMade = result.numberOfEventsMade
@@ -132,28 +136,8 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
               }
             } );
           })
-        } else {
-          this.numberOfEventsMade = undefined
-          this.rateObject = undefined
-          this.topContributor = undefined
         }
-        // check if currentUser follows publicProfile
-        this.basicInfoService.userInfo.subscribe( currentUserInfo => {
-          this.currentUserInfo = currentUserInfo;
-          if ( currentUserInfo && this.username !== currentUserInfo?.username )
-            this.followerService.isFollowing( this.username ).subscribe( result => {
-              this.isFollowing = result[ 0 ].isFollowing;
-            } );
-        } );
-
-        // get follower and followed count
-        this.followerService.count( this.username ).subscribe( followerCount => {
-          this.followerCount = followerCount[ 0 ].count;
-        } );
-
-        this.followeeService.count( this.username ).subscribe( followeeCount => {
-          this.followeeCount = followeeCount[ 0 ].count;
-        } );
+        this.fillFollowInfo();
 
         if ( this.userInfo?.payload?.profileImageId ) {
           this.fileStorageService.downloadVisitedProfileImage( this.userInfo.payload.profileImageId ).subscribe( profileImg => {
@@ -174,6 +158,26 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
           this.loadingLessonsTaken = false
         } )
       } );
+    } );
+  }
+
+  private fillFollowInfo() {
+    // check if currentUser follows publicProfile
+    this.basicInfoService.userInfo.subscribe( currentUserInfo => {
+      this.currentUserInfo = currentUserInfo;
+      if ( currentUserInfo && this.username !== currentUserInfo?.username )
+        this.followerService.isFollowing( this.username ).subscribe( result => {
+          this.isFollowing = result[ 0 ].isFollowing;
+        } );
+    } );
+
+    // get follower and followed count
+    this.followerService.count( this.username ).subscribe( followerCount => {
+      this.followerCount = followerCount[ 0 ].count;
+    } );
+
+    this.followeeService.count( this.username ).subscribe( followeeCount => {
+      this.followeeCount = followeeCount[ 0 ].count;
     } );
   }
 

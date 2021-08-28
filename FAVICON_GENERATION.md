@@ -1,14 +1,14 @@
 <p align="center">
   <a href="http://opentemplatehub.com">
-    <img src="https://github.com/furknyavuz/wecontribute-ui/blob/develop/icon.png" width=200 height=200 alt="logo">
+    <img src="https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/brand-logo.png?raw=true" alt="Logo" width=200>
   </a>
 </p>
 
 
 <h1 align="center">
-OpenTemplateHub - UI
-<br/>
-(Favicon Generation Guide)
+Open Template Hub - Company Profile UI Template v2
+  <br/>
+(favicon generation guide)
 </h1>
 
 Follow the instructions below to be able to generate favicon.
@@ -23,6 +23,6 @@ Follow the instructions below to be able to generate favicon.
 
 ## Check Favicons (Optional)
 
-4. Deploy changes to **[develop](https://github.com/furknyavuz/wecontribute-ui/tree/develop)** branch
+4. Deploy changes to **[develop](https://github.com/open-template-hub/company-profile-ui-template/tree/develop)** branch
 
-5. Check your favicon with the **[favicon checker](https://realfavicongenerator.net/favicon_checker?protocol=https&site=wecontribute-develop.herokuapp.com)**
+5. Check your favicon with the **[favicon checker](https://realfavicongenerator.net/favicon_checker?protocol=https&site=oth-company-profile.herokuapp.com)**

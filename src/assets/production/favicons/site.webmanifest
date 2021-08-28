@@ -1,6 +1,6 @@
 {
     "name": "OpenTemplateHub",
-    "short_name": "wecontribute",
+    "short_name": "oth",
     "icons": [
         {
             "src": "./android-chrome-192x192.png",

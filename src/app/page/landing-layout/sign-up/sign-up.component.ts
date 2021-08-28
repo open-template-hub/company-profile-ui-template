@@ -17,7 +17,7 @@ import { URLS } from '../../../util/constant';
 } )
 export class SignUpComponent implements OnInit, OnDestroy {
 
-  signUpForm: FormGroup;
+  form: FormGroup;
   submitted = false;
   environment = environment;
   loading = false;
@@ -43,13 +43,8 @@ export class SignUpComponent implements OnInit, OnDestroy {
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
   }
 
-  // convenience getter for easy access to form fields
-  get f() {
-    return this.signUpForm.controls;
-  }
-
   ngOnInit() {
-    this.signUpForm = this.formBuilder.group( {
+    this.form = this.formBuilder.group( {
       username: [ '', Validators.required ],
       email: [ '', Validators.compose( [ Validators.required, Validators.email ] ) ],
       password: [ '', Validators.compose( [ Validators.required, Validators.minLength( 6 ) ] ) ],
@@ -70,32 +65,28 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
     this.submitted = true;
 
-    // stop here if form is invalid
-    if ( this.signUpForm.invalid ) {
-      if ( this.f.confirmPassword.invalid ) {
-        this.toastService.error( 'Please provide the same value for confirm password.', '', {
-          positionClass: this.route.parent.snapshot.data.layout,
-        } );
-      }
-      if ( this.f.password.invalid ) {
-        this.toastService.error( 'Please provide a valid password (min length 6).', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.email.invalid ) {
-        this.toastService.error( 'Please provide a valid email address.', '', {
-          positionClass: this.route.parent.snapshot.data.layout,
-        } );
-      }
-      if ( this.f.username.invalid ) {
-        this.toastService.error( 'Please provide a valid username', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
+    const errorMessages = {
+      username: 'Please provide a valid username',
+      email: 'Please provide a valid email address',
+      password: 'Please provide a valid password (min length 6)',
+      confirmPassword: 'Please provide the same value for confirm password'
+    };
+
+    if ( this.form.invalid ) {
+      for ( const control in this.form.controls ) {
+        if ( this.form.controls[ control ].invalid ) {
+          this.toastService.error( errorMessages[ control ], '', {
+            positionClass: this.route.parent.snapshot.data.layout,
+          } );
+        }
       }
       return;
     }
 
-    this.authenticationService.signUp( this.f.username.value, this.f.email.value, this.f.password.value )
+    this.authenticationService.signUp(
+        this.form.controls.username.value,
+        this.form.controls.email.value,
+        this.form.controls.password.value )
     .pipe( first() )
     .subscribe(
         data => {

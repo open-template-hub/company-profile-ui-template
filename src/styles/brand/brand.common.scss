@@ -1,4 +1,8 @@
 :root {
+  --brand-color-default-theme: #43b043;
+  --brand-color-red-theme: #d56666;
+  --brand-color-yellow-theme: #d6b140;
+  --brand-color-blue-theme: #4098d6;
 }
 
 .brand-logo-wrapper {
@@ -17,13 +21,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background-color);
   box-shadow: 5px 0 10px var(--shadow);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 12;
   height: 55px;
+
+  background-color: var(--background-color-alpha);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .brand-in-page {

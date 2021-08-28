@@ -1,5 +1,5 @@
 <div class="landing-form-page">
-  <app-card1 [isSmall]="true" [title]="'Log in'">
+  <app-card1 [isSmall]="true" [title]="'Log in'" [topLayer]="true">
     <div body>
       <div fxLayout="row" fxLayoutAlign="center center">
         <app-social-button (click)="socialLogin(environment.social.facebook)"
@@ -11,15 +11,15 @@
       <div fxLayout="column" fxLayoutAlign="center center" style="margin-bottom: 1.5rem; margin-top: 0.5rem;">
         <p>or</p>
       </div>
-      <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+      <form (ngSubmit)="onSubmit()" [formGroup]="form">
         <div class="section">
-          <div [class.input-error]="submitted && f.username.invalid" class="input-with-icon">
+          <div [class.input-error]="submitted && form.controls.username.invalid" class="input-with-icon">
             <input formControlName="username" placeholder="Username or Email..." required type="text">
-            <i area-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
           </div>
-          <div [class.input-error]="submitted && f.password.invalid" class="input-with-icon">
+          <div [class.input-error]="submitted && form.controls.password.invalid" class="input-with-icon">
             <input formControlName="password" placeholder="Password..." required type="password">
-            <i area-hidden="true" class="fas fa-lock fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fas fa-lock fa-lg fa-fw"></i>
           </div>
           <div class="input-checkbox">
             <label class="input-checkbox-label">

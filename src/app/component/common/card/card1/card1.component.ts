@@ -31,6 +31,7 @@ export class Card1Component {
   @Input() containsVideo = false;
   @Input() ribbon = { text: '', type: '' };
   @Input() isCardContentOverflowVisible = false;
+  @Input() topLayer = false;
 
   loading = false;
 

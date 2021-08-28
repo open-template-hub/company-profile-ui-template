@@ -28,7 +28,7 @@ import { DashboardLayoutSideNavComponent } from './component/nav/dashboard/dashb
 import { DashboardLayoutTopNavComponent } from './component/nav/dashboard/dashboard-layout-top-nav/dashboard-layout-top-nav.component';
 import { LandingLayoutTopNavComponent } from './component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component';
 import { EventComponent } from './page/dashboard-layout/event/event.component';
-import { CreateEventComponent } from './page/dashboard-layout/createEvent/create-event.component';
+import { CreateEventComponent } from './page/dashboard-layout/create-event/create-event.component';
 import { DashboardLayoutComponent } from './page/dashboard-layout/dashboard-layout.component';
 
 import { DashboardComponent } from './page/dashboard-layout/dashboard/dashboard.component';
@@ -43,7 +43,6 @@ import { ShowroomComponent } from './page/landing-layout/showroom/showroom.compo
 import { SignUpComponent } from './page/landing-layout/sign-up/sign-up.component';
 import { CookiePolicyComponent } from './page/raw-landing-layout/cookie-policy/cookie-policy.component';
 import { HomeComponent } from './page/raw-landing-layout/home/home.component';
-import { LoadingComponent } from './page/raw-landing-layout/loading/loading.component';
 import { MaintenanceComponent } from './page/raw-landing-layout/maintenance/maintenance.component';
 import { NotFoundComponent } from './page/raw-landing-layout/not-found/not-found.component';
 import { PrivacyPolicyComponent } from './page/raw-landing-layout/privacy-policy/privacy-policy.component';
@@ -52,6 +51,7 @@ import { SignUpSuccessComponent } from './page/raw-landing-layout/sign-up-succes
 import { TermsComponent } from './page/raw-landing-layout/terms/terms.component';
 import { VerifyAccountComponent } from './page/raw-landing-layout/verify-account/verify-account.component';
 import { EditProfileComponent } from './page/settings-layout/edit-profile/edit-profile.component';
+import { EditThemeComponent } from './page/settings-layout/edit-theme/edit-theme.component';
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
 import { WelcomeComponent } from './page/settings-layout/welcome/welcome.component';
 import { CallbackComponent } from './page/splash-layout/callback/callback.component';
@@ -111,7 +111,6 @@ FullCalendarModule.registerPlugins( [
     PrivacyPolicyComponent,
     TermsComponent,
     PublicProfileComponent,
-    LoadingComponent,
     EventDataComponent,
     SettingsLayoutComponent,
     SideContentComponent,
@@ -121,7 +120,8 @@ FullCalendarModule.registerPlugins( [
     EventHamburgerMenuComponent,
     CalendarComponent,
     SearchComponent,
-    RateBarComponent
+    RateBarComponent,
+    EditThemeComponent
   ],
   imports: [
     BrowserModule,

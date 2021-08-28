@@ -23,7 +23,7 @@ export class DashboardLayoutTopNavComponent {
   searchEnabled = true;
 
   brand = {
-    brandLogo: '',
+    brandLogo: ''
   };
 
   URLS = URLS;

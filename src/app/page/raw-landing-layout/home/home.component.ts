@@ -13,10 +13,9 @@ import { URLS } from '../../../util/constant';
 } )
 export class HomeComponent implements AfterViewInit {
 
-  // TODO: Will be initialized by apis
-  eventCounter = 2700;
-  studentCounter = 7;
-  userCounter = 5;
+  downloadCounter = 5100;
+  serverTypesCounter = 6;
+  uiTypesCounter = 3;
 
   brand = {
     brandLogo: '',
@@ -53,44 +52,44 @@ export class HomeComponent implements AfterViewInit {
     };
 
     options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n, this.eventCounter );
+      return this.countUpFormatter( n, this.downloadCounter );
     };
 
-    if ( this.eventCounter < this.KILO ) {
+    if ( this.downloadCounter < this.KILO ) {
       options.duration = 2
-    } else if ( this.eventCounter < this.MILLION ) {
+    } else if ( this.downloadCounter < this.MILLION ) {
       options.duration = 3
     } else {
       options.duration = 4
     }
 
-    const eventCountUp = new CountUp( 'npmCounterElement', this.eventCounter, options );
+    const eventCountUp = new CountUp( 'npmCounterElement', this.downloadCounter, options );
 
     options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n, this.studentCounter );
+      return this.countUpFormatter( n, this.serverTypesCounter );
     };
-    if ( this.studentCounter < this.KILO ) {
+    if ( this.serverTypesCounter < this.KILO ) {
       options.duration = 2
-    } else if ( this.studentCounter < this.MILLION ) {
+    } else if ( this.serverTypesCounter < this.MILLION ) {
       options.duration = 3
     } else {
       options.duration = 4
     }
 
-    const studentCountUp = new CountUp( 'githubStarCounterElement', this.studentCounter, options );
+    const studentCountUp = new CountUp( 'githubStarCounterElement', this.serverTypesCounter, options );
 
     options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n, this.userCounter );
+      return this.countUpFormatter( n, this.uiTypesCounter );
     };
-    if ( this.userCounter < this.KILO ) {
+    if ( this.uiTypesCounter < this.KILO ) {
       options.duration = 2
-    } else if ( this.userCounter < this.MILLION ) {
+    } else if ( this.uiTypesCounter < this.MILLION ) {
       options.duration = 3
     } else {
       options.duration = 4
     }
 
-    const userCountUp = new CountUp( 'serverTypesCounterElement', this.userCounter, options );
+    const userCountUp = new CountUp( 'serverTypesCounterElement', this.uiTypesCounter, options );
 
     if ( !eventCountUp.error ) {
       eventCountUp.start();

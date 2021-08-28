@@ -1,1 +1,4 @@
-<router-outlet></router-outlet>
+<div [class.dark-theme]="darkLightSetting === 'dark'" [class.light-theme]="darkLightSetting === 'light'"
+     [class]="themeColorSetting ? themeColorSetting + '-theme' : ''">
+  <router-outlet></router-outlet>
+</div>

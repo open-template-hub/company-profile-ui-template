@@ -5,15 +5,15 @@
       <div body class="rate-badge-wrapper">
         <app-rate-bar [rate]="rateObject"></app-rate-bar>
         <p class="badge-area">
-          <i *ngIf="topContributor !== undefined" style="margin-right: 5px;">
+          <em *ngIf="topContributor !== undefined" style="margin-right: 5px;">
             <span *ngIf="topContributor === 0">🥇</span>
             <span *ngIf="topContributor === 1">🥈</span>
             <span *ngIf="topContributor === 2">🥉</span>
-          </i>
-          <i *ngIf="numberOfEventsTaken !== undefined && numberOfEventsTaken > 10"
-             show-delay="500" tooltip="Curious" style="margin-right: 5px;">📚</i>
-          <i *ngIf="numberOfEventsMade != undefined && numberOfEventsMade < 5" show-delay="500" tooltip="New" style="margin-right: 5px;">👋</i>
-          <i *ngIf="userInfo?.isAcademical" show-delay="500" tooltip="Joined with .edu mail">🎓</i>
+          </em>
+          <em *ngIf="numberOfEventsTaken !== undefined && numberOfEventsTaken > 10"
+             show-delay="500" tooltip="Curious" style="margin-right: 5px;">📚</em>
+          <em *ngIf="numberOfEventsMade != undefined && numberOfEventsMade < 5" show-delay="500" tooltip="New" style="margin-right: 5px;">👋</em>
+          <em *ngIf="userInfo?.isAcademical" show-delay="500" tooltip="Joined with .edu mail">🎓</em>
         </p>
       </div>
       <div *ngIf="isFollowing !== null" class="follow-button-area">
@@ -40,9 +40,15 @@
                                     [solid]="'map-marker-alt'">
           </app-label-with-icon-data>
           <div *ngIf="followerCount !== undefined && followeeCount !== undefined" class="follower-following-count-area">
-            <div class="follower-count-area"><i class="follower-count">{{followerCount}}</i> Following</div>
-            <div class="following-count-area"><i class="following-count">{{followeeCount}}</i> Followers</div>
-            <div *ngIf="numberOfEventsMade !== undefined" class="events-count-area"><i class="event-count">{{ numberOfEventsMade }}</i> Events</div>
+            <div class="follower-count-area">
+              <em class="follower-count">{{followerCount}}</em> Following
+            </div>
+            <div class="following-count-area">
+              <em class="following-count">{{followeeCount}}</em> Followers
+            </div>
+            <div *ngIf="numberOfEventsMade !== undefined" class="events-count-area">
+              <em class="event-count">{{ numberOfEventsMade }}</em> Events
+            </div>
           </div>
         </div>
         <div *ngIf="userInterests.length > 0"
@@ -133,16 +139,16 @@
         Less
 
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-v4)"></rect>
+          <rect width="10" height="10" style="fill: var(--brand-color-lighter-4)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-v3)"></rect>
+          <rect width="10" height="10" style="fill: var(--brand-color-lighter-3)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-v2)"></rect>
+          <rect width="10" height="10" style="fill: var(--brand-color-lighter-2)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-v1)"></rect>
+          <rect width="10" height="10" style="fill: var(--brand-color-lighter-1)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
           <rect width="10" height="10" style="fill: var(--brand-color)"></rect>
@@ -182,16 +188,16 @@
         Less
 
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-v4)"></rect>
+          <rect width="10" height="10" style="fill: var(--brand-color-lighter-4)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-v3)"></rect>
+          <rect width="10" height="10" style="fill: var(--brand-color-lighter-3)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-v2)"></rect>
+          <rect width="10" height="10" style="fill: var(--brand-color-lighter-2)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-v1)"></rect>
+          <rect width="10" height="10" style="fill: var(--brand-color-lighter-1)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
           <rect width="10" height="10" style="fill: var(--brand-color)"></rect>

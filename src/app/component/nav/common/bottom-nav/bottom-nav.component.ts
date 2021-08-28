@@ -4,7 +4,6 @@ import { AuthToken } from '../../../../model/AuthToken';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
 import { LoadingService } from '../../../../service/loading/loading.service';
-import { ThemeService } from '../../../../service/theme/theme.service';
 import { URLS } from '../../../../util/constant';
 
 @Component( {
@@ -25,7 +24,6 @@ export class BottomNavComponent {
   constructor(
       private router: Router,
       private authenticationService: AuthenticationService,
-      private themeService: ThemeService,
       private loadingService: LoadingService,
       private basicInfoService: BasicInfoService
   ) {
@@ -48,10 +46,6 @@ export class BottomNavComponent {
     this.router.navigate( [ '/' ] ).then( () => {
       return true;
     } );
-  }
-
-  switchTheme() {
-    this.themeService.switchDarkTheme();
   }
 
   closeSettings() {

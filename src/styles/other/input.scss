@@ -1,12 +1,11 @@
-form {
-}
-
 .section, .section-submit {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 1.5em;
+}
+
+.section-submit {
+  align-items: center;
 }
 
 .section-submit hr {
@@ -36,6 +35,14 @@ textarea, textarea::-webkit-input-placeholder, input, input::-webkit-input-place
 textarea, input {
   color: var(--color);
   background: transparent;
+  border: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--contrast);
+  border-radius: 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: border-bottom-color 400ms ease-out;
 }
 
 .input-with-icon textarea {
@@ -48,17 +55,6 @@ textarea, input {
 
 textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
   color: var(--contrast);
-}
-
-textarea, input {
-  border: 0;
-  width: 100%;
-  border-bottom: 1px solid var(--contrast);
-  border-radius: 0;
-  outline: none;
-  padding: 8px;
-  box-sizing: border-box;
-  transition: border-bottom-color 400ms ease-out;
 }
 
 textarea:focus, input:focus {
@@ -169,17 +165,14 @@ input[type=checkbox]:checked + label:before {
   background-color: var(--color);
 }
 
-.input-checkbox-label span:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
 .input-checkbox-label input:checked ~ span:after {
   display: block;
 }
 
 .input-checkbox-label span:after {
+  content: "";
+  position: absolute;
+  display: none;
   left: 16px;
   top: 11px;
   width: 6px;

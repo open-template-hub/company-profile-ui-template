@@ -3,7 +3,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { EventService } from '../../../service/event/event.service';
 import { FileStorageService } from '../../../service/file-storage/file-storage.service';
-import { InformationService } from '../../../service/information/information.service';
 import { EventTypes, PROFILE_IMG, URLS } from '../../../util/constant';
 
 @Component({
@@ -27,8 +26,7 @@ export class EventComponent implements OnInit, OnDestroy {
     private eventService: EventService,
     private basicInfoService: BasicInfoService,
     private fileStorageService: FileStorageService,
-    private router: Router,
-    private informationService: InformationService
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -56,7 +54,9 @@ export class EventComponent implements OnInit, OnDestroy {
 
     this.route.queryParams.subscribe( params => {
       this.eventService.search( params.event_id, undefined, undefined,
-        undefined, [], EventTypes.Searched ).subscribe( () => {}, () => {
+        undefined, [], EventTypes.Searched ).subscribe( () => {
+        console.log();
+      }, () => {
         this.router.navigate( [ URLS.dashboard.learn ] );
       } );
     } );

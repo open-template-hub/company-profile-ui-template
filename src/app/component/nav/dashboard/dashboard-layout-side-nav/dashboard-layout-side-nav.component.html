@@ -20,16 +20,6 @@
         DASHBOARD
     </span>
     </a>
-    <!--
-    <a *ngIf="currentUser && userInfo.payload?.userProfileActivated" [display]="sideNavClosed==='true'" placement="right"
-       routerLink="{{URLS.dashboard.createEvent}}"
-       show-delay="500" tooltip="createEvent">
-      <i aria-hidden="true" class="material-icons">public</i>
-      <span *ngIf="sideNavClosed === 'false'">
-        CREATE EVENT
-    </span>
-    </a>
-    -->
     <a *ngIf="currentUser" [display]="sideNavClosed==='true'" placement="right" routerLink="{{URLS.dashboard.learn}}"
        show-delay="500"
        tooltip="learn">

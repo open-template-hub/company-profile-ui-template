@@ -47,6 +47,15 @@
       </a>
     </div>
   </div>
+  <div class="in-page-title">
+    <h4 class="testimonial-header">Customer reviews</h4>
+    <h6 class="testimonial-description">What our customers are saying...</h6>
+  </div>
+  <div class="card-area">
+    <app-testimonial-card [option]="option1" [marginTop]="'235px'" [minHeight]="'50px'"></app-testimonial-card>
+    <app-testimonial-card [option]="option2" [marginTop]="'180px'" [minHeight]="'156px'"></app-testimonial-card>
+    <app-testimonial-card [option]="option3" [marginTop]="'119px'" [minHeight]="'217px'"></app-testimonial-card>
+  </div>
   <app-swiper-wrapper></app-swiper-wrapper>
   <div class="features">
     <h4>Micro servers for your needs</h4>
@@ -152,15 +161,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="in-page-title">
-    <h2 class="testimonial-header">Customer reviews</h2>
-    <p class="testimonial-description">What our customers are saying...</p>
-  </div>
-  <div class="card-area">
-    <app-testimonial-card [option]="option1" [marginTop]="'235px'" [minHeight]="'50px'"></app-testimonial-card>
-    <app-testimonial-card [option]="option2" [marginTop]="'180px'" [minHeight]="'156px'"></app-testimonial-card>
-    <app-testimonial-card [option]="option3" [marginTop]="'119px'" [minHeight]="'217px'"></app-testimonial-card>
   </div>
   <app-cookies></app-cookies>
 </div>

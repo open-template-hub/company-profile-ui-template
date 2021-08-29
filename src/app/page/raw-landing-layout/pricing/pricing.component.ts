@@ -26,7 +26,7 @@ export class PricingComponent implements OnInit {
 
   basicOption: PricingOption = {
     title: 'BASIC',
-    ribbon: { type: 'featured', text: 'DEAL' },
+    ribbon: { type: 'error', text: 'DEAL' },
     price: {
       currency: '$',
       value: '49',

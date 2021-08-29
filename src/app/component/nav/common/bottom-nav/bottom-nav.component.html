@@ -1,6 +1,6 @@
-<app-dropdown-menu [toggleEvent]="productToggleEvent.asObservable()" [menuType]="'bottom'" [options]="productMenuOptions">
+<app-dropdown-menu [toggleEvent]="productToggleEvent.asObservable()" [menuType]="'bottom'" [options]="PRODUCTS">
 </app-dropdown-menu>
-<app-dropdown-menu [toggleEvent]="serviceToggleEvent.asObservable()" [menuType]="'bottom'" [options]="servicesMenuOptions">
+<app-dropdown-menu [toggleEvent]="serviceToggleEvent.asObservable()" [menuType]="'bottom'" [options]="SERVICES">
 </app-dropdown-menu>
 <nav class="bottom-nav">
   <a (click)="closeSettings()" *ngIf="openSettings" href="javascript:void(0)">
@@ -10,13 +10,13 @@
     </span>
   </a>
   <a *ngIf="!openSettings" (click)="productToggleEvent.next()">
-    <i aria-hidden="true" [class]="'fas fa-chevron-up fa-fw'"></i>
+    <i aria-hidden="true" [class]="'fas fa-server fa-fw'"></i>
     <span>
         Products
     </span>
   </a>
   <a *ngIf="!openSettings" (click)="serviceToggleEvent.next()">
-    <i aria-hidden="true" [class]="'fas fa-chevron-up fa-fw'"></i>
+    <i aria-hidden="true" [class]="'fas fa-handshake fa-fw'"></i>
     <span>
         Services
     </span>

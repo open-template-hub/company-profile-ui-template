@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingService } from '../../../../service/loading/loading.service';
 import { ThemeService } from '../../../../service/theme/theme.service';
-import { URLS } from '../../../../util/constant';
+import { PRODUCTS, SERVICES, URLS } from '../../../../util/constant';
 import { DropdownColumnOption } from '../../../common/dropdown-menu/dropdown-menu.component';
 
 @Component( {
@@ -17,54 +17,8 @@ export class LandingLayoutTopNavComponent {
   };
   URLS = URLS;
 
-  productMenuOptions: DropdownColumnOption[] = [
-    {
-      sectionTitle: 'Payment',
-      menus: [ {
-        backgroundColor: 'rgba(255, 0, 0, 0.2)',
-        brand: this.themeService.brand,
-        header: 'Open Template Hub',
-        description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
-        link: URLS.maintenance
-      },
-      {
-        backgroundColor: 'rgba(0, 255, 0, 0.2)',
-        brand: this.themeService.brand,
-        header: 'Open Template Hub',
-        description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
-        link: URLS.maintenance
-      }],
-    },
-    {
-      sectionTitle: 'Financial Services',
-      menus: [ {
-        backgroundColor: 'rgba(0, 0, 255, 0.2)',
-        brand: this.themeService.brand,
-        header: 'Open Template Hub',
-        description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
-        link: URLS.maintenance
-      } ]
-    }
-  ]
-
-  servicesMenuOptions: DropdownColumnOption[] = [
-    {
-      menus: [ {
-        backgroundColor: 'rgba(255, 0, 0, 0.2)',
-        brand: this.themeService.brand,
-        header: 'Open Template Hub',
-        description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
-        link: URLS.maintenance
-      },
-        {
-          backgroundColor: 'rgba(0, 0, 255, 0.2)',
-          brand: this.themeService.brand,
-          header: 'Open Template Hub',
-          description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
-          link: URLS.maintenance
-        } ]
-    }
-  ]
+  PRODUCTS: DropdownColumnOption[] = [];
+  SERVICES: DropdownColumnOption[] = [];
 
   constructor(
       private router: Router,
@@ -73,5 +27,8 @@ export class LandingLayoutTopNavComponent {
   ) {
     this.brand = this.themeService.brand;
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
+
+    this.PRODUCTS = PRODUCTS;
+    this.SERVICES = SERVICES;
   }
 }

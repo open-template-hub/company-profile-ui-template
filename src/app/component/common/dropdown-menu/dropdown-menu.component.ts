@@ -16,70 +16,70 @@ export interface DropdownMenuOption {
   hover?: boolean // this property only use on this class, do not set it from outside
 }
 
-@Component({
+@Component( {
   selector: 'app-dropdown-menu',
   templateUrl: './dropdown-menu.component.html',
-  styleUrls: ['./dropdown-menu.component.scss']
-})
+  styleUrls: [ './dropdown-menu.component.scss' ]
+} )
 export class DropdownMenuComponent implements OnInit {
   brand = {
     brandLogo: '',
   };
 
-  isComingFromToggleEvent = false
+  isComingFromToggleEvent = false;
 
-  @Input() isDropdownOpen = false
+  @Input() isDropdownOpen = false;
   @Input() toggleEvent: Observable<void>;
 
   @Input() options: DropdownColumnOption[] = [
     {
       sectionTitle: 'Payment',
       menus: [ {
-        backgroundColor: 'rgba(255, 0, 0, 0.2)',
+        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: '' },
         header: 'Open Template Hub',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         link: '/'
       } ]
     }
-  ]
+  ];
 
-  @Input() menuType: 'top' | 'bottom' = 'top'
-  @Input() isActive = false
+  @Input() menuType: 'top' | 'bottom' = 'top';
+  @Input() isActive = false;
 
-  @ViewChild('toggleButton') toggleButton: ElementRef
-  @ViewChild('dropdownContent') dropdownContent: ElementRef
+  @ViewChild( 'toggleButton' ) toggleButton: ElementRef;
+  @ViewChild( 'dropdownContent' ) dropdownContent: ElementRef;
 
   constructor(
-    private themeService: ThemeService,
-    private renderer: Renderer2
+      private themeService: ThemeService,
+      private renderer: Renderer2
   ) {
-    this.brand = this.themeService.brand
+    this.brand = this.themeService.brand;
 
-    this.renderer.listen('window', 'click', (e: Event) => {
-      if ( this.menuType === 'top') {
-        if( this.toggleButton.nativeElement.contains( e.target ) ) {
-          this.toggleDropdown()
+    this.renderer.listen( 'window', 'click', ( e: Event ) => {
+      if ( this.menuType === 'top' ) {
+        if ( this.toggleButton.nativeElement.contains( e.target ) ) {
+          this.toggleDropdown();
         } else if ( !this.dropdownContent?.nativeElement.contains( e.target ) ) {
-          this.isDropdownOpen = false
+          this.isDropdownOpen = false;
         }
       } else if ( !this.isComingFromToggleEvent && !this.dropdownContent?.nativeElement.contains( e.target ) ) {
-        this.isDropdownOpen = false
+        this.isDropdownOpen = false;
       }
 
-      this.isComingFromToggleEvent = false
-    } )
+      this.isComingFromToggleEvent = false;
+    } );
   }
 
   ngOnInit() {
     this.toggleEvent?.subscribe( () => {
-      this.isComingFromToggleEvent = true
-      this.toggleDropdown()
-    } )
+      this.isComingFromToggleEvent = true;
+      this.toggleDropdown();
+    } );
   }
 
   toggleDropdown() {
-    this.isDropdownOpen = !this.isDropdownOpen
-    console.log(this.isDropdownOpen)
+    this.isDropdownOpen = !this.isDropdownOpen;
+    console.log( this.isDropdownOpen );
   }
 }

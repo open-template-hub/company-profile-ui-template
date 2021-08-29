@@ -18,8 +18,12 @@
           <span>{{ feture }}</span>
         </p>
       </div>
-      <app-button1 (click)="routeToEvent(option.link ? option.link : URLS.maintenance)" [brandColor]="true"
+      <!--<app-button1 (click)="routeToEvent(option.link ? option.link : URLS.maintenance)" [brandColor]="true"
                    [isSleekButton]="true" [relativeToParent]="true" [text]="'SELECT'">
+      </app-button1>-->
+      <app-button1 (click)="routeToEvent(option.link ? option.link : URLS.maintenance)"
+                   [brandColor]="true" [icon]="'shopping-cart'" [isSleekButton]="true" [relativeToParent]="true"
+                   [text]="'Buy Now'">
       </app-button1>
     </div>
   </app-card1>

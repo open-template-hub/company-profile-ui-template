@@ -28,6 +28,7 @@
 .swiper-slide img {
   display: block;
   object-fit: cover;
+  filter: contrast(0);
 }
 
 .swiper-button-next, .swiper-button-prev {

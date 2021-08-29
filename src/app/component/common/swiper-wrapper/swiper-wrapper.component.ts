@@ -1,18 +1,18 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 
-SwiperCore.use([ Pagination, Navigation ])
+SwiperCore.use( [ Pagination, Navigation ] );
 
 export interface Partner {
-  brandLogo: string
+  brandLogo: string;
 }
 
-@Component({
+@Component( {
   selector: 'app-swiper-wrapper',
   templateUrl: './swiper-wrapper.component.html',
-  styleUrls: ['./swiper-wrapper.component.scss'],
+  styleUrls: [ './swiper-wrapper.component.scss' ],
   encapsulation: ViewEncapsulation.None,
-})
+} )
 
 export class SwiperWrapperComponent {
   @Input() partners: Partner[] = [
@@ -21,5 +21,5 @@ export class SwiperWrapperComponent {
     { brandLogo: '../../../../assets/common/partners/google-logo.png' },
     { brandLogo: '../../../../assets/common/partners/linkedin-logo.png' },
     { brandLogo: '../../../../assets/common/partners/stripe-logo.png' }
-  ]
+  ];
 }

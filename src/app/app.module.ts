@@ -11,6 +11,7 @@ import { DpDatePickerModule } from 'ng2-date-picker';
 import { TooltipModule } from 'ng2-tooltip-directive';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { ToastrModule } from 'ngx-toastr';
+import { SwiperModule } from 'swiper/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -67,6 +68,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import { CalendarComponent } from './component/common/calendar/calendar.component';
 import { SearchComponent } from './component/common/search/search.component';
 import { RateBarComponent } from './component/common/rate-bar/rate-bar.component';
+import { SwiperWrapperComponent } from './component/common/swiper-wrapper/swiper-wrapper.component';
 import { DropdownMenuComponent } from './component/common/dropdown-menu/dropdown-menu.component';
 import { ColorChartComponent } from './component/common/color-chart/color-chart.component';
 
@@ -125,6 +127,7 @@ FullCalendarModule.registerPlugins( [
     RateBarComponent,
     DropdownMenuComponent,
     EditThemeComponent,
+    SwiperWrapperComponent,
     ColorChartComponent
   ],
   imports: [
@@ -142,7 +145,8 @@ FullCalendarModule.registerPlugins( [
     DpDatePickerModule,
     FormsModule,
     BrowserModule,
-    FullCalendarModule
+    FullCalendarModule,
+    SwiperModule
     /*HttpClientInMemoryWebApiModule.forRoot(
      InMemoryDataService, { dataEncapsulation: false } )*/
   ],

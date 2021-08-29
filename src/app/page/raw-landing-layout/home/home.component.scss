@@ -113,6 +113,10 @@
   justify-content: space-evenly;
 }
 
+app-swiper-wrapper {
+  height: 200px;
+}
+
 @media only screen and (max-width: 999px) {
   .home-page {
     font-size: 23px;

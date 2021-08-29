@@ -55,8 +55,8 @@ export class EventService {
   countUserEvents( username: string, isPastOnly: string = 'true' ) {
     if ( environment.mockDataEnabled ) {
       const countData = [
-        { _id:{category:13,subCategory:5},count:27},
-        { _id:{category:11,subCategory:5, leafCategory: 3},count:10}
+        { _id:{category:1,subCategory:1},count:27},
+        { _id:{category:1,subCategory:2, leafCategory: 1},count:10}
       ] as CountModel[]
 
       return of(this.countUserEventsProcess(countData))
@@ -191,26 +191,7 @@ export class EventService {
   }
 
   searchProcess( searchedEvents: any, eventType: EventTypes ) {
-    searchedEvents.map( event => {
-      const categoryResult = this.categoryService.getCategoryFromId( event.payload?.category,
-        event.payload?.subCategory, event.payload?.leafCategory );
-
-      if ( categoryResult.category ) {
-        event.payload.category = categoryResult.category;
-      }
-
-      if ( categoryResult.subCategory ) {
-        event.payload.subCategory = categoryResult.subCategory;
-      }
-
-      if ( categoryResult.leafCategory ) {
-        event.payload.leafCategory = categoryResult.leafCategory;
-      }
-
-      this.checkInProgress( event )
-
-      event.date = formatDate( new Date( event.date ), 'yyyy/MM/dd HH:mm Z', 'en-US' );
-    } );
+    searchedEvents.map( event => this.fillEvent(event));
 
     if ( eventType === EventTypes.Recommended ) {
       this.recommendedEventsSubject.next( searchedEvents );
@@ -321,26 +302,28 @@ export class EventService {
     }
   }
 
-  getAttendedEventsProcess( attendedData: any, startDate?: string, endDate?: string ) {
-    attendedData.map( event => {
-      const categoryResult = this.categoryService.getCategoryFromId( event.payload?.category,
+  fillEvent(event) {
+    const categoryResult = this.categoryService.getCategoryFromId( event.payload?.category,
         event.payload?.subCategory, event.payload?.leafCategory );
 
-      if ( categoryResult.category ) {
-        event.payload.category = categoryResult.category;
-      }
+    if ( categoryResult.category ) {
+      event.payload.category = categoryResult.category;
+    }
 
-      if ( categoryResult.subCategory ) {
-        event.payload.subCategory = categoryResult.subCategory;
-      }
+    if ( categoryResult.subCategory ) {
+      event.payload.subCategory = categoryResult.subCategory;
+    }
 
-      if ( categoryResult.leafCategory ) {
-        event.payload.leafCategory = categoryResult.leafCategory;
-      }
+    if ( categoryResult.leafCategory ) {
+      event.payload.leafCategory = categoryResult.leafCategory;
+    }
 
-      this.checkInProgress( event )
-      event.date = formatDate( new Date( event.date ), 'yyyy/MM/dd HH:mm Z', 'en-US' );
-    } );
+    this.checkInProgress( event )
+    event.date = formatDate( new Date( event.date ), 'yyyy/MM/dd HH:mm Z', 'en-US' );
+  }
+
+  getAttendedEventsProcess( attendedData: any, startDate?: string, endDate?: string ) {
+    attendedData.map( event => this.fillEvent(event));
 
     if ( startDate && endDate ) {
       return attendedData

@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 35px;
 }
 
 .header {
@@ -28,6 +27,8 @@
 
 .raw-landing-layout-page-content {
   min-height: 120vh;
+  position: relative;
+  z-index: 2;
 }
 
 .policy-content a {
@@ -35,9 +36,6 @@
 }
 
 @media only screen and (max-width: 999px) {
-  .raw-landing-raw-content-page {
-    font-size: 23px;
-  }
 
   .header, .header-filler {
     display: none;
@@ -47,15 +45,16 @@
     padding: 18px;
   }
 
-  .policy-content h5, .policy-content h6 {
+  .policy-content h5, .policy-content p {
     padding-bottom: 12px;
+  }
+
+  .raw-landing-raw-content-page {
+    padding: 60px 3vw;
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  .raw-landing-raw-content-page {
-    font-size: 35px;
-  }
 
   .header, .header-filler {
     display: block;
@@ -65,8 +64,12 @@
     padding: 60px;
   }
 
-  .policy-content h5, .policy-content h6 {
+  .policy-content h5, .policy-content p {
     padding-bottom: 20px;
+  }
+
+  .raw-landing-raw-content-page {
+    padding: 80px 90px 0;
   }
 }
 

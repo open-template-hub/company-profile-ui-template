@@ -29,48 +29,48 @@
 
         <p>upload a profile picture or update your profile details below</p>
       </div>
-      <form (ngSubmit)="onSubmit()" [formGroup]="userInfoForm">
+      <form (ngSubmit)="onSubmit()" [formGroup]="form">
         <div class="section-header">
           <p class="dim">About</p>
           <hr/>
         </div>
         <div class="section">
           <!-- primary info fields -->
-          <div [class.input-error]="submitted && f.firstName.invalid" class="input-with-icon">
+          <div [class.input-error]="submitted && form.controls.firstName.invalid" class="input-with-icon">
             <input formControlName="firstName" placeholder="First name..." required type="text">
-            <i area-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
           </div>
-          <div [class.input-error]="submitted && f.lastName.invalid" class="input-with-icon">
+          <div [class.input-error]="submitted && form.controls.lastName.invalid" class="input-with-icon">
             <input formControlName="lastName" placeholder="Last name..." required type="text">
-            <i area-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
           </div>
-          <div [class.input-error]="submitted && f.bio.invalid" class="input-with-icon">
+          <div [class.input-error]="submitted && form.controls.bio.invalid" class="input-with-icon">
             <textarea formControlName="bio" maxlength="500" placeholder="Bio..." rows="2"></textarea>
-            <i area-hidden="true" class="fas fa-address-book fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fas fa-address-book fa-lg fa-fw"></i>
           </div>
-          <div [class.input-error]="submitted && f.location.invalid" class="input-with-icon">
+          <div [class.input-error]="submitted && form.controls.location.invalid" class="input-with-icon">
             <input formControlName="location" placeholder="Location..." type="text">
-            <i area-hidden="true" class="fas fa-map-marked-alt fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fas fa-map-marked-alt fa-lg fa-fw"></i>
           </div>
-          <div [class.input-error]="submitted && f.phone.invalid" class="input-with-icon">
+          <div [class.input-error]="submitted && form.controls.phone.invalid" class="input-with-icon">
             <input formControlName="phone" placeholder="Phone..." type="text">
-            <i area-hidden="true" class="fas fa-phone fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fas fa-phone fa-lg fa-fw"></i>
           </div>
-          <div [class.input-error]="submitted && f.website.invalid" class="input-with-icon">
+          <div [class.input-error]="submitted && form.controls.website.invalid" class="input-with-icon">
             <input formControlName="website" placeholder="Website..." type="text">
-            <i area-hidden="true" class="fas fa-globe fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fas fa-globe fa-lg fa-fw"></i>
           </div>
-          <div [class.input-error]="submitted && f.twitter.invalid" class="input-with-icon">
+          <div [class.input-error]="submitted && form.controls.twitter.invalid" class="input-with-icon">
             <input formControlName="twitter" placeholder="Twitter..." type="text">
-            <i area-hidden="true" class="fab fa-twitter fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fab fa-twitter fa-lg fa-fw"></i>
           </div>
-          <div [class.input-error]="submitted && f.facebook.invalid" class="input-with-icon">
+          <div [class.input-error]="submitted && form.controls.facebook.invalid" class="input-with-icon">
             <input formControlName="facebook" placeholder="Facebook..." type="text">
-            <i area-hidden="true" class="fab fa-facebook fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fab fa-facebook fa-lg fa-fw"></i>
           </div>
-          <div [class.input-error]="submitted && f.youtube.invalid" class="input-with-icon">
+          <div [class.input-error]="submitted && form.controls.youtube.invalid" class="input-with-icon">
             <input formControlName="youtube" placeholder="Youtube..." type="text">
-            <i area-hidden="true" class="fab fa-youtube fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fab fa-youtube fa-lg fa-fw"></i>
           </div>
         </div>
         <div class="section-header">
@@ -81,7 +81,7 @@
           <!-- interest fields -->
           <div [class]="'interest-search-area'" class="input-with-icon">
             <input #searchArea (keyup)="search($event)" placeholder="Search..." type="text">
-            <i area-hidden="true" class="fas fa-book-open fa-lg fa-fw"></i>
+            <i aria-hidden="true" class="fas fa-book-open fa-lg fa-fw"></i>
           </div>
           <div *ngIf="(categorySearchResults.length > 0) && searchEnabled" class="interest-search-results">
             <a (click)="categorySearchResults = []; addToInterestsList(result)"

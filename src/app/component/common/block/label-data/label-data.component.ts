@@ -10,7 +10,7 @@ export class LabelDataComponent {
   @Input() label = '';
   @Input() data = '';
   @Input() isClickable = false;
-  @Input() noMargin = '';
+  @Input() noMargin = false;
   @Input() contrast = false;
   @Input() leftTopMargin = false;
   @Input() dim = false;

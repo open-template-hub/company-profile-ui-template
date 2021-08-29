@@ -140,4 +140,23 @@ export class ThemeService {
     this.themeColorSettingSubject.next( 'default' );
     this.sideNavClosedSubject.next( 'false' );
   }
+
+  barCustomColors( array: any[] ) {
+    const result: any[] = [];
+
+    for ( let i = 0; i < array.length; i++ ) {
+      let value;
+      if ( i >= this.colors.length ) {
+        value = 'var(' + this.colors[ length - 1 ] + ')';
+      } else {
+        value = 'var(' + this.colors[ i ] + ')';
+      }
+
+      result.push( {
+        name: array[ i ].name, value
+      } );
+    }
+
+    return result;
+  }
 }

@@ -11,9 +11,10 @@
   vertical-align: text-bottom;
 }
 
-.button1.relative-to-parent {
+.button1.relative-to-parent.sleek-button {
   font-size: 1em;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.1em;
+  min-width: 45%;
 }
 
 .button1.attendee {

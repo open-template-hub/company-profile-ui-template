@@ -61,12 +61,10 @@ export class ForgetPasswordComponent implements OnInit, OnDestroy {
 
     this.submitted = true;
 
-    if ( this.forgetPasswordForm.invalid ) {
-      if ( this.f.username.invalid ) {
-        this.toastService.error( 'Please provide a valid username.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
+    if ( this.f.username.invalid ) {
+      this.toastService.error( 'Please provide a valid username.', '', {
+        positionClass: this.route.parent.snapshot.data.layout
+      } );
       return;
     }
 

@@ -11,6 +11,7 @@ import { DpDatePickerModule } from 'ng2-date-picker';
 import { TooltipModule } from 'ng2-tooltip-directive';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { ToastrModule } from 'ngx-toastr';
+import { SwiperModule } from 'swiper/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,7 +29,7 @@ import { DashboardLayoutSideNavComponent } from './component/nav/dashboard/dashb
 import { DashboardLayoutTopNavComponent } from './component/nav/dashboard/dashboard-layout-top-nav/dashboard-layout-top-nav.component';
 import { LandingLayoutTopNavComponent } from './component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component';
 import { EventComponent } from './page/dashboard-layout/event/event.component';
-import { CreateEventComponent } from './page/dashboard-layout/createEvent/create-event.component';
+import { CreateEventComponent } from './page/dashboard-layout/create-event/create-event.component';
 import { DashboardLayoutComponent } from './page/dashboard-layout/dashboard-layout.component';
 
 import { DashboardComponent } from './page/dashboard-layout/dashboard/dashboard.component';
@@ -70,6 +71,9 @@ import { RateBarComponent } from './component/common/rate-bar/rate-bar.component
 import { PricingComponent } from './page/raw-landing-layout/pricing/pricing.component';
 import { PricingCardComponent } from './component/common/card/pricing-card/pricing-card.component';
 import { TestimonialCardComponent } from './component/common/card/testimonial-card/testimonial-card.component';
+import { SwiperWrapperComponent } from './component/common/swiper-wrapper/swiper-wrapper.component';
+import { DropdownMenuComponent } from './component/common/dropdown-menu/dropdown-menu.component';
+import { ColorChartComponent } from './component/common/color-chart/color-chart.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -127,7 +131,11 @@ FullCalendarModule.registerPlugins( [
     EditThemeComponent,
     PricingComponent,
     PricingCardComponent,
-    TestimonialCardComponent
+    TestimonialCardComponent,
+    DropdownMenuComponent,
+    EditThemeComponent,
+    SwiperWrapperComponent,
+    ColorChartComponent
   ],
   imports: [
     BrowserModule,
@@ -144,7 +152,8 @@ FullCalendarModule.registerPlugins( [
     DpDatePickerModule,
     FormsModule,
     BrowserModule,
-    FullCalendarModule
+    FullCalendarModule,
+    SwiperModule
     /*HttpClientInMemoryWebApiModule.forRoot(
      InMemoryDataService, { dataEncapsulation: false } )*/
   ],

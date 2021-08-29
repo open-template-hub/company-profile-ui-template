@@ -1,0 +1,24 @@
+<div class="dropdown">
+  <div *ngIf="menuType === 'top'" #toggleButton class="ng-content-area">
+    <ng-content (click)="toggleDropdown()"></ng-content>
+  </div>
+  <div *ngIf="isDropdownOpen" #dropdownContent class="dropdown-content" [class.bottom]="menuType === 'bottom'">
+    <i *ngIf="menuType === 'top'" aria-hidden="true" class="fas fa-caret-up fa-lg fa-fw"></i>
+    <i *ngIf="menuType === 'bottom'" (click)="toggleDropdown()" aria-hidden="true" class="fas fa-times fa-lg fa-fw"></i>
+    <div class="section-column" *ngFor="let column of options">
+      <span *ngIf="column.sectionTitle" class="section-header">{{ column.sectionTitle }}</span>
+      <a *ngFor="let option of column.menus; last as isLast; first as isFirst" class="dropdown-item"
+         (mouseover)="option.hover = true" (mouseleave)="option.hover = false"
+         [ngStyle]="option?.hover && { 'background-color': option.backgroundColor }"
+         [style.margin-bottom]="!isLast ? '10px' : '0'"
+         [style.margin-top]="isFirst ? '20px' : '10px'"
+         [href]="option.link">
+        <img [src]="option.brand.brandLogo" alt="logo" class="dropdown-item-logo" height="40"/>
+        <div class="dropdown-item-content">
+          <span>{{ option.header }}</span>
+          <p>{{ option.description }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

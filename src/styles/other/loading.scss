@@ -31,18 +31,24 @@
   position: absolute;
   top: 0;
   z-index: 20;
-  left: calc(-25%);
+  left: calc(-100%);
   width: 50%;
   height: 4px;
   border-radius: 3px;
-  background-color: var(--brand-color);
+  background-color: var(--brand-color-lighter-9);
   animation: loading-bar 1.5s infinite ease-in-out;
+  animation-direction: normal;
 }
 
 @keyframes loading-bar {
-  50% {
-    left: 75%;
-    background: var(--brand-color-lighter-5);
+  0% {
+    left: calc(-100%);
+    background-color: var(--brand-color-lighter-9);
+  }
+
+  100% {
+    left: 100%;
+    background-color: var(--brand-color-lighter-2);
   }
 }
 

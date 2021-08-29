@@ -1,12 +1,12 @@
 <div class="search-area">
-  <i class="material-icons">search</i>
+  <i aria-hidden="true" class="material-icons">search</i>
   <input #searchArea (keyup)="search($event)" placeholder="Search..." type="text">
   <div
     *ngIf="(userSearchResults.length > 0 || categorySearchResults.length > 0 || eventSearchResults.length > 0) && searchEnabled"
     class="search-results">
     <a (click)="userSearchResults = []" *ngFor="let result of userSearchResults"
        routerLink="{{URLS.user.root + '/' + result.username}}">
-      <app-label-with-icon-data [data]="result.username" [isClickableWithinApp]="true" [noMargin]="'true'"
+      <app-label-with-icon-data [data]="result.username" [isClickableWithinApp]="true" [noMargin]="true"
                                 [solid]="'user'" [urlPrefix]="URLS.user.root + '/'">
       </app-label-with-icon-data>
     </a>

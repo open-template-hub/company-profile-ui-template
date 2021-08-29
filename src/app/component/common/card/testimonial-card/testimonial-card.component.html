@@ -6,7 +6,7 @@
              [topLayerMarginTop]="marginTop" [topLayerMinHeight]="minHeight" [testimonialSizeActive]="true">
     <div body class="content-wrapper">
       <div class="icon-wrapper">
-        <i [style.color]="option.style.themeColor" area-hidden="true" class="fas fa-quote-left fa-lg fa-fw"></i>
+        <i aria-hidden="true"[style.color]="option.style.themeColor" area-hidden="true" class="fas fa-quote-left fa-lg fa-fw"></i>
       </div>
       <p class="review-area">{{ option.review }}</p>
       <a class="profile-image">
@@ -15,11 +15,11 @@
       </a>
       <div class="footer-social">
         <a [href]="environment.social.twitter.url + '/' + environment.oth.social.twitter" target="_blank">
-          <i [style.color]="option.style.themeColor" [class]="'fab fa-' + environment.social.twitter.cssClass + ' fa-2x fa-fw'"></i>
+          <i aria-hidden="true"[style.color]="option.style.themeColor" [class]="'fab fa-' + environment.social.twitter.cssClass + ' fa-2x fa-fw'"></i>
         </a>
         <a [href]="environment.social.linkedin.url + '/company/' + environment.oth.social.linkedin"
            target="_blank">
-          <i [style.color]="option.style.themeColor" [class]="'fab fa-' + environment.social.linkedin.cssClass + ' fa-2x fa-fw'"></i>
+          <i aria-hidden="true"[style.color]="option.style.themeColor" [class]="'fab fa-' + environment.social.linkedin.cssClass + ' fa-2x fa-fw'"></i>
         </a>
       </div>
     </div>

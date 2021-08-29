@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { environment } from '../../../../../environments/environment';
 import { ThemeService } from '../../../../service/theme/theme.service';
 import { URLS } from '../../../../util/constant';
-import { environment } from '../../../../../environments/environment';
 
 export interface TestimonialOption {
   review: string,
@@ -13,13 +13,13 @@ export interface TestimonialOption {
   }
 }
 
-@Component({
+@Component( {
   selector: 'app-testimonial-card',
   templateUrl: './testimonial-card.component.html',
-  styleUrls: ['./testimonial-card.component.scss']
-})
-export class TestimonialCardComponent implements OnInit {
-  URLS = URLS
+  styleUrls: [ './testimonial-card.component.scss' ]
+} )
+export class TestimonialCardComponent {
+  URLS = URLS;
   environment = environment;
   brand = {
     brandLogo: '',
@@ -34,12 +34,10 @@ export class TestimonialCardComponent implements OnInit {
     style: {
       themeColor: 'var(--brand-color-lighter-2)'
     }
-  }
+  };
+
   constructor(
-    private themeService: ThemeService
-  ) { }
-
-  ngOnInit(): void {
+      private themeService: ThemeService
+  ) {
   }
-
 }

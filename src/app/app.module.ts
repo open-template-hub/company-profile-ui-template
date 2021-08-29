@@ -125,7 +125,7 @@ FullCalendarModule.registerPlugins( [
     SearchComponent,
     RateBarComponent,
     EditThemeComponent,
-    SwiperWrapperComponent
+    SwiperWrapperComponent,
     ColorChartComponent
   ],
   imports: [

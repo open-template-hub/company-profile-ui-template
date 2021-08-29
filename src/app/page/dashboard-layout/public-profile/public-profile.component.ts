@@ -42,6 +42,7 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
   loading = false;
   loadingCount = false;
   loadingLessonsTaken = false;
+  colors: any[] = [];
 
   isPublic = false;
   URLS = URLS;
@@ -211,17 +212,5 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
         this.followeeCount = followeeCount[ 0 ].count;
       } );
     } );
-  }
-
-  barCustomColors( array: any[] ) {
-    const result: any[] = [];
-    const style = getComputedStyle( document.body )
-
-    for (let i = 0; i < array.length; i++) {
-      result.push({name: array[i].name, value: style
-        .getPropertyValue( this.themeService.colors[ Math.floor( i / 2 ) ] )});
-    }
-
-    return result;
   }
 }

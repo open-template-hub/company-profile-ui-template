@@ -55,8 +55,8 @@ export class EventService {
   countUserEvents( username: string, isPastOnly: string = 'true' ) {
     if ( environment.mockDataEnabled ) {
       const countData = [
-        { _id:{category:13,subCategory:5},count:27},
-        { _id:{category:11,subCategory:5, leafCategory: 3},count:10}
+        { _id:{category:1,subCategory:1},count:27},
+        { _id:{category:1,subCategory:2, leafCategory: 1},count:10}
       ] as CountModel[]
 
       return of(this.countUserEventsProcess(countData))

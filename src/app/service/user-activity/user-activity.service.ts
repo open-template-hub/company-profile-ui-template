@@ -20,7 +20,7 @@ export class UserActivityService {
     if ( environment.mockDataEnabled ) {
       const eventsTaken = [
         { _id:{category:1,subCategory:1},count:7},
-        { _id:{category:1,subCategory:3, leafCategory: 3},count: 5}
+        { _id:{category:1,subCategory:2, leafCategory: 1},count: 5}
       ] as any
 
       return of(this.getEventsTakenProcess( eventsTaken ))
@@ -34,10 +34,8 @@ export class UserActivityService {
 
   getEventsTakenProcess( eventsTaken: any ) {
     eventsTaken.map( categories => {
-      const categoryResult = this.categoryService.getCategoryFromId( categories._id.category,
-        categories._id.subCategory, categories._id.leafCategory );
-
-      categories._id = categoryResult
+      categories._id = this.categoryService.getCategoryFromId( categories._id.category,
+          categories._id.subCategory, categories._id.leafCategory )
     } );
 
     const newEventsList = []

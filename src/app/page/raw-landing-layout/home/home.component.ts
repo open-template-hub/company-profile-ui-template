@@ -2,6 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CountUp } from 'countup.js';
+import { TestimonialOption } from '../../../component/common/card/testimonial-card/testimonial-card.component';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { ThemeService } from '../../../service/theme/theme.service';
 import { URLS } from '../../../util/constant';
@@ -25,6 +26,24 @@ export class HomeComponent implements AfterViewInit {
 
   KILO = 1000;
   MILLION = this.KILO * this.KILO;
+
+  option1: TestimonialOption = {
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
+    brand: { brandLogo: '../../../../assets/common/social/buymeacoffee-logo.png' },
+    style: { themeColor: 'var(--warn)' }
+  }
+
+  option2: TestimonialOption = {
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
+    brand: { brandLogo: '../../../../assets/common/social/reddit-logo.png' },
+    style: { themeColor: 'var(--error)' }
+  }
+
+  option3: TestimonialOption = {
+    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
+    brand: { brandLogo: '../../../../assets/common/social/facebook-logo.png' },
+    style: { themeColor: 'var(--info)' }
+  }
 
   constructor(
       private formBuilder: FormBuilder,

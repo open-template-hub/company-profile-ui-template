@@ -55,6 +55,7 @@ export const URLS = {
   cookiePolicy: '/cookie-policy',
   privacyPolicy: '/privacy-policy',
   terms: '/terms',
+  pricing: '/pricing',
   showroom: '/showroom',
   dashboard: {
     root: dashboard,

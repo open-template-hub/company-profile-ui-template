@@ -28,7 +28,7 @@ export class Button1Component {
   @Input() themeColor = '';
   @Input() disabled = false;
   @Input() selected = false;
-
+  @Input() relativeToParent = false
   loading = false;
 
   constructor( private loadingService: LoadingService ) {

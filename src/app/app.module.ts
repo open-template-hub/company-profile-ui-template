@@ -68,6 +68,8 @@ import interactionPlugin from '@fullcalendar/interaction';
 import { CalendarComponent } from './component/common/calendar/calendar.component';
 import { SearchComponent } from './component/common/search/search.component';
 import { RateBarComponent } from './component/common/rate-bar/rate-bar.component';
+import { PricingComponent } from './page/raw-landing-layout/pricing/pricing.component';
+import { PricingCardComponent } from './component/common/card/pricing-card/pricing-card.component';
 import { SwiperWrapperComponent } from './component/common/swiper-wrapper/swiper-wrapper.component';
 import { DropdownMenuComponent } from './component/common/dropdown-menu/dropdown-menu.component';
 import { ColorChartComponent } from './component/common/color-chart/color-chart.component';
@@ -125,6 +127,9 @@ FullCalendarModule.registerPlugins( [
     CalendarComponent,
     SearchComponent,
     RateBarComponent,
+    EditThemeComponent,
+    PricingComponent,
+    PricingCardComponent,
     DropdownMenuComponent,
     EditThemeComponent,
     SwiperWrapperComponent,

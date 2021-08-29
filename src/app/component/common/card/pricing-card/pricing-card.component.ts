@@ -1,10 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { RIBBONS, URLS } from '../../../../util/constant';
 
 export interface PricingOption {
   title: string,
-  ribbon?: { type:string, text: string },
+  ribbon?: { type: string, text: string },
   price: {
     currency: string,
     value: string,
@@ -20,14 +20,14 @@ export interface PricingOption {
   link?: string
 }
 
-@Component({
+@Component( {
   selector: 'app-pricing-card',
   templateUrl: './pricing-card.component.html',
-  styleUrls: ['./pricing-card.component.scss']
-})
-export class PricingCardComponent implements OnInit {
-  RIBBONS = RIBBONS
-  URLS = URLS
+  styleUrls: [ './pricing-card.component.scss' ]
+} )
+export class PricingCardComponent {
+  RIBBONS = RIBBONS;
+  URLS = URLS;
   @Input() option: PricingOption = {
     title: 'Basic',
     ribbon: { type: 'premium', text: 'DEAL' },
@@ -36,7 +36,7 @@ export class PricingCardComponent implements OnInit {
       value: '9',
       subscriptionTime: 'mo.'
     },
-    features: ['Up to 10 users', 'Maximum 100 photos/mo.', '500 queries'],
+    features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', '500 queries' ],
     styles: {
       width: '340px',
       height: '440px',
@@ -44,16 +44,14 @@ export class PricingCardComponent implements OnInit {
       featureHeight: '10em'
     },
     link: URLS.maintenance
-  }
+  };
 
   constructor(
-    private router: Router
-  ) { }
-
-  ngOnInit(): void {
+      private router: Router
+  ) {
   }
 
   routeToEvent( path: string ) {
-    this.router.navigate( [ path ]);
+    this.router.navigate( [ path ] );
   }
 }

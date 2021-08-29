@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-color-chart',
   templateUrl: './color-chart.component.html',
   styleUrls: ['./color-chart.component.scss']
 })
-export class ColorChartComponent implements OnInit {
+export class ColorChartComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+    // Intentionally blank
   }
-
 }

@@ -36,6 +36,7 @@ export class Card1Component {
   @Input() topLayerMarginTop = 'initial';
   @Input() topLayerMinHeight = '250px';
   @Input() topLayerBackgroundColor = ''
+  @Input() testimonialSizeActive = false;
 
   loading = false;
 

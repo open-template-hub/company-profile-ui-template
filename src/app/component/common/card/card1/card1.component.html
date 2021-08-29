@@ -1,7 +1,7 @@
 <div [class.background-color]="isBackgroundColor" [class.card1-scrollable-content]="isScrollable"
      [class.card1-small]="isSmall"
      [class.no-margin]="!margin" [class.no-shadow]="!shadow" [style.height]="height ? height : ''"
-     [style.width]="width ? width : ''" class="card1">
+     [style.width]="width ? width : ''" class="card1" [class.testimonial-size]="testimonialSizeActive">
   <div *ngIf="topWrapper" [class.card1-top-wrapper-in-brand-color]="topWrapperInBrandColor"
        class="card1-top-wrapper">
   </div>
@@ -11,7 +11,7 @@
       <path d="M 0,250 1000,120 V 0 H 0 Z" style="fill: var(--brand-color-lighter-2);"></path>
     </svg>
   </div>
-  <div *ngIf="topLayer2" class="layers top-layer">
+  <div *ngIf="topLayer2" class="layers top-layer style2">
     <svg [style.margin-top]="topLayerMarginTop"
          [style.min-height]="topLayerMinHeight" width="1000" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
       <path transform="rotate(180 500 125)" d="m0,250l1000,-130l0,-120l-1000,0l0,250z"

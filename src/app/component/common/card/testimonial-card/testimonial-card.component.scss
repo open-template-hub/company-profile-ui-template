@@ -20,10 +20,33 @@
 .footer-social {
   display: flex;
   justify-content: center;
-  font-size: 0.6em;
-  margin-top: 3em;
+  font-size: 0.4em;
+  margin-top: 1em;
+}
+
+.footer-social a {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 .footer-social i {
   color: var(--brand-color);
+}
+
+.profile-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-image img {
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  padding: 5px;
+  border: 2px solid var(--color);
+}
+
+.profile-image span {
+  margin-top: 1.5em;
 }

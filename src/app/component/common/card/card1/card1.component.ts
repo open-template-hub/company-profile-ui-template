@@ -32,6 +32,10 @@ export class Card1Component {
   @Input() ribbon = { text: '', type: '' };
   @Input() isCardContentOverflowVisible = false;
   @Input() topLayer = false;
+  @Input() topLayer2 = false;
+  @Input() topLayerMarginTop = 'initial';
+  @Input() topLayerMinHeight = '250px';
+  @Input() topLayerBackgroundColor = ''
 
   loading = false;
 

@@ -6,11 +6,19 @@
        class="card1-top-wrapper">
   </div>
   <div *ngIf="topLayer" class="layers top-layer">
-    <svg viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+    <svg [style.margin-top]="topLayerMarginTop"
+         [style.min-height]="topLayerMinHeight" viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
       <path d="M 0,250 1000,120 V 0 H 0 Z" style="fill: var(--brand-color-lighter-2);"></path>
     </svg>
   </div>
-
+  <div *ngIf="topLayer2" class="layers top-layer">
+    <svg [style.margin-top]="topLayerMarginTop"
+         [style.min-height]="topLayerMinHeight" width="1000" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+      <path transform="rotate(180 500 125)" d="m0,250l1000,-130l0,-120l-1000,0l0,250z"
+            [style.fill]="topLayerBackgroundColor ? topLayerBackgroundColor : 'var(--brand-color-lighter-2)'"
+            id="svg_1" stroke="null" fill-opacity="0.4"/>
+    </svg>
+  </div>
   <div *ngIf="!headerProfileImg && enableHeader && !enableHeaderFullImg" class="card1-header rounded-box">
     <h3>{{title}}</h3>
   </div>

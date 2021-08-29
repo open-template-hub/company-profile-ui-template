@@ -69,6 +69,7 @@ import { CalendarComponent } from './component/common/calendar/calendar.componen
 import { SearchComponent } from './component/common/search/search.component';
 import { RateBarComponent } from './component/common/rate-bar/rate-bar.component';
 import { SwiperWrapperComponent } from './component/common/swiper-wrapper/swiper-wrapper.component';
+import { ColorChartComponent } from './component/common/color-chart/color-chart.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -125,6 +126,7 @@ FullCalendarModule.registerPlugins( [
     RateBarComponent,
     EditThemeComponent,
     SwiperWrapperComponent
+    ColorChartComponent
   ],
   imports: [
     BrowserModule,

@@ -119,7 +119,7 @@
       <br/>
       <ngx-charts-bar-horizontal
           [gradient]="gradient"
-          [customColors]="barCustomColors(lessonsInfo)"
+          [customColors]="colors"
           [animations]="false"
           [legend]="showLegend"
           [results]="eventsInfo"
@@ -129,29 +129,7 @@
           [xAxis]="showXAxis"
           [yAxis]="showYAxis">
       </ngx-charts-bar-horizontal>
-      <div class="color-text">
-
-        Less
-
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-4)"></rect>
-        </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-3)"></rect>
-        </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-2)"></rect>
-        </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-1)"></rect>
-        </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color)"></rect>
-        </svg>
-
-        More
-
-      </div>
+      <app-color-chart></app-color-chart>
     </div>
   </app-card1>
   <app-card1 *ngIf="eventsInfo.length === 0" [title]="'Lessons Taken'">
@@ -167,7 +145,7 @@
       <br/>
       <ngx-charts-bar-horizontal
           [gradient]="gradient"
-          [customColors]="barCustomColors(eventsInfo)"
+          [customColors]="colors"
           [animations]="false"
           [legend]="showLegend"
           [results]="eventsInfo"

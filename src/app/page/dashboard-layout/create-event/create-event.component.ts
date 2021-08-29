@@ -32,8 +32,8 @@ export class CreateEventComponent implements OnInit {
   searchedEvents = [];
 
   defaultCategory: any = {
-    category: { name: 'Teaching & Academics', id: 13 },
-    subCategory: { name: 'Online Education', id: 5 },
+    category: { name: 'Development', id: 1 },
+    subCategory: { name: 'Web Development', id: 1 },
     leafCategory: undefined
   }
 

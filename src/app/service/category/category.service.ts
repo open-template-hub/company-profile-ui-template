@@ -7,25 +7,29 @@ import { CATEGORIES, CATEGORIES_MAP } from '../../util/constant';
 } )
 export class CategoryService {
   search( q: string ) {
-    const categories = [];
+    const categoriesSet = new Set();
+
     q = '^' + q;
-    const re = new RegExp( q, 'gi' );
+    const regExp = new RegExp( q, 'gi' );
+
     for ( const category of CATEGORIES ) {
-      if ( re.test( category.name ) && !categories.includes( { category } ) ) {
-        categories.push( { category } );
+      if ( regExp.test( category.name ) ) {
+        categoriesSet.add( { category } );
       }
+
       for ( const subCategory of category.payload?.subCategories ) {
-        if ( subCategory.name.match( re ) && !categories.includes( { category, subCategory } ) ) {
-          categories.push( { category, subCategory } );
+        if ( subCategory.name.match( regExp ) ) {
+          categoriesSet.add( { category, subCategory } );
         }
+
         for ( const leafCategory of subCategory.leafCategories ) {
-          if ( leafCategory?.name.match( re ) && !categories.includes( { category, subCategory, leafCategory } ) ) {
-            categories.push( { category, subCategory, leafCategory } );
+          if ( leafCategory?.name.match( regExp ) ) {
+            categoriesSet.add( { category, subCategory, leafCategory } );
           }
         }
       }
     }
-    return of( categories );
+    return of( Array.from( categoriesSet ) );
   }
 
   getCategoryIdFromCategories( categories ) {
@@ -65,7 +69,7 @@ export class CategoryService {
 
     CATEGORIES_MAP.get( categoryId ).subCategories.forEach( ( category: any, id: number ) => {
       categories.push( { name: category.name, id } );
-    } )
+    } );
 
     return of( categories );
   }
@@ -75,7 +79,7 @@ export class CategoryService {
 
     CATEGORIES_MAP.get( categoryId ).subCategories.get( subCategoryId ).leafCategories.forEach( ( category: any, id: number ) => {
       categories.push( { name: category.name, id } );
-    } )
+    } );
 
     return of( categories );
   }

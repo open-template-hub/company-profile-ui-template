@@ -38,15 +38,12 @@
 
 .accept h5 {
   color: var(--brand-color);
+  margin: 0;
+  white-space: nowrap;
 }
 
 .accept:hover h5 {
   color: white;
-}
-
-.accept h5 {
-  margin: 0;
-  white-space: nowrap;
 }
 
 @media only screen and (max-width: 999px) {

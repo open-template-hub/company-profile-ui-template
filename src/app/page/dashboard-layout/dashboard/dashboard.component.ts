@@ -74,13 +74,6 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.basicInfoService.userInfo.subscribe( userInfo => {
       this.userInfo = userInfo;
 
-      // check interests area defined before service calling.
-      if ( this.userInfo?.payload?.interests ) {
-        // this.categoryService.getCategoriesFromId( this.userInfo?.payload?.interests ).subscribe( result => {
-        //  this.userInterests = result;
-        // } );
-      }
-
       if ( userInfo?.username ) {
         this.userActivityService.getNumberOfEventsTaken( userInfo.username ).subscribe( result => {
           this.numberOfEventsTaken = result[0].numberOfEventsTaken

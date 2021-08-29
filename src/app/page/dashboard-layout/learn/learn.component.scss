@@ -54,7 +54,6 @@
   flex-direction: column;
   justify-content: flex-start;
   top: 50px;
-  overflow-x: auto;
   background-color: var(--background-color);
   box-shadow: 0 0 5px var(--shadow);
   z-index: 12;
@@ -94,9 +93,6 @@
   flex-wrap: wrap;
 }
 
-@media only screen and (min-width: 1600px) {
-
-}
 @media only screen and (min-width: 1000px) {
   .learn-page {
     display: block;

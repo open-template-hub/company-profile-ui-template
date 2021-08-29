@@ -3,42 +3,33 @@
     <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
     <h2>Open Template Hub</h2>
   </a>
-  <a *ngIf="currentUser" routerLink="{{URLS.dashboard.root}}">
-    <i class="material-icons">dashboard</i>
+  <div class="left-item-wrapper">
+    <a>
+      <app-dropdown-menu [options]="PRODUCTS">
+        <span>Products</span>
+        <i aria-hidden="true" class="material-icons">expand_more</i>
+      </app-dropdown-menu>
+    </a>
+    <a>
+      <app-dropdown-menu [options]="SERVICES">
+        <span>Services</span>
+        <i aria-hidden="true" class="material-icons">expand_more</i>
+      </app-dropdown-menu>
+    </a>
+    <a routerLink="{{URLS.maintenance}}">
+      <span>
+          Pricing
+      </span>
+    </a>
+  </div>
+  <a class="demo" routerLink="{{URLS.maintenance}}">
     <span>
-        DASHBOARD
+        Request for Demo
     </span>
   </a>
-  <!--
-  <a *ngIf="!currentUser" routerLink="{{URLS.dashboard.createEvent}}">
-    <i class="material-icons">public</i>
+  <a class="contact-us" routerLink="{{URLS.maintenance}}">
     <span>
-        CREATE EVENT
-    </span>
-  </a>
-  -->
-  <a *ngIf="!currentUser" routerLink="{{URLS.showroom}}">
-    <i class="material-icons">event</i>
-    <span>
-        EVENTS
-    </span>
-  </a>
-  <a *ngIf="!currentUser" routerLink="{{URLS.signup}}">
-    <i class="material-icons">person_add</i>
-    <span>
-        REGISTER
-    </span>
-  </a>
-  <a *ngIf="!currentUser" class="login" routerLink="{{URLS.login}}">
-    <i class="material-icons">fingerprint</i>
-    <span>
-        LOG IN
-    </span>
-  </a>
-  <a (click)="logout()" *ngIf="currentUser" href="javascript:void(0)" id=logout>
-    <i class="material-icons">exit_to_app</i>
-    <span>
-        LOGOUT
+        Contact Us
     </span>
   </a>
 </nav>

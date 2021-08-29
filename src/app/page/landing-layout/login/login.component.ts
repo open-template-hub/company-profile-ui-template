@@ -19,7 +19,7 @@ import { URLS } from '../../../util/constant';
 } )
 export class LoginComponent implements OnInit, OnDestroy {
 
-  loginForm: FormGroup;
+  form: FormGroup;
   submitted = false;
   returnUrl: string;
   environment = environment;
@@ -46,13 +46,8 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
   }
 
-  // convenience getter for easy access to form fields
-  get f() {
-    return this.loginForm.controls;
-  }
-
   ngOnInit() {
-    this.loginForm = this.formBuilder.group( {
+    this.form = this.formBuilder.group( {
       username: [ '', Validators.required ],
       password: [ '', Validators.required ],
       rememberMe: [ true, Validators.required ]
@@ -73,59 +68,71 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     this.submitted = true;
 
-    if ( this.loginForm.invalid ) {
-      if ( this.f.password.invalid ) {
-        this.toastService.error( 'Please provide a valid password.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
-      }
-      if ( this.f.username.invalid ) {
-        this.toastService.error( 'Please provide a valid username.', '', {
-          positionClass: this.route.parent.snapshot.data.layout
-        } );
+    const errorMessages = {
+      username: 'Please provide a valid username',
+      password: 'Please provide a valid password',
+    };
+
+    if ( this.form.invalid ) {
+      for ( const control in this.form.controls ) {
+        if ( this.form.controls[ control ].invalid ) {
+          this.toastService.error( errorMessages[ control ], '', {
+            positionClass: this.route.parent.snapshot.data.layout,
+          } );
+        }
       }
       return;
     }
+    this.login();
+  }
 
-    this.authenticationService.login( this.f.username.value, this.f.password.value, this.f.rememberMe.value )
-    .pipe( first() )
+  private login() {
+    this.authenticationService.login(
+        this.form.controls.username.value,
+        this.form.controls.password.value,
+        this.form.controls.rememberMe.value
+    ).pipe( first() )
     .subscribe(
         () => {
           if ( this.returnUrl !== URLS.dashboard.root ) {
-            // Special case for initialization (if return url is else than dashboard)
-            this.basicInfoService.me()
-            .subscribe( userInfo => {
-                  this.router.navigateByUrl( this.returnUrl );
-                  if ( !userInfo.payload ) {
-                    this.basicInfoService.createMyInfo()
-                    .subscribe( () => {
-                          this.router.navigate( [ URLS.settings.welcome ] );
-                        }
-                    );
-                  } else {
-                    this.fileStorageService.downloadProfileImage( userInfo.payload.profileImageId ).subscribe();
+            this.loginWithoutOpeningDashboard();
+          } else {
+            this.router.navigate( [ this.returnUrl ] );
+          }
+        }
+    );
+  }
 
-                    const userInterests = userInfo?.payload?.interests;
-                    const categories: any[] = [];
-
-                    if ( userInterests && userInterests.length > 0 ) {
-                      for ( const interest of userInterests ) {
-                        categories.push(
-                            {
-                              category: interest.category,
-                              subCategory: interest.subCategory,
-                              leafCategory: interest.leafCategory
-                            }
-                        );
-                      }
-                    }
-
-                    this.eventService.initSearchEvents(categories);
-                  }
+  private loginWithoutOpeningDashboard() {
+    // Special case for initialization (if return url is else than dashboard)
+    this.basicInfoService.me()
+    .subscribe( userInfo => {
+          this.router.navigateByUrl( this.returnUrl );
+          if ( !userInfo.payload ) {
+            this.basicInfoService.createMyInfo()
+            .subscribe( () => {
+                  this.router.navigate( [ URLS.settings.welcome ] );
                 }
             );
           } else {
-            this.router.navigate( [ this.returnUrl ] );
+            this.fileStorageService.downloadProfileImage( userInfo.payload.profileImageId ).subscribe();
+
+            const userInterests = userInfo?.payload?.interests;
+            const categories: any[] = [];
+
+            if ( userInterests && userInterests.length > 0 ) {
+              for ( const interest of userInterests ) {
+                categories.push(
+                    {
+                      category: interest.category,
+                      subCategory: interest.subCategory,
+                      leafCategory: interest.leafCategory
+                    }
+                );
+              }
+            }
+
+            this.eventService.initSearchEvents( categories );
           }
         }
     );

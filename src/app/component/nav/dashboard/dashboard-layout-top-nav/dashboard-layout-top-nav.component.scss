@@ -16,6 +16,7 @@
 .dashboard-layout-top-nav a {
   display: flex;
   flex-direction: row;
+  flex: 1;
   align-items: center;
   justify-content: center;
   min-width: 20vw;
@@ -28,6 +29,10 @@
 .dashboard-layout-top-nav div {
   padding: 0.5em;
   margin: 0;
+  flex: 3;
+  flex-direction: row;
+  min-width: 20vw;
+  font-size: 13px;
 }
 
 .dashboard-layout-top-nav div input {
@@ -44,17 +49,6 @@
 
 .dashboard-layout-top-nav div input:focus + i {
   color: var(--brand-color);
-}
-
-.dashboard-layout-top-nav div {
-  flex: 3;
-  flex-direction: row;
-  min-width: 20vw;
-  font-size: 13px;
-}
-
-.dashboard-layout-top-nav a {
-  flex: 1;
 }
 
 .dashboard-layout-top-nav a i {

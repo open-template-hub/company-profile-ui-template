@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { ThemeService } from '../../service/theme/theme.service';
 
 @Component( {
   selector: 'app-splash-layout',
@@ -9,5 +7,7 @@ import { ThemeService } from '../../service/theme/theme.service';
 } )
 export class SplashLayoutComponent {
 
-  constructor() {}
+  constructor() {
+    // Intentionally blank
+  }
 }

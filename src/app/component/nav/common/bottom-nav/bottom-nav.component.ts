@@ -5,7 +5,7 @@ import { AuthToken } from '../../../../model/AuthToken';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
 import { LoadingService } from '../../../../service/loading/loading.service';
-import { PRODUCTS, SERVICES, URLS } from '../../../../util/constant';
+import { PRODUCT_LINES, SERVICES, URLS } from '../../../../util/constant';
 import { DropdownColumnOption } from '../../../common/dropdown-menu/dropdown-menu.component';
 
 @Component( {
@@ -26,8 +26,8 @@ export class BottomNavComponent {
 
   URLS = URLS;
 
-  PRODUCTS: DropdownColumnOption[] = [];
-  SERVICES: DropdownColumnOption[] = [];
+  PRODUCT_LINES: DropdownColumnOption[] = PRODUCT_LINES;
+  SERVICES: DropdownColumnOption[] = SERVICES;
 
   constructor(
       private router: Router,
@@ -47,9 +47,6 @@ export class BottomNavComponent {
           }
         }
     );
-
-    this.PRODUCTS = PRODUCTS;
-    this.SERVICES = SERVICES;
   }
 
   logout() {

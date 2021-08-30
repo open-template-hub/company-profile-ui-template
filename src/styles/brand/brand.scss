@@ -1,3 +1,7 @@
+@import "brand-red";
+@import "brand-yellow";
+@import "brand-blue";
+
 :root, .light-theme {
   --brand-color: var(--brand-color-default-theme);
   --brand-color-lighter-1: #64be65;

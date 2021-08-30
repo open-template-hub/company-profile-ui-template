@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingService } from '../../../../service/loading/loading.service';
 import { ThemeService } from '../../../../service/theme/theme.service';
-import { PRODUCTS, SERVICES, URLS } from '../../../../util/constant';
+import { PRODUCT_LINES, SERVICES, URLS } from '../../../../util/constant';
 import { DropdownColumnOption } from '../../../common/dropdown-menu/dropdown-menu.component';
 
 @Component( {
@@ -17,8 +17,8 @@ export class LandingLayoutTopNavComponent {
   };
   URLS = URLS;
 
-  PRODUCTS: DropdownColumnOption[] = [];
-  SERVICES: DropdownColumnOption[] = [];
+  PRODUCT_LINES: DropdownColumnOption[] = PRODUCT_LINES;
+  SERVICES: DropdownColumnOption[] = SERVICES;
 
   constructor(
       private router: Router,
@@ -27,8 +27,5 @@ export class LandingLayoutTopNavComponent {
   ) {
     this.brand = this.themeService.brand;
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
-
-    this.PRODUCTS = PRODUCTS;
-    this.SERVICES = SERVICES;
   }
 }

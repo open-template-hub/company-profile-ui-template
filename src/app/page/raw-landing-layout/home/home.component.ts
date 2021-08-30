@@ -3,9 +3,10 @@ import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CountUp } from 'countup.js';
 import { TestimonialOption } from '../../../component/common/card/testimonial-card/testimonial-card.component';
+import { DropdownColumnOption } from '../../../component/common/dropdown-menu/dropdown-menu.component';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { ThemeService } from '../../../service/theme/theme.service';
-import { URLS } from '../../../util/constant';
+import { PRODUCT_LINES, URLS } from '../../../util/constant';
 
 @Component( {
   selector: 'app-home',
@@ -23,6 +24,7 @@ export class HomeComponent implements AfterViewInit {
   };
 
   URLS = URLS;
+  PRODUCT_LINES: DropdownColumnOption[] = PRODUCT_LINES;
 
   KILO = 1000;
   MILLION = this.KILO * this.KILO;

@@ -102,7 +102,7 @@ export const RIBBONS = {
   }
 };
 
-export const PRODUCTS: DropdownColumnOption[] = [
+export const PRODUCT_LINES: DropdownColumnOption[] = [
   {
     sectionTitle: 'Servers',
     menus: [
@@ -165,6 +165,18 @@ export const PRODUCTS: DropdownColumnOption[] = [
         brand: { brandLogo: './assets/production/brand-logo.png' },
         header: 'Mobile UI',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+        link: URLS.maintenance
+      }
+    ]
+  },
+  {
+    sectionTitle: 'Premium',
+    menus: [
+      {
+        backgroundColor: 'var(--brand-color-lighter-2)',
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/orchestration-server-logo.png?raw=true' },
+        header: 'Orchestration Server',
+        description: 'Orchestration Server Template for generic usage in Node.js',
         link: URLS.maintenance
       }
     ]

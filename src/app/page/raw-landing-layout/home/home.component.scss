@@ -25,6 +25,10 @@
   background-color: var(--brand-color-lighter-5);
 }
 
+.feature-img-wrapper {
+  padding: 30px;
+}
+
 .features h4, .features .feature {
   padding-left: 7vw;
   padding-right: 7vw;
@@ -190,17 +194,20 @@ app-swiper-wrapper {
   }
 
   .features {
-    padding-bottom: 300px;
-    padding-top: 150px;
+    padding-top: 200px;
   }
 
   .feature-img-wrapper {
-    max-width: 30%;
+    max-width: 20%;
     margin-right: 5vw;
   }
 
   .features h4 {
     padding-bottom: 40px;
+  }
+
+  .features-wrapper {
+    padding-bottom: 300px;
   }
 
   .register-wrapper {

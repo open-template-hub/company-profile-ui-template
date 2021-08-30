@@ -108,7 +108,7 @@ export const PRODUCTS: DropdownColumnOption[] = [
     menus: [
       {
         backgroundColor: 'var(--brand-color-lighter-2)',
-        brand: { brandLogo: './assets/production/brand-logo.png' },
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/auth-server-logo.png?raw=true' },
         header: 'Auth Server',
         description: 'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
         link: URLS.maintenance

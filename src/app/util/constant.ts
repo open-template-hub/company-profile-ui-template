@@ -115,7 +115,7 @@ export const PRODUCTS: DropdownColumnOption[] = [
       },
       {
         backgroundColor: 'var(--brand-color-lighter-2)',
-        brand: { brandLogo: './assets/production/brand-logo.png' },
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/payment-server-logo.png?raw=true' },
         header: 'Payment Server',
         description: 'Payment Server template integrated with Stripe and Coinbase Commerce payment systems',
         link: URLS.maintenance

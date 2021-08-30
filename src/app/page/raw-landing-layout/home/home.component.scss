@@ -41,7 +41,7 @@
   color: var(--brand-color);
 }
 
-.feature svg {
+.feature img {
   max-width: 100%;
   min-width: 40%;
   height: auto;
@@ -136,7 +136,7 @@ app-swiper-wrapper {
     padding-bottom: 30px;
   }
 
-  .feature svg {
+  .feature img {
     max-width: 360px;
     max-height: 270px;
     padding-bottom: 15px;
@@ -192,6 +192,11 @@ app-swiper-wrapper {
   .features {
     padding-bottom: 300px;
     padding-top: 150px;
+  }
+
+  .feature-img-wrapper {
+    max-width: 30%;
+    margin-right: 5vw;
   }
 
   .features h4 {

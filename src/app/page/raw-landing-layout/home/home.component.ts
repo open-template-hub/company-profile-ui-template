@@ -15,7 +15,7 @@ import { URLS } from '../../../util/constant';
 export class HomeComponent implements AfterViewInit {
 
   downloadCounter = 5100;
-  serverTypesCounter = 6;
+  serverTypesCounter = 5;
   uiTypesCounter = 3;
 
   brand = {

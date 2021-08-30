@@ -136,7 +136,7 @@ export const PRODUCTS: DropdownColumnOption[] = [
       },
       {
         backgroundColor: 'var(--brand-color-lighter-2)',
-        brand: { brandLogo: './assets/production/brand-logo.png' },
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/basic-info-server-logo.png?raw=true' },
         header: 'Basic Info Server',
         description: 'Basic Info Server Template for generic usage in Node.js',
         link: URLS.maintenance

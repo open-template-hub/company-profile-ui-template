@@ -122,7 +122,7 @@ export const PRODUCTS: DropdownColumnOption[] = [
       },
       {
         backgroundColor: 'var(--brand-color-lighter-2)',
-        brand: { brandLogo: './assets/production/brand-logo.png' },
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/file-storage-server-logo.png?raw=true' },
         header: 'File Storage Server',
         description: 'File Storage Server Template that supports uploading and downloading files from AWS S3',
         link: URLS.maintenance

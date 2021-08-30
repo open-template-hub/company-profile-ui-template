@@ -129,7 +129,7 @@ export const PRODUCTS: DropdownColumnOption[] = [
       },
       {
         backgroundColor: 'var(--brand-color-lighter-2)',
-        brand: { brandLogo: './assets/production/brand-logo.png' },
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/analytics-server-logo.png?raw=true' },
         header: 'Analytics Server',
         description: 'Analytics Server Template for generic usage in Node.js',
         link: URLS.maintenance

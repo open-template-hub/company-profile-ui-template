@@ -4,6 +4,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 
 export interface DropdownColumnOption {
   sectionTitle?: string,
+  sectionColor?: string
   menus: DropdownMenuOption[]
 }
 
@@ -31,18 +32,7 @@ export class DropdownMenuComponent implements OnInit {
   @Input() isDropdownOpen = false;
   @Input() toggleEvent: Observable<void>;
 
-  @Input() options: DropdownColumnOption[] = [
-    {
-      sectionTitle: 'Payment',
-      menus: [ {
-        backgroundColor: 'var(--brand-color-lighter-5)',
-        brand: { brandLogo: '' },
-        header: 'Open Template Hub',
-        description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
-        link: '/'
-      } ]
-    }
-  ];
+  @Input() options: DropdownColumnOption[] = [];
 
   @Input() menuType: 'top' | 'bottom' = 'top';
   @Input() isActive = false;

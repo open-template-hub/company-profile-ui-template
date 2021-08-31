@@ -172,6 +172,7 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
   },
   {
     sectionTitle: 'Premium',
+    sectionColor: 'var(--brand-color-yellow-theme)',
     menus: [
       {
         backgroundColor: 'var(--brand-color-yellow-theme-lighter-5)',

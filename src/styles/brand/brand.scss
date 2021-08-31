@@ -6,6 +6,7 @@
 @import "brand-blue";
 
 .default-theme {
+  // This is the class to change default theme
   @extend .green-theme;
   --brand-color-default-theme: var(--brand-color-green-theme);
 }

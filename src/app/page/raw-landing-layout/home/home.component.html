@@ -61,7 +61,10 @@
   <app-swiper-wrapper></app-swiper-wrapper>
   <div class="features-wrapper">
     <div *ngFor="let productLine of PRODUCT_LINES;" class="features">
-      <h4>{{ productLine.sectionTitle }}</h4>
+      <h4 *ngIf="productLine.sectionTitle" [style.color]="productLine.sectionColor ? productLine.sectionColor : ''">
+        {{ productLine.sectionTitle }}
+      </h4>
+
       <div *ngFor="let product of productLine.menus; let i = index; last as isLast" class="feature-wrapper"
            [class.feature-left]="i % 2 === 1" [class.feature-right]="i % 2 === 0">
         <div *ngIf="i % 2 === 0" class="layers">

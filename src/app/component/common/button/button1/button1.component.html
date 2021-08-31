@@ -6,7 +6,8 @@
         [class.always-light]="alwaysLight" [class.always-dark]="alwaysDark" [class.selected]="selected"
         [style.color]="themeColor ? 'var(--brand-color-' + themeColor + '-theme)' : ''"
         [style.border-color]="themeColor ? 'var(--brand-color-' + themeColor + '-theme)' : ''"
-        [disabled]="loading || disabled" [style.cursor]="cursor" [class.relative-to-parent]="relativeToParent">
+        [disabled]="loading || disabled" [style.cursor]="cursor" [class.relative-to-parent]="relativeToParent"
+        [ngClass]="themeColor + '-theme'">
   <i aria-hidden="true" *ngIf="icon" [class]="'fas fa-' + icon + ' fa-lg fa-fw'"></i>
   {{text}}
 </button>

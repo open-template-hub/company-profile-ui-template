@@ -22,7 +22,6 @@
 .feature-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: var(--brand-color-lighter-5);
 }
 
 .feature-img-wrapper {
@@ -36,13 +35,13 @@
 
 .features h4 {
   color: var(--brand-color);
+  font-weight: normal;
 }
 
 .features h5 {
   padding-top: 10px;
   padding-bottom: 10px;
   font-weight: normal;
-  color: var(--brand-color);
 }
 
 .feature img {
@@ -51,12 +50,12 @@
   height: auto;
 }
 
-.feature-left {
-  background-color: var(--brand-color-lighter-5);
+.feature-left .feature {
+  background-color: var(--background-color);
 }
 
-.feature-right {
-  background-color: var(--background-color);
+.feature-right .feature {
+  background-color: var(--brand-color-lighter-5);
 }
 
 .feature-notes {

@@ -1,0 +1,86 @@
+:root {
+  --brand-color-green-theme: #43b043;
+
+  --brand-color-green-theme-lighter-1: #64be65;
+  --brand-color-green-theme-lighter-2: #7ec87e;
+  --brand-color-green-theme-lighter-3: #a0d69f;
+  --brand-color-green-theme-lighter-4: #b9e1ba;
+  --brand-color-green-theme-lighter-5: #c9e8c9;
+  --brand-color-green-theme-lighter-6: #d5ecd5;
+  --brand-color-green-theme-lighter-7: #dff1df;
+  --brand-color-green-theme-lighter-8: #eaf6ea;
+  --brand-color-green-theme-lighter-9: #f7fbf8;
+
+  --brand-color-green-theme-darker-1: #51a951;
+  --brand-color-green-theme-darker-2: #579c57;
+  --brand-color-green-theme-darker-3: #5e8c5e;
+  --brand-color-green-theme-darker-4: #657f65;
+  --brand-color-green-theme-darker-5: #617061;
+  --brand-color-green-theme-darker-6: #616c61;
+  --brand-color-green-theme-darker-7: #586358;
+  --brand-color-green-theme-darker-8: #4e544d;
+  --brand-color-green-theme-darker-9: #444644;
+
+  --overlay-green-theme-lighter: rgba(67, 176, 67, 0.3);
+  --overlay-green-theme-darker: rgba(28, 76, 28, 0.6);
+
+  --brand-green-theme-background: #5cb05c;
+  --hover-green-theme: rgba(98, 150, 89, 0.2);
+
+  --color-alpha-green-theme-0-5: rgba(31, 108, 26, 0.5);
+  --color-alpha-green-theme-0-13: rgba(38, 108, 26, 0.13);
+}
+
+:root .green-theme, .light-theme.green-theme {
+
+  --brand-color: var(--brand-color-green-theme);
+
+  --brand-color-lighter-1: var(--brand-color-green-theme-lighter-1);
+  --brand-color-lighter-2: var(--brand-color-green-theme-lighter-2);
+  --brand-color-lighter-3: var(--brand-color-green-theme-lighter-3);
+  --brand-color-lighter-4: var(--brand-color-green-theme-lighter-4);
+  --brand-color-lighter-5: var(--brand-color-green-theme-lighter-5);
+  --brand-color-lighter-6: var(--brand-color-green-theme-lighter-6);
+  --brand-color-lighter-7: var(--brand-color-green-theme-lighter-7);
+  --brand-color-lighter-8: var(--brand-color-green-theme-lighter-8);
+  --brand-color-lighter-9: var(--brand-color-green-theme-lighter-9);
+
+  --overlay: var(--overlay-green-theme-lighter);
+
+  --brand-background: var(--brand-green-theme-background);
+  --hover: var(--hover-green-theme);
+
+  // shine animation colors
+  --color-alpha-0-5: var(--color-alpha-green-theme-0-5);
+  --color-alpha-0-13: var(--color-alpha-green-theme-0-13);
+}
+
+.dark-theme.green-theme {
+  --brand-color-lighter-1: var(--brand-color-green-theme-darker-1);
+  --brand-color-lighter-2: var(--brand-color-green-theme-darker-2);
+  --brand-color-lighter-3: var(--brand-color-green-theme-darker-3);
+  --brand-color-lighter-4: var(--brand-color-green-theme-darker-4);
+  --brand-color-lighter-5: var(--brand-color-green-theme-darker-5);
+  --brand-color-lighter-6: var(--brand-color-green-theme-darker-6);
+  --brand-color-lighter-7: var(--brand-color-green-theme-darker-7);
+  --brand-color-lighter-8: var(--brand-color-green-theme-darker-8);
+  --brand-color-lighter-9: var(--brand-color-green-theme-darker-9);
+
+  --overlay: var(--overlay-green-theme-darker);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root .green-theme {
+    --brand-color-lighter-1: var(--brand-color-green-theme-darker-1);
+    --brand-color-lighter-2: var(--brand-color-green-theme-darker-2);
+    --brand-color-lighter-3: var(--brand-color-green-theme-darker-3);
+    --brand-color-lighter-4: var(--brand-color-green-theme-darker-4);
+    --brand-color-lighter-5: var(--brand-color-green-theme-darker-5);
+    --brand-color-lighter-6: var(--brand-color-green-theme-darker-6);
+    --brand-color-lighter-7: var(--brand-color-green-theme-darker-7);
+    --brand-color-lighter-8: var(--brand-color-green-theme-darker-8);
+    --brand-color-lighter-9: var(--brand-color-green-theme-darker-9);
+
+    --overlay: var(--overlay-green-theme-darker);
+  }
+}

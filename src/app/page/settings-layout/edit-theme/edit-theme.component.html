@@ -61,6 +61,14 @@
                      [selected]="themeColorSetting === ThemeColorSettings.blue"
                      [themeColor]="ThemeColorSettings.blue">
         </app-button1>
+        <app-button1 [text]="'Green theme'" (click)="setThemeColorSetting(ThemeColorSettings.green)"
+                     [icon]="'tint'"
+                     [transparent]="true"
+                     [lighterContrast]="true"
+                     [isSleekButton]="true"
+                     [selected]="themeColorSetting === ThemeColorSettings.green"
+                     [themeColor]="ThemeColorSettings.green">
+        </app-button1>
       </div>
     </div>
   </app-card1>

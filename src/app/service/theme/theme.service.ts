@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { version } from '../../../environments/version';
+import { DarkLightSettings, ThemeColorSettings } from '../../util/constant';
 
 @Injectable( {
   providedIn: 'root'
@@ -40,7 +41,7 @@ export class ThemeService {
   constructor() {
     let themeColorSettingStorageItem = localStorage.getItem( 'themeColorSetting' ) ?
         localStorage.getItem( 'themeColorSetting' ) : sessionStorage.getItem( 'themeColorSetting' );
-    themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : 'auto';
+    themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : 'default';
 
     this.themeColorSettingSubject = new BehaviorSubject<string>( themeColorSettingStorageItem);
     this.themeColorSetting = this.themeColorSettingSubject.asObservable();
@@ -136,8 +137,8 @@ export class ThemeService {
     sessionStorage.removeItem( 'themeColorSetting' );
     sessionStorage.removeItem( 'sideNavClosed' );
 
-    this.darkLightSettingSubject.next( 'auto' );
-    this.themeColorSettingSubject.next( 'default' );
+    this.darkLightSettingSubject.next( DarkLightSettings.auto );
+    this.themeColorSettingSubject.next( ThemeColorSettings.default );
     this.sideNavClosedSubject.next( 'false' );
   }
 

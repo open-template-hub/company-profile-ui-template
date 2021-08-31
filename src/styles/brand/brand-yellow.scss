@@ -1,50 +1,86 @@
-:root .yellow-theme, .light-theme.yellow-theme {
-  --brand-color: var(--brand-color-yellow-theme);
-  --brand-color-lighter-1: #d8b957;
-  --brand-color-lighter-2: #dabd67;
-  --brand-color-lighter-3: #dcc378;
-  --brand-color-lighter-4: #dcc784;
-  --brand-color-lighter-5: #ddc88c;
-  --brand-color-lighter-6: #e6d6ac;
-  --brand-color-lighter-7: #ebdfbe;
-  --brand-color-lighter-8: #f3ecd9;
-  --brand-color-lighter-9: #faf8f0;
+:root {
+  --brand-color-yellow-theme: #d6b140;
 
-  --brand-background: #ab881e;
-  --hover: rgba(150, 130, 89, 0.2);
-  --overlay: rgba(214, 177, 64, 0.3);
+  --brand-color-yellow-theme-lighter-1: #d8b957;
+  --brand-color-yellow-theme-lighter-2: #dabd67;
+  --brand-color-yellow-theme-lighter-3: #dcc378;
+  --brand-color-yellow-theme-lighter-4: #dcc784;
+  --brand-color-yellow-theme-lighter-5: #ddc88c;
+  --brand-color-yellow-theme-lighter-6: #e6d6ac;
+  --brand-color-yellow-theme-lighter-7: #ebdfbe;
+  --brand-color-yellow-theme-lighter-8: #f3ecd9;
+  --brand-color-yellow-theme-lighter-9: #faf8f0;
+
+  --brand-color-yellow-theme-darker-1: #c4a64a;
+  --brand-color-yellow-theme-darker-2: #b29849;
+  --brand-color-yellow-theme-darker-3: #95824a;
+  --brand-color-yellow-theme-darker-4: #85754a;
+  --brand-color-yellow-theme-darker-5: #675d41;
+  --brand-color-yellow-theme-darker-6: #645e47;
+  --brand-color-yellow-theme-darker-7: #585344;
+  --brand-color-yellow-theme-darker-8: #4d4a41;
+  --brand-color-yellow-theme-darker-9: #424240;
+
+  --overlay-yellow-theme-lighter: rgba(214, 177, 64, 0.3);
+  --overlay-yellow-theme-darker: rgba(88, 73, 27, 0.6);
+
+  --brand-yellow-theme-background: #ab881e;
+  --hover-yellow-theme: rgba(150, 130, 89, 0.2);
+
+  --color-alpha-yellow-theme-0-5: rgba(108, 88, 26, 0.5);
+  --color-alpha-yellow-theme-0-13: rgba(108, 85, 26, 0.13);
+}
+
+:root .yellow-theme, .light-theme.yellow-theme {
+
+  --brand-color: var(--brand-color-yellow-theme);
+
+  --brand-color-lighter-1: var(--brand-color-yellow-theme-lighter-1);
+  --brand-color-lighter-2: var(--brand-color-yellow-theme-lighter-2);
+  --brand-color-lighter-3: var(--brand-color-yellow-theme-lighter-3);
+  --brand-color-lighter-4: var(--brand-color-yellow-theme-lighter-4);
+  --brand-color-lighter-5: var(--brand-color-yellow-theme-lighter-5);
+  --brand-color-lighter-6: var(--brand-color-yellow-theme-lighter-6);
+  --brand-color-lighter-7: var(--brand-color-yellow-theme-lighter-7);
+  --brand-color-lighter-8: var(--brand-color-yellow-theme-lighter-8);
+  --brand-color-lighter-9: var(--brand-color-yellow-theme-lighter-9);
+
+  --overlay: var(--overlay-yellow-theme-lighter);
+
+  --brand-background: var(--brand-yellow-theme-background);
+  --hover: var(--hover-yellow-theme);
 
   // shine animation colors
-  --color-alpha-0-5: rgba(108, 88, 26, 0.5);
-  --color-alpha-0-13: rgba(108, 85, 26, 0.13);
+  --color-alpha-0-5: var(--color-alpha-yellow-theme-0-5);
+  --color-alpha-0-13: var(--color-alpha-yellow-theme-0-13);
 }
 
 .dark-theme.yellow-theme {
-  --brand-color-lighter-1: #c4a64a;
-  --brand-color-lighter-2: #b29849;
-  --brand-color-lighter-3: #95824a;
-  --brand-color-lighter-4: #85754a;
-  --brand-color-lighter-5: #675d41;
-  --brand-color-lighter-6: #645e47;
-  --brand-color-lighter-7: #585344;
-  --brand-color-lighter-8: #4d4a41;
-  --brand-color-lighter-9: #424240;
+  --brand-color-lighter-1: var(--brand-color-yellow-theme-darker-1);
+  --brand-color-lighter-2: var(--brand-color-yellow-theme-darker-2);
+  --brand-color-lighter-3: var(--brand-color-yellow-theme-darker-3);
+  --brand-color-lighter-4: var(--brand-color-yellow-theme-darker-4);
+  --brand-color-lighter-5: var(--brand-color-yellow-theme-darker-5);
+  --brand-color-lighter-6: var(--brand-color-yellow-theme-darker-6);
+  --brand-color-lighter-7: var(--brand-color-yellow-theme-darker-7);
+  --brand-color-lighter-8: var(--brand-color-yellow-theme-darker-8);
+  --brand-color-lighter-9: var(--brand-color-yellow-theme-darker-9);
 
-  --overlay: rgba(88, 73, 27, 0.6);
+  --overlay: var(--overlay-yellow-theme-darker);
 }
 
 @media (prefers-color-scheme: dark) {
   :root .yellow-theme {
-    --brand-color-lighter-1: #c4a64a;
-    --brand-color-lighter-2: #b29849;
-    --brand-color-lighter-3: #95824a;
-    --brand-color-lighter-4: #85754a;
-    --brand-color-lighter-5: #675d41;
-    --brand-color-lighter-6: #645e47;
-    --brand-color-lighter-7: #585344;
-    --brand-color-lighter-8: #4d4a41;
-    --brand-color-lighter-9: #424240;
+    --brand-color-lighter-1: var(--brand-color-yellow-theme-darker-1);
+    --brand-color-lighter-2: var(--brand-color-yellow-theme-darker-2);
+    --brand-color-lighter-3: var(--brand-color-yellow-theme-darker-3);
+    --brand-color-lighter-4: var(--brand-color-yellow-theme-darker-4);
+    --brand-color-lighter-5: var(--brand-color-yellow-theme-darker-5);
+    --brand-color-lighter-6: var(--brand-color-yellow-theme-darker-6);
+    --brand-color-lighter-7: var(--brand-color-yellow-theme-darker-7);
+    --brand-color-lighter-8: var(--brand-color-yellow-theme-darker-8);
+    --brand-color-lighter-9: var(--brand-color-yellow-theme-darker-9);
 
-    --overlay: rgba(88, 73, 27, 0.6);
+    --overlay: var(--overlay-yellow-theme-darker);
   }
 }

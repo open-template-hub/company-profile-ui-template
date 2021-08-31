@@ -63,8 +63,18 @@
     <div *ngFor="let productLine of PRODUCT_LINES;" class="features">
       <h4>{{ productLine.sectionTitle }}</h4>
       <div *ngFor="let product of productLine.menus; let i = index; last as isLast" class="feature-wrapper"
-           [class.feature-right]="i % 2 === 0" [class.feature-left]="i % 2 === 1">
-        <div class="feature">
+           [class.feature-left]="i % 2 === 1" [class.feature-right]="i % 2 === 0">
+        <div *ngIf="i % 2 === 0" class="layers">
+          <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
+            <path d="M 0,150 1000,0 v 150 z" [style]="'fill: ' + product.backgroundColor + ';'"></path>
+          </svg>
+        </div>
+        <div *ngIf="i % 2 === 1" class="layers">
+          <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
+            <path d="M 1000,0 0,0 v 150 z" [style]="'fill: ' + product.backgroundColor + ';'"></path>
+          </svg>
+        </div>
+        <div class="feature" [style.background-color]="i % 2 == 0 ? product.backgroundColor : ''">
           <a class="feature-img-wrapper" [href]="product.link">
             <img class="server-logo"
                  [src]="product.brand.brandLogo"
@@ -79,14 +89,10 @@
             </h6>
           </div>
         </div>
-        <div *ngIf="i % 2 === 0 && !isLast" class="layers">
+
+        <div *ngIf="i % 2 === 0 && isLast" class="layers">
           <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-            <path d="M 0,150 1000,0 v 150 z" style="fill: var(--brand-color-lighter-5);"></path>
-          </svg>
-        </div>
-        <div *ngIf="i % 2 === 1" class="layers">
-          <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-            <path d="M 0,150 1000,0 v 150 z" style="fill: var(--background-color);"></path>
+            <path d="M 1000,0 0,0 v 150 z" [style]="'fill: ' + product.backgroundColor + ';'"></path>
           </svg>
         </div>
       </div>

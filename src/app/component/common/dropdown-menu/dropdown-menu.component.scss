@@ -8,7 +8,7 @@
   background-color: var(--card);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
+  padding: 12px 0 0;
   z-index: 10;
   top: 61px;
 }
@@ -33,7 +33,7 @@
 .dropdown-item {
   display: flex;
   width: 300px;
-  padding: 10px;
+  padding: 15px;
   cursor: pointer;
 }
 
@@ -61,8 +61,21 @@
 }
 
 .section-column .section-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-column .section-header h4 {
+  color: var(--brand-color);
+  font-weight: 500;
+}
+
+.section-column .section-header p {
   color: var(--lighter-contrast);
-  margin-left: 69px;
+  padding: 0 10px;
+  height: 32px;
 }
 
 .dropdown-content.bottom .section-column {

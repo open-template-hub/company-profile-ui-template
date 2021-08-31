@@ -4,12 +4,13 @@ import { ThemeService } from '../../../service/theme/theme.service';
 
 export interface DropdownColumnOption {
   sectionTitle?: string,
+  sectionDescription?: string,
   sectionColor?: string
   menus: DropdownMenuOption[]
 }
 
 export interface DropdownMenuOption {
-  backgroundColor: string,
+  backgroundColor?: string,
   brand: { brandLogo: string },
   header: string,
   description: string,

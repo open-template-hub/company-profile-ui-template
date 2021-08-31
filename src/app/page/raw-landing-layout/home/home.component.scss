@@ -29,20 +29,14 @@
   padding-right: 2vw;
 }
 
-.features h4, .features .feature {
+.product-line-header, .features .feature {
   padding-left: 7vw;
   padding-right: 7vw;
 }
 
-.features h4 {
+.product-line-header h4 {
+  font-weight: normal;
   color: var(--brand-color);
-  font-weight: normal;
-}
-
-.features h5 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: normal;
 }
 
 .feature img {
@@ -182,7 +176,7 @@ app-swiper-wrapper {
     padding-bottom: 6vh;
   }
 
-  .features h4 {
+  .product-line-header {
     padding-bottom: 20px;
     text-align: center;
   }
@@ -201,7 +195,7 @@ app-swiper-wrapper {
     max-width: 20%;
   }
 
-  .features h4 {
+  .product-line-header {
     padding-bottom: 40px;
   }
 

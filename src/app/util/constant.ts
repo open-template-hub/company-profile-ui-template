@@ -106,37 +106,33 @@ export const RIBBONS = {
 export const PRODUCT_LINES: DropdownColumnOption[] = [
   {
     sectionTitle: 'Servers',
+    sectionDescription: 'Micro servers for your needs',
     menus: [
       {
-        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/auth-server-logo.png?raw=true' },
         header: 'Auth Server',
         description: 'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
         link: URLS.maintenance
       },
       {
-        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/payment-server-logo.png?raw=true' },
         header: 'Payment Server',
         description: 'Payment Server template integrated with Stripe and Coinbase Commerce payment systems',
         link: URLS.maintenance
       },
       {
-        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/file-storage-server-logo.png?raw=true' },
         header: 'File Storage Server',
         description: 'File Storage Server Template that supports uploading and downloading files from AWS S3',
         link: URLS.maintenance
       },
       {
-        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/analytics-server-logo.png?raw=true' },
         header: 'Analytics Server',
         description: 'Analytics Server Template for generic usage in Node.js',
         link: URLS.maintenance
       },
       {
-        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/basic-info-server-logo.png?raw=true' },
         header: 'Basic Info Server',
         description: 'Basic Info Server Template for generic usage in Node.js',
@@ -146,23 +142,21 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
   },
   {
     sectionTitle: 'User Interfaces',
+    sectionDescription: 'Front-ends for your needs',
     menus: [
       {
-        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: './assets/production/brand-logo.png' },
         header: 'Company Profile UI',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         link: URLS.maintenance
       },
       {
-        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: './assets/production/brand-logo.png' },
         header: 'Web UI',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         link: URLS.maintenance
       },
       {
-        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: './assets/production/brand-logo.png' },
         header: 'Mobile UI',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
@@ -172,10 +166,11 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
   },
   {
     sectionTitle: 'Premium',
+    sectionDescription: 'Get more things done with our premium solutions',
     sectionColor: 'var(--brand-color-yellow-theme)',
     menus: [
       {
-        backgroundColor: 'var(--brand-color-yellow-theme-lighter-5)',
+        backgroundColor: 'var(--hover-yellow-theme)',
         brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/orchestration-server-logo.png?raw=true' },
         header: 'Orchestration Server',
         description: 'Orchestration Server Template for generic usage in Node.js',
@@ -187,23 +182,22 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
 
 export const SERVICES: DropdownColumnOption[ ] = [
   {
+    sectionTitle: 'Services',
+    sectionDescription: 'Services that we provide',
     menus: [
       {
-        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: './assets/production/brand-logo.png' },
         header: 'Software Consultancy',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         link: URLS.maintenance
       },
       {
-        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: './assets/production/brand-logo.png' },
         header: 'Cloud Integration',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         link: URLS.maintenance
       },
       {
-        backgroundColor: 'var(--brand-color-lighter-5)',
         brand: { brandLogo: './assets/production/brand-logo.png' },
         header: 'Quality Insurance',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',

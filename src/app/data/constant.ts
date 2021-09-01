@@ -106,7 +106,7 @@ export const RIBBONS = {
 export const PRODUCT_LINES: DropdownColumnOption[] = [
   {
     sectionTitle: 'Servers',
-    sectionDescription: 'Micro servers for your needs',
+    sectionDescription: 'Micro server solutions for your needs',
     menus: [
       {
         brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/auth-server-logo.png?raw=true' },
@@ -142,7 +142,7 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
   },
   {
     sectionTitle: 'User Interfaces',
-    sectionDescription: 'Front-ends for your needs',
+    sectionDescription: 'User interface solutions for your needs',
     menus: [
       {
         brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user%20interfaces/web-ui-logo.png?raw=true' },
@@ -157,7 +157,7 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: './assets/production/brand-logo.png' },
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user%20interfaces/mobile-ui-logo.png?raw=true' },
         header: 'Mobile UI',
         description: 'Mobile UI Template for generic usage in React Native',
         link: URLS.maintenance

@@ -81,3 +81,18 @@
     transform: scale(1, 1) translateY(0);
   }
 }
+
+
+@keyframes bottom-slide {
+  0% {
+    bottom: -100%;
+    transition-property: bottom;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+  }
+
+  100% {
+    bottom: 55px;
+    transition-property: bottom;
+  }
+}

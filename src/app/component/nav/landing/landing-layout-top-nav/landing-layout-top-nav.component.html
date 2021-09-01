@@ -4,14 +4,14 @@
     <h2>Open Template Hub</h2>
   </a>
   <div class="left-item-wrapper">
-    <a>
-      <app-dropdown-menu [options]="PRODUCT_LINES">
+    <a (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
+      <app-dropdown-menu #dropdownMenuProducts [options]="PRODUCT_LINES">
         <span>Products</span>
         <i aria-hidden="true" class="material-icons">expand_more</i>
       </app-dropdown-menu>
     </a>
-    <a>
-      <app-dropdown-menu [options]="SERVICES">
+    <a (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()">
+      <app-dropdown-menu #dropdownMenuServices [options]="SERVICES">
         <span>Services</span>
         <i aria-hidden="true" class="material-icons">expand_more</i>
       </app-dropdown-menu>

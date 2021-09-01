@@ -1,11 +1,11 @@
 <div class="dropdown">
-  <div *ngIf="menuType === 'top'" #toggleButton class="ng-content-area">
+  <div #toggleButton class="ng-content-area">
     <ng-content (click)="toggleDropdown()"></ng-content>
   </div>
 
-  <div *ngIf="isDropdownOpen" #dropdownContent class="dropdown-content" [class.bottom]="menuType === 'bottom'">
-    <i *ngIf="menuType === 'top'" aria-hidden="true" class="fas fa-caret-up fa-lg fa-fw"></i>
-    <i *ngIf="menuType === 'bottom'" (click)="toggleDropdown()" aria-hidden="true" class="fas fa-times fa-lg fa-fw"></i>
+  <div *ngIf="isDropdownOpen" #dropdownContent class="dropdown-content">
+    <i aria-hidden="true" class="dropdown-caret fas fa-caret-up fa-lg fa-fw"></i>
+    <i aria-hidden="true" class="dropdown-cross fas fa-times fa-lg fa-fw" (click)="toggleDropdown()"></i>
 
     <div class="section-column" *ngFor="let column of options">
       <div *ngIf="column.sectionTitle" class="section-header">

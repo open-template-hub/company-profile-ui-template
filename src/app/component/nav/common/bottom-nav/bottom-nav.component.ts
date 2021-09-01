@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { AuthToken } from '../../../../model/AuthToken';
@@ -21,13 +21,13 @@ export class BottomNavComponent {
   openSettings = false;
   openOtherSettings = false;
 
-  productToggleEvent: Subject<void> = new Subject<void>();
-  serviceToggleEvent: Subject<void> = new Subject<void>();
-
   URLS = URLS;
 
   PRODUCT_LINES: DropdownColumnOption[] = PRODUCT_LINES;
   SERVICES: DropdownColumnOption[] = SERVICES;
+
+  @ViewChild( 'dropdownMenuProducts' ) dropdownMenuProducts: ElementRef;
+  @ViewChild( 'dropdownMenuServices' ) dropdownMenuServices: ElementRef;
 
   constructor(
       private router: Router,

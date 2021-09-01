@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingService } from '../../../../service/loading/loading.service';
 import { ThemeService } from '../../../../service/theme/theme.service';
@@ -19,6 +19,9 @@ export class LandingLayoutTopNavComponent {
 
   PRODUCT_LINES: DropdownColumnOption[] = PRODUCT_LINES;
   SERVICES: DropdownColumnOption[] = SERVICES;
+
+  @ViewChild( 'dropdownMenuProducts' ) dropdownMenuProducts: ElementRef;
+  @ViewChild( 'dropdownMenuServices' ) dropdownMenuServices: ElementRef;
 
   constructor(
       private router: Router,

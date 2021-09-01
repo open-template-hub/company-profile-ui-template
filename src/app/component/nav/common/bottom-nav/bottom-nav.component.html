@@ -1,6 +1,6 @@
-<app-dropdown-menu [toggleEvent]="productToggleEvent.asObservable()" [menuType]="'bottom'" [options]="PRODUCT_LINES">
+<app-dropdown-menu #dropdownMenuProducts [options]="PRODUCT_LINES">
 </app-dropdown-menu>
-<app-dropdown-menu [toggleEvent]="serviceToggleEvent.asObservable()" [menuType]="'bottom'" [options]="SERVICES">
+<app-dropdown-menu #dropdownMenuServices [options]="SERVICES">
 </app-dropdown-menu>
 <nav class="bottom-nav">
   <a (click)="closeSettings()" *ngIf="openSettings" href="javascript:void(0)">
@@ -9,13 +9,13 @@
         Back
     </span>
   </a>
-  <a *ngIf="!openSettings" (click)="productToggleEvent.next()">
+  <a *ngIf="!openSettings" (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-server fa-fw'"></i>
     <span>
         Products
     </span>
   </a>
-  <a *ngIf="!openSettings" (click)="serviceToggleEvent.next()">
+  <a *ngIf="!openSettings" (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-handshake fa-fw'"></i>
     <span>
         Services

@@ -95,26 +95,6 @@
           </app-label-with-icon-data>
         </div>
       </div>
-      <div *ngIf="userInfo?.payload?.userProfileActivated &&
-      (userInfo?.payload?.donationAccounts?.buymeacoffee || userInfo?.payload?.donationAccounts?.patreon)"
-           class="column-second">
-        <div class="section-header">
-          <p class="dim">Donation</p>
-          <hr/>
-        </div>
-        <div class="section-output donation-accounts" fxLayout="column" fxLayoutAlign="center center">
-          <app-social-button (click)="goToUrl(userInfo.payload.donationAccounts.buymeacoffee)"
-                             *ngIf="userInfo?.payload?.donationAccounts?.buymeacoffee"
-                             [brand]="environment.donation.buymeacoffee.cssClass" [flexStart]="true"
-                             [isDonationButtonStyle]="true" [localImage]="environment.donation.buymeacoffee.logo"
-                             [text]="'Buy Me A Coffee'"></app-social-button>
-          <app-social-button (click)="goToUrl(userInfo.payload.donationAccounts.patreon)"
-                             *ngIf="userInfo?.payload?.donationAccounts?.patreon"
-                             [brand]="'patreon'" [brand]="environment.donation.patreon.cssClass" [flexStart]="true"
-                             [isDonationButtonStyle]="true"
-                             [text]="'Patreon'"></app-social-button>
-        </div>
-      </div>
     </div>
   </app-card1>
   <!--END OF DASHBOARD CARD-->

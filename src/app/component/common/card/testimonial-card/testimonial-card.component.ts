@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
-import { environment } from '../../../../../environments/environment';
-import { ThemeService } from '../../../../service/theme/theme.service';
+import { environment } from 'src/environments/environment';
+import { environmentCommon } from 'src/environments/environment-common';
 import { URLS } from '../../../../data/constant';
+import { ThemeService } from '../../../../service/theme/theme.service';
 
 export interface TestimonialOption {
   review: string,
@@ -19,8 +20,12 @@ export interface TestimonialOption {
   styleUrls: [ './testimonial-card.component.scss' ]
 } )
 export class TestimonialCardComponent {
+
   URLS = URLS;
+
   environment = environment;
+  environmentCommon = environmentCommon;
+
   brand = {
     brandLogo: '',
   };

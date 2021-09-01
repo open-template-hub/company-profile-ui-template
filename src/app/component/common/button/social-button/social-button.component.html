@@ -1,8 +1,12 @@
-<button (click)="selected = !selected" [class.circle]="circle" [class.donation-button]="isDonationButtonStyle"
-        [class.no-text]="noTextStyle" [class.small-logo]="isSmallLogo"
-        [class.social-button-checked]="selected && loading" [class.social-button-with-text]="text"
+<button (click)="selected = !selected"
+        [class.circle]="circle"
+        [class.no-text]="noTextStyle"
+        [class.small-logo]="isSmallLogo"
+        [class.social-button-checked]="selected && loading"
+        [class.social-button-with-text]="text"
         [class]="flexStart ? 'flex-start' : 'flex-center'"
-        [disabled]="loading" [ngClass]="brand"
+        [disabled]="loading"
+        [ngClass]="brand"
         class="social-button rounded-box">
   <i aria-hidden="true" *ngIf="!localImage" [class]="'fab fa-' + (placeholderIcon ? placeholderIcon : brand)"></i>
   <img *ngIf="localImage" alt="local image" src="{{localImage}}"/>

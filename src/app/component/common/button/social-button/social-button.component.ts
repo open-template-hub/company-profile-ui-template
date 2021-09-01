@@ -14,7 +14,6 @@ export class SocialButtonComponent {
   @Input() localImage = '';
   @Input() circle = false;
   @Input() flexStart = false;
-  @Input() isDonationButtonStyle = false;
   @Input() noTextStyle = false;
   @Input() isSmallLogo = false;
 

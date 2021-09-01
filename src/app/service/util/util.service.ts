@@ -5,7 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class UtilService {
 
-  constructor() { }
+  constructor() {
+    /* Intentionally blank */
+  }
 
   delay( ms: number ) {
     return new Promise( resolve => setTimeout( resolve, ms ) );

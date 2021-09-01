@@ -1,12 +1,5 @@
 @import "../../../../styles/theme/themes";
 
-.donation-accounts app-social-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .interest-list app-label-with-icon-data {
   margin: 5px;
   min-width: -webkit-fit-content;
@@ -115,10 +108,6 @@
     width: -webkit-fill-available;
   }
 
-  .donation-accounts app-social-button {
-    width: 20vw;
-  }
-
   .interest-list {
     flex-direction: row;
     place-content: center flex-start;
@@ -173,10 +162,6 @@
     display: flex;
     place-content: center;
     align-items: center;
-  }
-
-  .donation-accounts app-social-button {
-    width: 100%;
   }
 
   .interest-list {

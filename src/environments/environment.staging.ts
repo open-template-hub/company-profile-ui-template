@@ -6,18 +6,7 @@ export const environment = {
 
   clientUrl: 'https://oth-web-app.herokuapp.com',
 
-  eventImageUrl: 'https://oth-web-app.herokuapp.com/assets/brand-logo-blue.png',
-
   mockDataEnabled: true,
-
-  oth: {
-    social: {
-      twitter: 'opentemplatehub',
-      linkedin: 'open-template-hub',
-      github: 'open-template-hub',
-      productHunt: '@open_template_hub'
-    }
-  },
 
   social: {
     twitter: {
@@ -100,16 +89,6 @@ export const environment = {
     googleCalendar: {
       logo: './assets/common/social/google-calendar-logo.png',
       cssClass: 'google-calendar'
-    }
-  },
-
-  donation: {
-    buymeacoffee: {
-      cssClass: 'buymeacoffee',
-      logo: './assets/common/social/buymeacoffee-logo.png'
-    },
-    patreon: {
-      cssClass: 'patreon'
     }
   },
 

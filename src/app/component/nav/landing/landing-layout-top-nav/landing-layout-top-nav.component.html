@@ -8,13 +8,13 @@
     <a (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
       <app-dropdown-menu #dropdownMenuProducts [options]="PRODUCT_LINES">
         <span>Products</span>
-        <i aria-hidden="true" class="material-icons">expand_more</i>
+        <i aria-hidden="true" class="material-icons">{{dropdownMenuProducts.isDropdownOpen ? 'expand_less' : 'expand_more'}}</i>
       </app-dropdown-menu>
     </a>
     <a (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()">
       <app-dropdown-menu #dropdownMenuServices [options]="SERVICES">
         <span>Services</span>
-        <i aria-hidden="true" class="material-icons">expand_more</i>
+        <i aria-hidden="true" class="material-icons">{{dropdownMenuServices.isDropdownOpen ? 'expand_less' : 'expand_more'}}</i>
       </app-dropdown-menu>
     </a>
     <a routerLink="{{URLS.pricing}}"

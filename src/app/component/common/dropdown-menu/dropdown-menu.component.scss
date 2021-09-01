@@ -88,6 +88,10 @@
   display: flex;
 }
 
+.section-column {
+  border-right: 0.5px dotted var(--contrast);
+}
+
 @media only screen and (max-width: 999px) {
   .dropdown-content {
     display: block;

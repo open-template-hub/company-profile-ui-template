@@ -17,7 +17,7 @@ Open Template Hub - Company Profile UI Template v2
 [![Webhint](https://img.shields.io/badge/Webhint-Results-blueviolet.svg?style=for-the-badge&logo=webhint)](https://webhint.io/scanner/f81328ff-c11d-4354-aed0-cbed1fab0a01)
 [![BTC](https://img.shields.io/badge/Donate-BTC-ORANGE?color=F5922F&style=for-the-badge&logo=bitcoin)](https://commerce.coinbase.com/checkout/8313af5f-de48-498d-b2cb-d98819ca7d5e)
 
-Company Profile UI Template in Angular
+Company Profile UI Template for generic usage in Angular
 
 <h3 align="center">
   For demo click the image below ⬇️

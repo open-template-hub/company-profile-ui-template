@@ -145,21 +145,21 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
     sectionDescription: 'Front-ends for your needs',
     menus: [
       {
-        brand: { brandLogo: './assets/production/brand-logo.png' },
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user%20interfaces/web-ui-logo.png?raw=true' },
         header: 'Company Profile UI',
-        description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+        description: 'Company Profile UI Template for generic usage in Angular',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: './assets/production/brand-logo.png' },
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user%20interfaces/web-ui-logo.png?raw=true' },
         header: 'Web UI',
-        description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+        description: 'Web UI Template for generic usage in Angular',
         link: URLS.maintenance
       },
       {
         brand: { brandLogo: './assets/production/brand-logo.png' },
         header: 'Mobile UI',
-        description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+        description: 'Mobile UI Template for generic usage in React Native',
         link: URLS.maintenance
       }
     ]

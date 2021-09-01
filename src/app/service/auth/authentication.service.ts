@@ -2,7 +2,7 @@ import { HttpClient, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { DarkLightSettings, ThemeColorSettings } from '../../util/constant';
+import { DarkLightSettings, ThemeColorSettings } from '../../data/constant';
 import { environment } from '../../../environments/environment';
 import { AuthToken } from '../../model/AuthToken';
 import { BasicInfoService } from '../basic-info/basic-info.service';

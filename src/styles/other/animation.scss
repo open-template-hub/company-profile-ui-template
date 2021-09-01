@@ -82,8 +82,7 @@
   }
 }
 
-
-@keyframes bottom-slide {
+@keyframes bottom-slide-in {
   0% {
     bottom: -100%;
     transition-property: bottom;
@@ -92,7 +91,21 @@
   }
 
   100% {
-    bottom: 55px;
+    bottom: calc(55px + env(safe-area-inset-bottom));
+    transition-property: bottom;
+  }
+}
+
+@keyframes bottom-slide-out {
+  0% {
+    bottom: calc(55px + env(safe-area-inset-bottom));
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+    transition-property: bottom;
+  }
+
+  100% {
+    bottom: -100%;
     transition-property: bottom;
   }
 }

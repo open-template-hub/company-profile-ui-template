@@ -15,7 +15,7 @@ import { FollowerService } from '../../../service/follower/follower.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { UserActivityService } from '../../../service/user-activity/user-activity.service';
-import { EventTypes, PROFILE_IMG, URLS } from '../../../util/constant';
+import { EventTypes, PROFILE_IMG, URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-dashboard',

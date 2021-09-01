@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { environment } from '../../../../../environments/environment';
 import { ThemeService } from '../../../../service/theme/theme.service';
-import { URLS } from '../../../../util/constant';
+import { URLS } from '../../../../data/constant';
 
 export interface TestimonialOption {
   review: string,

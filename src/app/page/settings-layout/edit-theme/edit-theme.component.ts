@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '../../../service/theme/theme.service';
-import { DarkLightSettings, ThemeColorSettings } from '../../../util/constant';
+import { DarkLightSettings, ThemeColorSettings } from '../../../data/constant';
 
 @Component( {
   selector: 'app-edit-theme',

@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { ThemeService } from '../../../service/theme/theme.service';
+import { UtilService } from '../../../service/util/util.service';
 
 export interface DropdownColumnOption {
   sectionTitle?: string,
@@ -33,13 +34,14 @@ export class DropdownMenuComponent {
 
   @Input() options: DropdownColumnOption[] = [];
 
-  @Input() isActive = false;
+  closeDropdownInternalClicked = false;
 
   @ViewChild( 'toggleButton' ) toggleButton: ElementRef;
   @ViewChild( 'dropdownContent' ) dropdownContent: ElementRef;
 
   constructor(
-      private themeService: ThemeService
+      private themeService: ThemeService,
+      private utilService: UtilService
   ) {
     this.brand = this.themeService.brand;
   }
@@ -50,5 +52,14 @@ export class DropdownMenuComponent {
 
   closeDropdown() {
     this.isDropdownOpen = false;
+    this.closeDropdownInternalClicked = false;
+  }
+
+  closeDropDownInternal() {
+    this.closeDropdownInternalClicked = true;
+    this.utilService.delay( 500 ).then( () => {
+      this.closeDropdown();
+      console.log('closed');
+    } );
   }
 }

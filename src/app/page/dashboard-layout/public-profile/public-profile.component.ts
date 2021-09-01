@@ -14,7 +14,7 @@ import { InformationService } from '../../../service/information/information.ser
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ThemeService } from '../../../service/theme/theme.service';
 import { UserActivityService } from '../../../service/user-activity/user-activity.service';
-import { PROFILE_IMG, URLS } from '../../../util/constant';
+import { PROFILE_IMG, URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-public-profile',

@@ -6,7 +6,7 @@ import { AuthToken } from '../../model/AuthToken';
 import { AuthenticationService } from '../../service/auth/authentication.service';
 import { InformationService } from '../../service/information/information.service';
 import { LoadingService } from '../../service/loading/loading.service';
-import { ResponseCode } from '../../util/constant';
+import { ResponseCode } from '../../data/constant';
 
 @Injectable()
 export class ResponseInterceptor implements HttpInterceptor {

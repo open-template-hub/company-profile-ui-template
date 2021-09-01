@@ -10,7 +10,7 @@ import { FileStorageService } from '../../../service/file-storage/file-storage.s
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ToastService } from '../../../service/toast/toast.service';
-import { URLS } from '../../../util/constant';
+import { URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-login',

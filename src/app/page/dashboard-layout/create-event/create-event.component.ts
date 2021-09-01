@@ -9,7 +9,7 @@ import { EventService } from '../../../service/event/event.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ToastService } from '../../../service/toast/toast.service';
-import { RIBBONS, URLS } from '../../../util/constant';
+import { RIBBONS, URLS } from '../../../data/constant';
 import { environment } from '../../../../environments/environment';
 
 @Component( {

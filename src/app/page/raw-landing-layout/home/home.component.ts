@@ -6,7 +6,7 @@ import { TestimonialOption } from '../../../component/common/card/testimonial-ca
 import { DropdownColumnOption } from '../../../component/common/dropdown-menu/dropdown-menu.component';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { ThemeService } from '../../../service/theme/theme.service';
-import { PRODUCT_LINES, URLS } from '../../../util/constant';
+import { PRODUCT_LINES, URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-home',

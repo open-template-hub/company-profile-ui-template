@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { RIBBONS, URLS } from '../../../../util/constant';
+import { RIBBONS, URLS } from '../../../../data/constant';
 
 export interface PricingOption {
   title: string,

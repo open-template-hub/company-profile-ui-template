@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { URLS } from '../../../util/constant';
+import { URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-terms',

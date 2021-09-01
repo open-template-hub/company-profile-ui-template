@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../../../../environments/environment';
 import { ThemeService } from '../../../../service/theme/theme.service';
-import { URLS } from '../../../../util/constant';
+import { URLS } from '../../../../data/constant';
 
 @Component( {
   selector: 'app-footer',

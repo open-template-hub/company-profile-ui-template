@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingService } from '../../service/loading/loading.service';
 import { ThemeService } from '../../service/theme/theme.service';
-import { URLS } from '../../util/constant';
+import { URLS } from '../../data/constant';
 
 @Component( {
   selector: 'app-landing-layout',

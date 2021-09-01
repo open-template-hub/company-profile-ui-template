@@ -5,7 +5,7 @@ import { AuthToken } from '../../../../model/AuthToken';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
 import { LoadingService } from '../../../../service/loading/loading.service';
-import { PRODUCT_LINES, SERVICES, URLS } from '../../../../util/constant';
+import { PRODUCT_LINES, SERVICES, URLS } from '../../../../data/constant';
 import { DropdownColumnOption } from '../../../common/dropdown-menu/dropdown-menu.component';
 
 @Component( {

@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingService } from '../../../../service/loading/loading.service';
 import { ThemeService } from '../../../../service/theme/theme.service';
-import { PRODUCT_LINES, SERVICES, URLS } from '../../../../util/constant';
+import { PRODUCT_LINES, SERVICES, URLS } from '../../../../data/constant';
 import { DropdownColumnOption } from '../../../common/dropdown-menu/dropdown-menu.component';
 
 @Component( {

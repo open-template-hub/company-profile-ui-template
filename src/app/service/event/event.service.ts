@@ -7,7 +7,7 @@ import { environment } from '../../../environments/environment';
 import { attendedEventsData, showroomEvents } from '../../mockData/events';
 import { EventModel } from '../../model/EventModel';
 import { CountModel } from '../../model/CountModel';
-import { EventTypes } from '../../util/constant';
+import { EventTypes } from '../../data/constant';
 import { CategoryService } from '../category/category.service';
 
 @Injectable( {

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { URLS } from '../../../../util/constant';
+import { URLS } from '../../../../data/constant';
 
 @Component( {
   selector: 'app-label-with-icon-data',

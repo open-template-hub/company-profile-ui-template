@@ -2,7 +2,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { CategoryService } from '../../../service/category/category.service';
 import { EventService } from '../../../service/event/event.service';
-import { URLS } from '../../../util/constant';
+import { URLS } from '../../../data/constant';
 
 @Component({
   selector: 'app-search',

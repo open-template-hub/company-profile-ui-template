@@ -15,13 +15,14 @@
         <p>
           {{ column.sectionDescription }}
         </p>
+        <hr [style.border-color]="column.sectionColor ? column.sectionColor : ''"/>
       </div>
 
       <a *ngFor="let option of column.menus; last as isLast; first as isFirst" class="dropdown-item"
          (mouseover)="option.hover = true" (mouseleave)="option.hover = false"
          [ngStyle]="option?.hover && { 'background-color': option.backgroundColor? option.backgroundColor : 'var(--hover)' }"
          [style.margin-bottom]="!isLast ? '15px' : '0'"
-         [style.margin-top]="isFirst ? '5px' : '10px'"
+         [style.margin-top]="isFirst ? '0px' : '10px'"
          [href]="option.link">
 
         <img [src]="option.brand.brandLogo" alt="logo" class="dropdown-item-logo" height="50"/>

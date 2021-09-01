@@ -61,11 +61,18 @@
   height: 32px;
 }
 
+.section-header hr {
+  width: 100%;
+  margin: 0;
+  border-style: dashed;
+  border-color: var(--brand-color);
+}
+
 @media only screen and (max-width: 999px) {
   .dropdown-content {
     display: block;
     position: fixed;
-    bottom: 55px;
+    bottom: 40px;
     overflow-y: scroll;
     height: 70%;
 
@@ -91,7 +98,7 @@
 
 
   .dropdown-content .section-column {
-    margin-top: 35px;
+    margin-top: 25px;
   }
 
   .dropdown-content i {
@@ -120,6 +127,10 @@
   }
 
   .dropdown-cross {
+    display: none;
+  }
+
+  .section-header hr {
     display: none;
   }
 }

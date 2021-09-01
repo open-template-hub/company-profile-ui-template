@@ -3,7 +3,8 @@
 <app-dropdown-menu #dropdownMenuServices [options]="SERVICES">
 </app-dropdown-menu>
 <nav class="bottom-nav">
-  <a (click)="closeSettings()" *ngIf="openSettings" href="javascript:void(0)">
+  <a (click)="closeSettings(); dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
+     *ngIf="openSettings" href="javascript:void(0)">
     <i aria-hidden="true" class="material-icons">arrow_back_ios</i>
     <span>
         Back
@@ -21,25 +22,29 @@
         Services
     </span>
   </a>
-  <a *ngIf="!openSettings" routerLink="{{ URLS.pricing }}">
+  <a *ngIf="!openSettings" routerLink="{{ URLS.pricing }}"
+     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-dollar-sign fa-fw'"></i>
     <span>
         Pricing
     </span>
   </a>
-  <a (click)="openSettings = !openSettings" *ngIf="!openSettings" href="javascript:void(0)">
+  <a (click)="openSettings = !openSettings; dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
+     *ngIf="!openSettings" href="javascript:void(0)">
     <i aria-hidden="true" class="material-icons">settings</i>
     <span>
         More
     </span>
   </a>
-  <a class="demo" *ngIf="openSettings && !openOtherSettings" routerLink="{{ URLS.maintenance }}">
+  <a class="demo" *ngIf="openSettings && !openOtherSettings" routerLink="{{ URLS.maintenance }}"
+     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-laptop-code fa-fw'"></i>
     <span>
         Request for Demo
     </span>
   </a>
-  <a *ngIf="openSettings && !openOtherSettings" routerLink="{{ URLS.maintenance }}">
+  <a *ngIf="openSettings && !openOtherSettings" routerLink="{{ URLS.maintenance }}"
+     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-address-card fa-fw'"></i>
     <span>
         Contact Us

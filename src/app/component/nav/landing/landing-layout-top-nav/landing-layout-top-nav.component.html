@@ -1,5 +1,6 @@
 <nav class="top-nav rounded-box">
-  <a class="brand" routerLink="{{URLS.root}}">
+  <a class="brand" routerLink="{{URLS.root}}"
+     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
     <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
     <h2>Open Template Hub</h2>
   </a>
@@ -16,18 +17,21 @@
         <i aria-hidden="true" class="material-icons">expand_more</i>
       </app-dropdown-menu>
     </a>
-    <a routerLink="{{URLS.pricing}}">
+    <a routerLink="{{URLS.pricing}}"
+       (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
       <span>
           Pricing
       </span>
     </a>
   </div>
-  <a class="demo" routerLink="{{URLS.maintenance}}">
+  <a class="demo" routerLink="{{URLS.maintenance}}"
+     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
     <span>
         Request for Demo
     </span>
   </a>
-  <a class="contact-us" routerLink="{{URLS.maintenance}}">
+  <a class="contact-us" routerLink="{{URLS.maintenance}}"
+     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
     <span>
         Contact Us
     </span>

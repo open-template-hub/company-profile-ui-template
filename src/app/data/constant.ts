@@ -165,6 +165,24 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
     ]
   },
   {
+    sectionTitle: 'CLI Generators',
+    sectionDescription: 'Command line interface generators',
+    menus: [
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/generators/server-generator-logo.png?raw=true' },
+        header: 'Server Generator',
+        description: 'Command line interface generator of the servers at Open Template Hub',
+        link: URLS.maintenance
+      },
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/generators/server-generator-logo.png?raw=true' },
+        header: 'UI Generator',
+        description: 'Command line interface generator of the user interfaces at Open Template Hub',
+        link: URLS.maintenance
+      }
+    ]
+  },
+  {
     sectionTitle: 'Premium',
     sectionDescription: 'Get more things done with our premium solutions',
     sectionColor: 'var(--brand-color-yellow-theme)',

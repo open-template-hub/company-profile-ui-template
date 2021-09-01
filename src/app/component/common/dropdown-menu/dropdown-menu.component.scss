@@ -20,7 +20,7 @@
 .dropdown-item {
   display: flex;
   width: 300px;
-  padding: 15px;
+  padding: 25px 15px;
   cursor: pointer;
 }
 
@@ -48,6 +48,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .section-column .section-header h4 {
@@ -62,8 +63,8 @@
 }
 
 .section-header hr {
-  width: 100%;
-  margin: 0;
+  width: 100vw;
+  margin: 10px 0 0 0;
   border-style: dashed;
   border-color: var(--brand-color);
 }
@@ -72,7 +73,8 @@
   .dropdown-content {
     display: block;
     position: fixed;
-    bottom: 40px;
+    bottom: calc(55px + env(safe-area-inset-bottom));
+
     overflow-y: scroll;
     height: 70%;
 

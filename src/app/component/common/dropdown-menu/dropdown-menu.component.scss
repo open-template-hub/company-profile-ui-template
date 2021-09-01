@@ -8,6 +8,7 @@
   background-color: var(--background-color-alpha);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
 .dropdown-content i {
@@ -88,7 +89,7 @@
   display: flex;
 }
 
-.section-column {
+.section-column-right-border {
   border-right: 0.5px dotted var(--contrast);
 }
 

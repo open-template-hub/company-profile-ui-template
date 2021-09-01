@@ -10,7 +10,8 @@
     </div>
 
     <div class="section-column-wrapper">
-      <div class="section-column" *ngFor="let column of options; last as isLast; first as isFirst">
+      <div class="section-column" *ngFor="let column of options; last as isLast; first as isFirst"
+           [class.section-column-right-border]="!isLast">
         <div *ngIf="column.sectionTitle" class="section-header">
           <h4 [style.color]="column.sectionColor ? column.sectionColor : ''">
             {{ column.sectionTitle }}

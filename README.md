@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.linkedin.com/company/open-template-hub">
+  <a href="https://opentemplatehub.com">
     <img src="https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/web-ui-logo.png?raw=true" alt="Logo" width=200>
   </a>
 </p>

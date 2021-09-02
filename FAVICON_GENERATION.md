@@ -19,7 +19,7 @@ Follow the instructions below to be able to generate favicon.
 
 2. Download the favicon package generated
 
-3. Extract the package in to the **[assets/favicons](src/assets/production/favicons)** folder
+3. Extract the package in to the **[assets/favicons](src/assets/favicons)** folder
 
 ## Check Favicons (Optional)
 

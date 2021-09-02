@@ -25,7 +25,7 @@ Company Profile UI Template for generic usage in Angular (generated from [Web UI
 
 <p align="center">
   <a href="https://opentemplatehub.com">
-    <img src="https://github.com/open-template-hub/company-profile-ui-template/blob/develop/src/assets/demonstration/demonstration-main.png?raw=true" alt="Screenshot" width="800px">
+    <img src="https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/products/company-profile-ui/demonstration.png?raw=true" alt="Screenshot" width="800px">
   </a>
 </p>
 

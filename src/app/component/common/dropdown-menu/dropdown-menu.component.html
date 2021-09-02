@@ -9,7 +9,7 @@
       <i aria-hidden="true" class="fas fa-times fa-lg fa-fw" ></i>
     </div>
 
-    <div class="section-column-wrapper">
+    <div class="section-column-wrapper" [style]="'min-width: min(calc(100vw - 255px), ' + (330 * minimumColumns) + 'px);'">
       <div class="section-column" *ngFor="let column of options; last as isLast; first as isFirst"
            [class.section-column-right-border]="!isLast">
         <div *ngIf="column.sectionTitle" class="section-header">

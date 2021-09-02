@@ -35,7 +35,6 @@
 
 .dropdown-item {
   display: flex;
-  width: 300px;
   padding: 25px 15px;
   cursor: pointer;
 }
@@ -113,10 +112,6 @@
     bottom: -100%;
   }
 
-  .dropdown-item {
-    width: initial;
-  }
-
   .dropdown-content i {
     right: 3px;
     padding: 10px;
@@ -175,7 +170,6 @@
   .section-column-wrapper {
     overflow-y: auto;
     flex-wrap: wrap;
-    min-width: min(calc(100vw - 255px), 1320px);
     max-width: calc(100vw - 255px);
     max-height: calc(100vh - 162px);
   }
@@ -188,7 +182,7 @@
   }
 
   .dropdown-item {
-    margin-right: auto;
-    margin-left: auto;
+    width: 300px;
+    margin: auto;
   }
 }

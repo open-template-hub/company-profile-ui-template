@@ -6,7 +6,7 @@
   </a>
   <div class="left-item-wrapper">
     <a (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
-      <app-dropdown-menu #dropdownMenuProducts [options]="PRODUCT_LINES">
+      <app-dropdown-menu #dropdownMenuProducts [options]="PRODUCT_LINES" [minimumColumns]="4">
         <span>Products</span>
         <i aria-hidden="true" class="material-icons">{{dropdownMenuProducts.isDropdownOpen ? 'expand_less' : 'expand_more'}}</i>
       </app-dropdown-menu>

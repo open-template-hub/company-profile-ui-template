@@ -5,7 +5,7 @@ import { UtilService } from '../../../service/util/util.service';
 export interface DropdownColumnOption {
   sectionTitle?: string,
   sectionDescription?: string,
-  sectionColor?: string
+  sectionColor?: string,
   menus: DropdownMenuOption[]
 }
 
@@ -28,9 +28,8 @@ export class DropdownMenuComponent {
     brandLogo: '',
   };
 
-  isComingFromToggleEvent = false;
-
   @Input() isDropdownOpen = false;
+  @Input() minimumColumns = 1;
 
   @Input() options: DropdownColumnOption[] = [];
 

@@ -29,37 +29,15 @@
         <hr/>
       </div>
       <div class="section horizontal">
-        <app-button1 [text]="'Default theme'" (click)="setThemeColorSetting(ThemeColorSettings.default)"
+        <app-button1 *ngFor="let themeColor of themeColorSettingsList"
+                     (click)="setThemeColorSetting(themeColor)"
+                     [text]="themeColor + ' theme' | titlecase"
+                     [selected]="themeColorSetting === themeColor"
+                     [themeColor]="themeColor"
                      [icon]="'tint'"
                      [transparent]="true"
                      [lighterContrast]="true"
-                     [isSleekButton]="true"
-                     [selected]="themeColorSetting === ThemeColorSettings.default"
-                     [themeColor]="ThemeColorSettings.default">
-        </app-button1>
-        <app-button1 [text]="'Red theme'" (click)="setThemeColorSetting(ThemeColorSettings.red)"
-                     [icon]="'tint'"
-                     [transparent]="true"
-                     [lighterContrast]="true"
-                     [isSleekButton]="true"
-                     [selected]="themeColorSetting === ThemeColorSettings.red"
-                     [themeColor]="ThemeColorSettings.red">
-        </app-button1>
-        <app-button1 [text]="'Yellow theme'" (click)="setThemeColorSetting(ThemeColorSettings.yellow)"
-                     [icon]="'tint'"
-                     [transparent]="true"
-                     [lighterContrast]="true"
-                     [isSleekButton]="true"
-                     [selected]="themeColorSetting === ThemeColorSettings.yellow"
-                     [themeColor]="ThemeColorSettings.yellow">
-        </app-button1>
-        <app-button1 [text]="'Blue theme'" (click)="setThemeColorSetting(ThemeColorSettings.blue)"
-                     [icon]="'tint'"
-                     [transparent]="true"
-                     [lighterContrast]="true"
-                     [isSleekButton]="true"
-                     [selected]="themeColorSetting === ThemeColorSettings.blue"
-                     [themeColor]="ThemeColorSettings.blue">
+                     [isSleekButton]="true">
         </app-button1>
       </div>
     </div>

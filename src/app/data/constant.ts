@@ -1,3 +1,5 @@
+import { DropdownColumnOption } from '../component/common/dropdown-menu/dropdown-menu.component';
+
 /**
  * @description holds constants
  */
@@ -36,7 +38,8 @@ export const ThemeColorSettings = {
   default: 'default',
   red: 'red',
   yellow: 'yellow',
-  blue: 'blue'
+  blue: 'blue',
+  green: 'green'
 };
 
 export const URLS = {
@@ -53,6 +56,7 @@ export const URLS = {
   cookiePolicy: '/cookie-policy',
   privacyPolicy: '/privacy-policy',
   terms: '/terms',
+  pricing: '/pricing',
   showroom: '/showroom',
   dashboard: {
     root: dashboard,
@@ -98,6 +102,129 @@ export const RIBBONS = {
     text: 'Premium ⭐'
   }
 };
+
+export const PRODUCT_LINES: DropdownColumnOption[] = [
+  {
+    sectionTitle: 'Servers',
+    sectionDescription: 'Micro server solutions for your needs',
+    menus: [
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/auth-server-logo.png?raw=true' },
+        header: 'Auth Server',
+        description: 'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
+        link: URLS.maintenance
+      },
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/payment-server-logo.png?raw=true' },
+        header: 'Payment Server',
+        description: 'Payment Server template integrated with Stripe and Coinbase Commerce payment systems',
+        link: URLS.maintenance
+      },
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/file-storage-server-logo.png?raw=true' },
+        header: 'File Storage Server',
+        description: 'File Storage Server Template that supports uploading and downloading files from AWS S3',
+        link: URLS.maintenance
+      },
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/analytics-server-logo.png?raw=true' },
+        header: 'Analytics Server',
+        description: 'Analytics Server Template for generic usage in Node.js',
+        link: URLS.maintenance
+      },
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/basic-info-server-logo.png?raw=true' },
+        header: 'Basic Info Server',
+        description: 'Basic Info Server Template for generic usage in Node.js',
+        link: URLS.maintenance
+      }
+    ],
+  },
+  {
+    sectionTitle: 'User Interfaces',
+    sectionDescription: 'User interface solutions for your needs',
+    menus: [
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/web-ui-logo.png?raw=true' },
+        header: 'Company Profile UI',
+        description: 'Company Profile UI Template for generic usage in Angular',
+        link: URLS.maintenance
+      },
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/web-ui-logo.png?raw=true' },
+        header: 'Web UI',
+        description: 'Web UI Template for generic usage in Angular',
+        link: URLS.maintenance
+      },
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/mobile-ui-logo.png?raw=true' },
+        header: 'Mobile UI',
+        description: 'Mobile UI Template for generic usage in React Native',
+        link: URLS.maintenance
+      }
+    ]
+  },
+  {
+    sectionTitle: 'CLI Generators',
+    sectionDescription: 'Command line interface generators',
+    menus: [
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/generators/server-generator-logo.png?raw=true' },
+        header: 'Server Generator',
+        description: 'Command line interface generator of the servers at Open Template Hub',
+        link: URLS.maintenance
+      },
+      {
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/generators/server-generator-logo.png?raw=true' },
+        header: 'UI Generator',
+        description: 'Command line interface generator of the user interfaces at Open Template Hub',
+        link: URLS.maintenance
+      }
+    ]
+  },
+  {
+    sectionTitle: 'Premium',
+    sectionDescription: 'Get more things done with our premium solutions',
+    sectionColor: 'var(--brand-color-yellow-theme)',
+    menus: [
+      {
+        backgroundColor: 'var(--hover-yellow-theme)',
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/orchestration-server-logo.png?raw=true' },
+        header: 'Orchestration Server',
+        description: 'Orchestration Server Template for generic usage in Node.js',
+        link: URLS.maintenance
+      }
+    ]
+  }
+];
+
+export const SERVICES: DropdownColumnOption[ ] = [
+  {
+    sectionTitle: 'Services',
+    sectionDescription: 'Services that we provide',
+    menus: [
+      {
+        brand: { brandLogo: './assets/logo/brand-logo.png' },
+        header: 'Software Consultancy',
+        description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+        link: URLS.maintenance
+      },
+      {
+        brand: { brandLogo: './assets/logo/brand-logo.png' },
+        header: 'Cloud Integration',
+        description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+        link: URLS.maintenance
+      },
+      {
+        brand: { brandLogo: './assets/logo/brand-logo.png' },
+        header: 'Quality Insurance',
+        description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+        link: URLS.maintenance
+      }
+    ]
+  }
+];
+
 
 export const CATEGORIES = [
   {

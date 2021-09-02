@@ -1,75 +1,53 @@
+<app-dropdown-menu #dropdownMenuProducts [options]="PRODUCT_LINES">
+</app-dropdown-menu>
+<app-dropdown-menu #dropdownMenuServices [options]="SERVICES">
+</app-dropdown-menu>
 <nav class="bottom-nav">
-  <a (click)="closeSettings()" *ngIf="currentUser && openSettings" href="javascript:void(0)">
+  <a (click)="closeSettings(); dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
+     *ngIf="openSettings" href="javascript:void(0)">
     <i aria-hidden="true" class="material-icons">arrow_back_ios</i>
     <span>
-        BACK
+        Back
     </span>
   </a>
-  <a *ngIf="!openSettings" routerLink="{{URLS.dashboard.root}}">
-    <i aria-hidden="true" class="material-icons">dashboard</i>
+  <a *ngIf="!openSettings" (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
+    <i aria-hidden="true" [class]="'fas fa-server fa-fw'"></i>
     <span>
-        DASHBOARD
+        Products
     </span>
   </a>
-  <a *ngIf="currentUser && userInfo.payload?.userProfileActivated && !openSettings" routerLink="{{URLS.dashboard.contribute}}">
-    <i aria-hidden="true" class="material-icons">public</i>
+  <a *ngIf="!openSettings" (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()">
+    <i aria-hidden="true" [class]="'fas fa-handshake fa-fw'"></i>
     <span>
-        CONTRIBUTE
+        Services
     </span>
   </a>
-  <a *ngIf="!openSettings" routerLink="{{currentUser ? URLS.dashboard.learn : URLS.showroom}}">
-    <i aria-hidden="true" class="material-icons">event</i>
+  <a *ngIf="!openSettings" routerLink="{{ URLS.pricing }}"
+     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
+    <i aria-hidden="true" [class]="'fas fa-dollar-sign fa-fw'"></i>
     <span>
-        EVENTS
+        Pricing
     </span>
   </a>
-  <a (click)="openSettings = !openSettings" *ngIf="currentUser  && !openSettings" href="javascript:void(0)">
+  <a (click)="openSettings = !openSettings; dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
+     *ngIf="!openSettings" href="javascript:void(0)">
     <i aria-hidden="true" class="material-icons">settings</i>
     <span>
-        SETTINGS
+        More
     </span>
   </a>
-  <a *ngIf="currentUser && openSettings && !openOtherSettings" routerLink="{{URLS.settings.editProfile}}">
-    <i aria-hidden="true" class="material-icons">person</i>
+  <a class="demo" *ngIf="openSettings && !openOtherSettings" routerLink="{{ URLS.maintenance }}"
+     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
+    <i aria-hidden="true" [class]="'fas fa-laptop-code fa-fw'"></i>
     <span>
-        EDIT PROFILE
+        Request for Demo
     </span>
   </a>
-  <a *ngIf="currentUser && openSettings" routerLink="{{URLS.dashboard.privacy}}">
-    <i aria-hidden="true" class="material-icons">privacy_tip</i>
+  <a *ngIf="openSettings && !openOtherSettings" routerLink="{{ URLS.maintenance }}"
+     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
+    <i aria-hidden="true" [class]="'fas fa-address-card fa-fw'"></i>
     <span>
-        PRIVACY
-    </span>
-  </a>
-  <a (click)="openOtherSettings = !openOtherSettings" *ngIf="currentUser && openSettings && !openOtherSettings"
-     href="javascript:void(0)">
-    <i aria-hidden="true" class="material-icons">arrow_forward_ios</i>
-    <span>
-        MORE
-    </span>
-  </a>
-  <a *ngIf="currentUser && openSettings && openOtherSettings" routerLink="{{URLS.settings.editTheme}}">
-    <i aria-hidden="true" class="material-icons">invert_colors</i>
-    <span>
-        THEME
-    </span>
-  </a>
-  <a *ngIf="!currentUser  && !openSettings" routerLink="{{URLS.signup}}">
-    <i aria-hidden="true" class="material-icons">person_add</i>
-    <span>
-        REGISTER
-    </span>
-  </a>
-  <a *ngIf="!currentUser  && !openSettings" class="login" routerLink="{{URLS.login}}">
-    <i aria-hidden="true" class="material-icons">fingerprint</i>
-    <span>
-        LOG IN
-    </span>
-  </a>
-  <a (click)="logout()" *ngIf="currentUser  && openSettings && openOtherSettings" href="javascript:void(0)" id=logout>
-    <i aria-hidden="true" class="material-icons">exit_to_app</i>
-    <span>
-        LOGOUT
+        Contact Us
     </span>
   </a>
 </nav>

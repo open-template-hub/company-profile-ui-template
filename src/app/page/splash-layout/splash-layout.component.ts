@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class SplashLayoutComponent {
 
   constructor() {
-    console.log();
+    // Intentionally blank
   }
 }

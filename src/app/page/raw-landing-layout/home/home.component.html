@@ -6,17 +6,16 @@
         <h6>Minimizes your effort while building a new software business with our open source GitHub micro server
           templates and responsive web UI + mobile UI templates</h6>
         <div class="register-wrapper">
-          <a routerLink="{{URLS.signup}}">
-            <i aria-hidden="true" class="material-icons">person_add</i>
+          <a routerLink="{{URLS.maintenance}}">
             <span>
-              Join now!
+              Request for Demo
             </span>
           </a>
         </div>
       </div>
 
       <div class="hero-content-right">
-        <img class="demonstration" [src]="'./assets/common/demonstration/demonstration-main.png'" alt="demonstration"/>
+        <img class="demonstration" [src]="'./assets/demonstration/demonstration-main.png'" alt="demonstration"/>
       </div>
     </div>
     <div class="counters">
@@ -27,6 +26,8 @@
         </h4>
         <h6>
           Npm Downloads
+          <br/>
+          (in total)
         </h6>
       </a>
       <a class="counter-wrapper counter-alter"
@@ -48,108 +49,59 @@
       </a>
     </div>
   </div>
-
-  <div class="features">
-    <h4>Micro servers for your needs</h4>
-    <div class="feature-wrapper feature-right">
-      <div class="feature">
-        <a href="https://github.com/open-template-hub/auth-server-nodejs-template">
-          <img class="demonstration" [src]="'./assets/common/demonstration/demonstration-auth-server-nodejs-template.png'" alt="demonstration"/>
-        </a>
-        <div class="feature-notes">
-          <h5>
-            Auth Server Template
-          </h5>
-          <h6>
-            Authentication Server Template supporting both regular signup and login processes and login with social
-            networks that support OAuth and OAuth2.0
-          </h6>
-        </div>
-      </div>
-      <div class="layers">
-        <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-          <path d="M 0,150 1000,0 v 150 z" style="fill: var(--brand-color-lighter-5);"></path>
-        </svg>
-      </div>
-    </div>
-    <div class="feature-wrapper feature-left">
-      <div class="feature">
-        <a href="https://github.com/open-template-hub/payment-server-template">
-          <img class="demonstration" [src]="'./assets/common/demonstration/demonstration-payment-server-template.png'"
-               alt="demonstration"/>
-        </a>
-        <div class="feature-notes">
-          <h5>
-            Payment Server Template
-          </h5>
-          <h6>
-            Payment Server template integrated with Stripe and Coinbase Commerce payment systems
-          </h6>
-        </div>
+  <div class="in-page-title">
+    <h4 class="testimonial-header">Customer reviews</h4>
+    <h6 class="testimonial-description">What our customers are saying...</h6>
+  </div>
+  <div class="card-area">
+    <app-testimonial-card [option]="option1" [marginTop]="'235px'" [minHeight]="'50px'"></app-testimonial-card>
+    <app-testimonial-card [option]="option2" [marginTop]="'180px'" [minHeight]="'156px'"></app-testimonial-card>
+    <app-testimonial-card [option]="option3" [marginTop]="'119px'" [minHeight]="'217px'"></app-testimonial-card>
+  </div>
+  <app-swiper-wrapper></app-swiper-wrapper>
+  <div class="features-wrapper">
+    <div *ngFor="let productLine of PRODUCT_LINES;" class="features">
+      <div class="product-line-header">
+        <h4 *ngIf="productLine.sectionTitle" [style.color]="productLine.sectionColor ? productLine.sectionColor : ''">
+          {{ productLine.sectionTitle }}
+        </h4>
+        <h5 *ngIf="productLine.sectionDescription">
+          {{ productLine.sectionDescription }}
+        </h5>
       </div>
 
-      <div class="layers">
-        <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-          <path d="M 0,150 1000,0 v 150 z" style="fill: var(--background-color);"></path>
-        </svg>
-      </div>
-    </div>
-    <div class="feature-wrapper feature-right">
-      <div class="feature">
-        <a href="https://github.com/open-template-hub/file-storage-server-template">
-          <img class="demonstration" [src]="'./assets/common/demonstration/demonstration-file-storage-server-template.png'"
-               alt="demonstration"/>
-        </a>
-        <div class="feature-notes">
-          <h5>
-            File Storage Server Template
-          </h5>
-          <h6>
-            File Storage Server Template that supports uploading and downloading files from AWS S3
-          </h6>
+      <div *ngFor="let product of productLine.menus; let i = index; last as isLast" class="feature-wrapper"
+           [class.feature-left]="i % 2 === 1" [class.feature-right]="i % 2 === 0">
+        <div *ngIf="i % 2 === 0" class="layers">
+          <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
+            <path d="M 0,150 1000,0 v 150 z" [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
+          </svg>
         </div>
-      </div>
-      <div class="layers">
-        <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-          <path d="M 0,150 1000,0 v 150 z" style="fill: var(--brand-color-lighter-5);"></path>
-        </svg>
-      </div>
-    </div>
-    <div class="feature-wrapper feature-left">
-      <div class="feature">
-        <a href="https://github.com/open-template-hub/analytics-server-template">
-          <img class="demonstration" [src]="'./assets/common/demonstration/demonstration-analytics-server-template.png'"
-               alt="demonstration"/>
-        </a>
-        <div class="feature-notes">
-          <h5>
-            Analytics Server Template
-          </h5>
-          <h6>
-            Analytics Server Template for generic usage in Node.js
-          </h6>
+        <div *ngIf="i % 2 === 1" class="layers">
+          <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
+            <path d="M 1000,0 0,0 v 150 z" [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
+          </svg>
         </div>
-      </div>
+        <div class="feature" [style.background-color]="i % 2 == 0 ? (product.backgroundColor ? product.backgroundColor : 'var(--hover)') : ';'">
+          <a class="feature-img-wrapper" [href]="product.link">
+            <img class="server-logo"
+                 [src]="product.brand.brandLogo"
+                 alt="server-logo"/>
+          </a>
+          <div class="feature-notes">
+            <h5>
+              {{ product.header }}
+            </h5>
+            <h6>
+              {{ product.description }}
+            </h6>
+          </div>
+        </div>
 
-      <div class="layers">
-        <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-          <path d="M 0,150 1000,0 v 150 z" style="fill: var(--background-color);"></path>
-        </svg>
-      </div>
-    </div>
-    <div class="feature-wrapper feature-right">
-      <div class="feature">
-        <a href="https://github.com/open-template-hub/basic-info-server-template">
-          <img class="demonstration" [src]="'./assets/common/demonstration/demonstration-basic-info-server-template.png'"
-               alt="demonstration"/>
-        </a>
-        <div class="feature-notes">
-          <h5>
-            Basic Info Server Template
-          </h5>
-          <h6>
-            Basic Info Server Template for generic usage in Node.js
-          </h6>
+        <div *ngIf="i % 2 === 0 && isLast" class="layers">
+          <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
+            <path d="M 1000,0 0,0 v 150 z" [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
+          </svg>
         </div>
       </div>
     </div>

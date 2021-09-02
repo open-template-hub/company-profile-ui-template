@@ -1,0 +1,27 @@
+<div id=event-card>
+  <app-card1 [enableHeaderFullImg]="false" [height]="'340px'"
+             [paddingContent]="false"
+             [width]="'400px'" [maxHeight]="'500px'"
+             [containsVideo]="false" [enableHeader]="false" [topLayer2]="true" [topLayerBackgroundColor]="option.style.themeColor"
+             [topLayerMarginTop]="marginTop" [topLayerMinHeight]="minHeight" [testimonialSizeActive]="true">
+    <div body class="content-wrapper">
+      <div class="icon-wrapper">
+        <i aria-hidden="true" [style.color]="option.style.themeColor" class="fas fa-quote-left fa-lg fa-fw"></i>
+      </div>
+      <p class="review-area">{{ option.review }}</p>
+      <a class="profile-image">
+        <img [src]="option.brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
+        <span>Open Template Hub</span>
+      </a>
+      <div class="footer-social">
+        <a [href]="environment.social.twitter.url + '/' + environmentCommon.oth.social.twitter" target="_blank">
+          <i aria-hidden="true" [style.color]="option.style.themeColor" [class]="'fab fa-' + environment.social.twitter.cssClass + ' fa-2x fa-fw'"></i>
+        </a>
+        <a [href]="environment.social.linkedin.url + '/company/' + environmentCommon.oth.social.linkedin"
+           target="_blank">
+          <i aria-hidden="true" [style.color]="option.style.themeColor" [class]="'fab fa-' + environment.social.linkedin.cssClass + ' fa-2x fa-fw'"></i>
+        </a>
+      </div>
+    </div>
+  </app-card1>
+</div>

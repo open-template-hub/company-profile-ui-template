@@ -22,37 +22,35 @@
 .feature-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: var(--brand-color-lighter-5);
 }
 
-.features h4, .features .feature {
+.feature-img-wrapper {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.product-line-header, .features .feature {
   padding-left: 7vw;
   padding-right: 7vw;
 }
 
-.features h4 {
-  color: var(--brand-color);
-}
-
-.features h5 {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.product-line-header h4 {
   font-weight: normal;
   color: var(--brand-color);
 }
 
-.feature svg {
+.feature img {
   max-width: 100%;
   min-width: 40%;
   height: auto;
 }
 
-.feature-left {
-  background-color: var(--brand-color-lighter-5);
+.feature-left .feature {
+  background-color: var(--background-color);
 }
 
-.feature-right {
-  background-color: var(--background-color);
+.feature-right .feature {
+  background-color: var(--brand-color-lighter-5);
 }
 
 .feature-notes {
@@ -113,6 +111,19 @@
   justify-content: space-evenly;
 }
 
+.card-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+app-swiper-wrapper {
+  height: 200px;
+}
+
 @media only screen and (max-width: 999px) {
   .home-page {
     font-size: 23px;
@@ -123,7 +134,7 @@
     padding-bottom: 30px;
   }
 
-  .feature svg {
+  .feature img {
     max-width: 360px;
     max-height: 270px;
     padding-bottom: 15px;
@@ -165,7 +176,7 @@
     padding-bottom: 6vh;
   }
 
-  .features h4 {
+  .product-line-header {
     padding-bottom: 20px;
     text-align: center;
   }
@@ -177,12 +188,19 @@
   }
 
   .features {
-    padding-bottom: 300px;
-    padding-top: 150px;
+    padding-top: 200px;
   }
 
-  .features h4 {
+  .feature-img-wrapper {
+    max-width: 20%;
+  }
+
+  .product-line-header {
     padding-bottom: 40px;
+  }
+
+  .features-wrapper {
+    padding-bottom: 300px;
   }
 
   .register-wrapper {
@@ -219,6 +237,12 @@
 
   .hero-content-left h6 {
     text-align: left;
+  }
+
+  app-testimonial-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

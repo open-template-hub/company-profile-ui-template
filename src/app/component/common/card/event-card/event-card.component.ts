@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
-import { RIBBONS, URLS } from '../../../../util/constant';
+import { RIBBONS, URLS } from '../../../../data/constant';
 
 @Component( {
   selector: 'app-event-card',

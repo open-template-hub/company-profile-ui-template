@@ -90,26 +90,6 @@
           </app-label-with-icon-data>
         </div>
       </div>
-      <div *ngIf="userInfo?.payload?.userProfileActivated &&
-          ( userInfo?.payload?.donationAccounts?.buymeacoffee || userInfo?.payload?.donationAccounts?.patreon )"
-           class="column-second">
-        <div class="section-header">
-          <p class="dim">Donation</p>
-          <hr/>
-        </div>
-        <div class="section-output donation-accounts" fxLayout="column" fxLayoutAlign="center center">
-          <app-social-button (click)="goToUrl(userInfo.payload.donationAccounts.buymeacoffee)"
-                             *ngIf="userInfo?.payload?.donationAccounts?.buymeacoffee"
-                             [brand]="environment.donation.buymeacoffee.cssClass" [flexStart]="true"
-                             [isDonationButtonStyle]="true" [localImage]="environment.donation.buymeacoffee.logo"
-                             [text]="'Buy Me a Coffee'"></app-social-button>
-          <app-social-button (click)="goToUrl(userInfo.payload.donationAccounts.patreon)"
-                             *ngIf="userInfo?.payload?.donationAccounts?.patreon"
-                             [brand]="environment.donation.patreon.cssClass" [flexStart]="true"
-                             [isDonationButtonStyle]="true"
-                             [text]="'Patreon'"></app-social-button>
-        </div>
-      </div>
     </div>
   </app-card1>
   <!--END OF DASHBOARD CARD-->
@@ -119,7 +99,7 @@
       <br/>
       <ngx-charts-bar-horizontal
           [gradient]="gradient"
-          [customColors]="barCustomColors(lessonsInfo)"
+          [customColors]="colors"
           [animations]="false"
           [legend]="showLegend"
           [results]="eventsInfo"
@@ -129,29 +109,7 @@
           [xAxis]="showXAxis"
           [yAxis]="showYAxis">
       </ngx-charts-bar-horizontal>
-      <div class="color-text">
-
-        Less
-
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-4)"></rect>
-        </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-3)"></rect>
-        </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-2)"></rect>
-        </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-1)"></rect>
-        </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color)"></rect>
-        </svg>
-
-        More
-
-      </div>
+      <app-color-chart></app-color-chart>
     </div>
   </app-card1>
   <app-card1 *ngIf="eventsInfo.length === 0" [title]="'Lessons Taken'">
@@ -167,7 +125,7 @@
       <br/>
       <ngx-charts-bar-horizontal
           [gradient]="gradient"
-          [customColors]="barCustomColors(eventsInfo)"
+          [customColors]="colors"
           [animations]="false"
           [legend]="showLegend"
           [results]="eventsInfo"

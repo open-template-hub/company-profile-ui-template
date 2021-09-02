@@ -8,7 +8,7 @@ import { InformationService } from '../../../../service/information/information.
 import { LoadingService } from '../../../../service/loading/loading.service';
 import { PaymentService } from '../../../../service/payment/payment.service';
 import { UserActivityService } from '../../../../service/user-activity/user-activity.service';
-import { URLS } from '../../../../util/constant';
+import { URLS } from '../../../../data/constant';
 
 @Component( {
   selector: 'app-event-data',
@@ -207,7 +207,6 @@ export class EventDataComponent implements OnInit {
       case 'twitter':
         const related = this.category.name + ( this.subCategory ? ',' + this.subCategory.name : '' ) +
             ( this.leafCategory ? ',' + this.leafCategory.name : '' )
-        console.log( environment.clientUrl )
         eventUrl = environment.social.twitter.shareUrl + environment.clientUrl
           + URLS.dashboard.event + '?event_id=' + this.id + '&text=' + this.title + '&via=wecontribute_io'
           + '&related=' + related

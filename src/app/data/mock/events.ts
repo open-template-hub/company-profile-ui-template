@@ -1,4 +1,4 @@
-import { EventModel } from '../model/EventModel';
+import { EventModel } from '../../model/EventModel';
 
 export const showroomEvents = [
   {

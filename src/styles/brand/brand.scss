@@ -1,50 +1,12 @@
-:root, .light-theme {
-  --brand-color: var(--brand-color-default-theme);
-  --brand-color-lighter-1: #64be65;
-  --brand-color-lighter-2: #7ec87e;
-  --brand-color-lighter-3: #a0d69f;
-  --brand-color-lighter-4: #b9e1ba;
-  --brand-color-lighter-5: #c9e8c9;
-  --brand-color-lighter-6: #d5ecd5;
-  --brand-color-lighter-7: #dff1df;
-  --brand-color-lighter-8: #eaf6ea;
-  --brand-color-lighter-9: #f7fbf8;
+@import "brand.common";
 
-  --brand-background: #5cb05c;
-  --hover: rgba(98, 150, 89, 0.2);
-  --overlay: rgba(67, 176, 67, 0.3);
+@import "brand-red";
+@import "brand-green";
+@import "brand-yellow";
+@import "brand-blue";
 
-  // shine animation colors
-  --color-alpha-0-5: rgba(31, 108, 26, 0.5);
-  --color-alpha-0-13: rgba(38, 108, 26, 0.13);
-}
-
-.dark-theme {
-  --brand-color-lighter-1: #51a951;
-  --brand-color-lighter-2: #579c57;
-  --brand-color-lighter-3: #5e8c5e;
-  --brand-color-lighter-4: #657f65;
-  --brand-color-lighter-5: #617061;
-  --brand-color-lighter-6: #616c61;
-  --brand-color-lighter-7: #586358;
-  --brand-color-lighter-8: #4e544d;
-  --brand-color-lighter-9: #444644;
-
-  --overlay: rgba(28, 76, 28, 0.6);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --brand-color-lighter-1: #51a951;
-    --brand-color-lighter-2: #579c57;
-    --brand-color-lighter-3: #5e8c5e;
-    --brand-color-lighter-4: #657f65;
-    --brand-color-lighter-5: #617061;
-    --brand-color-lighter-6: #616c61;
-    --brand-color-lighter-7: #586358;
-    --brand-color-lighter-8: #4e544d;
-    --brand-color-lighter-9: #444644;
-
-    --overlay: rgba(28, 76, 28, 0.6);
-  }
+.default-theme {
+  // This is the class to change default theme
+  @extend .green-theme;
+  --brand-color-default-theme: var(--brand-color-green-theme);
 }

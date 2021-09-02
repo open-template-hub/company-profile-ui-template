@@ -17,6 +17,8 @@
   background-color: var(--background-color-alpha);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+
+  overflow: hidden;
 }
 
 .cookie-popup > * {

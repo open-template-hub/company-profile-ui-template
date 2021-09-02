@@ -14,13 +14,13 @@ import { InformationService } from '../../../service/information/information.ser
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ThemeService } from '../../../service/theme/theme.service';
 import { UserActivityService } from '../../../service/user-activity/user-activity.service';
-import { PROFILE_IMG, URLS } from '../../../util/constant';
+import { PROFILE_IMG, URLS } from '../../../data/constant';
 
-@Component({
+@Component( {
   selector: 'app-my-profile',
   templateUrl: './my-profile.component.html',
-  styleUrls: ['./my-profile.component.scss']
-})
+  styleUrls: [ './my-profile.component.scss' ]
+} )
 export class MyProfileComponent implements OnDestroy {
 
   currentUser: AuthToken;
@@ -31,7 +31,6 @@ export class MyProfileComponent implements OnDestroy {
   loadingCount = false;
   loadingLessonsTaken = false;
   userInterests = [];
-  attendedEvents;
   numberOfEventsMade: number;
   numberOfEventsTaken: number;
   topContributor: number;
@@ -47,6 +46,7 @@ export class MyProfileComponent implements OnDestroy {
 
   eventsInfo: any[] = [];
   lessonsInfo: any[] = [];
+  colors: any[] = [];
 
   showXAxis = true;
   showYAxis = true;
@@ -55,20 +55,13 @@ export class MyProfileComponent implements OnDestroy {
   showXAxisLabel = true;
   showYAxisLabel = false;
 
-  colorScheme = {
-    domain: [
-      ''
-    ]
-  };
-
   eventsTakenXAxisLabel = '# of events taken';
 
   eventsXAxisLabel = '# of events.ts';
 
-  eduMailPattern = '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-.]+\.edu\.[a-z]{2}$'
+  eduMailPattern = '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-.]+\.edu\.[a-z]{2}$';
 
   formattedRateNumber: string;
-  numberOfRate: number;
 
   constructor(
       private router: Router,
@@ -82,9 +75,9 @@ export class MyProfileComponent implements OnDestroy {
       private followeeService: FolloweeService,
       private eventService: EventService,
       private themeService: ThemeService,
-      private userActivityService: UserActivityService) {
+      private userActivityService: UserActivityService ) {
     this.loadingCount = true;
-    this.loadingLessonsTaken = true
+    this.loadingLessonsTaken = true;
 
     this.authenticationService.currentUser.subscribe( currentUser => {
           this.currentUser = currentUser;
@@ -103,14 +96,15 @@ export class MyProfileComponent implements OnDestroy {
 
       if ( userInfo?.username ) {
         this.eventService.countUserEvents( userInfo.username ).subscribe( eventList => {
-          this.eventsInfo = eventList
+          this.eventsInfo = eventList;
           this.loadingCount = false;
-        } )
+        } );
 
         this.userActivityService.getEventsTaken( userInfo.username ).subscribe( eventList => {
-          this.lessonsInfo = eventList
-          this.loadingLessonsTaken = false
-        } )
+          this.lessonsInfo = eventList;
+          this.loadingLessonsTaken = false;
+          this.colors = this.themeService.barCustomColors( this.lessonsInfo );
+        } );
 
         this.followerService.count( userInfo.username ).subscribe( followerCount => {
           this.followerCount = followerCount[ 0 ].count;
@@ -121,32 +115,32 @@ export class MyProfileComponent implements OnDestroy {
         } );
 
         this.userActivityService.getNumberOfEventsTaken( userInfo.username ).subscribe( result => {
-          this.numberOfEventsTaken = result[0].numberOfEventsTaken
-        })
+          this.numberOfEventsTaken = result[ 0 ].numberOfEventsTaken;
+        } );
 
         if ( userInfo.payload?.userProfileActivated ) {
           this.userActivityService.getNumberOfEventsMade( userInfo.username ).subscribe( result => {
-            this.numberOfEventsMade = result.numberOfEventsMade
-          } )
+            this.numberOfEventsMade = result.numberOfEventsMade;
+          } );
 
           this.userActivityService.getContributorRate( userInfo.username ).subscribe( rate => {
             this.rateObject = {
               userRating: rate.userRating,
               numberOfRates: rate.numberOfRates
-            }
-          })
+            };
+          } );
 
           this.userActivityService.getTopContributors().subscribe( topContributors => {
             topContributors.forEach( ( value, index ) => {
-              if( value.username === userInfo.username ) {
+              if ( value.username === userInfo.username ) {
                 this.topContributor = index;
               }
             } );
-          })
+          } );
         } else {
-          this.numberOfEventsMade = undefined
-          this.rateObject = undefined
-          this.topContributor = undefined
+          this.numberOfEventsMade = undefined;
+          this.rateObject = undefined;
+          this.topContributor = undefined;
         }
 
         this.categoryService.getCategoriesFromId( this.userInfo.payload?.interests ).subscribe( result => {
@@ -170,17 +164,5 @@ export class MyProfileComponent implements OnDestroy {
 
   goToUrl( url: string ) {
     window.open( url, '_blank' );
-  }
-
-  barCustomColors( array: any[] ) {
-    const result: any[] = [];
-    const style = getComputedStyle( document.body )
-
-    for (let i = 0; i < array.length; i++) {
-      result.push({name: array[i].name, value: style
-        .getPropertyValue( this.themeService.colors[ Math.floor( i / 2 ) ] )});
-    }
-
-    return result;
   }
 }

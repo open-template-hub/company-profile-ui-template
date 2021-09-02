@@ -3,14 +3,14 @@ import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DatePickerComponent, IDayCalendarConfig } from 'ng2-date-picker';
+import { environment } from '../../../../environments/environment';
+import { RIBBONS, URLS } from '../../../data/constant';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { CategoryService } from '../../../service/category/category.service';
 import { EventService } from '../../../service/event/event.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ToastService } from '../../../service/toast/toast.service';
-import { RIBBONS, URLS } from '../../../util/constant';
-import { environment } from '../../../../environments/environment';
 
 @Component( {
   selector: 'app-contribute',
@@ -32,12 +32,12 @@ export class CreateEventComponent implements OnInit {
   searchedEvents = [];
 
   defaultCategory: any = {
-    category: { name: 'Teaching & Academics', id: 13 },
-    subCategory: { name: 'Online Education', id: 5 },
+    category: { name: 'Development', id: 1 },
+    subCategory: { name: 'Web Development', id: 1 },
     leafCategory: undefined
-  }
+  };
 
-  selectedCategory: any = { ...this.defaultCategory }
+  selectedCategory: any = { ...this.defaultCategory };
 
   categorySearchResults = [];
 
@@ -73,7 +73,7 @@ export class CreateEventComponent implements OnInit {
     isPremium: false,
     price: '5.00',
     category: ''
-  }
+  };
 
   // for "Premium content cannot be changed to free"
   previousPrice: string;
@@ -92,12 +92,13 @@ export class CreateEventComponent implements OnInit {
       private categoryService: CategoryService,
       private activatedRoute: ActivatedRoute,
       private basicInfoService: BasicInfoService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
-    const userInfo = this.basicInfoService.userInfoSubject.getValue()
-    if( !userInfo?.payload?.userProfileActivated ) {
-      this.router.navigate( [ URLS.dashboard.root ]).then( () => {
+    const userInfo = this.basicInfoService.userInfoSubject.getValue();
+    if ( !userInfo?.payload?.userProfileActivated ) {
+      this.router.navigate( [ URLS.dashboard.root ] ).then( () => {
         this.informationService.setInformation( `Enable user profile to view this page`, 'info' );
       } );
     }
@@ -111,8 +112,8 @@ export class CreateEventComponent implements OnInit {
         Validators.pattern( '^(https:\\/\\/www.)?youtube.com/watch\\?v=.{11}$' ) ],
       isTrailerVideoLinkActive: [ this.defaultFormValues.isTrailerVideoLinkActive ],
       date: [ this.defaultFormValues.date, Validators.required ],
-      durationHour: [ this.defaultFormValues.durationHour, Validators.pattern('^([0-1]?[0-9]|2[0-3])$') ],
-      durationMin: [ this.defaultFormValues.durationMin, Validators.pattern('^([0-9]|([0-5][0-9]))$') ],
+      durationHour: [ this.defaultFormValues.durationHour, Validators.pattern( '^([0-1]?[0-9]|2[0-3])$' ) ],
+      durationMin: [ this.defaultFormValues.durationMin, Validators.pattern( '^([0-9]|([0-5][0-9]))$' ) ],
       isDurationActive: [ this.defaultFormValues.isDurationActive ],
       isEmailAllowed: [ this.defaultFormValues.isEmailAllowed ],
       isPremium: [ this.defaultFormValues.isPremium ],
@@ -125,20 +126,20 @@ export class CreateEventComponent implements OnInit {
       this.myUpcomingEvents = myUpcomingEvents;
 
       if ( this.activatedRoute.snapshot.queryParams.editable && this.activatedRoute.snapshot.queryParams.event_id ) {
-        this.fillForm( this.activatedRoute.snapshot.queryParams.event_id )
+        this.fillForm( this.activatedRoute.snapshot.queryParams.event_id );
       }
     } );
 
-    this.eventService.me('false' )
+    this.eventService.me( 'false' )
     .subscribe( myRecentlyCompletedEvents => {
-      this.myRecentlyCompletedEvents = myRecentlyCompletedEvents
-    })
+      this.myRecentlyCompletedEvents = myRecentlyCompletedEvents;
+    } );
 
-    this.eventService.me('false', 'true' )
+    this.eventService.me( 'false', 'true' )
     .subscribe( myPassedEvents => {
-      this.myPassedEvents = myPassedEvents
-      this.searchedEvents = [...myPassedEvents]
-    })
+      this.myPassedEvents = myPassedEvents;
+      this.searchedEvents = [ ...myPassedEvents ];
+    } );
 
     this.dayPickerConfig = {
       ...this.dayPickerConfig
@@ -169,8 +170,9 @@ export class CreateEventComponent implements OnInit {
     this.submitted = true;
 
     // set errors manually
-    if ( this.form.controls.isPremium.value && ( this.form.controls.price.value === '' || parseFloat(this.form.controls.price.value) < 5 ) ) {
-      this.form.controls.price.setErrors({ incorrect: true } );
+    if ( this.form.controls.isPremium.value &&
+        ( this.form.controls.price.value === '' || parseFloat( this.form.controls.price.value ) < 5 ) ) {
+      this.form.controls.price.setErrors( { incorrect: true } );
     }
 
     if ( this.form.controls.link.value === '' ) {
@@ -187,7 +189,7 @@ export class CreateEventComponent implements OnInit {
     }
 
     // for "Premium content cannot be changed to free"
-    this.previousPrice = this.form.controls.price.value
+    this.previousPrice = this.form.controls.price.value;
     if ( !this.form.controls.isPremium.value ) {
       this.form.controls.price.setValue( this.defaultFormValues.price );
     }
@@ -279,7 +281,7 @@ export class CreateEventComponent implements OnInit {
     }
 
     if ( this.form.controls.isTrailerVideoLinkActive.value ) {
-      payload.trailerVideoLink = this.form.controls.trailerVideoLink.value.substr(-11, 11);
+      payload.trailerVideoLink = this.form.controls.trailerVideoLink.value.substr( -11, 11 );
     }
 
     const date = new Date( this.form.controls.date.value );
@@ -290,12 +292,12 @@ export class CreateEventComponent implements OnInit {
       isPremium: this.form.controls.isPremium.value,
       date: date.toISOString(),
       duration: this.form.controls.isDurationActive.value ?
-          (+this.form.controls.durationHour.value) * 60 + (+this.form.controls.durationMin.value) : 45,
+          ( +this.form.controls.durationHour.value ) * 60 + ( +this.form.controls.durationMin.value ) : 45,
       isEmailAllowed: this.form.controls.isEmailAllowed.value,
       link: this.form.controls.link.value,
       payload,
       paymentConfigKey: environment.payment.stripe.tag,
-      imageUrl: environment.eventImageUrl
+      imageUrl: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/brand-logo.png?raw=true'
     };
 
     // if event._id is not null, update, else create
@@ -308,8 +310,8 @@ export class CreateEventComponent implements OnInit {
         this.router.navigate( [ URLS.dashboard.contribute ] );
       }, ( error ) => {
         if ( error.error.message.startsWith( 'Premium content cannot be changed to free' ) ) {
-          this.form.controls.isPremium.setValue( true )
-          this.form.controls.price.setValue( this.previousPrice )
+          this.form.controls.isPremium.setValue( true );
+          this.form.controls.price.setValue( this.previousPrice );
         }
       } );
     } else {
@@ -338,7 +340,7 @@ export class CreateEventComponent implements OnInit {
   searchInAllEvents( event: any ) {
     let q = '';
 
-    if (!event) {
+    if ( !event ) {
       q = this.searchQuery;
     } else {
       q = event.target.value;
@@ -346,29 +348,29 @@ export class CreateEventComponent implements OnInit {
     }
 
     if ( !q || q.length < 3 ) {
-      this.searchedEvents = [...this.myPassedEvents]
+      this.searchedEvents = [ ...this.myPassedEvents ];
       return;
     }
 
     this.eventService.me( 'false', 'true', q )
     .subscribe( searchedEvents => {
-        this.searchedEvents = searchedEvents
-    });
+      this.searchedEvents = searchedEvents;
+    } );
   }
 
   markAsCompletedButtonClicked( event: string ) {
     // remove the item from recentlyPassedEvents
     this.myRecentlyCompletedEvents.forEach( ( item, index ) => {
       if ( item._id === event ) {
-        this.myRecentlyCompletedEvents.splice( index, 1 )
+        this.myRecentlyCompletedEvents.splice( index, 1 );
       }
-    } )
+    } );
 
     // refresh passedEvents
-    this.eventService.me('false', 'true' )
+    this.eventService.me( 'false', 'true' )
     .subscribe( myPassedEvents => {
-      this.myPassedEvents = myPassedEvents
-      this.searchedEvents = [...myPassedEvents]
-    })
+      this.myPassedEvents = myPassedEvents;
+      this.searchedEvents = [ ...myPassedEvents ];
+    } );
   }
 }

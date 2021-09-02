@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { EventService } from '../../../service/event/event.service';
 import { FileStorageService } from '../../../service/file-storage/file-storage.service';
-import { EventTypes, PROFILE_IMG, URLS } from '../../../util/constant';
+import { EventTypes, PROFILE_IMG, URLS } from '../../../data/constant';
 
 @Component({
   selector: 'app-event',

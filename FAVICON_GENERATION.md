@@ -15,14 +15,14 @@ Follow the instructions below to be able to generate favicon.
 
 ## Instructions
 
-1. Upload the **[brand-logo.png](src/assets/production/brand-logo.png)** file to **[RealFaviconGenerator v0.16](https://realfavicongenerator.net/)**
+1. Upload the **[brand-logo.png](src/assets/logo/brand-logo.png)** file to **[RealFaviconGenerator v0.16](https://realfavicongenerator.net/)**
 
 2. Download the favicon package generated
 
-3. Extract the package in to the **[assets/favicons](src/assets/production/favicons)** folder
+3. Extract the package in to the **[assets/favicons](src/assets/favicons)** folder
 
 ## Check Favicons (Optional)
 
 4. Deploy changes to **[develop](https://github.com/open-template-hub/company-profile-ui-template/tree/develop)** branch
 
-5. Check your favicon with the **[favicon checker](https://realfavicongenerator.net/favicon_checker?protocol=https&site=oth-company-profile.herokuapp.com)**
+5. Check your favicon with the **[favicon checker](https://realfavicongenerator.net/favicon_checker?protocol=https&site=opentemplatehub.com)**

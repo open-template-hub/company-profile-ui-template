@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { version } from '../../../environments/version';
+import { DarkLightSettings, ThemeColorSettings } from '../../data/constant';
 
 @Injectable( {
   providedIn: 'root'
@@ -40,7 +41,7 @@ export class ThemeService {
   constructor() {
     let themeColorSettingStorageItem = localStorage.getItem( 'themeColorSetting' ) ?
         localStorage.getItem( 'themeColorSetting' ) : sessionStorage.getItem( 'themeColorSetting' );
-    themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : 'auto';
+    themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : 'default';
 
     this.themeColorSettingSubject = new BehaviorSubject<string>( themeColorSettingStorageItem);
     this.themeColorSetting = this.themeColorSettingSubject.asObservable();
@@ -71,7 +72,7 @@ export class ThemeService {
 
     this.sideNavClosedSubject = new BehaviorSubject<string>( sideNavClosedStorageItem );
     this.sideNavClosed = this.sideNavClosedSubject.asObservable();
-    this.brand.brandLogo = './assets/production/brand-logo.png';
+    this.brand.brandLogo = './assets/logo/brand-logo.png';
 
     if ( version ) {
       this.appVersion = version;
@@ -136,8 +137,27 @@ export class ThemeService {
     sessionStorage.removeItem( 'themeColorSetting' );
     sessionStorage.removeItem( 'sideNavClosed' );
 
-    this.darkLightSettingSubject.next( 'auto' );
-    this.themeColorSettingSubject.next( 'default' );
+    this.darkLightSettingSubject.next( DarkLightSettings.auto );
+    this.themeColorSettingSubject.next( ThemeColorSettings.default );
     this.sideNavClosedSubject.next( 'false' );
+  }
+
+  barCustomColors( array: any[] ) {
+    const result: any[] = [];
+
+    for ( let i = 0; i < array.length; i++ ) {
+      let value;
+      if ( i >= this.colors.length ) {
+        value = 'var(' + this.colors[ length - 1 ] + ')';
+      } else {
+        value = 'var(' + this.colors[ i ] + ')';
+      }
+
+      result.push( {
+        name: array[ i ].name, value
+      } );
+    }
+
+    return result;
   }
 }

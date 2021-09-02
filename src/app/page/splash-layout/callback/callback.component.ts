@@ -5,7 +5,7 @@ import { AuthenticationService } from '../../../service/auth/authentication.serv
 import { InformationService } from '../../../service/information/information.service';
 import { PaymentService } from '../../../service/payment/payment.service';
 import { ThemeService } from '../../../service/theme/theme.service';
-import { URLS } from '../../../util/constant';
+import { URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-callback',

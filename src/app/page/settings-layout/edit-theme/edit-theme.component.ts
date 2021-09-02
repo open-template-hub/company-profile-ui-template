@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '../../../service/theme/theme.service';
-import { DarkLightSettings, ThemeColorSettings } from '../../../util/constant';
+import { DarkLightSettings, ThemeColorSettings } from '../../../data/constant';
 
 @Component( {
   selector: 'app-edit-theme',
@@ -17,6 +17,8 @@ export class EditThemeComponent {
   DarkLightSettings = DarkLightSettings;
   ThemeColorSettings = ThemeColorSettings;
 
+  themeColorSettingsList = [];
+
   constructor( public themeService: ThemeService ) {
 
     this.themeService.darkLightSetting.subscribe( darkLightSetting => {
@@ -26,6 +28,12 @@ export class EditThemeComponent {
     this.themeService.themeColorSetting.subscribe( themeColorSetting => {
       this.themeColorSetting = themeColorSetting;
     } );
+
+    for ( const key in ThemeColorSettings ) {
+      if ( ThemeColorSettings.hasOwnProperty( key ) ) {
+        this.themeColorSettingsList.push(ThemeColorSettings[key]);
+      }
+    }
   }
 
   setDarkLightSetting( darkLightSetting: string ) {

@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://www.linkedin.com/company/open-template-hub">
-    <img src="https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/brand-logo.png?raw=true" alt="Logo" width=200>
+  <a href="https://opentemplatehub.com">
+    <img src="https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/web-ui-logo.png?raw=true" alt="Logo" width=200>
   </a>
 </p>
 
@@ -17,15 +17,15 @@ Open Template Hub - Company Profile UI Template v2
 [![Webhint](https://img.shields.io/badge/Webhint-Results-blueviolet.svg?style=for-the-badge&logo=webhint)](https://webhint.io/scanner/f81328ff-c11d-4354-aed0-cbed1fab0a01)
 [![BTC](https://img.shields.io/badge/Donate-BTC-ORANGE?color=F5922F&style=for-the-badge&logo=bitcoin)](https://commerce.coinbase.com/checkout/8313af5f-de48-498d-b2cb-d98819ca7d5e)
 
-Company Profile UI Template in Angular
+Company Profile UI Template for generic usage in Angular (generated from [Web UI Template](https://github.com/open-template-hub/web-ui-template))
 
 <h3 align="center">
   For demo click the image below ⬇️
 </p>
 
 <p align="center">
-  <a href="https://oth-company-profile.herokuapp.com">
-    <img src="https://github.com/open-template-hub/company-profile-ui-template/blob/develop/src/assets/common/demonstration/demonstration-main.png?raw=true" alt="Screenshot" width="800px">
+  <a href="https://opentemplatehub.com">
+    <img src="https://github.com/open-template-hub/company-profile-ui-template/blob/develop/src/assets/demonstration/demonstration-main.png?raw=true" alt="Screenshot" width="800px">
   </a>
 </p>
 

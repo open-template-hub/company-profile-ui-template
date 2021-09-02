@@ -25,8 +25,7 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets/common",
-              "src/assets/production"
+              "src/assets"
             ],
             "styles": [
               "src/styles/styles.scss"
@@ -64,8 +63,7 @@
             "staging": {
               "assets": [
                 "src/favicon.ico",
-                "src/assets/common",
-                "src/assets/production"
+                "src/assets"
               ],
               "fileReplacements": [
                 {
@@ -82,8 +80,7 @@
               "vendorChunk": true,
               "assets": [
                 "src/favicon.ico",
-                "src/assets/common",
-                "src/assets/production"
+                "src/assets"
               ]
             },
             "local-to-staging-api": {
@@ -94,8 +91,7 @@
               "vendorChunk": true,
               "assets": [
                 "src/favicon.ico",
-                "src/assets/common",
-                "src/assets/production"
+                "src/assets"
               ],
               "fileReplacements": [
                 {

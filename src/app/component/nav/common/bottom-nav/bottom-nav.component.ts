@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { PRODUCT_LINES, SERVICES, URLS } from '../../../../data/constant';
 import { AuthToken } from '../../../../model/AuthToken';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
 import { LoadingService } from '../../../../service/loading/loading.service';
-import { URLS } from '../../../../util/constant';
+import { DropdownColumnOption } from '../../../common/dropdown-menu/dropdown-menu.component';
 
 @Component( {
   selector: 'app-bottom-nav',
@@ -21,11 +22,17 @@ export class BottomNavComponent {
 
   URLS = URLS;
 
+  PRODUCT_LINES: DropdownColumnOption[] = PRODUCT_LINES;
+  SERVICES: DropdownColumnOption[] = SERVICES;
+
+  @ViewChild( 'dropdownMenuProducts' ) dropdownMenuProducts: ElementRef;
+  @ViewChild( 'dropdownMenuServices' ) dropdownMenuServices: ElementRef;
+
   constructor(
       private router: Router,
       private authenticationService: AuthenticationService,
       private loadingService: LoadingService,
-      private basicInfoService: BasicInfoService
+      private basicInfoService: BasicInfoService,
   ) {
     this.authenticationService.currentUser.subscribe( currentUser => {
       this.currentUser = currentUser;

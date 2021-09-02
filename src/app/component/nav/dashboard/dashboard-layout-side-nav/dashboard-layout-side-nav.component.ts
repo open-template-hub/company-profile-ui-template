@@ -6,7 +6,7 @@ import { BasicInfoService } from '../../../../service/basic-info/basic-info.serv
 import { CategoryService } from '../../../../service/category/category.service';
 import { FileStorageService } from '../../../../service/file-storage/file-storage.service';
 import { ThemeService } from '../../../../service/theme/theme.service';
-import { PROFILE_IMG, URLS } from '../../../../util/constant';
+import { PROFILE_IMG, URLS } from '../../../../data/constant';
 
 @Component( {
   selector: 'app-dashboard-layout-side-nav',

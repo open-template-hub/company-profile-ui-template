@@ -1,12 +1,5 @@
 @import "../../../../styles/theme/themes";
 
-.donation-accounts app-social-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .interest-list app-label-with-icon-data {
   margin: 5px;
   min-width: -webkit-fit-content;
@@ -42,12 +35,12 @@
   color: var(--brand-color);
 }
 
-.color-text {
+.color-chart {
   float: right;
   color: var(--color);
 }
 
-.color-text svg {
+.color-chart svg {
   margin-left: 2px;
   margin-right: 2px;
 }
@@ -125,10 +118,6 @@
     width: -webkit-fill-available;
   }
 
-  .donation-accounts app-social-button {
-    width: 16vw;
-  }
-
   .interest-list {
     flex-direction: row;
     place-content: center flex-start;
@@ -144,13 +133,6 @@
 ::ng-deep .ngx-charts {
   text {
     fill: var(--color) !important;
-  }
-}
-
-@media only screen and (max-width: 1299px) {
-  .donation-accounts app-social-button {
-    width: 100%;
-    max-width: 400px;
   }
 }
 
@@ -179,11 +161,6 @@
     display: flex;
     place-content: center;
     align-items: center;
-  }
-
-  .donation-accounts app-social-button {
-    width: 100%;
-    max-width: 400px;
   }
 
   .interest-list {

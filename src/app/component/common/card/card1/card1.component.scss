@@ -133,6 +133,10 @@
     margin-bottom: 50px;
   }
 
+  .card1.testimonial-size {
+    max-height: 230px;
+  }
+
   .card1-header {
     max-width: 92%;
     width: 92%;
@@ -153,6 +157,10 @@
 
   .card1-content.overflow-visible {
     overflow: visible;
+  }
+
+  .layers.top-layer.style2 svg {
+    display: none;
   }
 }
 

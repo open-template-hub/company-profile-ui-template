@@ -9,7 +9,7 @@ import { CategoryService } from '../../../service/category/category.service';
 import { EventService } from '../../../service/event/event.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
-import { EventTypes, URLS } from '../../../util/constant';
+import { EventTypes, URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-learn',

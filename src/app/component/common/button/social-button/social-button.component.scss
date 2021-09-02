@@ -35,12 +35,6 @@
   width: 35px;
 }
 
-.social-button.donation-button {
-  background: transparent;
-  color: var(--social);
-  border: 1px solid;
-}
-
 .social-button.social-button-with-text {
   text-align: left;
   width: 80%;
@@ -176,11 +170,6 @@
     color: var(--social);
   }
 
-  .social-button.donation-button:hover {
-    background: transparent;
-    box-shadow: 0 3px 15px 1px var(--shadow);
-  }
-
   .social-button.no-text {
     background: transparent;
     box-shadow: 0 3px 15px 1px var(--shadow);
@@ -190,13 +179,9 @@
     background-color: whitesmoke;
     filter: brightness(100%);
   }
-
-  .social-button.donation-button:hover .vertical-hr {
-    background-color: var(--social);
-  }
 }
 
-@media only screen and (max-width: 1299px) {
+@media only screen and (max-width: 999px) {
   .vertical-hr {
     height: 45px;
   }
@@ -216,7 +201,7 @@
   }
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1000px) {
   .vertical-hr {
     height: 55px;
   }

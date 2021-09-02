@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
-import { attendedEventsData, showroomEvents } from '../../mockData/events';
+import { attendedEventsData, showroomEvents } from '../../data/mock/events';
 import { EventModel } from '../../model/EventModel';
 import { CountModel } from '../../model/CountModel';
-import { EventTypes } from '../../util/constant';
+import { EventTypes } from '../../data/constant';
 import { CategoryService } from '../category/category.service';
 
 @Injectable( {
@@ -55,8 +55,8 @@ export class EventService {
   countUserEvents( username: string, isPastOnly: string = 'true' ) {
     if ( environment.mockDataEnabled ) {
       const countData = [
-        { _id:{category:13,subCategory:5},count:27},
-        { _id:{category:11,subCategory:5, leafCategory: 3},count:10}
+        { _id:{category:1,subCategory:1},count:27},
+        { _id:{category:1,subCategory:2, leafCategory: 1},count:10}
       ] as CountModel[]
 
       return of(this.countUserEventsProcess(countData))

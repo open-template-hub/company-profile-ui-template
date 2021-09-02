@@ -207,7 +207,6 @@ export class EventDataComponent implements OnInit {
       case 'twitter':
         const related = this.category.name + ( this.subCategory ? ',' + this.subCategory.name : '' ) +
             ( this.leafCategory ? ',' + this.leafCategory.name : '' )
-        console.log( environment.clientUrl )
         eventUrl = environment.social.twitter.shareUrl + environment.clientUrl
           + URLS.dashboard.event + '?event_id=' + this.id + '&text=' + this.title + '&via=wecontribute_io'
           + '&related=' + related

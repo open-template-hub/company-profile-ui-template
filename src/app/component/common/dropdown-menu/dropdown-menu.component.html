@@ -10,16 +10,16 @@
     </div>
 
     <div class="section-column-wrapper" [style]="'min-width: min(calc(100vw - 255px), ' + (330 * minimumColumns) + 'px);'">
-      <div class="section-column" *ngFor="let column of options; last as isLast; first as isFirst"
-           [class.section-column-right-border]="!isLast">
+      <div class="section-column" *ngFor="let column of options; last as isLastColumn"
+           [class.section-column-right-border]="!isLastColumn">
         <div *ngIf="column.sectionTitle" class="section-header">
           <h4 [style.color]="column.sectionColor ? column.sectionColor : ''">
             {{ column.sectionTitle }}
           </h4>
+          <hr [style.border-color]="column.sectionColor ? column.sectionColor : ''"/>
           <p>
             {{ column.sectionDescription }}
           </p>
-          <hr [style.border-color]="column.sectionColor ? column.sectionColor : ''"/>
         </div>
 
         <a *ngFor="let option of column.menus; last as isLast; first as isFirst" class="dropdown-item"
@@ -40,6 +40,7 @@
             </p>
           </div>
         </a>
+        <hr *ngIf="!isLastColumn"/>
       </div>
     </div>
   </div>

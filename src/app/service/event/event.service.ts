@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
-import { attendedEventsData, showroomEvents } from '../../mockData/events';
+import { attendedEventsData, showroomEvents } from '../../data/mock/events';
 import { EventModel } from '../../model/EventModel';
 import { CountModel } from '../../model/CountModel';
 import { EventTypes } from '../../data/constant';

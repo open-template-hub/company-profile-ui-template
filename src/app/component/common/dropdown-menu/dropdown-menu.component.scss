@@ -71,15 +71,24 @@
   font-weight: 500;
 }
 
-.section-column .section-header p {
+.section-header p {
   color: var(--lighter);
-  padding: 0 10px;
+  padding: 5px;
+  text-align: center;
+
+}
+
+.section-column hr {
+  width: 94%;
+  margin: 0 0 0 10px;
+  border-style: solid;
+  border-color: var(--darker-contrast);
 }
 
 .section-header hr {
-  width: 100vw;
-  margin: 10px 0 0 0;
-  border-style: dashed;
+  width: 25%;
+  margin: 0 0 0 1px;
+  border-style: solid;
   border-color: var(--brand-color);
 }
 
@@ -153,7 +162,7 @@
     display: none;
   }
 
-  .section-header hr {
+  .section-column hr, .section-header hr {
     display: none;
   }
 

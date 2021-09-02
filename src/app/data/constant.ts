@@ -145,19 +145,19 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
     sectionDescription: 'User interface solutions for your needs',
     menus: [
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user%20interfaces/web-ui-logo.png?raw=true' },
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/web-ui-logo.png?raw=true' },
         header: 'Company Profile UI',
         description: 'Company Profile UI Template for generic usage in Angular',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user%20interfaces/web-ui-logo.png?raw=true' },
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/web-ui-logo.png?raw=true' },
         header: 'Web UI',
         description: 'Web UI Template for generic usage in Angular',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user%20interfaces/mobile-ui-logo.png?raw=true' },
+        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/mobile-ui-logo.png?raw=true' },
         header: 'Mobile UI',
         description: 'Mobile UI Template for generic usage in React Native',
         link: URLS.maintenance

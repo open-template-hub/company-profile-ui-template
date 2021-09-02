@@ -15,7 +15,7 @@ Follow the instructions below to be able to generate favicon.
 
 ## Instructions
 
-1. Upload the **[brand-logo.png](src/assets/production/brand-logo.png)** file to **[RealFaviconGenerator v0.16](https://realfavicongenerator.net/)**
+1. Upload the **[brand-logo.png](src/assets/logo/brand-logo.png)** file to **[RealFaviconGenerator v0.16](https://realfavicongenerator.net/)**
 
 2. Download the favicon package generated
 

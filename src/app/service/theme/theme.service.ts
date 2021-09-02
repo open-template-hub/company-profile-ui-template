@@ -72,7 +72,7 @@ export class ThemeService {
 
     this.sideNavClosedSubject = new BehaviorSubject<string>( sideNavClosedStorageItem );
     this.sideNavClosed = this.sideNavClosedSubject.asObservable();
-    this.brand.brandLogo = './assets/production/brand-logo.png';
+    this.brand.brandLogo = './assets/logo/brand-logo.png';
 
     if ( version ) {
       this.appVersion = version;

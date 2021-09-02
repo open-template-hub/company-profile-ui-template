@@ -204,19 +204,19 @@ export const SERVICES: DropdownColumnOption[ ] = [
     sectionDescription: 'Services that we provide',
     menus: [
       {
-        brand: { brandLogo: './assets/production/brand-logo.png' },
+        brand: { brandLogo: './assets/logo/brand-logo.png' },
         header: 'Software Consultancy',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: './assets/production/brand-logo.png' },
+        brand: { brandLogo: './assets/logo/brand-logo.png' },
         header: 'Cloud Integration',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: './assets/production/brand-logo.png' },
+        brand: { brandLogo: './assets/logo/brand-logo.png' },
         header: 'Quality Insurance',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         link: URLS.maintenance

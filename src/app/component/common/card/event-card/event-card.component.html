@@ -1,4 +1,4 @@
-<div id=event-card [class.no-hover]="( inProgress || completed )">
+<div class="event-card" [class.no-hover]="( inProgress || completed )">
   <app-card1 [enableHeaderFullImg]=true [height]="(fillLayout || showRateBar) ? '-webkit-fit-content' : '500px'"
              [paddingContent]="false" [underHeaderProfileImg]="profileImg"
              [ribbon]="event.isPremium ? RIBBONS.premium : event.isFeatured ? RIBBONS.featured : event.isNew ? RIBBONS.new : RIBBONS.default"

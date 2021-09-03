@@ -28,7 +28,6 @@ export class Card1Component {
   @Input() height = undefined;
   @Input() width = undefined;
   @Input() maxHeight = false;
-  @Input() containsVideo = false;
   @Input() ribbon = { text: '', type: '' };
   @Input() isCardContentOverflowVisible = false;
   @Input() topLayer = false;

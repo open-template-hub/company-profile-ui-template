@@ -2,16 +2,9 @@
   <app-card1 [enableHeaderFullImg]=true [height]="(fillLayout || showRateBar) ? '-webkit-fit-content' : '500px'"
              [paddingContent]="false" [underHeaderProfileImg]="profileImg"
              [ribbon]="event.isPremium ? RIBBONS.premium : event.isFeatured ? RIBBONS.featured : event.isNew ? RIBBONS.new : RIBBONS.default"
-             [width]="fillLayout ? '-webkit-fill-available' : '400px'" [maxHeight]="maxHeight"
-             [containsVideo]="event.payload?.trailerVideoLink" [enableHeader]="!showRateBar">
+             [width]="fillLayout ? '-webkit-fill-available' : '400px'" [maxHeight]="maxHeight" [enableHeader]="!showRateBar">
 
-    <div *ngIf="event.payload?.trailerVideoLink" headerFullImg id=trailer-video>
-      <iframe title="Trailer Video" width="100%" style="height: -webkit-fill-available" [src]="safeYoutubeUrl"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-    </div>
-
-    <div *ngIf="!event.payload?.trailerVideoLink && !showRateBar"
+    <div *ngIf="!showRateBar"
          (click)="routeToEvent()" headerFullImg id=header-img [class.no-hover]="( inProgress || completed )">
       <svg class="gridItem__media" fill="none"
            preserveAspectRatio="xMidYMid slice"
@@ -1645,7 +1638,7 @@
                       [subCategory]="event.payload?.subCategory" [title]="event.title"
                       [notFixedHeight]="fillLayout" [maxHeight]="maxHeight"
                       [addMarginToDescription]="addMarginToDescription"
-                      [centeredTitle]="centeredTitle" [containsVideo]="event.payload?.trailerVideoLink"
+                      [centeredTitle]="centeredTitle"
                       [inProgress]="inProgress" [showHamburgerMenu]="showHamburgerMenu" [showRateBar]="showRateBar"
                       (rateButtonClicked)="rateButtonClicked.emit()" [rateHeight]="showRateBar" [completed]="completed">
       </app-event-data>

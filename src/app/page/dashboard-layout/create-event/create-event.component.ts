@@ -63,8 +63,6 @@ export class CreateEventComponent implements OnInit {
     title: '',
     description: '',
     link: '',
-    trailerVideoLink: '',
-    isTrailerVideoLinkActive: false,
     date: '',
     durationHour: '0',
     durationMin: '45',
@@ -108,9 +106,6 @@ export class CreateEventComponent implements OnInit {
       title: [ this.defaultFormValues.title, Validators.required ],
       description: [ this.defaultFormValues.description, Validators.maxLength( 500 ) ],
       link: [ this.defaultFormValues.link, Validators.pattern( '^.+:\\/\\/.*$' ) ],
-      trailerVideoLink: [ this.defaultFormValues.trailerVideoLink,
-        Validators.pattern( '^(https:\\/\\/www.)?youtube.com/watch\\?v=.{11}$' ) ],
-      isTrailerVideoLinkActive: [ this.defaultFormValues.isTrailerVideoLinkActive ],
       date: [ this.defaultFormValues.date, Validators.required ],
       durationHour: [ this.defaultFormValues.durationHour, Validators.pattern( '^([0-1]?[0-9]|2[0-3])$' ) ],
       durationMin: [ this.defaultFormValues.durationMin, Validators.pattern( '^([0-9]|([0-5][0-9]))$' ) ],
@@ -179,15 +174,6 @@ export class CreateEventComponent implements OnInit {
       this.form.controls.link.setErrors( { incorrect: true } );
     }
 
-    if ( this.form.controls.isTrailerVideoLinkActive.value && this.form.controls.trailerVideoLink.value === '' ) {
-      this.form.controls.trailerVideoLink.setErrors( { incorrect: true } );
-    }
-
-    // mark as valid if the activations not enabled
-    if ( !this.form.controls.isTrailerVideoLinkActive.value ) {
-      this.form.controls.trailerVideoLink.setValue( this.defaultFormValues.trailerVideoLink );
-    }
-
     // for "Premium content cannot be changed to free"
     this.previousPrice = this.form.controls.price.value;
     if ( !this.form.controls.isPremium.value ) {
@@ -200,7 +186,6 @@ export class CreateEventComponent implements OnInit {
       durationMin: 'Please provide a valid duration',
       durationHour: 'Please provide a valid duration',
       link: 'Please provide a valid url (Ex. "https://opentemplatehub.com")',
-      trailerVideoLink: 'Please provide a valid youtube video url (Ex. "https://www.youtube.com/watch?v=11111111111")',
       price: 'Price must be minimum 5.00$'
     };
 
@@ -240,9 +225,6 @@ export class CreateEventComponent implements OnInit {
           title: [ event.title, Validators.required ],
           description: [ event.payload.description, Validators.maxLength( 500 ) ],
           link: [ event.link, Validators.pattern( '^.+:\\/\\/.*$' ) ],
-          trailerVideoLink: [ event.payload.trailerVideoLink ?
-              'https://www.youtube.com/watch?v=' + event.payload.trailerVideoLink : '', Validators.pattern( '^(https:\\/\\/www.)?youtube.com/watch\\?v=.{11}$' ) ],
-          isTrailerVideoLinkActive: [ !!event.payload.trailerVideoLink ],
           date: [ formatDate( new Date( event.date ), 'yyyy/MM/dd HH:mm', 'en-US' ), Validators.required ],
           durationHour: [ Math.floor( event.duration / 60 ).toString(), Validators.pattern( '^([0-1]?[0-9]|2[0-3])$' ) ],
           durationMin: [ ( event.duration % 60 ).toString(), Validators.pattern( '^([0-9]|([0-5][0-9]))$' ) ],
@@ -278,10 +260,6 @@ export class CreateEventComponent implements OnInit {
 
     if ( this.form.controls.isPremium.value ) {
       payload.price = this.form.controls.price.value;
-    }
-
-    if ( this.form.controls.isTrailerVideoLinkActive.value ) {
-      payload.trailerVideoLink = this.form.controls.trailerVideoLink.value.substr( -11, 11 );
     }
 
     const date = new Date( this.form.controls.date.value );

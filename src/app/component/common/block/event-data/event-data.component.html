@@ -1,6 +1,6 @@
 <div [class.background-color]="isBackgroundColor" [class.centered-title]="centeredTitle" [class.editable]="isEditable"
      [class.is-small-title]="isSmallTitle" [class.not-fixed-height]="notFixedHeight" [class.max-height]="maxHeight"
-     [class.show-calendar]="(showCalendar || isEditable) && !notFixedHeight" [class.video]="containsVideo" [class.rate-height]="rateHeight" class="event">
+     [class.show-calendar]="(showCalendar || isEditable) && !notFixedHeight" [class.rate-height]="rateHeight" class="event">
   <div *ngIf="title" class="event-header">
     <div class="event-header-title" [class.remove-line-clamp]="removeLineClamp">
       <h3 (click)="onClick()" >{{title}}</h3>
@@ -52,7 +52,7 @@
       <label class="far fa-sm fa-star" [for]="'star1' + id"></label>
     </div>
     <!--END OF RATE-->
-    <div class="event-description" [class.remove-line-clamp]="removeLineClamp" [class.video]="containsVideo"
+    <div class="event-description" [class.remove-line-clamp]="removeLineClamp"
          [class.add-margin-to-description]="addMarginToDescription">
       {{description}}
     </div>

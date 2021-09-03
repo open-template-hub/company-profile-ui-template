@@ -43,7 +43,6 @@ export class EventDataComponent implements OnInit {
   @Input() isPublicPage = false;
   @Input() notFixedHeight = false;
   @Input() maxHeight = false;
-  @Input() containsVideo = false;
   @Input() addMarginToDescription = false;
   @Input() centeredTitle = false;
   @Input() ribbon = { text: '', type: '' };

@@ -6,10 +6,6 @@
   padding: 0 1em 0;
 }
 
-.event.video {
-  height: 320px;
-}
-
 .event.not-fixed-height {
   height: auto;
 }
@@ -90,10 +86,6 @@
   -webkit-box-orient: vertical;
 }
 
-.event-description.video {
-  -webkit-line-clamp: 3;
-}
-
 .event-description.remove-line-clamp, .show-calendar .event-description.remove-line-clamp {
   -webkit-line-clamp: initial;
 }
@@ -102,7 +94,7 @@
   -webkit-line-clamp: 3; /* number of lines to show */
 }
 
-.show-calendar .event-description.video {
+.show-calendar {
   -webkit-line-clamp: 1;
 
 }

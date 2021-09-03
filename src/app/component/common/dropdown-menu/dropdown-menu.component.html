@@ -14,7 +14,7 @@
       <div class="section-column" *ngFor="let column of options; last as isLastColumn"
            [class.section-column-right-border]="true"
            [class]="column.sectionColor ? column.sectionColor + '-theme' : ''"
-           [style]="'max-height: ' + (80  + (150 * calculatedRows)) + 'px;'">
+           [style]="'max-height: ' + ((80  + (150 * calculatedRows)) + 1) + 'px;'">
         <div *ngIf="column.sectionTitle" class="section-header">
           <h4>
             {{ column.sectionTitle }}

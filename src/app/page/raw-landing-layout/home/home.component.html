@@ -64,7 +64,8 @@
   <div class="features-wrapper">
     <div *ngFor="let productLine of PRODUCT_LINES;" class="features">
       <div class="product-line-header">
-        <h4 *ngIf="productLine.sectionTitle" [style.color]="productLine.sectionColor ? productLine.sectionColor : ''">
+        <h4 *ngIf="productLine.sectionTitle"
+            [class]="productLine.sectionColor ? productLine.sectionColor + '-theme' : ''">
           {{ productLine.sectionTitle }}
         </h4>
         <h5 *ngIf="productLine.sectionDescription">
@@ -73,21 +74,22 @@
       </div>
 
       <div *ngFor="let product of productLine.menus; let i = index; last as isLast" class="feature-wrapper"
-           [class.feature-left]="i % 2 === 1" [class.feature-right]="i % 2 === 0">
+           [class.feature-left]="i % 2 === 1" [class.feature-right]="i % 2 === 0"
+           [class]="product.itemColor ? product.itemColor + '-theme' : ''">
         <div *ngIf="i % 2 === 0" class="layers">
           <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
             <path d="M 0,150 1000,0 v 150 z"
-                  [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
+                  [style]="'fill: var(--hover);'"></path>
           </svg>
         </div>
         <div *ngIf="i % 2 === 1" class="layers">
           <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
             <path d="M 1000,0 0,0 v 150 z"
-                  [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
+                  [style]="'fill: var(--hover);'"></path>
           </svg>
         </div>
         <div class="feature"
-             [style.background-color]="i % 2 == 0 ? (product.backgroundColor ? product.backgroundColor : 'var(--hover)') : ';'">
+             [style.background-color]="i % 2 == 0 ? 'var(--hover)' : ''">
           <a class="feature-img-wrapper" [href]="product.link">
             <img class="server-logo"
                  [src]="product.brand.brandLogo"

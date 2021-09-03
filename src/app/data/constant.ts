@@ -186,10 +186,10 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
   {
     sectionTitle: 'Premium',
     sectionDescription: 'Get more things done with our premium solutions',
-    sectionColor: 'var(--brand-color-yellow-theme)',
+    sectionColor: ThemeColorSettings.yellow,
     menus: [
       {
-        backgroundColor: 'var(--hover-yellow-theme)',
+        itemColor: ThemeColorSettings.yellow,
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/orchestration-server-logo.png' },
         header: 'Orchestration Server',
         description: 'Orchestration Server Template for generic usage in Node.js',

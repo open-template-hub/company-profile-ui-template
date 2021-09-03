@@ -15,7 +15,9 @@
       </div>
 
       <div class="hero-content-right">
-        <img class="demonstration" [src]="'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/products/company-profile-ui/oth-packages.png?raw=true'" alt="oth-packages"/>
+        <img class="demonstration"
+             [src]="'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/products/company-profile-ui/oth-packages.png?raw=true'"
+             alt="oth-packages"/>
       </div>
     </div>
     <div class="counters">
@@ -58,7 +60,7 @@
     <app-testimonial-card [option]="option2" [marginTop]="'180px'" [minHeight]="'156px'"></app-testimonial-card>
     <app-testimonial-card [option]="option3" [marginTop]="'119px'" [minHeight]="'217px'"></app-testimonial-card>
   </div>
-  <app-swiper-wrapper></app-swiper-wrapper>
+  <app-swiper-wrapper [partners]="PARTNERS"></app-swiper-wrapper>
   <div class="features-wrapper">
     <div *ngFor="let productLine of PRODUCT_LINES;" class="features">
       <div class="product-line-header">
@@ -74,15 +76,18 @@
            [class.feature-left]="i % 2 === 1" [class.feature-right]="i % 2 === 0">
         <div *ngIf="i % 2 === 0" class="layers">
           <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-            <path d="M 0,150 1000,0 v 150 z" [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
+            <path d="M 0,150 1000,0 v 150 z"
+                  [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
           </svg>
         </div>
         <div *ngIf="i % 2 === 1" class="layers">
           <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-            <path d="M 1000,0 0,0 v 150 z" [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
+            <path d="M 1000,0 0,0 v 150 z"
+                  [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
           </svg>
         </div>
-        <div class="feature" [style.background-color]="i % 2 == 0 ? (product.backgroundColor ? product.backgroundColor : 'var(--hover)') : ';'">
+        <div class="feature"
+             [style.background-color]="i % 2 == 0 ? (product.backgroundColor ? product.backgroundColor : 'var(--hover)') : ';'">
           <a class="feature-img-wrapper" [href]="product.link">
             <img class="server-logo"
                  [src]="product.brand.brandLogo"
@@ -100,7 +105,8 @@
 
         <div *ngIf="i % 2 === 0 && isLast" class="layers">
           <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-            <path d="M 1000,0 0,0 v 150 z" [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
+            <path d="M 1000,0 0,0 v 150 z"
+                  [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
           </svg>
         </div>
       </div>

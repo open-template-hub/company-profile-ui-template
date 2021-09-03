@@ -1,4 +1,5 @@
 import { DropdownColumnOption } from '../component/common/dropdown-menu/dropdown-menu.component';
+import { Partner } from '../component/common/swiper-wrapper/swiper-wrapper.component';
 
 /**
  * @description holds constants
@@ -225,6 +226,14 @@ export const SERVICES: DropdownColumnOption[ ] = [
   }
 ];
 
+export const PARTNERS: Partner[] = [
+  { brandLogo: '../../../../assets/common/partners/github-logo.png' },
+  { brandLogo: '../../../../assets/common/partners/aws-logo.png' },
+  { brandLogo: '../../../../assets/common/partners/heroku-logo.png' },
+  { brandLogo: '../../../../assets/common/partners/google-logo.png' },
+  { brandLogo: '../../../../assets/common/partners/stripe-logo.png' },
+  { brandLogo: '../../../../assets/common/partners/netlify-logo.png' },
+];
 
 export const CATEGORIES = [
   {

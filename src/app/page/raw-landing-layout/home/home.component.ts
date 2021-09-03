@@ -4,9 +4,10 @@ import { Router } from '@angular/router';
 import { CountUp } from 'countup.js';
 import { TestimonialOption } from '../../../component/common/card/testimonial-card/testimonial-card.component';
 import { DropdownColumnOption } from '../../../component/common/dropdown-menu/dropdown-menu.component';
+import { Partner } from '../../../component/common/swiper-wrapper/swiper-wrapper.component';
+import { PARTNERS, PRODUCT_LINES, URLS } from '../../../data/constant';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { ThemeService } from '../../../service/theme/theme.service';
-import { PRODUCT_LINES, URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-home',
@@ -25,6 +26,7 @@ export class HomeComponent implements AfterViewInit {
 
   URLS = URLS;
   PRODUCT_LINES: DropdownColumnOption[] = PRODUCT_LINES;
+  PARTNERS: Partner[] = PARTNERS;
 
   KILO = 1000;
   MILLION = this.KILO * this.KILO;
@@ -33,19 +35,19 @@ export class HomeComponent implements AfterViewInit {
     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
     brand: { brandLogo: '../../../../assets/common/social/buymeacoffee-logo.png' },
     style: { themeColor: 'var(--warn)' }
-  }
+  };
 
   option2: TestimonialOption = {
     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
     brand: { brandLogo: '../../../../assets/common/social/reddit-logo.png' },
     style: { themeColor: 'var(--error)' }
-  }
+  };
 
   option3: TestimonialOption = {
     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
     brand: { brandLogo: '../../../../assets/common/social/facebook-logo.png' },
     style: { themeColor: 'var(--info)' }
-  }
+  };
 
   constructor(
       private formBuilder: FormBuilder,
@@ -77,11 +79,11 @@ export class HomeComponent implements AfterViewInit {
     };
 
     if ( this.downloadCounter < this.KILO ) {
-      options.duration = 2
+      options.duration = 2;
     } else if ( this.downloadCounter < this.MILLION ) {
-      options.duration = 3
+      options.duration = 3;
     } else {
-      options.duration = 4
+      options.duration = 4;
     }
 
     const eventCountUp = new CountUp( 'npmCounterElement', this.downloadCounter, options );
@@ -90,11 +92,11 @@ export class HomeComponent implements AfterViewInit {
       return this.countUpFormatter( n, this.serverTypesCounter );
     };
     if ( this.serverTypesCounter < this.KILO ) {
-      options.duration = 2
+      options.duration = 2;
     } else if ( this.serverTypesCounter < this.MILLION ) {
-      options.duration = 3
+      options.duration = 3;
     } else {
-      options.duration = 4
+      options.duration = 4;
     }
 
     const studentCountUp = new CountUp( 'githubStarCounterElement', this.serverTypesCounter, options );
@@ -103,11 +105,11 @@ export class HomeComponent implements AfterViewInit {
       return this.countUpFormatter( n, this.uiTypesCounter );
     };
     if ( this.uiTypesCounter < this.KILO ) {
-      options.duration = 2
+      options.duration = 2;
     } else if ( this.uiTypesCounter < this.MILLION ) {
-      options.duration = 3
+      options.duration = 3;
     } else {
-      options.duration = 4
+      options.duration = 4;
     }
 
     const userCountUp = new CountUp( 'serverTypesCounterElement', this.uiTypesCounter, options );
@@ -131,12 +133,12 @@ export class HomeComponent implements AfterViewInit {
 
   countUpFormatter( n: number, lastNumber: number ) {
     if ( n < this.KILO ) {
-      return n + ''
+      return n + '';
     } else {
       if ( n < this.MILLION ) {
-        return Math.round( n / this.KILO * 10 ) / 10 + 'k'
+        return Math.round( n / this.KILO * 10 ) / 10 + 'k';
       } else {
-        return Math.round( n / this.MILLION * 10 ) / 10 + 'M'
+        return Math.round( n / this.MILLION * 10 ) / 10 + 'M';
       }
     }
   }

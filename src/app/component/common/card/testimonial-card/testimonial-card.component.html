@@ -14,11 +14,12 @@
         <span>Open Template Hub</span>
       </a>
       <div class="footer-social">
-        <a [href]="environment.social.twitter.url + '/' + environmentCommon.oth.social.twitter" target="_blank">
+        <a [href]="environment.social.twitter.url + '/' + environmentCommon.oth.social.twitter" target="_blank"
+           aria-label="twitter">
           <i aria-hidden="true" [style.color]="option.style.themeColor" [class]="'fab fa-' + environment.social.twitter.cssClass + ' fa-2x fa-fw'"></i>
         </a>
         <a [href]="environment.social.linkedin.url + '/company/' + environmentCommon.oth.social.linkedin"
-           target="_blank">
+           target="_blank" aria-label="linkedin">
           <i aria-hidden="true" [style.color]="option.style.themeColor" [class]="'fab fa-' + environment.social.linkedin.cssClass + ' fa-2x fa-fw'"></i>
         </a>
       </div>

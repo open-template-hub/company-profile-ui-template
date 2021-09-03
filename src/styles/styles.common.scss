@@ -12,6 +12,11 @@
 @import "other/rate";
 @import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
   min-height: 100vh;
   height: auto;

@@ -275,7 +275,7 @@ export class CreateEventComponent implements OnInit {
       link: this.form.controls.link.value,
       payload,
       paymentConfigKey: environment.payment.stripe.tag,
-      imageUrl: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/brand-logo.png?raw=true'
+      imageUrl: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png'
     };
 
     // if event._id is not null, update, else create

@@ -50,7 +50,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
-          branch: version-update
+          branch: workflow/version-update
           delete-branch: true
           base: develop
           title: 'Version Update PR'

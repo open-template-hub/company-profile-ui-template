@@ -28,3 +28,29 @@ jobs:
         with:
           tag-prefix: ''
           token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
+
+  create-version-update-pr:
+    name: "Create Version Update PR"
+    runs-on: ubuntu-latest
+    needs: bump-version
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
+          ref: develop
+
+      - name: Hard Reset Master
+        run: |
+          git fetch origin master:master
+          git reset --hard master
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
+          branch: version-update
+          delete-branch: true
+          base: develop
+          title: 'Version Update PR'

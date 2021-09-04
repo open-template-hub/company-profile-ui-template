@@ -1,14 +1,11 @@
 <div class="raw-landing-raw-content-page">
-  <div class="hero">
+  <div class="hero maintenance-content">
     <div class="brand-logo-wrapper hero-content">
-      <div class="bounce-stage">
-        <img [src]="brand.brandLogo" alt="logo" class="bounce brand-logo" height="100"/>
+      <div>
+        <img [src]="brand.brandLogoBroken" alt="logo" class="brand-logo" height="150"/>
       </div>
-      <h2>Under maintenance 🚧</h2>
+      <h1>Under maintenance</h1>
     </div>
-    <h6>Please check again later</h6>
-    <div class="section-submit">
-      <app-button1 (click)="router.navigate(['/'])" [text]="'HOME'"></app-button1>
-    </div>
+    <h3>Please check again later</h3>
   </div>
 </div>

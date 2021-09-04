@@ -19,15 +19,6 @@
   justify-content: center;
 }
 
-.hero .quote {
-  margin-top: 4em;
-  padding: 0 10%;
-}
-
-.hero .author {
-  color: var(--brand-color);
-}
-
 .layers {
   width: 100%;
   overflow: hidden;
@@ -71,16 +62,7 @@
   }
 
   .hero .brand-logo {
-    height: 75px;
-  }
-
-  .hero .quote {
-    margin-top: 2.5em;
-    font-size: 1em;
-  }
-
-  .hero .author {
-    font-size: 0.7em;
+    height: 100px;
   }
 
   .landing-title {
@@ -106,14 +88,6 @@
 }
 
 @media only screen and (min-width: 1000px) {
-  .hero .quote {
-    font-size: 0.9em;
-  }
-
-  .hero .author {
-    font-size: 0.8em;
-  }
-
   .landing-title {
     padding-top: 125px;
     padding-bottom: 90px;

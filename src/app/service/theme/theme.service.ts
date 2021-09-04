@@ -19,7 +19,8 @@ export class ThemeService {
   private sideNavClosedSubject: BehaviorSubject<string>;
 
   public brand = {
-    brandLogo: ''
+    brandLogo: '',
+    brandLogoBroken: ''
   };
 
   private maxAspectRatioMedia;
@@ -73,6 +74,7 @@ export class ThemeService {
     this.sideNavClosedSubject = new BehaviorSubject<string>( sideNavClosedStorageItem );
     this.sideNavClosed = this.sideNavClosedSubject.asObservable();
     this.brand.brandLogo = './assets/logo/brand-logo.png';
+    this.brand.brandLogoBroken = './assets/logo/brand-logo-broken.png';
 
     if ( version ) {
       this.appVersion = version;

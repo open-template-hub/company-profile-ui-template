@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { URLS } from '../../../data/constant';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
@@ -18,8 +19,12 @@ export class VerifyAccountComponent implements OnInit, OnDestroy {
   token = '';
 
   brand = {
-    brandLogo: '',
+    brandLogoBroken: '',
+    brandLogoMerge: '',
+    brandLogoMerged: '',
   };
+
+  URLS = URLS;
 
   constructor( private route: ActivatedRoute,
       public router: Router,

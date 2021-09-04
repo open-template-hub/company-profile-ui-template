@@ -21,7 +21,8 @@ export class ThemeService {
   public brand = {
     brandLogo: '',
     brandLogoBroken: '',
-    brandLogoMerge: ''
+    brandLogoMerge: '',
+    brandLogoMerged: ''
   };
 
   private maxAspectRatioMedia;
@@ -77,6 +78,7 @@ export class ThemeService {
     this.brand.brandLogo = './assets/logo/brand-logo.png';
     this.brand.brandLogoBroken = './assets/logo/brand-logo-broken.png';
     this.brand.brandLogoMerge = './assets/logo/brand-logo-merge.gif';
+    this.brand.brandLogoMerged = './assets/logo/brand-logo-merged.png';
 
     if ( version ) {
       this.appVersion = version;

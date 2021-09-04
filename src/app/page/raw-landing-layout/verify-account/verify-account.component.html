@@ -1,20 +1,22 @@
 <div class="raw-landing-raw-content-page">
-  <div class="hero">
+  <div class="hero verify-account-content">
     <div class="brand-logo-wrapper hero-content">
-      <div class="bounce-stage">
-        <img [src]="brand.brandLogo" alt="logo" class="bounce brand-logo" height="100"/>
+      <div>
+        <img [src]="loading ? brand.brandLogoMerge : (error ? brand.brandLogoBroken : brand.brandLogoMerged)" alt="logo" class="brand-logo" height="150"/>
       </div>
-      <h2 *ngIf="loading">Verifying account..</h2>
-      <h2 *ngIf="!loading && error">An error occurred</h2>
-      <h2 *ngIf="!loading && !error">Account verified!</h2>
+      <h1 *ngIf="loading">Verifying account..</h1>
+      <h1 *ngIf="!loading && error">Account verification failed</h1>
+      <h1 *ngIf="!loading && !error">Account verified 🎉</h1>
     </div>
-    <h6 *ngIf="error" class="error-text">Sorry about that!</h6>
-    <h6 *ngIf="!loading && !error">Please proceed with login</h6>
-    <div *ngIf="!loading && !error" class="section-submit">
-      <app-button1 (click)="router.navigate(['/login'])" [text]="'LOG IN'"></app-button1>
-    </div>
-    <div *ngIf="!loading && error" class="section-submit">
-      <app-button1 (click)="router.navigate(['/'])" [text]="'HOME'"></app-button1>
-    </div>
+
+    <h3 *ngIf="!loading && !error">Please proceed with login</h3>
+    <app-button1 *ngIf="!loading && !error" [text]="'LOG IN'" [brandColor]="true" [isSleekButton]="true"
+                 (click)="router.navigate([URLS.login])">
+    </app-button1>
+
+    <h3 *ngIf="!loading && error">Something went wrong!</h3>
+    <app-button1 *ngIf="!loading && error" [text]="'HOME'" [brandColor]="true" [isSleekButton]="true"
+                 (click)="router.navigate([URLS.root])">
+    </app-button1>
   </div>
 </div>

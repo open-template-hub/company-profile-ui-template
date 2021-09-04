@@ -13,9 +13,9 @@
       dataLayer.push( arguments );
     }
 
-    gtag( 'js', new Date() );
+    gtag( "js", new Date() );
 
-    gtag( 'config', 'G-2GY64QMRBC' );
+    gtag( "config", "G-2GY64QMRBC" );
   </script>
 
   <meta content="yes" name="apple-mobile-web-app-capable">
@@ -134,6 +134,16 @@
 
       .index-splash-hero a:hover {
         color: #43B043;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .index-splash-page {
+        background: #353535;
+      }
+
+      .index-splash-hero h2 {
+        color: #e0e0e0;
       }
     }
   </style>

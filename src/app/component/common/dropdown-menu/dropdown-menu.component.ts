@@ -88,7 +88,6 @@ export class DropdownMenuComponent {
     this.closeDropdownInternalClicked = true;
     this.utilService.delay( 500 ).then( () => {
       this.closeDropdown();
-      console.log( 'closed' );
     } );
   }
 }

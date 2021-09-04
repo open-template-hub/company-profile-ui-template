@@ -6,13 +6,13 @@
       <hr>
       <div fxLayout="row" class="content">
         <a class="twitter-area" (click)="shareViaClicked.emit( 'twitter' )">
-          <app-social-button [brand]="environment.social.twitter.cssClass"
+          <app-social-button [brand]="environmentCommon.website.twitter.cssClass"
                              [circle]="true" [isSmallLogo]="true"></app-social-button>
           <p>Twitter</p>
         </a>
         <a class="linkedin-area" style="margin-left: 30px;">
           <a class="linkedin- area" (click)="shareViaClicked.emit( 'linkedin' )">
-            <app-social-button [brand]="environment.social.linkedin.cssClass"
+            <app-social-button [brand]="environmentCommon.website.linkedin.cssClass"
                                [circle]="true" [isSmallLogo]="true"></app-social-button>
             <p>Linkedin</p>
           </a>
@@ -23,15 +23,16 @@
       <p>Calendar</p>
       <hr>
       <div fxLayout="row" class="content">
-        <app-social-button (click)="calendarClicked.emit(true)" [brand]="environment.social.appleCalendar.cssClass"
+        <app-social-button (click)="calendarClicked.emit(true)"
+                           [brand]="environmentCommon.website.appleCalendar.cssClass"
                            [flexStart]="true"
-                           [localImage]="environment.social.appleCalendar.logo"
+                           [localImage]="environmentCommon.website.appleCalendar.logo"
                            [noTextStyle]="true"
                            class="apple-calendar"></app-social-button>
         <app-social-button style="margin-left: 30px;" (click)="calendarClicked.emit(true)"
-                           [brand]="environment.social.googleCalendar.cssClass"
+                           [brand]="environmentCommon.website.googleCalendar.cssClass"
                            [flexStart]="true"
-                           [localImage]="environment.social.googleCalendar.logo"
+                           [localImage]="environmentCommon.website.googleCalendar.logo"
                            [noTextStyle]="true"
                            class="google-calendar"></app-social-button>
       </div>

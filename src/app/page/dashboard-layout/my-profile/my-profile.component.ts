@@ -1,7 +1,9 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../../../environments/environment';
+import { environmentCommon } from '../../../../environments/environment-common';
 import { Rate } from '../../../component/common/rate-bar/rate-bar.component';
+import { PROFILE_IMG, URLS } from '../../../data/constant';
 import { AuthToken } from '../../../model/AuthToken';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
@@ -14,7 +16,6 @@ import { InformationService } from '../../../service/information/information.ser
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ThemeService } from '../../../service/theme/theme.service';
 import { UserActivityService } from '../../../service/user-activity/user-activity.service';
-import { PROFILE_IMG, URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-my-profile',
@@ -25,7 +26,10 @@ export class MyProfileComponent implements OnDestroy {
 
   currentUser: AuthToken;
   userInfo: any = {};
+
   environment = environment;
+  environmentCommon = environmentCommon;
+
   profileImg = PROFILE_IMG;
   loading = false;
   loadingCount = false;

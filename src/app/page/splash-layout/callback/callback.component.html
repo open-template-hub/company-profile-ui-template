@@ -3,9 +3,9 @@
     <img [src]="brand.brandLogo" alt="logo"/>
     <i aria-hidden="true" *ngIf="!error" class="fa fa-check-circle success-text"></i>
     <i aria-hidden="true" *ngIf="error" class="fa fa-times-circle error-text"></i>
-    <img [src]="payment ? payment.logo : social.logo" alt="social logo"/>
+    <img [src]="website.logo" alt="partner"/>
   </div>
-  <div *ngIf="!error" [class]="'splash-loading-bar ' + (payment ? payment.cssClass : social.cssClass)">
+  <div *ngIf="!error" [class]="'splash-loading-bar ' + website.cssClass">
   </div>
   <div *ngIf="error" class="error-text alert-with-icon">
     <p>

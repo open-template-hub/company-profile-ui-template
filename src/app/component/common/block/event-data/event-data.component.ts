@@ -3,12 +3,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { createEvent, DateArray, EventAttributes } from 'ics';
 import { environment } from 'src/environments/environment';
+import { environmentCommon } from '../../../../../environments/environment-common';
+import { URLS } from '../../../../data/constant';
 import { EventService } from '../../../../service/event/event.service';
 import { InformationService } from '../../../../service/information/information.service';
 import { LoadingService } from '../../../../service/loading/loading.service';
 import { PaymentService } from '../../../../service/payment/payment.service';
 import { UserActivityService } from '../../../../service/user-activity/user-activity.service';
-import { URLS } from '../../../../data/constant';
 
 @Component( {
   selector: 'app-event-data',
@@ -16,8 +17,11 @@ import { URLS } from '../../../../data/constant';
   styleUrls: [ './event-data.component.scss' ]
 } )
 export class EventDataComponent implements OnInit {
+
   selectedRate = 0;
+
   environment = environment;
+  environmentCommon = environmentCommon;
 
   @Input() title: string = undefined;
   @Input() user: any = undefined;
@@ -170,9 +174,9 @@ export class EventDataComponent implements OnInit {
 
   onMarkAsCompletedClick() {
     this.eventService.markAsCompleted( this.id ).subscribe( () => {
-      this.informationService.setInformation( `Completed ${ this.title }`, 'info' )
-      this.markAsCompletedButtonClicked.emit( this.id )
-    } )
+      this.informationService.setInformation( `Completed ${ this.title }`, 'info' );
+      this.markAsCompletedButtonClicked.emit( this.id );
+    } );
   }
 
   onEditClick() {
@@ -183,36 +187,36 @@ export class EventDataComponent implements OnInit {
 
   onCategoryClick() {
     this.router.navigate( [ URLS.dashboard.learn ],
-      {
-        queryParams: {
-          category: this.category.id,
-          'sub-category': this.subCategory?.id,
-          'leaf-category': this.leafCategory?.id
-        }
-      } );
+        {
+          queryParams: {
+            category: this.category.id,
+            'sub-category': this.subCategory?.id,
+            'leaf-category': this.leafCategory?.id
+          }
+        } );
   }
 
   onRateClick() {
     this.userActivityService.rate( this.id, this.selectedRate ).subscribe( () => {
-      this.informationService.setInformation( `Rated ${ this.title }`, 'info' )
+      this.informationService.setInformation( `Rated ${ this.title }`, 'info' );
       this.rateButtonClicked.emit();
-    });
+    } );
   }
 
   shareVia( brand: string ) {
-    let eventUrl: string
+    let eventUrl: string;
 
     switch ( brand ) {
       case 'twitter':
         const related = this.category.name + ( this.subCategory ? ',' + this.subCategory.name : '' ) +
-            ( this.leafCategory ? ',' + this.leafCategory.name : '' )
-        eventUrl = environment.social.twitter.shareUrl + environment.clientUrl
-          + URLS.dashboard.event + '?event_id=' + this.id + '&text=' + this.title + '&via=wecontribute_io'
-          + '&related=' + related
-        break
+            ( this.leafCategory ? ',' + this.leafCategory.name : '' );
+        eventUrl = environmentCommon.website.twitter.shareUrl + environment.clientUrl
+            + URLS.dashboard.event + '?event_id=' + this.id + '&text=' + this.title + '&via=wecontribute_io'
+            + '&related=' + related;
+        break;
       case 'linkedin':
-        eventUrl = environment.social.linkedin.shareUrl + encodeURIComponent(  environment.clientUrl + URLS.dashboard.event
-          + '?event_id=' + this.id )
+        eventUrl = environmentCommon.website.linkedin.shareUrl + encodeURIComponent( environment.clientUrl + URLS.dashboard.event
+            + '?event_id=' + this.id );
     }
 
     window.open( eventUrl, '_blank' );

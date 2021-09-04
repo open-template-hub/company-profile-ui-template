@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { environment } from '../environments/environment';
-import { EventComponent } from './page/dashboard-layout/event/event.component';
+import { environmentCommon } from '../environments/environment-common';
+import { AuthGuard } from './guard/auth/auth.guard';
+import { PublicProfileGuard } from './guard/public-profile/public-profile.guard';
 import { CreateEventComponent } from './page/dashboard-layout/create-event/create-event.component';
 import { DashboardLayoutComponent } from './page/dashboard-layout/dashboard-layout.component';
 import { DashboardComponent } from './page/dashboard-layout/dashboard/dashboard.component';
+import { EventComponent } from './page/dashboard-layout/event/event.component';
 import { LearnComponent } from './page/dashboard-layout/learn/learn.component';
 import { MyProfileComponent } from './page/dashboard-layout/my-profile/my-profile.component';
 import { PublicProfileComponent } from './page/dashboard-layout/public-profile/public-profile.component';
@@ -30,8 +32,6 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { WelcomeComponent } from './page/settings-layout/welcome/welcome.component';
 import { CallbackComponent } from './page/splash-layout/callback/callback.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
-import { AuthGuard } from './guard/auth/auth.guard';
-import { PublicProfileGuard } from './guard/public-profile/public-profile.guard';
 
 const routes: Routes = [
   {
@@ -68,15 +68,15 @@ const routes: Routes = [
     component: SplashLayoutComponent,
     data: { layout: 'splash-layout' },
     children: [
-      { path: 'google', component: CallbackComponent, data: { social: environment.social.google } },
-      { path: 'facebook', component: CallbackComponent, data: { social: environment.social.facebook } },
-      { path: 'twitter', component: CallbackComponent, data: { social: environment.social.twitter } },
-      { path: 'linkedin', component: CallbackComponent, data: { social: environment.social.linkedin } },
-      { path: 'twitch', component: CallbackComponent, data: { social: environment.social.twitch } },
-      { path: 'dribbble', component: CallbackComponent, data: { social: environment.social.dribbble } },
-      { path: 'reddit', component: CallbackComponent, data: { social: environment.social.reddit } },
-      { path: 'github', component: CallbackComponent, data: { social: environment.social.github } },
-      { path: 'stripe', component: CallbackComponent, data: { payment: environment.payment.stripe } }
+      { path: 'google', component: CallbackComponent, data: { oauth: environmentCommon.website.google } },
+      { path: 'facebook', component: CallbackComponent, data: { oauth: environmentCommon.website.facebook } },
+      { path: 'twitter', component: CallbackComponent, data: { oauth: environmentCommon.website.twitter } },
+      { path: 'linkedin', component: CallbackComponent, data: { oauth: environmentCommon.website.linkedin } },
+      { path: 'twitch', component: CallbackComponent, data: { oauth: environmentCommon.website.twitch } },
+      { path: 'dribbble', component: CallbackComponent, data: { oauth: environmentCommon.website.dribbble } },
+      { path: 'reddit', component: CallbackComponent, data: { oauth: environmentCommon.website.reddit } },
+      { path: 'github', component: CallbackComponent, data: { oauth: environmentCommon.website.github } },
+      { path: 'stripe', component: CallbackComponent, data: { payment: environmentCommon.website.stripe } }
     ]
   },
   {

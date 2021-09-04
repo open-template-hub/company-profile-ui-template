@@ -2,10 +2,10 @@
   <app-card1 [isSmall]="true" [title]="'Log in'" [topLayer]="true">
     <div body>
       <div fxLayout="row" fxLayoutAlign="center center">
-        <app-social-button (click)="socialLogin(environment.social.facebook)"
-                           [brand]="environment.social.facebook.cssClass"
+        <app-social-button (click)="socialLogin(environmentCommon.website.facebook)"
+                           [brand]="environmentCommon.website.facebook.cssClass"
                            [circle]="true"></app-social-button>
-        <app-social-button (click)="socialLogin(environment.social.google)" [brand]="environment.social.google.cssClass"
+        <app-social-button (click)="socialLogin(environmentCommon.website.google)" [brand]="environmentCommon.website.google.cssClass"
                            [circle]="true"></app-social-button>
       </div>
       <div fxLayout="column" fxLayoutAlign="center center" style="margin-bottom: 1.5rem; margin-top: 0.5rem;">

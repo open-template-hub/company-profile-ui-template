@@ -2,7 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { environmentCommon } from 'src/environments/environment-common';
 import { environment } from '../../../../environments/environment';
+import { URLS } from '../../../data/constant';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { EventService } from '../../../service/event/event.service';
@@ -10,7 +12,6 @@ import { FileStorageService } from '../../../service/file-storage/file-storage.s
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ToastService } from '../../../service/toast/toast.service';
-import { URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-login',
@@ -22,7 +23,10 @@ export class LoginComponent implements OnInit, OnDestroy {
   form: FormGroup;
   submitted = false;
   returnUrl: string;
+
   environment = environment;
+  environmentCommon = environmentCommon;
+
   loading = false;
   disabled = false;
 

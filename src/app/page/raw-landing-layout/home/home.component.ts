@@ -18,7 +18,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 } )
 export class HomeComponent implements AfterViewInit {
 
-  downloadCounter = 5300;
+  downloadCounter = 6100;
   serverTypesCounter = 5;
   uiTypesCounter = 3;
 

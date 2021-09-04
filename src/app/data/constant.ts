@@ -1,4 +1,5 @@
 import { DropdownColumnOption } from '../component/common/dropdown-menu/dropdown-menu.component';
+import { Partner } from '../component/common/swiper-wrapper/swiper-wrapper.component';
 
 /**
  * @description holds constants
@@ -109,31 +110,31 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
     sectionDescription: 'Micro server solutions for your needs',
     menus: [
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/auth-server-logo.png?raw=true' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png' },
         header: 'Auth Server',
         description: 'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/payment-server-logo.png?raw=true' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png' },
         header: 'Payment Server',
         description: 'Payment Server template integrated with Stripe and Coinbase Commerce payment systems',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/file-storage-server-logo.png?raw=true' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/file-storage-server-logo.png' },
         header: 'File Storage Server',
         description: 'File Storage Server Template that supports uploading and downloading files from AWS S3',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/analytics-server-logo.png?raw=true' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/analytics-server-logo.png' },
         header: 'Analytics Server',
         description: 'Analytics Server Template for generic usage in Node.js',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/basic-info-server-logo.png?raw=true' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/basic-info-server-logo.png' },
         header: 'Basic Info Server',
         description: 'Basic Info Server Template for generic usage in Node.js',
         link: URLS.maintenance
@@ -145,19 +146,19 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
     sectionDescription: 'User interface solutions for your needs',
     menus: [
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/web-ui-logo.png?raw=true' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png' },
         header: 'Company Profile UI',
         description: 'Company Profile UI Template for generic usage in Angular',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/web-ui-logo.png?raw=true' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png' },
         header: 'Web UI',
         description: 'Web UI Template for generic usage in Angular',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/mobile-ui-logo.png?raw=true' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/mobile-ui-logo.png' },
         header: 'Mobile UI',
         description: 'Mobile UI Template for generic usage in React Native',
         link: URLS.maintenance
@@ -169,13 +170,13 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
     sectionDescription: 'Command line interface generators',
     menus: [
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/generators/server-generator-logo.png?raw=true' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png' },
         header: 'Server Generator',
         description: 'Command line interface generator of the servers at Open Template Hub',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/generators/server-generator-logo.png?raw=true' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png' },
         header: 'UI Generator',
         description: 'Command line interface generator of the user interfaces at Open Template Hub',
         link: URLS.maintenance
@@ -185,11 +186,11 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
   {
     sectionTitle: 'Premium',
     sectionDescription: 'Get more things done with our premium solutions',
-    sectionColor: 'var(--brand-color-yellow-theme)',
+    sectionColor: ThemeColorSettings.yellow,
     menus: [
       {
-        backgroundColor: 'var(--hover-yellow-theme)',
-        brand: { brandLogo: 'https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/servers/orchestration-server-logo.png?raw=true' },
+        itemColor: ThemeColorSettings.yellow,
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/orchestration-server-logo.png' },
         header: 'Orchestration Server',
         description: 'Orchestration Server Template for generic usage in Node.js',
         link: URLS.maintenance
@@ -204,19 +205,19 @@ export const SERVICES: DropdownColumnOption[ ] = [
     sectionDescription: 'Services that we provide',
     menus: [
       {
-        brand: { brandLogo: './assets/logo/brand-logo.png' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png' },
         header: 'Software Consultancy',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: './assets/logo/brand-logo.png' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png' },
         header: 'Cloud Integration',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         link: URLS.maintenance
       },
       {
-        brand: { brandLogo: './assets/logo/brand-logo.png' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png' },
         header: 'Quality Insurance',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         link: URLS.maintenance
@@ -225,6 +226,14 @@ export const SERVICES: DropdownColumnOption[ ] = [
   }
 ];
 
+export const PARTNERS: Partner[] = [
+  { brandLogo: '../../../../assets/common/partners/github-logo.png' },
+  { brandLogo: '../../../../assets/common/partners/aws-logo.png' },
+  { brandLogo: '../../../../assets/common/partners/heroku-logo.png' },
+  { brandLogo: '../../../../assets/common/partners/google-logo.png' },
+  { brandLogo: '../../../../assets/common/partners/stripe-logo.png' },
+  { brandLogo: '../../../../assets/common/partners/netlify-logo.png' },
+];
 
 export const CATEGORIES = [
   {

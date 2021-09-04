@@ -3,12 +3,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { environment } from '../../../../environments/environment';
+import { environmentCommon } from '../../../../environments/environment-common';
+import { URLS } from '../../../data/constant';
 import { AnalyticsService } from '../../../service/analytics/analytics.service';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ToastService } from '../../../service/toast/toast.service';
-import { URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-sign-up',
@@ -19,7 +20,10 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
   form: FormGroup;
   submitted = false;
+
   environment = environment;
+  environmentCommon = environmentCommon;
+
   loading = false;
   disabled = false;
 

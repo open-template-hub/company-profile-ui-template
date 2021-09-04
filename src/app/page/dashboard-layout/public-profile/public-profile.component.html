@@ -82,15 +82,15 @@
           </app-label-with-icon-data>
           <app-label-with-icon-data *ngIf="userInfo?.payload?.social?.twitter" [brand]="'twitter'"
                                     [data]="userInfo.payload.social.twitter"
-                                    [urlPrefix]="environment.social.twitter.url">
+                                    [urlPrefix]="environmentCommon.website.twitter.url">
           </app-label-with-icon-data>
           <app-label-with-icon-data *ngIf="userInfo?.payload?.social?.facebook" [brand]="'facebook'"
                                     [data]="userInfo.payload.social.facebook"
-                                    [urlPrefix]="environment.social.facebook.url">
+                                    [urlPrefix]="environmentCommon.website.facebook.url">
           </app-label-with-icon-data>
           <app-label-with-icon-data *ngIf="userInfo?.payload?.social?.youtube" [brand]="'youtube'"
                                     [data]="userInfo.payload.social.youtube"
-                                    [urlPrefix]="environment.social.youtube.url + '/c'">
+                                    [urlPrefix]="environmentCommon.website.youtube.url + '/c'">
 
           </app-label-with-icon-data>
         </div>

@@ -20,7 +20,6 @@ export const showroomEvents = [
       leafCategory:2,
       price:'5.00',
       isCompleted:false,
-      trailerVideoLink: 'GtgdHzLvf4Q'
     },
     __v:0,
     count:5,
@@ -69,7 +68,6 @@ export const showroomEvents = [
       subCategory:4,
       leafCategory:1,
       isCompleted:true,
-      trailerVideoLink:'BM4CHBmAPh4'
     },
     __v:0,
     count:30,
@@ -96,7 +94,6 @@ export const showroomEvents = [
       leafCategory:2,
       price:'5.00',
       isCompleted:false,
-      trailerVideoLink: 'GtgdHzLvf4Q'
     },
     __v:0,
     count:5,
@@ -145,7 +142,6 @@ export const showroomEvents = [
       subCategory:4,
       leafCategory:1,
       isCompleted:true,
-      trailerVideoLink:'BM4CHBmAPh4'
     },
     __v:0,
     count:30,
@@ -175,7 +171,6 @@ export const attendedEventsData = [
       leafCategory:2,
       price:'5.00',
       isCompleted:false,
-      trailerVideoLink: 'GtgdHzLvf4Q'
     },
     __v:0,
     count:5,
@@ -224,7 +219,6 @@ export const attendedEventsData = [
       subCategory:4,
       leafCategory:1,
       isCompleted:true,
-      trailerVideoLink:'BM4CHBmAPh4'
     },
     __v:0,
     count:30,
@@ -251,7 +245,6 @@ export const attendedEventsData = [
       leafCategory:2,
       price:'5.00',
       isCompleted:false,
-      trailerVideoLink: 'GtgdHzLvf4Q'
     },
     __v:0,
     count:5,
@@ -300,7 +293,6 @@ export const attendedEventsData = [
       subCategory:4,
       leafCategory:1,
       isCompleted:true,
-      trailerVideoLink:'BM4CHBmAPh4'
     },
     __v:0,
     count:30,

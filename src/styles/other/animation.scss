@@ -43,13 +43,6 @@
   }
 }
 
-.bounce-stage {
-  border-bottom: 3px solid var(--lighter);
-  display: flex;
-  justify-content: center;
-  width: 20%;
-}
-
 .bounce {
   animation-duration: 2s;
   animation-iteration-count: infinite;

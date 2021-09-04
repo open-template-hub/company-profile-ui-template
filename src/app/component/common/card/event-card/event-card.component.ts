@@ -46,7 +46,6 @@ export class EventCardComponent implements OnInit {
     this.basicInfoService.userInfo.subscribe( userInfo => {
       this.username = userInfo?.username;
     } );
-    this.getUrl()
   }
 
   onClickHeader() {
@@ -63,10 +62,5 @@ export class EventCardComponent implements OnInit {
 
   emitIdForCompletedButton( event ): void {
     this.markAsCompletedButtonClicked.emit( event );
-  }
-
-  getUrl() {
-    this.safeYoutubeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
-      'https://www.youtube.com/embed/' + this.event.payload?.trailerVideoLink );
   }
 }

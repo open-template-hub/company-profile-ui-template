@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { URLS } from '../../../data/constant';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { InformationService } from '../../../service/information/information.service';
 import { PaymentService } from '../../../service/payment/payment.service';
 import { ThemeService } from '../../../service/theme/theme.service';
-import { URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-callback',
@@ -14,8 +14,11 @@ import { URLS } from '../../../data/constant';
 } )
 export class CallbackComponent implements OnInit {
 
-  social: any;
+  oauth: any;
   payment: any;
+
+  website: any;
+
   error = '';
 
   brand = {
@@ -37,7 +40,7 @@ export class CallbackComponent implements OnInit {
   ngOnInit(): void {
     this.brand = this.themeService.brand;
 
-    this.social = this.route.snapshot.data.social;
+    this.oauth = this.route.snapshot.data.oauth;
     this.payment = this.route.snapshot.data.payment;
 
     if ( this.payment ) {
@@ -45,7 +48,9 @@ export class CallbackComponent implements OnInit {
       const eventId = this.route.snapshot.queryParamMap.get( 'id' );
       const transactionId = this.route.snapshot.queryParamMap.get( 'transaction_id' );
       this.paymentCallback( this.payment, status, eventId, transactionId );
+      this.website = this.payment;
     } else {
+      this.website = this.oauth;
       this.socialLoginCallback();
     }
   }
@@ -72,7 +77,7 @@ export class CallbackComponent implements OnInit {
       oauth_verifier: undefined
     };
 
-    if ( this.social.callbackParams.includes( 'code' ) ) {
+    if ( this.oauth.callbackParams.includes( 'code' ) ) {
       if ( !this.route.snapshot.queryParamMap.has( 'code' ) ) {
         this.error = 'Please try again later';
         return;
@@ -80,7 +85,7 @@ export class CallbackComponent implements OnInit {
       callbackParams.code = this.route.snapshot.queryParamMap.get( 'code' );
     }
 
-    if ( this.social.callbackParams.includes( 'state' ) ) {
+    if ( this.oauth.callbackParams.includes( 'state' ) ) {
       if ( !this.route.snapshot.queryParamMap.has( 'state' ) ) {
         this.error = 'Please try again later';
         return;
@@ -88,7 +93,7 @@ export class CallbackComponent implements OnInit {
       callbackParams.state = this.route.snapshot.queryParamMap.get( 'state' );
     }
 
-    if ( this.social.callbackParams.includes( 'oauth_token' ) ) {
+    if ( this.oauth.callbackParams.includes( 'oauth_token' ) ) {
       if ( !this.route.snapshot.queryParamMap.has( 'oauth_token' ) ) {
         this.error = 'Please try again later';
         return;
@@ -96,7 +101,7 @@ export class CallbackComponent implements OnInit {
       callbackParams.oauth_token = this.route.snapshot.queryParamMap.get( 'oauth_token' );
     }
 
-    if ( this.social.callbackParams.includes( 'oauth_verifier' ) ) {
+    if ( this.oauth.callbackParams.includes( 'oauth_verifier' ) ) {
       if ( !this.route.snapshot.queryParamMap.has( 'oauth_verifier' ) ) {
         this.error = 'Please try again later';
         return;
@@ -104,7 +109,7 @@ export class CallbackComponent implements OnInit {
       callbackParams.oauth_verifier = this.route.snapshot.queryParamMap.get( 'oauth_verifier' );
     }
 
-    this.authenticationService.socialLogin( this.social.tag, callbackParams )
+    this.authenticationService.socialLogin( this.oauth.tag, callbackParams )
     .pipe( first() )
     .subscribe(
         () => {

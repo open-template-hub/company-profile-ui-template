@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://opentemplatehub.com">
-    <img src="https://github.com/open-template-hub/open-template-hub.github.io/blob/master/assets/logo/user-interfaces/web-ui-logo.png?raw=true" alt="Logo" width=200>
+    <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png" alt="Logo" width=200>
   </a>
 </p>
 
@@ -14,7 +14,7 @@ Open Template Hub - Company Profile UI Template v2
 [![LastCommit](https://img.shields.io/github/last-commit/open-template-hub/company-profile-ui-template?color=43b043&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/commits/master)
 [![Release](https://img.shields.io/github/release/open-template-hub/company-profile-ui-template?include_prereleases&color=43b043&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/releases)
 [![SonarCloud](https://img.shields.io/sonar/quality_gate/open-template-hub_company-profile-ui-template?server=https%3A%2F%2Fsonarcloud.io&label=Sonar%20Cloud&style=for-the-badge&logo=sonarcloud)](https://sonarcloud.io/dashboard?id=open-template-hub_company-profile-ui-template)
-[![Webhint](https://img.shields.io/badge/Webhint-Results-blueviolet.svg?style=for-the-badge&logo=webhint)](https://webhint.io/scanner/f81328ff-c11d-4354-aed0-cbed1fab0a01)
+[![Webhint](https://img.shields.io/badge/Webhint-Results-blueviolet.svg?style=for-the-badge&logo=webhint)](https://webhint.io/scanner/eb9d8cdd-8a06-4ae8-bb59-5dbb1ce2016e)
 [![BTC](https://img.shields.io/badge/Donate-BTC-ORANGE?color=F5922F&style=for-the-badge&logo=bitcoin)](https://commerce.coinbase.com/checkout/8313af5f-de48-498d-b2cb-d98819ca7d5e)
 
 Company Profile UI Template for generic usage in Angular (generated from [Web UI Template](https://github.com/open-template-hub/web-ui-template))
@@ -25,7 +25,7 @@ Company Profile UI Template for generic usage in Angular (generated from [Web UI
 
 <p align="center">
   <a href="https://opentemplatehub.com">
-    <img src="https://github.com/open-template-hub/company-profile-ui-template/blob/develop/src/assets/demonstration/demonstration-main.png?raw=true" alt="Screenshot" width="800px">
+    <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/demonstration.png" alt="Screenshot" width="800px">
   </a>
 </p>
 

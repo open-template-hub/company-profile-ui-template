@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ThemeService } from '../../../service/theme/theme.service';
 
 @Component( {
@@ -9,7 +9,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 } )
 export class SignUpSuccessComponent implements OnInit {
 
-  email = '';
+  email = 'email@domain.com';
 
   brand = {
     brandLogo: '',
@@ -17,6 +17,7 @@ export class SignUpSuccessComponent implements OnInit {
 
   constructor(
       private route: ActivatedRoute,
+      public router: Router,
       private themeService: ThemeService ) {
   }
 

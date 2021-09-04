@@ -15,11 +15,5 @@ export interface Partner {
 } )
 
 export class SwiperWrapperComponent {
-  @Input() partners: Partner[] = [
-    { brandLogo: '../../../../assets/common/partners/buymeacoffee-logo.png' },
-    { brandLogo: '../../../../assets/common/partners/github-logo.png' },
-    { brandLogo: '../../../../assets/common/partners/google-logo.png' },
-    { brandLogo: '../../../../assets/common/partners/linkedin-logo.png' },
-    { brandLogo: '../../../../assets/common/partners/stripe-logo.png' }
-  ];
+  @Input() partners: Partner[] = [];
 }

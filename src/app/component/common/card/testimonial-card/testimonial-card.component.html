@@ -1,8 +1,8 @@
-<div id=event-card>
+<div>
   <app-card1 [enableHeaderFullImg]="false" [height]="'340px'"
              [paddingContent]="false"
              [width]="'400px'" [maxHeight]="'500px'"
-             [containsVideo]="false" [enableHeader]="false" [topLayer2]="true" [topLayerBackgroundColor]="option.style.themeColor"
+             [enableHeader]="false" [topLayer2]="true" [topLayerBackgroundColor]="option.style.themeColor"
              [topLayerMarginTop]="marginTop" [topLayerMinHeight]="minHeight" [testimonialSizeActive]="true">
     <div body class="content-wrapper">
       <div class="icon-wrapper">
@@ -14,12 +14,15 @@
         <span>Open Template Hub</span>
       </a>
       <div class="footer-social">
-        <a [href]="environment.social.twitter.url + '/' + environmentCommon.oth.social.twitter" target="_blank">
-          <i aria-hidden="true" [style.color]="option.style.themeColor" [class]="'fab fa-' + environment.social.twitter.cssClass + ' fa-2x fa-fw'"></i>
+        <a [href]="environmentCommon.website.twitter.url + '/' + environmentCommon.oth.social.twitter" target="_blank"
+           aria-label="twitter" rel=noopener>
+          <i aria-hidden="true" [style.color]="option.style.themeColor"
+             [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'"></i>
         </a>
-        <a [href]="environment.social.linkedin.url + '/company/' + environmentCommon.oth.social.linkedin"
-           target="_blank">
-          <i aria-hidden="true" [style.color]="option.style.themeColor" [class]="'fab fa-' + environment.social.linkedin.cssClass + ' fa-2x fa-fw'"></i>
+        <a [href]="environmentCommon.website.linkedin.url + '/company/' + environmentCommon.oth.social.linkedin"
+           target="_blank" aria-label="linkedin" rel=noopener>
+          <i aria-hidden="true" [style.color]="option.style.themeColor"
+             [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'"></i>
         </a>
       </div>
     </div>

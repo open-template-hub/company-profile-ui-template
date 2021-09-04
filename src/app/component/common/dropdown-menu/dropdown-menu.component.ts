@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
 import { ThemeService } from '../../../service/theme/theme.service';
 import { UtilService } from '../../../service/util/util.service';
 
@@ -10,7 +10,7 @@ export interface DropdownColumnOption {
 }
 
 export interface DropdownMenuOption {
-  backgroundColor?: string,
+  itemColor?: string,
   brand: { brandLogo: string },
   header: string,
   description: string,
@@ -30,6 +30,10 @@ export class DropdownMenuComponent {
 
   @Input() isDropdownOpen = false;
   @Input() minimumColumns = 1;
+  @Input() minimumRows = 5;
+
+  calculatedColumns;
+  calculatedRows;
 
   @Input() options: DropdownColumnOption[] = [];
 
@@ -43,10 +47,36 @@ export class DropdownMenuComponent {
       private utilService: UtilService
   ) {
     this.brand = this.themeService.brand;
+    this.calculatedColumns = this.minimumColumns;
+    this.calculatedRows = this.minimumRows;
+  }
+
+  @HostListener( 'window:resize', [ '$event' ] )
+  onResize() {
+
+    if ( this.isDropdownOpen && window.innerWidth > 999) {
+      let wantedColumns = this.minimumColumns;
+
+      while ( wantedColumns * 330 > window.innerWidth - 255 ) {
+        wantedColumns = wantedColumns - 2;
+      }
+
+      this.calculatedColumns = wantedColumns;
+
+      if ( this.calculatedColumns < this.minimumColumns ) {
+        this.calculatedRows = this.minimumRows - ( this.minimumColumns - this.calculatedColumns );
+      } else {
+        this.calculatedRows = this.minimumRows;
+      }
+    }
   }
 
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
+
+    if ( this.isDropdownOpen ) {
+      this.onResize();
+    }
   }
 
   closeDropdown() {
@@ -58,7 +88,6 @@ export class DropdownMenuComponent {
     this.closeDropdownInternalClicked = true;
     this.utilService.delay( 500 ).then( () => {
       this.closeDropdown();
-      console.log('closed');
     } );
   }
 }

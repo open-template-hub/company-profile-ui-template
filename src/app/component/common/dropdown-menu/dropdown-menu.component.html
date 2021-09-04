@@ -3,38 +3,38 @@
     <ng-content (click)="toggleDropdown()"></ng-content>
   </div>
 
-  <div *ngIf="isDropdownOpen" #dropdownContent class="dropdown-content" [class.dropdown-opened]="isDropdownOpen && closeDropdownInternalClicked">
+  <div *ngIf="isDropdownOpen" #dropdownContent class="dropdown-content"
+       [class.dropdown-opened]="isDropdownOpen && closeDropdownInternalClicked">
     <i aria-hidden="true" class="dropdown-caret fas fa-caret-up fa-lg fa-fw"></i>
     <div class="dropdown-top-menu" (click)="closeDropDownInternal()">
-      <i aria-hidden="true" class="fas fa-times fa-lg fa-fw" ></i>
+      <i aria-hidden="true" class="fas fa-times fa-lg fa-fw"></i>
     </div>
 
-    <div class="section-column-wrapper" [style]="'min-width: min(calc(100vw - 255px), ' + (330 * minimumColumns) + 'px);'">
+    <div class="section-column-wrapper" [style]="'min-width: ' + (330 * calculatedColumns) + 'px;'">
       <div class="section-column" *ngFor="let column of options; last as isLastColumn"
-           [class.section-column-right-border]="!isLastColumn">
+           [class.section-column-right-border]="true"
+           [class]="column.sectionColor ? column.sectionColor + '-theme' : ''"
+           [style]="'max-height: ' + ((80  + (150 * calculatedRows)) + 1) + 'px;'">
         <div *ngIf="column.sectionTitle" class="section-header">
-          <h4 [style.color]="column.sectionColor ? column.sectionColor : ''">
+          <h4>
             {{ column.sectionTitle }}
           </h4>
-          <hr [style.border-color]="column.sectionColor ? column.sectionColor : ''"/>
+          <hr [style.border-color]="'var(--brand-color)'"/>
           <p>
             {{ column.sectionDescription }}
           </p>
         </div>
 
         <a *ngFor="let option of column.menus; last as isLast; first as isFirst" class="dropdown-item"
-           (mouseover)="option.hover = true" (mouseleave)="option.hover = false"
-           [ngStyle]="option?.hover && { 'background-color': option.backgroundColor? option.backgroundColor : 'var(--hover)' }"
-           [style.margin-bottom]="!isLast ? '15px' : '0'"
-           [style.margin-top]="isFirst ? '0px' : '10px'"
-           [href]="option.link">
+           [class]="option.itemColor ? option.itemColor + '-theme' : ''"
+           [routerLink]="option.link" (click)="closeDropDownInternal()">
 
-          <img [src]="option.brand.brandLogo" alt="logo" class="dropdown-item-logo" height="50"/>
+          <img [src]="option.brand.brandLogo" alt="logo" class="dropdown-item-logo" height="55"/>
 
           <div class="dropdown-item-content">
-          <span>
+          <h6>
             {{ option.header }}
-          </span>
+          </h6>
             <p>
               {{ option.description }}
             </p>

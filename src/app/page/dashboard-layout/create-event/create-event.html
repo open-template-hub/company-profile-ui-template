@@ -60,12 +60,6 @@
               <p style="min-width: 75px; margin-left: 14px;">Duration:</p>
               <i aria-hidden="true" class="fas fa-clock fa-lg fa-fw"></i>
             </div>
-            <div *ngIf="form.controls.isTrailerVideoLinkActive.value"
-                 [class.input-error]="submitted && form.controls.trailerVideoLink.invalid"
-                 class="input-with-icon">
-              <input formControlName="trailerVideoLink" placeholder="Video trailer link..." type="text">
-              <i aria-hidden="true" class="fab fa-youtube fa-lg fa-fw"></i>
-            </div>
             <div *ngIf="form.controls.isPremium.value"
                  [class.input-error]="submitted && form.controls.price.invalid" class="input-with-icon">
               <input formControlName="price" placeholder="Price..." type="text">
@@ -86,12 +80,6 @@
                   class="tooltip" show-delay="500" tooltip="Premium">
                   <i aria-hidden="true" class="fas fa-crown fa-lg fa-fw"
                      [class.button-active]="form.controls.isPremium.value"></i>
-            </span>
-            <span
-                (click)="form.controls.isTrailerVideoLinkActive.setValue( !form.controls.isTrailerVideoLinkActive.value )"
-                class="tooltip" show-delay="500" tooltip="Add Youtube video trailer link">
-                  <i aria-hidden="true" class="fab fa-youtube fa-lg fa-fw"
-                     [class.button-active]="form.controls.isTrailerVideoLinkActive.value"></i>
             </span>
             <span
                 (click)="form.controls.isDurationActive.setValue( !form.controls.isDurationActive.value )"

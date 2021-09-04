@@ -1,7 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../../../environments/environment';
+import { environmentCommon } from '../../../../environments/environment-common';
 import { Rate } from '../../../component/common/rate-bar/rate-bar.component';
+import { PROFILE_IMG, URLS } from '../../../data/constant';
 import { AuthToken } from '../../../model/AuthToken';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
@@ -14,7 +16,6 @@ import { InformationService } from '../../../service/information/information.ser
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ThemeService } from '../../../service/theme/theme.service';
 import { UserActivityService } from '../../../service/user-activity/user-activity.service';
-import { PROFILE_IMG, URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-public-profile',
@@ -25,7 +26,10 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
 
   currentUser: AuthToken;
   currentUserInfo: any;
+
   environment = environment;
+  environmentCommon = environmentCommon;
+
   profileImg = PROFILE_IMG;
   pageLoading = false;
   userInfo: any = {};
@@ -111,8 +115,8 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
 
         // check badges
         this.userActivityService.getNumberOfEventsTaken( visitedUserInfo.username ).subscribe( result => {
-          this.numberOfEventsTaken = result[0].numberOfEventsTaken
-        })
+          this.numberOfEventsTaken = result[ 0 ].numberOfEventsTaken;
+        } );
 
         this.numberOfEventsMade = undefined;
         this.rateObject = undefined;
@@ -120,23 +124,23 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
 
         if ( visitedUserInfo.payload?.userProfileActivated ) {
           this.userActivityService.getNumberOfEventsMade( visitedUserInfo.username ).subscribe( result => {
-            this.numberOfEventsMade = result.numberOfEventsMade
-          } )
+            this.numberOfEventsMade = result.numberOfEventsMade;
+          } );
 
           this.userActivityService.getContributorRate( visitedUserInfo.username ).subscribe( rate => {
             this.rateObject = {
               userRating: rate.userRating,
               numberOfRates: rate.numberOfRates
-            }
-          })
+            };
+          } );
 
           this.userActivityService.getTopContributors().subscribe( topContributors => {
             topContributors.forEach( ( value, index ) => {
-              if( value.username === visitedUserInfo.username ) {
+              if ( value.username === visitedUserInfo.username ) {
                 this.topContributor = index;
               }
             } );
-          })
+          } );
         }
         this.fillFollowInfo();
 
@@ -150,14 +154,14 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
         }
 
         this.eventService.countUserEvents( visitedUserInfo.username ).subscribe( eventList => {
-          this.eventsInfo = eventList
+          this.eventsInfo = eventList;
           this.loadingCount = false;
-        } )
+        } );
 
         this.userActivityService.getEventsTaken( visitedUserInfo.username ).subscribe( eventList => {
-          this.lessonsInfo = eventList
-          this.loadingLessonsTaken = false
-        } )
+          this.lessonsInfo = eventList;
+          this.loadingLessonsTaken = false;
+        } );
       } );
     } );
   }

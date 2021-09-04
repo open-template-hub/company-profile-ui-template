@@ -1,13 +1,13 @@
 <swiper
-  [slidesPerView]="1"
-  [spaceBetween]="10"
-  [loop]="true"
-  [loopFillGroupWithBlank]="true"
-  [pagination]="{
+    [slidesPerView]="1"
+    [spaceBetween]="10"
+    [loop]="true"
+    [loopFillGroupWithBlank]="true"
+    [pagination]="{
       clickable: true
     }"
-  [navigation]="true"
-  [breakpoints]="{
+    [navigation]="true"
+    [breakpoints]="{
       '640': {
         slidesPerView: 1,
         spaceBetween: 30
@@ -21,9 +21,8 @@
         spaceBetween: 50
       }
     }"
-  class="mySwiper"
->
+    class="mySwiper">
   <ng-template *ngFor="let partner of partners" swiperSlide>
-    <img [src]="partner.brandLogo" alt="logo" class="brand-logo" height="50"/>
+    <img [src]="partner.brandLogo" alt="logo" class="brand-logo" height="90"/>
   </ng-template>
 </swiper>

@@ -3,10 +3,6 @@
   cursor: pointer;
 }
 
-#trailer-video {
-  width: -webkit-fill-available;
-}
-
 @media only screen and (max-width: 999px) {
   #header-img {
     width: 75%;
@@ -28,18 +24,18 @@
     filter: initial;
   }
 
-  #event-card.no-hover:hover, #event-card.no-hover:hover #header-img {
+  .event-card.no-hover:hover, .event-card.no-hover:hover #header-img {
     transform: initial;
     transition: initial;
     filter: initial;
   }
 
-  #event-card:hover {
+  .event-card:hover {
     transform: scale(1.03);
     transition: transform .5s;
   }
 
-  #event-card:hover #header-img {
+  .event-card:hover #header-img {
     filter: opacity(75%);
   }
 }

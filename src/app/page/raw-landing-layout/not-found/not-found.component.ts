@@ -10,7 +10,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 export class NotFoundComponent {
 
   brand = {
-    brandLogo: '',
+    brandLogoBroken: '',
   };
 
   constructor(

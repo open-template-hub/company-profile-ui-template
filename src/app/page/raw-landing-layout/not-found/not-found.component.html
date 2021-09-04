@@ -1,14 +1,11 @@
 <div class="raw-landing-raw-content-page">
-  <div class="hero">
+  <div class="hero notfound-content">
     <div class="brand-logo-wrapper hero-content">
-      <div class="bounce-stage">
-        <img [src]="brand.brandLogo" alt="logo" class="bounce brand-logo" height="100"/>
+      <div>
+        <img [src]="brand.brandLogoBroken" alt="logo" class="brand-logo" height="150"/>
       </div>
-      <h2>404 page not found</h2>
+      <h1>404 Page not found</h1>
     </div>
-    <h6 class="error-text">Sorry about that!</h6>
-    <div class="section-submit">
-      <app-button1 (click)="router.navigate(['/'])" [text]="'HOME'"></app-button1>
-    </div>
+    <h3>Something went wrong</h3>
   </div>
 </div>

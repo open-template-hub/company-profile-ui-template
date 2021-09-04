@@ -25,4 +25,4 @@ jobs:
       - name: Set Milestone of the Issue
         uses: Code-Hex/auto-milestone-binder@v1.0.1
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}

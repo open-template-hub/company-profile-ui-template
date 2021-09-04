@@ -97,12 +97,12 @@
           <label class="input-checkbox-label" style="margin-bottom: 20px">
             <input formControlName="userProfileActivated" type="checkbox">
             <span></span>
-            <p>Activate user profile</p>
+            Activate user profile
           </label>
         </div>
         <div class="section-submit">
           <app-button1 [text]="'DONE'"></app-button1>
-          <a href="" routerLink="{{URLS.dashboard.root}}">
+          <a [routerLink]="URLS.dashboard.root">
             skip for now
           </a>
         </div>

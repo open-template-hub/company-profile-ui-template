@@ -57,7 +57,8 @@ export const environment = {
       tag: 'GITHUB_LOCAL',
       callbackParams: [ 'code', 'state' ],
       logo: './assets/common/social/github-logo.png',
-      cssClass: 'github'
+      cssClass: 'github',
+      url: 'https://github.com'
     },
     dribbble: {
       tag: 'DRIBBBLE_LOCAL',
@@ -81,7 +82,8 @@ export const environment = {
       cssClass: 'paypal'
     },
     productHunt: {
-      cssClass: 'product-hunt'
+      cssClass: 'product-hunt',
+      url: 'https://www.producthunt.com/'
     },
     appleCalendar: {
       logo: './assets/common/social/apple-calendar-logo.png',

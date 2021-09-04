@@ -21,7 +21,8 @@
       </div>
     </div>
     <div class="counters">
-      <a class="counter-wrapper" href="https://www.npmjs.com/package/@open-template-hub/server-generator"
+      <a class="counter-wrapper"
+         [href]="environment.social.github.url + '/' + environmentCommon.oth.social.github"
          target="_blank" rel=noopener>
         <h4 id="npmCounterElement" class="counter">
           0
@@ -33,7 +34,7 @@
         </h6>
       </a>
       <a class="counter-wrapper counter-alter"
-         href="https://github.com/open-template-hub/server-generator" target="_blank" rel=noopener>
+         [href]="'https://github.com/open-template-hub/server-generator'" target="_blank" rel=noopener>
         <h4 id="githubStarCounterElement" class="counter">
           0
         </h4>
@@ -41,7 +42,7 @@
           Server Types
         </h6>
       </a>
-      <a class="counter-wrapper" href="https://github.com/open-template-hub/app-generator" target="_blank" rel=noopener>
+      <a class="counter-wrapper" [href]="'https://github.com/open-template-hub/app-generator'" target="_blank" rel=noopener>
         <h4 id="serverTypesCounterElement" class="counter">
           0
         </h4>
@@ -90,7 +91,7 @@
         </div>
         <div class="feature"
              [style.background-color]="i % 2 == 0 ? 'var(--hover)' : ''">
-          <a class="feature-img-wrapper" [href]="product.link">
+          <a class="feature-img-wrapper" [routerLink]="product.link">
             <img class="server-logo"
                  [src]="product.brand.brandLogo"
                  alt="server-logo"/>
@@ -108,7 +109,7 @@
         <div *ngIf="i % 2 === 0 && isLast" class="layers">
           <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
             <path d="M 1000,0 0,0 v 150 z"
-                  [style]="'fill: ' + (product.backgroundColor ? product.backgroundColor : 'var(--hover)') + ';'"></path>
+                  [style]="'fill: var(--hover);'"></path>
           </svg>
         </div>
       </div>

@@ -29,7 +29,7 @@
            [class]="option.itemColor ? option.itemColor + '-theme' : ''"
            (mouseover)="option.hover = true" (mouseleave)="option.hover = false"
            [ngStyle]="option?.hover && { 'background-color': 'var(--hover)' }"
-           [href]="option.link">
+           [routerLink]="option.link">
 
           <img [src]="option.brand.brandLogo" alt="logo" class="dropdown-item-logo" height="50"/>
 

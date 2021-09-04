@@ -2,6 +2,8 @@ import { AfterViewInit, Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CountUp } from 'countup.js';
+import { environment } from '../../../../environments/environment';
+import { environmentCommon } from '../../../../environments/environment-common';
 import { TestimonialOption } from '../../../component/common/card/testimonial-card/testimonial-card.component';
 import { DropdownColumnOption } from '../../../component/common/dropdown-menu/dropdown-menu.component';
 import { Partner } from '../../../component/common/swiper-wrapper/swiper-wrapper.component';
@@ -16,7 +18,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 } )
 export class HomeComponent implements AfterViewInit {
 
-  downloadCounter = 5100;
+  downloadCounter = 5300;
   serverTypesCounter = 5;
   uiTypesCounter = 3;
 
@@ -30,6 +32,9 @@ export class HomeComponent implements AfterViewInit {
 
   KILO = 1000;
   MILLION = this.KILO * this.KILO;
+
+  environment = environment;
+  environmentCommon = environmentCommon;
 
   option1: TestimonialOption = {
     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',

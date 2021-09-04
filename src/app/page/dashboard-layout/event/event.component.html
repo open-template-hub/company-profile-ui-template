@@ -11,7 +11,7 @@
     <h2 style="text-align: center;">Attendees</h2>
     <div class="attendees-area">
       <div *ngFor="let user of event.attendees" class="attendees-name-area">
-        <a [href]="URLS.user.root + '/' + user">
+        <a [routerLink]="URLS.user.root + '/' + user">
           {{ user }}
         </a>
       </div>

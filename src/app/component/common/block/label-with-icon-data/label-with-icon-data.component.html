@@ -1,6 +1,6 @@
 <div *ngIf="brand" [class.no-margin]="noMargin" [class]="brand" class="icon-data-block" fxLayout="row">
   <i aria-hidden="true" [class]="'fab fa-' + brand + ' fa-lg fa-fw'"></i>
-  <a [target]="target" class="inline-a" aria-label="url" href="{{urlPrefix}}/{{data}}">{{data}}</a>
+  <a [target]="target" class="inline-a" aria-label="url" [href]="urlPrefix + '/' + data">{{data}}</a>
 </div>
 
 <div *ngIf="solid" [class.fix-width]="fixWidth" [class.no-margin-icon]="noMarginIcon" [class.no-margin]="noMargin"

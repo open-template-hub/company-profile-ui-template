@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { environment } from '../../../environments/environment';
+import { environmentCommon } from '../../../environments/environment-common';
 
 @Component( {
   selector: 'app-landing-layout',
@@ -9,4 +10,5 @@ import { environment } from '../../../environments/environment';
 export class RawLandingLayoutComponent {
 
   environment = environment;
+  environmentCommon = environmentCommon;
 }

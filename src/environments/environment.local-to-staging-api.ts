@@ -3,7 +3,7 @@ export const environment = {
 
   production: false,
 
-  serverUrl: 'https://oth-orchestration.herokuapp.com',
+  serverUrl: 'https://oth-server-orchestra-dev.herokuapp.com',
 
   clientUrl: 'http://localhost:4200',
 

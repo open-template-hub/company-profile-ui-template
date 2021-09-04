@@ -3,10 +3,12 @@ export const environment = {
 
   production: true,
 
-  serverUrl: 'https://oth-orchestration.herokuapp.com',
+  // FIXME: After creating live env change this url
+  serverUrl: 'https://oth-server-orchestra-dev.herokuapp.com',
 
-  clientUrl: 'https://www.opentemplatehub.com',
+  clientUrl: 'https://opentemplatehub.com',
 
+  // FIXME: After switching to live, change this to false
   mockDataEnabled: true,
 
   oauth: {

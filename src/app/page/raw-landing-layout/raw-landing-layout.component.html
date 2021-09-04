@@ -1,6 +1,5 @@
 <a *ngIf="environment.identity !== 'production'" [attr.data-ribbon]="environment.identity"
-   [class]="environment.identity === 'local' ? 'ribbon ribbon-error ribbon-top fixed' :
-   (environment.identity === 'staging' ? 'ribbon ribbon-warn ribbon-top fixed' : '')"
+   [class]="environment.identity ? environment.identity + ' ribbon ribbon-top fixed' : ''"
    [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/company-profile-ui-template'"
    target="_blank" rel="noreferrer" title="Identity"></a>
 <div>

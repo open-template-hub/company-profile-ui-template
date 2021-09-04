@@ -102,6 +102,14 @@
   background-color: var(--new);
 }
 
+.ribbon.local:before {
+  background-color: var(--brand-color-green-theme);
+}
+
+.ribbon.staging:before {
+  background-color: var(--brand-color-yellow-theme);
+}
+
 .ribbon:after {
   /* Set the text from the data-ribbon attribute */
   content: attr(data-ribbon);

@@ -4,7 +4,7 @@ export const environment = {
 
   serverUrl: 'https://oth-orchestration.herokuapp.com',
 
-  clientUrl: 'https://opentemplatehub.com',
+  clientUrl: 'https://www.opentemplatehub.com',
 
   mockDataEnabled: true,
 

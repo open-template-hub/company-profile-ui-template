@@ -1,4 +1,4 @@
-<a *ngIf="environment.identity !== 'production'" [attr.data-ribbon]="environment.identity"
+<a *ngIf="environment.identity !== 'production'" [attr.data-ribbon]="environment.identity | titlecase"
    [class]="environment.identity ? environment.identity + ' ribbon ribbon-top fixed' : ''"
    [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/company-profile-ui-template'"
    target="_blank" rel="noreferrer" title="Identity"></a>

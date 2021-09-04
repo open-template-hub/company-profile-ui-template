@@ -36,14 +36,22 @@
 .dropdown-item {
   display: flex;
   cursor: pointer;
+  align-items: center;
 }
 
 .dropdown-item-logo {
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
-.dropdown-item-content span {
+.dropdown-item-content {
+  height: 100%;
+}
+
+.dropdown-item-content h6, .dropdown-item-content p {
   font-size: 14px;
+}
+
+.dropdown-item-content h6 {
   font-weight: 500;
 }
 
@@ -150,6 +158,12 @@
 
   .show-more-caret {
     display: none;
+  }
+}
+
+@media (hover: hover) {
+  .dropdown-item:hover {
+    background-color: var(--brand-color-lighter-5);
   }
 }
 

@@ -74,6 +74,7 @@ import { TestimonialCardComponent } from './component/common/card/testimonial-ca
 import { SwiperWrapperComponent } from './component/common/swiper-wrapper/swiper-wrapper.component';
 import { DropdownMenuComponent } from './component/common/dropdown-menu/dropdown-menu.component';
 import { ColorChartComponent } from './component/common/color-chart/color-chart.component';
+import { ProductComponent } from './page/raw-landing-layout/product/product.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -135,7 +136,8 @@ FullCalendarModule.registerPlugins( [
     DropdownMenuComponent,
     EditThemeComponent,
     SwiperWrapperComponent,
-    ColorChartComponent
+    ColorChartComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

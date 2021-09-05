@@ -11,30 +11,31 @@
     </div>
 
     <div class="section-column-wrapper" [style]="'min-width: ' + (330 * calculatedColumns) + 'px;'">
-      <div class="section-column" *ngFor="let column of options; last as isLastColumn"
+      <div class="section-column" *ngFor="let column of productLines; last as isLastColumn"
            [class.section-column-right-border]="true"
-           [class]="column.sectionColor ? column.sectionColor + '-theme' : ''"
+           [class]="column.color ? column.color + '-theme' : ''"
            [style]="'max-height: ' + ((80  + (150 * calculatedRows)) + 1) + 'px;'">
-        <div *ngIf="column.sectionTitle" class="section-header">
+        <div *ngIf="column.name" class="section-header">
           <h4>
-            {{ column.sectionTitle }}
+            {{ column.name }}
           </h4>
           <hr [style.border-color]="'var(--brand-color)'"/>
           <p>
-            {{ column.sectionDescription }}
+            {{ column.description }}
           </p>
         </div>
 
-        <a *ngFor="let option of column.menus; last as isLast; first as isFirst" class="dropdown-item"
-           [class]="option.itemColor ? option.itemColor + '-theme' : ''"
-           [routerLink]="option.link" (click)="closeDropDownInternal()">
+        <a *ngFor="let option of column.products; last as isLast; first as isFirst" class="dropdown-item"
+           [class]="option.color ? option.color + '-theme' : ''"
+           [routerLink]="URLS.product" [queryParams]="{productLineName: column.key, productName: option.key}"
+           (click)="closeDropDownInternal()">
 
-          <img [src]="option.brand.brandLogo" alt="logo" class="dropdown-item-logo" height="55"/>
+          <img [src]="option.logo" alt="logo" class="dropdown-item-logo" height="55"/>
 
           <div class="dropdown-item-content">
-          <h6>
-            {{ option.header }}
-          </h6>
+            <h6>
+              {{ option.name }}
+            </h6>
             <p>
               {{ option.description }}
             </p>

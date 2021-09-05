@@ -1,9 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { PRODUCT_LINES, ProductLine, SERVICES, URLS } from '../../../../data/constant';
 import { LoadingService } from '../../../../service/loading/loading.service';
 import { ThemeService } from '../../../../service/theme/theme.service';
-import { PRODUCT_LINES, SERVICES, URLS } from '../../../../data/constant';
-import { DropdownColumnOption } from '../../../common/dropdown-menu/dropdown-menu.component';
 
 @Component( {
   selector: 'app-landing-layout-top-nav',
@@ -17,8 +16,8 @@ export class LandingLayoutTopNavComponent {
   };
   URLS = URLS;
 
-  PRODUCT_LINES: DropdownColumnOption[] = PRODUCT_LINES;
-  SERVICES: DropdownColumnOption[] = SERVICES;
+  PRODUCT_LINES: ProductLine[] = PRODUCT_LINES;
+  SERVICES: ProductLine[] = SERVICES;
 
   @ViewChild( 'dropdownMenuProducts' ) dropdownMenuProducts: ElementRef;
   @ViewChild( 'dropdownMenuServices' ) dropdownMenuServices: ElementRef;

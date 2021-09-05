@@ -42,7 +42,8 @@
           Server Types
         </h6>
       </a>
-      <a class="counter-wrapper" [href]="'https://github.com/open-template-hub/app-generator'" target="_blank" rel=noopener>
+      <a class="counter-wrapper" [href]="'https://github.com/open-template-hub/app-generator'" target="_blank"
+         rel=noopener>
         <h4 id="serverTypesCounterElement" class="counter">
           0
         </h4>
@@ -63,57 +64,6 @@
   </div>
   <app-swiper-wrapper [partners]="PARTNERS"></app-swiper-wrapper>
   <div class="features-wrapper">
-    <div *ngFor="let productLine of PRODUCT_LINES;" class="features">
-      <div class="product-line-header">
-        <h4 *ngIf="productLine.sectionTitle"
-            [class]="productLine.sectionColor ? productLine.sectionColor + '-theme' : ''">
-          {{ productLine.sectionTitle }}
-        </h4>
-        <h5 *ngIf="productLine.sectionDescription">
-          {{ productLine.sectionDescription }}
-        </h5>
-      </div>
-
-      <div *ngFor="let product of productLine.menus; let i = index; last as isLast" class="feature-wrapper"
-           [class.feature-left]="i % 2 === 1" [class.feature-right]="i % 2 === 0"
-           [class]="product.itemColor ? product.itemColor + '-theme' : ''">
-        <div *ngIf="i % 2 === 0" class="layers">
-          <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-            <path d="M 0,150 1000,0 v 150 z"
-                  [style]="'fill: var(--hover);'"></path>
-          </svg>
-        </div>
-        <div *ngIf="i % 2 === 1" class="layers">
-          <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-            <path d="M 1000,0 0,0 v 150 z"
-                  [style]="'fill: var(--hover);'"></path>
-          </svg>
-        </div>
-        <div class="feature"
-             [style.background-color]="i % 2 == 0 ? 'var(--hover)' : ''">
-          <a class="feature-img-wrapper" [routerLink]="product.link">
-            <img class="server-logo"
-                 [src]="product.brand.brandLogo"
-                 alt="server-logo"/>
-          </a>
-          <div class="feature-notes">
-            <h5>
-              {{ product.header }}
-            </h5>
-            <h6>
-              {{ product.description }}
-            </h6>
-          </div>
-        </div>
-
-        <div *ngIf="i % 2 === 0 && isLast" class="layers">
-          <svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
-            <path d="M 1000,0 0,0 v 150 z"
-                  [style]="'fill: var(--hover);'"></path>
-          </svg>
-        </div>
-      </div>
-    </div>
   </div>
   <app-cookies></app-cookies>
 </div>

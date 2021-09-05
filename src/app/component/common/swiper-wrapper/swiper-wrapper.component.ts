@@ -1,7 +1,7 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
-import SwiperCore, { Navigation, Pagination } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
 
-SwiperCore.use( [ Pagination, Navigation ] );
+SwiperCore.use( [ Pagination, Navigation, Autoplay ] );
 
 export interface Partner {
   brandLogo: string;

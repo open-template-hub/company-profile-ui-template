@@ -41,7 +41,7 @@ jobs:
           token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
           ref: develop
 
-      - name: Hard Reset Master
+      - name: Hard Reset Develop from Master
         run: |
           git fetch origin master:master
           git reset --hard master

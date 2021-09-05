@@ -26,4 +26,3 @@ Follow the instructions below to be able to generate favicon.
 4. Deploy changes to **[develop](https://github.com/open-template-hub/company-profile-ui-template/tree/develop)** branch
 
 5. Check your favicon with the **[favicon checker](https://realfavicongenerator.net/favicon_checker?protocol=https&site=opentemplatehub.com)**
-

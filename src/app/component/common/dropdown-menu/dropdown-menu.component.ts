@@ -1,25 +1,7 @@
 import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
+import { ProductLine, URLS } from '../../../data/constant';
 import { ThemeService } from '../../../service/theme/theme.service';
 import { UtilService } from '../../../service/util/util.service';
-
-export interface DropdownColumnOption {
-  sectionTitle?: string,
-  sectionDescription?: string,
-  sectionColor?: string,
-  menus: DropdownMenuOption[]
-}
-
-export interface DropdownMenuOption {
-  itemColor?: string,
-  brand: { brandLogo: string },
-  header: string,
-  description: string,
-  link: {
-    url: string,
-    queryParam: any
-  },
-  hover?: boolean // this property only use on this class, do not set it from outside
-}
 
 @Component( {
   selector: 'app-dropdown-menu',
@@ -31,6 +13,8 @@ export class DropdownMenuComponent {
     brandLogo: '',
   };
 
+  URLS = URLS;
+
   @Input() isDropdownOpen = false;
   @Input() minimumColumns = 1;
   @Input() minimumRows = 5;
@@ -38,7 +22,7 @@ export class DropdownMenuComponent {
   calculatedColumns;
   calculatedRows;
 
-  @Input() options: DropdownColumnOption[] = [];
+  @Input() productLines: ProductLine[] = [];
 
   closeDropdownInternalClicked = false;
 
@@ -57,7 +41,7 @@ export class DropdownMenuComponent {
   @HostListener( 'window:resize', [ '$event' ] )
   onResize() {
 
-    if ( this.isDropdownOpen && window.innerWidth > 999) {
+    if ( this.isDropdownOpen && window.innerWidth > 999 ) {
       let wantedColumns = this.minimumColumns;
 
       while ( wantedColumns * 330 > window.innerWidth - 255 ) {

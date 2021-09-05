@@ -1,51 +1,48 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { URLS, PRODUCT_QUERY_PARAMS } from '../../../data/constant';
-import { environmentCommon } from '../../../../environments/environment-common';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { environmentCommon } from '../../../../environments/environment-common';
+import { Product, PRODUCT_LINES, ProductLine, URLS } from '../../../data/constant';
 
-export interface Counter {
-  name: string,
-  value: string
-}
-
-export interface Product {
-  title: string,
-  description: string,
-  sectionColor?: string,
-  href: string,
-  image: string,
-  counters?: Counter[]
-}
-
-@Component({
+@Component( {
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
-})
-export class ProductComponent implements OnInit {
-  URLS = URLS
-  environmentCommon = environmentCommon
-  product: Product
-  emailControl = new FormControl('')
+  styleUrls: [ './product.component.scss' ]
+} )
+export class ProductComponent implements OnInit, OnDestroy {
+  URLS = URLS;
+  environmentCommon = environmentCommon;
+  product: Product;
+  emailControl = new FormControl( '' );
 
   constructor(
-    private route: ActivatedRoute,
-    public router: Router
-  ) { }
+      private route: ActivatedRoute,
+      public router: Router
+  ) {
+  }
 
   ngOnInit(): void {
+    this.product = undefined;
     this.route.queryParams.subscribe( params => {
-      const product = PRODUCT_QUERY_PARAMS[params.name]
+      console.log( params );
 
-      if ( product ) {
-        this.product = product
-      } else { // if the product is not available, redirect to not-found
-        this.router.navigate( [ URLS.notFound ] ).then( () => {
-          return false;
-        } );
+      if ( params.productLineName && params.productName ) {
+        const productLine: ProductLine = PRODUCT_LINES.find( p => p.key === params.productLineName );
+
+        if ( productLine ) {
+          const product = productLine.products.find( p => p.key === params.productName );
+
+          if ( product ) {
+            this.product = product;
+            return;
+          }
+        }
       }
+      this.router.navigate( [ URLS.maintenance ] );
+    } );
+  }
 
-    } )
+  ngOnDestroy() {
+    this.product = undefined;
   }
 }

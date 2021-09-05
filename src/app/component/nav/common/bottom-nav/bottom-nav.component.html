@@ -1,6 +1,6 @@
-<app-dropdown-menu #dropdownMenuProducts [options]="PRODUCT_LINES">
+<app-dropdown-menu #dropdownMenuProducts [productLines]="PRODUCT_LINES">
 </app-dropdown-menu>
-<app-dropdown-menu #dropdownMenuServices [options]="SERVICES">
+<app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES">
 </app-dropdown-menu>
 <nav class="bottom-nav">
   <a (click)="closeSettings(); dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"

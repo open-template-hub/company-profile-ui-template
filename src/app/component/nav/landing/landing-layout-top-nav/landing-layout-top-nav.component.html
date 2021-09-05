@@ -6,15 +6,17 @@
   </a>
   <div class="left-item-wrapper">
     <a (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
-      <app-dropdown-menu #dropdownMenuProducts [options]="PRODUCT_LINES" [minimumColumns]="4">
+      <app-dropdown-menu #dropdownMenuProducts [productLines]="PRODUCT_LINES" [minimumColumns]="4">
         <span>Products</span>
-        <i aria-hidden="true" class="material-icons">{{dropdownMenuProducts.isDropdownOpen ? 'expand_less' : 'expand_more'}}</i>
+        <i aria-hidden="true"
+           class="material-icons">{{dropdownMenuProducts.isDropdownOpen ? 'expand_less' : 'expand_more'}}</i>
       </app-dropdown-menu>
     </a>
     <a (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()">
-      <app-dropdown-menu #dropdownMenuServices [options]="SERVICES">
+      <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES">
         <span>Services</span>
-        <i aria-hidden="true" class="material-icons">{{dropdownMenuServices.isDropdownOpen ? 'expand_less' : 'expand_more'}}</i>
+        <i aria-hidden="true"
+           class="material-icons">{{dropdownMenuServices.isDropdownOpen ? 'expand_less' : 'expand_more'}}</i>
       </app-dropdown-menu>
     </a>
     <a routerLink="{{URLS.pricing}}"

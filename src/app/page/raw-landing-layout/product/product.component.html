@@ -2,7 +2,7 @@
   <div class="hero">
     <div class="hero-content">
       <div class="hero-content-left">
-        <h1>{{ product.title }}</h1>
+        <h1>{{ product.name }}</h1>
         <h6>{{ product.description }}</h6>
         <div class="register-wrapper">
           <input type="text" [formControl]="emailControl" placeholder="Email address">
@@ -13,7 +13,7 @@
       </div>
       <div class="hero-content-right">
         <img class="demonstration"
-             [src]="product.image"
+             [src]="product.heroImage"
              alt="oth-packages"/>
       </div>
     </div>

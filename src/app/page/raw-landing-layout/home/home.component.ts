@@ -5,9 +5,8 @@ import { CountUp } from 'countup.js';
 import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { TestimonialOption } from '../../../component/common/card/testimonial-card/testimonial-card.component';
-import { DropdownColumnOption } from '../../../component/common/dropdown-menu/dropdown-menu.component';
 import { Partner } from '../../../component/common/swiper-wrapper/swiper-wrapper.component';
-import { PARTNERS, PRODUCT_LINES, URLS } from '../../../data/constant';
+import { PARTNERS, URLS } from '../../../data/constant';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { ThemeService } from '../../../service/theme/theme.service';
 
@@ -27,7 +26,6 @@ export class HomeComponent implements AfterViewInit {
   };
 
   URLS = URLS;
-  PRODUCT_LINES: DropdownColumnOption[] = PRODUCT_LINES;
   PARTNERS: Partner[] = PARTNERS;
 
   KILO = 1000;

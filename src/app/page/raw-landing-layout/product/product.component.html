@@ -1,0 +1,34 @@
+<div class="home-page">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-content-left">
+        <h1>{{ product.title }}</h1>
+        <h6>{{ product.description }}</h6>
+        <div class="register-wrapper">
+          <input type="text" [formControl]="emailControl" placeholder="Email address">
+          <app-button1 [text]="'Request for Demo'" [brandColor]="true" [isSleekButton]="true" [isAttendee]="true"
+                       (click)="router.navigate([URLS.maintenance])">
+          </app-button1>
+        </div>
+      </div>
+      <div class="hero-content-right">
+        <img class="demonstration"
+             [src]="product.image"
+             alt="oth-packages"/>
+      </div>
+    </div>
+    <div class="counters" *ngIf="product.counters">
+      <a class="counter-wrapper" *ngFor="let counter of product.counters"
+         [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
+         target="_blank" rel=noopener>
+        <h4 id="npmCounterElement" class="counter" *ngIf="counter.value">
+          {{ counter.value }}
+        </h4>
+        <h6>
+          {{ counter.name }}
+        </h6>
+      </a>
+    </div>
+  </div>
+</div>
+

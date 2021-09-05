@@ -27,7 +27,7 @@
 
         <a *ngFor="let option of column.menus; last as isLast; first as isFirst" class="dropdown-item"
            [class]="option.itemColor ? option.itemColor + '-theme' : ''"
-           [routerLink]="option.link" (click)="closeDropDownInternal()">
+           [routerLink]="option.link.url" [queryParams]="option.link.queryParam" (click)="closeDropDownInternal()">
 
           <img [src]="option.brand.brandLogo" alt="logo" class="dropdown-item-logo" height="55"/>
 

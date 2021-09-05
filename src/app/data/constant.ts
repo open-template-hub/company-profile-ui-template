@@ -1,5 +1,8 @@
+import { environmentCommon } from '../../environments/environment-common';
 import { DropdownColumnOption } from '../component/common/dropdown-menu/dropdown-menu.component';
 import { Partner } from '../component/common/swiper-wrapper/swiper-wrapper.component';
+import { Product } from '../page/raw-landing-layout/product/product.component';
+
 
 /**
  * @description holds constants
@@ -58,6 +61,7 @@ export const URLS = {
   privacyPolicy: '/privacy-policy',
   terms: '/terms',
   pricing: '/pricing',
+  product: '/product',
   showroom: '/showroom',
   dashboard: {
     root: dashboard,
@@ -113,31 +117,46 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png' },
         header: 'Auth Server',
         description: 'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
-        link: URLS.maintenance
+        link: {
+          url: URLS.product,
+          queryParam: { name: 'auth-server' }
+        }
       },
       {
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png' },
         header: 'Payment Server',
         description: 'Payment Server template integrated with Stripe and Coinbase Commerce payment systems',
-        link: URLS.maintenance
+        link: {
+          url: URLS.product,
+          queryParam: { name: 'payment-server' }
+        }
       },
       {
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/file-storage-server-logo.png' },
         header: 'File Storage Server',
         description: 'File Storage Server Template that supports uploading and downloading files from AWS S3',
-        link: URLS.maintenance
+        link: {
+          url: URLS.product,
+          queryParam: { name: 'file-storage-server' }
+        }
       },
       {
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/analytics-server-logo.png' },
         header: 'Analytics Server',
         description: 'Analytics Server Template for generic usage in Node.js',
-        link: URLS.maintenance
+        link: {
+          url: URLS.product,
+          queryParam: { name: 'analytics-server' }
+        }
       },
       {
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/basic-info-server-logo.png' },
         header: 'Basic Info Server',
         description: 'Basic Info Server Template for generic usage in Node.js',
-        link: URLS.maintenance
+        link: {
+          url: URLS.product,
+          queryParam: { name: 'basic-info-server' }
+        }
       }
     ],
   },
@@ -149,19 +168,28 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png' },
         header: 'Company Profile UI',
         description: 'Company Profile UI Template for generic usage in Angular',
-        link: URLS.maintenance
+        link: {
+          url: URLS.maintenance,
+          queryParam: { }
+        }
       },
       {
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png' },
         header: 'Web UI',
         description: 'Web UI Template for generic usage in Angular',
-        link: URLS.maintenance
+        link: {
+          url: URLS.maintenance,
+          queryParam: { }
+        }
       },
       {
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/mobile-ui-logo.png' },
         header: 'Mobile UI',
         description: 'Mobile UI Template for generic usage in React Native',
-        link: URLS.maintenance
+        link: {
+          url: URLS.maintenance,
+          queryParam: { }
+        }
       }
     ]
   },
@@ -173,13 +201,19 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png' },
         header: 'Server Generator',
         description: 'Command line interface generator of the servers at Open Template Hub',
-        link: URLS.maintenance
+        link: {
+          url: URLS.maintenance,
+          queryParam: { }
+        }
       },
       {
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png' },
         header: 'UI Generator',
         description: 'Command line interface generator of the user interfaces at Open Template Hub',
-        link: URLS.maintenance
+        link: {
+          url: URLS.maintenance,
+          queryParam: { }
+        }
       }
     ]
   },
@@ -190,10 +224,13 @@ export const PRODUCT_LINES: DropdownColumnOption[] = [
     menus: [
       {
         itemColor: ThemeColorSettings.yellow,
-        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/orchestration-server-logo.png' },
+        brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png' },
         header: 'Orchestration Server',
         description: 'Orchestration Server Template for generic usage in Node.js',
-        link: URLS.maintenance
+        link: {
+          url: URLS.product,
+          queryParam: { name: 'orchestration-server' }
+        }
       }
     ]
   }
@@ -208,19 +245,28 @@ export const SERVICES: DropdownColumnOption[ ] = [
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png' },
         header: 'Software Consultancy',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
-        link: URLS.maintenance
+        link: {
+          url: URLS.maintenance,
+          queryParam: { }
+        }
       },
       {
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png' },
         header: 'Cloud Integration',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
-        link: URLS.maintenance
+        link: {
+          url: URLS.maintenance,
+          queryParam: { }
+        }
       },
       {
         brand: { brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png' },
         header: 'Quality Insurance',
         description: 'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
-        link: URLS.maintenance
+        link: {
+          url: URLS.maintenance,
+          queryParam: { }
+        }
       }
     ]
   }
@@ -234,6 +280,141 @@ export const PARTNERS: Partner[] = [
   { brandLogo: '../../../../assets/common/partners/stripe-logo.png' },
   { brandLogo: '../../../../assets/common/partners/netlify-logo.png' },
 ];
+
+export const AUTH_SERVER: Product = {
+  counters: [
+    {
+      name: 'Npm Downloads',
+      value: '10+ million'
+    },
+    {
+      name: 'Server Types',
+      value: '3'
+    },
+    {
+      name: 'UI Types',
+      value: '5'
+    }
+  ],
+  href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
+  title: 'Auth Server',
+  description: 'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
+  image: 'assets/common/server/authentication.png'
+}
+
+export const BASIC_INFO_SERVER: Product = {
+  counters: [
+    {
+      name: 'Npm Downloads',
+      value: '10+ million'
+    },
+    {
+      name: 'Server Types',
+      value: '3+ thousand'
+    },
+    {
+      name: 'UI Types',
+      value: '5'
+    }
+  ],
+  href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
+  title: 'Basic Info Server',
+  description: 'Basic Info Server Template for generic usage in Node.js',
+  image: 'assets/common/server/basic-info.png'
+}
+
+export const PAYMENT_SERVER: Product = {
+  counters: [
+    {
+      name: 'Npm Downloads',
+      value: '10+ million'
+    },
+    {
+      name: 'Server Types',
+      value: '3+ thousand'
+    },
+    {
+      name: 'UI Types',
+      value: '5'
+    }
+  ],
+  href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
+  title: 'Payment Server',
+  description: 'Payment Server template integrated with Stripe and Coinbase Commerce payment systems',
+  image: 'assets/common/server/payment.png'
+}
+
+export const FILE_STORAGE_SERVER: Product = {
+  counters: [
+    {
+      name: 'Npm Downloads',
+      value: '10+ million'
+    },
+    {
+      name: 'Server Types',
+      value: '3+ thousand'
+    },
+    {
+      name: 'UI Types',
+      value: '5'
+    }
+  ],
+  href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
+  title: 'File Storage Server',
+  description: 'File Storage Server Template that supports uploading and downloading files from AWS S3',
+  image: 'assets/common/server/file-storage.png'
+}
+
+export const ANALYTICS_SERVER: Product = {
+  counters: [
+    {
+      name: 'Npm Downloads',
+      value: '10+ million'
+    },
+    {
+      name: 'Server Types',
+      value: '3+ thousand'
+    },
+    {
+      name: 'UI Types',
+      value: '5'
+    }
+  ],
+  href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
+  title: 'Analytics Server',
+  description: 'Analytics Server Template for generic usage in Node.js',
+  image: 'assets/common/server/analytics.png'
+}
+
+export const ORCHESTRATION_SERVER: Product = {
+  counters: [
+    {
+      name: 'Npm Downloads',
+      value: '10+ million'
+    },
+    {
+      name: 'Server Types',
+      value: '3+ thousand'
+    },
+    {
+      name: 'UI Types',
+      value: '5'
+    }
+  ],
+  href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
+  title: 'Orchestration Server',
+  description: 'Orchestration Server Template for generic usage in Node.js',
+  image: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png'
+}
+
+export const PRODUCT_QUERY_PARAMS = {
+  'auth-server': AUTH_SERVER,
+  'basic-info-server': BASIC_INFO_SERVER,
+  'payment-server': PAYMENT_SERVER,
+  'file-storage-server': FILE_STORAGE_SERVER,
+  'analytics-server': ANALYTICS_SERVER,
+  'orchestration-server': ORCHESTRATION_SERVER
+}
 
 export const CATEGORIES = [
   {

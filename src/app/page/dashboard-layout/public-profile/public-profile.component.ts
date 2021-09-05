@@ -87,8 +87,7 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
       private followerService: FollowerService,
       private followeeService: FolloweeService,
       private eventService: EventService,
-      private userActivityService: UserActivityService,
-      private themeService: ThemeService
+      private userActivityService: UserActivityService
   ) {
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
 

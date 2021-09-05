@@ -14,7 +14,10 @@ export interface DropdownMenuOption {
   brand: { brandLogo: string },
   header: string,
   description: string,
-  link: string,
+  link: {
+    url: string,
+    queryParam: any
+  },
   hover?: boolean // this property only use on this class, do not set it from outside
 }
 

@@ -22,6 +22,7 @@ import { MaintenanceComponent } from './page/raw-landing-layout/maintenance/main
 import { NotFoundComponent } from './page/raw-landing-layout/not-found/not-found.component';
 import { PricingComponent } from './page/raw-landing-layout/pricing/pricing.component';
 import { PrivacyPolicyComponent } from './page/raw-landing-layout/privacy-policy/privacy-policy.component';
+import { ProductComponent } from './page/raw-landing-layout/product/product.component';
 import { RawLandingLayoutComponent } from './page/raw-landing-layout/raw-landing-layout.component';
 import { SignUpSuccessComponent } from './page/raw-landing-layout/sign-up-success/sign-up-success.component';
 import { TermsComponent } from './page/raw-landing-layout/terms/terms.component';
@@ -48,6 +49,7 @@ const routes: Routes = [
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
       { path: 'terms', component: TermsComponent },
       { path: 'pricing', component: PricingComponent },
+      { path: 'product', component: ProductComponent },
       {
         path: '',
         component: LandingLayoutComponent,

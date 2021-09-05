@@ -14,7 +14,6 @@ import { FolloweeService } from '../../../service/followee/followee.service';
 import { FollowerService } from '../../../service/follower/follower.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
-import { ThemeService } from '../../../service/theme/theme.service';
 import { UserActivityService } from '../../../service/user-activity/user-activity.service';
 
 @Component( {

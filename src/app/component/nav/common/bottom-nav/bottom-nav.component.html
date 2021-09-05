@@ -10,6 +10,12 @@
         Back
     </span>
   </a>
+  <a *ngIf="!openSettings" routerLink="{{ URLS.root }}">
+    <i aria-hidden="true" [class]="'fas fa-home fa-fw'"></i>
+    <span>
+        Home
+    </span>
+  </a>
   <a *ngIf="!openSettings" (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-server fa-fw'"></i>
     <span>
@@ -22,18 +28,18 @@
         Services
     </span>
   </a>
-  <a *ngIf="!openSettings" routerLink="{{ URLS.pricing }}"
-     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
-    <i aria-hidden="true" [class]="'fas fa-dollar-sign fa-fw'"></i>
-    <span>
-        Pricing
-    </span>
-  </a>
   <a (click)="openSettings = !openSettings; dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
      *ngIf="!openSettings" href="javascript:void(0)">
     <i aria-hidden="true" class="material-icons">arrow_forward_ios</i>
     <span>
         More
+    </span>
+  </a>
+  <a *ngIf="openSettings && !openOtherSettings" routerLink="{{ URLS.pricing }}"
+     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
+    <i aria-hidden="true" [class]="'fas fa-dollar-sign fa-fw'"></i>
+    <span>
+        Pricing
     </span>
   </a>
   <a class="demo" *ngIf="openSettings && !openOtherSettings" routerLink="{{ URLS.maintenance }}"

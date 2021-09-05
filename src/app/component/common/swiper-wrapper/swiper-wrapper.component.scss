@@ -1,8 +1,15 @@
 @import "~swiper/swiper-bundle.min.css";
 
+app-swiper-wrapper {
+  width: 65%;
+  margin: 0 auto;
+  position: relative;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
+  position: initial;
 }
 
 .swiper-slide {
@@ -31,6 +38,14 @@
   filter: contrast(0);
 }
 
+.swiper-button-prev {
+  left: -40px;
+}
+
+.swiper-button-next {
+  right: -40px;
+}
+
 .swiper-button-next, .swiper-button-prev {
   color: var(--contrast);
 }
@@ -43,8 +58,9 @@
   background: var(--brand-color);
 }
 
+/*
 @media only screen and (max-width: 999px) {
   .swiper-button-next::after, .swiper-button-prev::after {
     display: none;
   }
-}
+}*/

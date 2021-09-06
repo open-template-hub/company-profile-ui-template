@@ -95,6 +95,7 @@ hr {
 }
 
 .inline-a, a.inline-a {
+  font-weight: normal;
   color: var(--brand-color);
   cursor: pointer;
 }
@@ -113,5 +114,9 @@ hr {
 
   a:hover {
     color: var(--darker);
+  }
+
+  .inline-a:hover, a.inline-a:hover {
+    color: var(--brand-color);
   }
 }

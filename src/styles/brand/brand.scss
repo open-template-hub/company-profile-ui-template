@@ -1,12 +1,11 @@
 @import "brand.common";
 
-@import "brand-red";
-@import "brand-green";
-@import "brand-yellow";
-@import "brand-blue";
+@import "red-theme/brand-red-theme";
+@import "green-theme/brand-green-theme";
+@import "yellow-theme/brand-yellow-theme";
+@import "blue-theme/brand-blue-theme";
 
 .default-theme {
   // This is the class to change default theme
   @extend .green-theme;
-  --brand-color-default-theme: var(--brand-color-green-theme);
 }

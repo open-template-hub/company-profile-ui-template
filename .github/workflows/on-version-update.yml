@@ -53,4 +53,4 @@ jobs:
           branch: workflow/version-update
           delete-branch: true
           base: develop
-          title: 'workflow: Version Update PR'
+          title: 'Workflow/version update'

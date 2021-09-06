@@ -1,40 +1,43 @@
 <div [class.footer-hide-shadow]="hideShadow" [class.footer-popup-padding]="popupPadding" class="footer">
-  <a [href]="'https://www.linkedin.com/company/open-template-hub'" rel="noopener" target="_blank">
+  <a routerLink="{{URLS.maintenance}}" class="footer-link-content">
     <i aria-hidden="true" class="material-icons">business</i>
     <span>
         ABOUT
     </span>
   </a>
-  <a routerLink="{{URLS.maintenance}}">
+  <a routerLink="{{URLS.maintenance}}" class="footer-link-content">
     <i aria-hidden="true" class="material-icons">chrome_reader_mode</i>
     <span>
         BLOG
     </span>
   </a>
-  <a routerLink="{{URLS.terms}}">
+  <a routerLink="{{URLS.terms}}" class="footer-link-content">
     <i aria-hidden="true" class="material-icons">policy</i>
     <span>
         TERMS & POLICIES
     </span>
   </a>
-  <a [routerLink]="URLS.maintenance">
+  <a [routerLink]="URLS.maintenance" class="footer-link-content">
     <i aria-hidden="true" class="material-icons">email</i>
     <span>
         CONTACT
     </span>
   </a>
-  <a routerLink="{{URLS.maintenance}}">
+  <a routerLink="{{URLS.maintenance}}" class="footer-link-content">
     <i aria-hidden="true" class="material-icons">work</i>
     <span>
         JOBS
     </span>
   </a>
-  <a [href]="'https://github.com/open-template-hub'" rel="noopener" target="_blank">
-    <i aria-hidden="true" class="material-icons">code</i>
-    <span>
+  <app-ext-link [target]="'_self'" class="footer-link-content"
+                [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github">
+    <div body class="footer-link-content-inner">
+      <i aria-hidden="true" class="material-icons">code</i>
+      <span>
         OPEN SOURCE
     </span>
-  </a>
+    </div>
+  </app-ext-link>
   <div class="footer-hr-row">
     <hr/>
   </div>
@@ -44,22 +47,27 @@
       <h2>Open Template Hub <span class="copyright">&#169; 2021</span></h2>
     </a>
     <div class="footer-social">
-      <a [href]="environmentCommon.website.twitter.url + '/' + environmentCommon.oth.social.twitter" target="_blank"
-         rel=noopener aria-label="twitter">
-        <i aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'"></i>
-      </a>
-      <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
-         target="_blank" rel=noopener aria-label="github">
-        <i aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.github.cssClass + ' fa-2x fa-fw'"></i>
-      </a>
-      <a [href]="environmentCommon.website.productHunt.url + environmentCommon.oth.social.productHunt"
-         target="_blank" rel=noopener aria-label="producthunt">
-        <i aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.productHunt.cssClass + ' fa-2x fa-fw'"></i>
-      </a>
-      <a [href]="environmentCommon.website.linkedin.url + '/company/' + environmentCommon.oth.social.linkedin"
-         target="_blank" rel=noopener aria-label="linkedin">
-        <i aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'"></i>
-      </a>
+      <app-ext-link
+          [href]="environmentCommon.website.twitter.url + '/' + environmentCommon.oth.social.twitter">
+        <i body aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'">
+        </i>
+      </app-ext-link>
+      <app-ext-link
+          [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github">
+        <i body aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.github.cssClass + ' fa-2x fa-fw'">
+        </i>
+      </app-ext-link>
+      <app-ext-link
+          [href]="environmentCommon.website.productHunt.url + environmentCommon.oth.social.productHunt">
+        <i body aria-hidden="true"
+           [class]="'fab fa-' + environmentCommon.website.productHunt.cssClass + ' fa-2x fa-fw'">
+        </i>
+      </app-ext-link>
+      <app-ext-link
+          [href]="environmentCommon.website.linkedin.url + '/company/' + environmentCommon.oth.social.linkedin">
+        <i body aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'">
+        </i>
+      </app-ext-link>
     </div>
     <div class="footer-version">{{' v-' + appVersion}}</div>
   </div>

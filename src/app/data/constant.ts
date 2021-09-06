@@ -61,6 +61,7 @@ export const URLS = {
   pricing: '/pricing',
   product: '/product',
   showroom: '/showroom',
+  external: '/external',
   dashboard: {
     root: dashboard,
     contribute: dashboard + '/createEvent',

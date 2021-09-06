@@ -190,4 +190,4 @@ We are using **[webhint](https://webhint.io)** to generate webhint report at the
 
 ## LICENSE
 
-The source code for this project is released under the [MIT License](LICENSE). 
+The source code for this project is released under the [MIT License](LICENSE).

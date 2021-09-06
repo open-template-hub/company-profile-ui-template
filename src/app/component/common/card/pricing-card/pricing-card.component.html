@@ -13,9 +13,9 @@
       </div>
       <hr>
       <div class="subscription-features" [style.height]="option.styles.featureHeight">
-        <p *ngFor="let feture of option.features">
+        <p *ngFor="let feature of option.features">
           <i aria-hidden="true" class="material-icons">check</i>
-          <span>{{ feture }}</span>
+          <span>{{ feature }}</span>
         </p>
       </div>
       <app-button1 (click)="routeToEvent(option.link ? option.link : URLS.maintenance)"

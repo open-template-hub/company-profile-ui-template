@@ -26,7 +26,7 @@ export class PricingComponent {
 
   basicOption: PricingOption = {
     title: 'BASIC',
-    ribbon: { type: 'error', text: 'DEAL' },
+    ribbon: { type: 'deal', text: 'DEAL' },
     price: {
       currency: '$',
       value: '49',

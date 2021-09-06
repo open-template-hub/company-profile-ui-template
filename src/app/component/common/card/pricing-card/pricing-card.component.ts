@@ -29,14 +29,14 @@ export class PricingCardComponent {
   RIBBONS = RIBBONS;
   URLS = URLS;
   @Input() option: PricingOption = {
-    title: 'Basic',
-    ribbon: { type: 'premium', text: 'DEAL' },
+    title: '',
+    ribbon: { type: '', text: '' },
     price: {
-      currency: '$',
-      value: '9',
-      subscriptionTime: 'mo.'
+      currency: '',
+      value: '',
+      subscriptionTime: ''
     },
-    features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', '500 queries' ],
+    features: [],
     styles: {
       width: '340px',
       height: '440px',

@@ -1,8 +1,8 @@
-import { Component, Input } from "@angular/core";
-import { environment } from "src/environments/environment";
-import { environmentCommon } from "src/environments/environment-common";
-import { URLS } from "../../../../data/constant";
-import { ThemeService } from "../../../../service/theme/theme.service";
+import { Component, Input } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { environmentCommon } from 'src/environments/environment-common';
+import { URLS } from '../../../../data/constant';
+import { ThemeService } from '../../../../service/theme/theme.service';
 
 export interface TestimonialOption {
   review: string;
@@ -20,11 +20,11 @@ export interface TestimonialOption {
   };
 }
 
-@Component({
-  selector: "app-testimonial-card",
-  templateUrl: "./testimonial-card.component.html",
-  styleUrls: ["./testimonial-card.component.scss"],
-})
+@Component( {
+  selector: 'app-testimonial-card',
+  templateUrl: './testimonial-card.component.html',
+  styleUrls: [ './testimonial-card.component.scss' ],
+} )
 export class TestimonialCardComponent {
   URLS = URLS;
 
@@ -32,25 +32,26 @@ export class TestimonialCardComponent {
   environmentCommon = environmentCommon;
 
   brand = {
-    brandLogo: "",
+    brandLogo: '',
   };
 
   @Input() option: TestimonialOption = {
     review:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ",
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
     reviewer: {
-      name: "Open Template Hub",
-      title: "Co-Founder",
-      photoUri: "",
+      name: 'Open Template Hub',
+      title: 'Co-Founder',
+      photoUri: '',
       social: {
         linkedIn: '',
         twitter: '',
       },
     },
     style: {
-      themeColor: "var(--brand-color-lighter-2)",
+      themeColor: 'var(--brand-color-lighter-2)',
     },
   };
 
-  constructor(private themeService: ThemeService) {}
+  constructor( private themeService: ThemeService ) {
+  }
 }

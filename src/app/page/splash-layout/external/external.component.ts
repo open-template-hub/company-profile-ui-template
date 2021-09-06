@@ -12,7 +12,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 export class ExternalComponent {
 
   href: any;
-  info: '';
+  info: string;
   website: any;
 
   brand = {

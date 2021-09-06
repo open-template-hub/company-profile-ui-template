@@ -26,38 +26,18 @@
           [style.border-color]="option.style.themeColor"
         />
         <div class="footer-social">
-          <a
-            [href]="option.reviewer.social.twitter"
-            target="_blank"
-            aria-label="twitter"
-            rel="noopener"
-          >
-            <i
-              aria-hidden="true"
-              [style.color]="option.style.themeColor"
-              [class]="
-                'fab fa-' +
-                environmentCommon.website.twitter.cssClass +
-                ' fa-2x fa-fw'
-              "
-            ></i>
-          </a>
-          <a
-            [href]="option.reviewer.social.linkedIn"
-            target="_blank"
-            aria-label="linkedin"
-            rel="noopener"
-          >
-            <i
-              aria-hidden="true"
-              [style.color]="option.style.themeColor"
-              [class]="
-                'fab fa-' +
-                environmentCommon.website.linkedin.cssClass +
-                ' fa-2x fa-fw'
-              "
-            ></i>
-          </a>
+          <app-ext-link [href]="option.reviewer.social.twitter">
+            <i body aria-hidden="true"
+               [style.color]="option.style.themeColor"
+               [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'">
+            </i>
+          </app-ext-link>
+          <app-ext-link [href]="option.reviewer.social.linkedIn">
+            <i body aria-hidden="true"
+               [style.color]="option.style.themeColor"
+               [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'">
+            </i>
+          </app-ext-link>
         </div>
         <div class="reviewer">
           <p class="reviewer-name">{{option.reviewer.name}}</p>

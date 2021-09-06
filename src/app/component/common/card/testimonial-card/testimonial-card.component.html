@@ -1,29 +1,68 @@
 <div>
-  <app-card1 [enableHeaderFullImg]="false" [height]="'385px'"
-             [paddingContent]="false"
-             [width]="'300px'" [maxHeight]="'500px'"
-             [enableHeader]="false" [topLayer2]="true" [topLayerBackgroundColor]="option.style.themeColor"
-             [topLayerMarginTop]="marginTop" [topLayerMinHeight]="minHeight" [testimonialSizeActive]="true">
+  <app-card1
+    [enableHeaderFullImg]="false"
+    [height]="'485px'"
+    [paddingContent]="false"
+    [width]="'320px'"
+    [enableHeader]="false"
+    [bottomLayer]="true"
+    [bottomLayerBackgroundColor]="option.style.themeColor"
+    [testimonialSizeActive]="true"
+  >
     <div body class="content-wrapper">
       <div class="icon-wrapper">
-        <i aria-hidden="true" [style.color]="option.style.themeColor" class="fas fa-quote-left fa-lg fa-fw"></i>
+        <i
+          aria-hidden="true"
+          [style.color]="option.style.themeColor"
+          class="fas fa-quote-left fa-lg fa-fw"
+        ></i>
       </div>
       <p class="review-area">{{ option.review }}</p>
-      <a class="profile-image">
-        <img [src]="option.brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
-        <span>Open Template Hub</span>
-      </a>
-      <div class="footer-social">
-        <app-ext-link [linkClass]="'footer-social'"
-                      [href]="environmentCommon.website.twitter.url + '/' + environmentCommon.oth.social.twitter">
-          <i body aria-hidden="true" [style.color]="option.style.themeColor"
-             [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'"></i>
-        </app-ext-link>
-        <app-ext-link [linkClass]="'footer-social'"
-                      [href]="environmentCommon.website.linkedin.url + '/company/' + environmentCommon.oth.social.linkedin">
-          <i body aria-hidden="true" [style.color]="option.style.themeColor"
-             [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'"></i>
-        </app-ext-link>
+      <div>
+        <img
+          [src]="option.reviewer.photoUri"
+          alt="logo"
+          class="profile-image"
+          [style.border-color]="option.style.themeColor"
+        />
+        <div class="footer-social">
+          <a
+            [href]="option.reviewer.social.twitter"
+            target="_blank"
+            aria-label="twitter"
+            rel="noopener"
+          >
+            <i
+              aria-hidden="true"
+              [style.color]="option.style.themeColor"
+              [class]="
+                'fab fa-' +
+                environmentCommon.website.twitter.cssClass +
+                ' fa-2x fa-fw'
+              "
+            ></i>
+          </a>
+          <a
+            [href]="option.reviewer.social.linkedIn"
+            target="_blank"
+            aria-label="linkedin"
+            rel="noopener"
+          >
+            <i
+              aria-hidden="true"
+              [style.color]="option.style.themeColor"
+              [class]="
+                'fab fa-' +
+                environmentCommon.website.linkedin.cssClass +
+                ' fa-2x fa-fw'
+              "
+            ></i>
+          </a>
+        </div>
+        <div class="reviewer">
+          <p class="reviewer-name">{{option.reviewer.name}}</p>
+          <p class="reviewer-title" [style.color]="option.style.themeColor">{{option.reviewer.title}}</p>
+        </div>
       </div>
     </div>
   </app-card1>

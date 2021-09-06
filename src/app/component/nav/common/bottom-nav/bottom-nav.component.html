@@ -10,7 +10,7 @@
         Back
     </span>
   </a>
-  <a *ngIf="!openSettings" routerLink="{{ URLS.root }}">
+  <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()" *ngIf="!openSettings" routerLink="{{ URLS.root }}">
     <i aria-hidden="true" [class]="'fas fa-home fa-fw'"></i>
     <span>
         Home

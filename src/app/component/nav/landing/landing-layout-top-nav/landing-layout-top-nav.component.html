@@ -1,43 +1,57 @@
 <nav class="top-nav rounded-box">
-  <a class="brand" routerLink="{{URLS.root}}"
-     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
-    <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
+  <a
+    class="brand"
+    routerLink="{{ URLS.root }}"
+    (click)="
+      dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()
+    "
+  >
+    <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="40" />
     <h2>Open Template Hub</h2>
   </a>
   <div class="left-item-wrapper">
-    <a (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
-      <app-dropdown-menu #dropdownMenuProducts [productLines]="PRODUCT_LINES" [minimumColumns]="4">
+    <a
+      (click)="
+        dropdownMenuProducts.toggleDropdown();
+        dropdownMenuServices.closeDropdown()
+      "
+    >
+      <app-dropdown-menu
+        #dropdownMenuProducts
+        [productLines]="PRODUCT_LINES"
+        [minimumColumns]="4"
+      >
         <span>Products</span>
-        <i aria-hidden="true"
-           class="material-icons">{{dropdownMenuProducts.isDropdownOpen ? 'expand_less' : 'expand_more'}}</i>
+        <i aria-hidden="true" class="material-icons">{{
+          dropdownMenuProducts.isDropdownOpen ? "expand_less" : "expand_more"
+        }}</i>
       </app-dropdown-menu>
     </a>
-    <a (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()">
+    <a
+      (click)="
+        dropdownMenuServices.toggleDropdown();
+        dropdownMenuProducts.closeDropdown()
+      "
+    >
       <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES">
         <span>Services</span>
-        <i aria-hidden="true"
-           class="material-icons">{{dropdownMenuServices.isDropdownOpen ? 'expand_less' : 'expand_more'}}</i>
+        <i aria-hidden="true" class="material-icons">{{
+          dropdownMenuServices.isDropdownOpen ? "expand_less" : "expand_more"
+        }}</i>
       </app-dropdown-menu>
     </a>
-    <a routerLink="{{URLS.pricing}}"
-       (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
-      <span>
-          Pricing
-      </span>
+  </div>
+  <div class="right-item-wrapper">
+    <a
+      class="contact"
+      routerLink="{{ URLS.maintenance }}"
+      (click)="
+        dropdownMenuProducts.closeDropdown();
+        dropdownMenuServices.closeDropdown()
+      "
+    >
+      <span> Contact Us </span>
     </a>
   </div>
-  <a class="demo" routerLink="{{URLS.maintenance}}"
-     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
-    <span>
-        Request for Demo
-    </span>
-  </a>
-  <a class="contact-us" routerLink="{{URLS.maintenance}}"
-     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
-    <span>
-        Contact Us
-    </span>
-  </a>
 </nav>
-<div [class.landing-layout-top-nav-loading]="loading">
-</div>
+<div [class.landing-layout-top-nav-loading]="loading"></div>

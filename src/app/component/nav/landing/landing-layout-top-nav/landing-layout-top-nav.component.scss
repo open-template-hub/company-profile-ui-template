@@ -22,21 +22,10 @@
   margin-right: 10px;
 }
 
-.top-nav .demo {
+.top-nav .right-item-wrapper .contact {
   color: var(--brand-color);
   border-radius: 0;
   border-bottom: var(--brand-color) 1px solid;
-  margin-right: 20px;
-}
-
-.top-nav .demo:hover {
-  color: white;
-  border-radius: 3px;
-  background: var(--brand-color);
-}
-
-.top-nav .contact-us {
-  background-color: var(--contrast);
 }
 
 .top-nav .brand > * {
@@ -52,9 +41,14 @@ app-dropdown-menu i {
   margin-right: auto;
 }
 
+.top-nav .right-item-wrapper {
+  margin-right: 4em;
+  margin-top: 0.5em;
+}
+
 .top-nav a i {
   font-size: 24px;
-  margin-left: .05em;
+  margin-left: 0.05em;
 }
 
 @media only screen and (max-width: 999px) {
@@ -70,16 +64,21 @@ app-dropdown-menu i {
 }
 
 @media (hover: hover) {
-
   .top-nav a:first-child:hover {
     background: none;
+  }
+
+  .top-nav .right-item-wrapper .contact:hover {
+    color: white;
+    border-radius: 3px;
+    background-color: var(--brand-color);
   }
 
   .bottom-nav a:hover {
     background: var(--hover);
   }
 
-  .bottom-nav .demo:hover {
+  .bottom-nav .right-item-wrapper .contact:hover {
     color: white;
     background: var(--brand-color);
   }

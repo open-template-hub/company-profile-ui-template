@@ -6,6 +6,8 @@
 .review-area {
   color: var(--lighter-contrast);
   padding: 25px;
+  max-height: 7em;
+  overflow: auto;
 }
 
 .icon-wrapper {
@@ -87,11 +89,8 @@
     margin-top: 1em;
     margin-right: 7em;
   }
-}
 
-@media only screen and (max-width: 422px) {
-  .profile-image {
-    margin-top: -5%;
+  .review-area {
+    max-height: 3em;
   }
 }
-

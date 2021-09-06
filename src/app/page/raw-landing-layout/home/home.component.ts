@@ -13,10 +13,9 @@ import { ThemeService } from '../../../service/theme/theme.service';
 @Component( {
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: [ './home.component.scss', '../raw-landing-layout.component.scss' ]
+  styleUrls: [ './home.component.scss', '../raw-landing-layout.component.scss' ],
 } )
 export class HomeComponent implements AfterViewInit {
-
   downloadCounter = 6100;
   serverTypesCounter = 5;
   uiTypesCounter = 3;
@@ -35,21 +34,51 @@ export class HomeComponent implements AfterViewInit {
   environmentCommon = environmentCommon;
 
   option1: TestimonialOption = {
-    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
-    brand: { brandLogo: '../../../../assets/common/social/buymeacoffee-logo.png' },
-    style: { themeColor: 'var(--warn)' }
+    review:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
+    reviewer: {
+      name: 'Furkan Yavuz',
+      title: 'Co-Founder @ Open Template Hub',
+      photoUri:
+          'https://avatars0.githubusercontent.com/u/2248168?s=460&u=435ef6ade0785a7a135ce56cae751fb3ade1d126&v=4',
+      social: {
+        linkedIn: 'https://www.linkedin.com/in/furkanyavuz',
+        twitter: 'https://twitter.com/furknyavuz',
+      },
+    },
+    style: { themeColor: 'var(--warn)' },
   };
 
   option2: TestimonialOption = {
-    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
-    brand: { brandLogo: '../../../../assets/common/social/reddit-logo.png' },
-    style: { themeColor: 'var(--error)' }
+    review:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
+    reviewer: {
+      name: 'Fatih Türker',
+      title: 'Co-Founder @ Open Template Hub',
+      photoUri:
+          'https://avatars1.githubusercontent.com/u/2202179?s=460&u=261b1129e7106c067783cb022ab9999aad833bdc&v=4',
+      social: {
+        linkedIn: 'https://www.linkedin.com/in/fatihtrker',
+        twitter: 'https://twitter.com/remoklify',
+      },
+    },
+    style: { themeColor: 'var(--error)' },
   };
 
   option3: TestimonialOption = {
-    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
-    brand: { brandLogo: '../../../../assets/common/social/facebook-logo.png' },
-    style: { themeColor: 'var(--info)' }
+    review:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
+    reviewer: {
+      name: 'Mert Saraç',
+      title: 'Software Developer @ Open Template Hub',
+      photoUri:
+          'https://avatars1.githubusercontent.com/u/38442589?s=400&u=aa3cda11724fc297a0bfa6beb35c9be81687cf3c&v=4',
+      social: {
+        linkedIn: 'https://www.linkedin.com/in/mertlsarac',
+        twitter: 'https://twitter.com/mertlsarac',
+      },
+    },
+    style: { themeColor: 'var(--info)' },
   };
 
   constructor(
@@ -74,7 +103,7 @@ export class HomeComponent implements AfterViewInit {
     const options = {
       useGrouping: false,
       duration: undefined,
-      formattingFn: undefined
+      formattingFn: undefined,
     };
 
     options.formattingFn = ( n: number ) => {
@@ -89,7 +118,11 @@ export class HomeComponent implements AfterViewInit {
       options.duration = 4;
     }
 
-    const eventCountUp = new CountUp( 'npmCounterElement', this.downloadCounter, options );
+    const eventCountUp = new CountUp(
+        'npmCounterElement',
+        this.downloadCounter,
+        options
+    );
 
     options.formattingFn = ( n: number ) => {
       return this.countUpFormatter( n, this.serverTypesCounter );
@@ -102,7 +135,11 @@ export class HomeComponent implements AfterViewInit {
       options.duration = 4;
     }
 
-    const studentCountUp = new CountUp( 'githubStarCounterElement', this.serverTypesCounter, options );
+    const studentCountUp = new CountUp(
+        'githubStarCounterElement',
+        this.serverTypesCounter,
+        options
+    );
 
     options.formattingFn = ( n: number ) => {
       return this.countUpFormatter( n, this.uiTypesCounter );
@@ -115,7 +152,11 @@ export class HomeComponent implements AfterViewInit {
       options.duration = 4;
     }
 
-    const userCountUp = new CountUp( 'serverTypesCounterElement', this.uiTypesCounter, options );
+    const userCountUp = new CountUp(
+        'serverTypesCounterElement',
+        this.uiTypesCounter,
+        options
+    );
 
     if ( !eventCountUp.error ) {
       eventCountUp.start();
@@ -139,9 +180,9 @@ export class HomeComponent implements AfterViewInit {
       return n + '';
     } else {
       if ( n < this.MILLION ) {
-        return Math.round( n / this.KILO * 10 ) / 10 + 'k';
+        return Math.round( ( n / this.KILO ) * 10 ) / 10 + 'k';
       } else {
-        return Math.round( n / this.MILLION * 10 ) / 10 + 'M';
+        return Math.round( ( n / this.MILLION ) * 10 ) / 10 + 'M';
       }
     }
   }

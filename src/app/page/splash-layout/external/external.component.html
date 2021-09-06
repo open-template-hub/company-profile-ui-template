@@ -1,0 +1,25 @@
+<div class="splash-content" fxLayout="column" fxLayoutAlign="center center">
+  <div class="splash-logos" fxLayout="row" fxLayoutAlign="center center">
+    <img [src]="brand.brandLogo" alt="logo"/>
+    <i aria-hidden="true" class="fa fa-arrow-alt-circle-right info-text"></i>
+    <img [src]="website.logo" alt="partner"/>
+  </div>
+  <div class="info-text alert-with-icon">
+    <i aria-hidden="true" class="fas fa-info fa-lg fa-fw"></i>
+    <p>
+      {{ info }}
+    </p>
+    <br />
+    <p>
+      {{ 'Will be redirected to: ' }}<br/><span [style.font-weight]="'normal'">{{ href }}</span>
+    </p>
+  </div>
+  <div class="external-component-button-wrapper">
+    <app-button1 [text]="'Home'" [lighterContrast]="true" [themeColor]="ThemeColorSettings.blue" [isSleekButton]="true"
+                 transparent="true" [routerLink]="URLS.root">
+    </app-button1>
+    <app-button1 [text]="'Proceed'" [lighterContrast]="true" [themeColor]="ThemeColorSettings.blue"
+                 [isSleekButton]="true" transparent="true" (click)="redirect()">
+    </app-button1>
+  </div>
+</div>

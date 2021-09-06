@@ -41,17 +41,17 @@
   font-size: 19px;
 }
 
-.bottom-nav .demo {
+.bottom-nav .contact {
   color: var(--brand-color);
   border-radius: 0;
   border-bottom: var(--brand-color) 1px solid;
 }
 
-.bottom-nav .demo span {
+.bottom-nav .contact span {
   font-size: 0.8em;
 }
 
-.bottom-nav .demo:hover {
+.bottom-nav .contact:hover {
   color: white;
   border-radius: 3px;
   background: var(--brand-color);
@@ -70,9 +70,13 @@
 }
 
 @media (hover: hover) {
-
   .bottom-nav a:hover {
     background: var(--hover);
+  }
+
+  .bottom-nav .non-clickable:hover {
+    background: none;
+    cursor: auto;
   }
 
   .bottom-nav .login:hover {

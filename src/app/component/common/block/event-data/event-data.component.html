@@ -1,11 +1,13 @@
 <div [class.background-color]="isBackgroundColor" [class.centered-title]="centeredTitle" [class.editable]="isEditable"
      [class.is-small-title]="isSmallTitle" [class.not-fixed-height]="notFixedHeight" [class.max-height]="maxHeight"
-     [class.show-calendar]="(showCalendar || isEditable) && !notFixedHeight" [class.rate-height]="rateHeight" class="event">
+     [class.show-calendar]="(showCalendar || isEditable) && !notFixedHeight" [class.rate-height]="rateHeight"
+     class="event">
   <div *ngIf="title" class="event-header">
     <div class="event-header-title" [class.remove-line-clamp]="removeLineClamp">
-      <h3 (click)="onClick()" >{{title}}</h3>
-      <app-event-hamburger-menu *ngIf="showHamburgerMenu" (shareViaClicked)="shareVia( $event )" [showCalendar]=" showCalendar || isEditable "
-                                       (calendarClicked)="createCalendarEvent()"></app-event-hamburger-menu>
+      <h3 (click)="onClick()">{{title}}</h3>
+      <app-event-hamburger-menu *ngIf="showHamburgerMenu" (shareViaClicked)="shareVia( $event )"
+                                [showCalendar]=" showCalendar || isEditable "
+                                (calendarClicked)="createCalendarEvent()"></app-event-hamburger-menu>
     </div>
     <div class="event-sub-header-title dim">
       <div class="event-sub-header-title-user">
@@ -14,9 +16,9 @@
             class="inline-a">{{isEditable ? 'you' : ( user.username.length > 12 ? user.username.slice( 0, 12 ) + '...' : user.username )}}</a>
         </h4>
         <h4 *ngIf="link && showCalendar">
-          <a [href]="link" class="inline-a">
+          <app-ext-link [href]="link" [linkClass]="'inline-a'">
             <i aria-hidden="true" [class]="'fas fa-link fa-fw'"></i>join meeting
-        </a>
+          </app-ext-link>
         </h4>
       </div>
       <div class="event-sub-header-title-date">
@@ -61,22 +63,27 @@
     <app-button1 (click)="onEditClick()" *ngIf="isEditable && !inProgress && !showRateBar && !completed"
                  [brandColor]="true" [icon]="'pen'" [isSleekButton]="true" [text]="'Edit'">
     </app-button1>
-    <app-button1 (click)="onBuyNowClick()" *ngIf="!isEditable && isPremium && attendeeButton && !showRateBar && !completed"
+    <app-button1 (click)="onBuyNowClick()"
+                 *ngIf="!isEditable && isPremium && attendeeButton && !showRateBar && !completed"
                  [brandColor]="true" [icon]="'shopping-cart'" [isSleekButton]="true"
                  [text]="'Buy Now ' + (price ? '(' + price + '$)' : '')">
     </app-button1>
-    <app-button1 (click)="onAttendClick()" *ngIf="!isEditable && !isPremium && attendeeButton && !showRateBar && !completed"
+    <app-button1 (click)="onAttendClick()"
+                 *ngIf="!isEditable && !isPremium && attendeeButton && !showRateBar && !completed"
                  [brandColor]="true" [isSleekButton]="true" [text]="'Attend'">
     </app-button1>
-    <app-button1 (click)="onDropClick()" *ngIf="!isEditable && dropButton && !showRateBar && !completed && !isPremium" [hoverWithColor]="false"
+    <app-button1 (click)="onDropClick()" *ngIf="!isEditable && dropButton && !showRateBar && !completed && !isPremium"
+                 [hoverWithColor]="false"
                  [isSleekButton]="true" [lighterContrast]="true" [text]="'Drop'" [transparent]="true">
     </app-button1>
     <app-button1 (click)="onMarkAsCompletedClick()" *ngIf="markAsCompleted && !showRateBar && !completed"
                  [brandColor]="true" [isSleekButton]="true" [text]="'Mark As Completed'" [icon]="'check'">
     </app-button1>
-    <app-button1 *ngIf="!isEditable && dropButton && !showRateBar && !completed && isPremium" [brandLightColor]="true" [isSleekButton]="true" [text]="'Attended'">
+    <app-button1 *ngIf="!isEditable && dropButton && !showRateBar && !completed && isPremium" [brandLightColor]="true"
+                 [isSleekButton]="true" [text]="'Attended'">
     </app-button1>
-    <app-button1 *ngIf="completed" [cursor]="'not-allowed'" [brandLightColor]="true" [isSleekButton]="true" [text]="'Completed'">
+    <app-button1 *ngIf="completed" [cursor]="'not-allowed'" [brandLightColor]="true" [isSleekButton]="true"
+                 [text]="'Completed'">
     </app-button1>
     <app-button1 (click)="onRateClick()" *ngIf="showRateBar"
                  [brandColor]="true" [isSleekButton]="true" [text]="'Rate'">

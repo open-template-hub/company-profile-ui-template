@@ -1,0 +1,6 @@
+<a aria-label="external-link" class="ext-link"
+   (click)="redirect()" [target]="target"
+   [rel]="target === '_blank' ? 'noopener' : (rel ? rel : '')"
+   [class] = "linkClass ? linkClass : ''">
+  <ng-content select="[body]"></ng-content>
+</a>

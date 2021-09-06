@@ -2,8 +2,10 @@
      class="label-data-block" fxLayout="column">
   <p>{{label}}</p>
   <p *ngIf="!isClickable">{{data}}</p>
-  <a *ngIf="isClickable" [class.inline-a]="highlight"
-     [href]="(data.startsWith('http://') || data.startsWith('https://')) ? data : 'http://' + data" target="_blank" rel=noopener>
-    {{data}}
-  </a>
+  <app-ext-link *ngIf="isClickable" [linkClass]="highlight ? 'inline-a' : ''"
+                [href]="(data.startsWith('http://') || data.startsWith('https://')) ? data : 'http://' + data">
+    <div body>
+      {{data}}
+    </div>
+  </app-ext-link>
 </div>

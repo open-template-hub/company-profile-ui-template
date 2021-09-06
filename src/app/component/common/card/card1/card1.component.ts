@@ -31,10 +31,11 @@ export class Card1Component {
   @Input() ribbon = { text: '', type: '' };
   @Input() isCardContentOverflowVisible = false;
   @Input() topLayer = false;
-  @Input() topLayer2 = false;
+  @Input() bottomLayer = false;
   @Input() topLayerMarginTop = 'initial';
   @Input() topLayerMinHeight = '250px';
   @Input() topLayerBackgroundColor = ''
+  @Input() bottomLayerBackgroundColor = ''
   @Input() testimonialSizeActive = false;
 
   loading = false;

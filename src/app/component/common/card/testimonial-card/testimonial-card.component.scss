@@ -6,6 +6,8 @@
 .review-area {
   color: var(--lighter-contrast);
   padding: 25px;
+  max-height: 7em;
+  overflow: auto;
 }
 
 .icon-wrapper {
@@ -21,7 +23,8 @@
   display: flex;
   justify-content: center;
   font-size: 0.5em;
-  margin-top: 15px;
+  margin-top: 1em;
+  margin-right: 14em;
 }
 
 .footer-social a {
@@ -33,9 +36,35 @@
   color: var(--brand-color);
 }
 
+.reviewer {
+  bottom: 2em;
+  right: 0.1em;
+  position: absolute;
+}
+
+.reviewer-name {
+  font-weight: 700;
+  margin-top: 2em;
+  font-size: 15px;
+  max-width: 12em;
+  text-align: left;
+}
+
+.reviewer-title {
+  font-weight: 500;
+  margin-top: 0.2em;
+  font-size: 13px;
+  max-width: 12em;
+  text-align: left;
+}
+
 .profile-image {
-  display: flex;
-  flex-direction: column;
+  height: 4em;
+  width: 4em;
+  margin-top: 4em;
+  margin-right: 5em;
+  border-bottom: 0.1em solid;
+  border-radius: 12em;
 }
 
 .profile-image img {
@@ -54,5 +83,14 @@
 @media only screen and (max-width: 999px) {
   .content-wrapper {
     font-size: 0.6em;
+  }
+
+  .profile-image {
+    margin-top: 1em;
+    margin-right: 7em;
+  }
+
+  .review-area {
+    max-height: 3em;
   }
 }

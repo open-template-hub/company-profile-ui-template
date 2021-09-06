@@ -1,6 +1,6 @@
-<app-dropdown-menu #dropdownMenuProducts [options]="PRODUCT_LINES">
+<app-dropdown-menu #dropdownMenuProducts [productLines]="PRODUCT_LINES">
 </app-dropdown-menu>
-<app-dropdown-menu #dropdownMenuServices [options]="SERVICES">
+<app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES">
 </app-dropdown-menu>
 <nav class="bottom-nav">
   <a (click)="closeSettings(); dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
@@ -8,6 +8,12 @@
     <i aria-hidden="true" class="material-icons">arrow_back_ios</i>
     <span>
         Back
+    </span>
+  </a>
+  <a *ngIf="!openSettings" routerLink="{{ URLS.root }}">
+    <i aria-hidden="true" [class]="'fas fa-home fa-fw'"></i>
+    <span>
+        Home
     </span>
   </a>
   <a *ngIf="!openSettings" (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
@@ -22,18 +28,18 @@
         Services
     </span>
   </a>
-  <a *ngIf="!openSettings" routerLink="{{ URLS.pricing }}"
+  <a (click)="openSettings = !openSettings; dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
+     *ngIf="!openSettings" href="javascript:void(0)">
+    <i aria-hidden="true" class="material-icons">arrow_forward_ios</i>
+    <span>
+        More
+    </span>
+  </a>
+  <a *ngIf="openSettings && !openOtherSettings" routerLink="{{ URLS.pricing }}"
      (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-dollar-sign fa-fw'"></i>
     <span>
         Pricing
-    </span>
-  </a>
-  <a (click)="openSettings = !openSettings; dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
-     *ngIf="!openSettings" href="javascript:void(0)">
-    <i aria-hidden="true" class="material-icons">settings</i>
-    <span>
-        More
     </span>
   </a>
   <a class="demo" *ngIf="openSettings && !openOtherSettings" routerLink="{{ URLS.maintenance }}"

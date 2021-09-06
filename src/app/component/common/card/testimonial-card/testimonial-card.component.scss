@@ -5,7 +5,7 @@
 
 .review-area {
   color: var(--lighter-contrast);
-  padding: 1.2em;
+  padding: 25px;
 }
 
 .icon-wrapper {
@@ -20,8 +20,8 @@
 .footer-social {
   display: flex;
   justify-content: center;
-  font-size: 0.4em;
-  margin-top: 1em;
+  font-size: 0.5em;
+  margin-top: 15px;
 }
 
 .footer-social a {
@@ -49,4 +49,10 @@
 
 .profile-image span {
   margin-top: 1.5em;
+}
+
+@media only screen and (max-width: 999px) {
+  .content-wrapper {
+    font-size: 0.6em;
+  }
 }

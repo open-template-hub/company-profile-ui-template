@@ -2,6 +2,10 @@
     [slidesPerView]="1"
     [spaceBetween]="10"
     [loop]="true"
+    [autoplay]="{
+      delay: 2500,
+      disableOnInteraction: false
+    }"
     [loopFillGroupWithBlank]="true"
     [pagination]="{
       clickable: true
@@ -16,7 +20,7 @@
         slidesPerView: 2,
         spaceBetween: 40
       },
-      '1000': {
+      '1200': {
         slidesPerView: 4,
         spaceBetween: 50
       }

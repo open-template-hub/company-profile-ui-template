@@ -1,0 +1,23 @@
+name: PR Open To Demos Workflows
+
+on:
+  pull_request:
+    types: [ opened ]
+    branches:
+      - demo/*
+
+jobs:
+  reset-demo-from-develop:
+    name: "Reset Demo From Develop"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
+          ref: ${{ github.event.pull_request.base.ref }}
+      - name: Hard Reset Demo From Develop
+        run: |
+          git fetch origin develop:develop
+          git reset --hard develop
+          git push -f

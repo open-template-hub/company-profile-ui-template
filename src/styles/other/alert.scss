@@ -87,3 +87,27 @@
 .input-warn.input-with-icon i {
   color: var(--warn);
 }
+
+.info-text, .info-text p, .info-text i {
+  color: var(--info);
+}
+
+.input-info input {
+  border-color: var(--info);
+}
+
+.input-info input::-webkit-input-placeholder {
+  color: var(--info);
+}
+
+.input-info input:focus {
+  border-color: var(--info);
+}
+
+.input-info.input-with-icon input:focus + i {
+  color: var(--info);
+}
+
+.input-info.input-with-icon i {
+  color: var(--info);
+}

@@ -7,14 +7,20 @@
   justify-content: space-between;
 }
 
-.footer a, .footer-brand-row {
+.footer-brand-row {
   display: flex;
-  padding: 5px 0;
   align-items: center;
+  width: 100%;
+  margin-top: 25px;
+  justify-content: flex-start;
+  padding: 5px 10px;
 }
 
-.footer a {
+.footer-brand-row a {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  padding: 5px 0;
 }
 
 .footer-hr-row {
@@ -30,14 +36,18 @@
   width: 95%;
 }
 
-.footer-brand-row {
-  width: 100%;
-  margin-top: 25px;
-  justify-content: flex-start;
-  padding: 0 10px;
+.footer-link-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
 }
 
-.footer i {
+.footer-link-content-inner {
+  @extend .footer-link-content;
+}
+
+.footer-link-content i {
   margin-right: 10px;
 }
 
@@ -57,7 +67,7 @@
 
 .footer-version {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   color: var(--brand-color);
 }
@@ -80,9 +90,13 @@
     font-size: 12px;
   }
 
-  .footer a {
+  .footer-link-content {
     width: 50%;
     padding: 3px 0;
+  }
+
+  .footer-link-content-inner {
+    width: 100%;
   }
 
   .footer-brand-row {
@@ -93,7 +107,7 @@
     width: 100%;
   }
 
-  .footer i {
+  .footer-link-content i {
     margin-left: 2%;
   }
 
@@ -132,11 +146,12 @@
     font-size: 13px;
   }
 
-  .footer a, .footer-social, .footer-version {
+  .footer-link-content {
     width: 33%;
   }
 
   .footer-social {
+    width: 40%;
     margin-left: 10px;
   }
 
@@ -148,16 +163,32 @@
     width: auto;
   }
 
-  .footer i {
+  .footer-link-content i {
     margin-left: 2%;
   }
 
-  .footer span {
+  .footer-link-content span {
     width: 120px;
+  }
+
+  .footer-link-content-inner {
+    width: 100%;
+  }
+
+  .footer-brand-row {
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 
   .footer-brand-row .brand {
     border-right: 1px solid var(--brand-color);
+    padding: 0 10px;
+  }
+
+  .footer-version {
+    width: 20%;
+    margin-left: auto;
+    padding: 0 10px;
   }
 
   .footer-brand-row .brand-logo {
@@ -171,7 +202,8 @@
 
 @media (hover: hover) {
 
-  .footer a:hover {
+  .footer-link-content:hover {
     background: none;
+    color: var(--brand-color);
   }
 }

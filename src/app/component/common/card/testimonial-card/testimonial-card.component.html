@@ -14,16 +14,16 @@
         <span>Open Template Hub</span>
       </a>
       <div class="footer-social">
-        <a [href]="environmentCommon.website.twitter.url + '/' + environmentCommon.oth.social.twitter" target="_blank"
-           aria-label="twitter" rel=noopener>
-          <i aria-hidden="true" [style.color]="option.style.themeColor"
+        <app-ext-link [linkClass]="'footer-social'"
+                      [href]="environmentCommon.website.twitter.url + '/' + environmentCommon.oth.social.twitter">
+          <i body aria-hidden="true" [style.color]="option.style.themeColor"
              [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'"></i>
-        </a>
-        <a [href]="environmentCommon.website.linkedin.url + '/company/' + environmentCommon.oth.social.linkedin"
-           target="_blank" aria-label="linkedin" rel=noopener>
-          <i aria-hidden="true" [style.color]="option.style.themeColor"
+        </app-ext-link>
+        <app-ext-link [linkClass]="'footer-social'"
+                      [href]="environmentCommon.website.linkedin.url + '/company/' + environmentCommon.oth.social.linkedin">
+          <i body aria-hidden="true" [style.color]="option.style.themeColor"
              [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'"></i>
-        </a>
+        </app-ext-link>
       </div>
     </div>
   </app-card1>

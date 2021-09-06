@@ -10,12 +10,10 @@
                              [circle]="true" [isSmallLogo]="true"></app-social-button>
           <p>Twitter</p>
         </a>
-        <a class="linkedin-area" style="margin-left: 30px;">
-          <a class="linkedin- area" (click)="shareViaClicked.emit( 'linkedin' )">
-            <app-social-button [brand]="environmentCommon.website.linkedin.cssClass"
-                               [circle]="true" [isSmallLogo]="true"></app-social-button>
-            <p>Linkedin</p>
-          </a>
+        <a class="linkedin-area" style="margin-left: 30px;" (click)="shareViaClicked.emit( 'linkedin' )">
+          <app-social-button [brand]="environmentCommon.website.linkedin.cssClass"
+                             [circle]="true" [isSmallLogo]="true"></app-social-button>
+          <p>Linkedin</p>
         </a>
       </div>
     </div>

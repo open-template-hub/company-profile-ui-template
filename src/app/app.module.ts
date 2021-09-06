@@ -75,6 +75,8 @@ import { SwiperWrapperComponent } from './component/common/swiper-wrapper/swiper
 import { DropdownMenuComponent } from './component/common/dropdown-menu/dropdown-menu.component';
 import { ColorChartComponent } from './component/common/color-chart/color-chart.component';
 import { ProductComponent } from './page/raw-landing-layout/product/product.component';
+import { ExtLinkComponent } from './component/common/ext-link/ext-link.component';
+import { ExternalComponent } from './page/splash-layout/external/external.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -137,7 +139,9 @@ FullCalendarModule.registerPlugins( [
     EditThemeComponent,
     SwiperWrapperComponent,
     ColorChartComponent,
-    ProductComponent
+    ProductComponent,
+    ExtLinkComponent,
+    ExternalComponent,
   ],
   imports: [
     BrowserModule,

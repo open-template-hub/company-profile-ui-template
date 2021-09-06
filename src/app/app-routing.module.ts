@@ -32,6 +32,7 @@ import { EditThemeComponent } from './page/settings-layout/edit-theme/edit-theme
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
 import { WelcomeComponent } from './page/settings-layout/welcome/welcome.component';
 import { CallbackComponent } from './page/splash-layout/callback/callback.component';
+import { ExternalComponent } from './page/splash-layout/external/external.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 
 const routes: Routes = [
@@ -79,6 +80,14 @@ const routes: Routes = [
       { path: 'reddit', component: CallbackComponent, data: { oauth: environmentCommon.website.reddit } },
       { path: 'github', component: CallbackComponent, data: { oauth: environmentCommon.website.github } },
       { path: 'stripe', component: CallbackComponent, data: { payment: environmentCommon.website.stripe } }
+    ]
+  },
+  {
+    path: 'external',
+    component: SplashLayoutComponent,
+    data: { layout: 'splash-layout' },
+    children: [
+      { path: '', component: ExternalComponent }
     ]
   },
   {

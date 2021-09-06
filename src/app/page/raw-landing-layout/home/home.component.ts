@@ -1,28 +1,27 @@
-import { AfterViewInit, Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
-import { CountUp } from 'countup.js';
-import { environment } from '../../../../environments/environment';
-import { environmentCommon } from '../../../../environments/environment-common';
-import { TestimonialOption } from '../../../component/common/card/testimonial-card/testimonial-card.component';
-import { Partner } from '../../../component/common/swiper-wrapper/swiper-wrapper.component';
-import { PARTNERS, URLS } from '../../../data/constant';
-import { AuthenticationService } from '../../../service/auth/authentication.service';
-import { ThemeService } from '../../../service/theme/theme.service';
+import { AfterViewInit, Component } from "@angular/core";
+import { FormBuilder } from "@angular/forms";
+import { Router } from "@angular/router";
+import { CountUp } from "countup.js";
+import { environment } from "../../../../environments/environment";
+import { environmentCommon } from "../../../../environments/environment-common";
+import { TestimonialOption } from "../../../component/common/card/testimonial-card/testimonial-card.component";
+import { Partner } from "../../../component/common/swiper-wrapper/swiper-wrapper.component";
+import { PARTNERS, URLS } from "../../../data/constant";
+import { AuthenticationService } from "../../../service/auth/authentication.service";
+import { ThemeService } from "../../../service/theme/theme.service";
 
-@Component( {
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: [ './home.component.scss', '../raw-landing-layout.component.scss' ]
-} )
+@Component({
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss", "../raw-landing-layout.component.scss"],
+})
 export class HomeComponent implements AfterViewInit {
-
   downloadCounter = 6100;
   serverTypesCounter = 5;
   uiTypesCounter = 3;
 
   brand = {
-    brandLogo: '',
+    brandLogo: "",
   };
 
   URLS = URLS;
@@ -35,32 +34,62 @@ export class HomeComponent implements AfterViewInit {
   environmentCommon = environmentCommon;
 
   option1: TestimonialOption = {
-    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
-    brand: { brandLogo: '../../../../assets/common/social/buymeacoffee-logo.png' },
-    style: { themeColor: 'var(--warn)' }
+    review:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ",
+    reviewer: {
+      name: "Furkan Yavuz",
+      title: "Co-Founder @ Open Template Hub",
+      photoUri:
+        "https://avatars0.githubusercontent.com/u/2248168?s=460&u=435ef6ade0785a7a135ce56cae751fb3ade1d126&v=4",
+      social: {
+        linkedIn: "https://www.linkedin.com/in/furkanyavuz",
+        twitter: "https://twitter.com/codigrate",
+      },
+    },
+    style: { themeColor: "var(--warn)" },
   };
 
   option2: TestimonialOption = {
-    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
-    brand: { brandLogo: '../../../../assets/common/social/reddit-logo.png' },
-    style: { themeColor: 'var(--error)' }
+    review:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ",
+    reviewer: {
+      name: "Fatih Türker",
+      title: "Co-Founder @ Open Template Hub",
+      photoUri:
+        "https://avatars1.githubusercontent.com/u/2202179?s=460&u=261b1129e7106c067783cb022ab9999aad833bdc&v=4",
+      social: {
+        linkedIn: "https://www.linkedin.com/in/fatihtrker",
+        twitter: "https://twitter.com/remoklify",
+      },
+    },
+    style: { themeColor: "var(--error)" },
   };
 
   option3: TestimonialOption = {
-    review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
-    brand: { brandLogo: '../../../../assets/common/social/facebook-logo.png' },
-    style: { themeColor: 'var(--info)' }
+    review:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ",
+    reviewer: {
+      name: "Mert Saraç",
+      title: "Software Developer @ Open Template Hub",
+      photoUri:
+        "https://avatars1.githubusercontent.com/u/38442589?s=400&u=aa3cda11724fc297a0bfa6beb35c9be81687cf3c&v=4",
+      social: {
+        linkedIn: "",
+        twitter: "",
+      },
+    },
+    style: { themeColor: "var(--info)" },
   };
 
   constructor(
-      private formBuilder: FormBuilder,
-      public router: Router,
-      private authenticationService: AuthenticationService,
-      private themeService: ThemeService
+    private formBuilder: FormBuilder,
+    public router: Router,
+    private authenticationService: AuthenticationService,
+    private themeService: ThemeService
   ) {
     // redirect to home if already logged in
-    if ( this.authenticationService.currentUserValue ) {
-      this.router.navigate( [ URLS.dashboard.root ] );
+    if (this.authenticationService.currentUserValue) {
+      this.router.navigate([URLS.dashboard.root]);
     }
 
     this.brand = this.themeService.brand;
@@ -74,74 +103,86 @@ export class HomeComponent implements AfterViewInit {
     const options = {
       useGrouping: false,
       duration: undefined,
-      formattingFn: undefined
+      formattingFn: undefined,
     };
 
-    options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n, this.downloadCounter );
+    options.formattingFn = (n: number) => {
+      return this.countUpFormatter(n, this.downloadCounter);
     };
 
-    if ( this.downloadCounter < this.KILO ) {
+    if (this.downloadCounter < this.KILO) {
       options.duration = 2;
-    } else if ( this.downloadCounter < this.MILLION ) {
+    } else if (this.downloadCounter < this.MILLION) {
       options.duration = 3;
     } else {
       options.duration = 4;
     }
 
-    const eventCountUp = new CountUp( 'npmCounterElement', this.downloadCounter, options );
+    const eventCountUp = new CountUp(
+      "npmCounterElement",
+      this.downloadCounter,
+      options
+    );
 
-    options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n, this.serverTypesCounter );
+    options.formattingFn = (n: number) => {
+      return this.countUpFormatter(n, this.serverTypesCounter);
     };
-    if ( this.serverTypesCounter < this.KILO ) {
+    if (this.serverTypesCounter < this.KILO) {
       options.duration = 2;
-    } else if ( this.serverTypesCounter < this.MILLION ) {
+    } else if (this.serverTypesCounter < this.MILLION) {
       options.duration = 3;
     } else {
       options.duration = 4;
     }
 
-    const studentCountUp = new CountUp( 'githubStarCounterElement', this.serverTypesCounter, options );
+    const studentCountUp = new CountUp(
+      "githubStarCounterElement",
+      this.serverTypesCounter,
+      options
+    );
 
-    options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n, this.uiTypesCounter );
+    options.formattingFn = (n: number) => {
+      return this.countUpFormatter(n, this.uiTypesCounter);
     };
-    if ( this.uiTypesCounter < this.KILO ) {
+    if (this.uiTypesCounter < this.KILO) {
       options.duration = 2;
-    } else if ( this.uiTypesCounter < this.MILLION ) {
+    } else if (this.uiTypesCounter < this.MILLION) {
       options.duration = 3;
     } else {
       options.duration = 4;
     }
 
-    const userCountUp = new CountUp( 'serverTypesCounterElement', this.uiTypesCounter, options );
+    const userCountUp = new CountUp(
+      "serverTypesCounterElement",
+      this.uiTypesCounter,
+      options
+    );
 
-    if ( !eventCountUp.error ) {
+    if (!eventCountUp.error) {
       eventCountUp.start();
     } else {
-      console.error( eventCountUp.error );
+      console.error(eventCountUp.error);
     }
-    if ( !studentCountUp.error ) {
+    if (!studentCountUp.error) {
       studentCountUp.start();
     } else {
-      console.error( studentCountUp.error );
+      console.error(studentCountUp.error);
     }
-    if ( !userCountUp.error ) {
+    if (!userCountUp.error) {
       userCountUp.start();
     } else {
-      console.error( userCountUp.error );
+      console.error(userCountUp.error);
     }
   }
 
-  countUpFormatter( n: number, lastNumber: number ) {
-    if ( n < this.KILO ) {
-      return n + '';
+  countUpFormatter(n: number, lastNumber: number) {
+    if (n < this.KILO) {
+      return n + "";
     } else {
-      if ( n < this.MILLION ) {
-        return Math.round( n / this.KILO * 10 ) / 10 + 'k';
+      if (n < this.MILLION) {
+        return Math.round((n / this.KILO) * 10) / 10 + "k";
       } else {
-        return Math.round( n / this.MILLION * 10 ) / 10 + 'M';
+        return Math.round((n / this.MILLION) * 10) / 10 + "M";
       }
     }
   }

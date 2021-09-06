@@ -107,6 +107,10 @@
   background-color: var(--brand-color-yellow-theme);
 }
 
+.ribbon.ribbon-deal:before {
+  background-color: var(--brand-color-default-theme);
+}
+
 .ribbon:after {
   /* Set the text from the data-ribbon attribute */
   content: attr(data-ribbon);

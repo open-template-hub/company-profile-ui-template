@@ -11,33 +11,33 @@
     </div>
 
     <div class="section-column-wrapper" [style]="'min-width: ' + (330 * calculatedColumns) + 'px;'">
-      <div class="section-column" *ngFor="let column of productLines; last as isLastColumn"
+      <div class="section-column" *ngFor="let productLine of productLines; last as isLastColumn"
            [class.section-column-right-border]="true"
-           [class]="column.color ? column.color + '-theme' : ''"
+           [class]="productLine.color ? productLine.color + '-theme' : ''"
            [style]="'max-height: ' + ((80  + (150 * calculatedRows)) + 1) + 'px;'">
-        <div *ngIf="column.name" class="section-header">
+        <div *ngIf="productLine.name" class="section-header">
           <h4>
-            {{ column.name }}
+            {{ productLine.name }}
           </h4>
           <hr [style.border-color]="'var(--brand-color)'"/>
           <p>
-            {{ column.description }}
+            {{ productLine.description }}
           </p>
         </div>
 
-        <a *ngFor="let option of column.products; last as isLast; first as isFirst" class="dropdown-item"
-           [class]="option.color ? option.color + '-theme' : ''"
-           [routerLink]="URLS.product" [queryParams]="{productLineName: column.key, productName: option.key}"
+        <a *ngFor="let product of productLine.products; last as isLast; first as isFirst" class="dropdown-item"
+           [class]="product.color ? product.color + '-theme' : ''"
+           [routerLink]="URLS.product" [queryParams]="{productLineName: productLine.key, productName: product.key}"
            (click)="closeDropDownInternal()">
 
-          <img [src]="option.logo" alt="logo" class="dropdown-item-logo" height="55"/>
+          <img [src]="product.logo" alt="logo" class="dropdown-item-logo" height="55"/>
 
           <div class="dropdown-item-content">
             <h6>
-              {{ option.name }}
+              {{ product.name }}
             </h6>
             <p>
-              {{ option.description }}
+              {{ product.description }}
             </p>
           </div>
         </a>

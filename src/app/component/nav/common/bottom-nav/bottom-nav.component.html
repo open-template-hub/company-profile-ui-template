@@ -3,14 +3,14 @@
 <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES">
 </app-dropdown-menu>
 <nav class="bottom-nav">
-  <a (click)="closeSettings(); dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
+  <a (click)="closeSettings()"
      *ngIf="openSettings" href="javascript:void(0)">
     <i aria-hidden="true" class="material-icons">arrow_back_ios</i>
     <span>
         Back
     </span>
   </a>
-  <a *ngIf="!openSettings" routerLink="{{ URLS.root }}">
+  <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()" *ngIf="!openSettings" routerLink="{{ URLS.root }}">
     <i aria-hidden="true" [class]="'fas fa-home fa-fw'"></i>
     <span>
         Home
@@ -28,7 +28,7 @@
         Services
     </span>
   </a>
-  <a (click)="openSettings = !openSettings; dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
+  <a (click)="openSettings = !openSettings"
      *ngIf="!openSettings" href="javascript:void(0)">
     <i aria-hidden="true" class="material-icons">arrow_forward_ios</i>
     <span>

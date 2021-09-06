@@ -29,7 +29,8 @@
   padding-right: 2vw;
 }
 
-.product-line-header, .features .feature {
+.product-line-header,
+.features .feature {
   padding-left: 7vw;
   padding-right: 7vw;
 }
@@ -58,17 +59,34 @@
   flex-direction: column;
 }
 
+.register-button {
+  margin-top: 0.1em;
+}
+
+.product-name {
+  font-size: 1.4em;
+  color: var(--color);
+  font-weight: 700;
+}
+
+.product-description {
+  font-size: .6em;
+  color: var(--color);
+  font-weight: 500;
+}
+
 .register-wrapper {
   display: flex;
-  margin-top: 20px;
+  margin-top: 5em;
 }
 
 .register-wrapper input {
-  border: 2px solid var(--contrast);
-  max-width: 410px;
+  border: 2px solid var(--lighter-contrast);
+  max-width: 22em;
   height: -webkit-fit-content;
   transition: border-color 400ms ease-out;
-  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .register-wrapper input::placeholder {
@@ -76,7 +94,7 @@
 }
 
 .register-wrapper input:focus {
-  border: 2px solid var(--lighter-contrast);
+  border: 2px solid var(--lighter);
 }
 
 .register-wrapper a {
@@ -170,7 +188,7 @@ app-swiper-wrapper {
   }
 
   .register-wrapper {
-    margin-top: 20px;
+    margin-top: 2em;
     width: -webkit-fill-available;
     justify-content: center;
     display: flex;
@@ -179,7 +197,7 @@ app-swiper-wrapper {
   }
 
   .register-wrapper input {
-      width: 100%;
+    width: 100%;
   }
 
   .register-wrapper app-button1 {
@@ -233,7 +251,7 @@ app-swiper-wrapper {
   }
 
   .register-wrapper {
-    margin-top: 30px;
+    margin-top: 3em;
     align-items: center;
   }
 
@@ -305,7 +323,8 @@ app-swiper-wrapper {
     justify-content: space-between;
   }
 
-  .hero-content-left, .hero-content-right {
+  .hero-content-left,
+  .hero-content-right {
     max-width: 55vw;
   }
 }

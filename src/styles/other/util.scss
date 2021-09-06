@@ -5,15 +5,12 @@
 }
 
 .rounded-box {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.rounded-box:hover {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-bottom-left-radius: 12px;
+  -webkit-top-right-radius: 3px;
+  -moz-bottom-left-radius: 12px;
+  -moz-top-right-radius: 3px;
+  border-bottom-left-radius: 12px;
+  border-top-right-radius: 6px;
 }
 
 .circle:hover, .rounded-box.circle:hover {

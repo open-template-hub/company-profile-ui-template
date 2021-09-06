@@ -29,7 +29,7 @@ export class ExtLinkComponent {
         queryParams: {
           href: this.href,
           website: this.website,
-          info: 'You are about to leave this website. Please remember don\'t click on unknown links or download unverified software.'
+          info: 'You are about to leave this website. Please remember, don\'t click on unknown links or download unverified software.'
         }
       } );
     } else {

@@ -1,7 +1,3 @@
-.splash-content {
-  margin-top: 30vh;
-}
-
 .splash-logos > * {
   margin: 8px;
 }
@@ -12,15 +8,6 @@
 
 .splash-logos img {
   height: 55px;
-}
-
-.splash-content .alert-with-icon {
-  margin: 40px 0;
-}
-
-.splash-content .alert-with-icon i {
-  top: 4px;
-  left: 15px;
 }
 
 .splash-loading-bar {
@@ -101,14 +88,14 @@
 }
 
 @media only screen and (max-width: 999px) {
-  .splash-content .alert-with-icon {
-    max-width: 90vw;
+  .splash-content {
+    margin-top: 20vh;
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  .splash-content .alert-with-icon {
-    max-width: 30vw;
+  .splash-content {
+    margin-top: 30vh;
   }
 
   .external-component-button-wrapper {

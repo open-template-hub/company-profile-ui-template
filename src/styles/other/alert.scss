@@ -1,19 +1,18 @@
 .alert-with-icon {
   width: 100%;
   position: relative;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  margin-top: 22px;
+  margin-bottom: 50px;
+  color: var(--color);
 }
 
 .alert-with-icon p {
-  padding-left: 49px;
+  padding: 0;
 }
 
 .alert-with-icon i {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 2px 7px;
+  position: relative;
+  padding-bottom: 15px;
 }
 
 .success-text, .success-text p, .success-text i {
@@ -110,4 +109,16 @@
 
 .input-info.input-with-icon i {
   color: var(--info);
+}
+
+@media only screen and (max-width: 999px) {
+  .alert-with-icon {
+    max-width: 85vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .alert-with-icon {
+    max-width: 35vw;
+  }
 }

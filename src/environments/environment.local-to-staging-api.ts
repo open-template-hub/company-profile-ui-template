@@ -54,7 +54,7 @@ export const environment = {
 
   analytics: {
     google: {
-      tag: 'G-RLYBKEN9DK'
+      tag: 'GTM-P4FHG76'
     }
   }
 };

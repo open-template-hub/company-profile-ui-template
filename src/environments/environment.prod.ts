@@ -56,7 +56,7 @@ export const environment = {
 
   analytics: {
     google: {
-      tag: 'G-295CJMTJ1L'
+      tag: 'GTM-NNRF845'
     }
   }
 };

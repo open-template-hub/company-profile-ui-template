@@ -55,7 +55,7 @@ export class EventComponent implements OnInit, OnDestroy {
     this.route.queryParams.subscribe( params => {
       this.eventService.search( params.event_id, undefined, undefined,
         undefined, [], EventTypes.Searched ).subscribe( () => {
-        console.log();
+        // Intentionally blank
       }, () => {
         this.router.navigate( [ URLS.dashboard.learn ] );
       } );

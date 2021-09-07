@@ -9,11 +9,9 @@
   </a>
   <a
     (click)="
-      dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()
-    "
+      dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
     *ngIf="!openSettings"
-    routerLink="{{ URLS.root }}"
-  >
+    routerLink="{{ URLS.root }}">
     <i aria-hidden="true" [class]="'fas fa-home fa-fw'"></i>
     <span> Home </span>
   </a>
@@ -21,9 +19,7 @@
     *ngIf="!openSettings"
     (click)="
       dropdownMenuProducts.toggleDropdown();
-      dropdownMenuServices.closeDropdown()
-    "
-  >
+      dropdownMenuServices.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-server fa-fw'"></i>
     <span> Products </span>
   </a>
@@ -31,17 +27,14 @@
     *ngIf="!openSettings"
     (click)="
       dropdownMenuServices.toggleDropdown();
-      dropdownMenuProducts.closeDropdown()
-    "
-  >
+      dropdownMenuProducts.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-handshake fa-fw'"></i>
     <span> Services </span>
   </a>
   <a
     (click)="openSettings = !openSettings"
     *ngIf="!openSettings"
-    href="javascript:void(0)"
-  >
+    href="javascript:void(0)">
     <i aria-hidden="true" class="material-icons">arrow_forward_ios</i>
     <span> More </span>
   </a>
@@ -50,28 +43,16 @@
     *ngIf="openSettings && !openOtherSettings"
     routerLink="{{ URLS.maintenance }}"
     (click)="
-      dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()
-    "
-  >
+      dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-address-card fa-fw'"></i>
     <span> Contact Us </span>
   </a>
   <a
     class="non-clickable"
-    *ngIf="openSettings && !openOtherSettings"
-    routerLink="{{ URLS.pricing }}"
-    (click)="
-      dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()
-    "
-  >
+    *ngIf="openSettings && !openOtherSettings">
   </a>
   <a
     class="non-clickable"
-    *ngIf="openSettings && !openOtherSettings"
-    routerLink="{{ URLS.maintenance }}"
-    (click)="
-      dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()
-    "
-  >
+    *ngIf="openSettings && !openOtherSettings">
   </a>
 </nav>

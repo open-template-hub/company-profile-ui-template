@@ -22,14 +22,10 @@
   --brand-color-green-theme-darker-8: #4e544d;
   --brand-color-green-theme-darker-9: #444644;
 
-  --overlay-green-theme-lighter: rgba(67, 176, 67, 0.3);
-  --overlay-green-theme-darker: rgba(28, 76, 28, 0.6);
-
   --brand-green-theme-background: #5cb05c;
-  --hover-green-theme: rgba(67, 176, 67, 0.3);
 
-  --color-alpha-green-theme-0-5: rgba(31, 108, 26, 0.5);
-  --color-alpha-green-theme-0-13: rgba(38, 108, 26, 0.13);
+  --hover-green-theme-lighter: rgba(67, 176, 67, 0.3);
+  --hover-green-theme-darker: rgba(28, 76, 28, 0.6);
 }
 
 :root .green-theme, .light-theme.green-theme {
@@ -56,17 +52,10 @@
   --brand-color-darker-8: var(--brand-color-green-theme-darker-8);
   --brand-color-darker-9: var(--brand-color-green-theme-darker-9);
 
-  --overlay: var(--overlay-green-theme-lighter);
-
-  --brand-background: var(--brand-green-theme-background);
-  --hover: var(--hover-green-theme);
-
-  // shine animation colors
-  --color-alpha-0-5: var(--color-alpha-green-theme-0-5);
-  --color-alpha-0-13: var(--color-alpha-green-theme-0-13);
+  --hover: var(--hover-green-theme-lighter);
 }
 
-.dark-theme.green-theme {
+@mixin green-theme-dark-mode {
   --brand-color-lighter-1: var(--brand-color-green-theme-darker-1);
   --brand-color-lighter-2: var(--brand-color-green-theme-darker-2);
   --brand-color-lighter-3: var(--brand-color-green-theme-darker-3);
@@ -87,31 +76,15 @@
   --brand-color-darker-8: var(--brand-color-green-theme-lighter-8);
   --brand-color-darker-9: var(--brand-color-green-theme-lighter-9);
 
-  --overlay: var(--overlay-green-theme-darker);
+  --hover: var(--hover-green-theme-darker);
+}
+
+.dark-theme.green-theme {
+  @include green-theme-dark-mode
 }
 
 @media (prefers-color-scheme: dark) {
   :root .green-theme {
-    --brand-color-lighter-1: var(--brand-color-green-theme-darker-1);
-    --brand-color-lighter-2: var(--brand-color-green-theme-darker-2);
-    --brand-color-lighter-3: var(--brand-color-green-theme-darker-3);
-    --brand-color-lighter-4: var(--brand-color-green-theme-darker-4);
-    --brand-color-lighter-5: var(--brand-color-green-theme-darker-5);
-    --brand-color-lighter-6: var(--brand-color-green-theme-darker-6);
-    --brand-color-lighter-7: var(--brand-color-green-theme-darker-7);
-    --brand-color-lighter-8: var(--brand-color-green-theme-darker-8);
-    --brand-color-lighter-9: var(--brand-color-green-theme-darker-9);
-
-    --brand-color-darker-1: var(--brand-color-green-theme-lighter-1);
-    --brand-color-darker-2: var(--brand-color-green-theme-lighter-2);
-    --brand-color-darker-3: var(--brand-color-green-theme-lighter-3);
-    --brand-color-darker-4: var(--brand-color-green-theme-lighter-4);
-    --brand-color-darker-5: var(--brand-color-green-theme-lighter-5);
-    --brand-color-darker-6: var(--brand-color-green-theme-lighter-6);
-    --brand-color-darker-7: var(--brand-color-green-theme-lighter-7);
-    --brand-color-darker-8: var(--brand-color-green-theme-lighter-8);
-    --brand-color-darker-9: var(--brand-color-green-theme-lighter-9);
-
-    --overlay: var(--overlay-green-theme-darker);
+    @include green-theme-dark-mode
   }
 }

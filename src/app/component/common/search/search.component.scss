@@ -81,11 +81,11 @@
 }
 
 #more-settings {
-  border-top: 1px solid var(--overlay);
+  border-top: 1px solid var(--hover);
 }
 
 @media (hover: hover) {
   .search-results a:hover {
-    background-color: var(--overlay);
+    background-color: var(--hover);
   }
 }

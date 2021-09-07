@@ -10,6 +10,7 @@ JSDOM.fromFile( './src/index.html' ).then( dom => {
   const urlVersion = version.split( '.' ).join( '_' );
 
   const favicons = [
+    dom.window.document.querySelector( '[rel="apple-touch-icon"]' ),
     dom.window.document.querySelector( '[rel="shortcut icon"]' ),
     dom.window.document.querySelector( '[rel="manifest"]' ),
     dom.window.document.querySelector( '[rel="mask-icon"]' ),

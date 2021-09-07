@@ -38,6 +38,7 @@
     "@stripe/stripe-js": "^1.15.1",
     "@swimlane/ngx-charts": "^18.0.1",
     "@types/simple-icons": "^5.0.0",
+    "angular-google-tag-manager": "^1.4.2",
     "angular-in-memory-web-api": "^0.11.0",
     "countup.js": "^2.0.7",
     "dotenv": "^10.0.0",

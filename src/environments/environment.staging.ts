@@ -50,5 +50,11 @@ export const environment = {
       cliendId: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
       env: 'sandbox'
     }
+  },
+
+  analytics: {
+    google: {
+      tag: 'G-RLYBKEN9DK'
+    }
   }
 };

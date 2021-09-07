@@ -24,8 +24,6 @@ export class ProductComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.product = undefined;
     this.route.queryParams.subscribe( params => {
-      console.log( params );
-
       if ( params.productLineName && params.productName ) {
         const productLine: ProductLine = PRODUCT_LINES.find( p => p.key === params.productLineName );
 

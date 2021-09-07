@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { GoogleTagManagerService } from 'angular-google-tag-manager';
 import { ThemeService } from './service/theme/theme.service';
 
 @Component( {
@@ -11,15 +13,20 @@ export class AppComponent {
   darkLightSetting: string;
   themeColorSetting: string;
 
-  constructor(private themeService: ThemeService) {
-    const head = document.getElementsByTagName( 'head' )[ 0 ];
-    const links = head.getElementsByTagName( 'link' );
-    for ( let i = 0; i < links.length; ++i ) {
-      const link = links.item( i );
-      if ( link.rel && link.rel === 'apple-touch-icon' ) {
-        link.href = link.href + '?v=' + ( new Date() ).getTime();
+  constructor( private themeService: ThemeService, private googleTagManagerService: GoogleTagManagerService, private router: Router ) {
+    this.router.events.forEach( item => {
+      if ( item instanceof NavigationEnd ) {
+
+        const googleTagManagerTag = {
+          event: 'page',
+          pageName: item.url
+        };
+
+        console.log( item.url );
+
+        this.googleTagManagerService.pushTag( googleTagManagerTag );
       }
-    }
+    } );
 
     this.themeService.darkLightSetting.subscribe( darkLightSetting => {
       this.darkLightSetting = darkLightSetting;

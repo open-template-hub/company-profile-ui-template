@@ -102,5 +102,5 @@ export const environmentCommon = {
       logo: './assets/common/social/google-calendar-logo.png',
       cssClass: 'google-calendar'
     }
-  },
+  }
 };

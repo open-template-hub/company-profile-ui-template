@@ -26,7 +26,7 @@ JSDOM.fromFile( './src/index.html' ).then( dom => {
     favicon.setAttribute( 'href', hrefWithVersion );
   }
 
-  fs.writeFile( './src/index.html', dom.window.document.documentElement.outerHTML, () => {
+  fs.writeFile( './src/index.html', '<!DOCTYPE html>' + dom.window.document.documentElement.outerHTML, () => {
     // Intentionally blank
   } );
 } );

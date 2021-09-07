@@ -69,6 +69,6 @@
         </i>
       </app-ext-link>
     </div>
-    <div class="footer-version">{{' v-' + appVersion}}</div>
+    <div class="footer-version">{{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '')}}</div>
   </div>
 </div>

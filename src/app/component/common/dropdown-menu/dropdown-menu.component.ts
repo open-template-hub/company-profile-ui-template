@@ -44,7 +44,7 @@ export class DropdownMenuComponent {
     if ( this.isDropdownOpen && window.innerWidth > 999 ) {
       let wantedColumns = this.minimumColumns;
 
-      while ( wantedColumns * 330 > window.innerWidth - 255 ) {
+      while ( wantedColumns * 330 > window.innerWidth - 240 ) {
         wantedColumns = wantedColumns - 2;
       }
 

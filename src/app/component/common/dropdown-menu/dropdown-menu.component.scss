@@ -37,6 +37,14 @@
   display: flex;
   cursor: pointer;
   align-items: center;
+
+  -webkit-top-right-radius: 6px;
+  -moz-top-right-radius: 6px;
+  border-top-right-radius: 6px;
+
+  -webkit-bottom-left-radius: 4px;
+  -moz-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .dropdown-item-logo {
@@ -163,7 +171,17 @@
 
 @media (hover: hover) {
   .dropdown-item:hover {
-    background-color: var(--brand-color-lighter-5);
+    transition: .4s all ease-in-out;
+    background-color: var(--brand-color-lighter-8);
+  }
+
+  .dropdown-item:hover img {
+    transition: .2s all ease-in-out;
+    transform: scale(1.2);
+  }
+
+  .dropdown-item:hover .dropdown-item-content > * {
+    color: var(--brand-color-darker-7);
   }
 }
 

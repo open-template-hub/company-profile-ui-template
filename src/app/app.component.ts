@@ -22,8 +22,6 @@ export class AppComponent {
           pageName: item.url
         };
 
-        console.log( item.url );
-
         this.googleTagManagerService.pushTag( googleTagManagerTag );
       }
     } );

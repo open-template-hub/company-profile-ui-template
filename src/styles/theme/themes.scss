@@ -57,7 +57,6 @@
   // background
   --background-color-dark-mode: #353535;
   --background-color-alpha-dark-mode: rgba(53, 53, 53, 0.93);
-  --brand-background-dark-mode: #162416;
   --card-dark-mode: #353735;
 
   --shadow-dark-mode: rgba(25, 25, 25, 0.5);
@@ -166,7 +165,6 @@
   // background
   --background-color: var(--background-color-dark-mode);
   --background-color-alpha: var(--background-color-alpha-dark-mode);
-  --brand-background: var(--brand-background-dark-mode);
   --card: var(--card-dark-mode);
 
   --shadow: var(--shadow-dark-mode);
@@ -201,7 +199,6 @@
     // background
     --background-color: var(--background-color-dark-mode);
     --background-color-alpha: var(--background-color-alpha-dark-mode);
-    --brand-background: var(--brand-background-dark-mode);
     --card: var(--card-dark-mode);
 
     --shadow: var(--shadow-dark-mode);

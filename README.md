@@ -135,7 +135,7 @@ Check project's current **nodejs** and **npm** version from **[package.json](pac
 
 To be able to update home screen images, we are using open source project **[Scale by Flexiple](https://2.flexiple.com/scale/all-illustrations)**.
 
-Find our brand color at **[brand.scss](src/styles/brand/brand.scss)** and apply at the website and download images.
+Find our brand color at **[brand.scss](src/styles/theme/brand.scss)** and apply at the website and download images.
 
 <br/>
 

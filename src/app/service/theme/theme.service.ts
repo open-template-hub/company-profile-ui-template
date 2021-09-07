@@ -38,7 +38,16 @@ export class ThemeService {
     '--brand-color-lighter-6',
     '--brand-color-lighter-7',
     '--brand-color-lighter-8',
-    '--brand-color-lighter-9'
+    '--brand-color-lighter-9',
+    '--brand-color-darker-1',
+    '--brand-color-darker-2',
+    '--brand-color-darker-3',
+    '--brand-color-darker-4',
+    '--brand-color-darker-5',
+    '--brand-color-darker-6',
+    '--brand-color-darker-7',
+    '--brand-color-darker-8',
+    '--brand-color-darker-9'
   ];
 
   constructor() {

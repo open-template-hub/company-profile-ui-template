@@ -24,8 +24,16 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "src/assets/",
+                "output": "/assets/"
+              },
+              {
+                "glob": "favicon.ico",
+                "input": "src/assets/favicons/",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles/styles.scss"
@@ -61,10 +69,6 @@
               ]
             },
             "staging": {
-              "assets": [
-                "src/favicon.ico",
-                "src/assets"
-              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -77,11 +81,7 @@
               "sourceMap": true,
               "buildOptimizer": false,
               "extractLicenses": false,
-              "vendorChunk": true,
-              "assets": [
-                "src/favicon.ico",
-                "src/assets"
-              ]
+              "vendorChunk": true
             },
             "local-to-staging-api": {
               "optimization": false,
@@ -89,10 +89,6 @@
               "buildOptimizer": false,
               "extractLicenses": false,
               "vendorChunk": true,
-              "assets": [
-                "src/favicon.ico",
-                "src/assets"
-              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -136,11 +132,18 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "src/assets/",
+                "output": "/assets/"
+              },
+              {
+                "glob": "favicon.ico",
+                "input": "src/assets/favicons/",
+                "output": "/"
+              }
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles/styles.scss"
             ],
             "scripts": []

@@ -86,13 +86,14 @@
   border-top-left-radius: 96px;
   border-bottom-left-radius: 925px;
   font-weight: 700;
+  padding: 20px;
 }
 
 .product-description {
   font-size: 0.5em;
   color: var(--darker);
   font-weight: 500;
-  padding: 20px;
+  padding: 40px;
 }
 
 .register-wrapper input {
@@ -166,7 +167,7 @@
 }
 
 .product-content-left {
-  background: var(--shadow);
+  background: var(--shadow2);
   height: 360px;
   max-width: 620px;
   margin-left: 5px;

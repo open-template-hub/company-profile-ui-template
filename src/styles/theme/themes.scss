@@ -12,7 +12,7 @@
 
   // information level colors
   --success-light-mode: #228b22;
-  --error-light-mode: #E23237;
+  --error-light-mode: #e23237;
   --warn-light-mode: #d28f29;
   --info-light-mode: #5c98cd;
 
@@ -27,6 +27,8 @@
   --card-light-mode: #fefffe;
 
   --shadow-light-mode: rgba(155, 155, 155, 0.5);
+
+  --shadow2-light-mode: hsla(0, 0%, 81%, 0.5);
 
   --cropper-overlay-color-light-mode: var(--card);
   --cropper-outline-color-light-mode: rgba(254, 255, 254, 0.7);
@@ -60,6 +62,7 @@
   --card-dark-mode: #353735;
 
   --shadow-dark-mode: rgba(25, 25, 25, 0.5);
+  --shadow2-dark-mode: rgba(44, 44, 44, 0.5);
 
   --cropper-overlay-color-dark-mode: var(--card);
   --cropper-outline-color-dark-mode: rgba(53, 55, 53, 0.5);
@@ -93,10 +96,10 @@
   --card: var(--card-light-mode);
 
   --shadow: var(--shadow-light-mode);
+  --shadow2: var(--shadow2-light-mode);
 
   --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
   --cropper-outline-color: var(--cropper-outline-color-light-mode);
-
 
   --always-contrast-light-mode: var(--contrast-light-mode);
   --always-card-dark-mode: var(--card-dark-mode);
@@ -131,10 +134,10 @@
   --card: var(--card-light-mode);
 
   --shadow: var(--shadow-light-mode);
+  --shadow2: var(--shadow2-light-mode);
 
   --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
   --cropper-outline-color: var(--cropper-outline-color-light-mode);
-
 
   --always-contrast-light-mode: var(--contrast-light-mode);
   --always-card-dark-mode: var(--card-dark-mode);
@@ -168,6 +171,7 @@
   --card: var(--card-dark-mode);
 
   --shadow: var(--shadow-dark-mode);
+  --shadow2: var(--shadow2-dark-mode);
 
   --cropper-overlay-color: var(--cropper-overlay-color-dark-mode);
   --cropper-outline-color: var(--cropper-outline-color-dark-mode);
@@ -202,6 +206,7 @@
     --card: var(--card-dark-mode);
 
     --shadow: var(--shadow-dark-mode);
+    --shadow2: var(--shadow2-dark-mode);
 
     --cropper-overlay-color: var(--cropper-overlay-color-dark-mode);
     --cropper-outline-color: var(--cropper-outline-color-dark-mode);

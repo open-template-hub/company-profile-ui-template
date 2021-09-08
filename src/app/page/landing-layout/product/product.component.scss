@@ -63,38 +63,54 @@
   margin-top: 0.1em;
 }
 
+.register-button-item {
+  width: 22em;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--card);
+  background-color: var(--darker);
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin: 0.25em 0.25em 1em;
+  vertical-align: text-bottom;
+  height: 35px;
+}
+
 .product-name {
-  font-size: 1.4em;
+  font-size: 1em;
   color: var(--color);
+  background: var(--card);
+  margin-top: -20px;
+  border-top-right-radius: 122px;
+  border-top-left-radius: 96px;
+  border-bottom-left-radius: 925px;
   font-weight: 700;
 }
 
 .product-description {
-  font-size: .6em;
-  color: var(--color);
+  font-size: 0.5em;
+  color: var(--darker);
   font-weight: 500;
-}
-
-.register-wrapper {
-  display: flex;
-  margin-top: 5em;
+  padding: 20px;
 }
 
 .register-wrapper input {
-  border: 2px solid var(--lighter-contrast);
+  border: 1px solid var(--shadow);
   max-width: 22em;
   height: -webkit-fit-content;
   transition: border-color 400ms ease-out;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
+  background: var(--card);
 }
 
 .register-wrapper input::placeholder {
-  color: var(--lighter-contrast);
+  color: var(--color);
 }
 
 .register-wrapper input:focus {
-  border: 2px solid var(--lighter);
+  border: 1px solid var(--lighter);
 }
 
 .register-wrapper a {
@@ -149,8 +165,15 @@
   display: flex;
 }
 
-.hero-content-left {
-  justify-content: space-evenly;
+.product-content-left {
+  background: var(--shadow);
+  height: 360px;
+  max-width: 620px;
+  margin-left: 5px;
+  border-top-left-radius: 95px;
+  margin-right: 5px;
+  border-bottom-right-radius: 225px;
+  border-bottom-left-radius: 2px;
 }
 
 .card-area {
@@ -168,7 +191,7 @@ app-swiper-wrapper {
 
 @media only screen and (max-width: 999px) {
   .home-page {
-    font-size: 23px;
+    font-size: 32px;
   }
 
   .feature {
@@ -188,7 +211,7 @@ app-swiper-wrapper {
   }
 
   .register-wrapper {
-    margin-top: 2em;
+    margin-top: 10px;
     width: -webkit-fill-available;
     justify-content: center;
     display: flex;
@@ -198,10 +221,6 @@ app-swiper-wrapper {
 
   .register-wrapper input {
     width: 100%;
-  }
-
-  .register-wrapper app-button1 {
-    margin-top: 20px;
   }
 
   .register-wrapper a i {
@@ -221,10 +240,6 @@ app-swiper-wrapper {
 
   .demonstration {
     max-width: 60vw;
-  }
-
-  .hero-content-left > * {
-    padding-bottom: 6vh;
   }
 
   .product-line-header {
@@ -248,11 +263,6 @@ app-swiper-wrapper {
 
   .product-line-header {
     padding-bottom: 40px;
-  }
-
-  .register-wrapper {
-    margin-top: 3em;
-    align-items: center;
   }
 
   .register-wrapper a {
@@ -279,22 +289,13 @@ app-swiper-wrapper {
     max-width: 38vw;
   }
 
-  .hero-content-left h1 {
-    padding-top: 50px;
-    padding-bottom: 70px;
-  }
-
-  .hero-content-left h6 {
-    text-align: left;
-  }
-
   app-testimonial-card {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .hero-content-left {
+  .product-content-left {
     align-items: initial;
   }
 
@@ -321,11 +322,6 @@ app-swiper-wrapper {
     max-height: 24vw;
     margin-left: 10%;
     justify-content: space-between;
-  }
-
-  .hero-content-left,
-  .hero-content-right {
-    max-width: 55vw;
   }
 }
 

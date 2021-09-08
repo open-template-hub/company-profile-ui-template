@@ -1,7 +1,7 @@
 <div class="home-page">
   <div class="hero">
     <div class="hero-content">
-      <div class="hero-content-left">
+      <div class="product-content-left">
         <p class="product-name">{{ product.name }}</p>
         <p class="product-description">{{ product.description }}</p>
         <div class="register-wrapper">
@@ -12,14 +12,12 @@
             placeholder="Email address"
           />
           <div class="register-button">
-            <app-button1
-              [text]="'Request for Demo'"
-              [brandColor]="true"
-              [isSleekButton]="true"
-              [isAttendee]="true"
+            <button
+              class="register-button-item rounded-box"
               (click)="router.navigate([URLS.maintenance])"
             >
-            </app-button1>
+              Request for Demo
+            </button>
           </div>
         </div>
       </div>

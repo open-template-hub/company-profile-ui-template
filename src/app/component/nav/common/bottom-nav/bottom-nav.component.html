@@ -8,51 +8,52 @@
     <span> Back </span>
   </a>
   <a
-    (click)="
+      (click)="
       dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
-    *ngIf="!openSettings"
-    routerLink="{{ URLS.root }}">
+      *ngIf="!openSettings"
+      [routerLink]="URLS.root">
     <i aria-hidden="true" [class]="'fas fa-home fa-fw'"></i>
     <span> Home </span>
   </a>
   <a
-    *ngIf="!openSettings"
-    (click)="
+      *ngIf="!openSettings"
+      (click)="
       dropdownMenuProducts.toggleDropdown();
       dropdownMenuServices.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-server fa-fw'"></i>
     <span> Products </span>
   </a>
   <a
-    *ngIf="!openSettings"
-    (click)="
+      *ngIf="!openSettings"
+      (click)="
       dropdownMenuServices.toggleDropdown();
       dropdownMenuProducts.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-handshake fa-fw'"></i>
     <span> Services </span>
   </a>
   <a
-    (click)="openSettings = !openSettings"
-    *ngIf="!openSettings"
-    href="javascript:void(0)">
+      (click)="openSettings = !openSettings"
+      *ngIf="!openSettings"
+      href="javascript:void(0)">
     <i aria-hidden="true" class="material-icons">arrow_forward_ios</i>
     <span> More </span>
   </a>
-  <a
-    class="contact"
-    *ngIf="openSettings && !openOtherSettings"
-    routerLink="{{ URLS.maintenance }}"
-    (click)="
-      dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
+  <a *ngIf="openSettings && !openOtherSettings"
+     [routerLink]="URLS.aboutUs"
+     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
     <i aria-hidden="true" [class]="'fas fa-address-card fa-fw'"></i>
+    <span> About Us </span>
+  </a>
+  <a
+      class="contact"
+      *ngIf="openSettings && !openOtherSettings"
+      [routerLink]="URLS.maintenance"
+      (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
+    <i aria-hidden="true" [class]="'fas fa-envelope fa-fw'"></i>
     <span> Contact Us </span>
   </a>
   <a
-    class="non-clickable"
-    *ngIf="openSettings && !openOtherSettings">
-  </a>
-  <a
-    class="non-clickable"
-    *ngIf="openSettings && !openOtherSettings">
+      class="non-clickable"
+      *ngIf="openSettings && !openOtherSettings">
   </a>
 </nav>

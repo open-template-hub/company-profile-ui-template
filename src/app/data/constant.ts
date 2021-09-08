@@ -25,11 +25,6 @@ export const enum EventTypes { Recommended, Searched, Attended, RecommendedByFol
 
 export const PROFILE_IMG = './assets/common/profile-img.png';
 
-const dashboard = '/dashboard';
-const settings = '/settings';
-const user = '/user';
-const callback = '/callback';
-
 export const DarkLightSettings = {
   dark: 'dark',
   light: 'light',
@@ -44,48 +39,109 @@ export const ThemeColorSettings = {
   green: 'green'
 };
 
-export const URLS = {
-  root: '/',
-  u: '/u',
-  notFound: '/not-found',
-  maintenance: '/maintenance',
-  signup: '/signup',
-  signupSuccess: '/signup-success',
-  verifyAccount: '/verify-account',
-  login: '/login',
-  forgetPassword: '/forget-password',
-  resetPassword: '/reset-password',
-  cookiePolicy: '/cookie-policy',
-  privacyPolicy: '/privacy-policy',
-  terms: '/terms',
-  pricing: '/pricing',
-  product: '/product',
-  showroom: '/showroom',
-  external: '/external',
-  dashboard: {
-    root: dashboard,
-    contribute: dashboard + '/createEvent',
-    learn: dashboard + '/learn',
-    event: dashboard + '/event',
-    privacy: dashboard + '/privacy',
-    myProfile: dashboard + '/my-profile'
+export const URLS_RAW = {
+  // Landing layout
+  notFound: 'not-found',
+  maintenance: 'maintenance',
+  signupSuccess: 'signup-success',
+  verifyAccount: 'verify-account',
+  cookiePolicy: 'cookie-policy',
+  privacyPolicy: 'privacy-policy',
+  terms: 'terms',
+  pricing: 'pricing',
+  product: 'product',
+  aboutUs: 'about-us',
+  signup: 'signup',
+  login: 'login',
+  forgetPassword: 'forget-password',
+  resetPassword: 'reset-password',
+  showroom: 'showroom',
+  u: 'u',
+  // SplashLayout
+  callback: {
+    root: 'callback',
+    dribbble: 'dribbble',
+    facebook: 'facebook',
+    github: 'github',
+    google: 'google',
+    linkedin: 'linkedin',
+    reddit: 'reddit',
+    stripe: 'stripe',
+    twitch: 'twitch',
+    twitter: 'twitter',
   },
+  external: 'external',
+  // Dashboard Layout
+  dashboard: {
+    root: 'dashboard',
+    myProfile: 'my-profile',
+    createEvent: 'create-event',
+    learn: 'learn',
+    event: 'event',
+    privacy: 'privacy',
+  },
+  user: 'user',
+  // Settings Layout
   settings: {
-    welcome: settings + '/welcome',
-    editProfile: settings + '/edit-profile',
-    editTheme: settings + '/edit-theme'
+    root: 'settings',
+    welcome: 'welcome',
+    editProfile: 'edit-profile',
+    editTheme: 'edit-theme'
+  },
+};
+
+
+export const URLS = {
+  // Landing layout
+  root: '/' + '',
+  notFound: '/' + URLS_RAW.notFound,
+  maintenance: '/' + URLS_RAW.maintenance,
+  signupSuccess: '/' + URLS_RAW.signupSuccess,
+  verifyAccount: '/' + URLS_RAW.verifyAccount,
+  cookiePolicy: '/' + URLS_RAW.cookiePolicy,
+  privacyPolicy: '/' + URLS_RAW.privacyPolicy,
+  terms: '/' + URLS_RAW.terms,
+  pricing: '/' + URLS_RAW.pricing,
+  product: '/' + URLS_RAW.product,
+  aboutUs: '/' + URLS_RAW.aboutUs,
+  signup: '/' + URLS_RAW.signup,
+  login: '/' + URLS_RAW.login,
+  forgetPassword: '/' + URLS_RAW.forgetPassword,
+  resetPassword: '/' + URLS_RAW.resetPassword,
+  showroom: '/' + URLS_RAW.showroom,
+  u: '/' + 'u',
+  // SplashLayout
+  callback: {
+    root: '/' + URLS_RAW.callback.root,
+    dribbble: '/' + URLS_RAW.callback.root + '/' + URLS_RAW.callback.dribbble,
+    facebook: '/' + URLS_RAW.callback.root + '/' + URLS_RAW.callback.facebook,
+    github: '/' + URLS_RAW.callback.root + '/' + URLS_RAW.callback.github,
+    google: '/' + URLS_RAW.callback.root + '/' + URLS_RAW.callback.google,
+    linkedin: '/' + URLS_RAW.callback.root + '/' + URLS_RAW.callback.linkedin,
+    reddit: '/' + URLS_RAW.callback.root + '/' + URLS_RAW.callback.reddit,
+    stripe: '/' + URLS_RAW.callback.root + '/' + URLS_RAW.callback.stripe,
+    twitch: '/' + URLS_RAW.callback.root + '/' + URLS_RAW.callback.twitch,
+    twitter: '/' + URLS_RAW.callback.root + '/' + URLS_RAW.callback.twitter,
+  },
+  external: '/' + 'external',
+  // Dashboard Layout
+  dashboard: {
+    root: '/' + URLS_RAW.dashboard.root,
+    myProfile: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.myProfile,
+    contribute: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.event,
+    learn: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.learn,
+    event: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.createEvent,
+    privacy: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.privacy,
   },
   user: {
-    root: user
+    root: '/' + URLS_RAW.user
   },
-  callback: {
-    root: callback,
-    twitter: callback + '/twitter',
-    google: callback + '/google',
-    facebook: callback + '/facebook',
-    linkedin: callback + '/linkedin',
-    github: callback + '/github'
-  }
+  // Settings Layout
+  settings: {
+    welcome: '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.welcome,
+    editProfile: '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.editProfile,
+    editTheme: '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.editTheme
+  },
 };
 
 export const RIBBONS = {
@@ -385,6 +441,59 @@ export const PARTNERS: Partner[] = [
   { brandLogo: '../../../../assets/common/partners/google-logo.png' },
   { brandLogo: '../../../../assets/common/partners/stripe-logo.png' },
   { brandLogo: '../../../../assets/common/partners/netlify-logo.png' },
+];
+
+export interface TimeLine {
+  title: string,
+  date: string,
+  paragraph?: string,
+  img?: string
+  theme?: string
+}
+
+export const TIME_LINE: TimeLine[] = [
+  {
+    title: 'Initial commit',
+    date: '27 Feb 2020',
+    paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
+    img: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png'
+  },
+  {
+    title: 'Web UI template',
+    date: '7 Mar 2020',
+    paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
+    img:
+        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
+    theme: ThemeColorSettings.blue
+  },
+  {
+    title: 'Payment server',
+    date: '28 May 2020',
+    paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
+    img:
+        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png',
+    theme: ThemeColorSettings.red
+  },
+  {
+    title: 'Hello npm',
+    date: '14 Jun 2020',
+    paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
+    img:
+        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
+  },
+  {
+    title: 'One server to rule them all',
+    date: '28 Jun 2020',
+    paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
+    img:
+        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/orchestration-server-logo.png',
+    theme: ThemeColorSettings.yellow
+  },
+  {
+    title: '???',
+    date: 'Today',
+    theme: ThemeColorSettings.blue
+  }
 ];
 
 export const CATEGORIES = [

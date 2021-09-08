@@ -2,7 +2,7 @@ import { formatDate } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../../../environments/environment';
-import { CalendarEvent } from '../../../component/common/calendar/calendar.component';
+import { CalendarEvent } from '../../../component/calendar/calendar.component';
 import { Rate } from '../../../component/common/rate-bar/rate-bar.component';
 import { AuthToken } from '../../../model/AuthToken';
 import { AuthenticationService } from '../../../service/auth/authentication.service';

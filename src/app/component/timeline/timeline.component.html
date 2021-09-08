@@ -1,0 +1,24 @@
+<section id=timeline>
+  <div class="demo-card-wrapper">
+    <div class="demo-card" *ngFor="let item of timeline; index as i" [class]="item.theme ? item.theme + '-theme' : ''">
+      <app-card1
+          [paddingContent]="false"
+          [enableHeader]="false">
+        <div custom-header class="head" [class]="!item.paragraph && !item.img ? 'bodyless' : ''">
+          <div class="number-box">
+            <span>{{ i + 1 }}</span>
+          </div>
+          <div class="title">
+            <h3>{{ item.title }}
+            </h3>
+            <h5>{{ item.date }}</h5>
+          </div>
+        </div>
+        <div body class="body" *ngIf="item.paragraph || item.img">
+          <p>{{ item.paragraph }}</p>
+          <img *ngIf="item.img" [src]="item.img" alt="img">
+        </div>
+      </app-card1>
+    </div>
+  </div>
+</section>

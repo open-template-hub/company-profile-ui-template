@@ -13,7 +13,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 @Component( {
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: [ './home.component.scss', '../raw-landing-layout.component.scss' ],
+  styleUrls: [ './home.component.scss', '../landing-layout.component.scss' ],
 } )
 export class HomeComponent implements AfterViewInit {
   downloadCounter = 6100;

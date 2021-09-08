@@ -1,6 +1,6 @@
 <nav class="top-nav rounded-box">
   <a class="brand"
-     routerLink="{{ URLS.root }}"
+     [routerLink]="URLS.root"
      (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
     <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
     <h2>Open Template Hub</h2>
@@ -25,10 +25,16 @@
         </i>
       </app-dropdown-menu>
     </a>
+    <a [routerLink]="URLS.aboutUs"
+       (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
+      <span>
+        About Us
+      </span>
+    </a>
   </div>
   <div class="right-item-wrapper">
     <a class="contact"
-       routerLink="{{ URLS.maintenance }}"
+       [routerLink]="URLS.maintenance"
        (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
       <span> Contact Us </span>
     </a>

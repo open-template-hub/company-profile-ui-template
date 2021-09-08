@@ -14,6 +14,7 @@
   <div *ngIf="!headerProfileImg && enableHeader && !enableHeaderFullImg" class="card1-header rounded-box">
     <h3>{{title}}</h3>
   </div>
+  <ng-content *ngIf="!headerProfileImg && !enableHeader && !enableHeaderFullImg" select="[custom-header]"></ng-content>
 
   <div *ngIf="headerProfileImg && enableHeader" class="card1-header card1-header-img">
     <div class="profile-img-wrapper">

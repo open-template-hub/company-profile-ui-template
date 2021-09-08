@@ -233,14 +233,6 @@ button.toast-close-button {
     margin-left: auto;
   }
 
-  .toast-container.raw-landing-layout {
-    top: 0;
-  }
-
-  .toast-container.landing-layout, .toast-container.dashboard-layout {
-    top: 55px;
-  }
-
   .toast-container .ngx-toastr {
     width: -webkit-fill-available;
   }
@@ -251,11 +243,4 @@ button.toast-close-button {
     right: 12px;
   }
 
-  .toast-container.raw-landing-layout, .toast-container.landing-layout {
-    top: 90px;
-  }
-
-  .toast-container.dashboard-layout {
-    top: 12px;
-  }
 }

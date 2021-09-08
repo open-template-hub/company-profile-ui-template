@@ -55,24 +55,24 @@ export class ThemeService {
         localStorage.getItem( 'themeColorSetting' ) : sessionStorage.getItem( 'themeColorSetting' );
     themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : 'default';
 
-    this.themeColorSettingSubject = new BehaviorSubject<string>( themeColorSettingStorageItem);
+    this.themeColorSettingSubject = new BehaviorSubject<string>( themeColorSettingStorageItem );
     this.themeColorSetting = this.themeColorSettingSubject.asObservable();
 
     let darkLightSettingStorageItem = localStorage.getItem( 'darkLightSetting' ) ?
         localStorage.getItem( 'darkLightSetting' ) : sessionStorage.getItem( 'darkLightSetting' );
     darkLightSettingStorageItem = darkLightSettingStorageItem ? darkLightSettingStorageItem : 'auto';
 
-    this.darkLightSettingSubject = new BehaviorSubject<string>(darkLightSettingStorageItem);
+    this.darkLightSettingSubject = new BehaviorSubject<string>( darkLightSettingStorageItem );
     this.darkLightSetting = this.darkLightSettingSubject.asObservable();
 
     this.maxAspectRatioMedia = window.matchMedia( 'screen and (max-aspect-ratio: 1/1)' );
     this.maxHeightMedia = window.matchMedia( 'screen and (max-height: 999px)' );
 
-    let sideNavClosedStorageItem: string
+    let sideNavClosedStorageItem: string;
     if ( this.maxAspectRatioMedia || this.maxHeightMedia.matches ) {
-      sideNavClosedStorageItem = 'true'
+      sideNavClosedStorageItem = 'true';
     } else {
-      sideNavClosedStorageItem = 'false'
+      sideNavClosedStorageItem = 'false';
     }
 
     if ( localStorage.getItem( 'currentUser' ) ) {

@@ -5,7 +5,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 @Component( {
   selector: 'app-maintenance',
   templateUrl: './maintenance.component.html',
-  styleUrls: [ './maintenance.component.scss', '../raw-landing-layout.component.scss' ]
+  styleUrls: [ './maintenance.component.scss', '../landing-layout.component.scss' ]
 } )
 export class MaintenanceComponent {
 

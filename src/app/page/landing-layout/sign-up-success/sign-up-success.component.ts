@@ -5,7 +5,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 @Component( {
   selector: 'app-sign-up-success',
   templateUrl: './sign-up-success.component.html',
-  styleUrls: [ './sign-up-success.component.scss', '../raw-landing-layout.component.scss' ]
+  styleUrls: [ './sign-up-success.component.scss', '../landing-layout.component.scss' ]
 } )
 export class SignUpSuccessComponent implements OnInit {
 

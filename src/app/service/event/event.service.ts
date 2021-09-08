@@ -4,8 +4,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
-import { EventTypes } from '../../data/constant';
-import { attendedEventsData, showroomEvents } from '../../data/mock/events';
+import { attendedEventsData, EventTypes, showroomEvents } from '../../data/event/events.data';
 import { Event, EventCount } from '../../model/event/event.model';
 import { CategoryService } from '../category/category.service';
 

@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { environment } from '../../../../environments/environment';
 import { CalendarEvent } from '../../../component/calendar/calendar.component';
 import { Rate } from '../../../component/common/rate-bar/rate-bar.component';
+import { PROFILE_IMG, URLS } from '../../../data/constant';
+import { EventTypes } from '../../../data/event/events.data';
 import { AuthToken } from '../../../model/auth/auth-token.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
@@ -15,7 +17,6 @@ import { FollowerService } from '../../../service/follower/follower.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { UserActivityService } from '../../../service/user-activity/user-activity.service';
-import { EventTypes, PROFILE_IMG, URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-dashboard',
@@ -50,8 +51,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
   numberOfEventsTaken: number;
   topContributor: number;
 
-  calendarEvents: CalendarEvent[] = []
-  events: CalendarEvent[] = []
+  calendarEvents: CalendarEvent[] = [];
+  events: CalendarEvent[] = [];
 
   constructor(
       private router: Router,
@@ -76,32 +77,32 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
       if ( userInfo?.username ) {
         this.userActivityService.getNumberOfEventsTaken( userInfo.username ).subscribe( result => {
-          this.numberOfEventsTaken = result[0].numberOfEventsTaken
-        })
+          this.numberOfEventsTaken = result[ 0 ].numberOfEventsTaken;
+        } );
 
         if ( userInfo.payload?.userProfileActivated ) {
           this.userActivityService.getNumberOfEventsMade( userInfo.username ).subscribe( result => {
-            this.numberOfEventsMade = result.numberOfEventsMade
-          } )
+            this.numberOfEventsMade = result.numberOfEventsMade;
+          } );
 
           this.userActivityService.getContributorRate( userInfo.username ).subscribe( rate => {
             this.rateObject = {
               userRating: rate.userRating,
               numberOfRates: rate.numberOfRates
-            }
-          })
+            };
+          } );
 
           this.userActivityService.getTopContributors().subscribe( topContributors => {
             topContributors.forEach( ( value, index ) => {
-              if( value.username === userInfo.username ) {
+              if ( value.username === userInfo.username ) {
                 this.topContributor = index;
               }
             } );
-          })
+          } );
         } else {
-          this.numberOfEventsMade = undefined
-          this.rateObject = undefined
-          this.topContributor = undefined
+          this.numberOfEventsMade = undefined;
+          this.rateObject = undefined;
+          this.topContributor = undefined;
         }
       }
     } );
@@ -127,7 +128,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
               this.followeeCount = followeeCount[ 0 ].count;
             } );
 
-            this.fetchUnratedCompletedEvents()
+            this.fetchUnratedCompletedEvents();
 
             this.categoryService.getCategoriesFromId( this.userInfo?.payload?.interests ).subscribe( result => {
               this.userInterests = result;
@@ -171,22 +172,24 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   updateCalendar( events: any[], backgroundColor: 'red' | 'blue' ) {
-    if ( events === null ) { return }
+    if ( events === null ) {
+      return;
+    }
 
-    events.forEach( (event, index) => {
+    events.forEach( ( event, index ) => {
       const start = formatDate( new Date( event.date ), 'yyyy-MM-dd HH:mm', 'en-US' );
       const end = formatDate( new Date( new Date( event.date ).getTime() + event.duration * 60000 ), 'yyyy-MM-dd HH:mm', 'en-US' );
-      this.calendarEvents.push( { id: event._id, title: event.title, start, end, backgroundColor } )
-      this.events = [...this.calendarEvents]
-    });
+      this.calendarEvents.push( { id: event._id, title: event.title, start, end, backgroundColor } );
+      this.events = [ ...this.calendarEvents ];
+    } );
   }
 
   datesSet( data ) {
-    this.calendarEvents = []
-    const startDate = data.start.toDateString()
-    const endDate = data.end.toDateString()
-    this.getUserEventsWithDate( startDate, endDate )
-    this.getAttendedEventsWithDate( startDate, endDate )
+    this.calendarEvents = [];
+    const startDate = data.start.toDateString();
+    const endDate = data.end.toDateString();
+    this.getUserEventsWithDate( startDate, endDate );
+    this.getAttendedEventsWithDate( startDate, endDate );
   }
 
   ngOnInit(): void {
@@ -199,22 +202,22 @@ export class DashboardComponent implements OnInit, OnDestroy {
       this.myUpcomingEvents = myEvents;
     } );
 
-    this.eventService.me('false')
+    this.eventService.me( 'false' )
     .subscribe( myRecentlyCompletedEvents => {
-      this.myRecentlyCompletedEvents = myRecentlyCompletedEvents
-    } )
+      this.myRecentlyCompletedEvents = myRecentlyCompletedEvents;
+    } );
   }
 
   getUserEventsWithDate( startDate: string, endDate: string ) {
     this.eventService.me( 'false', 'false', startDate, endDate ).subscribe( events => {
-      this.updateCalendar( events, 'red' )
-    } )
+      this.updateCalendar( events, 'red' );
+    } );
   }
 
   getAttendedEventsWithDate( startDate: string, endDate: string ) {
     this.eventService.getAttendedEvents( startDate, endDate ).subscribe( events => {
-      this.updateCalendar( events, 'blue' )
-    } )
+      this.updateCalendar( events, 'blue' );
+    } );
   }
 
   ngOnDestroy() {
@@ -224,7 +227,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
 
   // handleDateClick(arg) {}
 
-  handleEventClick(arg) {
+  handleEventClick( arg ) {
     this.router.navigate( [ URLS.dashboard.event ], { queryParams: { event_id: arg.event.id } } );
   }
 
@@ -232,7 +235,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
     window.open( url, '_blank' );
   }
 
-  fillForm(id: string) {
+  fillForm( id: string ) {
     this.router.navigate( [ URLS.dashboard.contribute ], { queryParams: { event_id: id, editable: true } } );
   }
 
@@ -240,22 +243,24 @@ export class DashboardComponent implements OnInit, OnDestroy {
     // remove the item from recentlyPassedEvents
     this.myRecentlyCompletedEvents.forEach( ( item, index ) => {
       if ( item._id === event ) {
-        this.myRecentlyCompletedEvents.splice( index, 1 )
+        this.myRecentlyCompletedEvents.splice( index, 1 );
       }
-    } )
+    } );
 
     // refresh passedEvents
-    this.eventService.me('false', 'true' )
+    this.eventService.me( 'false', 'true' )
     .subscribe( myPassedEvents => {
-      this.myUpcomingEvents = myPassedEvents
-    })
+      this.myUpcomingEvents = myPassedEvents;
+    } );
   }
 
-  handleDateClick(arg) { console.log(arg +  ' clicked') }
+  handleDateClick( arg ) {
+    console.log( arg + ' clicked' );
+  }
 
   fetchUnratedCompletedEvents() {
     this.userActivityService.getUnratedCompletedEvents().subscribe( unratedEvents => {
-      this.unratedEvents = unratedEvents[0].completedEvents
-    } )
+      this.unratedEvents = unratedEvents[ 0 ].completedEvents;
+    } );
   }
 }

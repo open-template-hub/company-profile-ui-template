@@ -72,7 +72,7 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
 
   eventsTakenXAxisLabel = '# of events taken';
 
-  eventsXAxisLabel = '# of events.ts';
+  eventsXAxisLabel = '# of events.data.ts';
 
   constructor(
       private router: Router,

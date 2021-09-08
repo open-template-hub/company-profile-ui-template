@@ -61,7 +61,7 @@ export class MyProfileComponent implements OnDestroy {
 
   eventsTakenXAxisLabel = '# of events taken';
 
-  eventsXAxisLabel = '# of events.ts';
+  eventsXAxisLabel = '# of events.data.ts';
 
   eduMailPattern = '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-.]+\.edu\.[a-z]{2}$';
 

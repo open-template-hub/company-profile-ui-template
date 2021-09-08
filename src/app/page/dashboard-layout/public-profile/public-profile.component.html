@@ -32,7 +32,7 @@
             : ( userInfo?.username ? userInfo.username : '' ) }}
           <hr>
         </div>
-        <div *ngIf="userInfo" class="section-output" fxLayout="column">
+        <div *ngIf="userInfo" class="section-output flex-layout-column">
           <app-label-data *ngIf="userInfo?.payload?.bio"
                           [data]="userInfo.payload.bio">
           </app-label-data>
@@ -72,7 +72,7 @@
           <p class="dim">Contact</p>
           <hr/>
         </div>
-        <div *ngIf="userInfo" class="section-output" fxLayout="column">
+        <div *ngIf="userInfo" class="section-output flex-layout-column">
           <app-label-with-icon-data *ngIf="userInfo?.payload?.phone" [data]="userInfo.payload.phone"
                                     [highlight]="true" [isClickable]="true" [solid]="'phone-alt'"
                                     [urlPrefix]="'tel:'">

@@ -15,13 +15,13 @@ import { AboutUsComponent } from './page/landing-layout/about-us/about-us.compon
 import { CookiePolicyComponent } from './page/landing-layout/cookie-policy/cookie-policy.component';
 import { ForgetPasswordComponent } from './page/landing-layout/forget-password/forget-password.component';
 import { HomeComponent } from './page/landing-layout/home/home.component';
+import { LandingLayoutComponent } from './page/landing-layout/landing-layout.component';
 import { LoginComponent } from './page/landing-layout/login/login.component';
 import { MaintenanceComponent } from './page/landing-layout/maintenance/maintenance.component';
 import { NotFoundComponent } from './page/landing-layout/not-found/not-found.component';
 import { PricingComponent } from './page/landing-layout/pricing/pricing.component';
 import { PrivacyPolicyComponent } from './page/landing-layout/privacy-policy/privacy-policy.component';
 import { ProductComponent } from './page/landing-layout/product/product.component';
-import { LandingLayoutComponent } from './page/landing-layout/landing-layout.component';
 import { ResetPasswordComponent } from './page/landing-layout/reset-password/reset-password.component';
 import { ShowroomComponent } from './page/landing-layout/showroom/showroom.component';
 import { SignUpSuccessComponent } from './page/landing-layout/sign-up-success/sign-up-success.component';
@@ -31,7 +31,6 @@ import { VerifyAccountComponent } from './page/landing-layout/verify-account/ver
 import { EditProfileComponent } from './page/settings-layout/edit-profile/edit-profile.component';
 import { EditThemeComponent } from './page/settings-layout/edit-theme/edit-theme.component';
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
-import { WelcomeComponent } from './page/settings-layout/welcome/welcome.component';
 import { CallbackComponent } from './page/splash-layout/callback/callback.component';
 import { ExternalComponent } from './page/splash-layout/external/external.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
@@ -105,7 +104,6 @@ const routes: Routes = [
     path: URLS_RAW.settings.root,
     component: SettingsLayoutComponent,
     children: [
-      { path: URLS_RAW.settings.welcome, component: WelcomeComponent, canActivate: [ AuthGuard ] },
       { path: URLS_RAW.settings.editProfile, component: EditProfileComponent, canActivate: [ AuthGuard ] },
       { path: URLS_RAW.settings.editTheme, component: EditThemeComponent, canActivate: [ AuthGuard ] },
     ]

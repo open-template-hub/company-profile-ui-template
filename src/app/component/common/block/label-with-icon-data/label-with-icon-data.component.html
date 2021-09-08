@@ -1,4 +1,4 @@
-<div *ngIf="brand" [class.no-margin]="noMargin" [class]="brand" class="icon-data-block" fxLayout="row">
+<div *ngIf="brand" [class.no-margin]="noMargin" [class]="brand" class="icon-data-block flex-layout-row">
   <i aria-hidden="true" [class]="'fab fa-' + brand + ' fa-lg fa-fw'"></i>
   <app-ext-link [target]="target" [linkClass]="'inline-a'" [href]="urlPrefix + '/' + data">
     <div body>
@@ -8,8 +8,7 @@
 </div>
 
 <div *ngIf="solid" [class.fix-width]="fixWidth" [class.no-margin-icon]="noMarginIcon" [class.no-margin]="noMargin"
-     [ngClass]="solid"
-     class="icon-data-block" fxLayout="row">
+     [ngClass]="solid" class="icon-data-block flex-layout-row">
   <i aria-hidden="true" [class]="'fas fa-' + solid + ' fa-lg fa-fw'"></i>
   <p *ngIf="!isClickable && !isClickableWithinApp && !urlData">{{data}}</p>
   <app-ext-link *ngIf="isClickable" [linkClass]="highlight ? 'inline-a' : ''"

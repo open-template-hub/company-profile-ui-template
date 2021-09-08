@@ -2,7 +2,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,7 +19,6 @@ import { SwiperModule } from 'swiper/angular';
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { CalendarComponent } from './component/calendar/calendar.component';
 import { EventDataComponent } from './component/common/block/event-data/event-data.component';
 import { EventHamburgerMenuComponent } from './component/common/block/event-hamburger-menu/event-hamburger-menu.component';
@@ -47,6 +45,7 @@ import { CookiePopupComponent } from './component/popup/cookie-popup/cookie-popu
 import { TimelineComponent } from './component/timeline/timeline.component';
 import { RequestInterceptor } from './interceptor/request/request.interceptor';
 import { ResponseInterceptor } from './interceptor/response/response.interceptor';
+import { OthComponent } from './oth/oth.component';
 import { CreateEventComponent } from './page/dashboard-layout/create-event/create-event.component';
 import { DashboardLayoutComponent } from './page/dashboard-layout/dashboard-layout.component';
 
@@ -76,7 +75,6 @@ import { VerifyAccountComponent } from './page/landing-layout/verify-account/ver
 import { EditProfileComponent } from './page/settings-layout/edit-profile/edit-profile.component';
 import { EditThemeComponent } from './page/settings-layout/edit-theme/edit-theme.component';
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
-import { WelcomeComponent } from './page/settings-layout/welcome/welcome.component';
 import { CallbackComponent } from './page/splash-layout/callback/callback.component';
 import { ExternalComponent } from './page/splash-layout/external/external.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
@@ -88,7 +86,7 @@ FullCalendarModule.registerPlugins( [
 
 @NgModule( {
   declarations: [
-    AppComponent,
+    OthComponent,
     HomeComponent,
     LoginComponent,
     DashboardComponent,
@@ -108,7 +106,6 @@ FullCalendarModule.registerPlugins( [
     SplashLayoutComponent,
     CallbackComponent,
     SocialButtonComponent,
-    WelcomeComponent,
     LabelDataComponent,
     DashboardLayoutTopNavComponent,
     EditProfileComponent,
@@ -155,7 +152,6 @@ FullCalendarModule.registerPlugins( [
     NgxChartsModule,
     BrowserAnimationsModule,
     LayoutModule,
-    FlexLayoutModule,
     ImageCropperModule,
     TooltipModule,
     DpDatePickerModule,
@@ -172,7 +168,7 @@ FullCalendarModule.registerPlugins( [
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ResponseInterceptor, multi: true }
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ OthComponent ]
 } )
 export class AppModule {
 }

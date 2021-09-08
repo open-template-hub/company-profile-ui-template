@@ -89,6 +89,12 @@ export class AuthenticationService {
           Authorization: `Bearer ${ currentUser.accessToken }`
         }
       } );
+    } else {
+      request = request.clone( {
+        setHeaders: {
+          Authorization: 'Bearer '
+        }
+      } );
     }
     return request;
   }

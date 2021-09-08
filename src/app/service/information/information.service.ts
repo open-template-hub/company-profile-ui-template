@@ -55,28 +55,26 @@ export class InformationService {
       currentChild = currentChild.firstChild;
     } while ( currentChild );
 
-    const toastrConfig = { positionClass: layout };
-
     switch ( type ) {
       case 'error': {
         this.error.next( informationString );
-        this.toastService.error( informationString, '', toastrConfig );
+        this.toastService.error( informationString, '' );
         break;
       }
       case 'warning': {
         this.warning.next( informationString );
-        this.toastService.warning( informationString, '', toastrConfig );
+        this.toastService.warning( informationString, '' );
         break;
       }
       case 'success': {
         this.success.next( informationString );
-        this.toastService.success( informationString, '', toastrConfig );
+        this.toastService.success( informationString, '' );
         break;
       }
       case 'info':
       default: {
         this.info.next( informationString );
-        this.toastService.info( informationString, '', toastrConfig );
+        this.toastService.info( informationString, '' );
         break;
       }
     }

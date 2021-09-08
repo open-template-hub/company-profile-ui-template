@@ -27,6 +27,21 @@
   justify-content: flex-start;
 }
 
+.flex-center-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-layout-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-layout-column {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 1000px) {
   app-event-card {
     margin-left: 20px;

@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { GoogleTagManagerService } from 'angular-google-tag-manager';
-import { ThemeService } from './service/theme/theme.service';
+import { ThemeService } from '../service/theme/theme.service';
 
 @Component( {
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.scss' ]
+  templateUrl: './oth.component.html',
+  styleUrls: [ './oth.component.scss' ]
 } )
-export class AppComponent {
+export class OthComponent {
 
   darkLightSetting: string;
   themeColorSetting: string;

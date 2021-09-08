@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /* Media Queries */
 
 @mixin mq-xs {
@@ -25,7 +27,7 @@
 }
 
 $items: 5;
-$rows: ceil($items/2);
+$rows: ceil(math.div($items, 2));
 
 /* Card sizing */
 
@@ -43,7 +45,8 @@ $container-height: $rows * ($card-height + $outer-margin) + $stagger;
 $container-width: $card-width*2 + $outer-margin*3;
 $head-height: $number-size + 50;
 $body-height: $card-height - $head-height;
-$marker-dist: $card-width + $outer-margin/2 - $marker-size/2 - 5px;
+$marker-dist: $card-width + math.div($outer-margin, 2) - math.div($marker-size, 2) - 5px;
+
 
 /* Placeholders */
 
@@ -135,9 +138,9 @@ $counter: $items - $rows + 2;
     @include mq-lg {
       max-width: $card-width;
       height: $card-height;
-      margin: $outer-margin/2 $outer-margin;
+      margin: math.div($outer-margin, 2) $outer-margin;
       &:nth-child(odd) {
-        margin-right: $outer-margin/2;
+        margin-right: math.div($outer-margin, 2);
 
         .head::after {
           @extend %arrow;
@@ -152,7 +155,7 @@ $counter: $items - $rows + 2;
         }
       }
       &:nth-child(even) {
-        margin-left: $outer-margin/2;
+        margin-left: math.div($outer-margin, 2);
 
         .head::after {
           @extend %arrow;

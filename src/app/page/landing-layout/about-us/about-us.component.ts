@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TIME_LINE } from '../../../data/constant';
+import { TIME_LINE } from 'src/app/data/timeline/timeline.data';
 
 @Component( {
   selector: 'app-about-us',

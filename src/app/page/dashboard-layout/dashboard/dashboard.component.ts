@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { environment } from '../../../../environments/environment';
 import { CalendarEvent } from '../../../component/calendar/calendar.component';
 import { Rate } from '../../../component/common/rate-bar/rate-bar.component';
-import { AuthToken } from '../../../model/AuthToken';
+import { AuthToken } from '../../../model/auth/auth-token.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { CategoryService } from '../../../service/category/category.service';

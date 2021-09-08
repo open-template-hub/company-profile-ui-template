@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ImageCroppedEvent } from 'ngx-image-cropper';
 import { PROFILE_IMG, URLS } from '../../../data/constant';
-import { AuthToken } from '../../../model/AuthToken';
+import { AuthToken } from '../../../model/auth/auth-token.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { CategoryService } from '../../../service/category/category.service';

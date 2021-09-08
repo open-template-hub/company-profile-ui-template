@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { DarkLightSettings, ThemeColorSettings } from '../../data/constant';
-import { AuthToken } from '../../model/AuthToken';
+import { AuthToken } from '../../model/auth/auth-token.model';
 import { BasicInfoService } from '../basic-info/basic-info.service';
 import { EventService } from '../event/event.service';
 import { FileStorageService } from '../file-storage/file-storage.service';

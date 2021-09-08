@@ -2,10 +2,12 @@ import { AfterViewInit, Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CountUp } from 'countup.js';
+import { PARTNERS } from 'src/app/data/partner/partner.data';
+import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
 import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
-import { Partner } from '../../../component/common/swiper-wrapper/swiper-wrapper.component';
-import { PARTNERS, TESTIMONIALS, URLS } from '../../../data/constant';
+import { URLS } from '../../../data/constant';
+import { Partner } from '../../../model/partner/partner.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { ThemeService } from '../../../service/theme/theme.service';
 

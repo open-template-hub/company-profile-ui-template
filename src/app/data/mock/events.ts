@@ -1,4 +1,4 @@
-import { EventModel } from '../../model/EventModel';
+import { Event } from '../../model/event/event.model';
 
 export const showroomEvents = [
   {
@@ -149,7 +149,7 @@ export const showroomEvents = [
     isNew:true,
     attended:false
   },
-] as EventModel[]
+] as Event[]
 
 export const attendedEventsData = [
   {
@@ -300,7 +300,7 @@ export const attendedEventsData = [
     isNew:true,
     attended:true
   },
-] as EventModel[]
+] as Event[]
 
 export const unratedCompletedEventsData = [
     {

@@ -1,8 +1,11 @@
 <div class="event-card" [class.no-hover]="( inProgress || completed )">
   <app-card1 [enableHeaderFullImg]=true [height]="(fillLayout || showRateBar) ? '-webkit-fit-content' : '500px'"
              [paddingContent]="false" [underHeaderProfileImg]="profileImg"
-             [ribbon]="event.isPremium ? RIBBONS.premium : event.isFeatured ? RIBBONS.featured : event.isNew ? RIBBONS.new : RIBBONS.default"
-             [width]="fillLayout ? '-webkit-fill-available' : '400px'" [maxHeight]="maxHeight" [enableHeader]="!showRateBar">
+             [ribbon]="event.isPremium ? EVENT_RIBBONS.get('premium') :
+             event.isFeatured ? EVENT_RIBBONS.get('featured') :
+             event.isNew ? EVENT_RIBBONS.get('new') : DEFAULT_RIBBON"
+             [width]="fillLayout ? '-webkit-fill-available' : '400px'" [maxHeight]="maxHeight"
+             [enableHeader]="!showRateBar">
 
     <div *ngIf="!showRateBar"
          (click)="routeToEvent()" headerFullImg id=header-img [class.no-hover]="( inProgress || completed )">

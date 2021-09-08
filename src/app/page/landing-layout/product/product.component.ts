@@ -2,7 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environmentCommon } from '../../../../environments/environment-common';
-import { Product, PRODUCT_LINES, ProductLine, URLS } from '../../../data/constant';
+import { URLS } from '../../../data/constant';
+import { PRODUCT_LINES } from '../../../data/product/product.data';
+import { Product, ProductLine } from '../../../model/product/product.model';
 
 @Component( {
   selector: 'app-product',

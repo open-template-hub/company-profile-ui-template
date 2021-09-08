@@ -4,10 +4,9 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
-import { attendedEventsData, showroomEvents } from '../../data/mock/events';
-import { EventModel } from '../../model/EventModel';
-import { CountModel } from '../../model/CountModel';
 import { EventTypes } from '../../data/constant';
+import { attendedEventsData, showroomEvents } from '../../data/mock/events';
+import { Event, EventCount } from '../../model/event/event.model';
 import { CategoryService } from '../category/category.service';
 
 @Injectable( {
@@ -28,8 +27,8 @@ export class EventService {
   private searchedEventsSubject: BehaviorSubject<any>;
 
   constructor(
-    private http: HttpClient,
-    private categoryService: CategoryService
+      private http: HttpClient,
+      private categoryService: CategoryService
   ) {
     this.recommendedEventsSubject = new BehaviorSubject<any>( null );
     this.recommendedEvents = this.recommendedEventsSubject.asObservable();
@@ -40,106 +39,106 @@ export class EventService {
     this.attendedEventsSubject = new BehaviorSubject<any>( null );
     this.attendedEvents = this.attendedEventsSubject.asObservable();
 
-    this.searchedEventsSubject = new BehaviorSubject<any>(null);
+    this.searchedEventsSubject = new BehaviorSubject<any>( null );
     this.searchedEvents = this.searchedEventsSubject.asObservable();
   }
 
   create( event: any ) {
-    return of([])
+    return of( [] );
   }
 
   update( event: any ) {
-    return of([])
+    return of( [] );
   }
 
   countUserEvents( username: string, isPastOnly: string = 'true' ) {
     if ( environment.mockDataEnabled ) {
       const countData = [
-        { _id:{category:1,subCategory:1},count:27},
-        { _id:{category:1,subCategory:2, leafCategory: 1},count:10}
-      ] as CountModel[]
+        { _id: { category: 1, subCategory: 1 }, count: 27 },
+        { _id: { category: 1, subCategory: 2, leafCategory: 1 }, count: 10 }
+      ] as EventCount[];
 
-      return of(this.countUserEventsProcess(countData))
+      return of( this.countUserEventsProcess( countData ) );
     } else {
       return this.http.get<any>( `${ environment.serverUrl }/event/count?username=${ username }&isPastOnly=${ isPastOnly }` )
       .pipe( map( counts => {
-         return this.countUserEventsProcess(counts)
+        return this.countUserEventsProcess( counts );
       } ) );
     }
   }
 
-  countUserEventsProcess(countData: any) {
+  countUserEventsProcess( countData: any ) {
     countData.map( categories => {
       const categoryResult = this.categoryService.getCategoryFromId( categories._id.category,
-        categories._id.subCategory, categories._id.leafCategory );
+          categories._id.subCategory, categories._id.leafCategory );
 
-      categories._id = categoryResult
+      categories._id = categoryResult;
     } );
 
-    const newEventsList = []
+    const newEventsList = [];
 
     countData.map( category => {
-      let categoryName: string
+      let categoryName: string;
 
       if ( category._id.leafCategory ) {
-        categoryName = category._id.leafCategory.name
+        categoryName = category._id.leafCategory.name;
       } else if ( category._id.subCategory ) {
-        categoryName = category._id.subCategory.name
+        categoryName = category._id.subCategory.name;
       } else {
-        categoryName = category._id.category.name
+        categoryName = category._id.category.name;
       }
 
       // if there is duplicated category then do not push to array, just add value to the existing category
-      let duplicatedNameIndex = -1
-      for( let i = 0; i < newEventsList.length; i++ ) {
-        if ( newEventsList[i].name === categoryName ) {
-          duplicatedNameIndex = i
-          break
+      let duplicatedNameIndex = -1;
+      for ( let i = 0; i < newEventsList.length; i++ ) {
+        if ( newEventsList[ i ].name === categoryName ) {
+          duplicatedNameIndex = i;
+          break;
         }
       }
-      if  ( duplicatedNameIndex === -1 ) {
+      if ( duplicatedNameIndex === -1 ) {
         newEventsList.push( {
           name: categoryName,
           value: category.count
-        } )
+        } );
       } else {
-        newEventsList[duplicatedNameIndex].value += category.count
-        newEventsList.sort( ( x, y ) => x.value > y.value ? -1 : 1)
+        newEventsList[ duplicatedNameIndex ].value += category.count;
+        newEventsList.sort( ( x, y ) => x.value > y.value ? -1 : 1 );
       }
     } );
 
-    return newEventsList
+    return newEventsList;
   }
 
-  me( isNewOnly: string = 'false', isCompleted: string = 'false', startDate?: string, endDate?:string, title?: string ) {
+  me( isNewOnly: string = 'false', isCompleted: string = 'false', startDate?: string, endDate?: string, title?: string ) {
 
     if ( environment.mockDataEnabled ) {
-      return of(this.meProcess( [], isNewOnly ))
+      return of( this.meProcess( [], isNewOnly ) );
     } else {
-      let queryParams = `isNewOnly=${ isNewOnly }&isCompleted=${ isCompleted }`
+      let queryParams = `isNewOnly=${ isNewOnly }&isCompleted=${ isCompleted }`;
 
       if ( startDate ) {
-        queryParams += `&startDate=${ startDate }`
+        queryParams += `&startDate=${ startDate }`;
       }
 
       if ( endDate ) {
-        queryParams += `&endDate=${ endDate }`
+        queryParams += `&endDate=${ endDate }`;
       }
 
       if ( title ) {
-        queryParams += `&title=${ title }`
+        queryParams += `&title=${ title }`;
       }
 
       return this.http.get<any>( `${ environment.serverUrl }/event/me?` + queryParams ).pipe( map( myEvents => {
-        return this.meProcess(myEvents, isNewOnly)
+        return this.meProcess( myEvents, isNewOnly );
       } ) );
     }
   }
 
-  meProcess(myEvents: any, isNewOnly: string) {
+  meProcess( myEvents: any, isNewOnly: string ) {
     myEvents.map( event => {
       const categoryResult = this.categoryService.getCategoryFromId( event.payload?.category,
-        event.payload?.subCategory, event.payload?.leafCategory );
+          event.payload?.subCategory, event.payload?.leafCategory );
 
       if ( categoryResult.category ) {
         event.payload.category = categoryResult.category;
@@ -155,7 +154,7 @@ export class EventService {
 
       // check if event is in progress only for upcomings
       if ( isNewOnly === 'true' ) {
-        this.checkInProgress( event )
+        this.checkInProgress( event );
       }
 
       event.date = formatDate( new Date( event.date ), 'yyyy/MM/dd HH:mm Z', 'en-US' );
@@ -165,33 +164,33 @@ export class EventService {
   }
 
   search( _id, user, date, title, categories: any[],
-    eventType: EventTypes = EventTypes.Other, fill = false,
-    excludeCurrentUserEvents = false, limit = 20) {
+      eventType: EventTypes = EventTypes.Other, fill = false,
+      excludeCurrentUserEvents = false, limit = 20 ) {
     if ( environment.mockDataEnabled ) {
-      const searchedEvents = []
-      showroomEvents.forEach((val, index) => {
-          searchedEvents.push(Object.assign({}, val))
-          searchedEvents[index].payload = Object.assign( {}, val.payload )
-        })
-      return of( this.searchProcess( searchedEvents, eventType ) )
+      const searchedEvents = [];
+      showroomEvents.forEach( ( val, index ) => {
+        searchedEvents.push( Object.assign( {}, val ) );
+        searchedEvents[ index ].payload = Object.assign( {}, val.payload );
+      } );
+      return of( this.searchProcess( searchedEvents, eventType ) );
     } else {
       return this.http.post<any>( `${ environment.serverUrl }/event/search`, {
-       _id,
-       user,
-       date,
-       title,
-       categories,
-       fill,
-       limit,
-       excludeCurrentUserEvents
-       } ).pipe( map( events => {
-        return this.searchProcess( events, eventType )
-      }));
+        _id,
+        user,
+        date,
+        title,
+        categories,
+        fill,
+        limit,
+        excludeCurrentUserEvents
+      } ).pipe( map( events => {
+        return this.searchProcess( events, eventType );
+      } ) );
     }
   }
 
   searchProcess( searchedEvents: any, eventType: EventTypes ) {
-    searchedEvents.map( event => this.fillEvent(event));
+    searchedEvents.map( event => this.fillEvent( event ) );
 
     if ( eventType === EventTypes.Recommended ) {
       this.recommendedEventsSubject.next( searchedEvents );
@@ -204,21 +203,21 @@ export class EventService {
     }
   }
 
-  attend( eventId: string) {
+  attend( eventId: string ) {
     if ( !environment.mockDataEnabled ) {
       return this.http.get<any>( `${ environment.serverUrl }/event/attend?id=${ eventId }` )
-      .pipe( map ( updatedEvent => {
+      .pipe( map( updatedEvent => {
         this.updateEvent( updatedEvent, this.recommendedEventsSubject );
         this.updateEvent( updatedEvent, this.recommendedEventsByFollowingListSubject );
 
         if ( this.attendedEventsSubject.getValue() ) {
           this.getAttendedEvents().subscribe();
         } else if ( this.searchedEventsSubject.getValue() ) {
-          this.updateEvent( updatedEvent, this.searchedEventsSubject )
+          this.updateEvent( updatedEvent, this.searchedEventsSubject );
         }
 
         return updatedEvent;
-      }));
+      } ) );
     }
   }
 
@@ -234,7 +233,7 @@ export class EventService {
 
         if ( attendedEvents ) {
           this.attendedEventsSubject.next(
-            attendedEvents.filter( event => event._id !== updatedEvent[0]._id )
+              attendedEvents.filter( event => event._id !== updatedEvent[ 0 ]._id )
           );
         }
 
@@ -243,19 +242,19 @@ export class EventService {
         }
 
         return updatedEvent;
-      }));
+      } ) );
     }
   }
 
   private updateEvent( updatedEvent, targetEvents ): void {
     const events = targetEvents.getValue();
 
-    const foundRecommendIndex = events.findIndex( x => x._id === updatedEvent[0]._id );
+    const foundRecommendIndex = events.findIndex( x => x._id === updatedEvent[ 0 ]._id );
 
     if ( foundRecommendIndex !== -1 ) {
-      events[foundRecommendIndex].count = updatedEvent[0].count;
-      events[foundRecommendIndex].attended = updatedEvent[0].attended;
-      targetEvents.next(events);
+      events[ foundRecommendIndex ].count = updatedEvent[ 0 ].count;
+      events[ foundRecommendIndex ].attended = updatedEvent[ 0 ].attended;
+      targetEvents.next( events );
     }
   }
 
@@ -273,36 +272,36 @@ export class EventService {
     }
   }
 
-  initSearchEvents(categories: any[]) {
+  initSearchEvents( categories: any[] ) {
     this.getRecommendedEventsByFollowingList( '10' ).subscribe();
 
     this.search( undefined, undefined, new Date().toISOString(), undefined,
-      categories, EventTypes.Recommended, categories.length !== 0, true ).subscribe();
+        categories, EventTypes.Recommended, categories.length !== 0, true ).subscribe();
   }
 
   getAttendedEvents( startDate?: string, endDate?: string ) {
     if ( environment.mockDataEnabled ) {
-      const attendedData = []
-      attendedEventsData.forEach((val, index) => {
-        attendedData.push(Object.assign({}, val))
-        attendedData[index].payload = Object.assign( {}, val.payload )
-      })
+      const attendedData = [];
+      attendedEventsData.forEach( ( val, index ) => {
+        attendedData.push( Object.assign( {}, val ) );
+        attendedData[ index ].payload = Object.assign( {}, val.payload );
+      } );
 
-      return of( this.getAttendedEventsProcess( attendedData, startDate, endDate ) )
+      return of( this.getAttendedEventsProcess( attendedData, startDate, endDate ) );
     } else {
-      let queryParams = ``
+      let queryParams = ``;
 
       if ( startDate && endDate ) {
-        queryParams += `startDate=${ startDate }&endDate=${ endDate }`
+        queryParams += `startDate=${ startDate }&endDate=${ endDate }`;
       }
 
-      return this.http.get<any>( `${ environment.serverUrl }/event/attended?` + queryParams ).pipe(map( attendedEvents => {
-        return this.getAttendedEventsProcess( attendedEvents, startDate, endDate )
+      return this.http.get<any>( `${ environment.serverUrl }/event/attended?` + queryParams ).pipe( map( attendedEvents => {
+        return this.getAttendedEventsProcess( attendedEvents, startDate, endDate );
       } ) );
     }
   }
 
-  fillEvent(event) {
+  fillEvent( event ) {
     const categoryResult = this.categoryService.getCategoryFromId( event.payload?.category,
         event.payload?.subCategory, event.payload?.leafCategory );
 
@@ -318,19 +317,19 @@ export class EventService {
       event.payload.leafCategory = categoryResult.leafCategory;
     }
 
-    this.checkInProgress( event )
+    this.checkInProgress( event );
     event.date = formatDate( new Date( event.date ), 'yyyy/MM/dd HH:mm Z', 'en-US' );
   }
 
   getAttendedEventsProcess( attendedData: any, startDate?: string, endDate?: string ) {
-    attendedData.map( event => this.fillEvent(event));
+    attendedData.map( event => this.fillEvent( event ) );
 
     if ( startDate && endDate ) {
-      return attendedData
+      return attendedData;
     } else {
       this.attendedEventsSubject.next( attendedData );
     }
-    return []
+    return [];
   }
 
   markAsCompleted( eventId: string ) {
@@ -341,17 +340,17 @@ export class EventService {
 
   getRecommendedEventsByFollowingList( limit: string ) {
     if ( environment.mockDataEnabled ) {
-      const recommendedEventsData = []
-      attendedEventsData.forEach((val, index) => {
-        recommendedEventsData.push(Object.assign({}, val))
-        recommendedEventsData[index].payload = Object.assign( {}, val.payload )
-      })
+      const recommendedEventsData = [];
+      attendedEventsData.forEach( ( val, index ) => {
+        recommendedEventsData.push( Object.assign( {}, val ) );
+        recommendedEventsData[ index ].payload = Object.assign( {}, val.payload );
+      } );
 
-      this.getRecommendedEventsByFollowingListProcess( recommendedEventsData )
-      return of()
+      this.getRecommendedEventsByFollowingListProcess( recommendedEventsData );
+      return of();
     } else {
       return this.http.get<any>( `${ environment.serverUrl }/event/by-following?limit=${ limit }` ).pipe( map( events => {
-        this.getRecommendedEventsByFollowingListProcess( events )
+        this.getRecommendedEventsByFollowingListProcess( events );
       } ) );
     }
   }
@@ -359,7 +358,7 @@ export class EventService {
   getRecommendedEventsByFollowingListProcess( recommendedEventsData: any ) {
     recommendedEventsData.map( event => {
       const categoryResult = this.categoryService.getCategoryFromId( event.payload?.category,
-        event.payload?.subCategory, event.payload?.leafCategory );
+          event.payload?.subCategory, event.payload?.leafCategory );
 
       if ( categoryResult.category ) {
         event.payload.category = categoryResult.category;
@@ -380,19 +379,19 @@ export class EventService {
   }
 
   private checkInProgress( event ) {
-    const currentDate = new Date()
-    const eventDate = new Date( event.date )
+    const currentDate = new Date();
+    const eventDate = new Date( event.date );
     if ( eventDate.getTime() < currentDate.getTime() &&
-      eventDate.getTime() + event.duration * 60000 > currentDate.getTime() ) {
-      event.inProgress = true
+        eventDate.getTime() + event.duration * 60000 > currentDate.getTime() ) {
+      event.inProgress = true;
     }
   }
 
-  getEvents(): Observable<EventModel[]> {
-    return this.http.get<EventModel[]>( 'api/eventData' ).pipe(
-      tap(_ => console.log('fetched events'),
-        catchError( this.handleError<EventService[]>('getEvents', []) ))
-    )
+  getEvents(): Observable<Event[]> {
+    return this.http.get<Event[]>( 'api/eventData' ).pipe(
+        tap( _ => console.log( 'fetched events' ),
+            catchError( this.handleError<EventService[]>( 'getEvents', [] ) ) )
+    );
   }
 
   /**
@@ -401,12 +400,12 @@ export class EventService {
    * @param operation - name of the operation that failed
    * @param result - optional value to return as the observable result
    */
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error); // log to console instead
+  private handleError<T>( operation = 'operation', result?: T ) {
+    return ( error: any ): Observable<T> => {
+      console.error( error ); // log to console instead
 
       // Let the app keep running by returning an empty result.
-      return of(result);
+      return of( result );
     };
   }
 

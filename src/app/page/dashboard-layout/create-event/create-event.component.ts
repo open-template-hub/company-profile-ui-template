@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DatePickerComponent, IDayCalendarConfig } from 'ng2-date-picker';
 import { environment } from '../../../../environments/environment';
-import { RIBBONS, URLS } from '../../../data/constant';
+import { URLS } from '../../../data/constant';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { CategoryService } from '../../../service/category/category.service';
 import { EventService } from '../../../service/event/event.service';
@@ -23,7 +23,6 @@ export class CreateEventComponent implements OnInit {
   submitted = false;
   loading = false;
   URLS = URLS;
-  RIBBONS = RIBBONS;
 
   isSticky = false;
 

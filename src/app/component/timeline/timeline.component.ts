@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TimeLine } from '../../data/constant';
+import { TimeLine } from '../../model/timeline/timeline.model';
 import { ThemeService } from '../../service/theme/theme.service';
 
 @Component( {

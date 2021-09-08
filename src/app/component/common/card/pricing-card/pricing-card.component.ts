@@ -1,24 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { RIBBONS, URLS } from '../../../../data/constant';
-
-export interface PricingOption {
-  title: string,
-  ribbon?: { type: string, text: string },
-  price: {
-    currency: string,
-    value: string,
-    subscriptionTime: string
-  },
-  features: string[],
-  styles: {
-    height: string,
-    width: string,
-    fontSize: string,
-    featureHeight: string
-  },
-  link?: string
-}
+import { URLS } from '../../../../data/constant';
+import { DEFAULT_RIBBON } from '../../../../data/ribbon/ribbon.data';
+import { Pricing } from '../../../../model/pricing/pricing.model';
 
 @Component( {
   selector: 'app-pricing-card',
@@ -26,11 +10,13 @@ export interface PricingOption {
   styleUrls: [ './pricing-card.component.scss' ]
 } )
 export class PricingCardComponent {
-  RIBBONS = RIBBONS;
+
+  DEFAULT_RIBBON = DEFAULT_RIBBON;
   URLS = URLS;
-  @Input() option: PricingOption = {
+
+  @Input() option: Pricing = {
     title: '',
-    ribbon: { type: '', text: '' },
+    ribbon: DEFAULT_RIBBON,
     price: {
       currency: '',
       value: '',
@@ -46,9 +32,8 @@ export class PricingCardComponent {
     link: URLS.maintenance
   };
 
-  constructor(
-      private router: Router
-  ) {
+  constructor( private router: Router ) {
+    // Intentionally blank
   }
 
   routeToEvent( path: string ) {

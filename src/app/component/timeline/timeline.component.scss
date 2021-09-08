@@ -132,12 +132,6 @@ $counter: $items - $rows + 2;
     margin: 10px auto 80px;
     max-width: 94%;
     z-index: 2;
-    @include mq-sm {
-      max-width: 60%;
-    }
-    @include mq-md {
-      max-width: 40%;
-    }
     @include mq-lg {
       max-width: $card-width;
       height: $card-height;

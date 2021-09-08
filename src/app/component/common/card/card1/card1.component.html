@@ -42,7 +42,7 @@
        class="card1-content">
     <ng-content select="[body]"></ng-content>
   </div>
-  <div *ngIf="bottomWrapper" [class.card1-bottom-wrapper-in-brand-color]="bottomWrapperInBrandColor"
+  <div *ngIf="bottomWrapper" [style.background-color]="bottomWrapperColor ? bottomWrapperColor : ''"
        class="card1-bottom-wrapper">
   </div>
   <div *ngIf="bottomLayer" class="bottom-layer">

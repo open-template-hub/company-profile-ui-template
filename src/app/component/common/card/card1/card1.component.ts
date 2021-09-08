@@ -22,7 +22,7 @@ export class Card1Component {
   @Input() shadow = true;
   @Input() isBackgroundColor = false;
   @Input() bottomWrapper = true;
-  @Input() bottomWrapperInBrandColor = false;
+  @Input() bottomWrapperColor = '';
   @Input() topWrapper = false;
   @Input() topWrapperInBrandColor = false;
   @Input() height = undefined;

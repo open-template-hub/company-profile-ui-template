@@ -3,7 +3,8 @@
     <div class="demo-card" *ngFor="let item of timeline; index as i" [class]="item.theme ? item.theme + '-theme' : ''">
       <app-card1
           [paddingContent]="false"
-          [enableHeader]="false">
+          [enableHeader]="false"
+          [bottomWrapperColor]="!item.paragraph && !item.img ? ('var(--brand-color-lighter-1)') : ''">
         <div custom-header class="head" [class]="!item.paragraph && !item.img ? 'bodyless' : ''">
           <div class="number-box">
             <span>{{ i + 1 }}</span>

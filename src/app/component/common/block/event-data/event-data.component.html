@@ -13,10 +13,10 @@
       <div class="event-sub-header-title-user">
         <h4 *ngIf="user?.username">by <a
             [routerLink]="(isPublicPage ? URLS.u : URLS.user.root) + '/' + user.username"
-            class="inline-a">{{isEditable ? 'you' : ( user.username.length > 12 ? user.username.slice( 0, 12 ) + '...' : user.username )}}</a>
+            class="link">{{isEditable ? 'you' : ( user.username.length > 12 ? user.username.slice( 0, 12 ) + '...' : user.username )}}</a>
         </h4>
         <h4 *ngIf="link && showCalendar">
-          <app-ext-link [href]="link" [linkClass]="'inline-a'">
+          <app-ext-link [href]="link" [linkClass]="'link'">
             <i aria-hidden="true" [class]="'fas fa-link fa-fw'"></i>join meeting
           </app-ext-link>
         </h4>
@@ -92,9 +92,9 @@
                  [brandLightColor]="true" [isSleekButton]="true" [text]="'In Progress'" [icon]="'hourglass'">
     </app-button1>
     <div (click)="onCategoryClick()" class="event-categories">
-      <p *ngIf="category && !subCategory && !leafCategory"><a class="inline-a">{{'#' + category.name}}</a></p>
-      <p *ngIf="subCategory && !leafCategory"><a class="inline-a">{{'#' + subCategory.name}}</a></p>
-      <p *ngIf="leafCategory"><a class="inline-a">{{'#' + leafCategory.name}}</a></p>
+      <p *ngIf="category && !subCategory && !leafCategory"><a class="link">{{'#' + category.name}}</a></p>
+      <p *ngIf="subCategory && !leafCategory"><a class="link">{{'#' + subCategory.name}}</a></p>
+      <p *ngIf="leafCategory"><a class="link">{{'#' + leafCategory.name}}</a></p>
     </div>
   </div>
   <div *ngIf="!isLastItem" class="event-bottom-wrapper">

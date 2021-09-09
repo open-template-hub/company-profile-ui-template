@@ -1,3 +1,17 @@
-@import "styles.common";
-@import "theme/brand";
+@use 'styles.common';
 
+@use 'alert/alert';
+@use 'animation/animation';
+@use 'brand/brand';
+@use 'input/input';
+@use 'loading/loading';
+@use 'page/page';
+@use 'profile/profile';
+@use 'rate/rate';
+@use 'ribbon/ribbon';
+@use 'social/social';
+@use 'toastr/toastr';
+@use 'util/util';
+@use '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+@use 'theme/theme';

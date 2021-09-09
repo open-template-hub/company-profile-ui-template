@@ -1,14 +1,3 @@
-@import "red-theme/red-theme";
-@import "yellow-theme/yellow-theme";
-@import "blue-theme/blue-theme";
-
-// This is the class to change default theme
-@import "green-theme/green-theme";
-
-.default-theme {
-  @extend .green-theme;
-}
-
 .brand-logo-wrapper {
   display: inline-flex;
   flex-direction: column;

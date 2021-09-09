@@ -57,6 +57,9 @@
 }
 
 @mixin blue-theme-dark-mode {
+
+  --brand-color: var(--brand-color-blue-theme);
+
   --brand-color-lighter-1: var(--brand-color-blue-theme-darker-1);
   --brand-color-lighter-2: var(--brand-color-blue-theme-darker-2);
   --brand-color-lighter-3: var(--brand-color-blue-theme-darker-3);

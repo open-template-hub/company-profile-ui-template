@@ -56,6 +56,9 @@
 }
 
 @mixin green-theme-dark-mode {
+
+  --brand-color: var(--brand-color-green-theme);
+
   --brand-color-lighter-1: var(--brand-color-green-theme-darker-1);
   --brand-color-lighter-2: var(--brand-color-green-theme-darker-2);
   --brand-color-lighter-3: var(--brand-color-green-theme-darker-3);

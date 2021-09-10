@@ -44,6 +44,11 @@
   flex-direction: row;
 }
 
+@mixin flex-layout-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 @mixin flex-layout-column {
   display: flex;
   flex-direction: column;
@@ -59,6 +64,13 @@
   max-width: 92%;
   min-width: 92%;
   width: 92%;
+}
+
+@mixin font-awesome {
+  font: {
+    family: "Font Awesome 5 Free", sans-serif;
+    weight: 900;
+  }
 }
 
 .circle {

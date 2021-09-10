@@ -127,7 +127,7 @@ button.toast-close-button {
   align-items: center;
 
   &:before {
-    font-family: "Font Awesome 5 Free", sans-serif;
+    @include util.font-awesome;
     color: white;
   }
 }

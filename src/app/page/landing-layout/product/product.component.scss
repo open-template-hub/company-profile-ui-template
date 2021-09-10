@@ -1,4 +1,4 @@
-.home-page {
+.product-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,7 +162,7 @@
   font-weight: bold;
 }
 
-.home-page .hero-content {
+.product-page .hero-content {
   display: flex;
 }
 
@@ -191,7 +191,7 @@ app-swiper-wrapper {
 }
 
 @media only screen and (max-width: 999px) {
-  .home-page {
+  .product-page {
     font-size: 32px;
   }
 
@@ -250,7 +250,7 @@ app-swiper-wrapper {
 }
 
 @media only screen and (min-width: 1000px) {
-  .home-page {
+  .product-page {
     font-size: 35px;
   }
 
@@ -318,7 +318,7 @@ app-swiper-wrapper {
     margin: 5px 0 0;
   }
 
-  .home-page .hero-content {
+  .product-page .hero-content {
     width: 90%;
     max-height: 24vw;
     margin-left: 10%;

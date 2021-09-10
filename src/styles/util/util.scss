@@ -94,6 +94,10 @@
   @include flex-layout-row;
 }
 
+.flex-layout-row-reverse {
+  @include flex-layout-row-reverse;
+}
+
 .flex-layout-column {
   @include flex-layout-column;
 }

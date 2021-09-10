@@ -1,17 +1,30 @@
-/* based on angular-toastr css https://github.com/Foxandxss/angular-toastr/blob/cb508fe6801d6b288d3afc525bb40fee1b101650/dist/angular-toastr.css */
-
 @use '../theme/theme.common';
 @use '../util/util';
+
+@mixin define-toast($type, $icon, $padding-left) {
+  .toast-#{$type} {
+    background-color: var(--#{$type});
+
+    &:before {
+      content: $icon;
+    }
+
+    & > div {
+      padding-left: #{$padding-left};
+    }
+  }
+}
+
+@include define-toast(success, "\f071", "10px");
+@include define-toast(info, "\f00c", "10px");
+@include define-toast(warning, "\f05a", "8px");
+@include define-toast(error, "\f057", "15px");
 
 .toast-container {
   top: 12px;
   pointer-events: none;
   position: fixed;
   z-index: 30;
-}
-
-.toast-container * {
-  box-sizing: border-box;
 
   & .ngx-toastr {
     &:hover {
@@ -19,6 +32,10 @@
       cursor: pointer;
     }
   }
+}
+
+.toast-container * {
+  box-sizing: border-box;
 }
 
 .toast-message {
@@ -53,22 +70,6 @@ button.toast-close-button {
   cursor: pointer;
   background: transparent;
   border: 0;
-}
-
-.toast-info {
-  background-color: var(--info);
-}
-
-.toast-error {
-  background-color: var(--error);
-}
-
-.toast-success {
-  background-color: var(--success);
-}
-
-.toast-warning {
-  background-color: var(--warn);
 }
 
 .toast-container.toast-top-center .ngx-toastr,
@@ -132,41 +133,6 @@ button.toast-close-button {
   }
 }
 
-#toast-container .toast-success > div, #toast-container .toast-info > div {
-  padding-left: 10px;
-}
-
-#toast-container .toast-error > div {
-  padding-left: 15px;
-}
-
-#toast-container .toast-warning > div {
-  padding-left: 8px;
-}
-
-#toast-container > .toast-success:before,
-#toast-container > .toast-error:before,
-#toast-container > .toast-warning:before,
-#toast-container > .toast-info:before {
-  font-weight: 900;
-}
-
-#toast-container > .toast-success:before {
-  content: "\f00c";
-}
-
-#toast-container > .toast-error:before {
-  content: "\f057";
-}
-
-#toast-container > .toast-warning:before {
-  content: "\f071";
-}
-
-#toast-container > .toast-info:before {
-  content: "\f05a";
-}
-
 .toast-progress {
   position: absolute;
   left: 0;
@@ -185,10 +151,10 @@ button.toast-close-button {
 
     right: 0;
     left: 0;
-  }
 
-  .toast-container .ngx-toastr {
-    width: 100%;
+    & .ngx-toastr {
+      width: 100%;
+    }
   }
 }
 

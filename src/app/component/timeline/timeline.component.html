@@ -4,7 +4,7 @@
       <app-card1
           [paddingContent]="false"
           [enableHeader]="false"
-          [bottomWrapperColor]="!item.paragraph && !item.img ? ('var(--brand-color-lighter-1)') : ''">
+          [bottomWrapperColor]="'var(--brand-color-lighter-5)'">
         <div custom-header class="head" [class]="!item.paragraph && !item.img ? 'bodyless' : ''">
           <div class="number-box">
             <span>{{ i + 1 }}</span>
@@ -17,7 +17,9 @@
         </div>
         <div body class="body" *ngIf="item.paragraph || item.img">
           <p>{{ item.paragraph }}</p>
-          <img *ngIf="item.img" [src]="item.img" alt="img">
+          <div class="img-wrapper">
+            <img *ngIf="item.img" [src]="item.img" alt="img">
+          </div>
         </div>
       </app-card1>
     </div>

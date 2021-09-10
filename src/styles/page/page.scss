@@ -1,22 +1,15 @@
+@use '../util/util';
+
 .hero, .in-page-title, .landing-title {
+  @include util.flex-layout-column;
+
   text-align: center;
-  position: relative;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .in-page-title, .landing-title {
   margin: 0.2em;
-}
-
-.hero h2 {
-  margin-bottom: 25px;
-}
-
-.hero .error-text {
-  display: flex;
-  justify-content: center;
 }
 
 .layers {
@@ -24,15 +17,15 @@
   overflow: hidden;
   line-height: 0;
   z-index: 1;
-}
 
-.layers svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 100%;
-  min-height: 250px;
-  max-height: 450px;
+  & svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100%;
+    min-height: 250px;
+    max-height: 450px;
+  }
 }
 
 .top-layer {
@@ -50,10 +43,8 @@
 }
 
 .hero-content-left, .hero-content-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include util.flex-layout-column;
+  @include util.flex-center-center;
 }
 
 @media only screen and (max-width: 999px) {
@@ -61,8 +52,10 @@
     margin: 0.5em;
   }
 
-  .hero h2 {
-    margin-bottom: 15px;
+  .hero {
+    & h2 {
+      margin-bottom: 15px;
+    }
   }
 
   .hero .brand-logo {
@@ -92,6 +85,12 @@
 }
 
 @media only screen and (min-width: 1000px) {
+  .hero {
+    & h2 {
+      margin-bottom: 25px;
+    }
+  }
+
   .landing-title {
     padding-top: 125px;
     padding-bottom: 90px;
@@ -114,7 +113,6 @@
   }
 
   .hero-content-column {
-    @extend .hero-content;
     flex-direction: column;
   }
 }

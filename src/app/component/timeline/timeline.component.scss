@@ -208,20 +208,32 @@ $counter: $items - $rows + 2;
       align-items: center;
       flex-direction: column;
       border-top: 0;
-      padding: $inner-margin;
+      margin-bottom: 4px;
       @include mq-lg {
         height: $body-height;
       }
 
       p {
+        padding: $inner-margin;
         font-size: 17px;
         margin-bottom: $inner-margin;
       }
 
+      .img-wrapper {
+//        background-color: var(--brand-color-lighter-8);
+        padding: $inner-margin;
+        width: 100%;
+        min-height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
       img {
         display: block;
-        max-height: 50%;
-        max-width: 50%;
+        max-height: 100%;
+        max-width: 100%;
       }
     }
   }

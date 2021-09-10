@@ -1,0 +1,11 @@
+@use 'theme.common';
+@use 'red-theme/red-theme';
+@use 'yellow-theme/yellow-theme';
+@use 'blue-theme/blue-theme';
+
+// This is the class to change default theme
+@use 'green-theme/green-theme';
+
+.default-theme {
+  @extend .green-theme;
+}

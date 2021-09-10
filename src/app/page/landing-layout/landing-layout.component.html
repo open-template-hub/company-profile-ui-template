@@ -1,11 +1,20 @@
-<div class="brand-in-page-wrapper">
-  <div class="brand-in-page">
-    <a class="brand" routerLink="{{URLS.root}}">
-      <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
-      <h2>Open Template Hub</h2>
-    </a>
+<div>
+  <div class="page">
+    <div class="header">
+      <app-landing-layout-top-nav></app-landing-layout-top-nav>
+    </div>
+    <div class="header-filler"></div>
+    <div class="layers top-layer">
+      <svg viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+        <path d="M 0,250 1000,120 V 0 H 0 Z" style="fill: var(--theme-color-lighter-2);"></path>
+      </svg>
+    </div>
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <app-footer [popupPadding]="true"></app-footer>
+  <app-bottom-nav></app-bottom-nav>
+  <div [class.landing-layout-page-top-loading-bar]="loading">
   </div>
 </div>
-<div [class.landing-layout-in-page-loading]="loading">
-</div>
-<router-outlet></router-outlet>

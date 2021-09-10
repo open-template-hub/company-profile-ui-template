@@ -4,7 +4,8 @@
       <img [src]="brand.brandLogo" alt="logo" class="brand-logo" width="40"/>
       <h2 *ngIf="sideNavClosed === 'false'" class="side-nav-brand-text">Open Template Hub</h2>
     </a>
-    <a *ngIf="currentUser" [display]="sideNavClosed==='true'" placement="right" routerLink="{{URLS.dashboard.myProfile}}"
+    <a *ngIf="currentUser" [display]="sideNavClosed==='true'" placement="right"
+       routerLink="{{URLS.dashboard.myProfile}}"
        show-delay="500"
        tooltip="my profile">
       <img [src]="profileImg" alt="profile img" class="profile-img-small"/>
@@ -89,7 +90,7 @@
         LOG IN
       </span>
     </a>
-    <a (click)="toggleSideNav()" *ngIf="currentUser" href="javascript:void(0)" id=menu>
+    <a (click)="toggleSideNav()" href="javascript:void(0)" id=menu>
       <i aria-hidden="true" class="material-icons">menu</i>
       <span>
       </span>

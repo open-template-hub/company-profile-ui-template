@@ -1,0 +1,53 @@
+<div class="product-page">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="product-content-left">
+        <p class="product-name">{{ product.name }}</p>
+        <p class="product-description">{{ product.description }}</p>
+        <div class="register-wrapper">
+          <input
+            class="top-right-bottom-left-rounded-box"
+            type="text"
+            [formControl]="emailControl"
+            placeholder="Email address"
+          />
+          <div class="register-button">
+            <button
+              class="register-button-item top-right-bottom-left-rounded-box"
+              (click)="router.navigate([URLS.maintenance])"
+            >
+              Request for Demo
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="hero-content-right">
+        <img
+          class="demonstration"
+          [src]="product.heroImage"
+          alt="oth-packages"
+        />
+      </div>
+    </div>
+    <div class="counters" *ngIf="product.counters">
+      <a
+        class="counter-wrapper"
+        *ngFor="let counter of product.counters"
+        [href]="
+          environmentCommon.website.github.url +
+          '/' +
+          environmentCommon.oth.social.github
+        "
+        target="_blank"
+        rel="noopener"
+      >
+        <h4 id="npmCounterElement" class="counter" *ngIf="counter.value">
+          {{ counter.value }}
+        </h4>
+        <h6>
+          {{ counter.name }}
+        </h6>
+      </a>
+    </div>
+  </div>
+</div>

@@ -32,7 +32,7 @@
             : ( userInfo?.username ? userInfo.username : '' ) }}
           <hr>
         </div>
-        <div *ngIf="userInfo" class="section-output" fxLayout="column">
+        <div *ngIf="userInfo" class="section-output flex-layout-column">
           <app-label-data *ngIf="userInfo?.payload?.bio"
                           [data]="userInfo.payload.bio">
           </app-label-data>
@@ -72,7 +72,7 @@
           <p class="dim">Contact</p>
           <hr/>
         </div>
-        <div *ngIf="userInfo" class="section-output" fxLayout="column">
+        <div *ngIf="userInfo" class="section-output flex-layout-column">
           <app-label-with-icon-data *ngIf="userInfo?.payload?.phone" [data]="userInfo.payload.phone"
                                     [highlight]="true" [isClickable]="true" [solid]="'phone-alt'"
                                     [urlPrefix]="'tel:'">
@@ -119,19 +119,19 @@
         Less
 
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-4)"></rect>
+          <rect width="10" height="10" style="fill: var(--theme-color-lighter-4)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-3)"></rect>
+          <rect width="10" height="10" style="fill: var(--theme-color-lighter-3)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-2)"></rect>
+          <rect width="10" height="10" style="fill: var(--theme-color-lighter-2)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color-lighter-1)"></rect>
+          <rect width="10" height="10" style="fill: var(--theme-color-lighter-1)"></rect>
         </svg>
         <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--brand-color)"></rect>
+          <rect width="10" height="10" style="fill: var(--theme-color)"></rect>
         </svg>
 
         More

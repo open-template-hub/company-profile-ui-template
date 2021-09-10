@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
-import { ProductLine, URLS } from '../../../data/constant';
+import { URLS } from '../../../data/constant';
+import { ProductLine } from '../../../model/product/product.model';
 import { ThemeService } from '../../../service/theme/theme.service';
 import { UtilService } from '../../../service/util/util.service';
 
@@ -44,7 +45,7 @@ export class DropdownMenuComponent {
     if ( this.isDropdownOpen && window.innerWidth > 999 ) {
       let wantedColumns = this.minimumColumns;
 
-      while ( wantedColumns * 330 > window.innerWidth - 255 ) {
+      while ( wantedColumns * 330 > window.innerWidth - 240 ) {
         wantedColumns = wantedColumns - 2;
       }
 

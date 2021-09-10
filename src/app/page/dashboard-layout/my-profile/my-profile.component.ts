@@ -4,7 +4,7 @@ import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { Rate } from '../../../component/common/rate-bar/rate-bar.component';
 import { PROFILE_IMG, URLS } from '../../../data/constant';
-import { AuthToken } from '../../../model/AuthToken';
+import { AuthToken } from '../../../model/auth/auth-token.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { CategoryService } from '../../../service/category/category.service';
@@ -61,7 +61,7 @@ export class MyProfileComponent implements OnDestroy {
 
   eventsTakenXAxisLabel = '# of events taken';
 
-  eventsXAxisLabel = '# of events.ts';
+  eventsXAxisLabel = '# of events.data.ts';
 
   eduMailPattern = '^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-.]+\.edu\.[a-z]{2}$';
 

@@ -1,11 +1,8 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
-import SwiperCore, { Navigation, Pagination, Autoplay } from 'swiper';
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+import { Partner } from '../../../model/partner/partner.model';
 
 SwiperCore.use( [ Pagination, Navigation, Autoplay ] );
-
-export interface Partner {
-  brandLogo: string;
-}
 
 @Component( {
   selector: 'app-swiper-wrapper',

@@ -1,28 +1,28 @@
 :root {
-  --brand-color-red-theme: #d56666;
-  --brand-color-default-theme: var(--brand-color-red-theme);
+  --theme-color-red-theme: #d56666;
+  --theme-color-default-theme: var(--theme-color-red-theme);
 
-  --brand-color-red-theme-lighter-1: #d87879;
-  --brand-color-red-theme-lighter-2: #db8281;
-  --brand-color-red-theme-lighter-3: #dc8e8e;
-  --brand-color-red-theme-lighter-4: #e09b9b;
-  --brand-color-red-theme-lighter-5: #e09f9f;
-  --brand-color-red-theme-lighter-6: #e8b7b8;
-  --brand-color-red-theme-lighter-7: #edc7c8;
-  --brand-color-red-theme-lighter-8: #f5dfde;
-  --brand-color-red-theme-lighter-9: #fcf3f4;
+  --theme-color-red-theme-lighter-1: #d87879;
+  --theme-color-red-theme-lighter-2: #db8281;
+  --theme-color-red-theme-lighter-3: #dc8e8e;
+  --theme-color-red-theme-lighter-4: #e09b9b;
+  --theme-color-red-theme-lighter-5: #e09f9f;
+  --theme-color-red-theme-lighter-6: #e8b7b8;
+  --theme-color-red-theme-lighter-7: #edc7c8;
+  --theme-color-red-theme-lighter-8: #f5dfde;
+  --theme-color-red-theme-lighter-9: #fcf3f4;
 
-  --brand-color-red-theme-darker-1: #c56869;
-  --brand-color-red-theme-darker-2: #b26565;
-  --brand-color-red-theme-darker-3: #9d6060;
-  --brand-color-red-theme-darker-4: #855b5a;
-  --brand-color-red-theme-darker-5: #704f4f;
-  --brand-color-red-theme-darker-6: #644f50;
-  --brand-color-red-theme-darker-7: #5f4d4d;
-  --brand-color-red-theme-darker-8: #514647;
-  --brand-color-red-theme-darker-9: #424141;
+  --theme-color-red-theme-darker-1: #c56869;
+  --theme-color-red-theme-darker-2: #b26565;
+  --theme-color-red-theme-darker-3: #9d6060;
+  --theme-color-red-theme-darker-4: #855b5a;
+  --theme-color-red-theme-darker-5: #704f4f;
+  --theme-color-red-theme-darker-6: #644f50;
+  --theme-color-red-theme-darker-7: #5f4d4d;
+  --theme-color-red-theme-darker-8: #514647;
+  --theme-color-red-theme-darker-9: #424141;
 
-  --brand-red-theme-background: #b74d4d;
+  --theme-red-theme-background: #b74d4d;
 
   --hover-red-theme-lighter: rgba(213, 102, 102, 0.3);
   --hover-red-theme-darker: rgba(105, 74, 74, 0.7);
@@ -30,51 +30,54 @@
 
 :root .red-theme, .light-theme.red-theme {
 
-  --brand-color: var(--brand-color-red-theme);
+  --theme-color: var(--theme-color-red-theme);
 
-  --brand-color-lighter-1: var(--brand-color-red-theme-lighter-1);
-  --brand-color-lighter-2: var(--brand-color-red-theme-lighter-2);
-  --brand-color-lighter-3: var(--brand-color-red-theme-lighter-3);
-  --brand-color-lighter-4: var(--brand-color-red-theme-lighter-4);
-  --brand-color-lighter-5: var(--brand-color-red-theme-lighter-5);
-  --brand-color-lighter-6: var(--brand-color-red-theme-lighter-6);
-  --brand-color-lighter-7: var(--brand-color-red-theme-lighter-7);
-  --brand-color-lighter-8: var(--brand-color-red-theme-lighter-8);
-  --brand-color-lighter-9: var(--brand-color-red-theme-lighter-9);
+  --theme-color-lighter-1: var(--theme-color-red-theme-lighter-1);
+  --theme-color-lighter-2: var(--theme-color-red-theme-lighter-2);
+  --theme-color-lighter-3: var(--theme-color-red-theme-lighter-3);
+  --theme-color-lighter-4: var(--theme-color-red-theme-lighter-4);
+  --theme-color-lighter-5: var(--theme-color-red-theme-lighter-5);
+  --theme-color-lighter-6: var(--theme-color-red-theme-lighter-6);
+  --theme-color-lighter-7: var(--theme-color-red-theme-lighter-7);
+  --theme-color-lighter-8: var(--theme-color-red-theme-lighter-8);
+  --theme-color-lighter-9: var(--theme-color-red-theme-lighter-9);
 
-  --brand-color-darker-1: var(--brand-color-red-theme-darker-1);
-  --brand-color-darker-2: var(--brand-color-red-theme-darker-2);
-  --brand-color-darker-3: var(--brand-color-red-theme-darker-3);
-  --brand-color-darker-4: var(--brand-color-red-theme-darker-4);
-  --brand-color-darker-5: var(--brand-color-red-theme-darker-5);
-  --brand-color-darker-6: var(--brand-color-red-theme-darker-6);
-  --brand-color-darker-7: var(--brand-color-red-theme-darker-7);
-  --brand-color-darker-8: var(--brand-color-red-theme-darker-8);
-  --brand-color-darker-9: var(--brand-color-red-theme-darker-9);
+  --theme-color-darker-1: var(--theme-color-red-theme-darker-1);
+  --theme-color-darker-2: var(--theme-color-red-theme-darker-2);
+  --theme-color-darker-3: var(--theme-color-red-theme-darker-3);
+  --theme-color-darker-4: var(--theme-color-red-theme-darker-4);
+  --theme-color-darker-5: var(--theme-color-red-theme-darker-5);
+  --theme-color-darker-6: var(--theme-color-red-theme-darker-6);
+  --theme-color-darker-7: var(--theme-color-red-theme-darker-7);
+  --theme-color-darker-8: var(--theme-color-red-theme-darker-8);
+  --theme-color-darker-9: var(--theme-color-red-theme-darker-9);
 
   --hover: var(--hover-red-theme-lighter);
 }
 
 @mixin red-theme-dark-mode {
-  --brand-color-lighter-1: var(--brand-color-red-theme-darker-1);
-  --brand-color-lighter-2: var(--brand-color-red-theme-darker-2);
-  --brand-color-lighter-3: var(--brand-color-red-theme-darker-3);
-  --brand-color-lighter-4: var(--brand-color-red-theme-darker-4);
-  --brand-color-lighter-5: var(--brand-color-red-theme-darker-5);
-  --brand-color-lighter-6: var(--brand-color-red-theme-darker-6);
-  --brand-color-lighter-7: var(--brand-color-red-theme-darker-7);
-  --brand-color-lighter-8: var(--brand-color-red-theme-darker-8);
-  --brand-color-lighter-9: var(--brand-color-red-theme-darker-9);
 
-  --brand-color-darker-1: var(--brand-color-red-theme-lighter-1);
-  --brand-color-darker-2: var(--brand-color-red-theme-lighter-2);
-  --brand-color-darker-3: var(--brand-color-red-theme-lighter-3);
-  --brand-color-darker-4: var(--brand-color-red-theme-lighter-4);
-  --brand-color-darker-5: var(--brand-color-red-theme-lighter-5);
-  --brand-color-darker-6: var(--brand-color-red-theme-lighter-6);
-  --brand-color-darker-7: var(--brand-color-red-theme-lighter-7);
-  --brand-color-darker-8: var(--brand-color-red-theme-lighter-8);
-  --brand-color-darker-9: var(--brand-color-red-theme-lighter-9);
+  --theme-color: var(--theme-color-red-theme);
+
+  --theme-color-lighter-1: var(--theme-color-red-theme-darker-1);
+  --theme-color-lighter-2: var(--theme-color-red-theme-darker-2);
+  --theme-color-lighter-3: var(--theme-color-red-theme-darker-3);
+  --theme-color-lighter-4: var(--theme-color-red-theme-darker-4);
+  --theme-color-lighter-5: var(--theme-color-red-theme-darker-5);
+  --theme-color-lighter-6: var(--theme-color-red-theme-darker-6);
+  --theme-color-lighter-7: var(--theme-color-red-theme-darker-7);
+  --theme-color-lighter-8: var(--theme-color-red-theme-darker-8);
+  --theme-color-lighter-9: var(--theme-color-red-theme-darker-9);
+
+  --theme-color-darker-1: var(--theme-color-red-theme-lighter-1);
+  --theme-color-darker-2: var(--theme-color-red-theme-lighter-2);
+  --theme-color-darker-3: var(--theme-color-red-theme-lighter-3);
+  --theme-color-darker-4: var(--theme-color-red-theme-lighter-4);
+  --theme-color-darker-5: var(--theme-color-red-theme-lighter-5);
+  --theme-color-darker-6: var(--theme-color-red-theme-lighter-6);
+  --theme-color-darker-7: var(--theme-color-red-theme-lighter-7);
+  --theme-color-darker-8: var(--theme-color-red-theme-lighter-8);
+  --theme-color-darker-9: var(--theme-color-red-theme-lighter-9);
 
   --hover: var(--hover-red-theme-darker);
 }

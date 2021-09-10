@@ -4,15 +4,15 @@
     <div class="share">
       <p>Share</p>
       <hr>
-      <div fxLayout="row" class="content">
+      <div class="content flex-layout-row">
         <a class="twitter-area" (click)="shareViaClicked.emit( 'twitter' )">
           <app-social-button [brand]="environmentCommon.website.twitter.cssClass"
-                             [circle]="true" [isSmallLogo]="true"></app-social-button>
+                             [classType]="'circle'" [isSmallLogo]="true"></app-social-button>
           <p>Twitter</p>
         </a>
         <a class="linkedin-area" style="margin-left: 30px;" (click)="shareViaClicked.emit( 'linkedin' )">
           <app-social-button [brand]="environmentCommon.website.linkedin.cssClass"
-                             [circle]="true" [isSmallLogo]="true"></app-social-button>
+                             [classType]="'circle'" [isSmallLogo]="true"></app-social-button>
           <p>Linkedin</p>
         </a>
       </div>
@@ -20,7 +20,7 @@
     <div class="calendar" *ngIf="showCalendar">
       <p>Calendar</p>
       <hr>
-      <div fxLayout="row" class="content">
+      <div class="content flex-layout-row">
         <app-social-button (click)="calendarClicked.emit(true)"
                            [brand]="environmentCommon.website.appleCalendar.cssClass"
                            [flexStart]="true"

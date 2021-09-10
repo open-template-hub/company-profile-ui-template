@@ -1,0 +1,42 @@
+@use '../util/util';
+
+.profile-img-small, .profile-img-full, .profile-img-wrapper {
+  @include util.prefix(border-radius, 99em, moz webkit);
+}
+
+.profile-img-small, .profile-img-full {
+  display: block;
+
+  @include util.prefix(border-radius, 99em, moz webkit);
+
+  background: {
+    size: cover;
+    repeat: no-repeat;
+    position: center center;
+    color: var(--contrast);
+  };
+
+  border: {
+    width: 1px;
+    style: solid;
+    color: var(--contrast);
+  }
+}
+
+.profile-img-small {
+  width: 38px;
+  height: 38px;
+  box-shadow: 0 3px 3px var(--shadow-dark-mode);
+}
+
+.profile-img-full {
+  width: 100px;
+  height: 100px;
+}
+
+.profile-img-wrapper {
+  border: none;
+  margin-bottom: 2em;
+  box-shadow: 0 3px 2px var(--shadow);
+  max-width: fit-content;
+}

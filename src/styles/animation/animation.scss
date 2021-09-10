@@ -1,0 +1,91 @@
+@mixin loading-bar-animation {
+  animation: {
+    name: loading-bar-keyframes;
+    duration: 1.5s;
+    direction: normal;
+    timing-function: ease-in-out;
+    iteration-count: infinite;
+  }
+}
+
+@keyframes loading-bar-keyframes {
+  0% {
+    left: calc(-100%);
+    background-color: var(--theme-color-lighter-4);
+  }
+
+  100% {
+    left: 100%;
+    background-color: var(--theme-color-lighter-2);
+  }
+}
+
+@mixin inline-loading-bar-animation {
+  animation: {
+    name: inline-loading-bar-keyframes;
+    duration: 1.5s;
+    timing-function: ease;
+    iteration-count: infinite;
+  };
+}
+
+@keyframes inline-loading-bar-keyframes {
+  50% {
+    left: 96px;
+    background: var(--social);
+  }
+}
+
+@mixin bottom-slide-in-animation {
+  animation: {
+    name: bottom-slide-in-keyframes;
+    duration: 0.4s;
+  }
+}
+
+@keyframes bottom-slide-in-keyframes {
+  0% {
+    bottom: -100%;
+
+    transition: {
+      property: bottom;
+      duration: 0.7s;
+      timing-function: ease;
+    };
+  }
+
+  100% {
+    bottom: calc(55px + env(safe-area-inset-bottom));
+
+    transition: {
+      property: bottom;
+    };
+  }
+}
+
+@mixin bottom-slide-out-animation {
+  animation: {
+    name: bottom-slide-out-keyframes;
+    duration: 0.4s;
+  }
+}
+
+@keyframes bottom-slide-out-keyframes {
+  0% {
+    bottom: calc(55px + env(safe-area-inset-bottom));
+
+    transition: {
+      property: bottom;
+      duration: 0.7s;
+      timing-function: ease;
+    };
+  }
+
+  100% {
+    bottom: -100%;
+
+    transition: {
+      property: bottom;
+    };
+  }
+}

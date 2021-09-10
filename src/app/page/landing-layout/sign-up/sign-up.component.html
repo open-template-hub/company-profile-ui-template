@@ -1,14 +1,14 @@
 <div class="landing-form-page">
   <app-card1 [isSmall]="true" [title]="'Register'">
     <div body>
-      <div fxLayout="row" fxLayoutAlign="center center">
+      <div class="flex-layout-row flex-center-center">
         <app-social-button (click)="socialLogin(environmentCommon.website.facebook)"
                            [brand]="environmentCommon.website.facebook.cssClass"
-                           [circle]="true"></app-social-button>
+                           [classType]="'circle'"></app-social-button>
         <app-social-button (click)="socialLogin(environmentCommon.website.google)" [brand]="environmentCommon.website.google.cssClass"
-                           [circle]="true"></app-social-button>
+                           [classType]="'circle'"></app-social-button>
       </div>
-      <div class="login-page-middle-text" fxLayout="column" fxLayoutAlign="center center">
+      <div class="login-page-middle-text flex-layout-column flex-center-center">
         <p>or</p>
       </div>
       <form (ngSubmit)="onSubmit()" [formGroup]="form">
@@ -32,19 +32,19 @@
           </div>
         </div>
         <div class="section-submit">
-          <app-button1 [brandColor]="true" [text]="'CONTINUE'"></app-button1>
+          <app-button1 [themeColor]="'default'" [text]="'CONTINUE'"></app-button1>
           <p>
             <small class="dim">By signing up, you agree
-              <a class="inline-a" routerLink="{{URLS.terms}}" target="_blank" rel=noopener>Terms of Use</a>,
-              <a class="inline-a" routerLink="{{URLS.privacyPolicy}}" target="_blank" rel=noopener>Privacy Policy</a>
+              <a class="link" routerLink="{{URLS.terms}}" target="_blank" rel=noopener>Terms of Use</a>,
+              <a class="link" routerLink="{{URLS.privacyPolicy}}" target="_blank" rel=noopener>Privacy Policy</a>
               and
-              <a class="inline-a" routerLink="{{URLS.cookiePolicy}}" target="_blank" rel=noopener>Cookie Policy</a>
+              <a class="link" routerLink="{{URLS.cookiePolicy}}" target="_blank" rel=noopener>Cookie Policy</a>
             </small>
           </p>
           <hr class="dim"/>
           <p>
             Already have an account?
-            <a class="inline-a" [routerLink]="URLS.login">
+            <a class="link" [routerLink]="URLS.login">
               Login
             </a>
           </p>

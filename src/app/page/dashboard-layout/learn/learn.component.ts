@@ -4,12 +4,13 @@ import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IDayCalendarConfig } from 'ng2-date-picker';
 import { ToastrService } from 'ngx-toastr';
+import { URLS } from 'src/app/data/constant';
+import { EventTypes } from '../../../data/event/events.data';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { CategoryService } from '../../../service/category/category.service';
 import { EventService } from '../../../service/event/event.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
-import { EventTypes, URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-learn',
@@ -51,16 +52,16 @@ export class LearnComponent implements OnInit, OnDestroy {
   searchArea: ElementRef;
 
   constructor(
-    private route: ActivatedRoute,
-    private eventService: EventService,
-    private categoryService: CategoryService,
-    private loadingService: LoadingService,
-    private toastService: ToastrService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private informationService: InformationService,
-    private formBuilder: FormBuilder,
-    private basicInfoService: BasicInfoService
+      private route: ActivatedRoute,
+      private eventService: EventService,
+      private categoryService: CategoryService,
+      private loadingService: LoadingService,
+      private toastService: ToastrService,
+      private router: Router,
+      private activatedRoute: ActivatedRoute,
+      private informationService: InformationService,
+      private formBuilder: FormBuilder,
+      private basicInfoService: BasicInfoService
   ) {
     this.eventService.recommendedEvents.subscribe( recommendedEvents => {
       this.recommendedEvents = recommendedEvents;
@@ -79,7 +80,7 @@ export class LearnComponent implements OnInit, OnDestroy {
         this.userInterests = [];
         if ( params.category ) {
           this.isSearchedWithCategory = true;
-          // reset search events.ts before search calling
+          // reset search events.data.ts before search calling
           this.searchedEvents = [];
           const categories = [
             {
@@ -89,7 +90,7 @@ export class LearnComponent implements OnInit, OnDestroy {
             }
           ];
           this.eventService.search( undefined, undefined, new Date().toISOString(),
-            undefined, categories, EventTypes.Searched ).subscribe();
+              undefined, categories, EventTypes.Searched ).subscribe();
         }
       } );
     } );
@@ -108,7 +109,7 @@ export class LearnComponent implements OnInit, OnDestroy {
 
     let q = '';
 
-    if (!event) {
+    if ( !event ) {
       q = this.searchQuery;
     } else {
       q = event.target.value;
@@ -118,7 +119,7 @@ export class LearnComponent implements OnInit, OnDestroy {
 
     if ( this.activatedRoute.snapshot.queryParams.category ) {
       this.isSearchedWithCategory = false;
-      this.router.navigate([]);
+      this.router.navigate( [] );
     }
 
     if ( !q || q.length < 3 ) {
@@ -133,11 +134,11 @@ export class LearnComponent implements OnInit, OnDestroy {
 
     this.eventService.search( undefined, undefined, new Date().toISOString(), q, [] )
     .subscribe( titleResults => {
-      this.eventService.search(undefined, q, new Date().toISOString(), undefined, [])
-      .subscribe(userResults => {
-        this.searchedEvents = [...titleResults, ...userResults]
-      });
-    });
+      this.eventService.search( undefined, q, new Date().toISOString(), undefined, [] )
+      .subscribe( userResults => {
+        this.searchedEvents = [ ...titleResults, ...userResults ];
+      } );
+    } );
   }
 
   ngOnDestroy() {

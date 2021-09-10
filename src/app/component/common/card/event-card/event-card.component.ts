@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { DEFAULT_RIBBON, EVENT_RIBBONS } from 'src/app/data/ribbon/ribbon.data';
+import { URLS } from '../../../../data/constant';
 import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
-import { RIBBONS, URLS } from '../../../../data/constant';
 
 @Component( {
   selector: 'app-event-card',
@@ -11,7 +11,11 @@ import { RIBBONS, URLS } from '../../../../data/constant';
 } )
 export class EventCardComponent implements OnInit {
 
+  DEFAULT_RIBBON = DEFAULT_RIBBON;
+  EVENT_RIBBONS = EVENT_RIBBONS;
+
   username: string;
+
   @Input() event: any;
   @Input() isPublicPage = false;
   @Input() isEditable = false;
@@ -31,25 +35,17 @@ export class EventCardComponent implements OnInit {
   @Output() markAsCompletedButtonClicked = new EventEmitter<string>();
   @Output() rateButtonClicked = new EventEmitter();
 
-  safeYoutubeUrl: SafeResourceUrl;
-
-  RIBBONS = RIBBONS;
-
   constructor(
       private router: Router,
-      private basicInfoService: BasicInfoService,
-      private sanitizer: DomSanitizer
+      private basicInfoService: BasicInfoService
   ) {
+    // Intentionally blank
   }
 
   ngOnInit(): void {
     this.basicInfoService.userInfo.subscribe( userInfo => {
       this.username = userInfo?.username;
     } );
-  }
-
-  onClickHeader() {
-    this.emitIdForFillingForm( this.event._id );
   }
 
   routeToEvent() {

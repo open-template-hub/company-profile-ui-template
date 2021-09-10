@@ -2,7 +2,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,14 +19,13 @@ import { SwiperModule } from 'swiper/angular';
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { CalendarComponent } from './component/calendar/calendar.component';
 import { EventDataComponent } from './component/common/block/event-data/event-data.component';
 import { EventHamburgerMenuComponent } from './component/common/block/event-hamburger-menu/event-hamburger-menu.component';
 import { LabelDataComponent } from './component/common/block/label-data/label-data.component';
 import { LabelWithIconDataComponent } from './component/common/block/label-with-icon-data/label-with-icon-data.component';
 import { Button1Component } from './component/common/button/button1/button1.component';
 import { SocialButtonComponent } from './component/common/button/social-button/social-button.component';
-import { CalendarComponent } from './component/common/calendar/calendar.component';
 import { Card1Component } from './component/common/card/card1/card1.component';
 import { EventCardComponent } from './component/common/card/event-card/event-card.component';
 import { PricingCardComponent } from './component/common/card/pricing-card/pricing-card.component';
@@ -44,8 +42,10 @@ import { DashboardLayoutSideNavComponent } from './component/nav/dashboard/dashb
 import { DashboardLayoutTopNavComponent } from './component/nav/dashboard/dashboard-layout-top-nav/dashboard-layout-top-nav.component';
 import { LandingLayoutTopNavComponent } from './component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component';
 import { CookiePopupComponent } from './component/popup/cookie-popup/cookie-popup.component';
+import { TimelineComponent } from './component/timeline/timeline.component';
 import { RequestInterceptor } from './interceptor/request/request.interceptor';
 import { ResponseInterceptor } from './interceptor/response/response.interceptor';
+import { OthComponent } from './oth/oth.component';
 import { CreateEventComponent } from './page/dashboard-layout/create-event/create-event.component';
 import { DashboardLayoutComponent } from './page/dashboard-layout/dashboard-layout.component';
 
@@ -55,27 +55,26 @@ import { LearnComponent } from './page/dashboard-layout/learn/learn.component';
 import { MyProfileComponent } from './page/dashboard-layout/my-profile/my-profile.component';
 import { PublicProfileComponent } from './page/dashboard-layout/public-profile/public-profile.component';
 import { SideContentComponent } from './page/dashboard-layout/side-content/side-content.component';
+import { AboutUsComponent } from './page/landing-layout/about-us/about-us.component';
+import { CookiePolicyComponent } from './page/landing-layout/cookie-policy/cookie-policy.component';
 import { ForgetPasswordComponent } from './page/landing-layout/forget-password/forget-password.component';
+import { HomeComponent } from './page/landing-layout/home/home.component';
 import { LandingLayoutComponent } from './page/landing-layout/landing-layout.component';
 import { LoginComponent } from './page/landing-layout/login/login.component';
+import { MaintenanceComponent } from './page/landing-layout/maintenance/maintenance.component';
+import { NotFoundComponent } from './page/landing-layout/not-found/not-found.component';
+import { PricingComponent } from './page/landing-layout/pricing/pricing.component';
+import { PrivacyPolicyComponent } from './page/landing-layout/privacy-policy/privacy-policy.component';
+import { ProductComponent } from './page/landing-layout/product/product.component';
 import { ResetPasswordComponent } from './page/landing-layout/reset-password/reset-password.component';
 import { ShowroomComponent } from './page/landing-layout/showroom/showroom.component';
+import { SignUpSuccessComponent } from './page/landing-layout/sign-up-success/sign-up-success.component';
 import { SignUpComponent } from './page/landing-layout/sign-up/sign-up.component';
-import { CookiePolicyComponent } from './page/raw-landing-layout/cookie-policy/cookie-policy.component';
-import { HomeComponent } from './page/raw-landing-layout/home/home.component';
-import { MaintenanceComponent } from './page/raw-landing-layout/maintenance/maintenance.component';
-import { NotFoundComponent } from './page/raw-landing-layout/not-found/not-found.component';
-import { PricingComponent } from './page/raw-landing-layout/pricing/pricing.component';
-import { PrivacyPolicyComponent } from './page/raw-landing-layout/privacy-policy/privacy-policy.component';
-import { ProductComponent } from './page/raw-landing-layout/product/product.component';
-import { RawLandingLayoutComponent } from './page/raw-landing-layout/raw-landing-layout.component';
-import { SignUpSuccessComponent } from './page/raw-landing-layout/sign-up-success/sign-up-success.component';
-import { TermsComponent } from './page/raw-landing-layout/terms/terms.component';
-import { VerifyAccountComponent } from './page/raw-landing-layout/verify-account/verify-account.component';
+import { TermsComponent } from './page/landing-layout/terms/terms.component';
+import { VerifyAccountComponent } from './page/landing-layout/verify-account/verify-account.component';
 import { EditProfileComponent } from './page/settings-layout/edit-profile/edit-profile.component';
 import { EditThemeComponent } from './page/settings-layout/edit-theme/edit-theme.component';
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
-import { WelcomeComponent } from './page/settings-layout/welcome/welcome.component';
 import { CallbackComponent } from './page/splash-layout/callback/callback.component';
 import { ExternalComponent } from './page/splash-layout/external/external.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
@@ -87,14 +86,13 @@ FullCalendarModule.registerPlugins( [
 
 @NgModule( {
   declarations: [
-    AppComponent,
+    OthComponent,
     HomeComponent,
     LoginComponent,
     DashboardComponent,
     SignUpComponent,
     SignUpSuccessComponent,
     VerifyAccountComponent,
-    RawLandingLayoutComponent,
     LandingLayoutComponent,
     DashboardLayoutComponent,
     ResetPasswordComponent,
@@ -108,7 +106,6 @@ FullCalendarModule.registerPlugins( [
     SplashLayoutComponent,
     CallbackComponent,
     SocialButtonComponent,
-    WelcomeComponent,
     LabelDataComponent,
     DashboardLayoutTopNavComponent,
     EditProfileComponent,
@@ -144,6 +141,8 @@ FullCalendarModule.registerPlugins( [
     ProductComponent,
     ExtLinkComponent,
     ExternalComponent,
+    TimelineComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,
@@ -153,7 +152,6 @@ FullCalendarModule.registerPlugins( [
     NgxChartsModule,
     BrowserAnimationsModule,
     LayoutModule,
-    FlexLayoutModule,
     ImageCropperModule,
     TooltipModule,
     DpDatePickerModule,
@@ -170,7 +168,7 @@ FullCalendarModule.registerPlugins( [
     { provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ResponseInterceptor, multi: true }
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ OthComponent ]
 } )
 export class AppModule {
 }

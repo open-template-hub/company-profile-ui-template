@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { environmentCommon } from '../environments/environment-common';
+import { URLS_RAW } from './data/constant';
 import { AuthGuard } from './guard/auth/auth.guard';
 import { PublicProfileGuard } from './guard/public-profile/public-profile.guard';
 import { CreateEventComponent } from './page/dashboard-layout/create-event/create-event.component';
@@ -10,27 +11,26 @@ import { EventComponent } from './page/dashboard-layout/event/event.component';
 import { LearnComponent } from './page/dashboard-layout/learn/learn.component';
 import { MyProfileComponent } from './page/dashboard-layout/my-profile/my-profile.component';
 import { PublicProfileComponent } from './page/dashboard-layout/public-profile/public-profile.component';
+import { AboutUsComponent } from './page/landing-layout/about-us/about-us.component';
+import { CookiePolicyComponent } from './page/landing-layout/cookie-policy/cookie-policy.component';
 import { ForgetPasswordComponent } from './page/landing-layout/forget-password/forget-password.component';
+import { HomeComponent } from './page/landing-layout/home/home.component';
 import { LandingLayoutComponent } from './page/landing-layout/landing-layout.component';
 import { LoginComponent } from './page/landing-layout/login/login.component';
+import { MaintenanceComponent } from './page/landing-layout/maintenance/maintenance.component';
+import { NotFoundComponent } from './page/landing-layout/not-found/not-found.component';
+import { PricingComponent } from './page/landing-layout/pricing/pricing.component';
+import { PrivacyPolicyComponent } from './page/landing-layout/privacy-policy/privacy-policy.component';
+import { ProductComponent } from './page/landing-layout/product/product.component';
 import { ResetPasswordComponent } from './page/landing-layout/reset-password/reset-password.component';
 import { ShowroomComponent } from './page/landing-layout/showroom/showroom.component';
+import { SignUpSuccessComponent } from './page/landing-layout/sign-up-success/sign-up-success.component';
 import { SignUpComponent } from './page/landing-layout/sign-up/sign-up.component';
-import { CookiePolicyComponent } from './page/raw-landing-layout/cookie-policy/cookie-policy.component';
-import { HomeComponent } from './page/raw-landing-layout/home/home.component';
-import { MaintenanceComponent } from './page/raw-landing-layout/maintenance/maintenance.component';
-import { NotFoundComponent } from './page/raw-landing-layout/not-found/not-found.component';
-import { PricingComponent } from './page/raw-landing-layout/pricing/pricing.component';
-import { PrivacyPolicyComponent } from './page/raw-landing-layout/privacy-policy/privacy-policy.component';
-import { ProductComponent } from './page/raw-landing-layout/product/product.component';
-import { RawLandingLayoutComponent } from './page/raw-landing-layout/raw-landing-layout.component';
-import { SignUpSuccessComponent } from './page/raw-landing-layout/sign-up-success/sign-up-success.component';
-import { TermsComponent } from './page/raw-landing-layout/terms/terms.component';
-import { VerifyAccountComponent } from './page/raw-landing-layout/verify-account/verify-account.component';
+import { TermsComponent } from './page/landing-layout/terms/terms.component';
+import { VerifyAccountComponent } from './page/landing-layout/verify-account/verify-account.component';
 import { EditProfileComponent } from './page/settings-layout/edit-profile/edit-profile.component';
 import { EditThemeComponent } from './page/settings-layout/edit-theme/edit-theme.component';
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
-import { WelcomeComponent } from './page/settings-layout/welcome/welcome.component';
 import { CallbackComponent } from './page/splash-layout/callback/callback.component';
 import { ExternalComponent } from './page/splash-layout/external/external.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
@@ -38,91 +38,78 @@ import { SplashLayoutComponent } from './page/splash-layout/splash-layout.compon
 const routes: Routes = [
   {
     path: '',
-    component: RawLandingLayoutComponent,
-    data: { layout: 'raw-landing-layout' },
+    component: LandingLayoutComponent,
     children: [
       { path: '', component: HomeComponent },
-      { path: 'not-found', component: NotFoundComponent },
-      { path: 'maintenance', component: MaintenanceComponent },
-      { path: 'signup-success', component: SignUpSuccessComponent },
-      { path: 'verify-account', component: VerifyAccountComponent },
-      { path: 'cookie-policy', component: CookiePolicyComponent },
-      { path: 'privacy-policy', component: PrivacyPolicyComponent },
-      { path: 'terms', component: TermsComponent },
-      { path: 'pricing', component: PricingComponent },
-      { path: 'product', component: ProductComponent },
-      {
-        path: '',
-        component: LandingLayoutComponent,
-        data: { layout: 'landing-layout' },
-        children: [
-          { path: 'signup', component: SignUpComponent },
-          { path: 'login', component: LoginComponent },
-          { path: 'forget-password', component: ForgetPasswordComponent },
-          { path: 'reset-password', component: ResetPasswordComponent },
-          { path: 'showroom', component: ShowroomComponent },
-          { path: 'u/:username', component: PublicProfileComponent, data: { isPublic: true } },
-        ]
-      }
+      { path: URLS_RAW.notFound, component: NotFoundComponent },
+      { path: URLS_RAW.maintenance, component: MaintenanceComponent },
+      { path: URLS_RAW.signupSuccess, component: SignUpSuccessComponent },
+      { path: URLS_RAW.verifyAccount, component: VerifyAccountComponent },
+      { path: URLS_RAW.cookiePolicy, component: CookiePolicyComponent },
+      { path: URLS_RAW.privacyPolicy, component: PrivacyPolicyComponent },
+      { path: URLS_RAW.terms, component: TermsComponent },
+      { path: URLS_RAW.pricing, component: PricingComponent },
+      { path: URLS_RAW.product, component: ProductComponent },
+      { path: URLS_RAW.aboutUs, component: AboutUsComponent },
+      { path: URLS_RAW.showroom, component: ShowroomComponent },
+      { path: URLS_RAW.signup, component: SignUpComponent },
+      { path: URLS_RAW.login, component: LoginComponent },
+      { path: URLS_RAW.forgetPassword, component: ForgetPasswordComponent },
+      { path: URLS_RAW.resetPassword, component: ResetPasswordComponent },
+      { path: URLS_RAW.u + '/' + ':username', component: PublicProfileComponent, data: { isPublic: true } },
     ]
   },
   {
-    path: 'callback',
+    path: URLS_RAW.callback.root,
     component: SplashLayoutComponent,
-    data: { layout: 'splash-layout' },
     children: [
-      { path: 'google', component: CallbackComponent, data: { oauth: environmentCommon.website.google } },
-      { path: 'facebook', component: CallbackComponent, data: { oauth: environmentCommon.website.facebook } },
-      { path: 'twitter', component: CallbackComponent, data: { oauth: environmentCommon.website.twitter } },
-      { path: 'linkedin', component: CallbackComponent, data: { oauth: environmentCommon.website.linkedin } },
-      { path: 'twitch', component: CallbackComponent, data: { oauth: environmentCommon.website.twitch } },
-      { path: 'dribbble', component: CallbackComponent, data: { oauth: environmentCommon.website.dribbble } },
-      { path: 'reddit', component: CallbackComponent, data: { oauth: environmentCommon.website.reddit } },
-      { path: 'github', component: CallbackComponent, data: { oauth: environmentCommon.website.github } },
-      { path: 'stripe', component: CallbackComponent, data: { payment: environmentCommon.website.stripe } }
+      { path: URLS_RAW.callback.dribbble, component: CallbackComponent, data: { oauth: environmentCommon.website.dribbble } },
+      { path: URLS_RAW.callback.facebook, component: CallbackComponent, data: { oauth: environmentCommon.website.facebook } },
+      { path: URLS_RAW.callback.github, component: CallbackComponent, data: { oauth: environmentCommon.website.github } },
+      { path: URLS_RAW.callback.google, component: CallbackComponent, data: { oauth: environmentCommon.website.google } },
+      { path: URLS_RAW.callback.linkedin, component: CallbackComponent, data: { oauth: environmentCommon.website.linkedin } },
+      { path: URLS_RAW.callback.reddit, component: CallbackComponent, data: { oauth: environmentCommon.website.reddit } },
+      { path: URLS_RAW.callback.stripe, component: CallbackComponent, data: { payment: environmentCommon.website.stripe } },
+      { path: URLS_RAW.callback.twitch, component: CallbackComponent, data: { oauth: environmentCommon.website.twitch } },
+      { path: URLS_RAW.callback.twitter, component: CallbackComponent, data: { oauth: environmentCommon.website.twitter } },
     ]
   },
   {
-    path: 'external',
+    path: URLS_RAW.external,
     component: SplashLayoutComponent,
-    data: { layout: 'splash-layout' },
     children: [
       { path: '', component: ExternalComponent }
     ]
   },
   {
-    path: 'dashboard',
+    path: URLS_RAW.dashboard.root,
     component: DashboardLayoutComponent,
-    data: { layout: 'dashboard-layout' },
     children: [
       { path: '', component: DashboardComponent, canActivate: [ AuthGuard ] },
-      { path: 'my-profile', component: MyProfileComponent, canActivate: [ AuthGuard ] },
-      { path: 'contribute', component: CreateEventComponent, canActivate: [ AuthGuard ] },
-      { path: 'learn', component: LearnComponent, canActivate: [ AuthGuard ] },
-      { path: 'event', component: EventComponent, canActivate: [ AuthGuard ] },
-      { path: 'privacy', component: MaintenanceComponent, canActivate: [ AuthGuard ] }
+      { path: URLS_RAW.dashboard.myProfile, component: MyProfileComponent, canActivate: [ AuthGuard ] },
+      { path: URLS_RAW.dashboard.createEvent, component: CreateEventComponent, canActivate: [ AuthGuard ] },
+      { path: URLS_RAW.dashboard.learn, component: LearnComponent, canActivate: [ AuthGuard ] },
+      { path: URLS_RAW.dashboard.event, component: EventComponent, canActivate: [ AuthGuard ] },
+      { path: URLS_RAW.dashboard.privacy, component: MaintenanceComponent, canActivate: [ AuthGuard ] }
     ]
   },
   {
-    path: 'settings',
-    component: SettingsLayoutComponent,
-    data: { layout: 'settings-layout' },
-    children: [
-      { path: 'welcome', component: WelcomeComponent, canActivate: [ AuthGuard ] },
-      { path: 'edit-profile', component: EditProfileComponent, canActivate: [ AuthGuard ] },
-      { path: 'edit-theme', component: EditThemeComponent, canActivate: [ AuthGuard ] },
-    ]
-  },
-  {
-    path: 'user',
+    path: URLS_RAW.user,
     component: DashboardLayoutComponent,
-    data: { layout: 'dashboard-layout' },
     children: [
       { path: ':username', component: PublicProfileComponent, canActivate: [ PublicProfileGuard ] }
     ]
   },
+  {
+    path: URLS_RAW.settings.root,
+    component: SettingsLayoutComponent,
+    children: [
+      { path: URLS_RAW.settings.editProfile, component: EditProfileComponent, canActivate: [ AuthGuard ] },
+      { path: URLS_RAW.settings.editTheme, component: EditThemeComponent, canActivate: [ AuthGuard ] },
+    ]
+  },
   // otherwise redirect to error
-  { path: '**', redirectTo: 'not-found' }
+  { path: '**', redirectTo: URLS_RAW.notFound }
 ];
 
 @NgModule( {

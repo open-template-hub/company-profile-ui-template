@@ -1,4 +1,4 @@
-@import "~swiper/swiper-bundle.min.css";
+@use '../../../../../node_modules/swiper/swiper-bundle.min.css';
 
 app-swiper-wrapper {
   width: 65%;
@@ -55,7 +55,7 @@ app-swiper-wrapper {
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--brand-color);
+  background: var(--theme-color);
 }
 
 /*

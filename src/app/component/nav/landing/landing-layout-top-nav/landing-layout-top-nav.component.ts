@@ -1,6 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { PRODUCT_LINES, ProductLine, SERVICES, URLS } from '../../../../data/constant';
+import { PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
+import { URLS } from '../../../../data/constant';
+import { ProductLine } from '../../../../model/product/product.model';
 import { LoadingService } from '../../../../service/loading/loading.service';
 import { ThemeService } from '../../../../service/theme/theme.service';
 

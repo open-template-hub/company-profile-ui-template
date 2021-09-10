@@ -2,18 +2,19 @@
      [class.card1-small]="isSmall"
      [class.no-margin]="!margin" [class.no-shadow]="!shadow" [style.height]="height ? height : ''"
      [style.width]="width ? width : ''" class="card1" [class.testimonial-size]="testimonialSizeActive">
-  <div *ngIf="topWrapper" [class.card1-top-wrapper-in-brand-color]="topWrapperInBrandColor"
+  <div *ngIf="topWrapper" [class.card1-top-wrapper-in-theme-color]="topWrapperInThemeColor"
        class="card1-top-wrapper">
   </div>
   <div *ngIf="topLayer" class="layers top-layer">
     <svg [style.margin-top]="topLayerMarginTop"
          [style.min-height]="topLayerMinHeight" viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
-      <path d="M 0,250 1000,120 V 0 H 0 Z" style="fill: var(--brand-color-lighter-2);"></path>
+      <path d="M 0,250 1000,120 V 0 H 0 Z" style="fill: var(--theme-color-lighter-2);"></path>
     </svg>
   </div>
-  <div *ngIf="!headerProfileImg && enableHeader && !enableHeaderFullImg" class="card1-header rounded-box">
+  <div *ngIf="!headerProfileImg && enableHeader && !enableHeaderFullImg" class="card1-header" [class]="headerType">
     <h3>{{title}}</h3>
   </div>
+  <ng-content *ngIf="!headerProfileImg && !enableHeader && !enableHeaderFullImg" select="[custom-header]"></ng-content>
 
   <div *ngIf="headerProfileImg && enableHeader" class="card1-header card1-header-img">
     <div class="profile-img-wrapper">
@@ -22,7 +23,7 @@
   </div>
 
   <div *ngIf="enableHeader && enableHeaderFullImg"
-       class="card1-header card1-header-img card1-header-full-img rounded-box" [class.max-height]="maxHeight">
+       class="card1-header card1-header-img card1-header-full-img" [class.max-height]="maxHeight" [class]="headerType">
     <ng-content select="[headerFullImg]"></ng-content>
   </div>
 
@@ -41,15 +42,15 @@
        class="card1-content">
     <ng-content select="[body]"></ng-content>
   </div>
-  <div *ngIf="bottomWrapper" [class.card1-bottom-wrapper-in-brand-color]="bottomWrapperInBrandColor"
+  <div *ngIf="bottomWrapper" [style.background-color]="bottomWrapperColor ? bottomWrapperColor : ''"
        class="card1-bottom-wrapper">
   </div>
   <div *ngIf="bottomLayer" class="bottom-layer">
     <svg style="min-height: 210px;" xmlns="http://www.w3.org/2000/svg">
       <path transform="translate(100 100)" d="M28.9,-40.6C39.8,-43.8,52.4,-40.7,53.9,-32.9C55.4,-25,45.8,-12.5,45.4,-0.2C44.9,12,53.7,24,49.3,26.9C45,29.8,27.5,23.6,17.1,32.7C6.7,41.9,3.4,66.3,-3.1,71.6C-9.5,76.9,-18.9,63.1,-26.9,52.5C-34.8,42,-41.2,34.7,-48.2,26.5C-55.3,18.3,-63,9.2,-64.9,-1.1C-66.9,-11.4,-63.1,-22.8,-59.3,-36.6C-55.4,-50.4,-51.6,-66.6,-41.7,-63.9C-31.9,-61.2,-15.9,-39.7,-3.4,-33.8C9,-27.8,18.1,-37.4,28.9,-40.6Z"
-            [style.fill]="bottomLayerBackgroundColor ? bottomLayerBackgroundColor : 'var(--brand-color-lighter-2)'"
+            [style.fill]="bottomLayerBackgroundColor ? bottomLayerBackgroundColor : 'var(--theme-color-lighter-2)'"
             stroke="null" fill-opacity="0.4"/>
     </svg>
   </div>
-  <span *ngIf="ribbon.type" [attr.data-ribbon]="ribbon.text" [class]="'ribbon ribbon-' + ribbon.type"></span>
+  <span class="ribbon" *ngIf="ribbon.text" [attr.data-ribbon]="ribbon.text" [class]=" ribbon.theme + '-theme'"></span>
 </div>

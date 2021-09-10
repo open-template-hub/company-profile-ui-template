@@ -1,0 +1,22 @@
+<div class="landing-raw-content-page">
+  <div class="hero verify-account-content">
+    <div class="logo-wrapper hero-content-column">
+      <div>
+        <img [src]="loading ? brand.brandLogoMerge : (error ? brand.brandLogoBroken : brand.brandLogoMerged)" alt="logo" class="brand-logo" height="150"/>
+      </div>
+      <h1 *ngIf="loading">Verifying account..</h1>
+      <h1 *ngIf="!loading && error">Account verification failed</h1>
+      <h1 *ngIf="!loading && !error">Account verified 🎉</h1>
+    </div>
+
+    <h3 *ngIf="!loading && !error">Please proceed with login</h3>
+    <app-button1 *ngIf="!loading && !error" [text]="'LOG IN'" [themeColor]="'default'" [isSleekButton]="true"
+                 (click)="router.navigate([URLS.login])">
+    </app-button1>
+
+    <h3 *ngIf="!loading && error">Something went wrong!</h3>
+    <app-button1 *ngIf="!loading && error" [text]="'HOME'" [themeColor]="'default'" [isSleekButton]="true"
+                 (click)="router.navigate([URLS.root])">
+    </app-button1>
+  </div>
+</div>

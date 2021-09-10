@@ -1,0 +1,105 @@
+@use '../util/util';
+
+.visuallyHidden {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.product-review-stars-input {
+  @include util.flex-layout-row-reverse;
+  @include util.font-awesome;
+
+  & label {
+    cursor: pointer;
+
+    &:after {
+      position: absolute;
+
+      content: "\f005";
+      -webkit-transform: scale(4);
+      z-index: 4;
+      right: 0;
+      transition: all .4s;
+      opacity: 0;
+      color: inherit;
+      visibility: hidden;
+    }
+  }
+
+  & input {
+
+    &:checked + label {
+
+      &:after {
+        visibility: visible;
+        -webkit-transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    &:checked ~ label:after {
+      visibility: visible;
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.rate-badge-wrapper {
+  unicode-bidi: bidi-override;
+  //width: 205px;
+  width: -webkit-fit-content;
+
+  & label {
+    @include util.font-awesome;
+
+    content: "\f005";
+    font-size: 2em;
+    position: relative;
+    color: var(--darker-contrast);
+  }
+
+  & input + label {
+    &:nth-of-type(1):after {
+      color: var(--theme-color);
+    }
+
+    &:nth-of-type(2):after {
+      color: var(--theme-color-lighter-1);
+    }
+
+    &:nth-of-type(3):after {
+      color: var(--theme-color-lighter-2);
+    }
+
+    &:nth-of-type(4):after {
+      color: var(--theme-color-lighter-3);
+    }
+
+    &:nth-of-type(5):after {
+      color: var(--theme-color-lighter-4);
+    }
+  }
+}
+
+.rate {
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+  }
+}
+
+.rate-full {
+  &:after {
+    content: "\f005";
+  }
+}
+
+.rate-half {
+  &:after {
+    content: "\f089";
+  }
+}

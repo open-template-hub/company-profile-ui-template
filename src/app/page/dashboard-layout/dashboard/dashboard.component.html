@@ -23,7 +23,7 @@
             : ( userInfo?.username ? userInfo.username : '' ) }}
           <hr/>
         </div>
-        <div *ngIf="userInfo" class="section-output" fxLayout="column">
+        <div *ngIf="userInfo" class="section-output flex-layout-column">
           <app-label-data *ngIf="userInfo?.payload?.bio"
                           [data]="userInfo.payload.bio">
           </app-label-data>

@@ -2,23 +2,8 @@ import { Component, Input } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
 import { URLS } from '../../../../data/constant';
+import { Testimonial } from '../../../../model/testimonial/testimonial.model';
 import { ThemeService } from '../../../../service/theme/theme.service';
-
-export interface TestimonialOption {
-  review: string;
-  reviewer: {
-    name: string;
-    title: string;
-    photoUri: string;
-    social: {
-      linkedIn: string;
-      twitter: string;
-    };
-  };
-  style: {
-    themeColor: string;
-  };
-}
 
 @Component( {
   selector: 'app-testimonial-card',
@@ -35,12 +20,12 @@ export class TestimonialCardComponent {
     brandLogo: '',
   };
 
-  @Input() option: TestimonialOption = {
+  @Input() option: Testimonial = {
     review:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
+        '',
     reviewer: {
-      name: 'Open Template Hub',
-      title: 'Co-Founder',
+      name: '',
+      title: '',
       photoUri: '',
       social: {
         linkedIn: '',
@@ -48,7 +33,7 @@ export class TestimonialCardComponent {
       },
     },
     style: {
-      themeColor: 'var(--brand-color-lighter-2)',
+      themeColor: 'var(--theme-color-lighter-2)',
     },
   };
 

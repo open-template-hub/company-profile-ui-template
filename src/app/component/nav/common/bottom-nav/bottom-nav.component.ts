@@ -1,7 +1,9 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { PRODUCT_LINES, ProductLine, SERVICES, URLS } from '../../../../data/constant';
-import { AuthToken } from '../../../../model/AuthToken';
+import { PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
+import { URLS } from '../../../../data/constant';
+import { AuthToken } from '../../../../model/auth/auth-token.model';
+import { ProductLine } from '../../../../model/product/product.model';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
 import { LoadingService } from '../../../../service/loading/loading.service';

@@ -44,11 +44,11 @@
 }
 
 .dashboard-layout-top-nav div input:focus {
-  border-bottom: 1px solid var(--brand-color);
+  border-bottom: 1px solid var(--theme-color);
 }
 
 .dashboard-layout-top-nav div input:focus + i {
-  color: var(--brand-color);
+  color: var(--theme-color);
 }
 
 .dashboard-layout-top-nav a i {
@@ -93,7 +93,7 @@
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid var(--darker-contrast);
-  background-color: var(--brand-color);
+  background-color: var(--theme-color);
   color: var(--darker-contrast);
 }
 
@@ -121,6 +121,6 @@
 
   .dashboard-layout-top-nav-search-results a:hover {
     background: var(--hover);
-    color: var(--brand-color);
+    color: var(--theme-color);
   }
 }

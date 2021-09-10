@@ -1,0 +1,19 @@
+@use '../util/util';
+
+.logo-wrapper {
+  @include util.flex-center-center;
+
+  display: inline-flex;
+  flex-direction: column;
+
+  & > * {
+    margin: 0.4em;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .logo-wrapper > * {
+    margin: 0.2em;
+  }
+
+}

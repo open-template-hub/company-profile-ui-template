@@ -19,31 +19,27 @@ export class ToastService {
     } );
   }
 
-  error( message?: string, title?: string, override?: Partial<IndividualConfig> ) {
-    override = this.applyTheme( override );
-    this.toastrService.error( message, title, override );
+  error( message?: string, title?: string ) {
+    this.toastrService.error( message, title, this.applyTheme() );
   }
 
-  warning( message?: string, title?: string, override?: Partial<IndividualConfig> ) {
-    override = this.applyTheme( override );
-    this.toastrService.warning( message, title, override );
+  warning( message?: string, title?: string ) {
+    this.toastrService.warning( message, title, this.applyTheme() );
   }
 
-  success( message?: string, title?: string, override?: Partial<IndividualConfig> ) {
-    override = this.applyTheme( override );
-    this.toastrService.success( message, title, override );
+  success( message?: string, title?: string ) {
+    this.toastrService.success( message, title, this.applyTheme() );
   }
 
-  info( message?: string, title?: string, override?: Partial<IndividualConfig> ) {
-    override = this.applyTheme( override );
-    this.toastrService.info( message, title, override );
+  info( message?: string, title?: string ) {
+    this.toastrService.info( message, title, this.applyTheme() );
   }
 
   private applyTheme( override?: Partial<IndividualConfig> ) {
-    if ( override && this.darkLightSetting === 'dark' ) {
+    if ( this.darkLightSetting === 'dark' ) {
       override.toastClass = 'ngx-toastr-dark-mode';
     }
-    if ( override && this.darkLightSetting === 'light' ) {
+    if ( this.darkLightSetting === 'light' ) {
       override.toastClass = 'ngx-toastr-light-mode';
     }
     return override;

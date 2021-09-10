@@ -131,14 +131,6 @@ PORT=4200
 
 Check project's current **nodejs** and **npm** version from **[package.json](package.json)**.
 
-## Landing Screen Images
-
-To be able to update home screen images, we are using open source project **[Scale by Flexiple](https://2.flexiple.com/scale/all-illustrations)**.
-
-Find our brand color at **[brand.scss](src/styles/theme/brand.scss)** and apply at the website and download images.
-
-<br/>
-
 ## Brand Color Scale Generator
 
 To be able to generate brand color scales, we are using **[Colllor](http://colllor.com)**.

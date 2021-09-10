@@ -1,57 +1,40 @@
-.dashboard-layout-page {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: var(--background-color);
-  padding: 0.5rem 0 0 env(safe-area-inset-left);
-}
+@use '../../../styles/page/page';
 
-.dashboard-layout-page-content {
+.page-content {
   padding: 0 2rem 2em;
-  min-height: 120vh;
-  overflow: auto;
 }
 
 @media only screen and (max-width: 999px) {
-  .dashboard-layout-page {
+  .page {
     min-height: 200vh;
     margin-top: 55px;
   }
 
-  .dashboard-layout-page, .footer-wrap {
+  .page, .footer-wrap {
     margin-left: 0;
   }
 }
 
-@media only screen and (max-width: 1199px) and (min-width: 1000px) {
-  .side-nav-closed .dashboard-layout-page, .side-nav-closed .footer-wrap, .dashboard-layout-page, .footer-wrap {
+@media only screen and (min-width: 1000px) {
+  .side-nav-closed .page, .side-nav-closed .footer-wrap, .page, .footer-wrap {
     margin-left: 80px;
   }
-  .dashboard-layout-page, .footer-wrap {
+  .page, .footer-wrap {
     margin-right: 320px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  .dashboard-layout-page, .footer-wrap {
-    margin-left: 256px;
-    margin-right: 400px;
-  }
-}
-
 @media only screen and (min-width: 1000px) {
-  .dashboard-layout-page {
+  .page {
     margin-top: 0;
   }
 
-  .side-nav-closed .dashboard-layout-page, .side-nav-closed .footer-wrap {
-    margin-left: 80px;
+  .page, .footer-wrap {
+    margin-left: 256px;
+    margin-right: 400px;
   }
-}
 
-@media screen and (min-aspect-ratio: 4/3) {
-  .dashboard-layout-page-content {
-    min-height: 200vh;
+  .side-nav-closed .page, .side-nav-closed .footer-wrap {
+    margin-left: 80px;
   }
 }

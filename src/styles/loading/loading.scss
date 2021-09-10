@@ -1,0 +1,72 @@
+@use '../animation/animation';
+
+@mixin loading-bar {
+  left: 0;
+
+  &:after {
+    @include animation.loading-bar-animation;
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 20;
+    left: calc(-100%);
+    width: 50%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: var(--theme-color-lighter-9);
+  }
+}
+
+.dashboard-layout-top-nav-loading-bar, .landing-layout-top-nav-loading-bar, .dashboard-layout-page-top-loading-bar, .landing-layout-page-top-loading-bar {
+  @include loading-bar;
+  width: 100%;
+  height: 4px;
+  position: fixed;
+  background-color: var(--theme-color-lighter-5);
+  box-shadow: 0 1px 3px 0 var(--shadow-darker);
+  overflow: hidden;
+  z-index: 12;
+}
+
+.dashboard-layout-top-nav-loading-bar {
+  top: calc(55px + env(safe-area-inset-top));
+}
+
+.landing-layout-top-nav-loading-bar {
+  top: calc(90px + env(safe-area-inset-top));
+}
+
+.landing-layout-page-top-loading-bar {
+  top: env(safe-area-inset-top);
+}
+
+.dashboard-layout-page-top-loading-bar {
+  top: env(safe-area-inset-top);
+  left: 0;
+
+  & .side-nav-closed {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+
+  .dashboard-layout-page-top-loading-bar, .landing-layout-top-nav-loading-bar {
+    visibility: hidden;
+  }
+
+  .dashboard-layout-top-nav-loading-bar, .landing-layout-page-top-nav-loading-bar {
+    visibility: visible;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .dashboard-layout-page-top-loading-bar, .landing-layout-top-nav-loading-bar {
+    visibility: visible;
+  }
+
+  .dashboard-layout-top-nav-loading-bar, .landing-layout-page-top-loading-bar {
+    visibility: hidden;
+  }
+}

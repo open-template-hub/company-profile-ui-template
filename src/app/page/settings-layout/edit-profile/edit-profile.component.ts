@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ImageCroppedEvent } from 'ngx-image-cropper';
 import { Get as simpleIcons } from 'simple-icons';
-import { AuthToken } from '../../../model/AuthToken';
+import { AuthToken } from '../../../model/auth/auth-token.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { CategoryService } from '../../../service/category/category.service';
@@ -115,9 +115,7 @@ export class EditProfileComponent implements OnInit, OnDestroy {
     if ( this.form.invalid ) {
       for ( const control in this.form.controls ) {
         if ( this.form.controls[ control ].invalid ) {
-          this.toastService.error( errorMessages[ control ], '', {
-            positionClass: this.route.parent.snapshot.data.layout,
-          } );
+          this.toastService.error( errorMessages[ control ], '' );
         }
       }
       return;

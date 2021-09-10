@@ -13,10 +13,10 @@
       <div class="event-sub-header-title-user">
         <h4 *ngIf="user?.username">by <a
             [routerLink]="(isPublicPage ? URLS.u : URLS.user.root) + '/' + user.username"
-            class="inline-a">{{isEditable ? 'you' : ( user.username.length > 12 ? user.username.slice( 0, 12 ) + '...' : user.username )}}</a>
+            class="link">{{isEditable ? 'you' : ( user.username.length > 12 ? user.username.slice( 0, 12 ) + '...' : user.username )}}</a>
         </h4>
         <h4 *ngIf="link && showCalendar">
-          <app-ext-link [href]="link" [linkClass]="'inline-a'">
+          <app-ext-link [href]="link" [linkClass]="'link'">
             <i aria-hidden="true" [class]="'fas fa-link fa-fw'"></i>join meeting
           </app-ext-link>
         </h4>
@@ -61,43 +61,43 @@
   </div>
   <div class="event-last-item">
     <app-button1 (click)="onEditClick()" *ngIf="isEditable && !inProgress && !showRateBar && !completed"
-                 [brandColor]="true" [icon]="'pen'" [isSleekButton]="true" [text]="'Edit'">
+                 [themeColor]="'default'" [icon]="'pen'" [isSleekButton]="true" [text]="'Edit'">
     </app-button1>
     <app-button1 (click)="onBuyNowClick()"
                  *ngIf="!isEditable && isPremium && attendeeButton && !showRateBar && !completed"
-                 [brandColor]="true" [icon]="'shopping-cart'" [isSleekButton]="true"
+                 [themeColor]="'default'" [icon]="'shopping-cart'" [isSleekButton]="true"
                  [text]="'Buy Now ' + (price ? '(' + price + '$)' : '')">
     </app-button1>
     <app-button1 (click)="onAttendClick()"
                  *ngIf="!isEditable && !isPremium && attendeeButton && !showRateBar && !completed"
-                 [brandColor]="true" [isSleekButton]="true" [text]="'Attend'">
+                 [themeColor]="'default'" [isSleekButton]="true" [text]="'Attend'">
     </app-button1>
     <app-button1 (click)="onDropClick()" *ngIf="!isEditable && dropButton && !showRateBar && !completed && !isPremium"
                  [hoverWithColor]="false"
                  [isSleekButton]="true" [lighterContrast]="true" [text]="'Drop'" [transparent]="true">
     </app-button1>
     <app-button1 (click)="onMarkAsCompletedClick()" *ngIf="markAsCompleted && !showRateBar && !completed"
-                 [brandColor]="true" [isSleekButton]="true" [text]="'Mark As Completed'" [icon]="'check'">
+                 [themeColor]="'default'" [isSleekButton]="true" [text]="'Mark As Completed'" [icon]="'check'">
     </app-button1>
-    <app-button1 *ngIf="!isEditable && dropButton && !showRateBar && !completed && isPremium" [brandLightColor]="true"
+    <app-button1 *ngIf="!isEditable && dropButton && !showRateBar && !completed && isPremium" [themeLightColor]="true"
                  [isSleekButton]="true" [text]="'Attended'">
     </app-button1>
-    <app-button1 *ngIf="completed" [cursor]="'not-allowed'" [brandLightColor]="true" [isSleekButton]="true"
+    <app-button1 *ngIf="completed" [cursor]="'not-allowed'" [themeLightColor]="true" [isSleekButton]="true"
                  [text]="'Completed'">
     </app-button1>
     <app-button1 (click)="onRateClick()" *ngIf="showRateBar"
-                 [brandColor]="true" [isSleekButton]="true" [text]="'Rate'">
+                 [themeColor]="'default'" [isSleekButton]="true" [text]="'Rate'">
     </app-button1>
     <app-button1 *ngIf="inProgress" [cursor]="'not-allowed'"
-                 [brandLightColor]="true" [isSleekButton]="true" [text]="'In Progress'" [icon]="'hourglass'">
+                 [themeLightColor]="true" [isSleekButton]="true" [text]="'In Progress'" [icon]="'hourglass'">
     </app-button1>
     <div (click)="onCategoryClick()" class="event-categories">
-      <p *ngIf="category && !subCategory && !leafCategory"><a class="inline-a">{{'#' + category.name}}</a></p>
-      <p *ngIf="subCategory && !leafCategory"><a class="inline-a">{{'#' + subCategory.name}}</a></p>
-      <p *ngIf="leafCategory"><a class="inline-a">{{'#' + leafCategory.name}}</a></p>
+      <p *ngIf="category && !subCategory && !leafCategory"><a class="link">{{'#' + category.name}}</a></p>
+      <p *ngIf="subCategory && !leafCategory"><a class="link">{{'#' + subCategory.name}}</a></p>
+      <p *ngIf="leafCategory"><a class="link">{{'#' + leafCategory.name}}</a></p>
     </div>
   </div>
   <div *ngIf="!isLastItem" class="event-bottom-wrapper">
   </div>
-  <span *ngIf="ribbon.type" [attr.data-ribbon]="ribbon.text" [class]="'ribbon ribbon-' + ribbon.type"></span>
+  <span class="ribbon" *ngIf="ribbon.text" [attr.data-ribbon]="ribbon.text" [class]="ribbon.theme + '-theme'"></span>
 </div>

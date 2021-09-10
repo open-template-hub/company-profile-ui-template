@@ -1,5 +1,5 @@
 :root {
-  // [LIGHT MODE BEGIN]
+  // [LIGHT MODE DEFINITIONS BEGIN]
   // color scale
   --lighter-light-mode: #797979;
   --color-light-mode: #545454;
@@ -31,11 +31,11 @@
   --shadow-lighter-light-mode: rgba(235, 235, 235, 0.5);
   --shadow-darker-light-mode: rgba(100, 100, 100, 0.5);
 
-  --cropper-overlay-color-light-mode: var(--card);
+  --cropper-overlay-color-light-mode: var(--card-light-mode);
   --cropper-outline-color-light-mode: rgba(254, 255, 254, 0.7);
   // [LIGHT MODE END]
 
-  // [DARK MODE BEGIN]
+  // [DARK MODE DEFINITIONS BEGIN]
   // color scale
   --lighter-dark-mode: #cfcfcf;
   --color-dark-mode: #e0e0e0;
@@ -66,50 +66,12 @@
   --shadow-lighter-dark-mode: rgba(44, 44, 44, 0.5);
   --shadow-darker-dark-mode: rgba(10, 10, 10, 0.5);
 
-  --cropper-overlay-color-dark-mode: var(--card);
+  --cropper-overlay-color-dark-mode: var(--card-dark-mode);
   --cropper-outline-color-dark-mode: rgba(53, 55, 53, 0.5);
   // [DARK MODE END]
-
-  // [CURRENT MODE BEGIN]
-  // color scale
-  --lighter: var(--lighter-light-mode);
-  --color: var(--color-light-mode);
-  --darker: var(--darker-light-mode);
-
-  // contra color scale
-  --darker-contrast: var(--darker-contrast-light-mode);
-  --contrast: var(--contrast-light-mode);
-  --lighter-contrast: var(--lighter-contrast-light-mode);
-
-  // information level colors
-  --success: var(--success-light-mode);
-  --error: var(--error-light-mode);
-  --warn: var(--warn-light-mode);
-  --info: var(--info-light-mode);
-
-  // event type colors
-  --premium: var(--premium-light-mode);
-  --featured: var(--featured-light-mode);
-  --new: var(--new-light-mode);
-
-  // background
-  --background-color: var(--background-color-light-mode);
-  --background-color-alpha: var(--background-color-alpha-light-mode);
-  --card: var(--card-light-mode);
-
-  --shadow: var(--shadow-light-mode);
-  --shadow-lighter: var(--shadow-lighter-light-mode);
-  --shadow-darker: var(--shadow-darker-light-mode);
-
-  --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
-  --cropper-outline-color: var(--cropper-outline-color-light-mode);
-
-  --always-contrast-light-mode: var(--contrast-light-mode);
-  --always-card-dark-mode: var(--card-dark-mode);
-  // [CURRENT MODE END]
 }
 
-.light-theme {
+:root, .light-theme {
   // color scale
   --lighter: var(--lighter-light-mode);
   --color: var(--color-light-mode);
@@ -147,7 +109,7 @@
   --always-card-dark-mode: var(--card-dark-mode);
 }
 
-.dark-theme {
+@mixin theme-general-dark-mode {
   // color scale
   --lighter: var(--lighter-dark-mode);
   --color: var(--color-dark-mode);
@@ -182,39 +144,12 @@
   --cropper-outline-color: var(--cropper-outline-color-dark-mode);
 }
 
+.dark-theme {
+  @include theme-general-dark-mode;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    // color scale
-    --lighter: var(--lighter-dark-mode);
-    --color: var(--color-dark-mode);
-    --darker: var(--darker-dark-mode);
-
-    // contra color scale
-    --darker-contrast: var(--darker-contrast-dark-mode);
-    --contrast: var(--contrast-dark-mode);
-    --lighter-contrast: var(--lighter-contrast-dark-mode);
-
-    // information level colors
-    --success: var(--success-dark-mode);
-    --error: var(--error-dark-mode);
-    --warn: var(--warn-dark-mode);
-    --info: var(--info-dark-mode);
-
-    // event type colors
-    --premium: var(--premium-dark-mode);
-    --featured: var(--featured-dark-mode);
-    --new: var(--new-dark-mode);
-
-    // background
-    --background-color: var(--background-color-dark-mode);
-    --background-color-alpha: var(--background-color-alpha-dark-mode);
-    --card: var(--card-dark-mode);
-
-    --shadow: var(--shadow-dark-mode);
-    --shadow-lighter: var(--shadow-lighter-dark-mode);
-    --shadow-darker: var(--shadow-darker-dark-mode);
-
-    --cropper-overlay-color: var(--cropper-overlay-color-dark-mode);
-    --cropper-outline-color: var(--cropper-outline-color-dark-mode);
+    @include theme-general-dark-mode;
   }
 }

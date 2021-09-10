@@ -48,12 +48,6 @@
 textarea, input {
   @include default-input-font-config;
 
-  &::-webkit-input-placeholder {
-    @include default-input-font-config;
-  }
-}
-
-textarea, input {
   color: var(--color);
   background: transparent;
   border: 0;

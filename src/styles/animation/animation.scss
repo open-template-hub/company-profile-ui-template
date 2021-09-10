@@ -1,3 +1,20 @@
+@mixin loading-bar-animation {
+  animation: loading-bar 1.5s infinite ease-in-out;
+  animation-direction: normal;
+}
+
+@keyframes loading-bar {
+  0% {
+    left: calc(-100%);
+    background-color: var(--brand-color-lighter-4);
+  }
+
+  100% {
+    left: 100%;
+    background-color: var(--brand-color-lighter-2);
+  }
+}
+
 .bounce {
   animation-duration: 2s;
   animation-iteration-count: infinite;

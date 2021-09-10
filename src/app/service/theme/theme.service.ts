@@ -65,22 +65,12 @@ export class ThemeService {
     this.darkLightSettingSubject = new BehaviorSubject<string>( darkLightSettingStorageItem );
     this.darkLightSetting = this.darkLightSettingSubject.asObservable();
 
-    this.maxAspectRatioMedia = window.matchMedia( 'screen and (max-aspect-ratio: 1/1)' );
-    this.maxHeightMedia = window.matchMedia( 'screen and (max-height: 999px)' );
+    let sideNavClosedStorageItem = localStorage.getItem( 'sideNavClosed' ) ?
+        localStorage.getItem( 'sideNavClosed' ) : sessionStorage.getItem( 'sideNavClosed' );
+    sideNavClosedStorageItem = sideNavClosedStorageItem ? sideNavClosedStorageItem : 'auto';
 
-    let sideNavClosedStorageItem: string;
-    if ( this.maxAspectRatioMedia || this.maxHeightMedia.matches ) {
-      sideNavClosedStorageItem = 'true';
-    } else {
-      sideNavClosedStorageItem = 'false';
-    }
-
-    if ( localStorage.getItem( 'currentUser' ) ) {
-      sessionStorage.removeItem( 'sideNavClosed' );
-      localStorage.setItem( 'sideNavClosed', sideNavClosedStorageItem );
-    } else {
-      sessionStorage.setItem( 'sideNavClosed', sideNavClosedStorageItem );
-    }
+    this.sideNavClosedSubject = new BehaviorSubject<string>( sideNavClosedStorageItem );
+    this.sideNavClosed = this.sideNavClosedSubject.asObservable();
 
     this.sideNavClosedSubject = new BehaviorSubject<string>( sideNavClosedStorageItem );
     this.sideNavClosed = this.sideNavClosedSubject.asObservable();

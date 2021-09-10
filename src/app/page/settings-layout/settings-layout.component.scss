@@ -24,13 +24,13 @@
   }
 }
 
-@media only screen and (max-width: 1199px) and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) {
   .side-nav-closed .settings-layout-page, .side-nav-closed .footer-wrap, .settings-layout-page, .footer-wrap {
     margin-left: 80px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   .settings-layout-page, .footer-wrap {
     margin-left: 256px;
   }

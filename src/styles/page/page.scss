@@ -45,6 +45,10 @@
   display: flex;
 }
 
+.hero-content-column {
+  @extend .hero-content;
+}
+
 .hero-content-left, .hero-content-right {
   display: flex;
   flex-direction: column;
@@ -107,5 +111,10 @@
 
   .hero-content {
     flex-direction: row;
+  }
+
+  .hero-content-column {
+    @extend .hero-content;
+    flex-direction: column;
   }
 }

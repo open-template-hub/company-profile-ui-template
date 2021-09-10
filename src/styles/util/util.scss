@@ -35,13 +35,13 @@
 }
 
 @mixin flex-layout-row {
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
 }
 
 @mixin flex-layout-column {
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .circle {

@@ -1,3 +1,5 @@
+@use '../util/util';
+
 .ribbon {
   width: 12.1em;
   height: 12.1em;
@@ -10,6 +12,66 @@
   font-size: 13px;
   text-decoration: none;
   text-indent: -999999px;
+
+  &:hover, &:active {
+    background-color: transparent;
+  }
+
+  &:before, &:after {
+    /* The right and left classes determine the side we attach our banner to */
+    position: absolute;
+    display: block;
+    width: 15.38em;
+    height: 1.54em;
+
+    top: 3.23em;
+    right: -3.23em;
+
+    @include util.prefix(box-sizing, content-box, moz webkit);
+    @include util.prefix(transform, rotate(45deg), moz webkit ms o);
+  }
+
+  &:before {
+    @include util.prefix(box-shadow, 0 .15em .23em 0 var(--shadow), moz webkit);
+
+    content: "";
+    padding: .38em 0;
+
+    background-color: var(--theme-color);
+
+    /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+
+    pointer-events: auto;
+  }
+
+  &:after {
+    /* Set the text from the data-ribbon attribute */
+    content: attr(data-ribbon);
+
+    /* Set the text properties */
+    color: white;
+    font: 700 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.54em;
+    text-decoration: none;
+    text-shadow: 0 -.08em var(--shadow-darker);
+    text-align: center;
+    text-indent: 0;
+
+    /* Set the layout properties */
+    padding: .15em 0;
+    margin: .15em 0;
+
+    /* Add "stitching" effect */
+    border-width: .08em 0;
+    border-style: dotted;
+    border-color: var(--always-contrast-light-mode);
+  }
 }
 
 .ribbon.ribbon-top {
@@ -18,146 +80,4 @@
 
 .ribbon.fixed {
   position: fixed;
-}
-
-.ribbon:hover, .ribbon:active {
-  background-color: rgba(0, 0, 0, 0.0);
-}
-
-.ribbon:before, .ribbon:after {
-  /* The right and left classes determine the side we attach our banner to */
-  position: absolute;
-  display: block;
-  width: 15.38em;
-  height: 1.54em;
-
-  top: 3.23em;
-  right: -3.23em;
-
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.ribbon:before {
-  content: "";
-
-  /* Add a bit of padding to give some substance outside the "stitching" */
-  padding: .38em 0;
-
-  /* Set a gradient: transparent black at the top to almost-transparent black at the bottom */
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
-  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
-
-  /* Add a drop shadow */
-  -webkit-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 0 .15em .23em 0 rgba(0, 0, 0, 0.5);
-
-  pointer-events: auto;
-}
-
-.ribbon.ribbon-premium:before {
-  background-color: var(--premium);
-}
-
-.ribbon.ribbon-brand:before {
-  background-color: var(--brand-color);
-}
-
-.ribbon.ribbon-featured:before {
-  background-color: var(--featured);
-}
-
-.ribbon.ribbon-error:before {
-  background-color: var(--error);
-}
-
-.ribbon.ribbon-warn:before {
-  background-color: var(--warn);
-}
-
-.ribbon.ribbon-info:before {
-  background-color: var(--info);
-}
-
-.ribbon.ribbon-success:before {
-  background-color: var(--success);
-}
-
-.ribbon.ribbon-new:before {
-  background-color: var(--new);
-}
-
-.ribbon.local:before {
-  background-color: var(--brand-color-green-theme);
-}
-
-.ribbon.staging:before {
-  background-color: var(--brand-color-yellow-theme);
-}
-
-.ribbon.ribbon-deal:before {
-  background-color: var(--brand-color-default-theme);
-}
-
-.ribbon:after {
-  /* Set the text from the data-ribbon attribute */
-  content: attr(data-ribbon);
-
-  /* Set the text properties */
-  color: #fff;
-  font: 700 1em "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.54em;
-  text-decoration: none;
-  text-shadow: 0 -.08em rgba(0, 0, 0, 0.5);
-  text-align: center;
-  text-indent: 0;
-
-  /* Set the layout properties */
-  padding: .15em 0;
-  margin: .15em 0;
-
-  /* Add "stitching" effect */
-  border-width: .08em 0;
-  border-style: dotted;
-  border-color: var(--always-contrast-light-mode);
-}
-
-.ribbon.left-top, .ribbon.left-bottom {
-  right: auto;
-  left: 0;
-}
-
-.ribbon.left-bottom, .ribbon.right-bottom {
-  top: auto;
-  bottom: 0;
-}
-
-.ribbon.left-top:before, .ribbon.left-top:after, .ribbon.left-bottom:before, .ribbon.left-bottom:after {
-  right: auto;
-  left: -3.23em;
-}
-
-.ribbon.left-bottom:before, .ribbon.left-bottom:after, .ribbon.right-bottom:before, .ribbon.right-bottom:after {
-  top: auto;
-  bottom: 3.23em;
-}
-
-.ribbon.left-top:before, .ribbon.left-top:after, .ribbon.right-bottom:before, .ribbon.right-bottom:after {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
 }

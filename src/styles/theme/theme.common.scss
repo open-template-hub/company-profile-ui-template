@@ -1,5 +1,5 @@
 :root {
-  // [LIGHT MODE BEGIN]
+  // [LIGHT MODE DEFINITIONS BEGIN]
   // color scale
   --lighter-light-mode: #797979;
   --color-light-mode: #545454;
@@ -16,11 +16,6 @@
   --warn-light-mode: #d28f29;
   --info-light-mode: #5c98cd;
 
-  // event type colors
-  --premium-light-mode: #43b043;
-  --featured-light-mode: #d6b406;
-  --new-light-mode: #06b7d6;
-
   // background
   --background-color-light-mode: white;
   --background-color-alpha-light-mode: rgba(255, 255, 255, 0.93);
@@ -28,13 +23,14 @@
 
   --shadow-light-mode: rgba(155, 155, 155, 0.5);
 
-  --shadow2-light-mode: hsla(0, 0%, 92%, 0.5);
+  --shadow-lighter-light-mode: rgba(235, 235, 235, 0.5);
+  --shadow-darker-light-mode: rgba(100, 100, 100, 0.5);
 
-  --cropper-overlay-color-light-mode: var(--card);
+  --cropper-overlay-color-light-mode: var(--card-light-mode);
   --cropper-outline-color-light-mode: rgba(254, 255, 254, 0.7);
   // [LIGHT MODE END]
 
-  // [DARK MODE BEGIN]
+  // [DARK MODE DEFINITIONS BEGIN]
   // color scale
   --lighter-dark-mode: #cfcfcf;
   --color-dark-mode: #e0e0e0;
@@ -51,24 +47,21 @@
   --warn-dark-mode: #cda05c;
   --info-dark-mode: #3d79ac;
 
-  // event type colors
-  --premium-dark-mode: #43b043;
-  --featured-dark-mode: #b09404;
-  --new-dark-mode: #0499b3;
-
   // background
   --background-color-dark-mode: #353535;
   --background-color-alpha-dark-mode: rgba(53, 53, 53, 0.93);
   --card-dark-mode: #353735;
 
   --shadow-dark-mode: rgba(25, 25, 25, 0.5);
-  --shadow2-dark-mode: rgba(44, 44, 44, 0.5);
+  --shadow-lighter-dark-mode: rgba(44, 44, 44, 0.5);
+  --shadow-darker-dark-mode: rgba(10, 10, 10, 0.5);
 
-  --cropper-overlay-color-dark-mode: var(--card);
+  --cropper-overlay-color-dark-mode: var(--card-dark-mode);
   --cropper-outline-color-dark-mode: rgba(53, 55, 53, 0.5);
   // [DARK MODE END]
+}
 
-  // [CURRENT MODE BEGIN]
+:root, .light-theme {
   // color scale
   --lighter: var(--lighter-light-mode);
   --color: var(--color-light-mode);
@@ -85,56 +78,14 @@
   --warn: var(--warn-light-mode);
   --info: var(--info-light-mode);
 
-  // event type colors
-  --premium: var(--premium-light-mode);
-  --featured: var(--featured-light-mode);
-  --new: var(--new-light-mode);
-
   // background
   --background-color: var(--background-color-light-mode);
   --background-color-alpha: var(--background-color-alpha-light-mode);
   --card: var(--card-light-mode);
 
   --shadow: var(--shadow-light-mode);
-  --shadow2: var(--shadow2-light-mode);
-
-  --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
-  --cropper-outline-color: var(--cropper-outline-color-light-mode);
-
-  --always-contrast-light-mode: var(--contrast-light-mode);
-  --always-card-dark-mode: var(--card-dark-mode);
-  // [CURRENT MODE END]
-}
-
-.light-theme {
-  // color scale
-  --lighter: var(--lighter-light-mode);
-  --color: var(--color-light-mode);
-  --darker: var(--darker-light-mode);
-
-  // contra color scale
-  --darker-contrast: var(--darker-contrast-light-mode);
-  --contrast: var(--contrast-light-mode);
-  --lighter-contrast: var(--lighter-contrast-light-mode);
-
-  // information level colors
-  --success: var(--success-light-mode);
-  --error: var(--error-light-mode);
-  --warn: var(--warn-light-mode);
-  --info: var(--info-light-mode);
-
-  // event type colors
-  --premium: var(--premium-light-mode);
-  --featured: var(--featured-light-mode);
-  --new: var(--new-light-mode);
-
-  // background
-  --background-color: var(--background-color-light-mode);
-  --background-color-alpha: var(--background-color-alpha-light-mode);
-  --card: var(--card-light-mode);
-
-  --shadow: var(--shadow-light-mode);
-  --shadow2: var(--shadow2-light-mode);
+  --shadow-lighter: var(--shadow-lighter-light-mode);
+  --shadow-darker: var(--shadow-darker-light-mode);
 
   --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
   --cropper-outline-color: var(--cropper-outline-color-light-mode);
@@ -143,7 +94,7 @@
   --always-card-dark-mode: var(--card-dark-mode);
 }
 
-.dark-theme {
+@mixin theme-general-dark-mode {
   // color scale
   --lighter: var(--lighter-dark-mode);
   --color: var(--color-dark-mode);
@@ -160,55 +111,25 @@
   --warn: var(--warn-dark-mode);
   --info: var(--info-dark-mode);
 
-  // event type colors
-  --premium: var(--premium-dark-mode);
-  --featured: var(--featured-dark-mode);
-  --new: var(--new-dark-mode);
-
   // background
   --background-color: var(--background-color-dark-mode);
   --background-color-alpha: var(--background-color-alpha-dark-mode);
   --card: var(--card-dark-mode);
 
   --shadow: var(--shadow-dark-mode);
-  --shadow2: var(--shadow2-dark-mode);
+  --shadow-lighter: var(--shadow-lighter-dark-mode);
+  --shadow-darker: var(--shadow-darker-dark-mode);
 
   --cropper-overlay-color: var(--cropper-overlay-color-dark-mode);
   --cropper-outline-color: var(--cropper-outline-color-dark-mode);
 }
 
+.dark-theme {
+  @include theme-general-dark-mode;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    // color scale
-    --lighter: var(--lighter-dark-mode);
-    --color: var(--color-dark-mode);
-    --darker: var(--darker-dark-mode);
-
-    // contra color scale
-    --darker-contrast: var(--darker-contrast-dark-mode);
-    --contrast: var(--contrast-dark-mode);
-    --lighter-contrast: var(--lighter-contrast-dark-mode);
-
-    // information level colors
-    --success: var(--success-dark-mode);
-    --error: var(--error-dark-mode);
-    --warn: var(--warn-dark-mode);
-    --info: var(--info-dark-mode);
-
-    // event type colors
-    --premium: var(--premium-dark-mode);
-    --featured: var(--featured-dark-mode);
-    --new: var(--new-dark-mode);
-
-    // background
-    --background-color: var(--background-color-dark-mode);
-    --background-color-alpha: var(--background-color-alpha-dark-mode);
-    --card: var(--card-dark-mode);
-
-    --shadow: var(--shadow-dark-mode);
-    --shadow2: var(--shadow2-dark-mode);
-
-    --cropper-overlay-color: var(--cropper-overlay-color-dark-mode);
-    --cropper-outline-color: var(--cropper-outline-color-dark-mode);
+    @include theme-general-dark-mode;
   }
 }

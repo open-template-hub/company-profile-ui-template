@@ -9,9 +9,8 @@ import { LoadingService } from '../../../../service/loading/loading.service';
 export class Button1Component {
 
   @Input() text = 'Button';
-  @Input() circle = false;
-  @Input() brandColor = false;
-  @Input() brandLightColor = false;
+  @Input() classType = 'top-right-bottom-left-rounded-box';
+  @Input() themeLightColor = false;
   @Input() transparent = false;
   @Input() success = false;
   @Input() isContribute = false;

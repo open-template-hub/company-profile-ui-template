@@ -1,4 +1,4 @@
-<div class="home-page">
+<div class="product-page">
   <div class="hero">
     <div class="hero-content">
       <div class="product-content-left">
@@ -6,14 +6,14 @@
         <p class="product-description">{{ product.description }}</p>
         <div class="register-wrapper">
           <input
-            class="rounded-box"
+            class="top-right-bottom-left-rounded-box"
             type="text"
             [formControl]="emailControl"
             placeholder="Email address"
           />
           <div class="register-button">
             <button
-              class="register-button-item rounded-box"
+              class="register-button-item top-right-bottom-left-rounded-box"
               (click)="router.navigate([URLS.maintenance])"
             >
               Request for Demo

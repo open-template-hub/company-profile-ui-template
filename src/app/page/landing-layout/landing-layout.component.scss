@@ -1,16 +1,4 @@
-.landing-layout-page {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-  background-color: var(--background-color);
-}
-
-.landing-raw-content-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+@use '../../../styles/page/page';
 
 .header {
   position: fixed;
@@ -25,14 +13,8 @@
   height: 90px;
 }
 
-.landing-layout-page-content {
-  min-height: 120vh;
-  position: relative;
-  z-index: 2;
-}
-
 .policy-content a {
-  color: var(--brand-color);
+  color: var(--theme-color);
 }
 
 .landing-form-page {
@@ -90,11 +72,5 @@
 
   .landing-form-page {
     padding-top: 165px;
-  }
-}
-
-@media screen and (min-aspect-ratio: 4/3) {
-  .landing-layout-page-content {
-    min-height: 200vh;
   }
 }

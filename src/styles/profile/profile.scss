@@ -1,13 +1,26 @@
+@use '../util/util';
+
+.profile-img-small, .profile-img-full, .profile-img-wrapper {
+  @include util.prefix(border-radius, 99em, moz webkit);
+}
+
 .profile-img-small, .profile-img-full {
   display: block;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-border-radius: 99em;
-  -moz-border-radius: 99em;
-  border-radius: 99em;
-  background-color: var(--contrast);
-  border: 1px solid var(--contrast);
+
+  @include util.prefix(border-radius, 99em, moz webkit);
+
+  background: {
+    size: cover;
+    repeat: no-repeat;
+    position: center center;
+    color: var(--contrast);
+  };
+
+  border: {
+    width: 1px;
+    style: solid;
+    color: var(--contrast);
+  }
 }
 
 .profile-img-small {
@@ -22,17 +35,8 @@
 }
 
 .profile-img-wrapper {
-  -webkit-border-radius: 99em;
-  -moz-border-radius: 99em;
-  border-radius: 99em;
+  border: none;
   margin-bottom: 2em;
   box-shadow: 0 3px 2px var(--shadow);
-  border: none;
   max-width: fit-content;
-}
-
-@media only screen and (min-width: 1000px) {
-  .profile-img-wrapper {
-    max-width: fit-content;
-  }
 }

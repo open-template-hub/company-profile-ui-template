@@ -18,7 +18,7 @@ export const DEFAULT_PRICING_LIST: Pricing[] = [
   },
   {
     title: 'BASIC',
-    ribbon: { type: 'deal', text: 'DEAL' },
+    ribbon: { theme: 'blue', text: 'DEAL' },
     price: {
       currency: '$',
       value: '49',

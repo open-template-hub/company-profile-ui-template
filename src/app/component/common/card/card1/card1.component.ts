@@ -25,11 +25,11 @@ export class Card1Component {
   @Input() bottomWrapper = true;
   @Input() bottomWrapperColor = '';
   @Input() topWrapper = false;
-  @Input() topWrapperInBrandColor = false;
+  @Input() topWrapperInThemeColor = false;
   @Input() height = undefined;
   @Input() width = undefined;
   @Input() maxHeight = false;
-  @Input() ribbon: Ribbon = { text: '', type: '' };
+  @Input() ribbon: Ribbon = { text: '', theme: '' };
   @Input() isCardContentOverflowVisible = false;
   @Input() topLayer = false;
   @Input() bottomLayer = false;
@@ -38,6 +38,7 @@ export class Card1Component {
   @Input() topLayerBackgroundColor = '';
   @Input() bottomLayerBackgroundColor = '';
   @Input() testimonialSizeActive = false;
+  @Input() headerType = 'top-right-bottom-left-rounded-box';
 
   loading = false;
 

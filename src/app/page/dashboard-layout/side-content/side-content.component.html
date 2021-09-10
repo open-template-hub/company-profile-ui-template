@@ -7,7 +7,7 @@
                [paddingContent]="false" [shadow]="false" class="upcoming-card">
       <div body class="section">
         <p *ngIf="recommendedEvents?.length > 0">Explore Events</p>
-        <hr *ngIf="recommendedEvents?.length > 0" style="width: 100%; border: 1px solid var(--brand-color); margin-top: 5px;"/>
+        <hr *ngIf="recommendedEvents?.length > 0" style="width: 100%; border: 1px solid var(--theme-color); margin-top: 5px;"/>
         <a *ngFor="let event of recommendedEvents">
           <app-event-data (titleClicked)="openEventDetails($event)"
                                  [attendeeButton]="false"
@@ -34,7 +34,7 @@
           </app-event-data>
         </a>
         <p *ngIf="recommendedEventsByFollowingList?.length > 0">Followed Contributors</p>
-        <hr *ngIf="recommendedEventsByFollowingList?.length > 0" style="width: 100%; border: 1px solid var(--brand-color); margin-top: 5px;"/>
+        <hr *ngIf="recommendedEventsByFollowingList?.length > 0" style="width: 100%; border: 1px solid var(--theme-color); margin-top: 5px;"/>
         <a *ngFor="let event of recommendedEventsByFollowingList">
           <app-event-data (titleClicked)="openEventDetails($event)"
                                  [attendeeButton]="false"

@@ -4,9 +4,9 @@
       <div class="flex-layout-row flex-center-center">
         <app-social-button (click)="socialLogin(environmentCommon.website.facebook)"
                            [brand]="environmentCommon.website.facebook.cssClass"
-                           [circle]="true"></app-social-button>
+                           [classType]="'circle'"></app-social-button>
         <app-social-button (click)="socialLogin(environmentCommon.website.google)" [brand]="environmentCommon.website.google.cssClass"
-                           [circle]="true"></app-social-button>
+                           [classType]="'circle'"></app-social-button>
       </div>
       <div class="login-page-middle-text flex-layout-column flex-center-center">
         <p>or</p>
@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="section-submit">
-          <app-button1 [brandColor]="true" [text]="'CONTINUE'"></app-button1>
+          <app-button1 [themeColor]="'default'" [text]="'CONTINUE'"></app-button1>
           <p>
             <small class="dim">By signing up, you agree
               <a class="link" routerLink="{{URLS.terms}}" target="_blank" rel=noopener>Terms of Use</a>,

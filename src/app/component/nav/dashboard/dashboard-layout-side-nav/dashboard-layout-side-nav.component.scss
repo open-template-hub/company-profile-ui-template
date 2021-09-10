@@ -7,6 +7,7 @@
   overflow-y: scroll;
   padding: 0 0 0 0;
   box-shadow: 0 0 13px 2px var(--shadow);
+  z-index: 21;
 }
 
 .side-nav {
@@ -112,16 +113,6 @@
 @media only screen and (max-width: 999px) {
   .side-nav-wrapper {
     visibility: hidden;
-  }
-}
-
-@media only screen and (max-width: 1199px) {
-  .side-nav, .side-nav-closed.side-nav {
-    width: 80px;
-  }
-
-  #menu {
-    display: none;
   }
 }
 

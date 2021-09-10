@@ -13,8 +13,7 @@ export const TIME_LINE: TimeLine[] = [
     date: '7 Mar 2020',
     paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
     img:
-        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
-    theme: ThemeColorSettings.blue
+        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/demonstration.png',
   },
   {
     title: 'Payment server',
@@ -22,21 +21,21 @@ export const TIME_LINE: TimeLine[] = [
     paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
     img:
         'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png',
-    theme: ThemeColorSettings.red
   },
   {
     title: 'Hello npm',
     date: '14 Jun 2020',
     paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
     img:
-        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
+        'https://avatars.githubusercontent.com/u/6078720?s=200&v=4',
+    theme: ThemeColorSettings.red
   },
   {
     title: 'One server to rule them all',
     date: '28 Jun 2020',
     paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
     img:
-        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/orchestration-server-logo.png',
+        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png',
     theme: ThemeColorSettings.yellow
   },
   {

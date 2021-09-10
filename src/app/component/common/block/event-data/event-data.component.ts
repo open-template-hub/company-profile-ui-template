@@ -49,7 +49,7 @@ export class EventDataComponent implements OnInit {
   @Input() maxHeight = false;
   @Input() addMarginToDescription = false;
   @Input() centeredTitle = false;
-  @Input() ribbon = { text: '', type: '' };
+  @Input() ribbon = { text: '', theme: '' };
   @Input() isPremium = false;
   @Input() removeLineClamp = false;
   @Input() markAsCompleted = false;

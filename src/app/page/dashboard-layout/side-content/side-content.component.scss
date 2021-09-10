@@ -5,7 +5,7 @@
   right: 0;
   background-color: var(--background-color);
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .side-content {
@@ -134,13 +134,6 @@ app-search {
 @media only screen and (max-width: 999px) {
   .side-content-wrapper {
     visibility: hidden;
-  }
-}
-
-@media only screen and (max-width: 1199px) {
-  .side-content, .search-results, .search-area, .upcoming-card, app-search {
-    width: 320px;
-    font-size: 0.95em;
   }
 }
 

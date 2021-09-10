@@ -1,12 +1,30 @@
+@use '../../../styles/util/util';
+
 .splash-layout-page {
+  @include util.flex-layout-column;
+
   background-color: var(--background-color);
+
   position: fixed;
+
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100vh;
-  display: flex;
+
   align-items: center;
   text-align: center;
-  flex-direction: column;
+}
+
+.splash-logos > * {
+  margin: 8px;
+}
+
+.splash-logos i {
+  font-size: 28px;
+}
+
+.splash-logos img {
+  height: 55px;
 }

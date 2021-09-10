@@ -1,4 +1,4 @@
-.home-page {
+.product-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,7 +37,7 @@
 
 .product-line-header h4 {
   font-weight: normal;
-  color: var(--brand-color);
+  color: var(--theme-color);
 }
 
 .feature img {
@@ -51,7 +51,7 @@
 }
 
 .feature-right .feature {
-  background-color: var(--brand-color-lighter-5);
+  background-color: var(--theme-color-lighter-5);
 }
 
 .feature-notes {
@@ -119,8 +119,8 @@
   padding: 10px 17px;
   display: inline-flex;
   align-items: center;
-  color: var(--brand-color);
-  border: 1px solid var(--brand-color);
+  color: var(--theme-color);
+  border: 1px solid var(--theme-color);
   margin-left: 1.5em;
   white-space: nowrap;
 }
@@ -146,7 +146,7 @@
 }
 
 .counter {
-  color: var(--brand-color);
+  color: var(--theme-color);
   font-weight: 400;
 }
 
@@ -162,12 +162,12 @@
   font-weight: bold;
 }
 
-.home-page .hero-content {
+.product-page .hero-content {
   display: flex;
 }
 
 .product-content-left {
-  background: var(--shadow2);
+  background: var(--shadow-lighter);
   height: 360px;
   max-width: 620px;
   margin-left: 5px;
@@ -191,7 +191,7 @@ app-swiper-wrapper {
 }
 
 @media only screen and (max-width: 999px) {
-  .home-page {
+  .product-page {
     font-size: 32px;
   }
 
@@ -250,7 +250,7 @@ app-swiper-wrapper {
 }
 
 @media only screen and (min-width: 1000px) {
-  .home-page {
+  .product-page {
     font-size: 35px;
   }
 
@@ -318,7 +318,7 @@ app-swiper-wrapper {
     margin: 5px 0 0;
   }
 
-  .home-page .hero-content {
+  .product-page .hero-content {
     width: 90%;
     max-height: 24vw;
     margin-left: 10%;

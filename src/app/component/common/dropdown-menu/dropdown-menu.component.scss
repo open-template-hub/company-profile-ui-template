@@ -1,3 +1,6 @@
+@use '../../../../styles/util/util';
+@use '../../../../styles/animation/animation';
+
 .dropdown {
   position: relative;
 }
@@ -15,7 +18,7 @@
 
 .dropdown-content i {
   font-size: 15px;
-  color: var(--brand-color-lighter-2);
+  color: var(--theme-color-lighter-2);
 }
 
 .dropdown-top-menu {
@@ -82,7 +85,7 @@
 }
 
 .section-column .section-header h4 {
-  color: var(--brand-color);
+  color: var(--theme-color);
   font-weight: 500;
 }
 
@@ -94,7 +97,8 @@
 }
 
 .section-column hr {
-  width: 94%;
+  @include util.card-header-width-sm;
+
   margin: 0 0 0 10px;
   border-style: solid;
   border-color: var(--darker-contrast);
@@ -104,7 +108,7 @@
   width: 25%;
   margin: 0 0 0 1px;
   border-style: solid;
-  border-color: var(--brand-color);
+  border-color: var(--theme-color);
 }
 
 .section-column-wrapper {
@@ -117,6 +121,8 @@
 
 @media only screen and (max-width: 999px) {
   .dropdown-content {
+    @include animation.bottom-slide-in-animation;
+
     display: block;
     position: fixed;
     bottom: calc(55px + env(safe-area-inset-bottom));
@@ -128,11 +134,11 @@
     padding: 0;
     margin: 0;
     width: 100%;
-    animation: bottom-slide-in 0.4s;
   }
 
   .dropdown-opened {
-    animation: bottom-slide-out 0.4s;
+    @include animation.bottom-slide-out-animation;
+
     bottom: -100%;
   }
 
@@ -172,7 +178,7 @@
 @media (hover: hover) {
   .dropdown-item:hover {
     transition: .4s all ease-in-out;
-    background-color: var(--brand-color-lighter-8);
+    background-color: var(--theme-color-lighter-8);
   }
 
   .dropdown-item:hover img {
@@ -181,7 +187,7 @@
   }
 
   .dropdown-item:hover .dropdown-item-content > * {
-    color: var(--brand-color-darker-7);
+    color: var(--theme-color-darker-7);
   }
 }
 
@@ -251,10 +257,10 @@
   }
 
   .section-column::-webkit-scrollbar-track {
-    background-color: var(--brand-color-lighter-9);
+    background-color: var(--theme-color-lighter-9);
   }
 
   .section-column::-webkit-scrollbar-thumb {
-    background-color: var(--brand-color-lighter-3);
+    background-color: var(--theme-color-lighter-3);
   }
 }

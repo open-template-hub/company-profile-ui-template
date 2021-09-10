@@ -1,3 +1,5 @@
+@use '../../../../../styles/util/util';
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -32,8 +34,8 @@
 }
 
 .footer-hr-row hr {
+  @include util.card-header-width-sm;
   border: 1px solid var(--hover);
-  width: 95%;
 }
 
 .footer-link-content {
@@ -69,11 +71,11 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: var(--brand-color);
+  color: var(--theme-color);
 }
 
 .footer-social i {
-  color: var(--brand-color);
+  color: var(--theme-color);
 }
 
 .footer.footer-hide-shadow {
@@ -181,7 +183,7 @@
   }
 
   .footer-brand-row .brand {
-    border-right: 1px solid var(--brand-color);
+    border-right: 1px solid var(--theme-color);
     padding: 0 10px;
   }
 
@@ -204,6 +206,6 @@
 
   .footer-link-content:hover {
     background: none;
-    color: var(--brand-color);
+    color: var(--theme-color);
   }
 }

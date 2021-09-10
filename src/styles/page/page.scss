@@ -1,5 +1,21 @@
 @use '../util/util';
 
+.page {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--background-color);
+  padding: 0.5rem 0 0 env(safe-area-inset-left);
+
+  & .page-content {
+    min-height: 120vh;
+    overflow: auto;
+    position: relative;
+    z-index: 2;
+  }
+}
+
 .hero, .in-page-title, .landing-title {
   @include util.flex-layout-column;
 
@@ -31,6 +47,7 @@
 .top-layer {
   position: absolute;
   left: 0;
+  z-index: 1;
 }
 
 .hero-content {
@@ -81,6 +98,12 @@
 
   .hero-content {
     flex-direction: column;
+  }
+}
+
+@media screen and (min-aspect-ratio: 4/3) {
+  .page-content {
+    min-height: 200vh;
   }
 }
 

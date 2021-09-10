@@ -20,6 +20,22 @@
   }
 }
 
+@mixin inline-loading-bar-animation {
+  animation: {
+    name: inline-loading-bar-keyframes;
+    duration: 1.5s;
+    timing-function: ease;
+    iteration-count: infinite;
+  };
+}
+
+@keyframes inline-loading-bar-keyframes {
+  50% {
+    left: 96px;
+    background: var(--social);
+  }
+}
+
 @mixin bottom-slide-in-animation {
   animation: {
     name: bottom-slide-in-keyframes;

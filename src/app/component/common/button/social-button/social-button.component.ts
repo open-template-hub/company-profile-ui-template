@@ -12,7 +12,7 @@ export class SocialButtonComponent {
   @Input() brand = 'angular';
   @Input() placeholderIcon: string = undefined;
   @Input() localImage = '';
-  @Input() circle = false;
+  @Input() classType = 'top-right-bottom-left-rounded-box';
   @Input() flexStart = false;
   @Input() noTextStyle = false;
   @Input() isSmallLogo = false;

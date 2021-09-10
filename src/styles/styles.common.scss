@@ -1,29 +1,7 @@
-@mixin no-padding-no-margin {
-  padding: 0;
-  margin: 0;
-}
-
-@mixin min-full-screen {
-  min-height: 100vh;
-  min-width: 100vw;
-}
-
-@mixin default-fonts {
-  font-family: Roboto, sans-serif;
-}
-
-@mixin dim {
-  color: var(--lighter-contrast);
-  border-color: var(--lighter-contrast);
-}
-
-@mixin shine {
-  color: var(--darker);
-  border-color: var(--darker);
-}
+@use 'util/util';
 
 * {
-  @include no-padding-no-margin;
+  @include util.no-padding-no-margin;
 
   &:focus {
     outline: 0;
@@ -31,9 +9,9 @@
 }
 
 html, body {
-  @include no-padding-no-margin;
-  @include min-full-screen;
-  @include default-fonts;
+  @include util.no-padding-no-margin;
+  @include util.min-full-screen;
+  @include util.default-fonts;
 }
 
 body {
@@ -92,13 +70,13 @@ hr {
 
 .dim {
   p, a, h1, h2, h3, h4, h5, h6, label, ul, li {
-    @include dim;
+    @include util.dim;
   }
 }
 
 .shine {
   p, a, h1, h2, h3, h4, h5, h6, label, ul, li {
-    @include shine;
+    @include util.shine;
   }
 }
 

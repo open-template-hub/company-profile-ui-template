@@ -4,9 +4,9 @@
       <div class="flex-layout-row flex-center-center">
         <app-social-button (click)="socialLogin(environmentCommon.website.facebook)"
                            [brand]="environmentCommon.website.facebook.cssClass"
-                           [circle]="true"></app-social-button>
+                           [classType]="'circle'"></app-social-button>
         <app-social-button (click)="socialLogin(environmentCommon.website.google)" [brand]="environmentCommon.website.google.cssClass"
-                           [circle]="true"></app-social-button>
+                           [classType]="'circle'"></app-social-button>
       </div>
       <div class="login-page-middle-text flex-layout-column flex-center-center">
         <p>or</p>

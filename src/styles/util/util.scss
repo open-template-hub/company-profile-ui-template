@@ -1,50 +1,70 @@
-.circle, .rounded-box.circle {
-  -webkit-border-radius: 99em;
-  -moz-border-radius: 99em;
-  border-radius: 99em;
+@mixin prefix($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
 }
 
-.rounded-box {
-  -webkit-bottom-left-radius: 12px;
-  -webkit-top-right-radius: 6px;
-  -moz-bottom-left-radius: 12px;
-  -moz-top-right-radius: 6px;
-  border-bottom-left-radius: 12px;
-  border-top-right-radius: 6px;
+@mixin no-padding-no-margin {
+  padding: 0;
+  margin: 0;
 }
 
-.circle:hover, .rounded-box.circle:hover {
-  -webkit-border-radius: 99em;
-  -moz-border-radius: 99em;
-  border-radius: 99em;
+@mixin min-full-screen {
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
-.flex-center {
-  justify-content: center;
+@mixin default-fonts {
+  font-family: Roboto, sans-serif;
 }
 
-.flex-start {
-  justify-content: flex-start;
+@mixin dim {
+  color: var(--lighter-contrast);
+  border-color: var(--lighter-contrast);
 }
 
-.flex-center-center {
+@mixin shine {
+  color: var(--darker);
+  border-color: var(--darker);
+}
+
+@mixin flex-center-center {
   align-items: center;
   justify-content: center;
 }
 
+@mixin flex-layout-row {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-layout-column {
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  @include prefix(border-radius, 99em, moz webkit);
+}
+
+.top-right-bottom-left-rounded-box {
+  @include prefix(border-bottom-left-radius, 12px, moz webkit);
+  @include prefix(border-top-right-radius, 6px, moz webkit);
+}
+
+.rounded-box {
+  @include prefix(border-radius, 5px, moz webkit);
+}
+
+.flex-center-center {
+  @include flex-center-center;
+}
+
 .flex-layout-row {
-  display: flex;
-  flex-direction: row;
+  @include flex-layout-row;
 }
 
 .flex-layout-column {
-  display: flex;
-  flex-direction: column;
-}
-
-@media only screen and (min-width: 1000px) {
-  app-event-card {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
+  @include flex-layout-column;
 }

@@ -9,7 +9,7 @@ import { LoadingService } from '../../../../service/loading/loading.service';
 export class Button1Component {
 
   @Input() text = 'Button';
-  @Input() circle = false;
+  @Input() classType = 'top-right-bottom-left-rounded-box';
   @Input() brandColor = false;
   @Input() brandLightColor = false;
   @Input() transparent = false;

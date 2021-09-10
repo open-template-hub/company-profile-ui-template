@@ -11,7 +11,7 @@
       <path d="M 0,250 1000,120 V 0 H 0 Z" style="fill: var(--brand-color-lighter-2);"></path>
     </svg>
   </div>
-  <div *ngIf="!headerProfileImg && enableHeader && !enableHeaderFullImg" class="card1-header rounded-box">
+  <div *ngIf="!headerProfileImg && enableHeader && !enableHeaderFullImg" class="card1-header" [class]="headerType">
     <h3>{{title}}</h3>
   </div>
   <ng-content *ngIf="!headerProfileImg && !enableHeader && !enableHeaderFullImg" select="[custom-header]"></ng-content>
@@ -23,7 +23,7 @@
   </div>
 
   <div *ngIf="enableHeader && enableHeaderFullImg"
-       class="card1-header card1-header-img card1-header-full-img rounded-box" [class.max-height]="maxHeight">
+       class="card1-header card1-header-img card1-header-full-img" [class.max-height]="maxHeight" [class]="headerType">
     <ng-content select="[headerFullImg]"></ng-content>
   </div>
 

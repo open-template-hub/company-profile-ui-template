@@ -38,6 +38,7 @@ export class Card1Component {
   @Input() topLayerBackgroundColor = '';
   @Input() bottomLayerBackgroundColor = '';
   @Input() testimonialSizeActive = false;
+  @Input() headerType = 'top-right-bottom-left-rounded-box';
 
   loading = false;
 

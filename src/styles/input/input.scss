@@ -89,17 +89,6 @@ textarea, input {
   }
 }
 
-.input-with-icon {
-
-  & textarea {
-    height: 57px;
-  }
-
-  &.with-svg input {
-    height: 38px;
-  }
-}
-
 input[type=checkbox] {
   display: none;
 
@@ -159,12 +148,26 @@ input[type=checkbox] {
   justify-content: flex-start;
   align-items: center;
 
-  & textarea:focus + i, & input:focus + i {
-    color: var(--color);
+  & textarea {
+    height: 57px;
+
+    &:focus + i {
+      color: var(--color);
+    }
   }
 
-  & input:focus + svg {
-    fill: var(--color);
+  &.with-svg input {
+    height: 38px;
+  }
+
+  & input:focus {
+    & + i {
+      color: var(--color);
+    }
+
+    & + svg {
+      fill: var(--color);
+    }
   }
 
   & i, & img {

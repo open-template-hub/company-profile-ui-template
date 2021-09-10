@@ -29,7 +29,7 @@ export class Card1Component {
   @Input() height = undefined;
   @Input() width = undefined;
   @Input() maxHeight = false;
-  @Input() ribbon: Ribbon = { text: '', type: '' };
+  @Input() ribbon: Ribbon = { text: '', theme: '' };
   @Input() isCardContentOverflowVisible = false;
   @Input() topLayer = false;
   @Input() bottomLayer = false;

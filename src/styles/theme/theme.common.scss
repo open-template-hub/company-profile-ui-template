@@ -16,11 +16,6 @@
   --warn-light-mode: #d28f29;
   --info-light-mode: #5c98cd;
 
-  // event type colors
-  --premium-light-mode: #43b043;
-  --featured-light-mode: #d6b406;
-  --new-light-mode: #06b7d6;
-
   // background
   --background-color-light-mode: white;
   --background-color-alpha-light-mode: rgba(255, 255, 255, 0.93);
@@ -52,11 +47,6 @@
   --warn-dark-mode: #cda05c;
   --info-dark-mode: #3d79ac;
 
-  // event type colors
-  --premium-dark-mode: #43b043;
-  --featured-dark-mode: #b09404;
-  --new-dark-mode: #0499b3;
-
   // background
   --background-color-dark-mode: #353535;
   --background-color-alpha-dark-mode: rgba(53, 53, 53, 0.93);
@@ -87,11 +77,6 @@
   --error: var(--error-light-mode);
   --warn: var(--warn-light-mode);
   --info: var(--info-light-mode);
-
-  // event type colors
-  --premium: var(--premium-light-mode);
-  --featured: var(--featured-light-mode);
-  --new: var(--new-light-mode);
 
   // background
   --background-color: var(--background-color-light-mode);
@@ -125,11 +110,6 @@
   --error: var(--error-dark-mode);
   --warn: var(--warn-dark-mode);
   --info: var(--info-dark-mode);
-
-  // event type colors
-  --premium: var(--premium-dark-mode);
-  --featured: var(--featured-dark-mode);
-  --new: var(--new-dark-mode);
 
   // background
   --background-color: var(--background-color-dark-mode);

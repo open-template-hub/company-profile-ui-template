@@ -99,5 +99,5 @@
   </div>
   <div *ngIf="!isLastItem" class="event-bottom-wrapper">
   </div>
-  <span *ngIf="ribbon.type" [attr.data-ribbon]="ribbon.text" [class]="'ribbon ribbon-' + ribbon.type"></span>
+  <span class="ribbon" *ngIf="ribbon.text" [attr.data-ribbon]="ribbon.text" [class]="ribbon.theme + '-theme'"></span>
 </div>

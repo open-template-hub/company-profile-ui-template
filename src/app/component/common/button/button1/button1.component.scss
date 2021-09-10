@@ -26,11 +26,6 @@
   margin: 0;
 }
 
-.button1.brand-color {
-  color: whitesmoke;
-  background-color: var(--brand-color);
-}
-
 .button1.always-light {
   color: var(--contrast-light-mode);
   background-color: var(--color-light-mode);
@@ -41,9 +36,20 @@
   background-color: var(--color-dark-mode);
 }
 
-.button1.brand-light-color {
+.button1.transparent.transparent-theme-color {
+  border: 1px solid var(--success);
+  color: var(--theme-color);
+  border-color: var(--theme-color);
+}
+
+.button1.theme-light-color {
   color: whitesmoke;
-  background-color: var(--brand-color-lighter-5);
+  background-color: var(--theme-color-lighter-4);
+}
+
+.button1.theme-color {
+  color: whitesmoke;
+  background-color: var(--theme-color);
 }
 
 .button1.transparent {
@@ -56,7 +62,7 @@
 }
 
 .button1.selected {
-  box-shadow: 0 0 3px 3px var(--brand-color-lighter-1);
+  box-shadow: 0 0 3px 3px var(--theme-color-lighter-1);
 }
 
 .button1.lighter-contrast {
@@ -106,13 +112,12 @@
     box-shadow: 0 3px 15px 1px var(--shadow);
   }
 
-  .button1.brand-color:hover {
-    background-color: var(--brand-color);
-    color: white;
+  .button1.transparent.transparent-theme-color:hover {
+    color: var(--theme-color);
   }
 
-  .button1.brand-light-color:hover {
-    background-color: var(--brand-color-lighter-5);
+  .button1.theme-light-color:hover {
+    background-color: var(--theme-color-lighter-4);
     color: whitesmoke;
     box-shadow: initial;
   }
@@ -126,6 +131,6 @@
   }
 
   .button1.selected:hover {
-    box-shadow: 0 0 3px 3px var(--brand-color-lighter-1);
+    box-shadow: 0 0 3px 3px var(--theme-color-lighter-1);
   }
 }

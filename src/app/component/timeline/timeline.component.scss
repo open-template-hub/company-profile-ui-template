@@ -64,7 +64,7 @@ $marker-dist: $card-width + math.div($outer-margin, 2) - math.div($marker-size, 
     content: "";
     width: $marker-size;
     height: $marker-size;
-    background-color: var(--brand-color-lighter-2);
+    background-color: var(--theme-color-lighter-2);
     border: 5px solid var(--background-color);
     border-radius: $marker-size;
 
@@ -127,7 +127,7 @@ $counter: $items - $rows + 2;
     border-radius: 5px;
 
     .head::after {
-      border-color: var(--brand-color-lighter-2);
+      border-color: var(--theme-color-lighter-2);
     }
 
     position: relative;
@@ -179,7 +179,7 @@ $counter: $items - $rows + 2;
       display: flex;
       align-items: center;
       color: var(--color);
-      background-color: var(--brand-color-lighter-2);
+      background-color: var(--theme-color-lighter-2);
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
 
@@ -220,7 +220,7 @@ $counter: $items - $rows + 2;
       }
 
       .img-wrapper {
-//        background-color: var(--brand-color-lighter-8);
+//        background-color: var(--theme-color-lighter-8);
         padding: $inner-margin;
         width: 100%;
         min-height: 50%;

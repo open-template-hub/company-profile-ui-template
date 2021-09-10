@@ -10,12 +10,12 @@
     </div>
 
     <h3 *ngIf="!loading && !error">Please proceed with login</h3>
-    <app-button1 *ngIf="!loading && !error" [text]="'LOG IN'" [brandColor]="true" [isSleekButton]="true"
+    <app-button1 *ngIf="!loading && !error" [text]="'LOG IN'" [themeColor]="'default'" [isSleekButton]="true"
                  (click)="router.navigate([URLS.login])">
     </app-button1>
 
     <h3 *ngIf="!loading && error">Something went wrong!</h3>
-    <app-button1 *ngIf="!loading && error" [text]="'HOME'" [brandColor]="true" [isSleekButton]="true"
+    <app-button1 *ngIf="!loading && error" [text]="'HOME'" [themeColor]="'default'" [isSleekButton]="true"
                  (click)="router.navigate([URLS.root])">
     </app-button1>
   </div>

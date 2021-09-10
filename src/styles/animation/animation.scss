@@ -6,12 +6,12 @@
 @keyframes loading-bar {
   0% {
     left: calc(-100%);
-    background-color: var(--brand-color-lighter-4);
+    background-color: var(--theme-color-lighter-4);
   }
 
   100% {
     left: 100%;
-    background-color: var(--brand-color-lighter-2);
+    background-color: var(--theme-color-lighter-2);
   }
 }
 

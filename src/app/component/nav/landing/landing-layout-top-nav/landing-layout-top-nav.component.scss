@@ -23,9 +23,9 @@
 }
 
 .top-nav .right-item-wrapper .contact {
-  color: var(--brand-color);
+  color: var(--theme-color);
   border-radius: 0;
-  border-bottom: var(--brand-color) 1px solid;
+  border-bottom: var(--theme-color) 1px solid;
 }
 
 .top-nav .brand > * {
@@ -72,7 +72,7 @@ app-dropdown-menu i {
   .top-nav .right-item-wrapper .contact:hover {
     color: white;
     border-radius: 3px;
-    background-color: var(--brand-color);
+    background-color: var(--theme-color);
   }
 
   .bottom-nav a:hover {
@@ -81,6 +81,6 @@ app-dropdown-menu i {
 
   .bottom-nav .right-item-wrapper .contact:hover {
     color: white;
-    background: var(--brand-color);
+    background: var(--theme-color);
   }
 }

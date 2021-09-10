@@ -1,11 +1,11 @@
-<button class="button1" [class]="classType" [class.attendee]="isAttendee" [class.brand-color]="brandColor"
+<button class="button1" [class]="classType" [class.attendee]="isAttendee"
         [class.fixed-width]="fixedWidth" [class.hover-with-color]="hoverWithColor"
         [class.lighter-contrast]="lighterContrast" [class.mobile-view]="mobileView"
         [class.sleek-button]="isSleekButton" [class.success]="success" [class.transparent]="transparent"
-        [class.contribute]="isContribute" [class.brand-light-color]="brandLightColor"
+        [class.contribute]="isContribute" [class.theme-light-color]="themeLightColor"
         [class.always-light]="alwaysLight" [class.always-dark]="alwaysDark" [class.selected]="selected"
-        [style.color]="themeColor ? 'var(--brand-color-' + themeColor + '-theme)' : ''"
-        [style.border-color]="themeColor ? 'var(--brand-color-' + themeColor + '-theme)' : ''"
+        [class.theme-color]="!transparent && themeColor"
+        [class.transparent-theme-color]="transparent && themeColor"
         [disabled]="loading || disabled" [style.cursor]="cursor" [class.relative-to-parent]="relativeToParent"
         [ngClass]="themeColor + '-theme'">
   <i aria-hidden="true" *ngIf="icon" [class]="'fas fa-' + icon + ' fa-lg fa-fw'"></i>

@@ -37,7 +37,7 @@
 
 .product-line-header h4 {
   font-weight: normal;
-  color: var(--brand-color);
+  color: var(--theme-color);
 }
 
 .feature img {
@@ -51,7 +51,7 @@
 }
 
 .feature-right .feature {
-  background-color: var(--brand-color-lighter-5);
+  background-color: var(--theme-color-lighter-5);
 }
 
 .feature-notes {
@@ -119,8 +119,8 @@
   padding: 10px 17px;
   display: inline-flex;
   align-items: center;
-  color: var(--brand-color);
-  border: 1px solid var(--brand-color);
+  color: var(--theme-color);
+  border: 1px solid var(--theme-color);
   margin-left: 1.5em;
   white-space: nowrap;
 }
@@ -146,7 +146,7 @@
 }
 
 .counter {
-  color: var(--brand-color);
+  color: var(--theme-color);
   font-weight: 400;
 }
 

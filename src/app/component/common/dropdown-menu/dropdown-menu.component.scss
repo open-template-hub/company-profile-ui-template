@@ -17,7 +17,7 @@
 
 .dropdown-content i {
   font-size: 15px;
-  color: var(--brand-color-lighter-2);
+  color: var(--theme-color-lighter-2);
 }
 
 .dropdown-top-menu {
@@ -84,7 +84,7 @@
 }
 
 .section-column .section-header h4 {
-  color: var(--brand-color);
+  color: var(--theme-color);
   font-weight: 500;
 }
 
@@ -107,7 +107,7 @@
   width: 25%;
   margin: 0 0 0 1px;
   border-style: solid;
-  border-color: var(--brand-color);
+  border-color: var(--theme-color);
 }
 
 .section-column-wrapper {
@@ -175,7 +175,7 @@
 @media (hover: hover) {
   .dropdown-item:hover {
     transition: .4s all ease-in-out;
-    background-color: var(--brand-color-lighter-8);
+    background-color: var(--theme-color-lighter-8);
   }
 
   .dropdown-item:hover img {
@@ -184,7 +184,7 @@
   }
 
   .dropdown-item:hover .dropdown-item-content > * {
-    color: var(--brand-color-darker-7);
+    color: var(--theme-color-darker-7);
   }
 }
 
@@ -254,10 +254,10 @@
   }
 
   .section-column::-webkit-scrollbar-track {
-    background-color: var(--brand-color-lighter-9);
+    background-color: var(--theme-color-lighter-9);
   }
 
   .section-column::-webkit-scrollbar-thumb {
-    background-color: var(--brand-color-lighter-3);
+    background-color: var(--theme-color-lighter-3);
   }
 }

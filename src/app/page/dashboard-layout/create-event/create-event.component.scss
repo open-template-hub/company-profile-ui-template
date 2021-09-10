@@ -69,7 +69,7 @@
 }
 
 .section .section-footer .section-footer-icons span .button-active {
-  color: var(--brand-color);
+  color: var(--theme-color);
 }
 
 .section .section-footer .section-footer-icons i {
@@ -218,7 +218,7 @@
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid var(--darker-contrast);
-    background-color: var(--brand-color);
+    background-color: var(--theme-color);
     color: var(--darker-contrast);
   }
 
@@ -276,6 +276,6 @@
   }
 
   .section .section-footer .section-footer-icons span i:hover {
-    color: var(--brand-color);
+    color: var(--theme-color);
   }
 }

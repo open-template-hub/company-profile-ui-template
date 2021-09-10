@@ -90,11 +90,11 @@ a {
 
 a.link {
 
-  color: var(--brand-color-lighter-2);
+  color: var(--theme-color-lighter-2);
   font-weight: normal;
 
   &:hover {
-    color: var(--brand-color);
+    color: var(--theme-color);
   }
 }
 

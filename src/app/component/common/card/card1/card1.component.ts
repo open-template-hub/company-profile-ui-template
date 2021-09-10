@@ -25,7 +25,7 @@ export class Card1Component {
   @Input() bottomWrapper = true;
   @Input() bottomWrapperColor = '';
   @Input() topWrapper = false;
-  @Input() topWrapperInBrandColor = false;
+  @Input() topWrapperInThemeColor = false;
   @Input() height = undefined;
   @Input() width = undefined;
   @Input() maxHeight = false;

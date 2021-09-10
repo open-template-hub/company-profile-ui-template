@@ -29,25 +29,25 @@ export class ThemeService {
   private maxHeightMedia;
 
   colors = [
-    '--brand-color',
-    '--brand-color-lighter-1',
-    '--brand-color-lighter-2',
-    '--brand-color-lighter-3',
-    '--brand-color-lighter-4',
-    '--brand-color-lighter-5',
-    '--brand-color-lighter-6',
-    '--brand-color-lighter-7',
-    '--brand-color-lighter-8',
-    '--brand-color-lighter-9',
-    '--brand-color-darker-1',
-    '--brand-color-darker-2',
-    '--brand-color-darker-3',
-    '--brand-color-darker-4',
-    '--brand-color-darker-5',
-    '--brand-color-darker-6',
-    '--brand-color-darker-7',
-    '--brand-color-darker-8',
-    '--brand-color-darker-9'
+    '--theme-color',
+    '--theme-color-lighter-1',
+    '--theme-color-lighter-2',
+    '--theme-color-lighter-3',
+    '--theme-color-lighter-4',
+    '--theme-color-lighter-5',
+    '--theme-color-lighter-6',
+    '--theme-color-lighter-7',
+    '--theme-color-lighter-8',
+    '--theme-color-lighter-9',
+    '--theme-color-darker-1',
+    '--theme-color-darker-2',
+    '--theme-color-darker-3',
+    '--theme-color-darker-4',
+    '--theme-color-darker-5',
+    '--theme-color-darker-6',
+    '--theme-color-darker-7',
+    '--theme-color-darker-8',
+    '--theme-color-darker-9'
   ];
 
   constructor() {

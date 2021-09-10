@@ -62,23 +62,23 @@
 
   & input + label {
     &:nth-of-type(1):after {
-      color: var(--brand-color);
+      color: var(--theme-color);
     }
 
     &:nth-of-type(2):after {
-      color: var(--brand-color-lighter-1);
+      color: var(--theme-color-lighter-1);
     }
 
     &:nth-of-type(3):after {
-      color: var(--brand-color-lighter-2);
+      color: var(--theme-color-lighter-2);
     }
 
     &:nth-of-type(4):after {
-      color: var(--brand-color-lighter-3);
+      color: var(--theme-color-lighter-3);
     }
 
     &:nth-of-type(5):after {
-      color: var(--brand-color-lighter-4);
+      color: var(--theme-color-lighter-4);
     }
   }
 }

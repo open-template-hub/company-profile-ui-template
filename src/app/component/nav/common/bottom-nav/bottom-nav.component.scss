@@ -32,8 +32,8 @@
 }
 
 .login {
-  color: var(--brand-color);
-  border-bottom: var(--brand-color) 1px solid;
+  color: var(--theme-color);
+  border-bottom: var(--theme-color) 1px solid;
 }
 
 .bottom-nav a i {
@@ -42,9 +42,9 @@
 }
 
 .bottom-nav .contact {
-  color: var(--brand-color);
+  color: var(--theme-color);
   border-radius: 0;
-  border-bottom: var(--brand-color) 1px solid;
+  border-bottom: var(--theme-color) 1px solid;
 }
 
 .bottom-nav .contact span {
@@ -54,7 +54,7 @@
 .bottom-nav .contact:hover {
   color: white;
   border-radius: 3px;
-  background: var(--brand-color);
+  background: var(--theme-color);
 }
 
 @media only screen and (max-width: 999px) {
@@ -81,6 +81,6 @@
 
   .bottom-nav .login:hover {
     color: white;
-    background: var(--brand-color);
+    background: var(--theme-color);
   }
 }

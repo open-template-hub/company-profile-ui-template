@@ -33,7 +33,7 @@ export class TestimonialCardComponent {
       },
     },
     style: {
-      themeColor: 'var(--brand-color-lighter-2)',
+      themeColor: 'var(--theme-color-lighter-2)',
     },
   };
 

@@ -1,4 +1,5 @@
 @use '../../../../styles/util/util';
+@use '../../../../styles/animation/animation';
 
 .dropdown {
   position: relative;
@@ -120,6 +121,8 @@
 
 @media only screen and (max-width: 999px) {
   .dropdown-content {
+    @include animation.bottom-slide-in-animation;
+
     display: block;
     position: fixed;
     bottom: calc(55px + env(safe-area-inset-bottom));
@@ -131,11 +134,11 @@
     padding: 0;
     margin: 0;
     width: 100%;
-    animation: bottom-slide-in 0.4s;
   }
 
   .dropdown-opened {
-    animation: bottom-slide-out 0.4s;
+    @include animation.bottom-slide-out-animation;
+
     bottom: -100%;
   }
 

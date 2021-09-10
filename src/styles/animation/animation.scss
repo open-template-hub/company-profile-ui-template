@@ -1,9 +1,14 @@
 @mixin loading-bar-animation {
-  animation: loading-bar 1.5s infinite ease-in-out;
-  animation-direction: normal;
+  animation: {
+    name: loading-bar-keyframes;
+    duration: 1.5s;
+    direction: normal;
+    timing-function: ease-in-out;
+    iteration-count: infinite;
+  }
 }
 
-@keyframes loading-bar {
+@keyframes loading-bar-keyframes {
   0% {
     left: calc(-100%);
     background-color: var(--theme-color-lighter-4);
@@ -15,62 +20,56 @@
   }
 }
 
-.bounce {
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  transform-origin: bottom;
-  animation-name: bounce;
-  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(1.1, .9) translateY(0);
-  }
-  30% {
-    transform: scale(.9, 1.1) translateY(-40px);
-  }
-  50% {
-    transform: scale(1.05, .95) translateY(0);
-  }
-  57% {
-    transform: scale(1, 1) translateY(-7px);
-  }
-  64% {
-    transform: scale(1, 1) translateY(0);
-  }
-  100% {
-    transform: scale(1, 1) translateY(0);
+@mixin bottom-slide-in-animation {
+  animation: {
+    name: bottom-slide-in-keyframes;
+    duration: 0.4s;
   }
 }
 
-@keyframes bottom-slide-in {
+@keyframes bottom-slide-in-keyframes {
   0% {
     bottom: -100%;
-    transition-property: bottom;
-    transition-duration: 0.7s;
-    transition-timing-function: ease;
+
+    transition: {
+      property: bottom;
+      duration: 0.7s;
+      timing-function: ease;
+    };
   }
 
   100% {
     bottom: calc(55px + env(safe-area-inset-bottom));
-    transition-property: bottom;
+
+    transition: {
+      property: bottom;
+    };
   }
 }
 
-@keyframes bottom-slide-out {
+@mixin bottom-slide-out-animation {
+  animation: {
+    name: bottom-slide-out-keyframes;
+    duration: 0.4s;
+  }
+}
+
+@keyframes bottom-slide-out-keyframes {
   0% {
     bottom: calc(55px + env(safe-area-inset-bottom));
-    transition-duration: 0.7s;
-    transition-timing-function: ease;
-    transition-property: bottom;
+
+    transition: {
+      property: bottom;
+      duration: 0.7s;
+      timing-function: ease;
+    };
   }
 
   100% {
     bottom: -100%;
-    transition-property: bottom;
+
+    transition: {
+      property: bottom;
+    };
   }
 }

@@ -1,3 +1,5 @@
+@use '../../../../styles/util/util';
+
 .dropdown {
   position: relative;
 }
@@ -94,7 +96,8 @@
 }
 
 .section-column hr {
-  width: 94%;
+  @include util.card-header-width-sm;
+
   margin: 0 0 0 10px;
   border-style: solid;
   border-color: var(--darker-contrast);

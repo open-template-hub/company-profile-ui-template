@@ -1,3 +1,5 @@
+@use '../../../../../styles/util/util';
+
 .footer {
   display: flex;
   flex-direction: row;
@@ -32,8 +34,8 @@
 }
 
 .footer-hr-row hr {
+  @include util.card-header-width-sm;
   border: 1px solid var(--hover);
-  width: 95%;
 }
 
 .footer-link-content {

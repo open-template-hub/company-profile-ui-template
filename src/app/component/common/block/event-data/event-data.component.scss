@@ -1,3 +1,5 @@
+@use '../../../../../styles/util/util';
+
 .event {
   display: flex;
   flex-direction: column;
@@ -194,8 +196,7 @@
 }
 
 .event-sub-header-title-date, .event-sub-header-title-user {
-  display: flex;
-  flex-direction: column;
+  @include util.flex-layout-column;
   justify-content: center;
 }
 
@@ -209,24 +210,21 @@
 }
 
 .rate-badge-wrapper {
-  margin-left: auto;
-  margin-right: auto;
+  @include util.margin-x-auto;
   margin-top: 20px;
 }
 
 @media only screen and (max-width: 999px) {
 
   .event-header {
-    max-width: 92%;
-    margin-left: auto;
-    margin-right: auto;
+    @include util.card-header-width-sm;
+    @include util.margin-x-auto;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .event app-button1 {
-    margin-left: auto;
-    margin-right: auto;
+    @include util.margin-x-auto;
   }
 
   .event {
@@ -234,8 +232,7 @@
   }
 
   .event-header {
-    margin-left: auto;
-    margin-right: auto;
+    @include util.margin-x-auto;
   }
 
   .event-content .section-output {

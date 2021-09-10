@@ -1,3 +1,5 @@
+@use '../../../../../styles/util/util';
+
 .card1 {
   border-radius: 6px;
   box-shadow: 0 3px 15px 0 var(--shadow);
@@ -130,9 +132,7 @@
 
 @media only screen and (max-width: 999px) {
   .card1 {
-    min-width: 94vw;
-    max-width: 94vw;
-    width: 94vw;
+    @include util.card-width-sm;
     margin-bottom: 50px;
   }
 
@@ -141,10 +141,8 @@
   }
 
   .card1-header {
-    max-width: 92%;
-    width: 92%;
-    margin-left: auto;
-    margin-right: auto;
+    @include util.card-header-width-sm;
+    @include util.margin-x-auto;
   }
 
   .card1-header.card1-header-full-img {
@@ -153,8 +151,7 @@
   }
 
   .card1-sub-header-profile-img {
-    margin-left: auto;
-    margin-right: auto;
+    @include util.margin-x-auto;
     z-index: 9;
   }
 
@@ -186,10 +183,8 @@
   }
 
   .card1-small .card1-header {
-    max-width: 92%;
-    width: 92%;
-    margin-left: auto;
-    margin-right: auto;
+    @include util.card-header-width-sm;
+    @include util.margin-x-auto;
   }
 
   .card1-header.card1-header-full-img {

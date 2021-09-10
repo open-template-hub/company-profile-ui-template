@@ -1,3 +1,5 @@
+@use '../../../../styles/util/util';
+
 .about-us-page {
   padding-bottom: 20vh;
 }
@@ -8,9 +10,9 @@
   }
 
   .about-us-page .hero-content > * {
-    flex-direction: column;
+    @include util.flex-layout-column;
+    @include util.card-width-sm;
     margin-bottom: 50px;
-    max-width: 94vw;
   }
 }
 

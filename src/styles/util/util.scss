@@ -10,6 +10,11 @@
   margin: 0;
 }
 
+@mixin margin-x-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @mixin min-full-screen {
   min-height: 100vh;
   min-width: 100vw;
@@ -42,6 +47,18 @@
 @mixin flex-layout-column {
   display: flex;
   flex-direction: column;
+}
+
+@mixin card-width-sm {
+  max-width: 94vw;
+  min-width: 94vw;
+  width: 94vw;
+}
+
+@mixin card-header-width-sm {
+  max-width: 92%;
+  min-width: 92%;
+  width: 92%;
 }
 
 .circle {

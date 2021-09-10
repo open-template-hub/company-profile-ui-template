@@ -28,7 +28,8 @@
 
   --shadow-light-mode: rgba(155, 155, 155, 0.5);
 
-  --shadow2-light-mode: hsla(0, 0%, 92%, 0.5);
+  --shadow-lighter-light-mode: rgba(235, 235, 235, 0.5);
+  --shadow-darker-light-mode: rgba(100, 100, 100, 0.5);
 
   --cropper-overlay-color-light-mode: var(--card);
   --cropper-outline-color-light-mode: rgba(254, 255, 254, 0.7);
@@ -62,7 +63,8 @@
   --card-dark-mode: #353735;
 
   --shadow-dark-mode: rgba(25, 25, 25, 0.5);
-  --shadow2-dark-mode: rgba(44, 44, 44, 0.5);
+  --shadow-lighter-dark-mode: rgba(44, 44, 44, 0.5);
+  --shadow-darker-dark-mode: rgba(10, 10, 10, 0.5);
 
   --cropper-overlay-color-dark-mode: var(--card);
   --cropper-outline-color-dark-mode: rgba(53, 55, 53, 0.5);
@@ -96,7 +98,8 @@
   --card: var(--card-light-mode);
 
   --shadow: var(--shadow-light-mode);
-  --shadow2: var(--shadow2-light-mode);
+  --shadow-lighter: var(--shadow-lighter-light-mode);
+  --shadow-darker: var(--shadow-darker-light-mode);
 
   --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
   --cropper-outline-color: var(--cropper-outline-color-light-mode);
@@ -134,7 +137,8 @@
   --card: var(--card-light-mode);
 
   --shadow: var(--shadow-light-mode);
-  --shadow2: var(--shadow2-light-mode);
+  --shadow-lighter: var(--shadow-lighter-light-mode);
+  --shadow-darker: var(--shadow-darker-light-mode);
 
   --cropper-overlay-color: var(--cropper-overlay-color-light-mode);
   --cropper-outline-color: var(--cropper-outline-color-light-mode);
@@ -171,7 +175,8 @@
   --card: var(--card-dark-mode);
 
   --shadow: var(--shadow-dark-mode);
-  --shadow2: var(--shadow2-dark-mode);
+  --shadow-lighter: var(--shadow-lighter-dark-mode);
+  --shadow-darker: var(--shadow-darker-dark-mode);
 
   --cropper-overlay-color: var(--cropper-overlay-color-dark-mode);
   --cropper-outline-color: var(--cropper-outline-color-dark-mode);
@@ -206,7 +211,8 @@
     --card: var(--card-dark-mode);
 
     --shadow: var(--shadow-dark-mode);
-    --shadow2: var(--shadow2-dark-mode);
+    --shadow-lighter: var(--shadow-lighter-dark-mode);
+    --shadow-darker: var(--shadow-darker-dark-mode);
 
     --cropper-overlay-color: var(--cropper-overlay-color-dark-mode);
     --cropper-outline-color: var(--cropper-outline-color-dark-mode);

@@ -12,6 +12,7 @@ import { LearnComponent } from './page/dashboard-layout/learn/learn.component';
 import { MyProfileComponent } from './page/dashboard-layout/my-profile/my-profile.component';
 import { PublicProfileComponent } from './page/dashboard-layout/public-profile/public-profile.component';
 import { AboutUsComponent } from './page/landing-layout/about-us/about-us.component';
+import { ContactUsComponent } from './page/landing-layout/contact-us/contact-us.component';
 import { CookiePolicyComponent } from './page/landing-layout/cookie-policy/cookie-policy.component';
 import { ForgetPasswordComponent } from './page/landing-layout/forget-password/forget-password.component';
 import { HomeComponent } from './page/landing-layout/home/home.component';
@@ -56,6 +57,7 @@ const routes: Routes = [
       { path: URLS_RAW.login, component: LoginComponent },
       { path: URLS_RAW.forgetPassword, component: ForgetPasswordComponent },
       { path: URLS_RAW.resetPassword, component: ResetPasswordComponent },
+      { path: URLS_RAW.contactUs, component: ContactUsComponent},
       { path: URLS_RAW.u + '/' + ':username', component: PublicProfileComponent, data: { isPublic: true } },
     ]
   },

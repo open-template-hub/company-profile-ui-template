@@ -31,11 +31,11 @@
   border-color: var(--success);
 }
 
-.input-success.input-with-icon input:focus + i {
+.input-success.input-with-icon input:focus + i, .input-success.input-with-label input:focus + span {
   color: var(--success);
 }
 
-.input-success.input-with-icon i {
+.input-success.input-with-icon i, .input-success.input-with-label span {
   color: var(--success);
 }
 
@@ -43,7 +43,7 @@
   color: var(--error);
 }
 
-.input-error input {
+.input-error input, .input-error select {
   border-color: var(--error);
 }
 
@@ -51,15 +51,15 @@
   color: var(--error);
 }
 
-.input-error input:focus {
+.input-error input:focus, .input-error select:focus {
   border-color: var(--error);
 }
 
-.input-error.input-with-icon input:focus + i {
+.input-error.input-with-icon input:focus + i, .input-error.input-with-label input:focus + span, .input-error.input-with-label select:focus + span {
   color: var(--error);
 }
 
-.input-error.input-with-icon i {
+.input-error.input-with-icon i, .input-with-error.input-with-label span {
   color: var(--error);
 }
 
@@ -79,11 +79,11 @@
   border-color: var(--warn);
 }
 
-.input-warn.input-with-icon input:focus + i {
+.input-warn.input-with-icon input:focus + i, .input-warn.input-with-label input:focus + span {
   color: var(--warn);
 }
 
-.input-warn.input-with-icon i {
+.input-warn.input-with-icon i, .input-warn.input-with-label span {
   color: var(--warn);
 }
 
@@ -103,12 +103,20 @@
   border-color: var(--info);
 }
 
-.input-info.input-with-icon input:focus + i {
+.input-info.input-with-icon input:focus + i, .input-info.input-with-label input:focus + span {
   color: var(--info);
 }
 
-.input-info.input-with-icon i {
+.input-info.input-with-icon i, .input-info.input-with-label span {
   color: var(--info);
+}
+
+.input-with-label input:focus + span, .input-with-label select:focus + div span, .input-with-label textarea:focus + span {
+  color: var(--theme-color);
+}
+
+.input-with-label span {
+  color: var(--color);
 }
 
 @media only screen and (max-width: 999px) {

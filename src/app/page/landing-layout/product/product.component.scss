@@ -247,6 +247,11 @@ app-swiper-wrapper {
     padding-bottom: 20px;
     text-align: center;
   }
+
+  .product-content-left {
+    border-bottom-right-radius: 75px;
+    height: 420px;
+  }
 }
 
 @media only screen and (min-width: 1000px) {

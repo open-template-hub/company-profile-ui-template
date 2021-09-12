@@ -13,6 +13,14 @@ export const ResponseCode = {
   SERVICE_UNAVAILABLE: 503,
 };
 
+export const NpmPackages = [
+  '@open-template-hub/server-generator',
+  '@open-template-hub/common',
+  '@open-template-hub/app-generator'
+];
+
+export const OthStartDate = '2020-01-01';
+
 export const PROFILE_IMG = './assets/common/profile-img.png';
 
 export const DarkLightSettings = {

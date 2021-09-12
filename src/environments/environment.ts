@@ -56,5 +56,11 @@ export const environment = {
     google: {
       tag: 'GTM-P4FHG76'
     }
+  },
+
+  provider: {
+    npm: {
+      download: 'https://api.npmjs.org/downloads/point'
+    }
   }
 };

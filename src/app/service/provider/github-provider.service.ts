@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { GithubCounters, OthGithubName } from "src/app/data/constant";
-import { Product } from "src/app/model/product/product.model";
 import { environment } from "../../../environments/environment";
 import { UtilService } from "../util/util.service";
 

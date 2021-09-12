@@ -63,6 +63,7 @@ export const URLS_RAW = {
   forgetPassword: 'forget-password',
   resetPassword: 'reset-password',
   showroom: 'showroom',
+  contactUs: 'contact-us',
   u: 'u',
   // SplashLayout
   callback: {
@@ -114,6 +115,7 @@ export const URLS = {
   forgetPassword: '/' + URLS_RAW.forgetPassword,
   resetPassword: '/' + URLS_RAW.resetPassword,
   showroom: '/' + URLS_RAW.showroom,
+  contactUs: '/' + URLS_RAW.contactUs,
   u: '/' + 'u',
   // SplashLayout
   callback: {

@@ -26,7 +26,8 @@ export const OthGithubName = 'open-template-hub';
 export const GithubCounters = {
   Stars: 'Stars',
   Forks: 'Forks',
-  Subscribers: 'Subscribers'
+  Subscribers: 'Subscribers',
+  ReleaseVersion: 'Release Version'
 }
 
 export const PROFILE_IMG = './assets/common/profile-img.png';

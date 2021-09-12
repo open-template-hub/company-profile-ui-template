@@ -34,6 +34,24 @@ export class GithubProviderService {
       });
     }
 
+    const releaseVersion = await this.getReleaseVersion(productKey);
+    if (releaseVersion != null) {
+      counters.push({
+        name: GithubCounters.ReleaseVersion,
+        value: releaseVersion,
+      });
+    }
     return counters;
+  };
+
+  getReleaseVersion = async (productKey: string) => {
+    var uri = `${environment.provider.github.repo}/${OthGithubName}/${productKey}/releases`;
+    var response = await this.util.corsRequest(uri);
+    if (response != null) {
+      var json = JSON.parse(response as string);
+      return json[0].name;
+    }
+
+    return null;
   };
 }

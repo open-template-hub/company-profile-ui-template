@@ -23,4 +23,20 @@ export class UtilService {
 
     return [year, month, day].join("-");
   };
+
+  corsRequest = (uri: string) => {
+    return new Promise(function(resolve, reject) {
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if(this.readyState == 4) {
+          if(this.status == 200)
+            resolve(this.responseText);
+          else
+            reject('Call Failed');
+        }
+      };
+      xhttp.open("GET", uri);
+      xhttp.send();
+    });
+  }
 }

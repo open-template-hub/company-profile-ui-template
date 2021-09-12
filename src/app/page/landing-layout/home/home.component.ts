@@ -55,14 +55,14 @@ export class HomeComponent implements AfterViewInit {
     this.initCountUps();
   }
 
-  private initCountUps() {
+  private initCountUps = async() => {
     const options = {
       useGrouping: false,
       duration: undefined,
       formattingFn: undefined,
     };
 
-    this.npmProviderService.loadNpmPackagesDownloadCount(this.downloadCounter);
+    this.downloadCounter = await this.npmProviderService.getNpmPackagesDownloadCount();
 
     options.formattingFn = (n: number) => {
       return this.countUpFormatter(n, this.downloadCounter);

@@ -58,5 +58,11 @@ export const environment = {
     google: {
       tag: 'GTM-NNRF845'
     }
+  },
+
+  provider: {
+    npm: {
+      download: 'https://api.npmjs.org/downloads/point'
+    }
   }
 };

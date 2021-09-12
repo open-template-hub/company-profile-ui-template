@@ -9,26 +9,13 @@ export const PRODUCT_LINES: ProductLine[] = [
     description: 'Micro server solutions for your needs',
     products: [
       {
-        key: 'auth-server',
+        key: 'auth-server-nodejs-template',
         name: 'Auth Server',
         description: 'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png',
         heroImage: 'assets/common/server/authentication.png',
-        counters: [
-          {
-            name: 'Npm Downloads',
-            value: '10+ million'
-          },
-          {
-            name: 'Server Types',
-            value: '3'
-          },
-          {
-            name: 'UI Types',
-            value: '5'
-          }
-        ],
+        counters: [],
         features: [
           {
             name: 'Signature requests',
@@ -139,26 +126,13 @@ export const PRODUCT_LINES: ProductLine[] = [
         ]
       },
       {
-        key: 'payment-server',
+        key: 'payment-server-template',
         name: 'Payment Server',
         description: 'Payment Server template integrated with Stripe and Coinbase Commerce payment systems',
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png',
         heroImage: 'assets/common/server/payment.png',
-        counters: [
-          {
-            name: 'Npm Downloads',
-            value: '10+ million'
-          },
-          {
-            name: 'Server Types',
-            value: '3'
-          },
-          {
-            name: 'UI Types',
-            value: '5'
-          }
-        ],
+        counters: [],
         features: [
           {
             name: 'Signature requests',
@@ -223,26 +197,13 @@ export const PRODUCT_LINES: ProductLine[] = [
         ]
       },
       {
-        key: 'file-storage-server',
+        key: 'file-storage-server-template',
         name: 'File Storage Server',
         description: 'File Storage Server Template that supports uploading and downloading files from AWS S3',
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/file-storage-server-logo.png',
         heroImage: 'assets/common/server/file-storage.png',
-        counters: [
-          {
-            name: 'Npm Downloads',
-            value: '10+ million'
-          },
-          {
-            name: 'Server Types',
-            value: '3'
-          },
-          {
-            name: 'UI Types',
-            value: '5'
-          }
-        ],
+        counters: [],
         features: [
           {
             name: 'Signature requests',
@@ -307,26 +268,13 @@ export const PRODUCT_LINES: ProductLine[] = [
         ]
       },
       {
-        key: 'analytics-server',
+        key: 'analytics-server-template',
         name: 'Analytics Server',
         description: 'Analytics Server Template for generic usage in Node.js',
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/analytics-server-logo.png',
         heroImage: 'assets/common/server/analytics.png',
-        counters: [
-          {
-            name: 'Npm Downloads',
-            value: '10+ million'
-          },
-          {
-            name: 'Server Types',
-            value: '3'
-          },
-          {
-            name: 'UI Types',
-            value: '5'
-          }
-        ],
+        counters: [],
         features: [
           {
             name: 'Signature requests',
@@ -391,26 +339,13 @@ export const PRODUCT_LINES: ProductLine[] = [
         ]
       },
       {
-        key: 'basic-info-server',
+        key: 'basic-info-server-template',
         name: 'Basic Info Server',
         description: 'Basic Info Server Template for generic usage in Node.js',
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/basic-info-server-logo.png',
         heroImage: 'assets/common/server/basic-info.png',
-        counters: [
-          {
-            name: 'Npm Downloads',
-            value: '10+ million'
-          },
-          {
-            name: 'Server Types',
-            value: '3'
-          },
-          {
-            name: 'UI Types',
-            value: '5'
-          }
-        ],
+        counters: [],
         features: [
           {
             name: 'Signature requests',
@@ -482,7 +417,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     description: 'User interface solutions for your needs',
     products: [
       {
-        //        key: 'company-profile-ui',
+        key: 'company-profile-ui-template',
         name: 'Company Profile UI',
         description: 'Company Profile UI Template for generic usage in Angular',
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
@@ -491,7 +426,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         counters: []
       },
       {
-        //        key: 'web-ui',
+        key: 'web-ui-template',
         name: 'Web UI',
         description: 'Web UI Template for generic usage in Angular',
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
@@ -500,7 +435,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         counters: []
       },
       {
-        //        key: 'mobile-ui',
+        key: 'mobile-ui-template',
         name: 'Mobile UI',
         description: 'Mobile UI Template for generic usage in React Native',
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
@@ -516,7 +451,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     description: 'Command line interface generators',
     products: [
       {
-        //        key: 'server-generator',
+        key: 'server-generator',
         name: 'Server Generator',
         description: 'Command line interface generator of the servers at Open Template Hub',
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
@@ -525,7 +460,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         counters: []
       },
       {
-        //        key: 'ui-generator',
+        key: 'app-generator',
         name: 'UI Generator',
         description: 'Command line interface generator of the user interfaces at Open Template Hub',
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
@@ -549,20 +484,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/orchestration-server-logo.png',
         heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png',
         color: ThemeColorSettings.yellow,
-        counters: [
-          {
-            name: 'Npm Downloads',
-            value: '10+ million'
-          },
-          {
-            name: 'Server Types',
-            value: '3'
-          },
-          {
-            name: 'UI Types',
-            value: '5'
-          }
-        ]
+        counters: [],
       }
     ]
   }

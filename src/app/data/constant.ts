@@ -13,6 +13,23 @@ export const ResponseCode = {
   SERVICE_UNAVAILABLE: 503,
 };
 
+export const NpmPackages = [
+  '@open-template-hub/server-generator',
+  '@open-template-hub/common',
+  '@open-template-hub/app-generator'
+];
+
+export const OthStartDate = '2020-01-01';
+
+export const OthGithubName = 'open-template-hub';
+
+export const GithubCounters = {
+  Stars: 'Stars',
+  Forks: 'Forks',
+  Subscribers: 'Subscribers',
+  ReleaseVersion: 'Release Version'
+}
+
 export const PROFILE_IMG = './assets/common/profile-img.png';
 
 export const DarkLightSettings = {
@@ -46,6 +63,7 @@ export const URLS_RAW = {
   forgetPassword: 'forget-password',
   resetPassword: 'reset-password',
   showroom: 'showroom',
+  contactUs: 'contact-us',
   u: 'u',
   // SplashLayout
   callback: {
@@ -97,6 +115,7 @@ export const URLS = {
   forgetPassword: '/' + URLS_RAW.forgetPassword,
   resetPassword: '/' + URLS_RAW.resetPassword,
   showroom: '/' + URLS_RAW.showroom,
+  contactUs: '/' + URLS_RAW.contactUs,
   u: '/' + 'u',
   // SplashLayout
   callback: {

@@ -18,8 +18,10 @@ export class NpmProviderService {
 
       // Using Xml Http Request because http.get cause CORS issue
       var response = await this.util.corsRequest(uri);
-      var json = JSON.parse(response as string);
-      count += json.downloads;
+      if (response != null) {
+        var json = JSON.parse(response as string);
+        count += json.downloads;
+      }
     }
     return count;
   };

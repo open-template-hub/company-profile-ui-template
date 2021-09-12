@@ -32,7 +32,7 @@ export class UtilService {
           if(this.status == 200)
             resolve(this.responseText);
           else
-            reject('Call Failed');
+            reject(null);
         }
       };
       xhttp.open("GET", uri);

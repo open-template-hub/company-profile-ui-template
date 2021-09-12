@@ -1,4 +1,9 @@
-import { Pricing } from '../pricing/pricing.model';
+import { PricingOption } from '../pricing/pricing.model';
+
+export interface PricingFeature {
+  name: string,
+  description: string
+}
 
 export interface Product {
   key?: string, // no key means no product page available
@@ -9,7 +14,8 @@ export interface Product {
   logo: string,
   heroImage: string,
   counters?: ProductCounter[],
-  pricing: Pricing[]
+  features?: PricingFeature[],
+  pricingOptions?: PricingOption[]
 }
 
 export interface ProductLine {

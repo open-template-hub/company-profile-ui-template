@@ -1,7 +1,6 @@
 import { environmentCommon } from '../../../environments/environment-common';
 import { ProductLine } from '../../model/product/product.model';
 import { ThemeColorSettings } from '../constant';
-import { DEFAULT_PRICING_LIST } from '../pricing/pricing.data';
 
 export const PRODUCT_LINES: ProductLine[] = [
   {
@@ -17,7 +16,114 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png',
         heroImage: 'assets/common/server/authentication.png',
         counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        features: [
+          {
+            name: 'Signature requests',
+            description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+          },
+          {
+            name: 'Templates',
+            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          },
+          {
+            name: 'Templates',
+            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          }
+        ],
+        pricingOptions: [
+          {
+            title: 'STARTER',
+            price: {
+              currency: '$',
+              value: '9',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          },
+          {
+            title: 'BASIC',
+            ribbon: { theme: 'blue', text: 'DEAL' },
+            price: {
+              currency: '$',
+              value: '49',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', '500 queries' ],
+            styles: {
+              width: '370px',
+              height: '520px',
+              fontSize: '1.2em',
+              featureHeight: '13em'
+            }
+          },
+          {
+            title: 'PRO',
+            price: {
+              currency: '$',
+              value: '99',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Unlimited users', 'Unlimited photos/mo.', '5000 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          },
+          {
+            title: 'STARTER',
+            price: {
+              currency: '$',
+              value: '9',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          },
+          {
+            title: 'BASIC',
+            ribbon: { theme: 'blue', text: 'DEAL' },
+            price: {
+              currency: '$',
+              value: '49',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', '500 queries' ],
+            styles: {
+              width: '370px',
+              height: '520px',
+              fontSize: '1.2em',
+              featureHeight: '13em'
+            }
+          },
+          {
+            title: 'PRO',
+            price: {
+              currency: '$',
+              value: '99',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Unlimited users', 'Unlimited photos/mo.', '5000 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          }
+        ]
       },
       {
         key: 'payment-server-template',
@@ -27,7 +133,68 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png',
         heroImage: 'assets/common/server/payment.png',
         counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        features: [
+          {
+            name: 'Signature requests',
+            description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+          },
+          {
+            name: 'Templates',
+            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          },
+          {
+            name: 'Templates',
+            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          }
+        ],
+        pricingOptions: [
+          {
+            title: 'STARTER',
+            price: {
+              currency: '$',
+              value: '9',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          },
+          {
+            title: 'BASIC',
+            ribbon: { theme: 'blue', text: 'DEAL' },
+            price: {
+              currency: '$',
+              value: '49',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', '500 queries' ],
+            styles: {
+              width: '370px',
+              height: '520px',
+              fontSize: '1.2em',
+              featureHeight: '13em'
+            }
+          },
+          {
+            title: 'PRO',
+            price: {
+              currency: '$',
+              value: '99',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Unlimited users', 'Unlimited photos/mo.', '5000 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          }
+        ]
       },
       {
         key: 'file-storage-server-template',
@@ -37,7 +204,68 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/file-storage-server-logo.png',
         heroImage: 'assets/common/server/file-storage.png',
         counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        features: [
+          {
+            name: 'Signature requests',
+            description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+          },
+          {
+            name: 'Templates',
+            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          },
+          {
+            name: 'Templates',
+            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          }
+        ],
+        pricingOptions: [
+          {
+            title: 'STARTER',
+            price: {
+              currency: '$',
+              value: '9',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          },
+          {
+            title: 'BASIC',
+            ribbon: { theme: 'blue', text: 'DEAL' },
+            price: {
+              currency: '$',
+              value: '49',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', '500 queries' ],
+            styles: {
+              width: '370px',
+              height: '520px',
+              fontSize: '1.2em',
+              featureHeight: '13em'
+            }
+          },
+          {
+            title: 'PRO',
+            price: {
+              currency: '$',
+              value: '99',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Unlimited users', 'Unlimited photos/mo.', '5000 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          }
+        ]
       },
       {
         key: 'analytics-server-template',
@@ -47,7 +275,68 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/analytics-server-logo.png',
         heroImage: 'assets/common/server/analytics.png',
         counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        features: [
+          {
+            name: 'Signature requests',
+            description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+          },
+          {
+            name: 'Templates',
+            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          },
+          {
+            name: 'Templates',
+            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          }
+        ],
+        pricingOptions: [
+          {
+            title: 'STARTER',
+            price: {
+              currency: '$',
+              value: '9',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          },
+          {
+            title: 'BASIC',
+            ribbon: { theme: 'blue', text: 'DEAL' },
+            price: {
+              currency: '$',
+              value: '49',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', '500 queries' ],
+            styles: {
+              width: '370px',
+              height: '520px',
+              fontSize: '1.2em',
+              featureHeight: '13em'
+            }
+          },
+          {
+            title: 'PRO',
+            price: {
+              currency: '$',
+              value: '99',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Unlimited users', 'Unlimited photos/mo.', '5000 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          }
+        ]
       },
       {
         key: 'basic-info-server-template',
@@ -57,7 +346,68 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/basic-info-server-logo.png',
         heroImage: 'assets/common/server/basic-info.png',
         counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        features: [
+          {
+            name: 'Signature requests',
+            description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+          },
+          {
+            name: 'Templates',
+            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          },
+          {
+            name: 'Templates',
+            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          }
+        ],
+        pricingOptions: [
+          {
+            title: 'STARTER',
+            price: {
+              currency: '$',
+              value: '9',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          },
+          {
+            title: 'BASIC',
+            ribbon: { theme: 'blue', text: 'DEAL' },
+            price: {
+              currency: '$',
+              value: '49',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', '500 queries' ],
+            styles: {
+              width: '370px',
+              height: '520px',
+              fontSize: '1.2em',
+              featureHeight: '13em'
+            }
+          },
+          {
+            title: 'PRO',
+            price: {
+              currency: '$',
+              value: '99',
+              subscriptionTime: 'mo.'
+            },
+            features: [ 'Unlimited users', 'Unlimited photos/mo.', '5000 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em'
+            }
+          }
+        ]
       }
     ]
   },
@@ -73,8 +423,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
         heroImage: '',
-        counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        counters: []
       },
       {
         key: 'web-ui-template',
@@ -83,8 +432,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
         heroImage: '',
-        counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        counters: []
       },
       {
         key: 'mobile-ui-template',
@@ -93,8 +441,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/mobile-ui-logo.png',
         heroImage: '',
-        counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        counters: []
       }
     ]
   },
@@ -110,8 +457,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
         heroImage: '',
-        counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        counters: []
       },
       {
         key: 'app-generator',
@@ -120,8 +466,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
         heroImage: '',
-        counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        counters: []
       }
     ]
   },
@@ -140,7 +485,6 @@ export const PRODUCT_LINES: ProductLine[] = [
         heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png',
         color: ThemeColorSettings.yellow,
         counters: [],
-        pricing: DEFAULT_PRICING_LIST
       }
     ]
   }
@@ -159,8 +503,7 @@ export const SERVICES: ProductLine[ ] = [
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
         heroImage: '',
-        counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        counters: []
       },
       {
         key: 'cloud-integration',
@@ -169,8 +512,7 @@ export const SERVICES: ProductLine[ ] = [
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
         heroImage: '',
-        counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        counters: []
       },
       {
         key: 'quality-assurance',
@@ -179,8 +521,7 @@ export const SERVICES: ProductLine[ ] = [
         href: environmentCommon.website.github.url + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
         heroImage: '',
-        counters: [],
-        pricing: DEFAULT_PRICING_LIST
+        counters: []
       }
     ]
   },

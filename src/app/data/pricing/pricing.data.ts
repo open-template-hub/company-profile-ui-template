@@ -1,6 +1,6 @@
-import { Pricing } from '../../model/pricing/pricing.model';
+import { PricingOption } from '../../model/pricing/pricing.model';
 
-export const DEFAULT_PRICING_LIST: Pricing[] = [
+export const DEFAULT_PRICING_LIST: PricingOption[] = [
   {
     title: 'STARTER',
     price: {

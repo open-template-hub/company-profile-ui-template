@@ -1,10 +1,11 @@
 <div class="pricing-page">
-  <div class="in-page-title">
+  <div class="in-page-title" *ngIf="product">
+    <h2 class="page-header">{{ product.name }}</h2>
     <h2 class="page-header">PRICING</h2>
     <p class="page-description">No hidden fees. Cancel at any time.</p>
   </div>
-  <div class="offer-area">
-    <app-pricing-card *ngFor="let pricing of DEFAULT_PRICING_LIST" [option]="pricing">
+  <div class="offer-area" *ngIf="product?.pricingOptions">
+    <app-pricing-card *ngFor="let pricing of product.pricingOptions" [option]="pricing">
     </app-pricing-card>
   </div>
 </div>

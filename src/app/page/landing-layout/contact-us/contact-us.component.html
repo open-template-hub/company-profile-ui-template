@@ -41,8 +41,7 @@
               </select>
               <span>Country</span>
             </div>
-            <div [class.input-error]="submitted && form.controls.paymentsVolume.invalid" class="input-with-label"
-                 style="align-items: initial; text-align: left;">
+            <div id="payment" [class.input-error]="submitted && form.controls.paymentsVolume.invalid" class="input-with-label">
               <select formControlName="paymentsVolume" (change)="changePaymentsVolume($event)">
                 <option class="default-option" value="" disabled>Payments volume</option>
                 <option *ngFor="let option of paymentsValueOptions" [ngValue]="option">{{ option }}</option>
@@ -52,11 +51,10 @@
                 <span class="span-description">How much money your business processes online each month.</span>
               </div>
             </div>
-            <div [class.input-error]="submitted && form.controls.anythingElse.invalid" class="input-with-label"
+            <div id="anything-else" [class.input-error]="submitted && form.controls.anythingElse.invalid" class="input-with-label"
                  style="align-items: initial">
-              <textarea formControlName="anythingElse" maxlength="500" placeholder="Description..." rows="2"
-                        style="height: 76px"></textarea>
-              <span style="margin-top: 12px;">Anything else</span>
+              <textarea formControlName="anythingElse" maxlength="500" placeholder="Description..." rows="2"></textarea>
+              <span>Anything else</span>
             </div>
           </div>
           <div class="button-area">

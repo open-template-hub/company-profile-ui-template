@@ -111,7 +111,7 @@
   color: var(--info);
 }
 
-.input-with-label input:focus + span, .input-with-label select:focus + div span, .input-with-label textarea:focus + span {
+.input-with-label input:focus + span, .input-with-label select:focus + div span, .input-with-label textarea:focus + span, .input-with-label select:focus + span {
   color: var(--theme-color);
 }
 

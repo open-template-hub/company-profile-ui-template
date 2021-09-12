@@ -10,6 +10,6 @@ export const CONTACT_US_FEATURES: ContactUsFeatures = {
   features: [
     'Focus critical developer resources on your core business',
     'Launch new products faster with less payments code',
-    'improve conversion from international customers'
+    'Improve conversion from international customers'
   ]
 }

@@ -52,7 +52,7 @@
 }
 
 app-card1 {
-  width: 45%;
+  width: 33%;
 }
 
 .contact-us-page {
@@ -69,13 +69,13 @@ app-card1 {
 
 .input-with-label {
   min-height: 42px;
-  margin-top: 0.7em;
-  margin-bottom: 0.7em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
 }
 
 .input-with-label input, .input-with-label textarea, .input-with-label select {
-  width: 65%;
-  min-width: 65%;
+  width: 60%;
+  min-width: 60%;
   height: -webkit-fit-content;
 }
 
@@ -128,6 +128,7 @@ textarea, input, select {
   display: flex;
   flex-direction: column;
   margin-top: -40px;
+  width: 30%;
 }
 
 .features-area .header {
@@ -189,8 +190,101 @@ textarea, input, select {
 .footer-card-description a {
   color: var(--lighter-contrast)
 }
+
 .footer {
   display: flex;
   margin-left: 10%;
   margin-right: 10%;
+  padding-bottom: 40px;
+}
+
+#payment {
+  align-items: initial;
+  text-align: left;
+}
+
+#anything-else {
+  height: 76px;
+}
+
+#anything-else span {
+  margin-top: 12px;
+}
+
+@media only screen and (max-width: 999px) {
+  .contact-us-page {
+    min-height: 1900px;
+  }
+
+  .page-content {
+    flex-direction: column;
+  }
+
+  app-card1 {
+    width: initial;
+  }
+
+  .features-area {
+    margin-top: 15px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .features-area p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .features-area p span {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+  }
+
+  .footer {
+    flex-direction: column;
+    margin-top: 70px;
+  }
+
+  .footer-card-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .input-with-label {
+    flex-direction: column-reverse;
+    height: 70px;
+  }
+
+  .input-with-label:not(:first-child) {
+    margin-top: 35px;
+  }
+
+  #payment {
+    text-align: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  .input-with-label select, .input-with-label textarea {
+    width: 90%;
+  }
+
+  .input-with-label input, .input-with-label select, .input-with-label textarea {
+    width: 90%;
+    margin-top: 5px;
+    align-items: center;
+  }
+
+  #anything-else {
+    height: 92px;
+  }
+
+  #anything-else textarea {
+    text-align: left;
+    min-height: 50px;
+  }
+
+  .footer {
+    padding-bottom: 20px;
+  }
 }

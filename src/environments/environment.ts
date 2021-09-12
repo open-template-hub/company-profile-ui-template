@@ -60,7 +60,7 @@ export const environment = {
 
   provider: {
     npm: {
-      download: 'https://api.npmjs.org/downloads/point'
+      download: 'http://api.npmjs.org/downloads/point'
     }
   }
 };

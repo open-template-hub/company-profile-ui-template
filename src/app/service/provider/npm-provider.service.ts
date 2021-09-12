@@ -13,13 +13,11 @@ export class NpmProviderService {
   loadNpmPackagesDownloadCount = (downloadCount: number) => {
     var today = this.util.formatDate(new Date());
     for (let p of NpmPackages) {
-      this.http
-        .get<any>(
-          `${environment.provider.npm.download}/${OthStartDate}:${today}/${p}`
-        )
-        .subscribe((data: any) => {
-          downloadCount += data.downloads;
-        });
+      var uri = `${environment.provider.npm.download}/${OthStartDate}:${today}/${p}`;
+      this.http.get<any>(uri).subscribe((data: any) => {
+        console.log("Npm Downloads: Uri: {0}, Count: {1}", uri, data.downloads);
+        downloadCount += data.downloads;
+      });
     }
   };
 }

@@ -1,4 +1,3 @@
-import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { NpmPackages, OthStartDate } from "src/app/data/constant";
 import { environment } from "../../../environments/environment";
@@ -8,7 +7,7 @@ import { UtilService } from "../util/util.service";
   providedIn: "root",
 })
 export class NpmProviderService {
-  constructor(private http: HttpClient, private util: UtilService) {}
+  constructor(private util: UtilService) {}
 
   getNpmPackagesDownloadCount = async () => {
     var today = this.util.formatDate(new Date());

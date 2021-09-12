@@ -21,6 +21,15 @@ export const NpmPackages = [
 
 export const OthStartDate = '2020-01-01';
 
+export const OthGithubName = 'open-template-hub';
+
+export const GithubCounters = {
+  Stars: 'Stars',
+  Forks: 'Forks',
+  Subscribers: 'Subscribers',
+  ReleaseVersion: 'Release Version'
+}
+
 export const PROFILE_IMG = './assets/common/profile-img.png';
 
 export const DarkLightSettings = {

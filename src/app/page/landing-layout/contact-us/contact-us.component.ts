@@ -75,21 +75,24 @@ export class ContactUsComponent implements OnInit {
           this.toastService.error( errorMessages[ control ], '' );
         }
       }
-      return;
     }
   }
 
   changeCountry(event: any) {
-    this.form.controls.cityName.setValue( event.target.value, {
+    this.form.controls.country.setValue( event.target.value, {
       onlySelf: true
     } )
   }
 
   changeCompanySize(event: any) {
-
+    this.form.controls.companySize.setValue( event.target.value, {
+      onlySelf: true
+    } )
   }
 
   changePaymentsVolume(event: any) {
-
+    this.form.controls.paymentsVolume.setValue( event.target.value, {
+      onlySelf: true
+    } )
   }
 }

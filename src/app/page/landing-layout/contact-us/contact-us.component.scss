@@ -8,6 +8,9 @@
 
 .input-with-label {
   white-space: nowrap;
+  min-height: 42px;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
 }
 
 .input-checkbox-label span:after {
@@ -67,12 +70,6 @@ app-card1 {
   margin-top: 7vh;
 }
 
-.input-with-label {
-  min-height: 42px;
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-}
-
 .input-with-label input, .input-with-label textarea, .input-with-label select {
   width: 60%;
   min-width: 60%;
@@ -129,18 +126,13 @@ textarea, input, select {
   flex-direction: column;
   margin-top: -40px;
   width: 30%;
+  justify-content: space-evenly;
+  height: 12em;
 }
 
 .features-area .header {
   font-size: 21px;
   margin-bottom: 15px;
-}
-
-.features-area {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 12em;
 }
 
 .features-area p {
@@ -244,6 +236,7 @@ textarea, input, select {
   .footer {
     flex-direction: column;
     margin-top: 70px;
+    padding-bottom: 20px;
   }
 
   .footer-card-wrapper {
@@ -282,9 +275,5 @@ textarea, input, select {
   #anything-else textarea {
     text-align: left;
     min-height: 50px;
-  }
-
-  .footer {
-    padding-bottom: 20px;
   }
 }

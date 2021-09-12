@@ -78,6 +78,7 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { CallbackComponent } from './page/splash-layout/callback/callback.component';
 import { ExternalComponent } from './page/splash-layout/external/external.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
+import { ContactUsComponent } from './page/landing-layout/contact-us/contact-us.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -143,6 +144,7 @@ FullCalendarModule.registerPlugins( [
     ExternalComponent,
     TimelineComponent,
     AboutUsComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

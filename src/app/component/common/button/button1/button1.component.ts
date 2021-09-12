@@ -28,6 +28,7 @@ export class Button1Component {
   @Input() disabled = false;
   @Input() selected = false;
   @Input() relativeToParent = false
+  @Input() smallButton = false;
   loading = false;
 
   constructor( private loadingService: LoadingService ) {

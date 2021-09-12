@@ -7,6 +7,7 @@
         [class.theme-color]="!transparent && themeColor"
         [class.transparent-theme-color]="transparent && themeColor"
         [disabled]="loading || disabled" [style.cursor]="cursor" [class.relative-to-parent]="relativeToParent"
+        [class.small-button]="smallButton"
         [ngClass]="themeColor + '-theme'">
   <i aria-hidden="true" *ngIf="icon" [class]="'fas fa-' + icon + ' fa-lg fa-fw'"></i>
   {{text}}

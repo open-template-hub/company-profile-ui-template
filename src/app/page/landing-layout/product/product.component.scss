@@ -162,8 +162,9 @@
   font-weight: bold;
 }
 
-.product-page .hero-content {
+.product-page .product-content {
   display: flex;
+  padding-top: 100px;
 }
 
 .product-content-left {
@@ -175,6 +176,11 @@
   margin-right: 5px;
   border-bottom-right-radius: 225px;
   border-bottom-left-radius: 2px;
+}
+
+.product-content-right {
+  margin-left: 120px;
+  padding-top: 40px;
 }
 
 .card-area {
@@ -323,11 +329,9 @@ app-swiper-wrapper {
     margin: 5px 0 0;
   }
 
-  .product-page .hero-content {
+  .product-page .product-content {
     width: 90%;
     max-height: 24vw;
-    margin-left: 10%;
-    justify-content: space-between;
   }
 }
 

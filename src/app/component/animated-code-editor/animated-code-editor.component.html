@@ -4,23 +4,5 @@
     <div class="arrow-right"></div>
   </div>
 
-  <div class="code-editor-content">
-    <app-command-line
-      [command]="'open-template-hub-server-generator'"
-      [type]="1"
-    >
-    </app-command-line>
-    <app-command-line [command]="'1) Payment Server'" [type]="2">
-    </app-command-line>
-    <app-command-line [command]="'2) Auth Server'" [type]="2">
-    </app-command-line>
-    <app-command-line [command]="'3) Basic Info Server'" [type]="2">
-    </app-command-line>
-    <app-command-line
-      [command]="'Please enter a server type you want to
-    generate:'"
-      [type]="2"
-    >
-    </app-command-line>
-  </div>
+  <div class="code-editor-content" #codeEditorContent></div>
 </div>

@@ -12,36 +12,24 @@
 
 .code-editor-header {
   border-bottom: 0.5px solid var(--lighter);
+  display: flex;
+  flex-direction: row;
 }
 
 .code-editor-title {
-  padding: 8px;
-  font-size: 20px;
-  background: var(--info);
+  padding: 12px;
+  font-size: 16px;
+  background: var(--error);
   text-transform: uppercase;
   box-sizing: border-box;
-  width: 160px;
+  width: 140px;
   color: var(--card);
   font-weight: 500;
 }
 
-.command {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.command-line {
-  color: var(--card);
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.response {
-  margin-right: 10px;
-  color: var(--card);
-}
-
-.request {
-  margin-right: 8px;
-  color: var(--info);
+.arrow-right {
+  width: 20px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid var(--error);
 }

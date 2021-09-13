@@ -1,20 +1,26 @@
 <div class="code-editor">
   <div class="code-editor-header">
     <p class="code-editor-title">OTH Terminal</p>
+    <div class="arrow-right"></div>
   </div>
 
   <div class="code-editor-content">
-    <p class="command-line">
-      <span class="request command">$</span>open-template-hub-server-generator
-    </p>
-    <p class="command-line"><span class="response command">></span> 1) Payment Server</p>
-    <p class="command-line"><span class="response command">></span> 2) Auth Server</p>
-    <p class="command-line">
-      <span class="response command">></span> 3) Basic Info Server
-    </p>
-    <p class="command-line">
-      <span class="response command">></span> Please enter a server type you want to
-      generate:
-    </p>
+    <app-command-line
+      [command]="'open-template-hub-server-generator'"
+      [type]="1"
+    >
+    </app-command-line>
+    <app-command-line [command]="'1) Payment Server'" [type]="2">
+    </app-command-line>
+    <app-command-line [command]="'2) Auth Server'" [type]="2">
+    </app-command-line>
+    <app-command-line [command]="'3) Basic Info Server'" [type]="2">
+    </app-command-line>
+    <app-command-line
+      [command]="'Please enter a server type you want to
+    generate:'"
+      [type]="2"
+    >
+    </app-command-line>
   </div>
 </div>

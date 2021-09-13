@@ -1,8 +1,12 @@
 <div class="splash-content flex-layout-column flex-center-center">
   <div class="splash-logos flex-layout-row flex-center-center">
-    <img [src]="brand.brandLogo" alt="logo"/>
+    <img [src]="brand.brandLogo" alt="logo" />
     <i aria-hidden="true" class="fa fa-arrow-alt-circle-right success-text"></i>
-    <img [src]="website.logo" alt="partner"/>
+    <img
+      [src]="website.logo"
+      alt="partner"
+      onerror="this.src='./assets/common/globe.png'"
+    />
   </div>
   <div class="alert-with-icon">
     <i aria-hidden="true" class="fas fa-info fa-lg fa-fw success-text"></i>
@@ -11,15 +15,31 @@
     </p>
     <br />
     <p>
-      {{ 'Will be redirected to: ' }}<br/><a class="link green-theme" (click)="redirect()">{{ href }}</a>
+      {{ "Will be redirected to: " }}<br /><a
+        class="link green-theme"
+        (click)="redirect()"
+        >{{ href }}</a
+      >
     </p>
   </div>
   <div class="external-component-button-wrapper">
-    <app-button1 [text]="'Home'" [lighterContrast]="true" [themeColor]="ThemeColorSettings.green" [isSleekButton]="true"
-                 transparent="true" [routerLink]="URLS.root">
+    <app-button1
+      [text]="'Home'"
+      [lighterContrast]="true"
+      [themeColor]="ThemeColorSettings.green"
+      [isSleekButton]="true"
+      transparent="true"
+      [routerLink]="URLS.root"
+    >
     </app-button1>
-    <app-button1 [text]="'Proceed'" [lighterContrast]="true" [themeColor]="ThemeColorSettings.green"
-                 [isSleekButton]="true" transparent="true" (click)="redirect()">
+    <app-button1
+      [text]="'Proceed'"
+      [lighterContrast]="true"
+      [themeColor]="ThemeColorSettings.green"
+      [isSleekButton]="true"
+      transparent="true"
+      (click)="redirect()"
+    >
     </app-button1>
   </div>
 </div>

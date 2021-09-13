@@ -1,0 +1,47 @@
+.code-editor {
+  background: var(--darker);
+  min-width: 500px;
+  border-radius: 5px;
+  min-height: 220px;
+  text-align: left;
+}
+
+.code-editor-content {
+  padding: 15px;
+}
+
+.code-editor-header {
+  border-bottom: 0.5px solid var(--lighter);
+}
+
+.code-editor-title {
+  padding: 8px;
+  font-size: 20px;
+  background: var(--info);
+  text-transform: uppercase;
+  box-sizing: border-box;
+  width: 160px;
+  color: var(--card);
+  font-weight: 500;
+}
+
+.command {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.command-line {
+  color: var(--card);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.response {
+  margin-right: 10px;
+  color: var(--card);
+}
+
+.request {
+  margin-right: 8px;
+  color: var(--info);
+}

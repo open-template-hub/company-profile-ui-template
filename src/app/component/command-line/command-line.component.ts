@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommandType } from 'src/app/enum/command-type.enum';
+import { CommandLine } from 'src/app/model/product/product.model';
 
 @Component({
   selector: 'app-command-line',
@@ -7,11 +8,10 @@ import { CommandType } from 'src/app/enum/command-type.enum';
   styleUrls: ['./command-line.component.scss'],
 })
 export class CommandLineComponent implements OnInit {
-  @Input() command: string = '';
-  @Input() type: CommandType = CommandType.Request;
+  @Input() commandLine: CommandLine;
 
   defaultCallback = () => {
-    console.log('Animation completed for ', this.command);
+    console.log('Animation completed for ', this.commandLine.command);
   };
 
   @Input() animationComplete?: any = this.defaultCallback;
@@ -26,8 +26,8 @@ export class CommandLineComponent implements OnInit {
   }
 
   animateCommand = () => {
-    if (this.counter < this.command.length) {
-      this.animatedText += this.command.charAt(this.counter);
+    if (this.counter < this.commandLine.command.length) {
+      this.animatedText += this.commandLine.command.charAt(this.counter);
       this.counter++;
       setTimeout(this.animateCommand, 30);
     } else {

@@ -2,11 +2,12 @@ import {
   Component,
   ComponentFactory,
   ComponentFactoryResolver,
+  Input,
   OnInit,
   ViewChild,
   ViewContainerRef,
 } from '@angular/core';
-import { CommandType } from 'src/app/enum/command-type.enum';
+import { CommandLine } from 'src/app/model/product/product.model';
 import { CommandLineComponent } from '../command-line/command-line.component';
 
 @Component({
@@ -23,30 +24,25 @@ export class AnimatedCodeEditorComponent implements OnInit {
   factory: ComponentFactory<CommandLineComponent>;
   index: number = 0;
 
-  commandLines = [
-    {
-      command: 'open-template-hub-server-generator',
-      type: CommandType.Request,
-    },
-    { command: '1) Payment Server', type: CommandType.Response },
-    { command: '2) Auth Server', type: CommandType.Response },
-  ];
+  @Input() commandLines: CommandLine[];
 
   ngOnInit(): void {
     this.codeEditorContentRef.clear();
     this.index = 0;
     this.factory = this.resolver.resolveComponentFactory(CommandLineComponent);
+  }
+
+  ngAfterViewInit(): void {
     this.animationTrigger();
   }
 
-  createComponent = (commandLine: any) => {
+  createComponent = (commandLine: CommandLine) => {
     if (this.index < this.commandLines.length) {
       this.index++;
-      const componentRef = this.codeEditorContentRef.createComponent(
+      var componentRef = this.codeEditorContentRef.createComponent(
         this.factory
       );
-      componentRef.instance.command = commandLine.command;
-      componentRef.instance.type = commandLine.type;
+      componentRef.instance.commandLine = commandLine;
       componentRef.instance.animationComplete = this.animationTrigger;
     }
   };

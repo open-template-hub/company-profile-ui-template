@@ -3,17 +3,23 @@
   min-width: 500px;
   border-radius: 5px;
   min-height: 220px;
+  max-height: 220px;
+  overflow: auto;
   text-align: left;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .code-editor-content {
   padding: 15px;
+  padding-bottom: 60px;
 }
 
 .code-editor-header {
   border-bottom: 0.5px solid var(--lighter);
   display: flex;
   flex-direction: row;
+  position: absolute;
 }
 
 .code-editor-title {

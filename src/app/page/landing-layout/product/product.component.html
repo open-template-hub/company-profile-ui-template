@@ -22,7 +22,17 @@
         </div>
       </div>
       <div class="product-content-right">
-        <app-animated-code-editor *ngIf="product.presentationType === 3" [commandLines]="product.commandLines"></app-animated-code-editor>
+        <img
+          *ngIf="product.presentationType === 1"
+          class="demonstration"
+          [src]="product.heroImage"
+          alt="oth-packages"
+        />
+
+        <app-animated-code-editor
+          *ngIf="product.presentationType === 3"
+          [commandLines]="product.commandLines"
+        ></app-animated-code-editor>
       </div>
     </div>
     <div class="counters" *ngIf="product.counters">

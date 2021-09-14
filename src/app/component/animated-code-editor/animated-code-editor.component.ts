@@ -27,12 +27,21 @@ export class AnimatedCodeEditorComponent implements OnInit {
   @Input() commandLines: CommandLine[];
 
   ngOnInit(): void {
+    this.initializeComponent();
+  }
+
+  initializeComponent = () => {
     this.codeEditorContentRef.clear();
     this.index = 0;
     this.factory = this.resolver.resolveComponentFactory(CommandLineComponent);
-  }
+  };
 
   ngAfterViewInit(): void {
+    this.animationTrigger();
+  }
+
+  ngOnChanges(): void {
+    this.initializeComponent();
     this.animationTrigger();
   }
 

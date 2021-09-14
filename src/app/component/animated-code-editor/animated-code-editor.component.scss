@@ -20,6 +20,7 @@
 
 .code-editor-title {
   padding: 3.5px;
+  padding-top: 5px;
   font-size: 12px;
   background: var(--error);
   text-transform: uppercase;
@@ -31,8 +32,7 @@
 
 .arrow-right {
   width: 8px;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-left: 8px solid var(--error);
-  margin-left: -1px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid var(--error);
 }

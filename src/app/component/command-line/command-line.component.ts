@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CommandType } from 'src/app/enum/command-type.enum';
 import { CommandLine } from 'src/app/model/product/product.model';
 
 @Component({
@@ -18,8 +17,6 @@ export class CommandLineComponent implements OnInit {
 
   animatedText: string = '';
   counter: number = 0;
-
-  constructor() {}
 
   ngOnInit(): void {
     this.animateCommand();

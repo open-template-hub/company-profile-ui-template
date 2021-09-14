@@ -1,6 +1,6 @@
 .code-editor {
   background: var(--darker);
-  width: 500px;
+  width: 100%;
   border-radius: 5px;
   min-height: 220px;
   overflow: auto;
@@ -35,4 +35,5 @@
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
   border-left: 12px solid var(--error);
+  margin-left: -0.2px;
 }

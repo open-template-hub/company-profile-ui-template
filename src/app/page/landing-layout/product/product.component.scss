@@ -134,6 +134,10 @@
   border-top: 1px solid var(--lighter-contrast);
 }
 
+.demonstration {
+  max-width: 8em;
+}
+
 .counters a {
   letter-spacing: 0.04em;
 }
@@ -181,6 +185,10 @@
 .product-content-right {
   margin-left: 120px;
   padding-top: 20px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
 }
 
 .card-area {
@@ -245,10 +253,6 @@ app-swiper-wrapper {
     height: 50px;
   }
 
-  .demonstration {
-    width: 420px;
-  }
-
   .product-line-header {
     padding-bottom: 20px;
     text-align: center;
@@ -257,6 +261,17 @@ app-swiper-wrapper {
   .product-content-left {
     border-bottom-right-radius: 75px;
     height: 420px;
+  }
+
+  .product-page .product-content {
+    flex-direction: column;
+  }
+
+  .product-content-right {
+    margin-left: 0px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 95%;
   }
 }
 
@@ -295,10 +310,6 @@ app-swiper-wrapper {
   .feature-right .feature {
     flex-direction: row-reverse;
     justify-content: space-between;
-  }
-
-  .demonstration {
-    width: 420px;
   }
 
   app-testimonial-card {

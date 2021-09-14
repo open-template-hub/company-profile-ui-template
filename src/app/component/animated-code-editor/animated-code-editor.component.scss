@@ -1,42 +1,38 @@
 .code-editor {
   background: var(--darker);
-  min-width: 500px;
+  width: 500px;
   border-radius: 5px;
   min-height: 220px;
-  max-height: 220px;
   overflow: auto;
   text-align: left;
-  display: flex;
-  flex-direction: column-reverse;
 }
 
 .code-editor-content {
   padding: 15px;
-  padding-bottom: 60px;
+  padding-top: 20px;
 }
 
 .code-editor-header {
   border-bottom: 0.5px solid var(--lighter);
   display: flex;
   flex-direction: row;
-  position: absolute;
 }
 
 .code-editor-title {
-  padding: 12px;
-  font-size: 16px;
+  padding: 3.5px;
+  font-size: 12px;
   background: var(--error);
   text-transform: uppercase;
   box-sizing: border-box;
-  width: 140px;
+  width: 92px;
   color: var(--card);
   font-weight: 500;
 }
 
 .arrow-right {
-  width: 20px;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid var(--error);
+  width: 8px;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid var(--error);
   margin-left: -1px;
 }

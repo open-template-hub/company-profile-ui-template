@@ -134,6 +134,10 @@
   border-top: 1px solid var(--lighter-contrast);
 }
 
+.demonstration {
+  max-width: 8em;
+}
+
 .counters a {
   letter-spacing: 0.04em;
 }
@@ -162,8 +166,9 @@
   font-weight: bold;
 }
 
-.product-page .hero-content {
+.product-page .product-content {
   display: flex;
+  padding-top: 100px;
 }
 
 .product-content-left {
@@ -175,6 +180,15 @@
   margin-right: 5px;
   border-bottom-right-radius: 225px;
   border-bottom-left-radius: 2px;
+}
+
+.product-content-right {
+  margin-left: 120px;
+  padding-top: 20px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
 }
 
 .card-area {
@@ -239,10 +253,6 @@ app-swiper-wrapper {
     height: 50px;
   }
 
-  .demonstration {
-    max-width: 60vw;
-  }
-
   .product-line-header {
     padding-bottom: 20px;
     text-align: center;
@@ -251,6 +261,17 @@ app-swiper-wrapper {
   .product-content-left {
     border-bottom-right-radius: 75px;
     height: 420px;
+  }
+
+  .product-page .product-content {
+    flex-direction: column;
+  }
+
+  .product-content-right {
+    margin-left: 0px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    width: 95%;
   }
 }
 
@@ -291,10 +312,6 @@ app-swiper-wrapper {
     justify-content: space-between;
   }
 
-  .demonstration {
-    max-width: 38vw;
-  }
-
   app-testimonial-card {
     display: flex;
     justify-content: center;
@@ -323,11 +340,9 @@ app-swiper-wrapper {
     margin: 5px 0 0;
   }
 
-  .product-page .hero-content {
+  .product-page .product-content {
     width: 90%;
     max-height: 24vw;
-    margin-left: 10%;
-    justify-content: space-between;
   }
 }
 

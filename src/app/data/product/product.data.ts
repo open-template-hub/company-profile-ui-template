@@ -588,6 +588,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
+        heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/demonstration.png',
       },
       {
         key: 'web-ui-template',
@@ -610,6 +611,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/mobile-ui-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
+        heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/mobile-ui/demo.png',
       },
     ],
   },
@@ -655,6 +657,10 @@ export const PRODUCT_LINES: ProductLine[] = [
             type: CommandType.Response,
           },
           {
+            command: '6) Mail Server',
+            type: CommandType.Response,
+          },
+          {
             command: 'Please enter a server type you want to generate:',
             type: CommandType.Response,
           },
@@ -697,11 +703,15 @@ export const PRODUCT_LINES: ProductLine[] = [
             type: CommandType.Request,
           },
           {
-            command: '1) Web Application',
+            command: '1) Web UI',
             type: CommandType.Response,
           },
           {
             command: '2) Mobile Application',
+            type: CommandType.Response,
+          },
+          {
+            command: '3) Company Profile UI',
             type: CommandType.Response,
           },
           {
@@ -749,6 +759,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         color: ThemeColorSettings.yellow,
         counters: [],
         presentationType: ProductLinePresentationType.Image,
+        heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png',
       },
     ],
   },

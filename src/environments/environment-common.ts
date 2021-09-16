@@ -53,6 +53,9 @@ export const environmentCommon = {
       url: 'https://github.com',
       callbackParams: [ 'code', 'state' ],
       tag: environment.oauth.github.tag,
+      api: {
+        repo: 'https://api.github.com/repos'
+      }
     },
     dribbble: {
       logo: './assets/common/social/dribbble-logo.png',
@@ -102,6 +105,11 @@ export const environmentCommon = {
     googleCalendar: {
       logo: './assets/common/social/google-calendar-logo.png',
       cssClass: 'google-calendar'
+    },
+    npm: {
+      api: {
+        download: 'https://api.npmjs.org/downloads/point'
+      }
     }
   }
 };

@@ -1,42 +1,47 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: "root",
-})
+@Injectable( {
+  providedIn: 'root',
+} )
 export class UtilService {
   constructor() {
-    /* Intentionally blank */
+    // Intentionally blank
   }
 
-  delay(ms: number) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
+  delay( ms: number ) {
+    return new Promise( ( resolve ) => setTimeout( resolve, ms ) );
   }
 
-  formatDate = (date) => {
-    var d = new Date(date),
-      month = "" + (d.getMonth() + 1),
-      day = "" + d.getDate(),
-      year = d.getFullYear();
+  formatDate = ( date ) => {
+    const d = new Date( date );
+    const year = d.getFullYear();
+    let month = '' + ( d.getMonth() + 1 );
+    let day = '' + d.getDate();
 
-    if (month.length < 2) month = "0" + month;
-    if (day.length < 2) day = "0" + day;
+    if ( month.length < 2 ) {
+      month = '0' + month;
+    }
 
-    return [year, month, day].join("-");
+    if ( day.length < 2 ) {
+      day = '0' + day;
+    }
+
+    return [ year, month, day ].join( '-' );
   };
 
-  corsRequest = (uri: string) => {
-    return new Promise(function(resolve, reject) {
-      let xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if(this.readyState == 4) {
-          if(this.status == 200)
-            resolve(this.responseText);
+  corsRequest = ( uri: string ) => {
+    return new Promise( ( resolve, reject ) => {
+      const xmlHttpRequest = new XMLHttpRequest();
+      xmlHttpRequest.onreadystatechange = function () {
+        if ( this.readyState === 4 ) {
+          if ( this.status === 200 )
+            resolve( this.responseText );
           else
-            reject(null);
+            reject( null );
         }
       };
-      xhttp.open("GET", uri);
-      xhttp.send();
-    });
-  }
+      xmlHttpRequest.open( 'GET', uri );
+      xmlHttpRequest.send();
+    } );
+  };
 }

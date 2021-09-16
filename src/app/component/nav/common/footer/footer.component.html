@@ -3,10 +3,11 @@
     <div class="footer-link-group">
       <p>Products</p>
       <div *ngFor="let productLine of PRODUCT_LINES" class="footer-link-sub-group">
-        <p *ngIf="productLine.name" [class]="productLine.color ? productLine.color + '-theme' : ''">{{ productLine.name }}</p>
-        <a class="footer-link-item" *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+        <p *ngIf="productLine.name"
+           [class]="productLine.color ? productLine.color + '-theme' : ''">{{ productLine.name }}</p>
+        <a *ngFor="let product of productLine.products; last as isLast; first as isFirst" [class]="productLine.color ? productLine.color + '-theme' : ''"
            [queryParams]="{productLineName: productLine.key, productName: product.key}" [routerLink]="URLS.product"
-           [class]="productLine.color ? productLine.color + '-theme' : ''">
+           class="footer-link-item">
           {{ product.name }}
         </a>
       </div>
@@ -20,34 +21,34 @@
             Open Source
           </span>
         </app-ext-link>
-        <a class="footer-link-item" [routerLink]="URLS.maintenance">
+        <a [routerLink]="URLS.maintenance" class="footer-link-item">
           Docs
         </a>
-        <a class="footer-link-item" [routerLink]="URLS.maintenance">
+        <a [routerLink]="URLS.maintenance" class="footer-link-item">
           API
         </a>
-        <a class="footer-link-item" [routerLink]="URLS.maintenance">
+        <a [routerLink]="URLS.maintenance" class="footer-link-item">
           Status
         </a>
       </div>
       <div class="footer-link-sub-group">
         <p>Company</p>
-        <a class="footer-link-item" [routerLink]="URLS.aboutUs">
+        <a [routerLink]="URLS.aboutUs" class="footer-link-item">
           About
         </a>
-        <a class="footer-link-item" [routerLink]="URLS.maintenance">
+        <a [routerLink]="URLS.maintenance" class="footer-link-item">
           Customers
         </a>
-        <a class="footer-link-item" [routerLink]="URLS.maintenance">
+        <a [routerLink]="URLS.maintenance" class="footer-link-item">
           Enterprise
         </a>
-        <a class="footer-link-item" [routerLink]="URLS.maintenance">
+        <a [routerLink]="URLS.maintenance" class="footer-link-item">
           Partners
         </a>
-        <a class="footer-link-item" [routerLink]="URLS.maintenance">
+        <a [routerLink]="URLS.maintenance" class="footer-link-item">
           Jobs
         </a>
-        <a class="footer-link-item" [routerLink]="URLS.maintenance">
+        <a [routerLink]="URLS.maintenance" class="footer-link-item">
           Blog
         </a>
       </div>
@@ -55,19 +56,19 @@
     <div class="footer-link-group">
       <div class="footer-link-sub-group">
         <p>Resources</p>
-        <a class="footer-link-item" [routerLink]="URLS.maintenance">
+        <a [routerLink]="URLS.maintenance" class="footer-link-item">
           Support
         </a>
-        <a class="footer-link-item" [routerLink]="URLS.contactUs">
+        <a [routerLink]="URLS.contactUs" class="footer-link-item">
           Contact
         </a>
-        <a class="footer-link-item" [routerLink]="URLS.terms">
+        <a [routerLink]="URLS.terms" class="footer-link-item">
           Terms & Policies
         </a>
-        <a class="footer-link-item" [routerLink]="URLS.cookiePolicy">
+        <a [routerLink]="URLS.cookiePolicy" class="footer-link-item">
           Cookies
         </a>
-        <a class="footer-link-item" [routerLink]="URLS.maintenance">
+        <a [routerLink]="URLS.maintenance" class="footer-link-item">
           Sitemap
         </a>
       </div>

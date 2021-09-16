@@ -4,7 +4,8 @@
       <app-event-card (itemIdForFillingForm)="fillForm()" [addMarginToDescription]="true"
                       [centeredTitle]="true" [completed]="completed" [event]="event"
                       [fillLayout]="true" [inProgress]="event.inProgress" [isEditable]="!!event?.attendees"
-                      [maxHeight]="true" [profileImg]="!isProfileImageLoading ? profileImg : PROFILE_IMG"></app-event-card>
+                      [maxHeight]="true"
+                      [profileImg]="!isProfileImageLoading ? profileImg : PROFILE_IMG"></app-event-card>
     </div>
   </div>
   <div *ngIf="event?.attendees" class="attendees-container">

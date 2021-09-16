@@ -11,7 +11,8 @@
     </div>
 
     <h3 *ngIf="!loading && !error">Please proceed with login</h3>
-    <app-button1 (click)="router.navigate([URLS.login])" *ngIf="!loading && !error" [isSleekButton]="true" [text]="'LOG IN'"
+    <app-button1 (click)="router.navigate([URLS.login])" *ngIf="!loading && !error" [isSleekButton]="true"
+                 [text]="'LOG IN'"
                  [themeColor]="'default'">
     </app-button1>
 

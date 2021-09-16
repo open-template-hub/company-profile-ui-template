@@ -9,7 +9,7 @@ import { LoadingService } from '../../service/loading/loading.service';
 export class RequestInterceptor implements HttpInterceptor {
 
   constructor( private authenticationService: AuthenticationService,
-    private loadingService: LoadingService ) {
+      private loadingService: LoadingService ) {
   }
 
   intercept( request: HttpRequest<unknown>, next: HttpHandler ): Observable<HttpEvent<unknown>> {

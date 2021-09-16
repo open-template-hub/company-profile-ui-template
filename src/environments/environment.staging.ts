@@ -56,14 +56,5 @@ export const environment = {
     google: {
       tag: 'GTM-P8BM922'
     }
-  },
-
-  provider: {
-    npm: {
-      download: 'https://api.npmjs.org/downloads/point'
-    },
-    github: {
-      repo: 'https://api.github.com/repos'
-    }
   }
 };

@@ -28,7 +28,7 @@ export const GithubCounters = {
   Forks: 'Forks',
   Subscribers: 'Subscribers',
   ReleaseVersion: 'Release Version'
-}
+};
 
 export const PROFILE_IMG = './assets/common/profile-img.png';
 

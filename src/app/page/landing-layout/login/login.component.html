@@ -31,15 +31,15 @@
           </div>
         </div>
         <div class="section-submit">
-          <app-button1 [themeColor]="'default'" [text]="'LOG IN'"></app-button1>
+          <app-button1 [text]="'LOG IN'" [themeColor]="'default'"></app-button1>
           <p>
             Don't have an account?
-            <a class="link" [routerLink]="URLS.signup">
+            <a [routerLink]="URLS.signup" class="link">
               Sign Up
             </a>
           </p>
           <p>
-            <a class="link" [routerLink]="URLS.forgetPassword">
+            <a [routerLink]="URLS.forgetPassword" class="link">
               Forget password?
             </a>
           </p>

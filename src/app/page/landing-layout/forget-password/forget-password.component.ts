@@ -2,11 +2,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { URLS } from '../../../data/constant';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { InformationService } from '../../../service/information/information.service';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ToastService } from '../../../service/toast/toast.service';
-import { URLS } from '../../../data/constant';
 
 @Component( {
   selector: 'app-forget-password',
@@ -62,7 +62,7 @@ export class ForgetPasswordComponent implements OnInit, OnDestroy {
     this.submitted = true;
 
     if ( this.f.username.invalid ) {
-      this.toastService.error( 'Please provide a valid username.', '');
+      this.toastService.error( 'Please provide a valid username.', '' );
       return;
     }
 

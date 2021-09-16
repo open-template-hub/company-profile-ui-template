@@ -6,48 +6,36 @@
         <p class="product-description">{{ product.description }}</p>
         <div class="register-wrapper">
           <input
-            class="top-right-bottom-left-rounded-box"
-            type="text"
-            [formControl]="emailControl"
-            placeholder="Email address"
-          />
-          <div class="register-button">
-            <button
-              class="register-button-item top-right-bottom-left-rounded-box"
+              [formControl]="emailControl"
+              class="top-right-bottom-left-rounded-box"
+              placeholder="Email address"
+              type="text"/>
+          <button
               (click)="router.navigate([URLS.maintenance])"
-            >
-              Request for Demo
-            </button>
-          </div>
+              class="register-button top-right-bottom-left-rounded-box">
+            Request for Demo
+          </button>
         </div>
       </div>
       <div class="product-content-right">
         <img
-          *ngIf="product.presentationType === 1 && product.heroImage"
-          class="demonstration"
-          [src]="product.heroImage"
-          alt="oth-packages"
-        />
+            *ngIf="product.presentationType === 1 && product.heroImage"
+            [src]="product.heroImage"
+            alt="oth-packages"
+            class="demonstration"/>
 
         <app-animated-code-editor
-          *ngIf="product.presentationType === 3"
-          [commandLines]="product.commandLines"
+            *ngIf="product.presentationType === 3"
+            [commandLines]="product.commandLines"
         ></app-animated-code-editor>
       </div>
     </div>
-    <div class="counters" *ngIf="product.counters">
-      <a
-        class="counter-wrapper"
-        *ngFor="let counter of product.counters"
-        [href]="
-          environmentCommon.website.github.url +
-          '/' +
-          environmentCommon.oth.social.github
-        "
-        target="_blank"
-        rel="noopener"
-      >
-        <h4 id="npmCounterElement" class="counter" *ngIf="counter.value">
+    <div *ngIf="product.counters" class="counters">
+      <a *ngFor="let counter of product.counters"
+         [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
+         class="counter-wrapper"
+         rel="noopener" target="_blank">
+        <h4 *ngIf="counter.value" class="counter" id="npmCounterElement">
           {{ counter.value }}
         </h4>
         <h6>

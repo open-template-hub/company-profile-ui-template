@@ -19,7 +19,9 @@ import { SwiperModule } from 'swiper/angular';
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AnimatedCodeEditorComponent } from './component/animated-code-editor/animated-code-editor.component';
 import { CalendarComponent } from './component/calendar/calendar.component';
+import { CommandLineComponent } from './component/command-line/command-line.component';
 import { EventDataComponent } from './component/common/block/event-data/event-data.component';
 import { EventHamburgerMenuComponent } from './component/common/block/event-hamburger-menu/event-hamburger-menu.component';
 import { LabelDataComponent } from './component/common/block/label-data/label-data.component';
@@ -56,6 +58,7 @@ import { MyProfileComponent } from './page/dashboard-layout/my-profile/my-profil
 import { PublicProfileComponent } from './page/dashboard-layout/public-profile/public-profile.component';
 import { SideContentComponent } from './page/dashboard-layout/side-content/side-content.component';
 import { AboutUsComponent } from './page/landing-layout/about-us/about-us.component';
+import { ContactUsComponent } from './page/landing-layout/contact-us/contact-us.component';
 import { CookiePolicyComponent } from './page/landing-layout/cookie-policy/cookie-policy.component';
 import { ForgetPasswordComponent } from './page/landing-layout/forget-password/forget-password.component';
 import { HomeComponent } from './page/landing-layout/home/home.component';
@@ -78,9 +81,6 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { CallbackComponent } from './page/splash-layout/callback/callback.component';
 import { ExternalComponent } from './page/splash-layout/external/external.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
-import { ContactUsComponent } from './page/landing-layout/contact-us/contact-us.component';
-import { AnimatedCodeEditorComponent } from './component/animated-code-editor/animated-code-editor.component';
-import { CommandLineComponent } from './component/command-line/command-line.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,

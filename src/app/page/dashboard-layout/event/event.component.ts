@@ -1,16 +1,16 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PROFILE_IMG, URLS } from '../../../data/constant';
 import { EventTypes } from '../../../data/event/events.data';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { EventService } from '../../../service/event/event.service';
 import { FileStorageService } from '../../../service/file-storage/file-storage.service';
-import { PROFILE_IMG, URLS } from '../../../data/constant';
 
-@Component({
+@Component( {
   selector: 'app-event',
   templateUrl: './event.component.html',
-  styleUrls: ['./event.component.scss']
-})
+  styleUrls: [ './event.component.scss' ]
+} )
 export class EventComponent implements OnInit, OnDestroy {
 
   event;
@@ -23,18 +23,19 @@ export class EventComponent implements OnInit, OnDestroy {
   completed = false;
 
   constructor(
-    private route: ActivatedRoute,
-    private eventService: EventService,
-    private basicInfoService: BasicInfoService,
-    private fileStorageService: FileStorageService,
-    private router: Router
-  ) { }
+      private route: ActivatedRoute,
+      private eventService: EventService,
+      private basicInfoService: BasicInfoService,
+      private fileStorageService: FileStorageService,
+      private router: Router
+  ) {
+  }
 
   ngOnInit(): void {
     this.eventService.searchedEvents.subscribe( searchedEvent => {
       this.isProfileImageLoading = true;
       if ( searchedEvent && searchedEvent.length > 0 ) {
-        this.event = searchedEvent[0];
+        this.event = searchedEvent[ 0 ];
         if ( new Date() > new Date( new Date( this.event.date ).getTime() + this.event.duration * 60000 ) ) {
           this.completed = true;
         } else {
@@ -49,13 +50,13 @@ export class EventComponent implements OnInit, OnDestroy {
               this.isProfileImageLoading = false;
             } );
           }
-        });
+        } );
       }
     } );
 
     this.route.queryParams.subscribe( params => {
       this.eventService.search( params.event_id, undefined, undefined,
-        undefined, [], EventTypes.Searched ).subscribe( () => {
+          undefined, [], EventTypes.Searched ).subscribe( () => {
         // Intentionally blank
       }, () => {
         this.router.navigate( [ URLS.dashboard.learn ] );

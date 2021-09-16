@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { environmentCommon } from 'src/environments/environment-common';
 import { URLS } from '../../../data/constant';
 import { CONTACT_US_FEATURES, PAYMENTS_VALUE_OPTIONS, SIZE_OPTIONS } from '../../../data/contact-us/contactUsData';
 import { COUNTRIES } from '../../../data/countries';
-import { environmentCommon } from 'src/environments/environment-common';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ToastService } from '../../../service/toast/toast.service';
 
@@ -12,28 +12,28 @@ export interface ContactUsFeatures {
   features: string[]
 }
 
-@Component({
+@Component( {
   selector: 'app-contact-us',
   templateUrl: './contact-us.component.html',
-  styleUrls: ['./contact-us.component.scss']
-})
+  styleUrls: [ './contact-us.component.scss' ]
+} )
 export class ContactUsComponent implements OnInit {
   form: FormGroup;
   submitted = false;
-  URLS = URLS
+  URLS = URLS;
   environmentCommon = environmentCommon;
 
-  features = CONTACT_US_FEATURES
-  countries = COUNTRIES
-  paymentsValueOptions = PAYMENTS_VALUE_OPTIONS
-  sizeOptions = SIZE_OPTIONS
+  features = CONTACT_US_FEATURES;
+  countries = COUNTRIES;
+  paymentsValueOptions = PAYMENTS_VALUE_OPTIONS;
+  sizeOptions = SIZE_OPTIONS;
 
   loading = false;
 
   constructor(
-    private formBuilder: FormBuilder,
-    private loadingService: LoadingService,
-    private toastService: ToastService
+      private formBuilder: FormBuilder,
+      private loadingService: LoadingService,
+      private toastService: ToastService
   ) {
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
   }
@@ -71,28 +71,28 @@ export class ContactUsComponent implements OnInit {
     if ( this.form.invalid ) {
       for ( const control in this.form.controls ) {
         if ( this.form.controls[ control ].invalid ) {
-          console.log( this.form.controls[ control ] )
+          console.log( this.form.controls[ control ] );
           this.toastService.error( errorMessages[ control ], '' );
         }
       }
     }
   }
 
-  changeCountry(event: any) {
+  changeCountry( event: any ) {
     this.form.controls.country.setValue( event.target.value, {
       onlySelf: true
-    } )
+    } );
   }
 
-  changeCompanySize(event: any) {
+  changeCompanySize( event: any ) {
     this.form.controls.companySize.setValue( event.target.value, {
       onlySelf: true
-    } )
+    } );
   }
 
-  changePaymentsVolume(event: any) {
+  changePaymentsVolume( event: any ) {
     this.form.controls.paymentsVolume.setValue( event.target.value, {
       onlySelf: true
-    } )
+    } );
   }
 }

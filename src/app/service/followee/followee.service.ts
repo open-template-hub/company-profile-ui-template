@@ -15,7 +15,7 @@ export class FolloweeService {
 
   count( username: string ) {
     if ( environment.mockDataEnabled ) {
-      return of( [ { count: 1 } ] )
+      return of( [ { count: 1 } ] );
     } else {
       return this.http.get<any>( `${ environment.serverUrl }/followee/count?username=${ username }` );
     }

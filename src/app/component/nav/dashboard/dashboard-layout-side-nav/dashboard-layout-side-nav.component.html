@@ -55,8 +55,8 @@
     </span>
       </a>
       <a *ngIf="currentUser && openOtherSettings" [display]="sideNavClosed==='true'"
-         routerLink="{{URLS.settings.editTheme}}"
-         placement="right" show-delay="500" tooltip="theme">
+         placement="right"
+         routerLink="{{URLS.settings.editTheme}}" show-delay="500" tooltip="theme">
         <i aria-hidden="true" class="material-icons">invert_colors</i>
         <span *ngIf="sideNavClosed === 'false'">
           THEME

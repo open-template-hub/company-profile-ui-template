@@ -10,11 +10,11 @@ import { Product, ProductLine } from '../../../model/product/product.model';
   styleUrls: [ './pricing.component.scss' ]
 } )
 export class PricingComponent {
-  product: Product
+  product: Product;
 
   constructor(
-    private route: ActivatedRoute,
-    public router: Router
+      private route: ActivatedRoute,
+      public router: Router
   ) {
     this.product = undefined;
     this.route.queryParams.subscribe( params => {

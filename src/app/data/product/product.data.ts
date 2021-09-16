@@ -14,10 +14,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'auth-server-nodejs-template',
         name: 'Auth Server',
         description:
-          'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
+            'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
@@ -25,17 +25,17 @@ export const PRODUCT_LINES: ProductLine[] = [
           {
             name: 'Signature requests',
             description:
-              'Customers that pay per user can send out as many signature requests as they want per month!',
+                'Customers that pay per user can send out as many signature requests as they want per month!',
           },
           {
             name: 'Templates',
             description:
-              'Streamline documents that need to be reused and sent out for eSignature frequently.',
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
           },
           {
             name: 'Templates',
             description:
-              'Streamline documents that need to be reused and sent out for eSignature frequently.',
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
           },
         ],
         pricingOptions: [
@@ -46,7 +46,7 @@ export const PRODUCT_LINES: ProductLine[] = [
               value: '9',
               subscriptionTime: 'mo.',
             },
-            features: ['Up to 5 users', 'Maximum 100 photos/mo.', '50 queries'],
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
             styles: {
               width: '300px',
               height: '400px',
@@ -100,7 +100,7 @@ export const PRODUCT_LINES: ProductLine[] = [
               value: '9',
               subscriptionTime: 'mo.',
             },
-            features: ['Up to 5 users', 'Maximum 100 photos/mo.', '50 queries'],
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
             styles: {
               width: '300px',
               height: '400px',
@@ -153,10 +153,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'payment-server-template',
         name: 'Payment Server',
         description:
-          'Payment Server template integrated with Stripe and Coinbase Commerce payment systems',
+            'Payment Server template integrated with Stripe and Coinbase Commerce payment systems',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
@@ -164,17 +164,17 @@ export const PRODUCT_LINES: ProductLine[] = [
           {
             name: 'Signature requests',
             description:
-              'Customers that pay per user can send out as many signature requests as they want per month!',
+                'Customers that pay per user can send out as many signature requests as they want per month!',
           },
           {
             name: 'Templates',
             description:
-              'Streamline documents that need to be reused and sent out for eSignature frequently.',
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
           },
           {
             name: 'Templates',
             description:
-              'Streamline documents that need to be reused and sent out for eSignature frequently.',
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
           },
         ],
         pricingOptions: [
@@ -185,7 +185,7 @@ export const PRODUCT_LINES: ProductLine[] = [
               value: '9',
               subscriptionTime: 'mo.',
             },
-            features: ['Up to 5 users', 'Maximum 100 photos/mo.', '50 queries'],
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
             styles: {
               width: '300px',
               height: '400px',
@@ -238,10 +238,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'file-storage-server-template',
         name: 'File Storage Server',
         description:
-          'File Storage Server Template that supports uploading and downloading files from AWS S3',
+            'File Storage Server Template that supports uploading and downloading files from AWS S3',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/file-storage-server-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
@@ -249,17 +249,17 @@ export const PRODUCT_LINES: ProductLine[] = [
           {
             name: 'Signature requests',
             description:
-              'Customers that pay per user can send out as many signature requests as they want per month!',
+                'Customers that pay per user can send out as many signature requests as they want per month!',
           },
           {
             name: 'Templates',
             description:
-              'Streamline documents that need to be reused and sent out for eSignature frequently.',
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
           },
           {
             name: 'Templates',
             description:
-              'Streamline documents that need to be reused and sent out for eSignature frequently.',
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
           },
         ],
         pricingOptions: [
@@ -270,7 +270,7 @@ export const PRODUCT_LINES: ProductLine[] = [
               value: '9',
               subscriptionTime: 'mo.',
             },
-            features: ['Up to 5 users', 'Maximum 100 photos/mo.', '50 queries'],
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
             styles: {
               width: '300px',
               height: '400px',
@@ -408,8 +408,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Analytics Server',
         description: 'Analytics Server Template for generic usage in Node.js',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/analytics-server-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
@@ -417,17 +417,17 @@ export const PRODUCT_LINES: ProductLine[] = [
           {
             name: 'Signature requests',
             description:
-              'Customers that pay per user can send out as many signature requests as they want per month!',
+                'Customers that pay per user can send out as many signature requests as they want per month!',
           },
           {
             name: 'Templates',
             description:
-              'Streamline documents that need to be reused and sent out for eSignature frequently.',
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
           },
           {
             name: 'Templates',
             description:
-              'Streamline documents that need to be reused and sent out for eSignature frequently.',
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
           },
         ],
         pricingOptions: [
@@ -438,7 +438,7 @@ export const PRODUCT_LINES: ProductLine[] = [
               value: '9',
               subscriptionTime: 'mo.',
             },
-            features: ['Up to 5 users', 'Maximum 100 photos/mo.', '50 queries'],
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
             styles: {
               width: '300px',
               height: '400px',
@@ -492,8 +492,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Basic Info Server',
         description: 'Basic Info Server Template for generic usage in Node.js',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/basic-info-server-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
@@ -501,17 +501,17 @@ export const PRODUCT_LINES: ProductLine[] = [
           {
             name: 'Signature requests',
             description:
-              'Customers that pay per user can send out as many signature requests as they want per month!',
+                'Customers that pay per user can send out as many signature requests as they want per month!',
           },
           {
             name: 'Templates',
             description:
-              'Streamline documents that need to be reused and sent out for eSignature frequently.',
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
           },
           {
             name: 'Templates',
             description:
-              'Streamline documents that need to be reused and sent out for eSignature frequently.',
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
           },
         ],
         pricingOptions: [
@@ -522,7 +522,7 @@ export const PRODUCT_LINES: ProductLine[] = [
               value: '9',
               subscriptionTime: 'mo.',
             },
-            features: ['Up to 5 users', 'Maximum 100 photos/mo.', '50 queries'],
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
             styles: {
               width: '300px',
               height: '400px',
@@ -583,19 +583,20 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Company Profile UI',
         description: 'Company Profile UI Template for generic usage in Angular',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
+        heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/demonstration.png',
       },
       {
         key: 'web-ui-template',
         name: 'Web UI',
         description: 'Web UI Template for generic usage in Angular',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
@@ -605,11 +606,12 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Mobile UI',
         description: 'Mobile UI Template for generic usage in React Native',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/mobile-ui-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
+        heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/mobile-ui/demo.png',
       },
     ],
   },
@@ -622,10 +624,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'server-generator',
         name: 'Server Generator',
         description:
-          'Command line interface generator of the servers at Open Template Hub',
+            'Command line interface generator of the servers at Open Template Hub',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Terminal,
@@ -652,6 +654,10 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             command: '5) Analytics Server',
+            type: CommandType.Response,
+          },
+          {
+            command: '6) Mail Server',
             type: CommandType.Response,
           },
           {
@@ -684,10 +690,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'app-generator',
         name: 'UI Generator',
         description:
-          'Command line interface generator of the user interfaces at Open Template Hub',
+            'Command line interface generator of the user interfaces at Open Template Hub',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Terminal,
@@ -697,11 +703,15 @@ export const PRODUCT_LINES: ProductLine[] = [
             type: CommandType.Request,
           },
           {
-            command: '1) Web Application',
+            command: '1) Web UI',
             type: CommandType.Response,
           },
           {
             command: '2) Mobile Application',
+            type: CommandType.Response,
+          },
+          {
+            command: '3) Company Profile UI',
             type: CommandType.Response,
           },
           {
@@ -743,12 +753,13 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Orchestration Server',
         description: 'One server to orchestrate them all!',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/orchestration-server-logo.png',
         color: ThemeColorSettings.yellow,
         counters: [],
         presentationType: ProductLinePresentationType.Image,
+        heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png',
       },
     ],
   },
@@ -764,10 +775,10 @@ export const SERVICES: ProductLine[] = [
         key: 'software-consultancy',
         name: 'Software Consultancy',
         description:
-          'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+            'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
@@ -776,10 +787,10 @@ export const SERVICES: ProductLine[] = [
         key: 'cloud-integration',
         name: 'Cloud Integration',
         description:
-          'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+            'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
@@ -788,10 +799,10 @@ export const SERVICES: ProductLine[] = [
         key: 'quality-assurance',
         name: 'Quality Assurance',
         description:
-          'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+            'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         href:
-          environmentCommon.website.github.url +
-          environmentCommon.oth.social.github,
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,

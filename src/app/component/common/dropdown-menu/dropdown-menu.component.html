@@ -3,18 +3,18 @@
     <ng-content (click)="toggleDropdown()"></ng-content>
   </div>
 
-  <div *ngIf="isDropdownOpen" #dropdownContent class="dropdown-content"
-       [class.dropdown-opened]="isDropdownOpen && closeDropdownInternalClicked">
+  <div #dropdownContent *ngIf="isDropdownOpen" [class.dropdown-opened]="isDropdownOpen && closeDropdownInternalClicked"
+       class="dropdown-content">
     <i aria-hidden="true" class="dropdown-caret fas fa-caret-up fa-lg fa-fw"></i>
-    <div class="dropdown-top-menu" (click)="closeDropDownInternal()">
+    <div (click)="closeDropDownInternal()" class="dropdown-top-menu">
       <i aria-hidden="true" class="fas fa-times fa-lg fa-fw"></i>
     </div>
 
-    <div class="section-column-wrapper" [style]="'min-width: ' + (330 * calculatedColumns) + 'px;'">
-      <div class="section-column" *ngFor="let productLine of productLines; last as isLastColumn; index as i"
-           [class.section-column-right-border]="!(i == calculatedColumns - 1 || isLastColumn)"
+    <div [style]="'min-width: ' + (330 * calculatedColumns) + 'px;'" class="section-column-wrapper">
+      <div *ngFor="let productLine of productLines; last as isLastColumn; index as i" [class.section-column-right-border]="!(i == calculatedColumns - 1 || isLastColumn)"
            [class]="productLine.color ? productLine.color + '-theme' : ''"
-           [style]="'max-height: ' + ((60  + (150 * calculatedRows)) + 1) + 'px;'">
+           [style]="'max-height: ' + ((60  + (150 * calculatedRows)) + 1) + 'px;'"
+           class="section-column">
         <div *ngIf="productLine.name" class="section-header">
           <h4>
             {{ productLine.name }}
@@ -25,11 +25,11 @@
           <hr/>
         </div>
 
-        <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
-           class="dropdown-item"
+        <a (click)="closeDropDownInternal()"
+           *ngFor="let product of productLine.products; last as isLast; first as isFirst"
            [class]="product.color ? product.color + '-theme' : ''"
-           [routerLink]="URLS.product" [queryParams]="{productLineName: productLine.key, productName: product.key}"
-           (click)="closeDropDownInternal()">
+           [queryParams]="{productLineName: productLine.key, productName: product.key}" [routerLink]="URLS.product"
+           class="dropdown-item">
 
           <img [src]="product.logo" alt="logo" class="dropdown-item-logo" height="55"/>
 

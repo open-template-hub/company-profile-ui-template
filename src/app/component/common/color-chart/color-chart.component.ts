@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-@Component({
+@Component( {
   selector: 'app-color-chart',
   templateUrl: './color-chart.component.html',
-  styleUrls: ['./color-chart.component.scss']
-})
+  styleUrls: [ './color-chart.component.scss' ]
+} )
 export class ColorChartComponent {
 
   constructor() {

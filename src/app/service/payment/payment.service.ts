@@ -17,7 +17,7 @@ export class PaymentService {
   initPayment( paymentConfig: any, productId: string, quantity: number ) {
     return this.http.post<any>( `${ environment.serverUrl }/payment`, {
       payment_config_key: paymentConfig.tag,
-      product_id : productId,
+      product_id: productId,
       quantity
     } ).subscribe( async ( response ) => {
 
@@ -43,8 +43,8 @@ export class PaymentService {
   verify( paymentConfig: any, transactionHistoryId: string, productId: string ) {
     return this.http.post<any>( `${ environment.serverUrl }/payment/verify`, {
       payment_config_key: paymentConfig.tag,
-      transaction_history_id : transactionHistoryId,
+      transaction_history_id: transactionHistoryId,
       product_id: productId
-    } )
+    } );
   }
 }

@@ -1,8 +1,8 @@
 <div class="contact-us-page">
   <h1 class="page-header">Contact our sales team</h1>
   <div class="page-content">
-    <app-card1 [enableHeader]="false" [paddingTopContent]="false" [isCardContentOverflowVisible]="true"
-               [isScrollable]="true" class="contribute-card">
+    <app-card1 [enableHeader]="false" [isCardContentOverflowVisible]="true" [isScrollable]="true"
+               [paddingTopContent]="false" class="contribute-card">
       <div body class="section">
         <!-- primary info fields -->
         <form (ngSubmit)="onSubmit()" [formGroup]="form">
@@ -28,22 +28,23 @@
               <span>Company website</span>
             </div>
             <div [class.input-error]="submitted && form.controls.companySize.invalid" class="input-with-label">
-              <select formControlName="companySize" (change)="changeCompanySize($event)">
-                <option class="default-option" value="" disabled>Select range of employees</option>
+              <select (change)="changeCompanySize($event)" formControlName="companySize">
+                <option class="default-option" disabled value="">Select range of employees</option>
                 <option *ngFor="let option of sizeOptions" [ngValue]="option">{{ option }}</option>
               </select>
               <span>Company size</span>
             </div>
             <div [class.input-error]="submitted && form.controls.country.invalid" class="input-with-label">
-              <select formControlName="country" (change)="changeCountry($event)">
-                <option class="default-option" value="" disabled>Select a country</option>
+              <select (change)="changeCountry($event)" formControlName="country">
+                <option class="default-option" disabled value="">Select a country</option>
                 <option *ngFor="let country of countries" [ngValue]="country">{{ country }}</option>
               </select>
               <span>Country</span>
             </div>
-            <div id="payment" [class.input-error]="submitted && form.controls.paymentsVolume.invalid" class="input-with-label">
-              <select formControlName="paymentsVolume" (change)="changePaymentsVolume($event)">
-                <option class="default-option" value="" disabled>Payments volume</option>
+            <div [class.input-error]="submitted && form.controls.paymentsVolume.invalid" class="input-with-label"
+                 id="payment">
+              <select (change)="changePaymentsVolume($event)" formControlName="paymentsVolume">
+                <option class="default-option" disabled value="">Payments volume</option>
                 <option *ngFor="let option of paymentsValueOptions" [ngValue]="option">{{ option }}</option>
               </select>
               <div class="form-span-wrapper" style="margin-top: 12px;">
@@ -51,21 +52,22 @@
                 <span class="span-description">How much money your business processes online each month.</span>
               </div>
             </div>
-            <div id="anything-else" [class.input-error]="submitted && form.controls.anythingElse.invalid" class="input-with-label"
+            <div [class.input-error]="submitted && form.controls.anythingElse.invalid" class="input-with-label"
+                 id="anything-else"
                  style="align-items: initial">
               <textarea formControlName="anythingElse" maxlength="500" placeholder="Description..." rows="2"></textarea>
               <span>Anything else</span>
             </div>
           </div>
           <div class="button-area">
-            <app-button1 [themeColor]="'default'" [isSleekButton]="true" [relativeToParent]="true" [smallButton]="true"
-                         [text]="'CONTACT SALES'">
+            <app-button1 [isSleekButton]="true" [relativeToParent]="true" [smallButton]="true" [text]="'CONTACT SALES'"
+                         [themeColor]="'default'">
             </app-button1>
           </div>
         </form>
       </div>
     </app-card1>
-    <div class="features-area" *ngIf="features">
+    <div *ngIf="features" class="features-area">
       <p class="header">{{ features.title }}</p>
       <p *ngFor="let feature of features.features">
         <i aria-hidden="true" class="material-icons">check</i>
@@ -80,7 +82,8 @@
         <p class="footer-card-title">General Communication</p>
         <p class="footer-card-description">For general queries, including
           partnership opportunities, please email
-          <a [href]="'mailto: ' + environmentCommon.oth.email" style="font-weight: bold;">{{ environmentCommon.oth.email }}</a>.
+          <a [href]="'mailto: ' + environmentCommon.oth.email"
+             style="font-weight: bold;">{{ environmentCommon.oth.email }}</a>.
         </p>
       </div>
     </div>

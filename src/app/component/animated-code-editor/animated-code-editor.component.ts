@@ -1,8 +1,10 @@
 import {
+  AfterViewInit,
   Component,
   ComponentFactory,
   ComponentFactoryResolver,
   Input,
+  OnChanges,
   OnInit,
   ViewChild,
   ViewContainerRef,
@@ -10,19 +12,20 @@ import {
 import { CommandLine } from 'src/app/model/product/product.model';
 import { CommandLineComponent } from '../command-line/command-line.component';
 
-@Component({
+@Component( {
   selector: 'app-animated-code-editor',
   templateUrl: './animated-code-editor.component.html',
-  styleUrls: ['./animated-code-editor.component.scss'],
-})
-export class AnimatedCodeEditorComponent implements OnInit {
-  constructor(private resolver: ComponentFactoryResolver) {}
+  styleUrls: [ './animated-code-editor.component.scss' ],
+} )
+export class AnimatedCodeEditorComponent implements OnInit, OnChanges, AfterViewInit {
+  constructor( private resolver: ComponentFactoryResolver ) {
+  }
 
-  @ViewChild('codeEditorContent', { static: true, read: ViewContainerRef })
+  @ViewChild( 'codeEditorContent', { static: true, read: ViewContainerRef } )
   codeEditorContentRef: ViewContainerRef;
 
   factory: ComponentFactory<CommandLineComponent>;
-  index: number = 0;
+  index = 0;
 
   @Input() commandLines: CommandLine[];
 
@@ -33,7 +36,7 @@ export class AnimatedCodeEditorComponent implements OnInit {
   initializeComponent = () => {
     this.codeEditorContentRef.clear();
     this.index = 0;
-    this.factory = this.resolver.resolveComponentFactory(CommandLineComponent);
+    this.factory = this.resolver.resolveComponentFactory( CommandLineComponent );
   };
 
   ngAfterViewInit(): void {
@@ -45,11 +48,11 @@ export class AnimatedCodeEditorComponent implements OnInit {
     this.animationTrigger();
   }
 
-  createComponent = (commandLine: CommandLine) => {
-    if (this.index < this.commandLines.length) {
+  createComponent = ( commandLine: CommandLine ) => {
+    if ( this.index < this.commandLines.length ) {
       this.index++;
-      var componentRef = this.codeEditorContentRef.createComponent(
-        this.factory
+      const componentRef = this.codeEditorContentRef.createComponent(
+          this.factory
       );
       componentRef.instance.commandLine = commandLine;
       componentRef.instance.animationComplete = this.animationTrigger;
@@ -57,7 +60,7 @@ export class AnimatedCodeEditorComponent implements OnInit {
   };
 
   animationTrigger = () => {
-    console.log('Animation triggered with index: ', this.index);
-    this.createComponent(this.commandLines[this.index]);
+    console.log( 'Animation triggered with index: ', this.index );
+    this.createComponent( this.commandLines[ this.index ] );
   };
 }

@@ -60,19 +60,15 @@
 }
 
 .register-button {
-  margin-top: 0.1em;
-}
-
-.register-button-item {
-  width: 22em;
+  margin-top: 8px;
   border: none;
+  width: 100%;
   font-weight: 600;
   font-size: 14px;
   color: var(--card);
   background-color: var(--darker);
   cursor: pointer;
   transition: 0.2s ease;
-  margin: 0.25em 0.25em 1em;
   vertical-align: text-bottom;
   height: 35px;
 }
@@ -93,13 +89,17 @@
   font-size: 0.5em;
   color: var(--darker);
   font-weight: 500;
-  padding: 40px;
+}
+
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .register-wrapper input {
   border: 1px solid var(--shadow);
-  max-width: 22em;
-  height: -webkit-fit-content;
   transition: border-color 400ms ease-out;
   font-size: 14px;
   font-weight: 500;
@@ -107,26 +107,11 @@
 }
 
 .register-wrapper input::placeholder {
-  color: var(--color);
+  color: var(--lighter-contrast);
 }
 
 .register-wrapper input:focus {
   border: 1px solid var(--lighter);
-}
-
-.register-wrapper a {
-  border-radius: 3px;
-  padding: 10px 17px;
-  display: inline-flex;
-  align-items: center;
-  color: var(--theme-color);
-  border: 1px solid var(--theme-color);
-  margin-left: 1.5em;
-  white-space: nowrap;
-}
-
-.register-wrapper a i {
-  margin-right: 0.5em;
 }
 
 .counters {
@@ -181,8 +166,7 @@
 }
 
 .product-content-right {
-  padding: 20px 10px 10px 10px;
-  width: 32%;
+  width: 35%;
   align-items: center;
   justify-content: center;
 }
@@ -221,6 +205,10 @@ app-swiper-wrapper {
     padding-bottom: 100px;
   }
 
+  .product-description {
+    padding: 40px 15px;
+  }
+
   .register-wrapper {
     margin-top: 10px;
     width: -webkit-fill-available;
@@ -236,6 +224,10 @@ app-swiper-wrapper {
 
   .register-wrapper a i {
     font-size: 1.2em;
+  }
+
+  .register-wrapper > * {
+    max-width: 92%;
   }
 
   .counters {
@@ -261,12 +253,15 @@ app-swiper-wrapper {
   }
 
   .product-content-left {
-    height: 100%;
+    border-bottom-right-radius: 125px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
     width: 92%;
   }
 
   .product-content-right {
     width: 92%;
+    margin-bottom: 40px;
   }
 }
 
@@ -285,6 +280,10 @@ app-swiper-wrapper {
 
   .product-line-header {
     padding-bottom: 40px;
+  }
+
+  .product-description {
+    padding: 45px 40px;
   }
 
   .register-wrapper a {
@@ -315,6 +314,10 @@ app-swiper-wrapper {
 
   .product-content-left {
     align-items: initial;
+  }
+
+  .register-wrapper > * {
+    max-width: 50%;
   }
 
   .counters a:not(:first-child) {

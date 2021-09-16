@@ -159,14 +159,12 @@
 .product-content-left {
   background: var(--shadow-lighter);
   height: 360px;
-  width: 42%;
   border-top-left-radius: 95px;
   border-bottom-right-radius: 225px;
   border-bottom-left-radius: 2px;
 }
 
 .product-content-right {
-  width: 35%;
   align-items: center;
   justify-content: center;
 }
@@ -211,7 +209,6 @@ app-swiper-wrapper {
 
   .register-wrapper {
     margin-top: 10px;
-    width: -webkit-fill-available;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -227,7 +224,7 @@ app-swiper-wrapper {
   }
 
   .register-wrapper > * {
-    max-width: 92%;
+    max-width: 90%;
   }
 
   .counters {
@@ -313,7 +310,11 @@ app-swiper-wrapper {
   }
 
   .product-content-left {
-    align-items: initial;
+    width: 42%;
+  }
+
+  .product-content-right {
+    width: 35%;
   }
 
   .register-wrapper > * {

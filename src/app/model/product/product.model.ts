@@ -14,7 +14,7 @@ export interface Product {
   color?: string;
   href: string;
   logo: string;
-  heroImage: string;
+  heroImage?: string;
   counters?: ProductCounter[];
   features?: PricingFeature[];
   pricingOptions?: PricingOption[];

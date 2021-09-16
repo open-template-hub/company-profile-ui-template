@@ -18,7 +18,7 @@ export class DropdownMenuComponent {
 
   @Input() isDropdownOpen = false;
   @Input() minimumColumns = 1;
-  @Input() minimumRows = 5;
+  @Input() minimumRows = 6;
 
   calculatedColumns;
   calculatedRows;
@@ -52,7 +52,7 @@ export class DropdownMenuComponent {
       this.calculatedColumns = wantedColumns;
 
       if ( this.calculatedColumns < this.minimumColumns ) {
-        this.calculatedRows = this.minimumRows - ( this.minimumColumns - this.calculatedColumns );
+        this.calculatedRows = this.minimumRows - ( this.minimumColumns - this.calculatedColumns + 2 );
       } else {
         this.calculatedRows = this.minimumRows;
       }

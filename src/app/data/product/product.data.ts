@@ -19,7 +19,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png',
-        heroImage: 'assets/common/server/authentication.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
@@ -159,7 +158,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png',
-        heroImage: 'assets/common/server/payment.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
@@ -245,7 +243,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/file-storage-server-logo.png',
-        heroImage: 'assets/common/server/file-storage.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
@@ -323,6 +320,90 @@ export const PRODUCT_LINES: ProductLine[] = [
         ],
       },
       {
+        key: 'mail-server-template',
+        name: 'Mail Server',
+        description: 'Mail Server Template supporting both regular public and private mail send processes in Message Queue Architecture',
+        href:
+            environmentCommon.website.github.url +
+            environmentCommon.oth.social.github,
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/mail-server-logo.png',
+        counters: [],
+        presentationType: ProductLinePresentationType.Image,
+        features: [
+          {
+            name: 'Signature requests',
+            description:
+                'Customers that pay per user can send out as many signature requests as they want per month!',
+          },
+          {
+            name: 'Templates',
+            description:
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          },
+          {
+            name: 'Templates',
+            description:
+                'Streamline documents that need to be reused and sent out for eSignature frequently.',
+          },
+        ],
+        pricingOptions: [
+          {
+            title: 'STARTER',
+            price: {
+              currency: '$',
+              value: '9',
+              subscriptionTime: 'mo.',
+            },
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em',
+            },
+          },
+          {
+            title: 'BASIC',
+            ribbon: { theme: 'blue', text: 'DEAL' },
+            price: {
+              currency: '$',
+              value: '49',
+              subscriptionTime: 'mo.',
+            },
+            features: [
+              'Up to 10 users',
+              'Maximum 100 photos/mo.',
+              '500 queries',
+            ],
+            styles: {
+              width: '370px',
+              height: '520px',
+              fontSize: '1.2em',
+              featureHeight: '13em',
+            },
+          },
+          {
+            title: 'PRO',
+            price: {
+              currency: '$',
+              value: '99',
+              subscriptionTime: 'mo.',
+            },
+            features: [
+              'Unlimited users',
+              'Unlimited photos/mo.',
+              '5000 queries',
+            ],
+            styles: {
+              width: '300px',
+              height: '400px',
+              fontSize: '1em',
+              featureHeight: '10em',
+            },
+          },
+        ],
+      },
+      {
         key: 'analytics-server-template',
         name: 'Analytics Server',
         description: 'Analytics Server Template for generic usage in Node.js',
@@ -330,7 +411,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/analytics-server-logo.png',
-        heroImage: 'assets/common/server/analytics.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
@@ -415,7 +495,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/basic-info-server-logo.png',
-        heroImage: 'assets/common/server/basic-info.png',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
@@ -507,7 +586,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
-        heroImage: '',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
@@ -519,7 +597,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
-        heroImage: '',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
@@ -531,7 +608,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/mobile-ui-logo.png',
-        heroImage: '',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
@@ -551,7 +627,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
-        heroImage: '',
         counters: [],
         presentationType: ProductLinePresentationType.Terminal,
         commandLines: [
@@ -614,7 +689,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
-        heroImage: '',
         counters: [],
         presentationType: ProductLinePresentationType.Terminal,
         commandLines: [
@@ -672,8 +746,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/orchestration-server-logo.png',
-        heroImage:
-          'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png',
         color: ThemeColorSettings.yellow,
         counters: [],
         presentationType: ProductLinePresentationType.Image,
@@ -697,7 +769,6 @@ export const SERVICES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
-        heroImage: '',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
@@ -710,7 +781,6 @@ export const SERVICES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
-        heroImage: '',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
@@ -723,7 +793,6 @@ export const SERVICES: ProductLine[] = [
           environmentCommon.website.github.url +
           environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
-        heroImage: '',
         counters: [],
         presentationType: ProductLinePresentationType.Image,
       },

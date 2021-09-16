@@ -55,6 +55,18 @@ export class HomeComponent implements AfterViewInit {
     this.initCountUps();
   }
 
+  countUpFormatter( n: number ) {
+    if ( n < this.KILO ) {
+      return n + '';
+    } else {
+      if ( n < this.MILLION ) {
+        return Math.round( ( n / this.KILO ) * 10 ) / 10 + 'k';
+      } else {
+        return Math.round( ( n / this.MILLION ) * 10 ) / 10 + 'M';
+      }
+    }
+  }
+
   private initCountUps() {
     const options = {
       useGrouping: false,
@@ -70,7 +82,7 @@ export class HomeComponent implements AfterViewInit {
     this.startCounter( options, this.serverTypesCounter );
 
     this.startCounter( options, this.uiTypesCounter );
-  };
+  }
 
   private startCounter( options: { duration: number; useGrouping: boolean; formattingFn }, counter ) {
     options.formattingFn = ( n: number ) => {
@@ -94,18 +106,6 @@ export class HomeComponent implements AfterViewInit {
       eventCountUp.start();
     } else {
       console.error( eventCountUp.error );
-    }
-  }
-
-  countUpFormatter( n: number ) {
-    if ( n < this.KILO ) {
-      return n + '';
-    } else {
-      if ( n < this.MILLION ) {
-        return Math.round( ( n / this.KILO ) * 10 ) / 10 + 'k';
-      } else {
-        return Math.round( ( n / this.MILLION ) * 10 ) / 10 + 'M';
-      }
     }
   }
 }

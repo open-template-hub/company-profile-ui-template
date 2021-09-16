@@ -1,14 +1,14 @@
-<button class="button1" [class]="classType" [class.attendee]="isAttendee"
-        [class.fixed-width]="fixedWidth" [class.hover-with-color]="hoverWithColor"
-        [class.lighter-contrast]="lighterContrast" [class.mobile-view]="mobileView"
-        [class.sleek-button]="isSleekButton" [class.success]="success" [class.transparent]="transparent"
-        [class.contribute]="isContribute" [class.theme-light-color]="themeLightColor"
-        [class.always-light]="alwaysLight" [class.always-dark]="alwaysDark" [class.selected]="selected"
-        [class.theme-color]="!transparent && themeColor"
+<button [class.always-dark]="alwaysDark" [class.always-light]="alwaysLight" [class.attendee]="isAttendee"
+        [class.contribute]="isContribute" [class.fixed-width]="fixedWidth"
+        [class.hover-with-color]="hoverWithColor" [class.lighter-contrast]="lighterContrast"
+        [class.mobile-view]="mobileView" [class.relative-to-parent]="relativeToParent" [class.selected]="selected"
+        [class.sleek-button]="isSleekButton" [class.small-button]="smallButton"
+        [class.success]="success" [class.theme-color]="!transparent && themeColor" [class.theme-light-color]="themeLightColor"
         [class.transparent-theme-color]="transparent && themeColor"
-        [disabled]="loading || disabled" [style.cursor]="cursor" [class.relative-to-parent]="relativeToParent"
-        [class.small-button]="smallButton"
-        [ngClass]="themeColor + '-theme'">
-  <i aria-hidden="true" *ngIf="icon" [class]="'fas fa-' + icon + ' fa-lg fa-fw'"></i>
+        [class.transparent]="transparent"
+        [class]="classType" [disabled]="loading || disabled" [ngClass]="themeColor + '-theme'"
+        [style.cursor]="cursor"
+        class="button1">
+  <i *ngIf="icon" [class]="'fas fa-' + icon + ' fa-lg fa-fw'" aria-hidden="true"></i>
   {{text}}
 </button>

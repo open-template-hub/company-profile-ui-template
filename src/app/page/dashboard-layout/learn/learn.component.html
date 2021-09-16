@@ -4,11 +4,11 @@
     <i aria-hidden="true" class="material-icons">search</i>
     <input #searchArea (keyup)="search($event)" placeholder="ex. title, username.." type="text">
   </div>
-  <app-button1 [hoverWithColor]="false" [isSleekButton]="true" [lighterContrast]="true" [text]="'Search'"
-               [transparent]="true" (click)="search(undefined)"></app-button1>
+  <app-button1 (click)="search(undefined)" [hoverWithColor]="false" [isSleekButton]="true" [lighterContrast]="true"
+               [text]="'Search'" [transparent]="true"></app-button1>
   <div
-    *ngIf="(categorySearchResults.length > 0) && searchEnabled"
-    class="search-results">
+      *ngIf="(categorySearchResults.length > 0) && searchEnabled"
+      class="search-results">
     <hr *ngIf="userSearchResults.length > 0 && categorySearchResults.length > 0">
     <a (click)="categorySearchResults = []"
        *ngFor="let result of categorySearchResults"
@@ -29,7 +29,7 @@
   <div *ngIf="!isSearchedWithCategory && !searchedEvents && recommendedEvents?.length > 0">
     <div class="learn-page-events">
       <app-event-card *ngFor="let event of recommendedEvents"
-                             [event]="event" [inProgress]="event.inProgress">
+                      [event]="event" [inProgress]="event.inProgress">
       </app-event-card>
     </div>
   </div>

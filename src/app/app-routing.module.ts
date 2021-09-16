@@ -57,7 +57,7 @@ const routes: Routes = [
       { path: URLS_RAW.login, component: LoginComponent },
       { path: URLS_RAW.forgetPassword, component: ForgetPasswordComponent },
       { path: URLS_RAW.resetPassword, component: ResetPasswordComponent },
-      { path: URLS_RAW.contactUs, component: ContactUsComponent},
+      { path: URLS_RAW.contactUs, component: ContactUsComponent },
       { path: URLS_RAW.u + '/' + ':username', component: PublicProfileComponent, data: { isPublic: true } },
     ]
   },

@@ -2,8 +2,8 @@
      class="label-data-block flex-layout-column">
   <p>{{label}}</p>
   <p *ngIf="!isClickable">{{data}}</p>
-  <app-ext-link *ngIf="isClickable" [linkClass]="highlight ? 'link' : ''"
-                [href]="(data.startsWith('http://') || data.startsWith('https://')) ? data : 'http://' + data">
+  <app-ext-link *ngIf="isClickable" [href]="(data.startsWith('http://') || data.startsWith('https://')) ? data : 'http://' + data"
+                [linkClass]="highlight ? 'link' : ''">
     <div body>
       {{data}}
     </div>

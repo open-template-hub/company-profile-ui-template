@@ -164,26 +164,6 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
     } );
   }
 
-  private fillFollowInfo() {
-    // check if currentUser follows publicProfile
-    this.basicInfoService.userInfo.subscribe( currentUserInfo => {
-      this.currentUserInfo = currentUserInfo;
-      if ( currentUserInfo && this.username !== currentUserInfo?.username )
-        this.followerService.isFollowing( this.username ).subscribe( result => {
-          this.isFollowing = result[ 0 ].isFollowing;
-        } );
-    } );
-
-    // get follower and followed count
-    this.followerService.count( this.username ).subscribe( followerCount => {
-      this.followerCount = followerCount[ 0 ].count;
-    } );
-
-    this.followeeService.count( this.username ).subscribe( followeeCount => {
-      this.followeeCount = followeeCount[ 0 ].count;
-    } );
-  }
-
   ngOnInit(): void {
     this.isPublic = this.route.snapshot.data.isPublic;
   }
@@ -213,6 +193,26 @@ export class PublicProfileComponent implements OnInit, OnDestroy {
       this.followeeService.count( this.username ).subscribe( followeeCount => {
         this.followeeCount = followeeCount[ 0 ].count;
       } );
+    } );
+  }
+
+  private fillFollowInfo() {
+    // check if currentUser follows publicProfile
+    this.basicInfoService.userInfo.subscribe( currentUserInfo => {
+      this.currentUserInfo = currentUserInfo;
+      if ( currentUserInfo && this.username !== currentUserInfo?.username )
+        this.followerService.isFollowing( this.username ).subscribe( result => {
+          this.isFollowing = result[ 0 ].isFollowing;
+        } );
+    } );
+
+    // get follower and followed count
+    this.followerService.count( this.username ).subscribe( followerCount => {
+      this.followerCount = followerCount[ 0 ].count;
+    } );
+
+    this.followeeService.count( this.username ).subscribe( followeeCount => {
+      this.followeeCount = followeeCount[ 0 ].count;
     } );
   }
 }

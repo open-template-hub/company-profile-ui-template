@@ -1,6 +1,6 @@
 <div class="contribute-page">
-  <app-card1 [enableHeader]="false" [paddingTopContent]="false" [isCardContentOverflowVisible]="true"
-             [isScrollable]="true" class="contribute-card">
+  <app-card1 [enableHeader]="false" [isCardContentOverflowVisible]="true" [isScrollable]="true"
+             [paddingTopContent]="false" class="contribute-card">
     <div body class="section">
       <!-- primary info fields -->
       <form (ngSubmit)="onSubmit()" [formGroup]="form">
@@ -19,7 +19,7 @@
               <i aria-hidden="true" class="fas fa-link fa-lg fa-fw"></i>
             </div>
             <div [class]="'interest-search-area'" class="input-with-icon">
-              <input #searchArea formControlName="category" (keyup)="search($event)" placeholder="Category..."
+              <input #searchArea (keyup)="search($event)" formControlName="category" placeholder="Category..."
                      type="text">
               <i aria-hidden="true" class="fas fa-book-open fa-lg fa-fw"></i>
             </div>
@@ -32,8 +32,8 @@
                 </app-label-data>
               </a>
             </div>
-            <div class="selected-category-area"
-                 [style.visibility]="form.controls.category.touched ? 'visible' : 'hidden'">
+            <div [style.visibility]="form.controls.category.touched ? 'visible' : 'hidden'"
+                 class="selected-category-area">
               <p style="margin-left: 45px;">{{ ( selectedCategory.category ? selectedCategory.category.name : '' ) +
               ( selectedCategory.subCategory ? ' - ' + selectedCategory.subCategory.name : '' ) +
               ( selectedCategory.leafCategory ? ' - ' + selectedCategory.leafCategory.name : '' ) }}</p>
@@ -50,12 +50,12 @@
                  [class.input-error]="submitted && (form.controls.durationMin.invalid || form.controls.durationHour.invalid)"
                  class="input-with-icon"
                  style="width: 300px;">
-              <input formControlName="durationMin" placeholder="Minute..."
-                     (change)="form.controls.durationHour.value === '' ? form.controls.durationHour.setValue(0) : null"
+              <input (change)="form.controls.durationHour.value === '' ? form.controls.durationHour.setValue(0) : null" formControlName="durationMin"
+                     placeholder="Minute..."
                      required type="text">
               <p>:</p>
-              <input formControlName="durationHour" placeholder="Hour..."
-                     (change)="form.controls.durationMin.value === '' ? form.controls.durationMin.setValue(0) : null"
+              <input (change)="form.controls.durationMin.value === '' ? form.controls.durationMin.setValue(0) : null" formControlName="durationHour"
+                     placeholder="Hour..."
                      required type="text">
               <p style="min-width: 75px; margin-left: 14px;">Duration:</p>
               <i aria-hidden="true" class="fas fa-clock fa-lg fa-fw"></i>
@@ -73,38 +73,38 @@
             <span
                 (click)="form.controls.isEmailAllowed.setValue( !form.controls.isEmailAllowed.value )"
                 class="tooltip" show-delay="500" tooltip="Add my email address">
-                  <i aria-hidden="true" class="fas fa-envelope fa-lg fa-fw"
-                     [class.button-active]="form.controls.isEmailAllowed.value"></i>
+                  <i [class.button-active]="form.controls.isEmailAllowed.value" aria-hidden="true"
+                     class="fas fa-envelope fa-lg fa-fw"></i>
             </span>
             <span (click)="form.controls.isPremium.setValue( !form.controls.isPremium.value )"
                   class="tooltip" show-delay="500" tooltip="Premium">
-                  <i aria-hidden="true" class="fas fa-crown fa-lg fa-fw"
-                     [class.button-active]="form.controls.isPremium.value"></i>
+                  <i [class.button-active]="form.controls.isPremium.value" aria-hidden="true"
+                     class="fas fa-crown fa-lg fa-fw"></i>
             </span>
             <span
                 (click)="form.controls.isDurationActive.setValue( !form.controls.isDurationActive.value )"
                 class="tooltip" show-delay="500" tooltip="Add duration">
-                  <i aria-hidden="true" class="fas fa-clock fa-lg fa-fw"
-                     [class.button-active]="form.controls.isDurationActive.value"></i>
+                  <i [class.button-active]="form.controls.isDurationActive.value" aria-hidden="true"
+                     class="fas fa-clock fa-lg fa-fw"></i>
             </span>
           </div>
           <div class="contribute-button-area">
-            <app-button1 class="contribute-button" [text]="'CONTRIBUTE'" [isContribute]="true"></app-button1>
+            <app-button1 [isContribute]="true" [text]="'CONTRIBUTE'" class="contribute-button"></app-button1>
           </div>
         </div>
       </form>
     </div>
   </app-card1>
-  <div class="in-page-title" *ngIf="myRecentlyCompletedEvents.length > 0">
+  <div *ngIf="myRecentlyCompletedEvents.length > 0" class="in-page-title">
     <h2>Recently Completed Events</h2>
   </div>
   <div *ngIf="myRecentlyCompletedEvents.length > 0" class="my-events">
-    <app-event-card (itemIdForFillingForm)="fillForm($event)" *ngFor="let event of myRecentlyCompletedEvents"
-                    [event]="event" [showCalendar]="false"
-                    (markAsCompletedButtonClicked)="markAsCompletedButtonClicked($event)"
-                    [markAsCompleted]="true"></app-event-card>
+    <app-event-card (itemIdForFillingForm)="fillForm($event)" (markAsCompletedButtonClicked)="markAsCompletedButtonClicked($event)"
+                    *ngFor="let event of myRecentlyCompletedEvents" [event]="event"
+                    [markAsCompleted]="true"
+                    [showCalendar]="false"></app-event-card>
   </div>
-  <div class="in-page-title" *ngIf="myUpcomingEvents.length > 0">
+  <div *ngIf="myUpcomingEvents.length > 0" class="in-page-title">
     <h2>Your Upcoming Events</h2>
   </div>
 
@@ -126,8 +126,8 @@
       <i aria-hidden="true" class="material-icons">search</i>
       <input #searchArea (keyup)="searchInAllEvents($event)" placeholder="ex. title.." type="text">
     </div>
-    <app-button1 [hoverWithColor]="false" [isSleekButton]="true" [lighterContrast]="true" [text]="'Search'"
-                 [transparent]="true" (click)="searchInAllEvents(undefined)"></app-button1>
+    <app-button1 (click)="searchInAllEvents(undefined)" [hoverWithColor]="false" [isSleekButton]="true" [lighterContrast]="true"
+                 [text]="'Search'" [transparent]="true"></app-button1>
   </div>
   <!--END OF SEARCH AREA-->
   <div class="searched-events" style="margin-top: 70px;">

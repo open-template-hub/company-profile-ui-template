@@ -1,14 +1,14 @@
-<div class="event-card" [class.no-hover]="( inProgress || completed )">
-  <app-card1 [enableHeaderFullImg]=true [height]="(fillLayout || showRateBar) ? '-webkit-fit-content' : '500px'"
-             [paddingContent]="false" [underHeaderProfileImg]="profileImg"
+<div [class.no-hover]="( inProgress || completed )" class="event-card">
+  <app-card1 [enableHeaderFullImg]=true [enableHeader]="!showRateBar"
+             [height]="(fillLayout || showRateBar) ? '-webkit-fit-content' : '500px'" [maxHeight]="maxHeight"
+             [paddingContent]="false"
              [ribbon]="event.isPremium ? EVENT_RIBBONS.get('premium') :
              event.isFeatured ? EVENT_RIBBONS.get('featured') :
-             event.isNew ? EVENT_RIBBONS.get('new') : DEFAULT_RIBBON"
-             [width]="fillLayout ? '-webkit-fill-available' : '400px'" [maxHeight]="maxHeight"
-             [enableHeader]="!showRateBar">
+             event.isNew ? EVENT_RIBBONS.get('new') : DEFAULT_RIBBON" [underHeaderProfileImg]="profileImg"
+             [width]="fillLayout ? '-webkit-fill-available' : '400px'">
 
-    <div *ngIf="!showRateBar"
-         (click)="routeToEvent()" headerFullImg id=header-img [class.no-hover]="( inProgress || completed )">
+    <div (click)="routeToEvent()"
+         *ngIf="!showRateBar" [class.no-hover]="( inProgress || completed )" headerFullImg id=header-img>
       <svg class="gridItem__media" fill="none"
            preserveAspectRatio="xMidYMid slice"
            style="enable-background:new 0 0 1600 1200;" version="1.1" viewBox="0 0 1600 1200" width="100%"
@@ -1617,33 +1617,33 @@
 
     <div body class="showroom-item-content">
       <app-event-data (editButtonClicked)="emitIdForFillingForm($event)"
-                      (titleClicked)="routeToEvent()"
                       (markAsCompletedButtonClicked)="emitIdForCompletedButton($event)"
+                      (rateButtonClicked)="rateButtonClicked.emit()"
+                      (titleClicked)="routeToEvent()"
+                      [addMarginToDescription]="addMarginToDescription"
                       [attendeeButton]="!event.attended && event.user.username !== username"
                       [category]="event.payload?.category"
-                      [user]="event.user"
+                      [centeredTitle]="centeredTitle"
+                      [completed]="completed"
                       [count]="event.count"
                       [date]="event.date"
                       [description]="event.payload?.description"
                       [dropButton]="event.attended && event.user.username !== username && !inProgress"
                       [duration]="event.duration"
                       [id]="event._id"
+                      [inProgress]="inProgress"
                       [isEditable]="isEditable"
-                      [markAsCompleted]="markAsCompleted"
                       [isLastItem]="true"
                       [isPremium]="event.isPremium"
                       [isPublicPage]="isPublicPage"
-                      [removeLineClamp]="fillLayout"
                       [leafCategory]="event.payload?.leafCategory"
                       [link]="event.link"
-                      [price]="event.payload?.price"
-                      [showCalendar]="showCalendar && (event.attended || event.user.username === username)"
-                      [subCategory]="event.payload?.subCategory" [title]="event.title"
-                      [notFixedHeight]="fillLayout" [maxHeight]="maxHeight"
-                      [addMarginToDescription]="addMarginToDescription"
-                      [centeredTitle]="centeredTitle"
-                      [inProgress]="inProgress" [showHamburgerMenu]="showHamburgerMenu" [showRateBar]="showRateBar"
-                      (rateButtonClicked)="rateButtonClicked.emit()" [rateHeight]="showRateBar" [completed]="completed">
+                      [markAsCompleted]="markAsCompleted" [maxHeight]="maxHeight"
+                      [notFixedHeight]="fillLayout" [price]="event.payload?.price"
+                      [rateHeight]="showRateBar"
+                      [removeLineClamp]="fillLayout"
+                      [showCalendar]="showCalendar && (event.attended || event.user.username === username)" [showHamburgerMenu]="showHamburgerMenu" [showRateBar]="showRateBar"
+                      [subCategory]="event.payload?.subCategory" [title]="event.title" [user]="event.user">
       </app-event-data>
     </div>
   </app-card1>

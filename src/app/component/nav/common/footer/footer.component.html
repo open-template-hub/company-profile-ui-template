@@ -1,17 +1,17 @@
 <div [class.footer-hide-shadow]="hideShadow" [class.footer-popup-padding]="popupPadding" class="footer">
-  <a routerLink="{{URLS.aboutUs}}" class="footer-link-content">
+  <a class="footer-link-content" routerLink="{{URLS.aboutUs}}">
     <i aria-hidden="true" class="material-icons">business</i>
     <span>
         ABOUT US
     </span>
   </a>
-  <a routerLink="{{URLS.maintenance}}" class="footer-link-content">
+  <a class="footer-link-content" routerLink="{{URLS.maintenance}}">
     <i aria-hidden="true" class="material-icons">chrome_reader_mode</i>
     <span>
         BLOG
     </span>
   </a>
-  <a routerLink="{{URLS.terms}}" class="footer-link-content">
+  <a class="footer-link-content" routerLink="{{URLS.terms}}">
     <i aria-hidden="true" class="material-icons">policy</i>
     <span>
         TERMS & POLICIES
@@ -23,14 +23,14 @@
         CONTACT
     </span>
   </a>
-  <a routerLink="{{URLS.maintenance}}" class="footer-link-content">
+  <a class="footer-link-content" routerLink="{{URLS.maintenance}}">
     <i aria-hidden="true" class="material-icons">work</i>
     <span>
         JOBS
     </span>
   </a>
-  <app-ext-link class="footer-link-content"
-                [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github">
+  <app-ext-link [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
+                class="footer-link-content">
     <div body class="footer-link-content-inner">
       <i aria-hidden="true" class="material-icons">code</i>
       <span>
@@ -49,26 +49,27 @@
     <div class="footer-social">
       <app-ext-link
           [href]="environmentCommon.website.twitter.url + '/' + environmentCommon.oth.social.twitter">
-        <i body aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'">
+        <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'" aria-hidden="true" body>
         </i>
       </app-ext-link>
       <app-ext-link
           [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github">
-        <i body aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.github.cssClass + ' fa-2x fa-fw'">
+        <i [class]="'fab fa-' + environmentCommon.website.github.cssClass + ' fa-2x fa-fw'" aria-hidden="true" body>
         </i>
       </app-ext-link>
       <app-ext-link
           [href]="environmentCommon.website.productHunt.url + environmentCommon.oth.social.productHunt">
-        <i body aria-hidden="true"
-           [class]="'fab fa-' + environmentCommon.website.productHunt.cssClass + ' fa-2x fa-fw'">
+        <i [class]="'fab fa-' + environmentCommon.website.productHunt.cssClass + ' fa-2x fa-fw'" aria-hidden="true"
+           body>
         </i>
       </app-ext-link>
       <app-ext-link
           [href]="environmentCommon.website.linkedin.url + '/company/' + environmentCommon.oth.social.linkedin">
-        <i body aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'">
+        <i [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'" aria-hidden="true" body>
         </i>
       </app-ext-link>
     </div>
-    <div class="footer-version">{{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '')}}</div>
+    <div
+        class="footer-version">{{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '' )}}</div>
   </div>
 </div>

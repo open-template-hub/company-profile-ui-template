@@ -1,7 +1,7 @@
 <nav class="top-nav">
-  <a class="brand"
+  <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
      [routerLink]="URLS.root"
-     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
+     class="brand">
     <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
     <h2>Open Template Hub</h2>
   </a>
@@ -9,8 +9,8 @@
     <a (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
       <app-dropdown-menu
           #dropdownMenuProducts
-          [productLines]="PRODUCT_LINES"
-          [minimumColumns]="4">
+          [minimumColumns]="4"
+          [productLines]="PRODUCT_LINES">
         <span>Products</span>
         <i aria-hidden="true" class="material-icons">{{
           dropdownMenuProducts.isDropdownOpen ? "expand_less" : "expand_more"
@@ -25,17 +25,17 @@
         </i>
       </app-dropdown-menu>
     </a>
-    <a [routerLink]="URLS.aboutUs"
-       (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
+    <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
+       [routerLink]="URLS.aboutUs">
       <span>
         About Us
       </span>
     </a>
   </div>
   <div class="right-item-wrapper">
-    <a class="contact"
+    <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
        [routerLink]="URLS.contactUs"
-       (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
+       class="contact">
       <span> Contact Us </span>
     </a>
   </div>

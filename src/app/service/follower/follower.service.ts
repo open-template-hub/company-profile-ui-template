@@ -27,7 +27,7 @@ export class FollowerService {
 
   count( username: string ) {
     if ( environment.mockDataEnabled ) {
-      return of( [ { count: 2 } ] )
+      return of( [ { count: 2 } ] );
     } else {
       return this.http.get<any>( `${ environment.serverUrl }/follower/count?username=${ username }` );
     }

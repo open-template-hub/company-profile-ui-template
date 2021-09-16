@@ -18,16 +18,14 @@ import { CommandLineComponent } from '../command-line/command-line.component';
   styleUrls: [ './animated-code-editor.component.scss' ],
 } )
 export class AnimatedCodeEditorComponent implements OnInit, OnChanges, AfterViewInit {
-  constructor( private resolver: ComponentFactoryResolver ) {
-  }
-
   @ViewChild( 'codeEditorContent', { static: true, read: ViewContainerRef } )
   codeEditorContentRef: ViewContainerRef;
-
   factory: ComponentFactory<CommandLineComponent>;
   index = 0;
-
   @Input() commandLines: CommandLine[];
+
+  constructor( private resolver: ComponentFactoryResolver ) {
+  }
 
   ngOnInit(): void {
     this.initializeComponent();

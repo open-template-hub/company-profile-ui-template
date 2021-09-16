@@ -122,7 +122,7 @@
 
 app-swiper-wrapper {
   height: 200px;
-  width: 80%;
+  width: 75%;
 }
 
 @media only screen and (max-width: 999px) {
@@ -161,8 +161,7 @@ app-swiper-wrapper {
   .counters {
     width: 100%;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 0;
+    padding: 50px 0;
   }
 
   .counter-wrapper {
@@ -184,6 +183,10 @@ app-swiper-wrapper {
 
   app-swiper-wrapper {
     margin-bottom: 50px;
+  }
+
+  .card-area {
+    padding: 10px 0;
   }
 }
 
@@ -248,6 +251,10 @@ app-swiper-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .card-area {
+    padding: 20px 0;
   }
 }
 

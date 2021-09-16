@@ -28,7 +28,8 @@
   padding-right: 2vw;
 }
 
-.product-line-header, .features .feature {
+.product-line-header,
+.features .feature {
   padding-left: 7vw;
   padding-right: 7vw;
 }
@@ -121,6 +122,7 @@
 
 app-swiper-wrapper {
   height: 200px;
+  width: 80%;
 }
 
 @media only screen and (max-width: 999px) {
@@ -178,6 +180,10 @@ app-swiper-wrapper {
   .product-line-header {
     padding-bottom: 20px;
     text-align: center;
+  }
+
+  app-swiper-wrapper {
+    margin-bottom: 50px;
   }
 }
 
@@ -250,4 +256,3 @@ app-swiper-wrapper {
     box-shadow: 0 3px 15px 1px var(--shadow);
   }
 }
-

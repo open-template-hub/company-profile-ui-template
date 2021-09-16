@@ -16,7 +16,7 @@
             class="link">{{isEditable ? 'you' : ( user.username.length > 12 ? user.username.slice( 0, 12 ) + '...' : user.username )}}</a>
         </h4>
         <h4 *ngIf="link && showCalendar">
-          <app-ext-link [href]="link" [linkClass]="'link'">
+          <app-ext-link [href]="link" [linkClass]="'theme-color-link'">
             <i [class]="'fas fa-link fa-fw'" aria-hidden="true"></i>join meeting
           </app-ext-link>
         </h4>

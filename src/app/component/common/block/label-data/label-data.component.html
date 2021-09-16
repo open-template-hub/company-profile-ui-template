@@ -3,7 +3,7 @@
   <p>{{label}}</p>
   <p *ngIf="!isClickable">{{data}}</p>
   <app-ext-link *ngIf="isClickable" [href]="(data.startsWith('http://') || data.startsWith('https://')) ? data : 'http://' + data"
-                [linkClass]="highlight ? 'link' : ''">
+                [linkClass]="highlight ? 'theme-color-link' : ''">
     <div body>
       {{data}}
     </div>

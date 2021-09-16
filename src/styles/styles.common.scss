@@ -89,15 +89,18 @@ a {
 }
 
 a.link {
-
-  color: var(--theme-color-lighter-2);
-  font-weight: normal;
-
   &:hover {
     color: var(--theme-color);
   }
 }
 
+a.theme-color-link {
+
+  @extend .link;
+
+  color: var(--theme-color-lighter-2);
+  font-weight: normal;
+}
 
 @media (prefers-color-scheme: dark) {
   body {

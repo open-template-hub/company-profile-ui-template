@@ -9,6 +9,15 @@
   justify-content: space-between;
 }
 
+.footer-links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 .footer-brand-row {
   display: flex;
   align-items: center;
@@ -34,23 +43,36 @@
 }
 
 .footer-hr-row hr {
-  @include util.card-header-width-sm;
-  border: 1px solid var(--hover);
+  width: 100%;
+  border: 1px solid var(--theme-color-lighter-5);
 }
 
-.footer-link-content {
+.footer-link-group {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px 0;
-}
+  flex-direction: column;
 
-.footer-link-content-inner {
-  @extend .footer-link-content;
-}
+  & .footer-link-sub-group {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-.footer-link-content i {
-  margin-right: 10px;
+  & p, & a, & span {
+    font-weight: 500;
+  }
+
+  & p {
+    margin: 20px 0 4px;
+    color: var(--theme-color);
+  }
+
+  & a, & app-ext-link {
+    margin: 4px 0;
+  }
 }
 
 .footer-brand-row .brand-logo {
@@ -88,33 +110,27 @@
     margin-bottom: calc(55px + env(safe-area-inset-bottom));
   }
 
-  .footer, .copyright {
-    font-size: 12px;
+  .copyright {
+    font-size: 14px;
   }
 
-  .footer-link-content {
+  .footer-link-group {
+    max-width: 50%;
     width: 50%;
-    padding: 3px 0;
-  }
 
-  .footer-link-content-inner {
-    width: 100%;
+    & p, & a, & app-ext-link {
+      margin-left: 10vw;
+      width: 90%;
+    }
   }
 
   .footer-brand-row {
     flex-direction: column;
+    font-size: 13px;
   }
 
   .footer-brand-row a {
     width: 100%;
-  }
-
-  .footer-link-content i {
-    margin-left: 2%;
-  }
-
-  .footer span {
-    width: 25vw;
   }
 
   .footer-brand-row .brand-logo {
@@ -144,12 +160,16 @@
     margin-bottom: 0;
   }
 
-  .footer, .copyright {
-    font-size: 13px;
+  .copyright {
+    font-size: 16px;
   }
 
-  .footer-link-content {
+  .footer-link-group {
     width: 33%;
+
+    & p, & a, & app-ext-link {
+      width: 200px;
+    }
   }
 
   .footer-social {
@@ -165,19 +185,8 @@
     width: auto;
   }
 
-  .footer-link-content i {
-    margin-left: 2%;
-  }
-
-  .footer-link-content span {
-    width: 120px;
-  }
-
-  .footer-link-content-inner {
-    width: 100%;
-  }
-
   .footer-brand-row {
+    font-size: 14px;
     padding-left: 5vw;
     padding-right: 5vw;
   }
@@ -204,8 +213,11 @@
 
 @media (hover: hover) {
 
-  .footer-link-content:hover {
-    background: none;
-    color: var(--theme-color);
+  .footer-link-item {
+
+    &:hover {
+      background: none;
+      color: var(--theme-color);
+    }
   }
 }

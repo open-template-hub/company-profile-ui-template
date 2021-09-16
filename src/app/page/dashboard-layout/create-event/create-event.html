@@ -50,11 +50,13 @@
                  [class.input-error]="submitted && (form.controls.durationMin.invalid || form.controls.durationHour.invalid)"
                  class="input-with-icon"
                  style="width: 300px;">
-              <input (change)="form.controls.durationHour.value === '' ? form.controls.durationHour.setValue(0) : null" formControlName="durationMin"
+              <input (change)="form.controls.durationHour.value === '' ? form.controls.durationHour.setValue(0) : null"
+                     formControlName="durationMin"
                      placeholder="Minute..."
                      required type="text">
               <p>:</p>
-              <input (change)="form.controls.durationMin.value === '' ? form.controls.durationMin.setValue(0) : null" formControlName="durationHour"
+              <input (change)="form.controls.durationMin.value === '' ? form.controls.durationMin.setValue(0) : null"
+                     formControlName="durationHour"
                      placeholder="Hour..."
                      required type="text">
               <p style="min-width: 75px; margin-left: 14px;">Duration:</p>
@@ -99,7 +101,8 @@
     <h2>Recently Completed Events</h2>
   </div>
   <div *ngIf="myRecentlyCompletedEvents.length > 0" class="my-events">
-    <app-event-card (itemIdForFillingForm)="fillForm($event)" (markAsCompletedButtonClicked)="markAsCompletedButtonClicked($event)"
+    <app-event-card (itemIdForFillingForm)="fillForm($event)"
+                    (markAsCompletedButtonClicked)="markAsCompletedButtonClicked($event)"
                     *ngFor="let event of myRecentlyCompletedEvents" [event]="event"
                     [markAsCompleted]="true"
                     [showCalendar]="false"></app-event-card>
@@ -126,7 +129,8 @@
       <i aria-hidden="true" class="material-icons">search</i>
       <input #searchArea (keyup)="searchInAllEvents($event)" placeholder="ex. title.." type="text">
     </div>
-    <app-button1 (click)="searchInAllEvents(undefined)" [hoverWithColor]="false" [isSleekButton]="true" [lighterContrast]="true"
+    <app-button1 (click)="searchInAllEvents(undefined)" [hoverWithColor]="false" [isSleekButton]="true"
+                 [lighterContrast]="true"
                  [text]="'Search'" [transparent]="true"></app-button1>
   </div>
   <!--END OF SEARCH AREA-->

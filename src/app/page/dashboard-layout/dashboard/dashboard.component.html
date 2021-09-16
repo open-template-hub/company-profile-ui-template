@@ -12,7 +12,8 @@
           </em>
           <em *ngIf="numberOfEventsTaken !== undefined && numberOfEventsTaken > 10"
               show-delay="500" style="margin-right: 5px;" tooltip="Curious">📚</em>
-          <em *ngIf="numberOfEventsMade != undefined && numberOfEventsMade < 5" show-delay="500" style="margin-right: 5px;"
+          <em *ngIf="numberOfEventsMade != undefined && numberOfEventsMade < 5" show-delay="500"
+              style="margin-right: 5px;"
               tooltip="New">👋</em>
           <em *ngIf="userInfo?.isAcademical" show-delay="500" tooltip="Joined with .edu mail">🎓</em>
         </p>

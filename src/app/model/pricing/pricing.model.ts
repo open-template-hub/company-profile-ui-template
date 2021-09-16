@@ -1,6 +1,6 @@
 import { Ribbon } from '../ribbon/ribbon.model';
 
-export interface Pricing {
+export interface PricingOption {
   title: string,
   ribbon?: Ribbon,
   price: {

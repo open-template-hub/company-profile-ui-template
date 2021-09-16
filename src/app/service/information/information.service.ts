@@ -46,12 +46,8 @@ export class InformationService {
       return;
     }
 
-    let layout = '';
     let currentChild = this.router.routerState.snapshot.root.firstChild;
     do {
-      if ( currentChild.data.layout ) {
-        layout = currentChild.data.layout;
-      }
       currentChild = currentChild.firstChild;
     } while ( currentChild );
 

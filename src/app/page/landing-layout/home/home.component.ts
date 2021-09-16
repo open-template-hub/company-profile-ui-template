@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { CountUp } from 'countup.js';
 import { PARTNERS } from 'src/app/data/partner/partner.data';
 import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
+import { NpmProviderService } from 'src/app/service/provider/npm-provider.service';
 import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
@@ -17,7 +18,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
   styleUrls: [ './home.component.scss', '../landing-layout.component.scss' ],
 } )
 export class HomeComponent implements AfterViewInit {
-  downloadCounter = 6100;
+  downloadCounter = 0;
   serverTypesCounter = 5;
   uiTypesCounter = 3;
 
@@ -39,7 +40,8 @@ export class HomeComponent implements AfterViewInit {
       private formBuilder: FormBuilder,
       public router: Router,
       private authenticationService: AuthenticationService,
-      private themeService: ThemeService
+      private themeService: ThemeService,
+      private npmProviderService: NpmProviderService
   ) {
     // redirect to home if already logged in
     if ( this.authenticationService.currentUserValue ) {
@@ -53,12 +55,14 @@ export class HomeComponent implements AfterViewInit {
     this.initCountUps();
   }
 
-  private initCountUps() {
+  private initCountUps = async () => {
     const options = {
       useGrouping: false,
       duration: undefined,
       formattingFn: undefined,
     };
+
+    this.downloadCounter = await this.npmProviderService.getNpmPackagesDownloadCount();
 
     options.formattingFn = ( n: number ) => {
       return this.countUpFormatter( n, this.downloadCounter );
@@ -127,7 +131,7 @@ export class HomeComponent implements AfterViewInit {
     } else {
       console.error( userCountUp.error );
     }
-  }
+  };
 
   countUpFormatter( n: number, lastNumber: number ) {
     if ( n < this.KILO ) {

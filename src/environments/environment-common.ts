@@ -7,7 +7,8 @@ export const environmentCommon = {
       linkedin: 'open-template-hub',
       github: 'open-template-hub',
       productHunt: '@open_template_hub'
-    }
+    },
+    email: 'info@opentemplatehub.com'
   },
 
   website: {

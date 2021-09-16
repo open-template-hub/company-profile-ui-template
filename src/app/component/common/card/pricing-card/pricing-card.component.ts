@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { URLS } from '../../../../data/constant';
 import { DEFAULT_RIBBON } from '../../../../data/ribbon/ribbon.data';
-import { Pricing } from '../../../../model/pricing/pricing.model';
+import { PricingOption } from '../../../../model/pricing/pricing.model';
 
 @Component( {
   selector: 'app-pricing-card',
@@ -14,7 +14,7 @@ export class PricingCardComponent {
   DEFAULT_RIBBON = DEFAULT_RIBBON;
   URLS = URLS;
 
-  @Input() option: Pricing = {
+  @Input() option: PricingOption = {
     title: '',
     ribbon: DEFAULT_RIBBON,
     price: {

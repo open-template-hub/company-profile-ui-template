@@ -16,6 +16,10 @@
   flex-wrap: wrap;
 }
 
+app-pricing-card {
+  width: 33%;
+}
+
 @media only screen and (min-width: 1000px) {
   .pricing-page {
     display: block;

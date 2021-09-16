@@ -14,15 +14,15 @@
       <div class="section-column" *ngFor="let productLine of productLines; last as isLastColumn; index as i"
            [class.section-column-right-border]="!(i == calculatedColumns - 1 || isLastColumn)"
            [class]="productLine.color ? productLine.color + '-theme' : ''"
-           [style]="'max-height: ' + ((80  + (150 * calculatedRows)) + 1) + 'px;'">
+           [style]="'max-height: ' + ((60  + (150 * calculatedRows)) + 1) + 'px;'">
         <div *ngIf="productLine.name" class="section-header">
           <h4>
             {{ productLine.name }}
           </h4>
-          <hr [style.border-color]="'var(--theme-color)'"/>
           <p>
             {{ productLine.description }}
           </p>
+          <hr/>
         </div>
 
         <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
@@ -42,7 +42,6 @@
             </p>
           </div>
         </a>
-        <hr *ngIf="!isLastColumn"/>
       </div>
     </div>
   </div>

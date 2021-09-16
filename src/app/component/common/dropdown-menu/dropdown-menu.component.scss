@@ -96,19 +96,11 @@
 
 }
 
-.section-column hr {
-  @include util.card-header-width-sm;
-
-  margin: 0 0 0 10px;
-  border-style: solid;
-  border-color: var(--darker-contrast);
-}
-
 .section-header hr {
-  width: 25%;
-  margin: 0 0 0 1px;
+  width: 100%;
+  margin: 6px 0 0 0;
   border-style: solid;
-  border-color: var(--theme-color);
+  border-color: var(--theme-color-lighter-8);
 }
 
 .section-column-wrapper {
@@ -207,12 +199,12 @@
     display: none;
   }
 
-  .section-column hr, .section-header hr {
-    display: none;
+  .section-header hr {
+    display: block;
   }
 
   .section-column .section-header p {
-    height: 32px;
+    height: 26px;
   }
 
   .dropdown-caret {

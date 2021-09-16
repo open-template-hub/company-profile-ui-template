@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { DEFAULT_PRICING_LIST } from '../../../data/pricing/pricing.data';
+import { ActivatedRoute, Router } from '@angular/router';
+import { URLS } from '../../../data/constant';
+import { PRODUCT_LINES } from '../../../data/product/product.data';
+import { Product, ProductLine } from '../../../model/product/product.model';
 
 @Component( {
   selector: 'app-pricing',
@@ -7,10 +10,27 @@ import { DEFAULT_PRICING_LIST } from '../../../data/pricing/pricing.data';
   styleUrls: [ './pricing.component.scss' ]
 } )
 export class PricingComponent {
+  product: Product
 
-  DEFAULT_PRICING_LIST = DEFAULT_PRICING_LIST;
+  constructor(
+    private route: ActivatedRoute,
+    public router: Router
+  ) {
+    this.product = undefined;
+    this.route.queryParams.subscribe( params => {
+      if ( params.productLineName && params.productName ) {
+        const productLine: ProductLine = PRODUCT_LINES.find( p => p.key === params.productLineName );
 
-  constructor() {
-    // Intentionally blank
+        if ( productLine ) {
+          const product = productLine.products.find( p => p.key === params.productName );
+
+          if ( product ) {
+            this.product = product;
+            return;
+          }
+        }
+      }
+      this.router.navigate( [ URLS.maintenance ] );
+    } );
   }
 }

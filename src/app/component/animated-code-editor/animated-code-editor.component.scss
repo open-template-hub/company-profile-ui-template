@@ -1,0 +1,37 @@
+.code-editor {
+  background: var(--darker);
+  width: 100%;
+  border-radius: 5px;
+  min-height: 220px;
+  overflow: auto;
+  text-align: left;
+}
+
+.code-editor-content {
+  padding: 20px 15px 15px 15px;
+}
+
+.code-editor-header {
+  border-bottom: 0.5px solid var(--lighter);
+  display: flex;
+  flex-direction: row;
+}
+
+.code-editor-title {
+  padding: 5px 3.5px 3.5px 3.5px;
+  font-size: 12px;
+  background: var(--error);
+  text-transform: uppercase;
+  box-sizing: border-box;
+  width: 92px;
+  color: var(--card);
+  font-weight: 500;
+}
+
+.arrow-right {
+  width: 8px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid var(--error);
+  margin-left: -0.2px;
+}

@@ -1,8 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { PRODUCT_LINES } from 'src/app/data/product/product.data';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
 import { URLS } from '../../../../data/constant';
+import { ProductLine } from '../../../../model/product/product.model';
 import { ThemeService } from '../../../../service/theme/theme.service';
 
 @Component( {
@@ -16,6 +18,8 @@ export class FooterComponent {
   hideShadow = false;
   @Input()
   popupPadding = false;
+
+  PRODUCT_LINES: ProductLine[] = PRODUCT_LINES;
 
   brand = {
     brandLogo: '',

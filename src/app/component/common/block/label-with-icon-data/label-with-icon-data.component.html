@@ -1,6 +1,6 @@
 <div *ngIf="brand" [class.no-margin]="noMargin" [class]="brand" class="icon-data-block flex-layout-row">
   <i [class]="'fab fa-' + brand + ' fa-lg fa-fw'" aria-hidden="true"></i>
-  <app-ext-link [href]="urlPrefix + '/' + data" [linkClass]="'link'" [target]="target">
+  <app-ext-link [href]="urlPrefix + '/' + data" [linkClass]="'theme-color-link'" [target]="target">
     <div body>
       {{ data }}
     </div>
@@ -11,8 +11,9 @@
      [ngClass]="solid" class="icon-data-block flex-layout-row">
   <i [class]="'fas fa-' + solid + ' fa-lg fa-fw'" aria-hidden="true"></i>
   <p *ngIf="!isClickable && !isClickableWithinApp && !urlData">{{data}}</p>
-  <app-ext-link *ngIf="isClickable" [href]="(data.startsWith('http://') || data.startsWith('https://')) ? data : urlPrefix + data"
-                [linkClass]="highlight ? 'link' : ''"
+  <app-ext-link *ngIf="isClickable"
+                [href]="(data.startsWith('http://') || data.startsWith('https://')) ? data : urlPrefix + data"
+                [linkClass]="highlight ? 'theme-color-link' : ''"
                 [target]="target">
   </app-ext-link>
   <a *ngIf="isClickableWithinApp" [class.link]="highlight"

@@ -11,7 +11,8 @@
     </div>
 
     <div [style]="'min-width: ' + (330 * calculatedColumns) + 'px;'" class="section-column-wrapper">
-      <div *ngFor="let productLine of productLines; last as isLastColumn; index as i" [class.section-column-right-border]="!(i == calculatedColumns - 1 || isLastColumn)"
+      <div *ngFor="let productLine of productLines; last as isLastColumn; index as i"
+           [class.section-column-right-border]="!(i == calculatedColumns - 1 || isLastColumn)"
            [class]="productLine.color ? productLine.color + '-theme' : ''"
            [style]="'max-height: ' + ((60  + (150 * calculatedRows)) + 1) + 'px;'"
            class="section-column">

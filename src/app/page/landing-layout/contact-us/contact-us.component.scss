@@ -1,9 +1,11 @@
+@use '../../../../styles/util/util';
+@use '../../../../styles/page/page';
+
 .section {
-  display: flex;
-  flex-direction: column;
+  @include util.flex-layout-column;
+
   justify-content: center;
-  align-items: initial;
-  margin-top: 1.5em;
+  margin: 30px 10px 0;
 }
 
 .input-with-label {
@@ -11,63 +13,29 @@
   min-height: 42px;
   margin-top: 0.8em;
   margin-bottom: 0.8em;
-}
 
-.input-checkbox-label span:after {
-  margin-left: 7px;
-  left: auto;
-}
-
-.input-checkbox p {
-  margin-right: 10px;
-}
-
-.input-checkbox i {
-  color: var(--contrast);
-}
-
-.section .section-footer {
-  margin-top: 40px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  margin-right: 30px;
-}
-
-.section .section-footer .section-footer-icons {
-  margin-left: 30px;
-  width: -webkit-fill-available;
-}
-
-.section .section-footer .section-footer-icons span {
-  margin-right: 20px;
-  padding: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.section .section-footer .section-footer-icons span .button-active {
-  color: var(--theme-color);
-}
-
-.section .section-footer .section-footer-icons i {
-  color: var(--contrast);
-}
-
-app-card1 {
-  width: 33%;
+  & h5 {
+    font-weight: 500;
+    white-space: break-spaces;
+    text-align: left;
+    padding-right: 10px;
+  }
 }
 
 .contact-us-page {
   text-align: center;
 }
 
-.page-content {
+.contact-us-page-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   min-height: -webkit-fit-content;
-  margin-top: 7vh;
+  margin-top: 80px;
+
+  & > * {
+    margin: 0 15px;
+  }
 }
 
 .input-with-label input, .input-with-label textarea, .input-with-label select {
@@ -83,7 +51,8 @@ app-card1 {
 .form-span-wrapper {
   display: flex;
   flex-direction: column;
-  padding-right: 10px;
+  margin-right: 10px;
+  margin-top: 12px
 }
 
 .input-with-label .span-description {
@@ -124,62 +93,63 @@ textarea, input, select {
 .features-area {
   display: flex;
   flex-direction: column;
-  margin-top: -40px;
-  width: 30%;
+  min-width: 300px;
   justify-content: space-evenly;
+  align-items: flex-start;
   height: 12em;
+
+  & h4 {
+    font-weight: 500;
+  }
+
+  & div {
+    @include util.flex-layout-row;
+
+    & i {
+      color: var(--theme-color);
+      margin-right: 8px;
+      font-weight: bold;
+    }
+
+    & h5 {
+      text-align: left;
+    }
+  }
 }
 
-.features-area .header {
-  font-size: 21px;
-  margin-bottom: 15px;
-}
+.footer {
+  @include util.flex-layout-row;
 
-.features-area p {
-  display: flex;
   align-items: center;
-  padding-left: 30px;
-}
-
-.features-area p span {
-  padding-left: 1em;
-}
-
-.page-header {
-  margin-top: 5vh;
+  justify-content: space-evenly;
+  margin-top: 50px;
 }
 
 .footer-card-wrapper {
   display: flex;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .footer-card-wrapper i {
-  font-size: 30px;
+  font-size: 28px;
   color: var(--theme-color);
 }
 
 .footer-card-right-column {
   text-align: left;
-  margin-left: 15px;
-}
+  margin-left: 12px;
 
-.footer-card-right-column p {
-  color: var(--lighter-contrast);
-}
+  & h5 {
+    color: var(--lighter-contrast);
 
-.footer-card-title {
-  letter-spacing: 1px;
-  font-weight: bold;
-}
+    &:first-child {
+      color: var(--lighter);
+      font-weight: 500;
+    }
 
-.footer-card-description {
-  margin-top: 10px;
-}
-
-.footer-card-description a {
-  color: var(--lighter-contrast)
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
 }
 
 .footer {
@@ -189,58 +159,46 @@ textarea, input, select {
   padding-bottom: 40px;
 }
 
-#payment {
-  align-items: initial;
-  text-align: left;
-}
-
-#anything-else {
+.your-message {
   height: 76px;
 }
 
-#anything-else span {
+.your-message h5 {
   margin-top: 12px;
 }
 
 @media only screen and (max-width: 999px) {
   .contact-us-page {
-    min-height: 1900px;
+    font-size: 17px;
   }
 
-  .page-content {
+  .contact-us-page-content {
     flex-direction: column;
-  }
 
-  app-card1 {
-    width: initial;
+    & app-card1 {
+      min-width: 92%;
+    }
   }
 
   .features-area {
-    margin-top: 15px;
-    width: 100%;
+    width: 92%;
     align-items: center;
-  }
 
-  .features-area p {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .features-area p span {
-    padding-left: 5px;
-    padding-right: 5px;
-    text-align: left;
+    & div {
+      @include util.flex-layout-column;
+    }
   }
 
   .footer {
     flex-direction: column;
     margin-top: 70px;
-    padding-bottom: 20px;
   }
 
   .footer-card-wrapper {
     margin-bottom: 40px;
+    width: 94%;
   }
+
 
   .input-with-label {
     flex-direction: column-reverse;
@@ -249,12 +207,6 @@ textarea, input, select {
 
   .input-with-label:not(:first-child) {
     margin-top: 35px;
-  }
-
-  #payment {
-    text-align: center;
-    align-items: center;
-    height: 100px;
   }
 
   .input-with-label select, .input-with-label textarea {
@@ -267,24 +219,26 @@ textarea, input, select {
     align-items: center;
   }
 
-  #anything-else {
+  .your-message {
     height: 92px;
   }
 
-  #anything-else textarea {
+  .your-message textarea {
     text-align: left;
     min-height: 50px;
-  }
-}
-
-@media only screen and (max-width: 999px) {
-  .contact-us-page {
-    font-size: 17px;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .contact-us-page {
     font-size: 25px;
+  }
+
+  .contact-us-page-content app-card1 {
+    min-width: 600px;
+  }
+
+  .footer-card-wrapper {
+    width: 45%;
   }
 }

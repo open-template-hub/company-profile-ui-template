@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { environmentCommon } from 'src/environments/environment-common';
 import { URLS } from '../../../data/constant';
-import { CONTACT_US_FEATURES, PAYMENTS_VALUE_OPTIONS, SIZE_OPTIONS } from '../../../data/contact-us/contactUsData';
+import { CONTACT_US_FEATURES, SIZE_OPTIONS } from '../../../data/contact-us/contactUsData';
 import { COUNTRIES } from '../../../data/countries';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ToastService } from '../../../service/toast/toast.service';
@@ -25,7 +25,6 @@ export class ContactUsComponent implements OnInit {
 
   features = CONTACT_US_FEATURES;
   countries = COUNTRIES;
-  paymentsValueOptions = PAYMENTS_VALUE_OPTIONS;
   sizeOptions = SIZE_OPTIONS;
 
   loading = false;
@@ -47,7 +46,6 @@ export class ContactUsComponent implements OnInit {
       companyWebsite: [ '', Validators.maxLength( 50 ) ],
       companySize: [ '', Validators.required ],
       country: [ '', Validators.required ],
-      paymentsVolume: [ '', Validators.required ],
       anythingElse: [ '', Validators.maxLength( 500 ) ]
     } );
   }
@@ -65,7 +63,6 @@ export class ContactUsComponent implements OnInit {
       workEmail: 'Please provide a valid email',
       companySize: 'Please provide a company size',
       country: 'Please provide a country',
-      paymentsVolume: 'Please provide a payments'
     };
 
     if ( this.form.invalid ) {
@@ -86,12 +83,6 @@ export class ContactUsComponent implements OnInit {
 
   changeCompanySize( event: any ) {
     this.form.controls.companySize.setValue( event.target.value, {
-      onlySelf: true
-    } );
-  }
-
-  changePaymentsVolume( event: any ) {
-    this.form.controls.paymentsVolume.setValue( event.target.value, {
       onlySelf: true
     } );
   }

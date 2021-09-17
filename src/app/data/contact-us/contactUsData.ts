@@ -8,8 +8,8 @@ export const PAYMENTS_VALUE_OPTIONS = [ 'None, just getting started', 'Less than
 export const CONTACT_US_FEATURES: ContactUsFeatures = {
   title: 'With Open Template Hub you can:',
   features: [
-    'Focus critical developer resources on your core business',
-    'Launch new products faster with less payments code',
-    'Improve conversion from international customers'
+    'Minimize your effort while building a new software business',
+    'Focus your resources on your core business',
+    'Grow even more faster with our premium solutions'
   ]
 };

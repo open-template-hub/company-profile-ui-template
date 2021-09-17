@@ -43,8 +43,6 @@ export class ThemeService {
   private darkLightSettingSubject: BehaviorSubject<string>;
   private themeColorSettingSubject: BehaviorSubject<string>;
   private sideNavClosedSubject: BehaviorSubject<string>;
-  private maxAspectRatioMedia;
-  private maxHeightMedia;
 
   constructor() {
     let themeColorSettingStorageItem = localStorage.getItem( 'themeColorSetting' ) ?

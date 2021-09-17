@@ -27,6 +27,7 @@ import { ResetPasswordComponent } from './page/landing-layout/reset-password/res
 import { ShowroomComponent } from './page/landing-layout/showroom/showroom.component';
 import { SignUpSuccessComponent } from './page/landing-layout/sign-up-success/sign-up-success.component';
 import { SignUpComponent } from './page/landing-layout/sign-up/sign-up.component';
+import { StatusComponent } from './page/landing-layout/status/status.component';
 import { TermsComponent } from './page/landing-layout/terms/terms.component';
 import { VerifyAccountComponent } from './page/landing-layout/verify-account/verify-account.component';
 import { EditProfileComponent } from './page/settings-layout/edit-profile/edit-profile.component';
@@ -51,13 +52,14 @@ const routes: Routes = [
       { path: URLS_RAW.terms, component: TermsComponent },
       { path: URLS_RAW.pricing, component: PricingComponent },
       { path: URLS_RAW.product, component: ProductComponent },
-      { path: URLS_RAW.aboutUs, component: AboutUsComponent },
+      { path: URLS_RAW.about, component: AboutUsComponent },
       { path: URLS_RAW.showroom, component: ShowroomComponent },
       { path: URLS_RAW.signup, component: SignUpComponent },
       { path: URLS_RAW.login, component: LoginComponent },
       { path: URLS_RAW.forgetPassword, component: ForgetPasswordComponent },
       { path: URLS_RAW.resetPassword, component: ResetPasswordComponent },
       { path: URLS_RAW.contactUs, component: ContactUsComponent },
+      { path: URLS_RAW.status, component: StatusComponent },
       { path: URLS_RAW.u + '/' + ':username', component: PublicProfileComponent, data: { isPublic: true } },
     ]
   },

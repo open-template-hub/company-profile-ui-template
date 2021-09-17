@@ -1,0 +1,60 @@
+<div class="status-page">
+  <div class="hero">
+    <div class="hero-content">
+      <h1>System Status</h1>
+    </div>
+  </div>
+  <app-card1 [enableHeader]="false"
+             [bottomWrapperColor]="systemStatus.overall === 'UP' ? 'var(--success)' : systemStatus.overall === 'DOWN' ? 'var(--error)' : ''"
+             [paddingTopContent]="false">
+    <div body class="status-card">
+      <div *ngFor="let status of systemStatus.statuses" class="status-item">
+        <div class="status-headers">
+          <h5>{{ status.name | titlecase}}
+          </h5>
+        </div>
+        <div class="status-headers middle">
+          <h5>:
+          </h5>
+        </div>
+        <div class="status-headers">
+          <h5 [class.error-text]="status.alive === 'DOWN'"
+              [class.success-text]="status.alive === 'UP'">
+            {{ status.alive + ' ' }}<i [class]="'fas fa-fw'" aria-hidden="true"
+                                       [class.fa-exclamation-triangle]="status.alive === 'DOWN'"
+                                       [class.fa-check]="status.alive === 'UP'"></i>
+          </h5>
+        </div>
+      </div>
+      <div class="status-item overall">
+        <div class="status-headers">
+          <h5>Overall Status
+          </h5>
+        </div>
+        <div class="status-headers middle">
+          <h5>:
+          </h5>
+        </div>
+        <div class="status-headers">
+          <h5 [class.error-text]="systemStatus.overall === 'DOWN'"
+              [class.success-text]="systemStatus.overall === 'UP'">
+            {{ systemStatus.overall + ' ' }}<i [class]="'fas fa-fw'" aria-hidden="true"
+                                               [class.fa-exclamation-triangle]="systemStatus.overall === 'DOWN'"
+                                               [class.fa-check]="systemStatus.overall === 'UP'"></i>
+          </h5>
+        </div>
+      </div>
+      <div class="status-item">
+        <div class="status-headers">
+        </div>
+        <div class="status-headers middle">
+        </div>
+        <div class="status-headers">
+          <h5 *ngIf="systemStatus.overall === 'UP'">
+            All systems are online
+          </h5>
+        </div>
+      </div>
+    </div>
+  </app-card1>
+</div>

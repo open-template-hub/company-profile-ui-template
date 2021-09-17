@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { GoogleTagManagerService } from 'angular-google-tag-manager';
+import { MonitoringService } from '../service/monitoring/monitoring.service';
 import { ThemeService } from '../service/theme/theme.service';
 
 @Component( {
@@ -13,7 +14,12 @@ export class OthComponent {
   darkLightSetting: string;
   themeColorSetting: string;
 
-  constructor( private themeService: ThemeService, private googleTagManagerService: GoogleTagManagerService, private router: Router ) {
+  constructor(
+      private themeService: ThemeService,
+      private monitoringService: MonitoringService,
+      private googleTagManagerService: GoogleTagManagerService,
+      private router: Router ) {
+
     this.router.events.forEach( item => {
       if ( item instanceof NavigationEnd ) {
 
@@ -25,6 +31,8 @@ export class OthComponent {
         this.googleTagManagerService.pushTag( googleTagManagerTag );
       }
     } );
+
+    this.monitoringService.alive();
 
     this.themeService.darkLightSetting.subscribe( darkLightSetting => {
       this.darkLightSetting = darkLightSetting;

@@ -147,7 +147,6 @@ textarea, input, select {
 
 .page-header {
   margin-top: 5vh;
-  color: var(--contrast);
 }
 
 .footer-card-wrapper {
@@ -275,5 +274,17 @@ textarea, input, select {
   #anything-else textarea {
     text-align: left;
     min-height: 50px;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .contact-us-page {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .contact-us-page {
+    font-size: 25px;
   }
 }

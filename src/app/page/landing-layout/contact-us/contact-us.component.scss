@@ -120,6 +120,10 @@ textarea, input, select {
 .footer {
   @include util.flex-layout-row;
 
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 40px;
+
   align-items: center;
   justify-content: space-evenly;
   margin-top: 50px;
@@ -152,13 +156,6 @@ textarea, input, select {
   }
 }
 
-.footer {
-  display: flex;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-bottom: 40px;
-}
-
 .your-message {
   height: 76px;
 }
@@ -181,11 +178,15 @@ textarea, input, select {
   }
 
   .features-area {
-    width: 92%;
+    width: 90%;
     align-items: center;
 
     & div {
       @include util.flex-layout-column;
+
+      & h5 {
+        text-align: center;
+      }
     }
   }
 
@@ -198,7 +199,6 @@ textarea, input, select {
     margin-bottom: 40px;
     width: 94%;
   }
-
 
   .input-with-label {
     flex-direction: column-reverse;

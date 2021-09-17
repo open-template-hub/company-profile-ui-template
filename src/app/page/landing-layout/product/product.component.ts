@@ -39,7 +39,7 @@ export class ProductComponent implements OnInit, OnDestroy {
         );
 
         if ( productLine ) {
-          var product = productLine.products.find(
+          const product = productLine.products.find(
               ( p ) => p.key === params.productName
           );
 

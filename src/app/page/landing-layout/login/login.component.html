@@ -3,11 +3,9 @@
     <div body>
       <div class="flex-layout-row flex-center-center">
         <app-social-button (click)="socialLogin(environmentCommon.website.facebook)"
-                           [brand]="environmentCommon.website.facebook.cssClass"
-                           [classType]="'circle'"></app-social-button>
+                           [brand]="environmentCommon.website.facebook.cssClass"></app-social-button>
         <app-social-button (click)="socialLogin(environmentCommon.website.google)"
-                           [brand]="environmentCommon.website.google.cssClass"
-                           [classType]="'circle'"></app-social-button>
+                           [brand]="environmentCommon.website.google.cssClass"></app-social-button>
       </div>
       <div class="flex-layout-column flex-center-center" style="margin-bottom: 1.5rem; margin-top: 0.5rem;">
         <p>or</p>

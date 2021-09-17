@@ -22,7 +22,7 @@
   display: flex;
   flex-direction: row;
 
-  &:first-child h5, &.overall h5 {
+  &:first-child h4, &.overall h4 {
     font-weight: 500;
   }
 
@@ -52,7 +52,7 @@
   }
 
   .status-item {
-    margin: 10px 5px;
+    margin: 10px 3px;
     width: 98%;
   }
 
@@ -80,6 +80,7 @@
 
   .status-card {
     width: 45vw;
+    font-size: 19px;
   }
 
   .status-item {

@@ -30,7 +30,7 @@ export class PricingComponent {
           }
         }
       }
-      this.router.navigate( [ URLS.maintenance ] );
+      this.router.navigate( [ URLS.notFound ] );
     } );
   }
 }

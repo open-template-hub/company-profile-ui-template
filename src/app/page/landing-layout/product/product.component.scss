@@ -116,7 +116,7 @@
 
 .counters {
   display: flex;
-  border-top: 1px solid var(--lighter-contrast);
+  border-top: 1px solid var(--theme-color-lighter-5);
 }
 
 .demonstration {
@@ -135,8 +135,8 @@
 }
 
 .counter {
-  color: var(--theme-color);
-  font-weight: 400;
+  color: var(--theme-color-lighter-2);
+  font-weight: 500;
 }
 
 .counter-wrapper h6 {

@@ -19,7 +19,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
           {
@@ -158,7 +157,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
           {
@@ -243,7 +241,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/file-storage-server-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
           {
@@ -327,7 +324,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/mail-server-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
           {
@@ -411,7 +407,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/analytics-server-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
           {
@@ -495,7 +490,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/basic-info-server-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
           {
@@ -586,7 +580,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/demonstration.png',
       },
@@ -598,7 +591,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
       {
@@ -609,7 +601,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/mobile-ui-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/mobile-ui/demo.png',
       },
@@ -629,7 +620,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Terminal,
         commandLines: [
           {
@@ -695,7 +685,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Terminal,
         commandLines: [
           {
@@ -757,7 +746,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/orchestration-server-logo.png',
         color: ThemeColorSettings.yellow,
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png',
       },
@@ -780,7 +768,6 @@ export const SERVICES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
       {
@@ -792,7 +779,6 @@ export const SERVICES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
       {
@@ -804,7 +790,6 @@ export const SERVICES: ProductLine[] = [
             environmentCommon.website.github.url +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
     ],

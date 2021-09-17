@@ -32,6 +32,10 @@ export class StatusComponent {
         }
       }
 
+      if ( this.systemStatus.overall !== 'DOWN') {
+        this.systemStatus.overall = 'UP';
+      }
+
       this.systemStatus.checkDate = new Date();
     } );
   }

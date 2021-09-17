@@ -10,7 +10,8 @@ export class StatusComponent {
 
   systemStatus = {
     overall: '',
-    statuses: []
+    statuses: [],
+    checkDate: undefined
   };
 
   Object = Object;
@@ -30,6 +31,8 @@ export class StatusComponent {
           }
         }
       }
+
+      this.systemStatus.checkDate = new Date();
     } );
   }
 }

@@ -1,10 +1,13 @@
-<div class="product-presentation">
-  <img *ngIf="product && product.presentationType === 1 && product.heroImage"
+<div class="product-presentation" [ngSwitch]="product.presentationType" *ngIf="product">
+  <img *ngSwitchCase="1"
        [src]="product.heroImage"
        alt="oth-packages"
-       class="demonstration"/>
+       class="demonstration" [style]="!product.heroImage ? 'display: none' : ''"/>
 
-  <app-animated-code-editor *ngIf="product && product.presentationType === 3"
-                            [commandLines]="product.commandLines"
-  ></app-animated-code-editor>
+  <div *ngSwitchCase="4">
+  </div>
+
+  <app-animated-code-editor *ngSwitchCase="3"
+                            [commandLines]="product.commandLines">
+  </app-animated-code-editor>
 </div>

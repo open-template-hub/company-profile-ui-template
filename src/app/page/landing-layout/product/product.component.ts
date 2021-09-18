@@ -5,7 +5,7 @@ import { ProductLinePresentationType } from 'src/app/enum/product-line-presentat
 import { GithubProviderService } from 'src/app/service/provider/github-provider.service';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
-import { PRODUCT_LINES } from '../../../data/product/product.data';
+import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
 import { Product, ProductLine } from '../../../model/product/product.model';
 import { ProductService } from '../../../service/product/product.service';
 
@@ -36,35 +36,49 @@ export class ProductComponent implements OnInit, OnDestroy {
     } as Product;
 
     this.route.params.subscribe( params => {
-      if ( params.productLine && params.product ) {
-        const productLine: ProductLine = PRODUCT_LINES.find(
-            ( p ) => p.key === params.productLine
-        );
+      if ( !params.productLine || !params.product ) {
+        this.productService.setSelectedProduct( undefined );
+        this.router.navigate( [ URLS.notFound ] );
+        return;
+      }
 
-        if ( productLine ) {
-          const product = productLine.products.find(
-              ( p ) => p.key === params.product
-          );
+      let productLine: ProductLine = PRODUCT_LINES.find( ( p ) => p.key === params.productLine );
 
-          try {
-            this.githubService.getGithubCounters( product.key ).then( counters => {
-              product.counters = counters;
-            } );
-          } catch ( e ) {
-            console.error(
-                'Error while getting Github Counters for product: ',
-                product.key
-            );
-          }
+      let isService = false;
 
-          if ( product ) {
-            this.product = product;
-            this.productService.setSelectedProduct(this.product);
-            return;
-          }
+      if ( !productLine ) {
+        productLine = SERVICES.find( ( p ) => p.key === params.productLine );
+        isService = true;
+
+        if ( !productLine ) {
+          this.productService.setSelectedProduct( undefined );
+          this.router.navigate( [ URLS.notFound ] );
+          return;
         }
       }
-      this.router.navigate( [ URLS.maintenance ] );
+
+      const product = productLine.products.find(
+          ( p ) => p.key === params.product
+      );
+
+      if ( !product ) {
+        this.productService.setSelectedProduct( undefined );
+        this.router.navigate( [ URLS.notFound ] );
+        return;
+      }
+
+      if ( !isService ) {
+        this.githubService.getGithubCounters( product.key )
+        .then( counters => {
+          product.counters = counters;
+        } )
+        .catch( error => {
+          console.error( 'Error while getting Github Counters for product: ', product.key, error );
+        } );
+      }
+
+      this.product = product;
+      this.productService.setSelectedProduct( this.product );
     } );
   }
 

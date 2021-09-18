@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 35px;
 }
 
@@ -9,54 +11,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-}
-
-.feature {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.feature-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.feature-img-wrapper {
-  padding-left: 2vw;
-  padding-right: 2vw;
-}
-
-.product-line-header,
-.features .feature {
-  padding-left: 7vw;
-  padding-right: 7vw;
-}
-
-.product-line-header h4 {
-  font-weight: normal;
-  color: var(--theme-color);
-}
-
-.feature img {
-  max-width: 100%;
-  min-width: 40%;
-  height: auto;
-}
-
-.feature-left .feature {
-  background-color: var(--background-color);
-}
-
-.feature-right .feature {
-  background-color: var(--theme-color-lighter-5);
-}
-
-.feature-notes {
-  display: flex;
-  flex-direction: column;
 }
 
 .register-button {
@@ -187,22 +141,6 @@ app-swiper-wrapper {
     font-size: 32px;
   }
 
-  .feature {
-    flex-direction: column;
-    padding-bottom: 30px;
-  }
-
-  .feature img {
-    max-width: 360px;
-    max-height: 270px;
-    padding-bottom: 15px;
-  }
-
-  .features {
-    padding-top: 6vh;
-    padding-bottom: 100px;
-  }
-
   .product-description {
     padding: 40px 15px;
   }
@@ -244,7 +182,7 @@ app-swiper-wrapper {
   }
 
   .product-page .product-content {
-    padding-top: 5vh;
+    padding-top: 50px;
     flex-direction: column;
     justify-content: flex-start;
   }
@@ -267,14 +205,6 @@ app-swiper-wrapper {
     font-size: 35px;
   }
 
-  .features {
-    padding-top: 200px;
-  }
-
-  .feature-img-wrapper {
-    max-width: 20%;
-  }
-
   .product-line-header {
     padding-bottom: 40px;
   }
@@ -295,12 +225,7 @@ app-swiper-wrapper {
     padding-top: 10px;
     padding-bottom: 160px;
     width: 90%;
-    margin-top: 130px;
-  }
-
-  .feature-right .feature {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    margin-top: 50px;
   }
 
   app-testimonial-card {
@@ -310,11 +235,12 @@ app-swiper-wrapper {
   }
 
   .product-content-left {
-    width: 42%;
+    width: 45%;
+    min-height: 450px;
   }
 
   .product-content-right {
-    width: 35%;
+    width: 40%;
   }
 
   .register-wrapper > * {
@@ -340,7 +266,7 @@ app-swiper-wrapper {
   }
 
   .product-page .product-content {
-    padding-top: 8vh;
+    padding-top: 50px;
     flex-direction: row;
     justify-content: space-evenly;
     width: 90%;

@@ -8,8 +8,8 @@ import { CommandLine } from 'src/app/model/product/product.model';
 } )
 export class CommandLineComponent implements OnInit {
   @Input() commandLine: CommandLine;
-  animatedText: string = '';
-  counter: number = 0;
+  animatedText = '';
+  counter = 0;
 
   defaultCallback = () => {
     console.log( 'Animation completed for ', this.commandLine.command );

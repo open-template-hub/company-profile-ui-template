@@ -10,15 +10,21 @@ export class ThemeService {
 
   public appVersion = '1.0.0';
 
+  private darkLightSettingSubject: BehaviorSubject<string>;
+  private themeColorSettingSubject: BehaviorSubject<string>;
+  private sideNavClosedSubject: BehaviorSubject<string>;
+
   public darkLightSetting: Observable<string>;
   public themeColorSetting: Observable<string>;
   public sideNavClosed: Observable<string>;
+
   public brand = {
     brandLogo: '',
     brandLogoBroken: '',
     brandLogoMerge: '',
     brandLogoMerged: ''
   };
+
   colors = [
     '--theme-color',
     '--theme-color-lighter-1',
@@ -40,9 +46,6 @@ export class ThemeService {
     '--theme-color-darker-8',
     '--theme-color-darker-9'
   ];
-  private darkLightSettingSubject: BehaviorSubject<string>;
-  private themeColorSettingSubject: BehaviorSubject<string>;
-  private sideNavClosedSubject: BehaviorSubject<string>;
 
   constructor() {
     let themeColorSettingStorageItem = localStorage.getItem( 'themeColorSetting' ) ?

@@ -7,6 +7,7 @@ import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
 import { PRODUCT_LINES } from '../../../data/product/product.data';
 import { Product, ProductLine } from '../../../model/product/product.model';
+import { ProductService } from '../../../service/product/product.service';
 
 @Component( {
   selector: 'app-product',
@@ -22,7 +23,8 @@ export class ProductComponent implements OnInit, OnDestroy {
   constructor(
       private route: ActivatedRoute,
       public router: Router,
-      public githubService: GithubProviderService
+      private githubService: GithubProviderService,
+      private productService: ProductService,
   ) {
   }
 
@@ -32,21 +34,22 @@ export class ProductComponent implements OnInit, OnDestroy {
       description: '',
       presentationType: ProductLinePresentationType.Image,
     } as Product;
-    this.route.queryParams.subscribe( async ( params ) => {
-      if ( params.productLineName && params.productName ) {
+
+    this.route.params.subscribe( params => {
+      if ( params.productLine && params.product ) {
         const productLine: ProductLine = PRODUCT_LINES.find(
-            ( p ) => p.key === params.productLineName
+            ( p ) => p.key === params.productLine
         );
 
         if ( productLine ) {
           const product = productLine.products.find(
-              ( p ) => p.key === params.productName
+              ( p ) => p.key === params.product
           );
 
           try {
-            product.counters = await this.githubService.getGithubCounters(
-                product.key
-            );
+            this.githubService.getGithubCounters( product.key ).then( counters => {
+              product.counters = counters;
+            } );
           } catch ( e ) {
             console.error(
                 'Error while getting Github Counters for product: ',
@@ -56,6 +59,7 @@ export class ProductComponent implements OnInit, OnDestroy {
 
           if ( product ) {
             this.product = product;
+            this.productService.setSelectedProduct(this.product);
             return;
           }
         }

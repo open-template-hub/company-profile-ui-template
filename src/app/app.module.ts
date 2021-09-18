@@ -82,6 +82,7 @@ import { CallbackComponent } from './page/splash-layout/callback/callback.compon
 import { ExternalComponent } from './page/splash-layout/external/external.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 import { StatusComponent } from './page/landing-layout/status/status.component';
+import { ProductPresentationComponent } from './page/landing-layout/product/product-represantation/product-presentation.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -151,6 +152,7 @@ FullCalendarModule.registerPlugins( [
     AnimatedCodeEditorComponent,
     CommandLineComponent,
     StatusComponent,
+    ProductPresentationComponent,
   ],
   imports: [
     BrowserModule,

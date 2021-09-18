@@ -58,7 +58,6 @@ export class StatusComponent {
       }
 
       this.overallSystemStatus.checkDate = new Date();
-      console.log( this.overallSystemStatus );
     } );
   }
 }

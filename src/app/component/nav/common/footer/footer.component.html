@@ -7,7 +7,7 @@
            [class]="productLine.color ? productLine.color + '-theme' : ''">{{ productLine.name }}</p>
         <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
            [class]="productLine.color ? productLine.color + '-theme' : ''"
-           [queryParams]="{productLineName: productLine.key, productName: product.key}" [routerLink]="URLS.product"
+           [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
            class="footer-link-item">
           {{ product.name }}
         </a>
@@ -20,7 +20,7 @@
              [class]="productLine.color ? productLine.color + '-theme' : ''">{{ productLine.name }}</p>
           <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
              [class]="productLine.color ? productLine.color + '-theme' : ''"
-             [queryParams]="{productLineName: productLine.key, productName: product.key}" [routerLink]="URLS.product"
+             [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
              class="footer-link-item">
             {{ product.name }}
           </a>

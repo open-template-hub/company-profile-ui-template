@@ -1,0 +1,10 @@
+<div class="product-presentation">
+  <img *ngIf="product && product.presentationType === 1 && product.heroImage"
+       [src]="product.heroImage"
+       alt="oth-packages"
+       class="demonstration"/>
+
+  <app-animated-code-editor *ngIf="product && product.presentationType === 3"
+                            [commandLines]="product.commandLines"
+  ></app-animated-code-editor>
+</div>

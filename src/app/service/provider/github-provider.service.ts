@@ -52,7 +52,7 @@ export class GithubProviderService {
     const response = await this.util.corsRequest( uri );
     if ( response != null ) {
       const json = JSON.parse( response as string );
-      return json[ 0 ].name;
+      return json[ 0 ]?.name;
     }
 
     return null;

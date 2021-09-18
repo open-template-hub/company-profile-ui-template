@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environmentCommon } from '../../../../../environments/environment-common';
+import { Partner } from '../../../../model/partner/partner.model';
 import { Product } from '../../../../model/product/product.model';
 import { ProductService } from '../../../../service/product/product.service';
+import { ThemeService } from '../../../../service/theme/theme.service';
 
 @Component( {
   selector: 'app-product-presentation',
@@ -12,12 +15,28 @@ export class ProductPresentationComponent {
 
   product: Product = undefined;
 
+  brand = {
+    brandLogo: '',
+  };
+
+  SOCIAL_LOGIN_PARTNERS: Partner[] = [];
+
   constructor(
       public router: Router,
-      private productService: ProductService
+      private productService: ProductService,
+      private themeService: ThemeService
   ) {
     this.productService.product.subscribe( product => {
       this.product = product;
     } );
+
+    this.brand = this.themeService.brand;
+
+    for ( const website in environmentCommon.website ) {
+      // filter only oauth configured websites
+      if ( environmentCommon.website[ website ].tag && environmentCommon.website[ website ].logo ) {
+        this.SOCIAL_LOGIN_PARTNERS.push( { brandLogo: environmentCommon.website[ website ].logo, name: website } );
+      }
+    }
   }
 }

@@ -4,9 +4,20 @@
        alt="oth-packages"
        class="demonstration" [style]="!product.heroImage ? 'display: none' : ''"/>
 
-  <div *ngSwitchCase="4">
-  </div>
-
+  <app-card1 *ngSwitchCase="4" [enableHeader]="false">
+    <div body class="auth-server-social-login-wrapper">
+      <div class="social-login-wrapper">
+        <img [src]="brand.brandLogo" alt="logo" class="brand-logo" width="100"/>
+        <i aria-hidden="true" class="fa fa-check-circle"></i>
+        <app-swiper-wrapper [partners]="SOCIAL_LOGIN_PARTNERS"></app-swiper-wrapper>
+      </div>
+      <h6>Auth server supports social login functionality for OAuth1 and OAuth2</h6>
+      <div class="supported-social-logins">
+        <p>Some of the preconfigured social logins:</p>
+        <span *ngFor="let partner of SOCIAL_LOGIN_PARTNERS">{{ partner.name + ', ' | titlecase }}</span>
+      </div>
+    </div>
+  </app-card1>
   <app-animated-code-editor *ngSwitchCase="3"
                             [commandLines]="product.commandLines">
   </app-animated-code-editor>

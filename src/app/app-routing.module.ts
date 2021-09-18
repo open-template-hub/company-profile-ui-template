@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { environmentCommon } from '../environments/environment-common';
 import { URLS_RAW } from './data/constant';
-import { PRODUCT_LINES } from './data/product/product.data';
 import { AuthGuard } from './guard/auth/auth.guard';
 import { PublicProfileGuard } from './guard/public-profile/public-profile.guard';
 import { CreateEventComponent } from './page/dashboard-layout/create-event/create-event.component';

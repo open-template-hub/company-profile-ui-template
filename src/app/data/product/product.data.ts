@@ -18,7 +18,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         href:
             environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png',
-        presentationType: ProductLinePresentationType.Image,
+        presentationType: ProductLinePresentationType.Swiper,
         features: [
           {
             name: 'Signature requests',

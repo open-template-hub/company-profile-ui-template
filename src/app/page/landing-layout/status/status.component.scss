@@ -22,11 +22,8 @@
   display: flex;
   flex-direction: row;
 
-  &:first-child h4, &.overall h4 {
+  &.title h4 {
     font-weight: 500;
-  }
-
-  &.overall {
     margin-top: 30px;
   }
 }

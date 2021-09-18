@@ -8,17 +8,17 @@ import { environment } from '../../../environments/environment';
 } )
 export class MonitoringService {
 
-  public statuses: Observable<any>;
-  private statusesSubject: BehaviorSubject<any>;
+  public systemStatuses: Observable<any>;
+  private systemStatusesSubject: BehaviorSubject<any>;
 
   constructor( private http: HttpClient ) {
-    this.statusesSubject = new BehaviorSubject<any>( {} );
-    this.statuses = this.statusesSubject.asObservable();
+    this.systemStatusesSubject = new BehaviorSubject<any>( undefined );
+    this.systemStatuses = this.systemStatusesSubject.asObservable();
   }
 
   alive() {
     return this.http.get<any>( `${ environment.serverUrl }/monitor/alive` ).subscribe( response => {
-      this.statusesSubject.next( response );
+      this.systemStatusesSubject.next( response );
     } );
   }
 }

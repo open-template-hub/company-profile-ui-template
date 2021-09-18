@@ -16,7 +16,6 @@ export class OthComponent {
 
   constructor(
       private themeService: ThemeService,
-      private monitoringService: MonitoringService,
       private googleTagManagerService: GoogleTagManagerService,
       private router: Router ) {
 
@@ -31,8 +30,6 @@ export class OthComponent {
         this.googleTagManagerService.pushTag( googleTagManagerTag );
       }
     } );
-
-    this.monitoringService.alive();
 
     this.themeService.darkLightSetting.subscribe( darkLightSetting => {
       this.darkLightSetting = darkLightSetting;

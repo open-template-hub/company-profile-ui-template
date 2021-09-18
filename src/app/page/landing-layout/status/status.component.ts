@@ -50,6 +50,10 @@ export class StatusComponent {
             this.overallSystemStatus.overall = systemStatuses[ systemStatusKey ][ status ].alive;
           }
         }
+        if ( !systemStatus.overall ) {
+          systemStatus.overall = 'UP';
+        }
+
         this.overallSystemStatus.systemStatuses.push( systemStatus );
       }
 

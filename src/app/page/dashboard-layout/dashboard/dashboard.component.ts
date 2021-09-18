@@ -255,7 +255,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
   }
 
   handleDateClick( arg ) {
-    console.log( arg + ' clicked' );
+    // Intentionally blank
   }
 
   fetchUnratedCompletedEvents() {

@@ -29,7 +29,7 @@
         <a (click)="closeDropDownInternal()"
            *ngFor="let product of productLine.products; last as isLast; first as isFirst"
            [class]="product.color ? product.color + '-theme' : ''"
-           [queryParams]="{productLineName: productLine.key, productName: product.key}" [routerLink]="URLS.product"
+           [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
            class="dropdown-item">
 
           <img [src]="product.logo" alt="logo" class="dropdown-item-logo" height="55"/>

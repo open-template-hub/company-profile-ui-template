@@ -35,7 +35,10 @@ app-swiper-wrapper {
 .swiper-slide img {
   display: block;
   object-fit: cover;
-  filter: contrast(0);
+
+  &.grayscale {
+    filter: contrast(0);
+  }
 }
 
 .swiper-button-prev {
@@ -55,7 +58,7 @@ app-swiper-wrapper {
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--theme-color-lighter-2);
+  background: var(--theme-color);
 }
 
 /*

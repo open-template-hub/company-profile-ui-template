@@ -16,7 +16,16 @@ export class GithubProviderService {
     const uri = `${ environmentCommon.website.github.api.repo }/${ OthGithubName }/${ productKey }`;
 
     const counters = [];
+
     // Using Xml Http Request because http.get cause CORS issue
+    const releaseVersion = await this.getReleaseVersion( productKey );
+    if ( releaseVersion != null ) {
+      counters.push( {
+        name: GithubCounters.ReleaseVersion,
+        value: releaseVersion,
+      } );
+    }
+
     const response = await this.util.corsRequest( uri );
     if ( response != null ) {
       const json = JSON.parse( response as string );
@@ -35,14 +44,6 @@ export class GithubProviderService {
         value: json.subscribers_count ? json.subscribers_count : '0',
       } );
     }
-
-    const releaseVersion = await this.getReleaseVersion( productKey );
-    if ( releaseVersion != null ) {
-      counters.push( {
-        name: GithubCounters.ReleaseVersion,
-        value: releaseVersion,
-      } );
-    }
     return counters;
   };
 
@@ -51,7 +52,7 @@ export class GithubProviderService {
     const response = await this.util.corsRequest( uri );
     if ( response != null ) {
       const json = JSON.parse( response as string );
-      return json[ 0 ].name;
+      return json[ 0 ]?.name;
     }
 
     return null;

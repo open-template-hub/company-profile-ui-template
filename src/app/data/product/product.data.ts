@@ -16,11 +16,9 @@ export const PRODUCT_LINES: ProductLine[] = [
         description:
             'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png',
-        counters: [],
-        presentationType: ProductLinePresentationType.Image,
+        presentationType: ProductLinePresentationType.Swiper,
         features: [
           {
             name: 'Signature requests',
@@ -155,10 +153,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         description:
             'Payment Server template integrated with Stripe and Coinbase Commerce payment systems',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
           {
@@ -240,10 +236,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         description:
             'File Storage Server Template that supports uploading and downloading files from AWS S3',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/file-storage-server-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
           {
@@ -323,11 +317,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'mail-server-template',
         name: 'Mail Server',
         description: 'Mail Server Template supporting both regular public and private mail send processes in Message Queue Architecture',
-        href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+        href: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/mail-server-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
           {
@@ -408,10 +399,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Analytics Server',
         description: 'Analytics Server Template for generic usage in Node.js',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/analytics-server-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
           {
@@ -492,10 +481,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Basic Info Server',
         description: 'Basic Info Server Template for generic usage in Node.js',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/basic-info-server-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         features: [
           {
@@ -583,10 +570,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Company Profile UI',
         description: 'Company Profile UI Template for generic usage in Angular',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/demonstration.png',
       },
@@ -595,10 +580,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Web UI',
         description: 'Web UI Template for generic usage in Angular',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
       {
@@ -606,12 +589,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Mobile UI',
         description: 'Mobile UI Template for generic usage in React Native',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/mobile-ui-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
-        heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/mobile-ui/demo.png',
+        heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/mobile-ui/demo-light.png',
       },
     ],
   },
@@ -626,10 +607,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         description:
             'Command line interface generator of the servers at Open Template Hub',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Terminal,
         commandLines: [
           {
@@ -692,10 +671,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         description:
             'Command line interface generator of the user interfaces at Open Template Hub',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Terminal,
         commandLines: [
           {
@@ -753,11 +730,9 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Orchestration Server',
         description: 'One server to orchestrate them all!',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/orchestration-server-logo.png',
         color: ThemeColorSettings.yellow,
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
         heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png',
       },
@@ -777,10 +752,8 @@ export const SERVICES: ProductLine[] = [
         description:
             'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
       {
@@ -789,10 +762,8 @@ export const SERVICES: ProductLine[] = [
         description:
             'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
       {
@@ -801,10 +772,8 @@ export const SERVICES: ProductLine[] = [
         description:
             'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         href:
-            environmentCommon.website.github.url +
-            environmentCommon.oth.social.github,
+            environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
-        counters: [],
         presentationType: ProductLinePresentationType.Image,
       },
     ],

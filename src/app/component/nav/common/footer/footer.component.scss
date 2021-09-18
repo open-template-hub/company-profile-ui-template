@@ -19,10 +19,6 @@
   flex-wrap: wrap;
 }
 
-.footer-link-inner-column {
-  width: 50%;
-}
-
 .footer-brand-row {
   display: flex;
   align-items: center;
@@ -123,9 +119,13 @@
     width: 50%;
 
     & p, & a, & app-ext-link {
-      margin-left: 10vw;
+      margin-left: 10px;
       width: 90%;
     }
+  }
+
+  .footer-link-inner-column {
+    width: 100%;
   }
 
   .footer-brand-row {
@@ -181,6 +181,10 @@
       align-items: flex-start;
       flex-direction: row;
     }
+  }
+
+  .footer-link-inner-column {
+    width: 50%;
   }
 
   .footer-social {

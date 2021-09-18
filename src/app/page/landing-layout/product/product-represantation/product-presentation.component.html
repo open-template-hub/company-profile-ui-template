@@ -14,7 +14,8 @@
       <h6>Auth server supports social login functionality for OAuth1 and OAuth2</h6>
       <div class="supported-social-logins">
         <p>Some of the preconfigured social logins:</p>
-        <span *ngFor="let partner of SOCIAL_LOGIN_PARTNERS">{{ partner.name + ', ' | titlecase }}</span>
+        <span
+            *ngFor="let partner of SOCIAL_LOGIN_PARTNERS; last as isLast">{{ partner.name + ( !isLast ? ',' : '' ) + ' ' | titlecase }}</span>
       </div>
     </div>
   </app-card1>

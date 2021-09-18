@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../../../../../environments/environment';
 import { environmentCommon } from '../../../../../environments/environment-common';
 import { Partner } from '../../../../model/partner/partner.model';
 import { Product } from '../../../../model/product/product.model';
@@ -32,7 +33,7 @@ export class ProductPresentationComponent {
 
     this.brand = this.themeService.brand;
 
-    for ( const website in environmentCommon.website ) {
+    for ( const website in environment.oauth ) {
       // filter only oauth configured websites
       if ( environmentCommon.website[ website ].tag && environmentCommon.website[ website ].logo ) {
         this.SOCIAL_LOGIN_PARTNERS.push( { brandLogo: environmentCommon.website[ website ].logo, name: website } );

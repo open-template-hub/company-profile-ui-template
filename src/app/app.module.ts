@@ -84,6 +84,8 @@ import { SplashLayoutComponent } from './page/splash-layout/splash-layout.compon
 import { PricePlanComponent } from './component/common/price-plan/price-plan.component';
 import { StatusComponent } from './page/landing-layout/status/status.component';
 import { ProductPresentationComponent } from './page/landing-layout/product/product-represantation/product-presentation.component';
+import { CardComponent } from './component/common/card/card/card.component';
+import { EmployeeCardComponent } from './component/common/card/employee-card/employee-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -154,6 +156,9 @@ FullCalendarModule.registerPlugins( [
     AnimatedCodeEditorComponent,
     CommandLineComponent,
     StatusComponent,
+    ProductPresentationComponent,
+    CardComponent,
+    EmployeeCardComponent,
     ProductPresentationComponent
   ],
   imports: [

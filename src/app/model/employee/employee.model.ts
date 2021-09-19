@@ -1,8 +1,7 @@
 import { Social } from '../social/social.model';
 
-export interface Testimonial {
-  review: string;
-  reviewer: {
+export interface Employee {
+  profile: {
     name: string;
     title: string;
     photoUri: string;

@@ -1,0 +1,39 @@
+<app-card [headerTemplate]="customHeader" [bodyTemplate]="customBody" [footerTemplate]="customFooter">
+  <!-- Header -->
+  <ng-template #customHeader>
+    <img *ngIf="employee"
+         [src]="employee.profile.photoUri"
+         [style.border-color]="employee.style.themeColor"
+         alt="logo"
+         class="profile-image"
+    />
+  </ng-template>
+
+  <!-- Body -->
+  <ng-template #customBody>
+    <div class="body-area" *ngIf="employee">
+      <p class="body-name">{{ employee.profile.name }}</p>
+      <p class="body-title">{{ employee.profile.title }}</p>
+    </div>
+  </ng-template>
+
+  <!-- Footer -->
+  <ng-template #customFooter>
+    <div class="footer-social" *ngIf="employee">
+      <app-ext-link [href]="employee.profile.social.twitter">
+        <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'"
+           [style.color]="employee.style.themeColor"
+           aria-hidden="true"
+           body>
+        </i>
+      </app-ext-link>
+      <app-ext-link [href]="employee.profile.social.linkedIn">
+        <i [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'"
+           [style.color]="employee.style.themeColor"
+           aria-hidden="true"
+           body>
+        </i>
+      </app-ext-link>
+    </div>
+  </ng-template>
+</app-card>

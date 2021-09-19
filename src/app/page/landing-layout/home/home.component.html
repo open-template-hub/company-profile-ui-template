@@ -53,7 +53,23 @@
     <app-testimonial-card *ngFor="let testimonial of TESTIMONIALS" [option]="testimonial">
     </app-testimonial-card>
   </div>
-  <app-swiper-wrapper [partners]="PARTNERS"></app-swiper-wrapper>
+  <app-swiper-wrapper [partners]="PARTNERS" [isGrayscale]="true" [isNavigationEnabled]="true"
+                      [isPaginationEnabled]="true" [breakpoints]="{
+      '640': {
+        slidesPerView: 1,
+        spaceBetween: 30
+      },
+      '768': {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      '1200': {
+        slidesPerView: 4,
+        spaceBetween: 50
+      }
+      }">
+  </app-swiper-wrapper>
+
   <div class="features-wrapper">
   </div>
   <app-cookies></app-cookies>

@@ -13,4 +13,8 @@ SwiperCore.use( [ Pagination, Navigation, Autoplay ] );
 
 export class SwiperWrapperComponent {
   @Input() partners: Partner[] = [];
+  @Input() isNavigationEnabled = false;
+  @Input() isPaginationEnabled = false;
+  @Input() isGrayscale = false;
+  @Input() breakpoints: any = {};
 }

@@ -22,6 +22,7 @@ import { MaintenanceComponent } from './page/landing-layout/maintenance/maintena
 import { NotFoundComponent } from './page/landing-layout/not-found/not-found.component';
 import { PricingComponent } from './page/landing-layout/pricing/pricing.component';
 import { PrivacyPolicyComponent } from './page/landing-layout/privacy-policy/privacy-policy.component';
+import { ProductPresentationComponent } from './page/landing-layout/product/product-represantation/product-presentation.component';
 import { ProductComponent } from './page/landing-layout/product/product.component';
 import { ResetPasswordComponent } from './page/landing-layout/reset-password/reset-password.component';
 import { ShowroomComponent } from './page/landing-layout/showroom/showroom.component';
@@ -51,7 +52,6 @@ const routes: Routes = [
       { path: URLS_RAW.privacyPolicy, component: PrivacyPolicyComponent },
       { path: URLS_RAW.terms, component: TermsComponent },
       { path: URLS_RAW.pricing, component: PricingComponent },
-      { path: URLS_RAW.product, component: ProductComponent },
       { path: URLS_RAW.about, component: AboutUsComponent },
       { path: URLS_RAW.showroom, component: ShowroomComponent },
       { path: URLS_RAW.signup, component: SignUpComponent },
@@ -61,6 +61,13 @@ const routes: Routes = [
       { path: URLS_RAW.contactUs, component: ContactUsComponent },
       { path: URLS_RAW.status, component: StatusComponent },
       { path: URLS_RAW.u + '/' + ':username', component: PublicProfileComponent, data: { isPublic: true } },
+      {
+        path: URLS_RAW.product + '/' + ':productLine' + '/' + ':product',
+        component: ProductComponent,
+        children: [
+          { path: '**', component: ProductPresentationComponent }
+        ]
+      },
     ]
   },
   {
@@ -73,9 +80,9 @@ const routes: Routes = [
       { path: URLS_RAW.callback.google, component: CallbackComponent, data: { oauth: environmentCommon.website.google } },
       { path: URLS_RAW.callback.linkedin, component: CallbackComponent, data: { oauth: environmentCommon.website.linkedin } },
       { path: URLS_RAW.callback.reddit, component: CallbackComponent, data: { oauth: environmentCommon.website.reddit } },
-      { path: URLS_RAW.callback.stripe, component: CallbackComponent, data: { payment: environmentCommon.website.stripe } },
       { path: URLS_RAW.callback.twitch, component: CallbackComponent, data: { oauth: environmentCommon.website.twitch } },
       { path: URLS_RAW.callback.twitter, component: CallbackComponent, data: { oauth: environmentCommon.website.twitter } },
+      { path: URLS_RAW.callback.stripe, component: CallbackComponent, data: { payment: environmentCommon.website.stripe } },
     ]
   },
   {

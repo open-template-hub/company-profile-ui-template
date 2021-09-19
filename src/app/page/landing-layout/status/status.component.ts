@@ -24,6 +24,12 @@ export class StatusComponent {
         return;
       }
 
+      this.overallSystemStatus = {
+        systemStatuses: [],
+        overall: '',
+        checkDate: undefined
+      };
+
       for ( const systemStatusKey in systemStatuses ) {
         if ( !systemStatuses[ systemStatusKey ] ) {
           continue;
@@ -50,6 +56,10 @@ export class StatusComponent {
             this.overallSystemStatus.overall = systemStatuses[ systemStatusKey ][ status ].alive;
           }
         }
+        if ( !systemStatus.overall ) {
+          systemStatus.overall = 'UP';
+        }
+
         this.overallSystemStatus.systemStatuses.push( systemStatus );
       }
 
@@ -58,7 +68,6 @@ export class StatusComponent {
       }
 
       this.overallSystemStatus.checkDate = new Date();
-      console.log( this.overallSystemStatus );
     } );
   }
 }

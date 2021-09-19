@@ -68,7 +68,6 @@ export class ContactUsComponent implements OnInit {
     if ( this.form.invalid ) {
       for ( const control in this.form.controls ) {
         if ( this.form.controls[ control ].invalid ) {
-          console.log( this.form.controls[ control ] );
           this.toastService.error( errorMessages[ control ], '' );
         }
       }

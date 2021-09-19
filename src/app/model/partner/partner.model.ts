@@ -1,3 +1,4 @@
 export interface Partner {
-  brandLogo: string;
+  brandLogo: string,
+  name: string
 }

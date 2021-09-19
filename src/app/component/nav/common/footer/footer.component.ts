@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { PRODUCT_LINES } from 'src/app/data/product/product.data';
+import { PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
 import { URLS } from '../../../../data/constant';
@@ -20,6 +20,7 @@ export class FooterComponent {
   popupPadding = false;
 
   PRODUCT_LINES: ProductLine[] = PRODUCT_LINES;
+  SERVICES: ProductLine[] = SERVICES;
 
   brand = {
     brandLogo: '',

@@ -5,8 +5,9 @@ import { ProductLinePresentationType } from 'src/app/enum/product-line-presentat
 import { GithubProviderService } from 'src/app/service/provider/github-provider.service';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
-import { PRODUCT_LINES } from '../../../data/product/product.data';
+import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
 import { Product, ProductLine } from '../../../model/product/product.model';
+import { ProductService } from '../../../service/product/product.service';
 
 @Component( {
   selector: 'app-product',
@@ -22,7 +23,8 @@ export class ProductComponent implements OnInit, OnDestroy {
   constructor(
       private route: ActivatedRoute,
       public router: Router,
-      public githubService: GithubProviderService
+      private githubService: GithubProviderService,
+      private productService: ProductService,
   ) {
   }
 
@@ -32,35 +34,51 @@ export class ProductComponent implements OnInit, OnDestroy {
       description: '',
       presentationType: ProductLinePresentationType.Image,
     } as Product;
-    this.route.queryParams.subscribe( async ( params ) => {
-      if ( params.productLineName && params.productName ) {
-        const productLine: ProductLine = PRODUCT_LINES.find(
-            ( p ) => p.key === params.productLineName
-        );
 
-        if ( productLine ) {
-          const product = productLine.products.find(
-              ( p ) => p.key === params.productName
-          );
+    this.route.params.subscribe( params => {
+      if ( !params.productLine || !params.product ) {
+        this.productService.setSelectedProduct( undefined );
+        this.router.navigate( [ URLS.notFound ] );
+        return;
+      }
 
-          try {
-            product.counters = await this.githubService.getGithubCounters(
-                product.key
-            );
-          } catch ( e ) {
-            console.error(
-                'Error while getting Github Counters for product: ',
-                product.key
-            );
-          }
+      let productLine: ProductLine = PRODUCT_LINES.find( ( p ) => p.key === params.productLine );
 
-          if ( product ) {
-            this.product = product;
-            return;
-          }
+      let isService = false;
+
+      if ( !productLine ) {
+        productLine = SERVICES.find( ( p ) => p.key === params.productLine );
+        isService = true;
+
+        if ( !productLine ) {
+          this.productService.setSelectedProduct( undefined );
+          this.router.navigate( [ URLS.notFound ] );
+          return;
         }
       }
-      this.router.navigate( [ URLS.maintenance ] );
+
+      const product = productLine.products.find(
+          ( p ) => p.key === params.product
+      );
+
+      if ( !product ) {
+        this.productService.setSelectedProduct( undefined );
+        this.router.navigate( [ URLS.notFound ] );
+        return;
+      }
+
+      if ( !isService ) {
+        this.githubService.getGithubCounters( product.key )
+        .then( counters => {
+          product.counters = counters;
+        } )
+        .catch( error => {
+          console.error( 'Error while getting Github Counters for product: ', product.key, error );
+        } );
+      }
+
+      this.product = product;
+      this.productService.setSelectedProduct( this.product );
     } );
   }
 

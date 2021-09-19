@@ -1,6 +1,6 @@
-<app-card [headerTemplate]="customHeader" [bodyTemplate]="customBody" [footerTemplate]="customFooter">
+<app-card [header]="header" [body]="body" [footer]="footer">
   <!-- Header -->
-  <ng-template #customHeader>
+  <ng-template #header>
     <img *ngIf="employee"
          [src]="employee.profile.photoUri"
          [style.border-color]="employee.style.themeColor"
@@ -10,7 +10,7 @@
   </ng-template>
 
   <!-- Body -->
-  <ng-template #customBody>
+  <ng-template #body>
     <div class="body-area" *ngIf="employee">
       <p class="body-name">{{ employee.profile.name }}</p>
       <p class="body-title">{{ employee.profile.title }}</p>
@@ -18,7 +18,7 @@
   </ng-template>
 
   <!-- Footer -->
-  <ng-template #customFooter>
+  <ng-template #footer>
     <div class="footer-social" *ngIf="employee">
       <app-ext-link [href]="employee.profile.social.twitter">
         <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'"

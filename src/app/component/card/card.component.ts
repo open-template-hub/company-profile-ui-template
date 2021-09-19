@@ -1,17 +1,20 @@
 import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import { Ribbon } from '../../model/ribbon/ribbon.model';
 
-@Component({
+@Component( {
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
-})
+  styleUrls: [ './card.component.scss' ]
+} )
 export class CardComponent implements OnInit {
-  @Input() headerTemplate: TemplateRef<any>;
-  @Input() bodyTemplate: TemplateRef<any>;
-  @Input() footerTemplate: TemplateRef<any>;
-  @Input() bottomWrapperTemplate: TemplateRef<any>;
+  @Input() header: TemplateRef<any>;
+  @Input() body: TemplateRef<any>;
+  @Input() footer: TemplateRef<any>;
+  @Input() bottomWrapper: TemplateRef<any>;
+  @Input() ribbon: Ribbon;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

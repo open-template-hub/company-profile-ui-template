@@ -81,6 +81,7 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { CallbackComponent } from './page/splash-layout/callback/callback.component';
 import { ExternalComponent } from './page/splash-layout/external/external.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
+import { PricePlanComponent } from './component/common/price-plan/price-plan.component';
 import { StatusComponent } from './page/landing-layout/status/status.component';
 import { ProductPresentationComponent } from './page/landing-layout/product/product-represantation/product-presentation.component';
 
@@ -148,11 +149,12 @@ FullCalendarModule.registerPlugins( [
     ExternalComponent,
     TimelineComponent,
     AboutUsComponent,
+    PricePlanComponent,
     ContactUsComponent,
     AnimatedCodeEditorComponent,
     CommandLineComponent,
     StatusComponent,
-    ProductPresentationComponent,
+    ProductPresentationComponent
   ],
   imports: [
     BrowserModule,

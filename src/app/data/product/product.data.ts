@@ -31,17 +31,56 @@ export const PRODUCT_LINES: ProductLine[] = [
         ],
         features: [
           {
-            name: 'Signature requests',
-            description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+            name: 'Core Feature',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Audio Trail',
+                description: 'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
+              }
+            ]
           },
           {
-            name: 'Templates',
-            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+            name: 'Security and Trust',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Audio Trail',
+                description: 'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
+              }
+            ]
           },
           {
-            name: 'Templates',
-            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
-          }
+            name: 'Data Validation',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Audio Trail',
+                description: 'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
+              }
+            ]
+          },
         ],
         pricingOptions: [
           {
@@ -51,7 +90,7 @@ export const PRODUCT_LINES: ProductLine[] = [
               value: '9',
               subscriptionTime: 'mo.'
             },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
+            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
             styles: {
               width: '300px',
               height: '400px',
@@ -67,7 +106,7 @@ export const PRODUCT_LINES: ProductLine[] = [
               value: '49',
               subscriptionTime: 'mo.'
             },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', '500 queries' ],
+            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true' ],
             styles: {
               width: '370px',
               height: '520px',
@@ -82,53 +121,7 @@ export const PRODUCT_LINES: ProductLine[] = [
               value: '99',
               subscriptionTime: 'mo.'
             },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', '5000 queries' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em'
-            }
-          },
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.'
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em'
-            }
-          },
-          {
-            title: 'BASIC',
-            ribbon: { theme: 'blue', text: 'DEAL' },
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.'
-            },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', '500 queries' ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em'
-            }
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.'
-            },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', '5000 queries' ],
+            features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true' ],
             styles: {
               width: '300px',
               height: '400px',
@@ -161,17 +154,56 @@ export const PRODUCT_LINES: ProductLine[] = [
         ],
         features: [
           {
-            name: 'Signature requests',
-            description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+            name: 'Core Feature',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
           },
           {
-            name: 'Templates',
-            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+            name: 'Security and Trust',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
           },
           {
-            name: 'Templates',
-            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
-          }
+            name: 'Data Validation',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
+          },
         ],
         pricingOptions: [
           {
@@ -245,17 +277,56 @@ export const PRODUCT_LINES: ProductLine[] = [
         ],
         features: [
           {
-            name: 'Signature requests',
-            description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+            name: 'Core Feature',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
           },
           {
-            name: 'Templates',
-            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+            name: 'Core Feature',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
           },
           {
-            name: 'Templates',
-            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
-          }
+            name: 'Core Feature',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
+          },
         ],
         pricingOptions: [
           {
@@ -329,17 +400,56 @@ export const PRODUCT_LINES: ProductLine[] = [
         ],
         features: [
           {
-            name: 'Signature requests',
-            description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+            name: 'Core Feature',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
           },
           {
-            name: 'Templates',
-            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+            name: 'Security and Trust',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
           },
           {
-            name: 'Templates',
-            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
-          }
+            name: 'Data Validation',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
+          },
         ],
         pricingOptions: [
           {
@@ -413,17 +523,56 @@ export const PRODUCT_LINES: ProductLine[] = [
         ],
         features: [
           {
-            name: 'Signature requests',
-            description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+            name: 'Core Feature',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
           },
           {
-            name: 'Templates',
-            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+            name: 'Security and Trust',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
           },
           {
-            name: 'Templates',
-            description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
-          }
+            name: 'Data Validation',
+            featureDetails: [
+              {
+                name: 'Signature requests',
+                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              },
+              {
+                name: 'Templates',
+                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
+              }
+            ]
+          },
         ],
         pricingOptions: [
           {

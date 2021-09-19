@@ -1,14 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { URLS } from '../../../data/constant';
-import { Product, ProductLine } from '../../../model/product/product.model';
+import { Product } from '../../../model/product/product.model';
 
 @Component({
   selector: 'app-price-plan',
   templateUrl: './price-plan.component.html',
   styleUrls: ['./price-plan.component.scss']
 })
-export class PricePlanComponent implements OnInit {
+export class PricePlanComponent {
   URLS = URLS
   @Input() product: Product
 
@@ -17,9 +17,6 @@ export class PricePlanComponent implements OnInit {
   constructor(
     public router: Router
   ) { }
-
-  ngOnInit(): void {
-  }
 
   accordionClicked(coreFeature: string) {
     if( this.hiddenMainFeatures.has( coreFeature ) ) {

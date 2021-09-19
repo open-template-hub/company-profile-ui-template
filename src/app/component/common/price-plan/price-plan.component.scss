@@ -23,10 +23,6 @@
   padding: 12px 24px;
 }
 
-.available-plans-column-area p {
-  white-space: nowrap;
-}
-
 .available-plans {
   padding-bottom: 20px;
 }
@@ -44,12 +40,9 @@ p {
 }
 
 .feature-area-row {
-  white-space: break-spaces;
-}
-
-.feature-area-row {
   display: flex;
   align-items: center;
+  white-space: break-spaces;
 }
 
 .features-area-description-title {
@@ -92,6 +85,7 @@ p {
 
 .available-plans-column-area p {
   font-size: 13px;
+  white-space: nowrap;
 }
 
 .price-plan-main-feature-wrapper {
@@ -124,6 +118,7 @@ p {
     white-space: break-spaces;
     align-items: initial;
     flex-direction: column;
+    padding: 12px;
   }
 
   .column-header-feature {
@@ -160,9 +155,5 @@ p {
 
   .available-plans-content {
     flex-direction: column;
-  }
-
-  .feature-area-row {
-    padding: 12px;
   }
 }

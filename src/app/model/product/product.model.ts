@@ -1,8 +1,8 @@
 import { PricingOption } from '../pricing/pricing.model';
 
 export interface PricingFeature {
-  name: string,
-  description: string
+    name: string,
+    featureDetails: { name: string, description: string }[]
 }
 
 export interface Product {

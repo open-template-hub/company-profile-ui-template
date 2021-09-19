@@ -1,47 +1,49 @@
 <div>
   <app-card1
-    [enableHeaderFullImg]="false"
-    [height]="'485px'"
-    [paddingContent]="false"
-    [width]="'320px'"
-    [enableHeader]="false"
-    [bottomLayer]="true"
-    [bottomLayerBackgroundColor]="option.style.themeColor"
-    [testimonialSizeActive]="true"
+      [bottomLayerBackgroundColor]="option.style.themeColor"
+      [bottomLayer]="true"
+      [enableHeaderFullImg]="false"
+      [enableHeader]="false"
+      [height]="'485px'"
+      [paddingContent]="false"
+      [testimonialSizeActive]="true"
+      [width]="'320px'"
   >
     <div body class="content-wrapper">
       <div class="icon-wrapper">
         <i
-          aria-hidden="true"
-          [style.color]="option.style.themeColor"
-          class="fas fa-quote-left fa-lg fa-fw"
+            [style.color]="option.style.themeColor"
+            aria-hidden="true"
+            class="fas fa-quote-left fa-lg fa-fw"
         ></i>
       </div>
       <p class="review-area">{{ option.review }}</p>
       <div>
         <img
-          [src]="option.reviewer.photoUri"
-          alt="logo"
-          class="profile-image"
-          [style.border-color]="option.style.themeColor"
+            [src]="option.reviewer.photoUri"
+            [style.border-color]="option.style.themeColor"
+            alt="logo"
+            class="profile-image"
         />
         <div class="footer-social">
           <app-ext-link [href]="option.reviewer.social.twitter">
-            <i body aria-hidden="true"
+            <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'"
                [style.color]="option.style.themeColor"
-               [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'">
+               aria-hidden="true"
+               body>
             </i>
           </app-ext-link>
           <app-ext-link [href]="option.reviewer.social.linkedIn">
-            <i body aria-hidden="true"
+            <i [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'"
                [style.color]="option.style.themeColor"
-               [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'">
+               aria-hidden="true"
+               body>
             </i>
           </app-ext-link>
         </div>
         <div class="reviewer">
           <p class="reviewer-name">{{option.reviewer.name}}</p>
-          <p class="reviewer-title" [style.color]="option.style.themeColor">{{option.reviewer.title}}</p>
+          <p [style.color]="option.style.themeColor" class="reviewer-title">{{option.reviewer.title}}</p>
         </div>
       </div>
     </div>

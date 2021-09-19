@@ -1,15 +1,18 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProductLinePresentationType } from 'src/app/enum/product-line-presentation-type';
+import { GithubProviderService } from 'src/app/service/provider/github-provider.service';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
-import { PRODUCT_LINES } from '../../../data/product/product.data';
+import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
 import { Product, ProductLine } from '../../../model/product/product.model';
+import { ProductService } from '../../../service/product/product.service';
 
 @Component( {
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: [ './product.component.scss' ]
+  styleUrls: [ './product.component.scss' ],
 } )
 export class ProductComponent implements OnInit, OnDestroy {
   URLS = URLS;
@@ -19,26 +22,63 @@ export class ProductComponent implements OnInit, OnDestroy {
 
   constructor(
       private route: ActivatedRoute,
-      public router: Router
+      public router: Router,
+      private githubService: GithubProviderService,
+      private productService: ProductService,
   ) {
   }
 
   ngOnInit(): void {
-    this.product = undefined;
-    this.route.queryParams.subscribe( params => {
-      if ( params.productLineName && params.productName ) {
-        const productLine: ProductLine = PRODUCT_LINES.find( p => p.key === params.productLineName );
+    this.product = {
+      name: '',
+      description: '',
+      presentationType: ProductLinePresentationType.Image,
+    } as Product;
 
-        if ( productLine ) {
-          const product = productLine.products.find( p => p.key === params.productName );
+    this.route.params.subscribe( params => {
+      if ( !params.productLine || !params.product ) {
+        this.productService.setSelectedProduct( undefined );
+        this.router.navigate( [ URLS.notFound ] );
+        return;
+      }
 
-          if ( product ) {
-            this.product = product;
-            return;
-          }
+      let productLine: ProductLine = PRODUCT_LINES.find( ( p ) => p.key === params.productLine );
+
+      let isService = false;
+
+      if ( !productLine ) {
+        productLine = SERVICES.find( ( p ) => p.key === params.productLine );
+        isService = true;
+
+        if ( !productLine ) {
+          this.productService.setSelectedProduct( undefined );
+          this.router.navigate( [ URLS.notFound ] );
+          return;
         }
       }
-      this.router.navigate( [ URLS.maintenance ] );
+
+      const product = productLine.products.find(
+          ( p ) => p.key === params.product
+      );
+
+      if ( !product ) {
+        this.productService.setSelectedProduct( undefined );
+        this.router.navigate( [ URLS.notFound ] );
+        return;
+      }
+
+      if ( !isService ) {
+        this.githubService.getGithubCounters( product.key )
+        .then( counters => {
+          product.counters = counters;
+        } )
+        .catch( error => {
+          console.error( 'Error while getting Github Counters for product: ', product.key, error );
+        } );
+      }
+
+      this.product = product;
+      this.productService.setSelectedProduct( this.product );
     } );
   }
 

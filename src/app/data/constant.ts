@@ -13,6 +13,23 @@ export const ResponseCode = {
   SERVICE_UNAVAILABLE: 503,
 };
 
+export const NpmPackages = [
+  '@open-template-hub/server-generator',
+  '@open-template-hub/common',
+  '@open-template-hub/app-generator'
+];
+
+export const OthStartDate = '2020-01-01';
+
+export const OthGithubName = 'open-template-hub';
+
+export const GithubCounters = {
+  Stars: 'Stars',
+  Forks: 'Forks',
+  Subscribers: 'Subscribers',
+  ReleaseVersion: 'Release Version'
+};
+
 export const PROFILE_IMG = './assets/common/profile-img.png';
 
 export const DarkLightSettings = {
@@ -40,12 +57,14 @@ export const URLS_RAW = {
   terms: 'terms',
   pricing: 'pricing',
   product: 'product',
-  aboutUs: 'about-us',
+  about: 'about',
   signup: 'signup',
   login: 'login',
   forgetPassword: 'forget-password',
   resetPassword: 'reset-password',
   showroom: 'showroom',
+  contactUs: 'contact-us',
+  status: 'status',
   u: 'u',
   // SplashLayout
   callback: {
@@ -91,12 +110,14 @@ export const URLS = {
   terms: '/' + URLS_RAW.terms,
   pricing: '/' + URLS_RAW.pricing,
   product: '/' + URLS_RAW.product,
-  aboutUs: '/' + URLS_RAW.aboutUs,
+  about: '/' + URLS_RAW.about,
   signup: '/' + URLS_RAW.signup,
   login: '/' + URLS_RAW.login,
   forgetPassword: '/' + URLS_RAW.forgetPassword,
   resetPassword: '/' + URLS_RAW.resetPassword,
   showroom: '/' + URLS_RAW.showroom,
+  contactUs: '/' + URLS_RAW.contactUs,
+  status: '/' + URLS_RAW.status,
   u: '/' + 'u',
   // SplashLayout
   callback: {

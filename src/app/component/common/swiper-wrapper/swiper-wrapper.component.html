@@ -7,26 +7,12 @@
       disableOnInteraction: false
     }"
     [loopFillGroupWithBlank]="true"
-    [pagination]="{
+    [pagination]="isPaginationEnabled ? {
       clickable: true
-    }"
-    [navigation]="true"
-    [breakpoints]="{
-      '640': {
-        slidesPerView: 1,
-        spaceBetween: 30
-      },
-      '768': {
-        slidesPerView: 2,
-        spaceBetween: 40
-      },
-      '1200': {
-        slidesPerView: 4,
-        spaceBetween: 50
-      }
-    }"
-    class="mySwiper">
+    } : undefined"
+    [navigation]="isNavigationEnabled"
+    [breakpoints]="breakpoints">
   <ng-template *ngFor="let partner of partners" swiperSlide>
-    <img [src]="partner.brandLogo" alt="logo" class="brand-logo" height="90"/>
+    <img [src]="partner.brandLogo" alt="logo" class="brand-logo " [class.grayscale]="isGrayscale" height="90"/>
   </ng-template>
 </swiper>

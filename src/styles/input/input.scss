@@ -45,7 +45,7 @@
   }
 }
 
-textarea, input {
+textarea, input, select {
   @include default-input-font-config;
 
   color: var(--color);
@@ -133,7 +133,7 @@ input[type=checkbox] {
   }
 }
 
-.input-with-icon, .input-checkbox {
+.input-with-icon, .input-checkbox, .input-with-label {
   width: 100%;
   position: relative;
 
@@ -143,13 +143,26 @@ input[type=checkbox] {
   }
 }
 
-.input-with-icon {
+select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  border: 1px solid var(--contrast);
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+}
+
+.input-with-icon, .input-with-label {
   @include util.flex-layout-row-reverse;
   justify-content: flex-start;
   align-items: center;
 
   & textarea {
     height: 57px;
+    resize: none;
 
     &:focus + i {
       color: var(--color);
@@ -243,6 +256,11 @@ input[type=checkbox] {
       display: block;
     }
   }
+}
+
+.input-with-label {
+  justify-content: space-between;
+  white-space: nowrap;
 }
 
 .tooltip {

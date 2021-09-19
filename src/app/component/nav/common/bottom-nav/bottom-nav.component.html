@@ -12,23 +12,23 @@
       dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
       *ngIf="!openSettings"
       [routerLink]="URLS.root">
-    <i aria-hidden="true" [class]="'fas fa-home fa-fw'"></i>
+    <i [class]="'fas fa-home fa-fw'" aria-hidden="true"></i>
     <span> Home </span>
   </a>
   <a
-      *ngIf="!openSettings"
       (click)="
       dropdownMenuProducts.toggleDropdown();
-      dropdownMenuServices.closeDropdown()">
-    <i aria-hidden="true" [class]="'fas fa-server fa-fw'"></i>
+      dropdownMenuServices.closeDropdown()"
+      *ngIf="!openSettings">
+    <i [class]="'fas fa-server fa-fw'" aria-hidden="true"></i>
     <span> Products </span>
   </a>
   <a
-      *ngIf="!openSettings"
       (click)="
       dropdownMenuServices.toggleDropdown();
-      dropdownMenuProducts.closeDropdown()">
-    <i aria-hidden="true" [class]="'fas fa-handshake fa-fw'"></i>
+      dropdownMenuProducts.closeDropdown()"
+      *ngIf="!openSettings">
+    <i [class]="'fas fa-handshake fa-fw'" aria-hidden="true"></i>
     <span> Services </span>
   </a>
   <a
@@ -38,22 +38,22 @@
     <i aria-hidden="true" class="material-icons">arrow_forward_ios</i>
     <span> More </span>
   </a>
-  <a *ngIf="openSettings && !openOtherSettings"
-     [routerLink]="URLS.aboutUs"
-     (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
-    <i aria-hidden="true" [class]="'fas fa-address-card fa-fw'"></i>
-    <span> About Us </span>
+  <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
+     *ngIf="openSettings && !openOtherSettings"
+     [routerLink]="URLS.about">
+    <i [class]="'fas fa-address-card fa-fw'" aria-hidden="true"></i>
+    <span> About </span>
   </a>
   <a
-      class="contact"
+      (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
       *ngIf="openSettings && !openOtherSettings"
-      [routerLink]="URLS.maintenance"
-      (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()">
-    <i aria-hidden="true" [class]="'fas fa-envelope fa-fw'"></i>
+      [routerLink]="URLS.contactUs"
+      class="contact">
+    <i [class]="'fas fa-envelope fa-fw'" aria-hidden="true"></i>
     <span> Contact Us </span>
   </a>
   <a
-      class="non-clickable"
-      *ngIf="openSettings && !openOtherSettings">
+      *ngIf="openSettings && !openOtherSettings"
+      class="non-clickable">
   </a>
 </nav>

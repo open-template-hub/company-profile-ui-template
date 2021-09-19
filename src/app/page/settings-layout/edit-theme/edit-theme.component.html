@@ -6,22 +6,22 @@
         <hr/>
       </div>
       <div class="section horizontal">
-        <app-button1 [text]="'Light theme'" (click)="setDarkLightSetting(DarkLightSettings.light)"
+        <app-button1 (click)="setDarkLightSetting(DarkLightSettings.light)" [alwaysDark]="true"
                      [icon]="'sun'"
-                     [alwaysDark]="true"
                      [isSleekButton]="true"
-                     [selected]="darkLightSetting === DarkLightSettings.light">
+                     [selected]="darkLightSetting === DarkLightSettings.light"
+                     [text]="'Light theme'">
         </app-button1>
-        <app-button1 [text]="'Dark theme'" (click)="setDarkLightSetting(DarkLightSettings.dark)"
+        <app-button1 (click)="setDarkLightSetting(DarkLightSettings.dark)" [alwaysLight]="true"
                      [icon]="'moon'"
-                     [alwaysLight]="true"
                      [isSleekButton]="true"
-                     [selected]="darkLightSetting === DarkLightSettings.dark">
+                     [selected]="darkLightSetting === DarkLightSettings.dark"
+                     [text]="'Dark theme'">
         </app-button1>
-        <app-button1 [text]="'Auto'" (click)="setDarkLightSetting(DarkLightSettings.auto)"
-                     [icon]="'adjust'"
+        <app-button1 (click)="setDarkLightSetting(DarkLightSettings.auto)" [icon]="'adjust'"
                      [isSleekButton]="true"
-                     [selected]="darkLightSetting === DarkLightSettings.auto">
+                     [selected]="darkLightSetting === DarkLightSettings.auto"
+                     [text]="'Auto'">
         </app-button1>
       </div>
       <div class="section-header">
@@ -29,15 +29,15 @@
         <hr/>
       </div>
       <div class="section horizontal">
-        <app-button1 *ngFor="let themeColor of themeColorSettingsList"
-                     (click)="setThemeColorSetting(themeColor)"
-                     [text]="themeColor + ' theme' | titlecase"
-                     [selected]="themeColorSetting === themeColor"
-                     [themeColor]="themeColor"
+        <app-button1 (click)="setThemeColorSetting(themeColor)"
+                     *ngFor="let themeColor of themeColorSettingsList"
                      [icon]="'tint'"
-                     [transparent]="true"
+                     [isSleekButton]="true"
                      [lighterContrast]="true"
-                     [isSleekButton]="true">
+                     [selected]="themeColorSetting === themeColor"
+                     [text]="themeColor + ' theme' | titlecase"
+                     [themeColor]="themeColor"
+                     [transparent]="true">
         </app-button1>
       </div>
     </div>

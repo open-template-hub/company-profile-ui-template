@@ -28,7 +28,8 @@
   padding-right: 2vw;
 }
 
-.product-line-header, .features .feature {
+.product-line-header,
+.features .feature {
   padding-left: 7vw;
   padding-right: 7vw;
 }
@@ -98,8 +99,8 @@
 .counter-wrapper h6 {
   width: auto;
   margin: 5px 30px 0;
-  padding-bottom: 9px;
-  border-bottom: 2px solid var(--theme-color-lighter-5);
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--theme-color-lighter-2);
 }
 
 .home-page .hero-content {
@@ -121,6 +122,7 @@
 
 app-swiper-wrapper {
   height: 200px;
+  width: 75%;
 }
 
 @media only screen and (max-width: 999px) {
@@ -159,12 +161,12 @@ app-swiper-wrapper {
   .counters {
     width: 100%;
     flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 0;
+    padding: 50px 0;
   }
 
   .counter-wrapper {
-    height: 20vw;
+    min-height: 120px;
+    padding-top: 10px;
   }
 
   .demonstration {
@@ -178,6 +180,14 @@ app-swiper-wrapper {
   .product-line-header {
     padding-bottom: 20px;
     text-align: center;
+  }
+
+  app-swiper-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .card-area {
+    padding: 10px 0;
   }
 }
 
@@ -243,6 +253,10 @@ app-swiper-wrapper {
     justify-content: center;
     align-items: center;
   }
+
+  .card-area {
+    padding: 20px 0;
+  }
 }
 
 @media (hover: hover) {
@@ -250,4 +264,3 @@ app-swiper-wrapper {
     box-shadow: 0 3px 15px 1px var(--shadow);
   }
 }
-

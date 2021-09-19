@@ -247,6 +247,56 @@ export class CreateEventComponent implements OnInit {
     }
   }
 
+  search( event: any ) {
+    const q = event.target.value;
+
+    if ( !q || q.length < 3 ) {
+      this.categorySearchResults = [];
+      return;
+    }
+
+    this.categoryService.search( q ).subscribe( results => {
+      this.categorySearchResults = results.slice( 0, 10 );
+    } );
+  }
+
+  searchInAllEvents( event: any ) {
+    let q = '';
+
+    if ( !event ) {
+      q = this.searchQuery;
+    } else {
+      q = event.target.value;
+      this.searchQuery = q;
+    }
+
+    if ( !q || q.length < 3 ) {
+      this.searchedEvents = [ ...this.myPassedEvents ];
+      return;
+    }
+
+    this.eventService.me( 'false', 'true', q )
+    .subscribe( searchedEvents => {
+      this.searchedEvents = searchedEvents;
+    } );
+  }
+
+  markAsCompletedButtonClicked( event: string ) {
+    // remove the item from recentlyPassedEvents
+    this.myRecentlyCompletedEvents.forEach( ( item, index ) => {
+      if ( item._id === event ) {
+        this.myRecentlyCompletedEvents.splice( index, 1 );
+      }
+    } );
+
+    // refresh passedEvents
+    this.eventService.me( 'false', 'true' )
+    .subscribe( myPassedEvents => {
+      this.myPassedEvents = myPassedEvents;
+      this.searchedEvents = [ ...myPassedEvents ];
+    } );
+  }
+
   private addEditEvent() {
     const payload: any = {
       description: this.form.controls.description.value,
@@ -297,55 +347,5 @@ export class CreateEventComponent implements OnInit {
           }
       );
     }
-  }
-
-  search( event: any ) {
-    const q = event.target.value;
-
-    if ( !q || q.length < 3 ) {
-      this.categorySearchResults = [];
-      return;
-    }
-
-    this.categoryService.search( q ).subscribe( results => {
-      this.categorySearchResults = results.slice( 0, 10 );
-    } );
-  }
-
-  searchInAllEvents( event: any ) {
-    let q = '';
-
-    if ( !event ) {
-      q = this.searchQuery;
-    } else {
-      q = event.target.value;
-      this.searchQuery = q;
-    }
-
-    if ( !q || q.length < 3 ) {
-      this.searchedEvents = [ ...this.myPassedEvents ];
-      return;
-    }
-
-    this.eventService.me( 'false', 'true', q )
-    .subscribe( searchedEvents => {
-      this.searchedEvents = searchedEvents;
-    } );
-  }
-
-  markAsCompletedButtonClicked( event: string ) {
-    // remove the item from recentlyPassedEvents
-    this.myRecentlyCompletedEvents.forEach( ( item, index ) => {
-      if ( item._id === event ) {
-        this.myRecentlyCompletedEvents.splice( index, 1 );
-      }
-    } );
-
-    // refresh passedEvents
-    this.eventService.me( 'false', 'true' )
-    .subscribe( myPassedEvents => {
-      this.myPassedEvents = myPassedEvents;
-      this.searchedEvents = [ ...myPassedEvents ];
-    } );
   }
 }

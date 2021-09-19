@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, Output, SimpleChanges, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/angular';
 
 export interface CalendarEvent {
@@ -9,11 +9,11 @@ export interface CalendarEvent {
   end: string
 }
 
-@Component({
+@Component( {
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss']
-})
+  styleUrls: [ './calendar.component.scss' ]
+} )
 export class CalendarComponent implements OnChanges {
   @Output() handleEventClick = new EventEmitter<any>();
   @Output() handleDateClick = new EventEmitter<any>();
@@ -21,27 +21,27 @@ export class CalendarComponent implements OnChanges {
   // callback function runs when months are changed by user.
   @Output() handleDatesSet = new EventEmitter<any>();
 
-  @Input() calendarEvents: CalendarEvent[] = []
+  @Input() calendarEvents: CalendarEvent[] = [];
 
-  calendarOptions: CalendarOptions
+  calendarOptions: CalendarOptions;
 
   ngOnChanges( changes: SimpleChanges ): void {
-    this.createCalendar()
+    this.createCalendar();
   }
 
   public createCalendar() {
     this.calendarOptions = {
       initialView: 'dayGridMonth',
-      events: [...this.calendarEvents],
+      events: [ ...this.calendarEvents ],
       dateClick: ( arg => {
-        this.handleDateClick.emit( arg )
-      }),
+        this.handleDateClick.emit( arg );
+      } ),
       eventClick: ( arg => {
-        this.handleEventClick.emit( arg )
+        this.handleEventClick.emit( arg );
       } ),
       datesSet: ( data => {
-        this.handleDatesSet.emit( data )
+        this.handleDatesSet.emit( data );
       } )
-    }
+    };
   }
 }

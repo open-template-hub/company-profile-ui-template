@@ -1,0 +1,244 @@
+@use '../../../../styles/util/util';
+@use '../../../../styles/page/page';
+
+.section {
+  @include util.flex-layout-column;
+
+  justify-content: center;
+  margin: 30px 10px 0;
+}
+
+.input-with-label {
+  white-space: nowrap;
+  min-height: 42px;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+
+  & h4 {
+    font-weight: 500;
+    white-space: break-spaces;
+    text-align: left;
+    padding-right: 10px;
+  }
+}
+
+.contact-us-page {
+  text-align: center;
+}
+
+.contact-us-page-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: -webkit-fit-content;
+  margin-top: 80px;
+
+  & > * {
+    margin: 0 15px;
+  }
+}
+
+.input-with-label input, .input-with-label textarea, .input-with-label select {
+  width: 60%;
+  min-width: 60%;
+  height: -webkit-fit-content;
+}
+
+.input-with-label input::placeholder, .input-with-label textarea::placeholder {
+  color: var(--lighter-contrast);
+}
+
+.form-span-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-top: 12px
+}
+
+.input-with-label .span-description {
+  white-space: break-spaces;
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 10px;
+  color: var(--lighter-contrast);
+}
+
+select:focus {
+  color: var(--color);
+}
+
+select {
+  color: var(--lighter-contrast);
+}
+
+.button-area {
+  text-align: right;
+  margin-top: 35px;
+}
+
+app-button1 {
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  width: -webkit-fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 2em;
+}
+
+textarea, input, select {
+  transition: initial;
+}
+
+.features-area {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 12em;
+
+  & h3 {
+    font-weight: 500;
+  }
+
+  & div {
+    @include util.flex-layout-row;
+
+    & i {
+      color: var(--theme-color);
+      margin-right: 8px;
+      font-weight: bold;
+    }
+
+    & h4 {
+      text-align: left;
+    }
+  }
+}
+
+.footer {
+  @include util.flex-layout-row;
+
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 40px;
+
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.footer-card-wrapper {
+  display: flex;
+}
+
+.footer-card-wrapper i {
+  font-size: 28px;
+  color: var(--theme-color);
+}
+
+.footer-card-right-column {
+  text-align: left;
+  margin-left: 12px;
+
+  & h4 {
+    color: var(--lighter-contrast);
+
+    &:first-child {
+      color: var(--lighter);
+      font-weight: 500;
+    }
+
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+}
+
+.your-message {
+  height: 76px;
+}
+
+.your-message h4 {
+  margin-top: 12px;
+}
+
+@media only screen and (max-width: 999px) {
+  .contact-us-page {
+    font-size: 17px;
+  }
+
+  .contact-us-page-content {
+    flex-direction: column;
+  }
+
+  .features-area {
+    width: 90%;
+    align-items: center;
+
+    & div {
+      @include util.flex-layout-column;
+
+      & h4 {
+        text-align: center;
+      }
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+    margin-top: 70px;
+  }
+
+  .footer-card-wrapper {
+    margin-bottom: 40px;
+    width: 94%;
+  }
+
+  .input-with-label {
+    flex-direction: column-reverse;
+    height: 70px;
+  }
+
+  .input-with-label:not(:first-child) {
+    margin-top: 35px;
+  }
+
+  .input-with-label select, .input-with-label textarea {
+    width: 90%;
+  }
+
+  .input-with-label input, .input-with-label select, .input-with-label textarea {
+    width: 90%;
+    margin-top: 5px;
+    align-items: center;
+  }
+
+  .your-message {
+    height: 92px;
+  }
+
+  .your-message textarea {
+    text-align: left;
+    min-height: 50px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .contact-us-page {
+    font-size: 25px;
+  }
+
+  .contact-us-page-content, .footer {
+    font-size: 19px;
+  }
+
+  .contact-us-page app-card1 {
+    min-width: 600px;
+  }
+
+  .footer-card-wrapper {
+    width: 45%;
+  }
+}

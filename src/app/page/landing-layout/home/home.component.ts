@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { CountUp } from 'countup.js';
 import { PARTNERS } from 'src/app/data/partner/partner.data';
 import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
+import { NpmProviderService } from 'src/app/service/provider/npm-provider.service';
 import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
@@ -17,9 +18,9 @@ import { ThemeService } from '../../../service/theme/theme.service';
   styleUrls: [ './home.component.scss', '../landing-layout.component.scss' ],
 } )
 export class HomeComponent implements AfterViewInit {
-  downloadCounter = 6100;
-  serverTypesCounter = 5;
-  uiTypesCounter = 3;
+  npmDownloadCounter = { count: 0, id: 'npmDownloadCounterElement' };
+  serverTypesCounter = { count: 6, id: 'serverTypesCounterElement' };
+  uiTypesCounter = { count: 3, id: 'uiTypesCounterElement' };
 
   brand = {
     brandLogo: '',
@@ -39,7 +40,8 @@ export class HomeComponent implements AfterViewInit {
       private formBuilder: FormBuilder,
       public router: Router,
       private authenticationService: AuthenticationService,
-      private themeService: ThemeService
+      private themeService: ThemeService,
+      private npmProviderService: NpmProviderService
   ) {
     // redirect to home if already logged in
     if ( this.authenticationService.currentUserValue ) {
@@ -53,83 +55,7 @@ export class HomeComponent implements AfterViewInit {
     this.initCountUps();
   }
 
-  private initCountUps() {
-    const options = {
-      useGrouping: false,
-      duration: undefined,
-      formattingFn: undefined,
-    };
-
-    options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n, this.downloadCounter );
-    };
-
-    if ( this.downloadCounter < this.KILO ) {
-      options.duration = 2;
-    } else if ( this.downloadCounter < this.MILLION ) {
-      options.duration = 3;
-    } else {
-      options.duration = 4;
-    }
-
-    const eventCountUp = new CountUp(
-        'npmCounterElement',
-        this.downloadCounter,
-        options
-    );
-
-    options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n, this.serverTypesCounter );
-    };
-    if ( this.serverTypesCounter < this.KILO ) {
-      options.duration = 2;
-    } else if ( this.serverTypesCounter < this.MILLION ) {
-      options.duration = 3;
-    } else {
-      options.duration = 4;
-    }
-
-    const studentCountUp = new CountUp(
-        'githubStarCounterElement',
-        this.serverTypesCounter,
-        options
-    );
-
-    options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n, this.uiTypesCounter );
-    };
-    if ( this.uiTypesCounter < this.KILO ) {
-      options.duration = 2;
-    } else if ( this.uiTypesCounter < this.MILLION ) {
-      options.duration = 3;
-    } else {
-      options.duration = 4;
-    }
-
-    const userCountUp = new CountUp(
-        'serverTypesCounterElement',
-        this.uiTypesCounter,
-        options
-    );
-
-    if ( !eventCountUp.error ) {
-      eventCountUp.start();
-    } else {
-      console.error( eventCountUp.error );
-    }
-    if ( !studentCountUp.error ) {
-      studentCountUp.start();
-    } else {
-      console.error( studentCountUp.error );
-    }
-    if ( !userCountUp.error ) {
-      userCountUp.start();
-    } else {
-      console.error( userCountUp.error );
-    }
-  }
-
-  countUpFormatter( n: number, lastNumber: number ) {
+  countUpFormatter( n: number ) {
     if ( n < this.KILO ) {
       return n + '';
     } else {
@@ -138,6 +64,48 @@ export class HomeComponent implements AfterViewInit {
       } else {
         return Math.round( ( n / this.MILLION ) * 10 ) / 10 + 'M';
       }
+    }
+  }
+
+  private initCountUps() {
+    const options = {
+      useGrouping: false,
+      duration: undefined,
+      formattingFn: undefined,
+    };
+
+    this.npmProviderService.getNpmPackagesDownloadCount().then( count => {
+      this.npmDownloadCounter.count = count;
+      this.startCounter( options, this.npmDownloadCounter );
+    } );
+
+    this.startCounter( options, this.serverTypesCounter );
+
+    this.startCounter( options, this.uiTypesCounter );
+  }
+
+  private startCounter( options: { duration: number; useGrouping: boolean; formattingFn }, counter ) {
+    options.formattingFn = ( n: number ) => {
+      return this.countUpFormatter( n );
+    };
+
+    if ( counter.count < this.KILO ) {
+      options.duration = 2;
+    } else if ( counter.count < this.MILLION ) {
+      options.duration = 3;
+    } else {
+      options.duration = 4;
+    }
+
+    const eventCountUp = new CountUp(
+        counter.id,
+        counter.count,
+        options
+    );
+    if ( !eventCountUp.error ) {
+      eventCountUp.start();
+    } else {
+      console.error( eventCountUp.error );
     }
   }
 }

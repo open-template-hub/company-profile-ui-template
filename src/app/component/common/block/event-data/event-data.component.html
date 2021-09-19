@@ -1,13 +1,13 @@
 <div [class.background-color]="isBackgroundColor" [class.centered-title]="centeredTitle" [class.editable]="isEditable"
-     [class.is-small-title]="isSmallTitle" [class.not-fixed-height]="notFixedHeight" [class.max-height]="maxHeight"
-     [class.show-calendar]="(showCalendar || isEditable) && !notFixedHeight" [class.rate-height]="rateHeight"
+     [class.is-small-title]="isSmallTitle" [class.max-height]="maxHeight" [class.not-fixed-height]="notFixedHeight"
+     [class.rate-height]="rateHeight" [class.show-calendar]="(showCalendar || isEditable) && !notFixedHeight"
      class="event">
   <div *ngIf="title" class="event-header">
-    <div class="event-header-title" [class.remove-line-clamp]="removeLineClamp">
+    <div [class.remove-line-clamp]="removeLineClamp" class="event-header-title">
       <h3 (click)="onClick()">{{title}}</h3>
-      <app-event-hamburger-menu *ngIf="showHamburgerMenu" (shareViaClicked)="shareVia( $event )"
-                                [showCalendar]=" showCalendar || isEditable "
-                                (calendarClicked)="createCalendarEvent()"></app-event-hamburger-menu>
+      <app-event-hamburger-menu (calendarClicked)="createCalendarEvent()" (shareViaClicked)="shareVia( $event )"
+                                *ngIf="showHamburgerMenu"
+                                [showCalendar]=" showCalendar || isEditable "></app-event-hamburger-menu>
     </div>
     <div class="event-sub-header-title dim">
       <div class="event-sub-header-title-user">
@@ -16,8 +16,8 @@
             class="link">{{isEditable ? 'you' : ( user.username.length > 12 ? user.username.slice( 0, 12 ) + '...' : user.username )}}</a>
         </h4>
         <h4 *ngIf="link && showCalendar">
-          <app-ext-link [href]="link" [linkClass]="'link'">
-            <i aria-hidden="true" [class]="'fas fa-link fa-fw'"></i>join meeting
+          <app-ext-link [href]="link" [linkClass]="'theme-color-link'">
+            <i [class]="'fas fa-link fa-fw'" aria-hidden="true"></i>join meeting
           </app-ext-link>
         </h4>
       </div>
@@ -30,66 +30,66 @@
   <div class="event-content">
     <div *ngIf="count !== undefined || duration !== undefined" class="content-information-row dim">
       <div *ngIf="duration !== undefined" class="content-information-row-inner-row">
-        <i aria-hidden="true" [class]="'far fa-clock fa-lg fa-fw'"></i>
+        <i [class]="'far fa-clock fa-lg fa-fw'" aria-hidden="true"></i>
         <p class="content-information-row-duration"><span class="content-information-row-data">{{duration}}</span>
           Minutes</p>
       </div>
       <div *ngIf="count !== undefined" class="content-information-row-inner-row">
-        <i aria-hidden="true" [class]="'fas fa-users fa-lg fa-fw'"></i>
+        <i [class]="'fas fa-users fa-lg fa-fw'" aria-hidden="true"></i>
         <p class="content-information-row-attendees"><span class="content-information-row-data">{{count}}</span>
           Attendees</p>
       </div>
     </div>
     <!--RATE-->
     <div *ngIf="showRateBar" class="rate-badge-wrapper product-review-stars-input">
-      <input type="radio" [id]="'star5' + id" name="rating" class="visuallyHidden" (click)="onStarClick( 5 )"/>
-      <label class="far fa-sm fa-star" [for]="'star5' + id"></label>
-      <input type="radio" [id]="'star4' + id" name="rating" class="visuallyHidden" (click)="onStarClick( 4 )"/>
-      <label class="far fa-sm fa-star" [for]="'star4' + id"></label>
-      <input type="radio" [id]="'star3' + id" name="rating" class="visuallyHidden" (click)="onStarClick( 3 )"/>
-      <label class="far fa-sm fa-star" [for]="'star3' + id"></label>
-      <input type="radio" [id]="'star2' + id" name="rating" class="visuallyHidden" (click)="onStarClick( 2 )"/>
-      <label class="far fa-sm fa-star" [for]="'star2' + id"></label>
-      <input type="radio" [id]="'star1' + id" name="rating" class="visuallyHidden" (click)="onStarClick( 1 )"/>
-      <label class="far fa-sm fa-star" [for]="'star1' + id"></label>
+      <input (click)="onStarClick( 5 )" [id]="'star5' + id" class="visuallyHidden" name="rating" type="radio"/>
+      <label [for]="'star5' + id" class="far fa-sm fa-star"></label>
+      <input (click)="onStarClick( 4 )" [id]="'star4' + id" class="visuallyHidden" name="rating" type="radio"/>
+      <label [for]="'star4' + id" class="far fa-sm fa-star"></label>
+      <input (click)="onStarClick( 3 )" [id]="'star3' + id" class="visuallyHidden" name="rating" type="radio"/>
+      <label [for]="'star3' + id" class="far fa-sm fa-star"></label>
+      <input (click)="onStarClick( 2 )" [id]="'star2' + id" class="visuallyHidden" name="rating" type="radio"/>
+      <label [for]="'star2' + id" class="far fa-sm fa-star"></label>
+      <input (click)="onStarClick( 1 )" [id]="'star1' + id" class="visuallyHidden" name="rating" type="radio"/>
+      <label [for]="'star1' + id" class="far fa-sm fa-star"></label>
     </div>
     <!--END OF RATE-->
-    <div class="event-description" [class.remove-line-clamp]="removeLineClamp"
-         [class.add-margin-to-description]="addMarginToDescription">
+    <div [class.add-margin-to-description]="addMarginToDescription" [class.remove-line-clamp]="removeLineClamp"
+         class="event-description">
       {{description}}
     </div>
   </div>
   <div class="event-last-item">
     <app-button1 (click)="onEditClick()" *ngIf="isEditable && !inProgress && !showRateBar && !completed"
-                 [themeColor]="'default'" [icon]="'pen'" [isSleekButton]="true" [text]="'Edit'">
+                 [icon]="'pen'" [isSleekButton]="true" [text]="'Edit'" [themeColor]="'default'">
     </app-button1>
     <app-button1 (click)="onBuyNowClick()"
                  *ngIf="!isEditable && isPremium && attendeeButton && !showRateBar && !completed"
-                 [themeColor]="'default'" [icon]="'shopping-cart'" [isSleekButton]="true"
-                 [text]="'Buy Now ' + (price ? '(' + price + '$)' : '')">
+                 [icon]="'shopping-cart'" [isSleekButton]="true" [text]="'Buy Now ' + (price ? '(' + price + '$)' : '')"
+                 [themeColor]="'default'">
     </app-button1>
     <app-button1 (click)="onAttendClick()"
                  *ngIf="!isEditable && !isPremium && attendeeButton && !showRateBar && !completed"
-                 [themeColor]="'default'" [isSleekButton]="true" [text]="'Attend'">
+                 [isSleekButton]="true" [text]="'Attend'" [themeColor]="'default'">
     </app-button1>
     <app-button1 (click)="onDropClick()" *ngIf="!isEditable && dropButton && !showRateBar && !completed && !isPremium"
                  [hoverWithColor]="false"
                  [isSleekButton]="true" [lighterContrast]="true" [text]="'Drop'" [transparent]="true">
     </app-button1>
     <app-button1 (click)="onMarkAsCompletedClick()" *ngIf="markAsCompleted && !showRateBar && !completed"
-                 [themeColor]="'default'" [isSleekButton]="true" [text]="'Mark As Completed'" [icon]="'check'">
+                 [icon]="'check'" [isSleekButton]="true" [text]="'Mark As Completed'" [themeColor]="'default'">
     </app-button1>
-    <app-button1 *ngIf="!isEditable && dropButton && !showRateBar && !completed && isPremium" [themeLightColor]="true"
-                 [isSleekButton]="true" [text]="'Attended'">
+    <app-button1 *ngIf="!isEditable && dropButton && !showRateBar && !completed && isPremium" [isSleekButton]="true"
+                 [text]="'Attended'" [themeLightColor]="true">
     </app-button1>
-    <app-button1 *ngIf="completed" [cursor]="'not-allowed'" [themeLightColor]="true" [isSleekButton]="true"
-                 [text]="'Completed'">
+    <app-button1 *ngIf="completed" [cursor]="'not-allowed'" [isSleekButton]="true" [text]="'Completed'"
+                 [themeLightColor]="true">
     </app-button1>
     <app-button1 (click)="onRateClick()" *ngIf="showRateBar"
-                 [themeColor]="'default'" [isSleekButton]="true" [text]="'Rate'">
+                 [isSleekButton]="true" [text]="'Rate'" [themeColor]="'default'">
     </app-button1>
     <app-button1 *ngIf="inProgress" [cursor]="'not-allowed'"
-                 [themeLightColor]="true" [isSleekButton]="true" [text]="'In Progress'" [icon]="'hourglass'">
+                 [icon]="'hourglass'" [isSleekButton]="true" [text]="'In Progress'" [themeLightColor]="true">
     </app-button1>
     <div (click)="onCategoryClick()" class="event-categories">
       <p *ngIf="category && !subCategory && !leafCategory"><a class="link">{{'#' + category.name}}</a></p>
@@ -99,5 +99,5 @@
   </div>
   <div *ngIf="!isLastItem" class="event-bottom-wrapper">
   </div>
-  <span class="ribbon" *ngIf="ribbon.text" [attr.data-ribbon]="ribbon.text" [class]="ribbon.theme + '-theme'"></span>
+  <span *ngIf="ribbon.text" [attr.data-ribbon]="ribbon.text" [class]="ribbon.theme + '-theme'" class="ribbon"></span>
 </div>

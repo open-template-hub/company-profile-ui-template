@@ -2,11 +2,11 @@ import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { catchError, filter, finalize, switchMap, take } from 'rxjs/operators';
+import { ResponseCode } from '../../data/constant';
 import { AuthToken } from '../../model/auth/auth-token.model';
 import { AuthenticationService } from '../../service/auth/authentication.service';
 import { InformationService } from '../../service/information/information.service';
 import { LoadingService } from '../../service/loading/loading.service';
-import { ResponseCode } from '../../data/constant';
 
 @Injectable()
 export class ResponseInterceptor implements HttpInterceptor {

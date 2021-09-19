@@ -7,10 +7,9 @@ import { ThemeService } from '../../../service/theme/theme.service';
 @Component( {
   selector: 'app-external',
   templateUrl: './external.component.html',
-  styleUrls: [ './external.component.scss' ]
+  styleUrls: [ './external.component.scss' ],
 } )
 export class ExternalComponent {
-
   href: any;
   info: string;
   website: any;
@@ -27,13 +26,9 @@ export class ExternalComponent {
       private router: Router,
       private themeService: ThemeService
   ) {
-    this.website = {
-      logo: './assets/common/globe.png'
-    };
-
     this.brand = this.themeService.brand;
 
-    this.route.queryParams.subscribe( params => {
+    this.route.queryParams.subscribe( ( params ) => {
       this.href = params.href;
       this.info = params.info;
 
@@ -42,6 +37,17 @@ export class ExternalComponent {
           this.website = environmentCommon.website[ key ];
           break;
         }
+      }
+
+      if ( !this.website ) {
+        const url = new URL( this.href );
+
+        const favicon =
+            'https://www.google.com/s2/favicons?sz=64&domain=' + url.origin;
+
+        this.website = {
+          logo: favicon,
+        };
       }
     } );
   }

@@ -14,15 +14,12 @@ import { CategoryService } from '../category/category.service';
 export class EventService {
 
   public recommendedEvents: Observable<any>;
-  private recommendedEventsSubject: BehaviorSubject<any>;
-
   public recommendedEventsByFollowingList: Observable<any>;
-  private recommendedEventsByFollowingListSubject: BehaviorSubject<any>;
-
   public attendedEvents: Observable<any>;
-  private attendedEventsSubject: BehaviorSubject<any>;
-
   public searchedEvents: Observable<any>;
+  private recommendedEventsSubject: BehaviorSubject<any>;
+  private recommendedEventsByFollowingListSubject: BehaviorSubject<any>;
+  private attendedEventsSubject: BehaviorSubject<any>;
   private searchedEventsSubject: BehaviorSubject<any>;
 
   constructor(
@@ -245,18 +242,6 @@ export class EventService {
     }
   }
 
-  private updateEvent( updatedEvent, targetEvents ): void {
-    const events = targetEvents.getValue();
-
-    const foundRecommendIndex = events.findIndex( x => x._id === updatedEvent[ 0 ]._id );
-
-    if ( foundRecommendIndex !== -1 ) {
-      events[ foundRecommendIndex ].count = updatedEvent[ 0 ].count;
-      events[ foundRecommendIndex ].attended = updatedEvent[ 0 ].attended;
-      targetEvents.next( events );
-    }
-  }
-
   resetEvents( eventType: EventTypes ): void {
     if ( eventType === EventTypes.Attended ) {
       this.attendedEventsSubject.next( null );
@@ -377,6 +362,30 @@ export class EventService {
     this.recommendedEventsByFollowingListSubject.next( recommendedEventsData );
   }
 
+  getEvents(): Observable<Event[]> {
+    return this.http.get<Event[]>( 'api/eventData' ).pipe(
+        tap( _ => console.log( 'fetched events' ),
+            catchError( this.handleError<EventService[]>( 'getEvents', [] ) ) )
+    );
+  }
+
+  logout() {
+    this.recommendedEventsSubject.next( null );
+    this.recommendedEventsByFollowingListSubject.next( null );
+  }
+
+  private updateEvent( updatedEvent, targetEvents ): void {
+    const events = targetEvents.getValue();
+
+    const foundRecommendIndex = events.findIndex( x => x._id === updatedEvent[ 0 ]._id );
+
+    if ( foundRecommendIndex !== -1 ) {
+      events[ foundRecommendIndex ].count = updatedEvent[ 0 ].count;
+      events[ foundRecommendIndex ].attended = updatedEvent[ 0 ].attended;
+      targetEvents.next( events );
+    }
+  }
+
   private checkInProgress( event ) {
     const currentDate = new Date();
     const eventDate = new Date( event.date );
@@ -384,13 +393,6 @@ export class EventService {
         eventDate.getTime() + event.duration * 60000 > currentDate.getTime() ) {
       event.inProgress = true;
     }
-  }
-
-  getEvents(): Observable<Event[]> {
-    return this.http.get<Event[]>( 'api/eventData' ).pipe(
-        tap( _ => console.log( 'fetched events' ),
-            catchError( this.handleError<EventService[]>( 'getEvents', [] ) ) )
-    );
   }
 
   /**
@@ -406,10 +408,5 @@ export class EventService {
       // Let the app keep running by returning an empty result.
       return of( result );
     };
-  }
-
-  logout() {
-    this.recommendedEventsSubject.next( null );
-    this.recommendedEventsByFollowingListSubject.next( null );
   }
 }

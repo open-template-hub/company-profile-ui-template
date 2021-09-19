@@ -1,0 +1,20 @@
+.command {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.command-line {
+  color: var(--contrast-light-mode);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.response {
+  margin-right: 10px;
+  color: var(--warn);
+}
+
+.request {
+  margin-right: 8px;
+  color: var(--error);
+}

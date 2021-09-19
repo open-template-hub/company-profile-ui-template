@@ -10,13 +10,13 @@ export class ThemeService {
 
   public appVersion = '1.0.0';
 
-  public darkLightSetting: Observable<string>;
-  public themeColorSetting: Observable<string>;
-  public sideNavClosed: Observable<string>;
-
   private darkLightSettingSubject: BehaviorSubject<string>;
   private themeColorSettingSubject: BehaviorSubject<string>;
   private sideNavClosedSubject: BehaviorSubject<string>;
+
+  public darkLightSetting: Observable<string>;
+  public themeColorSetting: Observable<string>;
+  public sideNavClosed: Observable<string>;
 
   public brand = {
     brandLogo: '',
@@ -24,9 +24,6 @@ export class ThemeService {
     brandLogoMerge: '',
     brandLogoMerged: ''
   };
-
-  private maxAspectRatioMedia;
-  private maxHeightMedia;
 
   colors = [
     '--theme-color',

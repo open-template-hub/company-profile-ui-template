@@ -88,6 +88,24 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.login();
   }
 
+  socialLogin( social: any ) {
+    if ( this.loading || this.disabled ) {
+      return;
+    }
+
+    this.disabled = true;
+
+    this.authenticationService.socialLoginRedirect( social )
+    .pipe( first() )
+    .subscribe(
+        data => {
+          window.location.href = data.loginUrl;
+        },
+        error => {
+          this.disabled = false;
+        } );
+  }
+
   private login() {
     this.authenticationService.login(
         this.form.controls.username.value,
@@ -138,23 +156,5 @@ export class LoginComponent implements OnInit, OnDestroy {
           }
         }
     );
-  }
-
-  socialLogin( social: any ) {
-    if ( this.loading || this.disabled ) {
-      return;
-    }
-
-    this.disabled = true;
-
-    this.authenticationService.socialLoginRedirect( social )
-    .pipe( first() )
-    .subscribe(
-        data => {
-          window.location.href = data.loginUrl;
-        },
-        error => {
-          this.disabled = false;
-        } );
   }
 }

@@ -153,7 +153,7 @@ export class AuthenticationService {
     this.currentUser.subscribe( () => {
       this.basicInfoService.logout();
       this.eventService.logout();
-      this.basicInfoService.userInfo.subscribe( basicInfo => {
+      this.basicInfoService.userInfo.subscribe( () => {
         this.fileStorageService.logout();
       } );
     } );

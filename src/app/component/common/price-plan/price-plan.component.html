@@ -24,7 +24,7 @@
         <div class="available-plans-column-area column-feature">
           <h4>Premium</h4>
           <p>Advanced Team Needs</p>
-          <button class="available-plans-button top-right-bottom-left-rounded-box" [routerLink]="URLS.maintenance">
+          <button class="available-plans-button top-right-bottom-left-rounded-box" [routerLink]="URLS.contactUs">
             Contact Us
           </button>
         </div>
@@ -45,11 +45,11 @@
             <h6 class="features-area-description-text">{{ feature.description }}</h6>
           </div>
           <div class="feature-by-price-plan-wrapper">
-            <div class="feature-by-price-plan column-feature" *ngFor="let productFeature of product.pricingOptions">
-              <p class="feature-desktop" *ngIf="productFeature.features[i] !== 'true'">{{ productFeature.features[i] }}</p>
-              <i [class]="'feature-desktop'" *ngIf="productFeature.features[i] === 'true'" aria-hidden="true" class="fas fa-check fa-fw"></i>
-              <i [class]="'feature-mobile'" *ngIf="productFeature.features[i] !== ''" aria-hidden="true" class="fas fa-check fa-fw"></i>
-              <p class="feature-mobile" *ngIf="productFeature.features[i] !== ''">{{ productFeature.title }}</p>
+            <div class="feature-by-price-plan column-feature" *ngFor="let pricingOption of product.pricingOptions">
+              <p class="feature-desktop" *ngIf="pricingOption.features[i] !== 'true'">{{ pricingOption.features[i] }}</p>
+              <i [class]="'feature-desktop'" *ngIf="pricingOption.features[i] === 'true'" aria-hidden="true" class="fas fa-check fa-fw"></i>
+              <i [class]="'feature-mobile'" *ngIf="pricingOption.features[i] !== ''" aria-hidden="true" class="fas fa-check fa-fw"></i>
+              <p class="feature-mobile" *ngIf="pricingOption.features[i] !== ''">{{ pricingOption.title }}</p>
             </div>
           </div>
         </div>

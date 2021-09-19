@@ -83,6 +83,8 @@ import { ExternalComponent } from './page/splash-layout/external/external.compon
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 import { StatusComponent } from './page/landing-layout/status/status.component';
 import { ProductPresentationComponent } from './page/landing-layout/product/product-represantation/product-presentation.component';
+import { CardComponent } from './component/common/card/card/card.component';
+import { EmployeeCardComponent } from './component/common/card/employee-card/employee-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -153,6 +155,8 @@ FullCalendarModule.registerPlugins( [
     CommandLineComponent,
     StatusComponent,
     ProductPresentationComponent,
+    CardComponent,
+    EmployeeCardComponent,
   ],
   imports: [
     BrowserModule,

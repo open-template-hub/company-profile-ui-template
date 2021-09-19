@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="header">
+    <ng-container *ngTemplateOutlet="headerTemplate ? headerTemplate : defaultHeader"></ng-container>
+    <ng-template #defaultHeader>Some header...</ng-template>
+  </div>
+  <div class="body">
+    <ng-container *ngTemplateOutlet="bodyTemplate ? bodyTemplate : defaultBody"></ng-container>
+    <ng-template #defaultBody>Some body...</ng-template>
+  </div>
+  <div class="footer">
+    <ng-container *ngTemplateOutlet="footerTemplate ? footerTemplate : defaultFooter"></ng-container>
+    <ng-template #defaultFooter>Some body...</ng-template>
+  </div>
+  <ng-container *ngTemplateOutlet="bottomWrapperTemplate ? bottomWrapperTemplate: defaultBottomWrapper"></ng-container>
+  <ng-template #defaultBottomWrapper>
+    <div class="default-bottom-wrapper"></div>
+  </ng-template>
+</div>

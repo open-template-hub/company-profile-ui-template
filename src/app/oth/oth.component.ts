@@ -13,7 +13,11 @@ export class OthComponent {
   darkLightSetting: string;
   themeColorSetting: string;
 
-  constructor( private themeService: ThemeService, private googleTagManagerService: GoogleTagManagerService, private router: Router ) {
+  constructor(
+      private themeService: ThemeService,
+      private googleTagManagerService: GoogleTagManagerService,
+      private router: Router ) {
+
     this.router.events.forEach( item => {
       if ( item instanceof NavigationEnd ) {
 

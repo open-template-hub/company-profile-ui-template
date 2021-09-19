@@ -3,10 +3,9 @@
     <div body>
       <div class="flex-layout-row flex-center-center">
         <app-social-button (click)="socialLogin(environmentCommon.website.facebook)"
-                           [brand]="environmentCommon.website.facebook.cssClass"
-                           [classType]="'circle'"></app-social-button>
-        <app-social-button (click)="socialLogin(environmentCommon.website.google)" [brand]="environmentCommon.website.google.cssClass"
-                           [classType]="'circle'"></app-social-button>
+                           [brand]="environmentCommon.website.facebook.cssClass"></app-social-button>
+        <app-social-button (click)="socialLogin(environmentCommon.website.google)"
+                           [brand]="environmentCommon.website.google.cssClass"></app-social-button>
       </div>
       <div class="login-page-middle-text flex-layout-column flex-center-center">
         <p>or</p>
@@ -32,19 +31,19 @@
           </div>
         </div>
         <div class="section-submit">
-          <app-button1 [themeColor]="'default'" [text]="'CONTINUE'"></app-button1>
+          <app-button1 [text]="'CONTINUE'" [themeColor]="'default'"></app-button1>
           <p>
             <small class="dim">By signing up, you agree
-              <a class="link" routerLink="{{URLS.terms}}" target="_blank" rel=noopener>Terms of Use</a>,
-              <a class="link" routerLink="{{URLS.privacyPolicy}}" target="_blank" rel=noopener>Privacy Policy</a>
+              <a class="theme-color-link" rel=noopener routerLink="{{URLS.terms}}" target="_blank">Terms of Use</a>,
+              <a class="theme-color-link" rel=noopener routerLink="{{URLS.privacyPolicy}}" target="_blank">Privacy Policy</a>
               and
-              <a class="link" routerLink="{{URLS.cookiePolicy}}" target="_blank" rel=noopener>Cookie Policy</a>
+              <a class="theme-color-link" rel=noopener routerLink="{{URLS.cookiePolicy}}" target="_blank">Cookie Policy</a>
             </small>
           </p>
           <hr class="dim"/>
           <p>
             Already have an account?
-            <a class="link" [routerLink]="URLS.login">
+            <a [routerLink]="URLS.login" class="theme-color-link">
               Login
             </a>
           </p>

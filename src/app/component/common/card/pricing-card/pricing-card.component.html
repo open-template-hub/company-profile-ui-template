@@ -1,9 +1,9 @@
 <div>
-  <app-card1 [enableHeaderFullImg]="false" [height]="option.styles.height"
-             [paddingContent]="false" [centerToParent]="true"
-             [ribbon]="option.ribbon ? option.ribbon : DEFAULT_RIBBON"
-             [width]="option.styles.width" [maxHeight]="false"
-             [enableHeader]="false" [style.font-size]="option.styles.fontSize">
+  <app-card1 [centerToParent]="true" [enableHeaderFullImg]="false"
+             [enableHeader]="false" [height]="option.styles.height"
+             [maxHeight]="false"
+             [paddingContent]="false" [ribbon]="option.ribbon ? option.ribbon : DEFAULT_RIBBON"
+             [style.font-size]="option.styles.fontSize" [width]="option.styles.width">
     <div body class="content-wrapper">
       <p class="subscription-header">{{ option.title }}</p>
       <div class="price-area">
@@ -12,15 +12,15 @@
         <p class="subscription-time">{{ option.price.subscriptionTime }}</p>
       </div>
       <hr>
-      <div class="subscription-features" [style.height]="option.styles.featureHeight">
+      <div [style.height]="option.styles.featureHeight" class="subscription-features">
         <p *ngFor="let feature of option.features">
           <i aria-hidden="true" class="material-icons">check</i>
           <span>{{ feature }}</span>
         </p>
       </div>
       <app-button1 (click)="routeToEvent(option.link ? option.link : URLS.maintenance)"
-                   [themeColor]="'default'" [icon]="'shopping-cart'" [isSleekButton]="true" [relativeToParent]="true"
-                   [text]="'Buy Now'">
+                   [icon]="'shopping-cart'" [isSleekButton]="true" [relativeToParent]="true" [text]="'Buy Now'"
+                   [themeColor]="'default'">
       </app-button1>
     </div>
   </app-card1>

@@ -1,43 +1,92 @@
 <div [class.footer-hide-shadow]="hideShadow" [class.footer-popup-padding]="popupPadding" class="footer">
-  <a routerLink="{{URLS.maintenance}}" class="footer-link-content">
-    <i aria-hidden="true" class="material-icons">business</i>
-    <span>
-        ABOUT US
-    </span>
-  </a>
-  <a routerLink="{{URLS.maintenance}}" class="footer-link-content">
-    <i aria-hidden="true" class="material-icons">chrome_reader_mode</i>
-    <span>
-        BLOG
-    </span>
-  </a>
-  <a routerLink="{{URLS.terms}}" class="footer-link-content">
-    <i aria-hidden="true" class="material-icons">policy</i>
-    <span>
-        TERMS & POLICIES
-    </span>
-  </a>
-  <a [routerLink]="URLS.maintenance" class="footer-link-content">
-    <i aria-hidden="true" class="material-icons">email</i>
-    <span>
-        CONTACT
-    </span>
-  </a>
-  <a routerLink="{{URLS.maintenance}}" class="footer-link-content">
-    <i aria-hidden="true" class="material-icons">work</i>
-    <span>
-        JOBS
-    </span>
-  </a>
-  <app-ext-link [target]="'_self'" class="footer-link-content"
-                [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github">
-    <div body class="footer-link-content-inner">
-      <i aria-hidden="true" class="material-icons">code</i>
-      <span>
-        OPEN SOURCE
-    </span>
+  <div class="footer-links">
+    <div class="footer-link-column">
+      <p>Products</p>
+      <div *ngFor="let productLine of PRODUCT_LINES" class="footer-link-group">
+        <p *ngIf="productLine.name"
+           [class]="productLine.color ? productLine.color + '-theme' : ''">{{ productLine.name }}</p>
+        <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+           [class]="productLine.color ? productLine.color + '-theme' : ''"
+           [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
+           class="footer-link-item">
+          {{ product.name }}
+        </a>
+      </div>
     </div>
-  </app-ext-link>
+    <div class="footer-link-column double">
+      <div class="footer-link-inner-column">
+        <div *ngFor="let productLine of SERVICES" class="footer-link-group">
+          <p *ngIf="productLine.name"
+             [class]="productLine.color ? productLine.color + '-theme' : ''">{{ productLine.name }}</p>
+          <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+             [class]="productLine.color ? productLine.color + '-theme' : ''"
+             [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
+             class="footer-link-item">
+            {{ product.name }}
+          </a>
+        </div>
+        <div class="footer-link-group">
+          <p>Company</p>
+          <a [routerLink]="URLS.about" class="footer-link-item">
+            About
+          </a>
+          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+            Customers
+          </a>
+          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+            Enterprise
+          </a>
+          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+            Partners
+          </a>
+          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+            Jobs
+          </a>
+          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+            Blog
+          </a>
+        </div>
+      </div>
+      <div class="footer-link-inner-column">
+        <div class="footer-link-group">
+          <p>Developers</p>
+          <app-ext-link [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
+                        [linkClass]="'link'">
+          <span body>
+            Open Source
+          </span>
+          </app-ext-link>
+          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+            Docs
+          </a>
+          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+            API
+          </a>
+          <a [routerLink]="URLS.status" class="footer-link-item">
+            Status
+          </a>
+        </div>
+        <div class="footer-link-group">
+          <p>Resources</p>
+          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+            Support
+          </a>
+          <a [routerLink]="URLS.contactUs" class="footer-link-item">
+            Contact
+          </a>
+          <a [routerLink]="URLS.terms" class="footer-link-item">
+            Terms & Policies
+          </a>
+          <a [routerLink]="URLS.cookiePolicy" class="footer-link-item">
+            Cookies
+          </a>
+          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+            Sitemap
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="footer-hr-row">
     <hr/>
   </div>
@@ -49,26 +98,27 @@
     <div class="footer-social">
       <app-ext-link
           [href]="environmentCommon.website.twitter.url + '/' + environmentCommon.oth.social.twitter">
-        <i body aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'">
+        <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'" aria-hidden="true" body>
         </i>
       </app-ext-link>
       <app-ext-link
           [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github">
-        <i body aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.github.cssClass + ' fa-2x fa-fw'">
+        <i [class]="'fab fa-' + environmentCommon.website.github.cssClass + ' fa-2x fa-fw'" aria-hidden="true" body>
         </i>
       </app-ext-link>
       <app-ext-link
           [href]="environmentCommon.website.productHunt.url + environmentCommon.oth.social.productHunt">
-        <i body aria-hidden="true"
-           [class]="'fab fa-' + environmentCommon.website.productHunt.cssClass + ' fa-2x fa-fw'">
+        <i [class]="'fab fa-' + environmentCommon.website.productHunt.cssClass + ' fa-2x fa-fw'" aria-hidden="true"
+           body>
         </i>
       </app-ext-link>
       <app-ext-link
           [href]="environmentCommon.website.linkedin.url + '/company/' + environmentCommon.oth.social.linkedin">
-        <i body aria-hidden="true" [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'">
+        <i [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'" aria-hidden="true" body>
         </i>
       </app-ext-link>
     </div>
-    <div class="footer-version">{{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '')}}</div>
+    <div
+        class="footer-version">{{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '' )}}</div>
   </div>
 </div>

@@ -1,14 +1,14 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { URLS } from '../../../data/constant';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { CategoryService } from '../../../service/category/category.service';
 import { EventService } from '../../../service/event/event.service';
-import { URLS } from '../../../data/constant';
 
-@Component({
+@Component( {
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
-})
+  styleUrls: [ './search.component.scss' ]
+} )
 export class SearchComponent {
   userSearchResults = [];
   categorySearchResults = [];
@@ -20,10 +20,11 @@ export class SearchComponent {
   searchArea: ElementRef;
 
   constructor(
-    private eventService: EventService,
-    private basicInfoService: BasicInfoService,
-    private categoryService: CategoryService
-  ) { }
+      private eventService: EventService,
+      private basicInfoService: BasicInfoService,
+      private categoryService: CategoryService
+  ) {
+  }
 
   @HostListener( 'document:click', [ '$event' ] )
   onDocumentClick( event ) {

@@ -1,10 +1,11 @@
 <div class="event-page">
   <div *ngIf="event">
     <div class="event">
-      <app-event-card [maxHeight]="true" [profileImg]="!isProfileImageLoading ? profileImg : PROFILE_IMG"
-                             [addMarginToDescription]="true" [fillLayout]="true" [event]="event"
-                             [centeredTitle]="true" [isEditable]="!!event?.attendees" (itemIdForFillingForm)="fillForm()"
-                             [inProgress]="event.inProgress" [completed]="completed"></app-event-card>
+      <app-event-card (itemIdForFillingForm)="fillForm()" [addMarginToDescription]="true"
+                      [centeredTitle]="true" [completed]="completed" [event]="event"
+                      [fillLayout]="true" [inProgress]="event.inProgress" [isEditable]="!!event?.attendees"
+                      [maxHeight]="true"
+                      [profileImg]="!isProfileImageLoading ? profileImg : PROFILE_IMG"></app-event-card>
     </div>
   </div>
   <div *ngIf="event?.attendees" class="attendees-container">

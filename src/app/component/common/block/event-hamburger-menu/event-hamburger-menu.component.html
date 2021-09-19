@@ -1,23 +1,23 @@
 <div #menu class="hamburger-menu">
-  <i aria-hidden="true" class="material-icons" #icon>menu</i>
+  <i #icon aria-hidden="true" class="material-icons">menu</i>
   <div *ngIf="display" class="menu-list">
     <div class="share">
       <p>Share</p>
       <hr>
       <div class="content flex-layout-row">
-        <a class="twitter-area" (click)="shareViaClicked.emit( 'twitter' )">
+        <a (click)="shareViaClicked.emit( 'twitter' )" class="twitter-area">
           <app-social-button [brand]="environmentCommon.website.twitter.cssClass"
                              [classType]="'circle'" [isSmallLogo]="true"></app-social-button>
           <p>Twitter</p>
         </a>
-        <a class="linkedin-area" style="margin-left: 30px;" (click)="shareViaClicked.emit( 'linkedin' )">
+        <a (click)="shareViaClicked.emit( 'linkedin' )" class="linkedin-area" style="margin-left: 30px;">
           <app-social-button [brand]="environmentCommon.website.linkedin.cssClass"
                              [classType]="'circle'" [isSmallLogo]="true"></app-social-button>
           <p>Linkedin</p>
         </a>
       </div>
     </div>
-    <div class="calendar" *ngIf="showCalendar">
+    <div *ngIf="showCalendar" class="calendar">
       <p>Calendar</p>
       <hr>
       <div class="content flex-layout-row">
@@ -27,12 +27,13 @@
                            [localImage]="environmentCommon.website.appleCalendar.logo"
                            [noTextStyle]="true"
                            class="apple-calendar"></app-social-button>
-        <app-social-button style="margin-left: 30px;" (click)="calendarClicked.emit(true)"
+        <app-social-button (click)="calendarClicked.emit(true)"
                            [brand]="environmentCommon.website.googleCalendar.cssClass"
                            [flexStart]="true"
                            [localImage]="environmentCommon.website.googleCalendar.logo"
                            [noTextStyle]="true"
-                           class="google-calendar"></app-social-button>
+                           class="google-calendar"
+                           style="margin-left: 30px;"></app-social-button>
       </div>
     </div>
   </div>

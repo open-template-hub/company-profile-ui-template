@@ -11,8 +11,10 @@
             <span *ngIf="topContributor === 2">🥉</span>
           </em>
           <em *ngIf="numberOfEventsTaken !== undefined && numberOfEventsTaken > 10"
-             show-delay="500" tooltip="Curious" style="margin-right: 5px;">📚</em>
-          <em *ngIf="numberOfEventsMade != undefined && numberOfEventsMade < 5" show-delay="500" tooltip="New" style="margin-right: 5px;">👋</em>
+              show-delay="500" style="margin-right: 5px;" tooltip="Curious">📚</em>
+          <em *ngIf="numberOfEventsMade != undefined && numberOfEventsMade < 5" show-delay="500"
+              style="margin-right: 5px;"
+              tooltip="New">👋</em>
           <em *ngIf="userInfo?.isAcademical" show-delay="500" tooltip="Joined with .edu mail">🎓</em>
         </p>
       </div>
@@ -24,12 +26,12 @@
                      [icon]="'ban'" [lighterContrast]="true" [mobileView]="true" [text]="'Unfollow'"
                      [transparent]="true"></app-button1>
       </div>
-      <div class="column-first" [class.with-rate]="formattedRateNumber">
+      <div [class.with-rate]="formattedRateNumber" class="column-first">
         <div class="section-header">
           <p
               class="dim">{{( userInfo?.payload?.firstName && userInfo?.payload?.lastName ) ?
-            ( userInfo.payload.firstName + ' ' + userInfo.payload.lastName + ' (@' + userInfo.username + ')' )
-            : ( userInfo?.username ? userInfo.username : '' ) }}
+              ( userInfo.payload.firstName + ' ' + userInfo.payload.lastName + ' (@' + userInfo.username + ')' )
+              : ( userInfo?.username ? userInfo.username : '' ) }}
           <hr>
         </div>
         <div *ngIf="userInfo" class="section-output flex-layout-column">
@@ -100,12 +102,13 @@
   <!--END OF DASHBOARD CARD-->
   <!--LESSONS TAKEN CARD-->
   <app-card1 *ngIf="lessonsInfo.length > 0" [title]="'Events Taken'">
-    <div *ngIf="!loadingLessonsTaken" [ngStyle]="{'height' : lessonsInfo.length * 50 + 'px'}" body class="chart-wrapper">
+    <div *ngIf="!loadingLessonsTaken" [ngStyle]="{'height' : lessonsInfo.length * 50 + 'px'}" body
+         class="chart-wrapper">
       <br/>
       <ngx-charts-bar-horizontal
-          [gradient]="gradient"
-          [customColors]="colors"
           [animations]="false"
+          [customColors]="colors"
+          [gradient]="gradient"
           [legend]="showLegend"
           [results]="lessonsInfo"
           [showXAxisLabel]="showXAxisLabel"
@@ -118,20 +121,20 @@
 
         Less
 
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--theme-color-lighter-4)"></rect>
+        <svg class="d-inline-block" height="10" width="10">
+          <rect height="10" style="fill: var(--theme-color-lighter-4)" width="10"></rect>
         </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--theme-color-lighter-3)"></rect>
+        <svg class="d-inline-block" height="10" width="10">
+          <rect height="10" style="fill: var(--theme-color-lighter-3)" width="10"></rect>
         </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--theme-color-lighter-2)"></rect>
+        <svg class="d-inline-block" height="10" width="10">
+          <rect height="10" style="fill: var(--theme-color-lighter-2)" width="10"></rect>
         </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--theme-color-lighter-1)"></rect>
+        <svg class="d-inline-block" height="10" width="10">
+          <rect height="10" style="fill: var(--theme-color-lighter-1)" width="10"></rect>
         </svg>
-        <svg width="10" height="10" class="d-inline-block">
-          <rect width="10" height="10" style="fill: var(--theme-color)"></rect>
+        <svg class="d-inline-block" height="10" width="10">
+          <rect height="10" style="fill: var(--theme-color)" width="10"></rect>
         </svg>
 
         More
@@ -152,16 +155,16 @@
          [ngStyle]="{'height' : eventsInfo.length * 50 + 'px'}" body class="chart-wrapper">
       <br/>
       <ngx-charts-bar-horizontal
-        [gradient]="gradient"
-        [customColors]="colors"
-        [animations]="false"
-        [legend]="showLegend"
-        [results]="eventsInfo"
-        [showXAxisLabel]="showXAxisLabel"
-        [showYAxisLabel]="showYAxisLabel"
-        [xAxisLabel]="eventsXAxisLabel"
-        [xAxis]="showXAxis"
-        [yAxis]="showYAxis">
+          [animations]="false"
+          [customColors]="colors"
+          [gradient]="gradient"
+          [legend]="showLegend"
+          [results]="eventsInfo"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="eventsXAxisLabel"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis">
       </ngx-charts-bar-horizontal>
       <app-color-chart></app-color-chart>
     </div>

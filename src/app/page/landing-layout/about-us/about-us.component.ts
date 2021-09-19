@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TIME_LINE } from 'src/app/data/timeline/timeline.data';
-import { EMPLOYEES } from 'src/app/data/about-us/employees.data'
+import { EMPLOYEES } from 'src/app/data/employees/employees.data'
 
 @Component( {
   selector: 'app-about-us',

@@ -1,5 +1,5 @@
-import { CommandType } from 'src/app/enum/command-type.enum';
-import { ProductLinePresentationType } from 'src/app/enum/product-line-presentation-type';
+import { CommandType } from 'src/app/data/command-type.enum';
+import { ProductLinePresentationType } from 'src/app/data/product-line-presentation-type.enum';
 import { PricingOption } from '../pricing/pricing.model';
 
 export interface PricingFeature {

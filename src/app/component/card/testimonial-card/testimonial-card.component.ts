@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
-import { URLS } from '../../../../data/constant';
-import { Testimonial } from '../../../../model/testimonial/testimonial.model';
-import { ThemeService } from '../../../../service/theme/theme.service';
+import { URLS } from '../../../data/constant';
+import { Testimonial } from '../../../model/testimonial/testimonial.model';
+import { ThemeService } from '../../../service/theme/theme.service';
 
 @Component( {
   selector: 'app-testimonial-card',

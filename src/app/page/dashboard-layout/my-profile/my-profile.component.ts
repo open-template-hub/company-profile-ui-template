@@ -2,7 +2,7 @@ import { Component, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
-import { Rate } from '../../../component/common/rate-bar/rate-bar.component';
+import { Rate } from '../../../component/rate-bar/rate-bar.component';
 import { PROFILE_IMG, URLS } from '../../../data/constant';
 import { AuthToken } from '../../../model/auth/auth-token.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';

@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { DEFAULT_RIBBON, EVENT_RIBBONS } from 'src/app/data/ribbon/ribbon.data';
-import { URLS } from '../../../../data/constant';
-import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
+import { URLS } from '../../../data/constant';
+import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 
 @Component( {
   selector: 'app-event-card',

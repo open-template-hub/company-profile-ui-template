@@ -1,8 +1,8 @@
 import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
-import { URLS } from '../../../data/constant';
-import { ProductLine } from '../../../model/product/product.model';
-import { ThemeService } from '../../../service/theme/theme.service';
-import { UtilService } from '../../../service/util/util.service';
+import { URLS } from '../../data/constant';
+import { ProductLine } from '../../model/product/product.model';
+import { ThemeService } from '../../service/theme/theme.service';
+import { UtilService } from '../../service/util/util.service';
 
 @Component( {
   selector: 'app-dropdown-menu',

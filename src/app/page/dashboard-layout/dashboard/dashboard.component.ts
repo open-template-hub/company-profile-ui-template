@@ -3,7 +3,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../../../environments/environment';
 import { CalendarEvent } from '../../../component/calendar/calendar.component';
-import { Rate } from '../../../component/common/rate-bar/rate-bar.component';
+import { Rate } from '../../../component/rate-bar/rate-bar.component';
 import { PROFILE_IMG, URLS } from '../../../data/constant';
 import { EventTypes } from '../../../data/event/events.data';
 import { AuthToken } from '../../../model/auth/auth-token.model';

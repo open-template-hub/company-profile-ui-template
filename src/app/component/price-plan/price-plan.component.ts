@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { URLS } from '../../../data/constant';
-import { Product } from '../../../model/product/product.model';
+import { URLS } from '../../data/constant';
+import { Product } from '../../model/product/product.model';
 
 @Component({
   selector: 'app-price-plan',

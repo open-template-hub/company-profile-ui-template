@@ -906,13 +906,13 @@ export const SERVICES: ProductLine[] = [
         presentationType: ProductLinePresentationType.Image,
       },
       {
-        key: 'cloud-integration',
-        name: 'Cloud Integration',
+        key: 'software-integration',
+        name: 'Software Integration',
         description:
             'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         href:
             environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo-pieces.png',
         presentationType: ProductLinePresentationType.Image,
       },
       {
@@ -922,7 +922,7 @@ export const SERVICES: ProductLine[] = [
             'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
         href:
             environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo-shine.png',
         presentationType: ProductLinePresentationType.Image,
       },
     ],

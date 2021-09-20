@@ -1,3 +1,9 @@
+@mixin card-header-width-sm {
+  max-width: 92%;
+  min-width: 92%;
+  width: 92%;
+}
+
 @media only screen and (min-width: 1000px) {
   app-event-card {
     margin: {

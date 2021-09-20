@@ -1,23 +1,31 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
 import { Employee } from '../../../model/employee/employee.model';
 
-@Component({
+@Component( {
   selector: 'app-employee-card',
   templateUrl: './employee-card.component.html',
-  styleUrls: ['./employee-card.component.scss']
-})
-export class EmployeeCardComponent implements OnInit {
+  styleUrls: [ './employee-card.component.scss' ]
+} )
+export class EmployeeCardComponent {
 
   environment = environment;
   environmentCommon = environmentCommon;
 
-  @Input() employee: Employee;
+  @Input() employee: Employee = {
+    profile: {
+      name: '',
+      title: '',
+      photoUri: '',
+      social: {
+        linkedIn: '',
+        twitter: ''
+      }
+    }
+  };
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+    // Intentionally blank
   }
-
 }

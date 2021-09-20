@@ -6,8 +6,5 @@ export interface Employee {
     title: string;
     photoUri: string;
     social: Social;
-  };
-  style: {
-    themeColor: string;
-  };
+  }
 }

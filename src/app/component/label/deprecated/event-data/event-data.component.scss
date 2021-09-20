@@ -1,4 +1,5 @@
 @use '../../../../../styles/util/util';
+@use '../../../../../styles/card/card';
 
 .event {
   display: flex;
@@ -217,7 +218,7 @@
 @media only screen and (max-width: 999px) {
 
   .event-header {
-    @include util.card-header-width-sm;
+    @include card.card-header-width-sm;
     @include util.margin-x-auto;
   }
 }

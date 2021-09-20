@@ -1,4 +1,5 @@
 @use '../../../../../styles/util/util';
+@use '../../../../../styles/card/card';
 
 .card1 {
   border-radius: 6px;
@@ -141,7 +142,7 @@
   }
 
   .card1-header {
-    @include util.card-header-width-sm;
+    @include card.card-header-width-sm;
     @include util.margin-x-auto;
   }
 
@@ -183,7 +184,7 @@
   }
 
   .card1-small .card1-header {
-    @include util.card-header-width-sm;
+    @include card.card-header-width-sm;
     @include util.margin-x-auto;
   }
 

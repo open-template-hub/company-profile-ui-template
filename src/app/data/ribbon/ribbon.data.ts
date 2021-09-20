@@ -7,3 +7,7 @@ export const EVENT_RIBBONS = new Map<string, Ribbon>( [
   [ 'featured', { theme: 'yellow', text: 'Featured 🚀' } ],
   [ 'premium', { theme: 'green', text: 'Premium ⭐' } ],
 ] );
+
+export const PRICING_RIBBONS = new Map<string, Ribbon>( [
+  [ 'deal', { theme: 'blue', text: 'Deal' } ]
+] );

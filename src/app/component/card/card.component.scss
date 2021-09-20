@@ -1,30 +1,99 @@
-.card {
-  border-radius: 6px;
-  box-shadow: 0 3px 15px 0 var(--shadow);
-  background-color: var(--card);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-bottom: 60px;
+@use '../../../styles/util/util';
+@use '../../../styles/ribbon/ribbon';
+
+// TODO: move card related styles to here and remove the other scss file under styles/card
+@use '../../../styles/card/card';
+
+@mixin default-header {
+  // Include
+  @include util.flex-center-center;
+  @include util.flex-layout-column;
+  @include util.margin-x-auto;
+  @include util.default-shadow;
+  @include card.card-header-width-sm;
+
+  // Position
+  z-index: 10;
+
+  // Color
+  background-color: var(--color);
+
+  // Design
+  overflow: hidden;
+  padding: 15px 0;
+  margin-top: -25px;
+  border-radius: 5px;
 }
 
-.card-bottom-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
+@mixin default-body {
+  // Include
+  @include util.flex-center-center;
+  @include util.flex-layout-column;
+  @include util.margin-x-auto;
+
+  // Design
+  min-height: 200px;
 }
 
-.default-bottom-wrapper {
+@mixin default-footer {
+  @include util.flex-center-center;
+  @include util.flex-layout-column;
+  @include util.margin-x-auto;
+
+  // Design
+  width: 100%;
+  min-height: 50px;
+  border-top: 2px solid var(--darker-contrast);
+}
+
+@mixin default-bottom-wrapper {
+  // Position
   position: absolute;
+  z-index: 9;
   bottom: 0;
   left: 0;
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
+
+  // Color
   background-color: var(--darker-contrast);
+
+  // Design
+  overflow: hidden;
   width: 100%;
   height: 4px;
-  overflow: hidden;
-  z-index: 9;
+  border-bottom: {
+    left-radius: 7px;
+    right-radius: 7px;
+  }
+}
+
+.card {
+  // Include
+  @include util.flex-layout-column;
+  @include util.default-shadow;
+
+  // Position
+  position: relative;
+
+  // Color
+  background-color: var(--card);
+  color: var(--contrast);
+
+  // Design
+  border-radius: 6px;
+
+  & .header {
+    @include default-header;
+  }
+
+  & .body {
+    @include default-body;
+  }
+
+  & .footer {
+    @include default-footer;
+  }
+
+  & .bottom-wrapper {
+    @include default-bottom-wrapper;
+  }
 }

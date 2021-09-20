@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, TemplateRef } from '@angular/core';
+import { Component, Input, TemplateRef } from '@angular/core';
 import { Ribbon } from '../../model/ribbon/ribbon.model';
 
 @Component( {
@@ -6,17 +6,17 @@ import { Ribbon } from '../../model/ribbon/ribbon.model';
   templateUrl: './card.component.html',
   styleUrls: [ './card.component.scss' ]
 } )
-export class CardComponent implements OnInit {
+export class CardComponent {
   @Input() header: TemplateRef<any>;
   @Input() body: TemplateRef<any>;
   @Input() footer: TemplateRef<any>;
   @Input() bottomWrapper: TemplateRef<any>;
   @Input() ribbon: Ribbon;
+  @Input() defaultHeaderContent: string;
+  @Input() defaultBodyContent: string;
+  @Input() defaultFooterContent: string;
 
   constructor() {
+    // Intentionally blank
   }
-
-  ngOnInit(): void {
-  }
-
 }

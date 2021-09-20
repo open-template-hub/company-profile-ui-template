@@ -3,6 +3,7 @@ import { ProductLinePresentationType } from 'src/app/data/product-line-presentat
 import { environmentCommon } from '../../../environments/environment-common';
 import { ProductLine } from '../../model/product/product.model';
 import { ThemeColorSettings } from '../constant';
+import { PRICING_RIBBONS } from '../ribbon/ribbon.data';
 
 export const PRODUCT_LINES: ProductLine[] = [
   {
@@ -88,7 +89,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             title: 'BASIC',
-            ribbon: { theme: 'blue', text: 'DEAL' },
+            ribbon: PRICING_RIBBONS.get( 'deal' ),
             price: {
               currency: '$',
               value: '49',
@@ -197,7 +198,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             title: 'BASIC',
-            ribbon: { theme: 'blue', text: 'DEAL' },
+            ribbon: PRICING_RIBBONS.get( 'deal' ),
             price: {
               currency: '$',
               value: '49',
@@ -314,7 +315,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             title: 'BASIC',
-            ribbon: { theme: 'blue', text: 'DEAL' },
+            ribbon: PRICING_RIBBONS.get( 'deal' ),
             price: {
               currency: '$',
               value: '49',
@@ -431,7 +432,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             title: 'BASIC',
-            ribbon: { theme: 'blue', text: 'DEAL' },
+            ribbon: PRICING_RIBBONS.get( 'deal' ),
             price: {
               currency: '$',
               value: '49',
@@ -549,7 +550,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             title: 'BASIC',
-            ribbon: { theme: 'blue', text: 'DEAL' },
+            ribbon: PRICING_RIBBONS.get( 'deal' ),
             price: {
               currency: '$',
               value: '49',
@@ -667,7 +668,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             title: 'BASIC',
-            ribbon: { theme: 'blue', text: 'DEAL' },
+            ribbon: PRICING_RIBBONS.get( 'deal' ),
             price: {
               currency: '$',
               value: '49',

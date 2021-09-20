@@ -1,12 +1,51 @@
-.body-area .body-name {
-  font-size: 22px;
-}
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
 
-.profile-image {
-  width: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-  padding: 5px;
-  border: 2px solid var(--color);
+.employee-card {
+
+  & .header {
+    // Design
+    margin-top: -50px;
+
+    & .profile-image {
+      @include util.margin-x-auto;
+      @include util.circle;
+
+      // Color
+      background-color: var(--card);
+
+      // Design
+      border: 2px solid var(--darker-contrast);
+      width: 100px;
+      padding: 5px;
+    }
+  }
+
+  & .body {
+    @include card.default-body;
+
+    // Design
+    align-items: flex-end;
+
+    & .title {
+      // Color
+      color: var(--theme-color-lighter-1);
+
+      // Design
+      font-size: 18px;
+    }
+  }
+
+  & .footer {
+    @include card.default-footer;
+    @include util.flex-layout-row;
+
+    & i {
+      // Color
+      color: var(--theme-color-lighter-2);
+
+      // Design
+      font-size: 20px;
+    }
+  }
 }

@@ -7,6 +7,19 @@
 @media only screen and (max-width: 999px) {
   .about-us-page {
     font-size: 17px;
+
+    & .employees-wrapper {
+      @include util.flex-layout-column;
+      @include util.flex-center-center;
+
+      justify-content: space-evenly;
+
+      width: 100vw;
+
+      & > * {
+        width: 94vw;
+      }
+    }
   }
 
   .about-us-page .hero-content > * {
@@ -19,6 +32,18 @@
 @media only screen and (min-width: 1000px) {
   .about-us-page {
     font-size: 25px;
+
+    & .employees-wrapper {
+      @include util.flex-layout-row;
+
+      justify-content: space-evenly;
+
+      width: 100vw;
+
+      & > * {
+        width: 20%;
+      }
+    }
   }
 
   .about-us-page .hero {

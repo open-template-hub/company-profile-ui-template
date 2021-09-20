@@ -1,19 +1,39 @@
 <div class="card">
-  <div class="header">
-    <ng-container *ngTemplateOutlet="header ? header : defaultHeader"></ng-container>
-    <ng-template #defaultHeader>Some header...</ng-template>
-  </div>
-  <div class="body">
-    <ng-container *ngTemplateOutlet="body ? body : defaultBody"></ng-container>
-    <ng-template #defaultBody>Some body...</ng-template>
-  </div>
-  <div class="footer">
-    <ng-container *ngTemplateOutlet="footer ? footer : defaultFooter"></ng-container>
-    <ng-template #defaultFooter>Some body...</ng-template>
-  </div>
-  <ng-container *ngTemplateOutlet="bottomWrapper ? bottomWrapper: defaultBottomWrapper"></ng-container>
-  <ng-template #defaultBottomWrapper>
-    <div class="default-bottom-wrapper"></div>
+  <span *ngIf="ribbon" [attr.data-ribbon]="ribbon.text" [class]=" ribbon.theme + '-theme'" class="ribbon">
+    <!-- Ribbon of the card -->
+  </span>
+
+  <ng-container *ngTemplateOutlet="header ? header : defaultHeader">
+    <!-- Header of the card -->
+  </ng-container>
+  <ng-template #defaultHeader>
+    <div class="header">
+      {{ defaultHeaderContent }}
+    </div>
   </ng-template>
-  <span *ngIf="ribbon" [attr.data-ribbon]="ribbon.text" [class]=" ribbon.theme + '-theme'" class="ribbon"></span>
+
+  <ng-container *ngTemplateOutlet="body ? body : defaultBody">
+    <!-- Body of the card -->
+  </ng-container>
+  <ng-template #defaultBody>
+    <div class="body">
+      {{ defaultBodyContent }}
+    </div>
+  </ng-template>
+
+  <ng-container *ngTemplateOutlet="footer ? footer : defaultFooter">
+    <!-- Footer of the card -->
+  </ng-container>
+  <ng-template #defaultFooter>
+    <div class="footer">
+      {{ defaultFooterContent }}
+    </div>
+  </ng-template>
+
+  <ng-container *ngTemplateOutlet="bottomWrapper ? bottomWrapper: defaultBottomWrapper">
+    <!-- Bottom wrapper of the card -->
+  </ng-container>
+  <ng-template #defaultBottomWrapper>
+    <div class="bottom-wrapper"></div>
+  </ng-template>
 </div>

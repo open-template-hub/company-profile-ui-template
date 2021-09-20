@@ -1,37 +1,31 @@
-<app-card [header]="header" [body]="body" [footer]="footer">
+<app-card [header]="header" [body]="body" [footer]="footer" *ngIf="employee.profile" class="employee-card">
   <!-- Header -->
   <ng-template #header>
-    <img *ngIf="employee"
-         [src]="employee.profile.photoUri"
-         [style.border-color]="employee.style.themeColor"
-         alt="logo"
-         class="profile-image"
-    />
+    <div class="header">
+      <img [src]="employee.profile.photoUri" alt="profile-img" class="profile-image"
+           onerror="this.src='./assets/common/profile-img.png'"/>
+    </div>
   </ng-template>
 
   <!-- Body -->
   <ng-template #body>
-    <div class="body-area" *ngIf="employee">
-      <p class="body-name">{{ employee.profile.name }}</p>
-      <p class="body-title">{{ employee.profile.title }}</p>
+    <div class="body">
+      <p class="name">{{ employee.profile.name }}</p>
+      <small class="title">{{ '- ' + employee.profile.title }}</small>
     </div>
   </ng-template>
 
   <!-- Footer -->
   <ng-template #footer>
-    <div class="footer-social" *ngIf="employee">
+    <div class="footer">
       <app-ext-link [href]="employee.profile.social.twitter">
-        <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'"
-           [style.color]="employee.style.themeColor"
-           aria-hidden="true"
-           body>
+        <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-fw'"
+           aria-hidden="true" body>
         </i>
       </app-ext-link>
       <app-ext-link [href]="employee.profile.social.linkedIn">
-        <i [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'"
-           [style.color]="employee.style.themeColor"
-           aria-hidden="true"
-           body>
+        <i [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-fw'"
+           aria-hidden="true" body>
         </i>
       </app-ext-link>
     </div>

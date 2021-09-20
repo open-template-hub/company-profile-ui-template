@@ -33,12 +33,12 @@
         width: 94vw;
       }
     }
-  }
 
-  .about-us-page .hero-content > * {
-    @include util.flex-layout-column;
-    @include util.card-width-sm;
-    margin-bottom: 50px;
+    & .hero-content > * {
+      @include util.flex-layout-column;
+      @include util.card-width-sm;
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -62,19 +62,19 @@
         }
       }
     }
-  }
 
-  .about-us-page .hero {
-    padding-bottom: 50px;
-  }
+    & .hero {
+      padding-bottom: 50px;
+    }
 
-  .about-us-page .hero-content {
-    flex-direction: column;
-    max-width: 50vw;
-  }
+    & .hero-content {
+      flex-direction: column;
+      max-width: 50vw;
 
-  .about-us-page .hero-content > * {
-    flex-direction: column;
-    margin-bottom: 75px;
+      & > * {
+        flex-direction: column;
+        margin-bottom: 75px;
+      }
+    }
   }
 }

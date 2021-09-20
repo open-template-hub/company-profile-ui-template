@@ -1,31 +1,18 @@
+@use '../../../../styles/util/util';
+
 .pricing-page {
   position: relative;
+
+  & .pricing-wrapper {
+    & > * {
+      margin-top: 70px;
+    }
+  }
 }
 
 .in-page-title h2 {
   letter-spacing: 0.1em;
   margin-bottom: 0.6em;
-}
-
-.offer-area {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-app-pricing-card {
-  width: 33%;
-}
-
-@media only screen and (min-width: 1000px) {
-  .pricing-page {
-    display: block;
-    padding-top: 110px;
-    min-height: 100vh;
-  }
 }
 
 @media only screen and (max-width: 999px) {
@@ -35,11 +22,62 @@ app-pricing-card {
     justify-content: center;
     align-items: center;
     padding-top: 85px;
+
+    & .pricing-wrapper {
+      @include util.flex-layout-column;
+      @include util.flex-center-center;
+
+      justify-content: space-evenly;
+
+      width: 100vw;
+
+      & > * {
+        width: 94vw;
+      }
+    }
   }
 
   .pricing-page app-pricing-card {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .pricing-page {
+    display: block;
+    padding-top: 110px;
+    min-height: 100vh;
+
+    & .pricing-wrapper {
+      @include util.flex-layout-row;
+
+      justify-content: center;
+      flex-wrap: wrap;
+
+      width: 100%;
+
+      & > * {
+        width: 300px;
+        margin: {
+          left: 70px;
+          right: 70px;
+        }
+
+        &:hover {
+          transform: scale(1.02);
+          transition: transform .5s;
+        }
+      }
+
+      & .bigger-card {
+        transform: scale(1.15);
+
+        &:hover {
+          transform: scale(1.18);
+        }
+      }
+    }
   }
 }

@@ -1,74 +1,90 @@
-.content-wrapper {
-  text-align: center;
-  font-size: 0.8em;
-}
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
 
-.price-area {
-  display: flex;
-  justify-content: center;
-  margin-top: 2em;
-}
+.pricing-card {
 
-.price-area .currency {
-  font-size: 1.2em;
-  font-weight: lighter;
-  margin-top: 0.4em;
-}
+  font-size: 0.85rem;
 
-.price-area .subscription-time {
-  margin-top: 2.5em;
-}
+  & .header {
+    // Design
+    padding-top: 20px;
 
-.price-area .currency, .price-area .subscription-time {
-  color: var(--lighter-contrast)
-}
+    & h4 {
+      letter-spacing: 0.6em;
 
-.price-area .price-value {
-  font-size: 4em;
-  letter-spacing: 0.1em;
-}
+      // Design
+      text-align: center;
+    }
 
-.subscription-header {
-  margin-top: 1em;
-  letter-spacing: 0.6em;
-}
+    & .price-area {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
 
-hr {
-  color: var(--lighter-contrast);
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
-}
+      & .currency {
+        font: {
+          size: 1.2em;
+          weight: lighter;
+        }
 
-.content-wrapper .subscription-features {
-  text-align: left;
-}
+        margin-top: 0.4em;
+      }
 
-.subscription-features {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 12em;
-}
+      & .subscription-time {
+        margin-top: 2.5em;
+      }
 
-.subscription-features p {
-  display: flex;
-  align-items: center;
-  padding-left: 3em;
-}
+      & .currency, & .subscription-time {
+        color: var(--lighter-contrast)
+      }
 
-.subscription-features p span {
-  padding-left: 1em;
-}
+      & .price-value {
+        font-size: 4em;
+        letter-spacing: 0.1em;
+      }
+    }
 
-app-button1 {
-  cursor: pointer;
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: -webkit-fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 2em;
+    & hr {
+      @include util.margin-x-auto;
+
+      color: var(--lighter-contrast);
+      width: 70%;
+
+      margin-top: 2em;
+    }
+  }
+
+  & .body {
+    @include card.default-body;
+
+    // Design
+    min-height: 100px;
+    margin-bottom: 80px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    & p {
+      @include util.flex-layout-row;
+
+      align-items: center;
+
+      & span {
+        padding-left: 1em;
+      }
+    }
+  }
+
+  & .footer {
+    @include card.default-footer;
+
+    border-top: 0;
+    padding-bottom: 30px;
+
+    & app-button1 {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      right: auto;
+    }
+  }
 }

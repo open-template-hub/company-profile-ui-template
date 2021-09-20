@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { URLS } from '../../../data/constant';
 import { PRODUCT_LINES } from '../../../data/product/product.data';
+import { PRICING_RIBBONS } from '../../../data/ribbon/ribbon.data';
 import { Product, ProductLine } from '../../../model/product/product.model';
 
 @Component( {
@@ -11,6 +12,8 @@ import { Product, ProductLine } from '../../../model/product/product.model';
 } )
 export class PricingComponent {
   product: Product;
+
+  PRICING_RIBBONS = PRICING_RIBBONS;
 
   constructor(
       private route: ActivatedRoute,

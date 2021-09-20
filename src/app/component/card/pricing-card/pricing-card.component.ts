@@ -11,10 +11,9 @@ import { PricingOption } from '../../../model/pricing/pricing.model';
 } )
 export class PricingCardComponent {
 
-  DEFAULT_RIBBON = DEFAULT_RIBBON;
   URLS = URLS;
 
-  @Input() option: PricingOption = {
+  @Input() pricingOption: PricingOption = {
     title: '',
     ribbon: DEFAULT_RIBBON,
     price: {

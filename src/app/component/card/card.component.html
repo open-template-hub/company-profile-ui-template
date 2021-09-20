@@ -3,7 +3,7 @@
     <!-- Ribbon of the card -->
   </span>
 
-  <ng-container *ngTemplateOutlet="header ? header : defaultHeader">
+  <ng-container *ngTemplateOutlet="header || defaultHeader">
     <!-- Header of the card -->
   </ng-container>
   <ng-template #defaultHeader>
@@ -12,7 +12,7 @@
     </div>
   </ng-template>
 
-  <ng-container *ngTemplateOutlet="body ? body : defaultBody">
+  <ng-container *ngTemplateOutlet="body || defaultBody">
     <!-- Body of the card -->
   </ng-container>
   <ng-template #defaultBody>
@@ -21,7 +21,7 @@
     </div>
   </ng-template>
 
-  <ng-container *ngTemplateOutlet="footer ? footer : defaultFooter">
+  <ng-container *ngTemplateOutlet="footer || defaultFooter">
     <!-- Footer of the card -->
   </ng-container>
   <ng-template #defaultFooter>
@@ -30,7 +30,7 @@
     </div>
   </ng-template>
 
-  <ng-container *ngTemplateOutlet="bottomWrapper ? bottomWrapper: defaultBottomWrapper">
+  <ng-container *ngTemplateOutlet="bottomWrapper || defaultBottomWrapper">
     <!-- Bottom wrapper of the card -->
   </ng-container>
   <ng-template #defaultBottomWrapper>

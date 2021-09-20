@@ -20,7 +20,9 @@ export class EmployeeCardComponent {
       photoUri: '',
       social: {
         linkedIn: '',
-        twitter: ''
+        twitter: '',
+        github: '',
+        mail: ''
       }
     }
   };

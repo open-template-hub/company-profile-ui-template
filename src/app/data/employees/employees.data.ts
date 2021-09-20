@@ -10,6 +10,8 @@ export const EMPLOYEES: Employee[] = [
       social: {
         linkedIn: 'https://www.linkedin.com/in/furkanyavuz',
         twitter: 'https://twitter.com/furknyavuz',
+        github: 'https://github.com/furknyavuz',
+        mail: 'mailto:info@opentemplatehub.com'
       },
     }
   },
@@ -22,6 +24,8 @@ export const EMPLOYEES: Employee[] = [
       social: {
         linkedIn: 'https://www.linkedin.com/in/fatihtrker',
         twitter: 'https://twitter.com/remoklify',
+        github: 'https://github.com/fatihturker',
+        mail: 'mailto:info@opentemplatehub.com'
       },
     }
   },
@@ -34,6 +38,22 @@ export const EMPLOYEES: Employee[] = [
       social: {
         linkedIn: 'https://www.linkedin.com/in/mertlsarac',
         twitter: 'https://twitter.com/mertlsarac',
+        github: 'https://github.com/mertlsarac',
+        mail: 'mailto:info@opentemplatehub.com'
+      },
+    }
+  },
+  {
+    profile: {
+      name: '???',
+      title: 'Join our team',
+      photoUri:
+          '',
+      social: {
+        linkedIn: 'https://www.linkedin.com/company/open-template-hub',
+        twitter: 'https://twitter.com/opentemplatehub',
+        github: 'https://github.com/open-template-hub',
+        mail: 'mailto:info@opentemplatehub.com'
       },
     }
   }

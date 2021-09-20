@@ -4,6 +4,22 @@
   padding-bottom: 20vh;
 }
 
+.about-us-page {
+  font-size: 17px;
+
+  & .employees-wrapper {
+    & > * {
+      margin-top: 100px;
+    }
+
+    & hr {
+      margin: 0;
+      flex-basis: 100%;
+      visibility: hidden;
+    }
+  }
+}
+
 @media only screen and (max-width: 999px) {
   .about-us-page {
     font-size: 17px;
@@ -36,12 +52,17 @@
     & .employees-wrapper {
       @include util.flex-layout-row;
 
-      justify-content: space-evenly;
+      justify-content: center;
+      flex-wrap: wrap;
 
-      width: 100vw;
+      width: 100%;
 
       & > * {
-        width: 20%;
+        width: 300px;
+        margin: {
+          left: 40px;
+          right: 50px;
+        }
       }
     }
   }

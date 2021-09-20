@@ -4,7 +4,10 @@
       <h1>Team Behind the Open Template Hub</h1>
     </div>
     <div class="employees-wrapper">
-      <app-employee-card *ngFor="let employee of EMPLOYEES" [employee]="employee"></app-employee-card>
+      <ng-container *ngFor="let employee of EMPLOYEES; last as isLast">
+        <hr *ngIf="isLast"/>
+        <app-employee-card [employee]="employee"></app-employee-card>
+      </ng-container>
     </div>
   </div>
   <div class="hero">

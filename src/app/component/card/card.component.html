@@ -7,7 +7,7 @@
     <!-- Header of the card -->
   </ng-container>
   <ng-template #defaultHeader>
-    <div class="header">
+    <div class="header" *ngIf="defaultHeaderContent">
       {{ defaultHeaderContent }}
     </div>
   </ng-template>
@@ -16,7 +16,7 @@
     <!-- Body of the card -->
   </ng-container>
   <ng-template #defaultBody>
-    <div class="body">
+    <div class="body" *ngIf="defaultBodyContent">
       {{ defaultBodyContent }}
     </div>
   </ng-template>
@@ -25,7 +25,7 @@
     <!-- Footer of the card -->
   </ng-container>
   <ng-template #defaultFooter>
-    <div class="footer">
+    <div class="footer" *ngIf="defaultFooterContent">
       {{ defaultFooterContent }}
     </div>
   </ng-template>

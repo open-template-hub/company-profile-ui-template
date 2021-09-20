@@ -1,8 +1,11 @@
 @use '../../../styles/util/util';
 @use '../../../styles/ribbon/ribbon';
 
-// TODO: move card related styles to here and remove the other scss file under styles/card
-@use '../../../styles/card/card';
+@mixin card-header-width-sm {
+  max-width: 92%;
+  min-width: 92%;
+  width: 92%;
+}
 
 @mixin default-header {
   // Include
@@ -10,7 +13,7 @@
   @include util.flex-layout-column;
   @include util.margin-x-auto;
   @include util.default-shadow;
-  @include card.card-header-width-sm;
+  @include card-header-width-sm;
 
   // Position
   z-index: 10;

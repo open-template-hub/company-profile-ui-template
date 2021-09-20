@@ -1,11 +1,14 @@
 <div class="pricing-page">
-  <div *ngIf="product" class="in-page-title">
-    <h2 class="page-header">{{ product.name }}</h2>
-    <h2 class="page-header">PRICING</h2>
-    <p class="page-description">No hidden fees. Cancel at any time.</p>
-  </div>
-  <div *ngIf="product?.pricingOptions" class="pricing-wrapper">
-    <app-pricing-card *ngFor="let pricing of product.pricingOptions" [pricingOption]="pricing" [class.bigger-card]="pricing.ribbon === PRICING_RIBBONS.get('deal')">
-    </app-pricing-card>
+  <div class="hero">
+    <div class="hero-content">
+      <h1 class="page-header">{{ product.name }}</h1>
+      <h3 class="page-description">No hidden fees. Cancel at any time.</h3>
+    </div>
+    <div *ngIf="product?.pricingOptions" class="pricing-wrapper">
+      <ng-container *ngFor="let pricing of product.pricingOptions">
+        <app-pricing-card [pricingOption]="pricing"
+                          [class.bigger-card]="pricing.ribbon === PRICING_RIBBONS.get('deal')"></app-pricing-card>
+      </ng-container>
+    </div>
   </div>
 </div>

@@ -1,27 +1,20 @@
 @use '../../../../styles/util/util';
 
 .pricing-page {
-  position: relative;
+  padding-bottom: 20vh;
+  font-size: 17px;
 
   & .pricing-wrapper {
+
     & > * {
-      margin-top: 70px;
+      margin-top: 50px;
     }
   }
 }
 
-.in-page-title h2 {
-  letter-spacing: 0.1em;
-  margin-bottom: 0.6em;
-}
-
 @media only screen and (max-width: 999px) {
   .pricing-page {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 85px;
+    font-size: 17px;
 
     & .pricing-wrapper {
       @include util.flex-layout-column;
@@ -30,25 +23,30 @@
       justify-content: space-evenly;
 
       width: 100vw;
+      margin-top: 0;
 
       & > * {
         width: 94vw;
       }
     }
+
+    & .hero-content > * {
+      @include util.flex-layout-column;
+      @include util.card-width-sm;
+      margin-bottom: 50px;
+    }
   }
 
-  .pricing-page app-pricing-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .pricing-page .hero-content > * {
+    @include util.flex-layout-column;
+    @include util.card-width-sm;
+    margin-bottom: 50px;
   }
 }
 
 @media only screen and (min-width: 1000px) {
   .pricing-page {
-    display: block;
-    padding-top: 110px;
-    min-height: 100vh;
+    font-size: 25px;
 
     & .pricing-wrapper {
       @include util.flex-layout-row;
@@ -57,6 +55,7 @@
       flex-wrap: wrap;
 
       width: 100%;
+      margin-top: 70px;
 
       & > * {
         width: 300px;
@@ -77,6 +76,19 @@
         &:hover {
           transform: scale(1.18);
         }
+      }
+    }
+
+    & .hero {
+      padding-bottom: 50px;
+    }
+
+    & .hero-content {
+      flex-direction: column;
+      max-width: 50vw;
+
+      & > * {
+        flex-direction: column;
       }
     }
   }

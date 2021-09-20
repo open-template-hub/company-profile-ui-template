@@ -32,7 +32,7 @@ export const EMPLOYEES: Employee[] = [
   {
     profile: {
       name: 'Mert Sarac',
-      title: 'Developer',
+      title: 'Full-Stack Developer',
       photoUri:
           'https://avatars1.githubusercontent.com/u/38442589?s=400&u=aa3cda11724fc297a0bfa6beb35c9be81687cf3c&v=4',
       social: {

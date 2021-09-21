@@ -1,0 +1,64 @@
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
+
+.policy-content a {
+  color: var(--theme-color);
+}
+
+.policy-card {
+
+  & .footer {
+    @include card.default-footer;
+    @include card.default-footer-border-color;
+    @include util.flex-layout-row;
+
+    justify-content: flex-end;
+
+    & img {
+      height: 35px;
+      margin-right: 10px;
+    }
+
+    & small {
+      color: var(--lighter-contrast);
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+
+  .policy-card {
+
+    & .body {
+      padding: 30px 20px 20px;
+      font-size: 16px;
+    }
+
+    & .footer {
+      padding: 15px 20px;
+    }
+  }
+
+  .policy-content h5, .policy-content p {
+    padding-bottom: 12px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .policy-card {
+
+    & .body {
+      padding: 50px 50px 20px;
+      font-size: 18px;
+    }
+
+    & .footer {
+      padding: 20px 30px;
+    }
+  }
+
+  .policy-content h5, .policy-content p {
+    padding-bottom: 20px;
+  }
+}

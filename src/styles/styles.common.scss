@@ -102,6 +102,10 @@ a.theme-color-link {
   font-weight: normal;
 }
 
+.copyright {
+  vertical-align: text-top;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     &::-webkit-scrollbar-track:vertical {
@@ -111,5 +115,17 @@ a.theme-color-link {
     &::-webkit-scrollbar-thumb:vertical {
       background: var(--contrast);
     }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .copyright {
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .copyright {
+    font-size: 0.8rem;
   }
 }

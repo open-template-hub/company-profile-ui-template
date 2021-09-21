@@ -11,10 +11,12 @@ export class CardComponent {
   @Input() body: TemplateRef<any>;
   @Input() footer: TemplateRef<any>;
   @Input() bottomWrapper: TemplateRef<any>;
-  @Input() ribbon: Ribbon;
+
   @Input() defaultHeaderContent: string;
   @Input() defaultBodyContent: string;
   @Input() defaultFooterContent: string;
+
+  @Input() ribbon: Ribbon;
 
   constructor() {
     // Intentionally blank

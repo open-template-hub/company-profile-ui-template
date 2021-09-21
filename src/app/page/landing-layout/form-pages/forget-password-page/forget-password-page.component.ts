@@ -39,11 +39,6 @@ export class ForgetPasswordPageComponent implements OnInit, OnDestroy {
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
   }
 
-  // convenience getter for easy access to form fields
-  get f() {
-    return this.forgetPasswordForm.controls;
-  }
-
   ngOnInit() {
     this.forgetPasswordForm = this.formBuilder.group( {
       username: [ '', Validators.required ]
@@ -61,12 +56,12 @@ export class ForgetPasswordPageComponent implements OnInit, OnDestroy {
 
     this.submitted = true;
 
-    if ( this.f.username.invalid ) {
+    if ( this.forgetPasswordForm.controls.username.invalid ) {
       this.toastService.error( 'Please provide a valid username.', '' );
       return;
     }
 
-    this.authenticationService.forgetPassword( this.f.username.value )
+    this.authenticationService.forgetPassword( this.forgetPasswordForm.controls.username.value )
     .pipe( first() )
     .subscribe(
         () => {

@@ -1,4 +1,4 @@
-import { ContactUsFeatures } from '../../page/landing-layout/contact-us/contact-us.component';
+import { ContactUsFeatures } from '../../page/landing-layout/contact-us-page/contact-us-page.component';
 
 export const SIZE_OPTIONS = [ '1-99', '100-999', '1000-4999', '5000+' ];
 

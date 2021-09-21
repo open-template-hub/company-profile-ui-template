@@ -47,6 +47,7 @@
 
   & .footer {
     @include card.default-footer;
+    @include card.default-footer-border-color;
     @include util.flex-layout-row;
 
     & i {

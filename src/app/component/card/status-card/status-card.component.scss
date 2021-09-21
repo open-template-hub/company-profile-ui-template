@@ -1,0 +1,86 @@
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
+
+.status-card {
+
+  & .body {
+
+    margin: 0 40px;
+
+    // Design
+    min-height: 120px;
+
+    & .status-section {
+      @include util.flex-layout-row;
+
+      margin: 12px 0;
+
+      & .status-column {
+        @include util.flex-layout-row;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 25%;
+
+        & i {
+          margin-left: 4px;
+        }
+
+        &:first-child {
+          width: 50%;
+        }
+      }
+
+      &.solo h4 {
+        font-weight: 500;
+        margin: 30px 0 20px;
+      }
+    }
+  }
+
+  & .footer {
+    @include card.default-footer;
+    @include util.flex-layout-row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--lighter);
+
+    & small {
+
+      width: 25%;
+      text-align: left;
+
+      &:first-child {
+        width: 75%;
+        margin-left: 40px;
+      }
+
+      &:last-child {
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .status-page {
+    font-size: 17px;
+
+    & .hero > * {
+      width: 94vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .status-card {
+    font-size: 19px;
+
+    & .body {
+      width: 700px;
+    }
+  }
+}

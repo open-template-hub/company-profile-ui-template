@@ -77,7 +77,7 @@
   & .footer {
     @include card.default-footer;
 
-    border-top: 0;
+    border: 0;
     padding-bottom: 30px;
 
     & app-button1 {

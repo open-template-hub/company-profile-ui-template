@@ -1,0 +1,87 @@
+<app-card [body]="body" [footer]="footer" *ngIf="overallSystemStatus.systemStatuses" class="status-card">
+
+  <!-- Body -->
+  <ng-template #body>
+    <div class="body">
+      <ng-container *ngFor="let systemStatus of overallSystemStatus.systemStatuses">
+        <div class="status-section solo">
+          <div class="status-column">
+            <h4>{{ systemStatus.name | titlecase }}
+            </h4>
+          </div>
+          <div class="status-column">
+            <h4>:
+            </h4>
+          </div>
+          <div class="status-column">
+            <h4 [class.error-text]="systemStatus.overall === 'DOWN'"
+                [class.success-text]="systemStatus.overall === 'UP'">
+              {{ systemStatus.overall + ' ' | titlecase }}<i [class]="'fas fa-fw'" aria-hidden="true"
+                                                             [class.fa-exclamation-triangle]="systemStatus.overall === 'DOWN'"
+                                                             [class.fa-check]="systemStatus.overall === 'UP'"></i>
+            </h4>
+          </div>
+        </div>
+        <div *ngFor="let status of systemStatus.statuses" class="status-section">
+          <div class="status-column">
+            <h4>{{ status.name | titlecase}}
+            </h4>
+          </div>
+          <div class="status-column">
+            <h4>:
+            </h4>
+          </div>
+          <div class="status-column">
+            <h4 [class.error-text]="status.alive === 'DOWN'"
+                [class.success-text]="status.alive === 'UP'">
+              {{ status.alive + ' ' | titlecase }}<i [class]="'fas fa-fw'" aria-hidden="true"
+                                                     [class.fa-exclamation-triangle]="status.alive === 'DOWN'"
+                                                     [class.fa-check]="status.alive === 'UP'"></i>
+            </h4>
+          </div>
+        </div>
+      </ng-container>
+
+      <div class="status-section solo" *ngIf="overallSystemStatus.overall">
+        <div class="status-column">
+          <h4>Overall Status
+          </h4>
+        </div>
+        <div class="status-column">
+          <h4>:
+          </h4>
+        </div>
+        <div class="status-column">
+          <h4 [class.error-text]="overallSystemStatus.overall === 'DOWN'"
+              [class.success-text]="overallSystemStatus.overall === 'UP'">
+            {{ overallSystemStatus.overall + ' ' | titlecase }}<i [class]="'fas fa-fw'" aria-hidden="true"
+                                                                  [class.fa-exclamation-triangle]="overallSystemStatus.overall === 'DOWN'"
+                                                                  [class.fa-check]="overallSystemStatus.overall === 'UP'"></i>
+          </h4>
+        </div>
+      </div>
+      <div class="status-section">
+        <div class="status-column">
+        </div>
+        <div class="status-column">
+        </div>
+        <div class="status-column">
+        </div>
+      </div>
+      <div class="status-section">
+        <div class="status-column full-line">
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- Footer -->
+  <ng-template #footer>
+    <div class="footer"
+         [class.success-border]="overallSystemStatus.overall === 'UP'"
+         [class.error-border]="overallSystemStatus.overall === 'DOWN'">
+      <small>{{ overallSystemStatus.checkDate ? 'Last check ' + ( overallSystemStatus.checkDate | date: 'dd MMM, HH:mm:ss' ) : '' }}</small>
+      <small *ngIf="overallSystemStatus.overall === 'UP'">All systems are online</small>
+    </div>
+  </ng-template>
+</app-card>

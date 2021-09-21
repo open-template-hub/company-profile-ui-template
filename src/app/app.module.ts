@@ -86,6 +86,7 @@ import { StatusPageComponent } from './page/landing-layout/status-page/status-pa
 import { ProductPresentationComponent } from './page/landing-layout/product-page/product-represantation/product-presentation.component';
 import { CardComponent } from './component/card/card.component';
 import { EmployeeCardComponent } from './component/card/employee-card/employee-card.component';
+import { StatusCardComponent } from './component/card/status-card/status-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -159,7 +160,8 @@ FullCalendarModule.registerPlugins( [
     ProductPresentationComponent,
     CardComponent,
     EmployeeCardComponent,
-    ProductPresentationComponent
+    ProductPresentationComponent,
+    StatusCardComponent
   ],
   imports: [
     BrowserModule,

@@ -14,8 +14,6 @@ export class StatusPageComponent {
     checkDate: undefined
   };
 
-  Object = Object;
-
   constructor( private monitoringService: MonitoringService ) {
     this.monitoringService.alive();
 

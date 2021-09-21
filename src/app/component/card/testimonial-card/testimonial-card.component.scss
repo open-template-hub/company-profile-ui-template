@@ -1,95 +1,108 @@
-.content-wrapper {
-  text-align: center;
-  font-size: 0.5em;
-}
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
 
-.review-area {
-  color: var(--lighter-contrast);
-  padding: 25px;
-  max-height: 7em;
-}
+.testimonial-card {
 
-.icon-wrapper {
-  text-align: left;
-  padding: 1em 1em 0.1em;
-}
+  & .header {
+    text-align: left;
+    padding: 1em 1em 0.1em;
 
-.icon-wrapper i {
-  color: var(--theme-color);
-}
+    & i {
+      color: var(--theme-color);
+    }
+  }
 
-.footer-social {
-  display: flex;
-  justify-content: center;
-  font-size: 0.5em;
-  margin-top: 1em;
-  margin-right: 14em;
-}
+  & .body {
+    @include card.default-body;
 
-.footer-social a {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-}
+    align-items: flex-end;
+    justify-content: flex-start;
 
-.footer-social i {
-  color: var(--theme-color);
-}
+    // Design
+    min-height: 250px;
+    padding: 25px;
+    text-align: center;
 
-.reviewer {
-  bottom: 2em;
-  right: 0.1em;
-  position: absolute;
-}
+    & .review {
+      @include util.flex-layout-column;
 
-.reviewer-name {
-  font-weight: 700;
-  margin-top: 2em;
-  font-size: 15px;
-  max-width: 12em;
-  text-align: left;
-}
+      justify-content: flex-start;
 
-.reviewer-title {
-  font-weight: 500;
-  margin-top: 0.2em;
-  font-size: 13px;
-  max-width: 12em;
-  text-align: left;
-}
+      & p {
+        color: var(--lighter-contrast);
+      }
+    }
 
-.profile-image {
-  height: 4em;
-  width: 4em;
-  margin-top: 4em;
-  margin-right: 5em;
-  border-bottom: 0.1em solid;
-  border-radius: 12em;
-}
+    & .reviewer {
+      @include util.flex-layout-column;
 
-.profile-image img {
-  width: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-  padding: 5px;
-  border: 2px solid var(--color);
-}
+      position: relative;
 
-.profile-image span {
-  margin-top: 1.5em;
+      align-items: flex-start;
+
+      width: 100%;
+
+      z-index: 1;
+
+      & > * {
+        margin-left: 20%;
+      }
+
+      & svg {
+        position: absolute;
+        top: 50px;
+        left: -60px;
+        z-index: 1;
+      }
+
+      & img {
+        @include util.circle;
+
+        height: 100px;
+        margin-top: 50px;
+        border-bottom: 0.1em solid;
+        z-index: 2;
+      }
+
+      & .social {
+        @include util.flex-layout-row;
+        @include util.flex-center-center;
+
+        font-size: 0.7rem;
+        margin-top: 7px;
+        z-index: 2;
+      }
+    }
+
+    & .reviewer-info {
+      @include util.flex-layout-column;
+      @include util.flex-center-center;
+
+      align-items: flex-start;
+
+      z-index: 2;
+
+      padding-top: 50px;
+
+      max-width: 70%;
+
+      text-align: left;
+
+      & > * {
+        color: var(--lighter);
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 999px) {
-  .content-wrapper {
-    font-size: 0.6em;
-  }
+}
 
-  .profile-image {
-    margin-top: 1em;
-    margin-right: 7em;
-  }
+@media only screen and (min-width: 1000px) {
+  .testimonial-card {
 
-  .review-area {
-    max-height: 3em;
+    & .body {
+      width: 260px;
+    }
   }
 }

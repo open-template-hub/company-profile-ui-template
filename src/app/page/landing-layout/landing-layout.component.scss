@@ -1,3 +1,4 @@
+@use '../../../styles/util/util';
 @use '../../../styles/page/page';
 
 .header {
@@ -17,16 +18,18 @@
   color: var(--theme-color);
 }
 
-.landing-form-page {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.form-page {
+  & app-card {
+    & .body {
+      box-sizing: border-box;
+      padding: 25px;
+      font-size: 17px;
 
-.landing-form-page app-social-button {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+      & app-social-button {
+        margin: 8px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 999px) {
@@ -37,18 +40,23 @@
 
   .policy-content {
     padding: 18px;
+    font-size: 17px;
   }
 
   .policy-content h5, .policy-content p {
     padding-bottom: 12px;
   }
 
-  .landing-raw-content-page {
-    padding: 60px 3vw;
+  .raw-content-page {
+    padding: 0 3vw 50px;
   }
 
-  .landing-form-page {
-    padding-top: 10vh;
+  .form-page {
+    & app-card {
+      & .body {
+        width: 94vw;
+      }
+    }
   }
 }
 
@@ -60,17 +68,22 @@
 
   .policy-content {
     padding: 60px;
+    font-size: 18px;
   }
 
   .policy-content h5, .policy-content p {
     padding-bottom: 20px;
   }
 
-  .landing-raw-content-page {
-    padding: 80px 90px 0;
+  .raw-content-page {
+    padding: 0 90px 50px;
   }
 
-  .landing-form-page {
-    padding-top: 165px;
+  .form-page {
+    & app-card {
+      & .body {
+        width: 400px;
+      }
+    }
   }
 }

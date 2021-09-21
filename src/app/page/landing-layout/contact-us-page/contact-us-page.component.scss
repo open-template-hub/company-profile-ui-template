@@ -22,19 +22,15 @@
   }
 }
 
-.contact-us-page {
-  text-align: center;
-}
-
 .contact-us-page-content {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   min-height: -webkit-fit-content;
-  margin-top: 80px;
 
   & > * {
     margin: 0 15px;
+    text-align: center;
   }
 }
 
@@ -165,10 +161,6 @@ textarea, input, select {
 }
 
 @media only screen and (max-width: 999px) {
-  .contact-us-page {
-    font-size: 17px;
-  }
-
   .contact-us-page-content {
     flex-direction: column;
   }
@@ -182,6 +174,10 @@ textarea, input, select {
 
       & h4 {
         text-align: center;
+      }
+
+      & i {
+        margin-top: 20px;
       }
     }
   }
@@ -226,15 +222,11 @@ textarea, input, select {
 }
 
 @media only screen and (min-width: 1000px) {
-  .contact-us-page {
-    font-size: 25px;
-  }
-
   .contact-us-page-content, .footer {
     font-size: 19px;
   }
 
-  .contact-us-page app-card1 {
+  app-card1 {
     min-width: 600px;
   }
 

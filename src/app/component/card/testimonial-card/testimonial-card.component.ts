@@ -20,7 +20,7 @@ export class TestimonialCardComponent {
     brandLogo: '',
   };
 
-  @Input() option: Testimonial = {
+  @Input() testimonial: Testimonial = {
     review:
         '',
     reviewer: {

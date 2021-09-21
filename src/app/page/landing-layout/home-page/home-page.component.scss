@@ -1,266 +1,154 @@
-.home-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+@use '../../../../styles/page/page';
+@use '../../../../styles/util/util';
 
-.features {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
+.hero {
+  & .hero-content.home-design {
+    @include util.flex-center-center;
 
-.feature {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  justify-content: flex-start;
-}
+    max-width: 100vw;
+    width: 100%;
 
-.feature-wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.feature-img-wrapper {
-  padding-left: 2vw;
-  padding-right: 2vw;
-}
-
-.product-line-header,
-.features .feature {
-  padding-left: 7vw;
-  padding-right: 7vw;
-}
-
-.product-line-header h4 {
-  font-weight: normal;
-  color: var(--theme-color);
-}
-
-.feature img {
-  max-width: 100%;
-  min-width: 40%;
-  height: auto;
-}
-
-.feature-left .feature {
-  background-color: var(--background-color);
-}
-
-.feature-right .feature {
-  background-color: var(--theme-color-lighter-5);
-}
-
-.feature-notes {
-  display: flex;
-  flex-direction: column;
-}
-
-.register-wrapper {
-  margin-top: 20px;
-}
-
-.register-wrapper a {
-  border-radius: 3px;
-  padding: 10px 17px;
-  display: inline-flex;
-  align-items: center;
-  color: var(--theme-color);
-  border: 1px solid var(--theme-color);
-}
-
-.register-wrapper a i {
-  margin-right: 0.5em;
+    & .hero-content-left, & .hero-content-right {
+      @include util.flex-layout-column;
+      @include util.flex-center-center;
+    }
+  }
 }
 
 .counters {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
+  @include util.flex-layout-row;
+  @include util.flex-center-center;
+  @include util.margin-x-auto;
+
+  & .counter-wrapper {
+    @include util.flex-layout-column;
+    @include util.flex-center-center;
+
+    text-align: center;
+    width: 100%;
+
+    & .counter {
+      color: var(--theme-color);
+      font-weight: 400;
+    }
+
+    & h6 {
+      width: auto;
+      margin: 5px 30px 0;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--theme-color-lighter-2);
+    }
+  }
 }
 
-.counter-wrapper {
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.testimonials-wrapper {
+  @include util.flex-layout-row;
+
   align-items: center;
-}
-
-.counter {
-  color: var(--theme-color);
-  font-weight: 400;
-}
-
-.counter-wrapper h6 {
-  width: auto;
-  margin: 5px 30px 0;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--theme-color-lighter-2);
-}
-
-.home-page .hero-content {
-  display: flex;
-}
-
-.hero-content-left {
   justify-content: space-evenly;
-}
 
-.card-area {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
+  box-sizing: border-box;
+
   flex-wrap: wrap;
-}
 
-app-swiper-wrapper {
-  height: 200px;
-  width: 75%;
+  width: 100%;
+
+  padding-bottom: 120px;
+
+  & > * {
+    margin-top: 50px;
+  }
 }
 
 @media only screen and (max-width: 999px) {
-  .home-page {
-    font-size: 23px;
-  }
+  .hero {
+    font-size: 28px;
 
-  .feature {
-    flex-direction: column;
-    padding-bottom: 30px;
-  }
+    & .hero-content.home-design {
 
-  .feature img {
-    max-width: 360px;
-    max-height: 270px;
-    padding-bottom: 15px;
-  }
+      & .hero-content-left {
+        & h1 {
+          padding: 30px 0;
+        }
+      }
 
-  .features {
-    padding-top: 6vh;
-    padding-bottom: 100px;
-  }
-
-  .register-wrapper {
-    margin-top: 20px;
-  }
-
-  .register-wrapper a {
-    font-size: 0.8em;
-  }
-
-  .register-wrapper a i {
-    font-size: 1.2em;
+      & .hero-content-right img {
+        width: 94vw;
+      }
+    }
   }
 
   .counters {
     width: 100%;
     flex-direction: column;
     padding: 50px 0;
+
+    & .counter-wrapper {
+      min-height: 120px;
+      padding-top: 10px;
+    }
   }
 
-  .counter-wrapper {
-    min-height: 120px;
-    padding-top: 10px;
-  }
+  .testimonials-wrapper {
+    font-size: 18px;
 
-  .demonstration {
-    max-width: 90vw;
-  }
-
-  .hero-content-left > * {
-    padding-bottom: 6vh;
-  }
-
-  .product-line-header {
-    padding-bottom: 20px;
-    text-align: center;
+    & > * {
+      width: 94vw;
+    }
   }
 
   app-swiper-wrapper {
-    margin-bottom: 50px;
-  }
-
-  .card-area {
-    padding: 10px 0;
+    margin-bottom: 80px;
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  .home-page {
+
+  .hero {
     font-size: 35px;
-  }
 
-  .features {
-    padding-top: 200px;
-  }
+    & .hero-content.home-design {
+      flex-direction: row;
 
-  .feature-img-wrapper {
-    max-width: 20%;
-  }
+      & .hero-content-left, & .hero-content-right {
+        max-width: 45vw;
+      }
 
-  .product-line-header {
-    padding-bottom: 40px;
-  }
+      & .hero-content-left {
+        & h1 {
+          padding: 50px 0;
+        }
 
-  .features-wrapper {
-    padding-bottom: 300px;
-  }
+        & h6 {
+          text-align: left;
+        }
+      }
 
-  .register-wrapper {
-    margin-top: 30px;
-  }
-
-  .register-wrapper a {
-    font-size: 0.7em;
-  }
-
-  .register-wrapper a i {
-    font-size: 1em;
+      & .hero-content-right img {
+        width: 40vw;
+      }
+    }
   }
 
   .counters {
-    padding-top: 160px;
-    padding-bottom: 160px;
+    padding: 120px 0;
     width: 60%;
   }
 
-  .feature-right .feature {
-    flex-direction: row-reverse;
-    justify-content: space-between;
+  .testimonials-wrapper {
+    font-size: 18px;
+    padding-top: 20px;
+
+    & > * {
+      margin: {
+        left: 10px;
+        right: 10px;
+      }
+    }
   }
 
-  .demonstration {
-    max-width: 44vw;
-  }
-
-  .hero-content-left h1 {
-    padding-top: 50px;
-    padding-bottom: 70px;
-  }
-
-  .hero-content-left h6 {
-    text-align: left;
-  }
-
-  app-testimonial-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card-area {
-    padding: 20px 0;
+  app-swiper-wrapper {
+    margin: 70px 0;
   }
 }
 
-@media (hover: hover) {
-  .register-wrapper a:hover {
-    box-shadow: 0 3px 15px 1px var(--shadow);
-  }
-}

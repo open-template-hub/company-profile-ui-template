@@ -1,22 +1,51 @@
-.showroom-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@use '../../../../styles/util/util';
+
+.events-wrapper {
+  & > * {
+    margin-top: 40px;
+  }
 }
 
-.showroom-items {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding-bottom: 200px;
+@media only screen and (max-width: 999px) {
+  .events-wrapper {
+    @include util.flex-layout-column;
+    @include util.flex-center-center;
+
+    font-size: 15px;
+
+    justify-content: space-evenly;
+
+    width: 100vw;
+    margin-top: 0;
+
+    & > * {
+      width: 94vw;
+    }
+  }
 }
 
-@media only screen and (min-width: 1300px) {
-  .showroom-items app-card1 .content-column-wrapper {
-    display: flex;
-    flex-direction: row;
+@media only screen and (min-width: 1000px) {
+  .events-wrapper {
+    @include util.flex-layout-row;
+
+    font-size: 16px;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin-top: 50px;
+
+    & > * {
+      margin: {
+        left: 50px;
+        right: 50px;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+        transition: transform .5s;
+      }
+    }
   }
 }

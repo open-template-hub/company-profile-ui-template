@@ -1,21 +1,19 @@
-<div class="about-us-page">
-  <div class="hero">
-    <div class="hero-content">
-      <h1>Team Behind the Open Template Hub</h1>
-    </div>
-    <div class="employees-wrapper">
-      <ng-container *ngFor="let employee of EMPLOYEES; last as isLast">
-        <hr *ngIf="isLast"/>
-        <app-employee-card [employee]="employee"></app-employee-card>
-      </ng-container>
-    </div>
+<div class="hero">
+  <div class="hero-content">
+    <h1>Team Behind the Open Template Hub</h1>
   </div>
-  <div class="hero">
-    <div class="hero-content">
-      <h1>History of the Open Template Hub</h1>
-      <h4>Minimizes your effort while building a new software business with our open source GitHub micro server
-        templates and responsive web UI + mobile UI templates</h4>
-    </div>
+  <div class="employees-wrapper">
+    <ng-container *ngFor="let employee of EMPLOYEES; last as isLast">
+      <hr *ngIf="isLast"/>
+      <app-employee-card [employee]="employee"></app-employee-card>
+    </ng-container>
+  </div>
+</div>
+<div class="hero">
+  <div class="hero-content">
+    <h1>History of the Open Template Hub</h1>
+    <h4>Minimizes your effort while building a new software business with our open source GitHub micro server
+      templates and responsive web UI + mobile UI templates</h4>
   </div>
   <app-timeline [timeline]="TIME_LINE">
   </app-timeline>

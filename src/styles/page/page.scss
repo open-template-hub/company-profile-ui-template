@@ -1,34 +1,43 @@
 @use '../util/util';
 
 .page {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: var(--background-color);
-  padding: 0.5rem 0 0 env(safe-area-inset-left);
+  background: {
+    position: center center;
+    repeat: no-repeat;
+    attachment: fixed;
+    size: cover;
+    color: var(--background-color);
+  };
+
+  padding: 0 0 env(safe-area-inset-left);
 
   & .page-content {
     min-height: 120vh;
     overflow: auto;
     position: relative;
     z-index: 2;
+
+    & .hero {
+      @include util.flex-layout-column;
+
+      position: relative;
+
+      text-align: center;
+      align-items: center;
+
+      & .hero-content {
+        padding-top: 7vh;
+        display: flex;
+      }
+
+      & .hero-content-column {
+        @extend .hero-content;
+      }
+    }
   }
 }
 
-.hero, .in-page-title, .landing-title {
-  @include util.flex-layout-column;
-
-  text-align: center;
-  align-items: center;
-  position: relative;
-}
-
-.in-page-title, .landing-title {
-  margin: 0.2em;
-}
-
-.layers {
+.top-svg {
   width: 100%;
   overflow: hidden;
   line-height: 0;
@@ -42,100 +51,69 @@
     min-height: 250px;
     max-height: 450px;
   }
-}
 
-.top-layer {
   position: absolute;
   left: 0;
   z-index: 1;
 }
 
-.hero-content {
-  padding-top: 8vh;
-  display: flex;
-}
-
-.hero-content-column {
-  @extend .hero-content;
-}
-
-.hero-content-left, .hero-content-right {
-  @include util.flex-layout-column;
-  @include util.flex-center-center;
-}
-
 @media only screen and (max-width: 999px) {
-  .in-page-title, .landing-title {
-    margin: 0.5em;
-  }
+  .page {
+    font-size: 17px;
 
-  .hero {
-    & h2 {
-      margin-bottom: 15px;
+    & .page-content {
+      & .hero {
+        & .hero-content {
+          @include util.flex-layout-column;
+
+          & > * {
+            @include util.flex-layout-column;
+            @include util.card-width-sm;
+            margin-bottom: 50px;
+          }
+
+          & img {
+            min-width: initial;
+            width: initial;
+            max-width: initial;
+          }
+        }
+      }
+
     }
   }
 
-  .hero .brand-logo {
-    height: 100px;
-  }
-
-  .landing-title {
-    padding-top: 90px;
-    padding-bottom: 55px;
-  }
-
-  .in-page-title {
-    padding: 20px 0;
-  }
-
-  .top-layer {
+  .top-svg {
     top: 0;
   }
 
-  .hero-content-left, .hero-content-right {
-    max-width: 90vw;
-  }
-
-  .hero-content {
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-aspect-ratio: 4/3) {
-  .page-content {
-    min-height: 200vh;
-  }
 }
 
 @media only screen and (min-width: 1000px) {
-  .hero {
-    & h2 {
-      margin-bottom: 25px;
+  .page {
+    font-size: 25px;
+
+    & .page-content {
+
+      & .hero {
+        padding-bottom: 50px;
+      }
+
+      .hero-content {
+        flex-direction: column;
+        max-width: 50vw;
+
+        & > * {
+          flex-direction: column;
+        }
+
+      }
     }
+
+    padding-bottom: 100px;
   }
 
-  .landing-title {
-    padding-top: 125px;
-    padding-bottom: 90px;
-  }
-
-  .in-page-title {
-    padding: 30px 0;
-  }
-
-  .top-layer {
+  .top-svg {
     top: 90px;
-  }
-
-  .hero-content-left, .hero-content-right {
-    max-width: 45vw;
-  }
-
-  .hero-content {
-    flex-direction: row;
-  }
-
-  .hero-content-column {
-    flex-direction: column;
   }
 }

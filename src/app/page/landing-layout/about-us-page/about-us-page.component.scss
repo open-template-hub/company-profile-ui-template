@@ -1,79 +1,48 @@
 @use '../../../../styles/util/util';
 
-.about-us-page {
-  padding-bottom: 20vh;
-  font-size: 17px;
+.employees-wrapper {
+  & > * {
+    margin-top: 100px;
+  }
 
-  & .employees-wrapper {
-    & > * {
-      margin-top: 100px;
-    }
-
-    & hr {
-      margin: 0;
-      flex-basis: 100%;
-      visibility: hidden;
-    }
+  & hr {
+    margin: 0;
+    flex-basis: 100%;
+    visibility: hidden;
   }
 }
 
 @media only screen and (max-width: 999px) {
-  .about-us-page {
-    font-size: 17px;
+  .employees-wrapper {
+    @include util.flex-layout-column;
+    @include util.flex-center-center;
 
-    & .employees-wrapper {
-      @include util.flex-layout-column;
-      @include util.flex-center-center;
+    justify-content: space-evenly;
 
-      justify-content: space-evenly;
+    width: 100vw;
 
-      width: 100vw;
-
-      & > * {
-        width: 94vw;
-      }
-    }
-
-    & .hero-content > * {
-      @include util.flex-layout-column;
-      @include util.card-width-sm;
-      margin-bottom: 50px;
+    & > * {
+      width: 94vw;
     }
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  .about-us-page {
-    font-size: 25px;
 
-    & .employees-wrapper {
-      @include util.flex-layout-row;
+  .employees-wrapper {
+    @include util.flex-layout-row;
 
-      justify-content: center;
-      flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: wrap;
 
-      width: 100%;
+    width: 100%;
+    margin-top: 70px;
 
-      & > * {
-        width: 300px;
-        margin: {
-          left: 40px;
-          right: 40px;
-        }
-      }
-    }
-
-    & .hero {
-      padding-bottom: 50px;
-    }
-
-    & .hero-content {
-      flex-direction: column;
-      max-width: 50vw;
-
-      & > * {
-        flex-direction: column;
-        margin-bottom: 75px;
+    & > * {
+      width: 300px;
+      margin: {
+        left: 40px;
+        right: 40px;
       }
     }
   }

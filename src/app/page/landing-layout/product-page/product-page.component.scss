@@ -143,6 +143,9 @@ app-swiper-wrapper {
 @media only screen and (max-width: 999px) {
   .product-content {
     font-size: 25px;
+    padding-top: 50px;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .product-description {
@@ -184,12 +187,6 @@ app-swiper-wrapper {
     text-align: center;
   }
 
-  .product-content {
-    padding-top: 50px;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
   .product-content-left {
     border-bottom-right-radius: 125px;
     padding-bottom: 40px;
@@ -213,6 +210,9 @@ app-swiper-wrapper {
 
   .product-content {
     font-size: 30px;
+    padding-top: 50px;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 
   .product-line-header {
@@ -271,12 +271,6 @@ app-swiper-wrapper {
 
   .counter-wrapper h6 {
     margin: 5px 0 0;
-  }
-
-  .product-content {
-    padding-top: 50px;
-    flex-direction: row;
-    justify-content: space-evenly;
   }
 
   .pricing-plan-wrapper {

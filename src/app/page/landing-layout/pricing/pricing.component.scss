@@ -36,12 +36,6 @@
       margin-bottom: 50px;
     }
   }
-
-  .pricing-page .hero-content > * {
-    @include util.flex-layout-column;
-    @include util.card-width-sm;
-    margin-bottom: 50px;
-  }
 }
 
 @media only screen and (min-width: 1000px) {

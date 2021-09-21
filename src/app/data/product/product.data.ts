@@ -12,7 +12,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     description: 'Micro server solutions for your needs',
     products: [
       {
-        key: 'auth-server-nodejs-template',
+        key: 'auth-server-template',
         name: 'Auth Server',
         description: 'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
         href: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,

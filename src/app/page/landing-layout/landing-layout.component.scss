@@ -14,10 +14,6 @@
   height: 90px;
 }
 
-.policy-content a {
-  color: var(--theme-color);
-}
-
 .form-page {
   & app-card {
     & .body {
@@ -38,15 +34,6 @@
     display: none;
   }
 
-  .policy-content {
-    padding: 18px;
-    font-size: 17px;
-  }
-
-  .policy-content h5, .policy-content p {
-    padding-bottom: 12px;
-  }
-
   .raw-content-page {
     padding: 0 3vw 50px;
   }
@@ -64,15 +51,6 @@
 
   .header, .header-filler {
     display: block;
-  }
-
-  .policy-content {
-    padding: 60px;
-    font-size: 18px;
-  }
-
-  .policy-content h5, .policy-content p {
-    padding-bottom: 20px;
   }
 
   .raw-content-page {

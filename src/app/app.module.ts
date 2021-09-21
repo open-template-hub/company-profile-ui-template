@@ -59,22 +59,22 @@ import { PublicProfilePageComponent } from './page/dashboard-layout/public-profi
 import { SideContentComponent } from './component/side-content/side-content.component';
 import { AboutUsPageComponent } from './page/landing-layout/about-us-page/about-us-page.component';
 import { ContactUsPageComponent } from './page/landing-layout/contact-us-page/contact-us-page.component';
-import { CookiePolicyPageComponent } from './page/landing-layout/policy/cookie-policy-page/cookie-policy-page.component';
-import { ForgetPasswordPageComponent } from './page/landing-layout/form/forget-password-page/forget-password-page.component';
+import { CookiePolicyPageComponent } from './page/landing-layout/policy-pages/cookie-policy-page/cookie-policy-page.component';
+import { ForgetPasswordPageComponent } from './page/landing-layout/form-pages/forget-password-page/forget-password-page.component';
 import { HomePageComponent } from './page/landing-layout/home-page/home-page.component';
 import { LandingLayoutComponent } from './page/landing-layout/landing-layout.component';
-import { LoginPageComponent } from './page/landing-layout/form/login-page/login-page.component';
-import { MaintenancePageComponent } from './page/landing-layout/raw-content/maintenance-page/maintenance-page.component';
-import { NotFoundPageComponent } from './page/landing-layout/raw-content/not-found-page/not-found-page.component';
+import { LoginPageComponent } from './page/landing-layout/form-pages/login-page/login-page.component';
+import { MaintenancePageComponent } from './page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component';
+import { NotFoundPageComponent } from './page/landing-layout/raw-content-pages/not-found-page/not-found-page.component';
 import { PricingPageComponent } from './page/landing-layout/pricing-page/pricing-page.component';
-import { PrivacyPolicyPageComponent } from './page/landing-layout/policy/privacy-policy-page/privacy-policy-page.component';
+import { PrivacyPolicyPageComponent } from './page/landing-layout/policy-pages/privacy-policy-page/privacy-policy-page.component';
 import { ProductPageComponent } from './page/landing-layout/product-page/product-page.component';
-import { ResetPasswordPageComponent } from './page/landing-layout/form/reset-password-page/reset-password-page.component';
+import { ResetPasswordPageComponent } from './page/landing-layout/form-pages/reset-password-page/reset-password-page.component';
 import { ShowroomPageComponent } from './page/landing-layout/showroom-page/showroom-page.component';
-import { SignUpSuccessPageComponent } from './page/landing-layout/raw-content/sign-up-success-page/sign-up-success-page.component';
-import { SignUpPageComponent } from './page/landing-layout/form/sign-up-page/sign-up-page.component';
-import { TermsPageComponent } from './page/landing-layout/policy/terms-page/terms-page.component';
-import { VerifyAccountPageComponent } from './page/landing-layout/raw-content/verify-account-page/verify-account-page.component';
+import { SignUpSuccessPageComponent } from './page/landing-layout/raw-content-pages/sign-up-success-page/sign-up-success-page.component';
+import { SignUpPageComponent } from './page/landing-layout/form-pages/sign-up-page/sign-up-page.component';
+import { TermsPageComponent } from './page/landing-layout/policy-pages/terms-page/terms-page.component';
+import { VerifyAccountPageComponent } from './page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component';
 import { EditProfilePageComponent } from './page/settings-layout/edit-profile-page/edit-profile-page.component';
 import { EditThemePageComponent } from './page/settings-layout/edit-theme-page/edit-theme-page.component';
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
@@ -87,6 +87,7 @@ import { ProductPresentationComponent } from './component/product-represantation
 import { CardComponent } from './component/card/card.component';
 import { EmployeeCardComponent } from './component/card/employee-card/employee-card.component';
 import { StatusCardComponent } from './component/card/status-card/status-card.component';
+import { PolicyCardComponent } from './component/card/policy-card/policy-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -161,7 +162,8 @@ FullCalendarModule.registerPlugins( [
     CardComponent,
     EmployeeCardComponent,
     ProductPresentationComponent,
-    StatusCardComponent
+    StatusCardComponent,
+    PolicyCardComponent
   ],
   imports: [
     BrowserModule,

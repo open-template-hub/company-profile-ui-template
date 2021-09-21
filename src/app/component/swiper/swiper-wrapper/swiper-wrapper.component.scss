@@ -59,12 +59,5 @@ app-swiper-wrapper {
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--theme-color);
+  background: var(--theme-color-lighter-2);
 }
-
-/*
-@media only screen and (max-width: 999px) {
-  .swiper-button-next::after, .swiper-button-prev::after {
-    display: none;
-  }
-}*/

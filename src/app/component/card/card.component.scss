@@ -43,6 +43,7 @@
   @include util.margin-x-auto;
 
   // Design
+  box-sizing: border-box;
   width: 100%;
   min-height: 50px;
   border-top: {

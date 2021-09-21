@@ -79,10 +79,6 @@
   margin: 0 5px;
 }
 
-.copyright {
-  vertical-align: text-top;
-}
-
 .footer-social {
   display: flex;
   justify-content: flex-start;
@@ -108,10 +104,6 @@
   .footer {
     padding: 20px 0;
     margin-bottom: calc(55px + env(safe-area-inset-bottom));
-  }
-
-  .copyright {
-    font-size: 14px;
   }
 
   .footer-link-column {
@@ -162,10 +154,6 @@
   .footer {
     padding: 30px 0;
     margin-bottom: 0;
-  }
-
-  .copyright {
-    font-size: 16px;
   }
 
   .footer-link-column {

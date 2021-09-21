@@ -24,6 +24,10 @@
   font-family: Roboto, sans-serif;
 }
 
+@mixin default-shadow {
+  box-shadow: 0 3px 15px 0 var(--shadow);
+}
+
 @mixin dim {
   color: var(--lighter-contrast);
   border-color: var(--lighter-contrast);
@@ -60,12 +64,6 @@
   width: 94vw;
 }
 
-@mixin card-header-width-sm {
-  max-width: 92%;
-  min-width: 92%;
-  width: 92%;
-}
-
 @mixin font-awesome {
   font: {
     family: "Font Awesome 5 Free", sans-serif;
@@ -73,7 +71,7 @@
   }
 }
 
-.circle {
+@mixin circle {
   @include prefix(border-radius, 99em, moz webkit);
 }
 

@@ -22,24 +22,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AnimatedCodeEditorComponent } from './component/animated-code-editor/animated-code-editor.component';
 import { CalendarComponent } from './component/calendar/calendar.component';
 import { CommandLineComponent } from './component/command-line/command-line.component';
-import { EventDataComponent } from './component/common/block/event-data/event-data.component';
-import { EventHamburgerMenuComponent } from './component/common/block/event-hamburger-menu/event-hamburger-menu.component';
-import { LabelDataComponent } from './component/common/block/label-data/label-data.component';
-import { LabelWithIconDataComponent } from './component/common/block/label-with-icon-data/label-with-icon-data.component';
-import { Button1Component } from './component/common/button/button1/button1.component';
-import { SocialButtonComponent } from './component/common/button/social-button/social-button.component';
-import { Card1Component } from './component/common/card/card1/card1.component';
-import { EventCardComponent } from './component/common/card/event-card/event-card.component';
-import { PricingCardComponent } from './component/common/card/pricing-card/pricing-card.component';
-import { TestimonialCardComponent } from './component/common/card/testimonial-card/testimonial-card.component';
-import { ColorChartComponent } from './component/common/color-chart/color-chart.component';
-import { DropdownMenuComponent } from './component/common/dropdown-menu/dropdown-menu.component';
-import { ExtLinkComponent } from './component/common/ext-link/ext-link.component';
-import { RateBarComponent } from './component/common/rate-bar/rate-bar.component';
-import { SearchComponent } from './component/common/search/search.component';
-import { SwiperWrapperComponent } from './component/common/swiper-wrapper/swiper-wrapper.component';
-import { BottomNavComponent } from './component/nav/common/bottom-nav/bottom-nav.component';
-import { FooterComponent } from './component/nav/common/footer/footer.component';
+import { EventDataComponent } from './component/label/deprecated/event-data/event-data.component';
+import { EventHamburgerMenuComponent } from './component/label/deprecated/event-hamburger-menu/event-hamburger-menu.component';
+import { LabelDataComponent } from './component/label/deprecated/label-data/label-data.component';
+import { LabelWithIconDataComponent } from './component/label/deprecated/label-with-icon-data/label-with-icon-data.component';
+import { Button1Component } from './component/button/deprecated/button1/button1.component';
+import { SocialButtonComponent } from './component/button/social-button/social-button.component';
+import { Card1Component } from './component/card/deprecated/card1/card1.component';
+import { EventCardComponent } from './component/card/event-card/event-card.component';
+import { PricingCardComponent } from './component/card/pricing-card/pricing-card.component';
+import { TestimonialCardComponent } from './component/card/testimonial-card/testimonial-card.component';
+import { ColorChartComponent } from './component/color-chart/color-chart.component';
+import { DropdownMenuComponent } from './component/dropdown-menu/dropdown-menu.component';
+import { ExtLinkComponent } from './component/ext-link/ext-link.component';
+import { RateBarComponent } from './component/rate-bar/rate-bar.component';
+import { SearchComponent } from './component/search/search.component';
+import { SwiperWrapperComponent } from './component/swiper/swiper-wrapper/swiper-wrapper.component';
+import { BottomNavComponent } from './component/nav/bottom-nav/bottom-nav.component';
+import { FooterComponent } from './component/nav/footer/footer.component';
 import { DashboardLayoutSideNavComponent } from './component/nav/dashboard/dashboard-layout-side-nav/dashboard-layout-side-nav.component';
 import { DashboardLayoutTopNavComponent } from './component/nav/dashboard/dashboard-layout-top-nav/dashboard-layout-top-nav.component';
 import { LandingLayoutTopNavComponent } from './component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component';
@@ -48,41 +48,45 @@ import { TimelineComponent } from './component/timeline/timeline.component';
 import { RequestInterceptor } from './interceptor/request/request.interceptor';
 import { ResponseInterceptor } from './interceptor/response/response.interceptor';
 import { OthComponent } from './oth/oth.component';
-import { CreateEventComponent } from './page/dashboard-layout/create-event/create-event.component';
+import { CreateEventPageComponent } from './page/dashboard-layout/create-event-page/create-event-page.component';
 import { DashboardLayoutComponent } from './page/dashboard-layout/dashboard-layout.component';
 
-import { DashboardComponent } from './page/dashboard-layout/dashboard/dashboard.component';
-import { EventComponent } from './page/dashboard-layout/event/event.component';
-import { LearnComponent } from './page/dashboard-layout/learn/learn.component';
-import { MyProfileComponent } from './page/dashboard-layout/my-profile/my-profile.component';
-import { PublicProfileComponent } from './page/dashboard-layout/public-profile/public-profile.component';
-import { SideContentComponent } from './page/dashboard-layout/side-content/side-content.component';
-import { AboutUsComponent } from './page/landing-layout/about-us/about-us.component';
-import { ContactUsComponent } from './page/landing-layout/contact-us/contact-us.component';
-import { CookiePolicyComponent } from './page/landing-layout/cookie-policy/cookie-policy.component';
-import { ForgetPasswordComponent } from './page/landing-layout/forget-password/forget-password.component';
-import { HomeComponent } from './page/landing-layout/home/home.component';
+import { DashboardPageComponent } from './page/dashboard-layout/dashboard-page/dashboard-page.component';
+import { EventPageComponent } from './page/dashboard-layout/event-page/event-page.component';
+import { LearnPageComponent } from './page/dashboard-layout/learn-page/learn-page.component';
+import { MyProfilePageComponent } from './page/dashboard-layout/my-profile-page/my-profile-page.component';
+import { PublicProfilePageComponent } from './page/dashboard-layout/public-profile-page/public-profile-page.component';
+import { SideContentComponent } from './component/side-content/side-content.component';
+import { AboutUsPageComponent } from './page/landing-layout/about-us-page/about-us-page.component';
+import { ContactUsPageComponent } from './page/landing-layout/contact-us-page/contact-us-page.component';
+import { CookiePolicyPageComponent } from './page/landing-layout/policy/cookie-policy-page/cookie-policy-page.component';
+import { ForgetPasswordPageComponent } from './page/landing-layout/form/forget-password-page/forget-password-page.component';
+import { HomePageComponent } from './page/landing-layout/home-page/home-page.component';
 import { LandingLayoutComponent } from './page/landing-layout/landing-layout.component';
-import { LoginComponent } from './page/landing-layout/login/login.component';
-import { MaintenanceComponent } from './page/landing-layout/maintenance/maintenance.component';
-import { NotFoundComponent } from './page/landing-layout/not-found/not-found.component';
-import { PricingComponent } from './page/landing-layout/pricing/pricing.component';
-import { PrivacyPolicyComponent } from './page/landing-layout/privacy-policy/privacy-policy.component';
-import { ProductComponent } from './page/landing-layout/product/product.component';
-import { ResetPasswordComponent } from './page/landing-layout/reset-password/reset-password.component';
-import { ShowroomComponent } from './page/landing-layout/showroom/showroom.component';
-import { SignUpSuccessComponent } from './page/landing-layout/sign-up-success/sign-up-success.component';
-import { SignUpComponent } from './page/landing-layout/sign-up/sign-up.component';
-import { TermsComponent } from './page/landing-layout/terms/terms.component';
-import { VerifyAccountComponent } from './page/landing-layout/verify-account/verify-account.component';
-import { EditProfileComponent } from './page/settings-layout/edit-profile/edit-profile.component';
-import { EditThemeComponent } from './page/settings-layout/edit-theme/edit-theme.component';
+import { LoginPageComponent } from './page/landing-layout/form/login-page/login-page.component';
+import { MaintenancePageComponent } from './page/landing-layout/raw-content/maintenance-page/maintenance-page.component';
+import { NotFoundPageComponent } from './page/landing-layout/raw-content/not-found-page/not-found-page.component';
+import { PricingPageComponent } from './page/landing-layout/pricing-page/pricing-page.component';
+import { PrivacyPolicyPageComponent } from './page/landing-layout/policy/privacy-policy-page/privacy-policy-page.component';
+import { ProductPageComponent } from './page/landing-layout/product-page/product-page.component';
+import { ResetPasswordPageComponent } from './page/landing-layout/form/reset-password-page/reset-password-page.component';
+import { ShowroomPageComponent } from './page/landing-layout/showroom-page/showroom-page.component';
+import { SignUpSuccessPageComponent } from './page/landing-layout/raw-content/sign-up-success-page/sign-up-success-page.component';
+import { SignUpPageComponent } from './page/landing-layout/form/sign-up-page/sign-up-page.component';
+import { TermsPageComponent } from './page/landing-layout/policy/terms-page/terms-page.component';
+import { VerifyAccountPageComponent } from './page/landing-layout/raw-content/verify-account-page/verify-account-page.component';
+import { EditProfilePageComponent } from './page/settings-layout/edit-profile-page/edit-profile-page.component';
+import { EditThemePageComponent } from './page/settings-layout/edit-theme-page/edit-theme-page.component';
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
-import { CallbackComponent } from './page/splash-layout/callback/callback.component';
-import { ExternalComponent } from './page/splash-layout/external/external.component';
+import { CallbackPageComponent } from './page/splash-layout/callback-page/callback-page.component';
+import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
-import { StatusComponent } from './page/landing-layout/status/status.component';
-import { ProductPresentationComponent } from './page/landing-layout/product/product-represantation/product-presentation.component';
+import { PricePlanComponent } from './component/price-plan/price-plan.component';
+import { StatusPageComponent } from './page/landing-layout/status-page/status-page.component';
+import { ProductPresentationComponent } from './component/product-represantation/product-presentation.component';
+import { CardComponent } from './component/card/card.component';
+import { EmployeeCardComponent } from './component/card/employee-card/employee-card.component';
+import { StatusCardComponent } from './component/card/status-card/status-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -92,16 +96,16 @@ FullCalendarModule.registerPlugins( [
 @NgModule( {
   declarations: [
     OthComponent,
-    HomeComponent,
-    LoginComponent,
-    DashboardComponent,
-    SignUpComponent,
-    SignUpSuccessComponent,
-    VerifyAccountComponent,
+    HomePageComponent,
+    LoginPageComponent,
+    DashboardPageComponent,
+    SignUpPageComponent,
+    SignUpSuccessPageComponent,
+    VerifyAccountPageComponent,
     LandingLayoutComponent,
     DashboardLayoutComponent,
-    ResetPasswordComponent,
-    ForgetPasswordComponent,
+    ResetPasswordPageComponent,
+    ForgetPasswordPageComponent,
     LandingLayoutTopNavComponent,
     DashboardLayoutSideNavComponent,
     BottomNavComponent,
@@ -109,50 +113,55 @@ FullCalendarModule.registerPlugins( [
     Card1Component,
     Button1Component,
     SplashLayoutComponent,
-    CallbackComponent,
+    CallbackPageComponent,
     SocialButtonComponent,
     LabelDataComponent,
     DashboardLayoutTopNavComponent,
-    EditProfileComponent,
+    EditProfilePageComponent,
     LabelWithIconDataComponent,
-    NotFoundComponent,
-    LearnComponent,
-    MaintenanceComponent,
+    NotFoundPageComponent,
+    LearnPageComponent,
+    MaintenancePageComponent,
     CookiePopupComponent,
-    CreateEventComponent,
+    CreateEventPageComponent,
     EventCardComponent,
-    CookiePolicyComponent,
-    PrivacyPolicyComponent,
-    TermsComponent,
-    PublicProfileComponent,
+    CookiePolicyPageComponent,
+    PrivacyPolicyPageComponent,
+    TermsPageComponent,
+    PublicProfilePageComponent,
     EventDataComponent,
     SettingsLayoutComponent,
     SideContentComponent,
-    ShowroomComponent,
-    MyProfileComponent,
-    EventComponent,
+    ShowroomPageComponent,
+    MyProfilePageComponent,
+    EventPageComponent,
     EventHamburgerMenuComponent,
     CalendarComponent,
     SearchComponent,
     RateBarComponent,
-    EditThemeComponent,
-    PricingComponent,
+    EditThemePageComponent,
+    PricingPageComponent,
     PricingCardComponent,
     TestimonialCardComponent,
     DropdownMenuComponent,
-    EditThemeComponent,
+    EditThemePageComponent,
     SwiperWrapperComponent,
     ColorChartComponent,
-    ProductComponent,
+    ProductPageComponent,
     ExtLinkComponent,
-    ExternalComponent,
+    ExternalRedirectPageComponent,
     TimelineComponent,
-    AboutUsComponent,
-    ContactUsComponent,
+    AboutUsPageComponent,
+    PricePlanComponent,
+    ContactUsPageComponent,
     AnimatedCodeEditorComponent,
     CommandLineComponent,
-    StatusComponent,
+    StatusPageComponent,
     ProductPresentationComponent,
+    CardComponent,
+    EmployeeCardComponent,
+    ProductPresentationComponent,
+    StatusCardComponent
   ],
   imports: [
     BrowserModule,

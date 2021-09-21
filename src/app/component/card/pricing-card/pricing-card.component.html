@@ -1,0 +1,37 @@
+<app-card [header]="header" [body]="body" [footer]="footer" *ngIf="pricingOption" class="pricing-card"
+          [ribbon]="pricingOption.ribbon || undefined">
+  <!-- Header -->
+  <ng-template #header>
+    <div class="header">
+      <h4>{{ pricingOption.title }}</h4>
+      <div class="price-area">
+        <p class="currency">{{ pricingOption.price.currency }}</p>
+        <p class="price-value">{{ pricingOption.price.value }}</p>
+        <p class="subscription-time">{{ pricingOption.price.subscriptionTime }}</p>
+      </div>
+      <hr>
+    </div>
+  </ng-template>
+
+  <!-- Body -->
+  <ng-template #body>
+    <div class="body">
+      <ng-container *ngFor="let feature of pricingOption.features">
+        <p *ngIf="feature && feature !== 'true'">
+          <i aria-hidden="true" class="material-icons">check</i>
+          <span>{{ feature }}</span>
+        </p>
+      </ng-container>
+    </div>
+  </ng-template>
+
+  <!-- Footer -->
+  <ng-template #footer>
+    <div class="footer">
+      <app-button1 (click)="routeToEvent(pricingOption.link ? pricingOption.link : URLS.maintenance)"
+                   [icon]="'shopping-cart'" [isSleekButton]="true" [relativeToParent]="true" [text]="'Buy Now'"
+                   [themeColor]="'default'">
+      </app-button1>
+    </div>
+  </ng-template>
+</app-card>

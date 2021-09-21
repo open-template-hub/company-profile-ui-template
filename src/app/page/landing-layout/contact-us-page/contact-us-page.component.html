@@ -1,0 +1,89 @@
+<div class="hero">
+  <div class="hero-content">
+    <h1>Contact Us</h1>
+  </div>
+</div>
+<div class="contact-us-page-content">
+  <app-card1 [enableHeader]="false" [isCardContentOverflowVisible]="true"
+             [paddingTopContent]="false">
+    <div body class="section">
+      <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <div [class.input-error]="submitted && form.controls.firstName.invalid" class="input-with-label">
+          <input formControlName="firstName" placeholder="Jane" required type="text">
+          <h4>First name</h4>
+        </div>
+        <div [class.input-error]="submitted && form.controls.secondName.invalid" class="input-with-label">
+          <input formControlName="secondName" placeholder="Doe" required type="text">
+          <h4>Second name</h4>
+        </div>
+        <div [class.input-error]="submitted && form.controls.workEmail.invalid" class="input-with-label">
+          <input formControlName="workEmail" placeholder="jane.doe@example.com" required type="text">
+          <h4>Work email</h4>
+        </div>
+        <div [class.input-error]="submitted && form.controls.workPhone.invalid" class="input-with-label">
+          <input formControlName="workPhone" placeholder="+5 (555) 555-5555" type="text">
+          <h4>Work phone</h4>
+        </div>
+        <div [class.input-error]="submitted && form.controls.companyWebsite.invalid" class="input-with-label">
+          <input formControlName="companyWebsite" placeholder="example.com" type="text">
+          <h4>Company website</h4>
+        </div>
+        <div [class.input-error]="submitted && form.controls.companySize.invalid" class="input-with-label">
+          <select (change)="changeCompanySize($event)" formControlName="companySize">
+            <option class="default-option" disabled value="">Select range of employees</option>
+            <option *ngFor="let option of sizeOptions" [ngValue]="option">{{ option }}</option>
+          </select>
+          <h4>Company size</h4>
+        </div>
+        <div [class.input-error]="submitted && form.controls.country.invalid" class="input-with-label">
+          <select (change)="changeCountry($event)" formControlName="country">
+            <option class="default-option" disabled value="">Select a country</option>
+            <option *ngFor="let country of countries" [ngValue]="country">{{ country }}</option>
+          </select>
+          <h4>Country</h4>
+        </div>
+        <div [class.input-error]="submitted && form.controls.anythingElse.invalid"
+             class="input-with-label your-message"
+             style="align-items: initial">
+          <textarea formControlName="anythingElse" maxlength="500" placeholder="message..." rows="2"></textarea>
+          <h4>Your message</h4>
+        </div>
+        <div class="button-area">
+          <app-button1 [isSleekButton]="true" [relativeToParent]="true" [smallButton]="true" [text]="'CONTACT US'"
+                       [icon]="'envelope'"
+                       [themeColor]="'default'">
+          </app-button1>
+        </div>
+      </form>
+    </div>
+  </app-card1>
+  <div *ngIf="features" class="features-area">
+    <h3 class="header">{{ features.title }}</h3>
+    <div *ngFor="let feature of features.features">
+      <i aria-hidden="true" class="material-icons">check</i>
+      <h4>{{ feature }}</h4>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-card-wrapper">
+    <i aria-hidden="true" class="fa fa-comments fa-fw"></i>
+    <div class="footer-card-right-column">
+      <h4>General Communication</h4>
+      <h4>For general queries, including
+        partnership opportunities, please email
+        <a [href]="'mailto: ' + environmentCommon.oth.email"
+           class="theme-color-link">{{ environmentCommon.oth.email }}</a>
+      </h4>
+    </div>
+  </div>
+  <div class="footer-card-wrapper">
+    <i aria-hidden="true" class="fa fa-life-ring fa-fw"></i>
+    <div class="footer-card-right-column">
+      <h4>Technical or account support</h4>
+      <h4>We're here to help! If you have technical issues,
+        <a [href]="URLS.maintenance" class="theme-color-link">contact support</a>
+      </h4>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+@use '../../../../styles/util/util';
+
+.employees-wrapper {
+  & > * {
+    margin-top: 100px;
+  }
+
+  & hr {
+    margin: 0;
+    flex-basis: 100%;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .employees-wrapper {
+    @include util.flex-layout-column;
+    @include util.flex-center-center;
+
+    justify-content: space-evenly;
+
+    width: 100vw;
+
+    & > * {
+      width: 94vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .employees-wrapper {
+    @include util.flex-layout-row;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin-top: 70px;
+
+    & > * {
+      width: 300px;
+      margin: {
+        left: 40px;
+        right: 40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use '../../../../styles/util/util';
+@use '../../../../styles/page/page';
+
+.hero {
+  padding-bottom: 50px;
+
+  & .hero-content {
+    margin-bottom: 80px;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .hero {
+    font-size: 17px;
+
+    & > * {
+      width: 94vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .hero {
+    font-size: 25px;
+  }
+}

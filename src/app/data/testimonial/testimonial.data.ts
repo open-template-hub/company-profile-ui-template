@@ -5,13 +5,13 @@ export const TESTIMONIALS: Testimonial[] = [
     review:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
     reviewer: {
-      name: 'Furkan Yavuz',
-      title: 'Co-Founder & Contributor @ Open Template Hub',
+      name: 'Adam Nolan',
+      title: 'CEO @ Dare LLC',
       photoUri:
-          'https://avatars0.githubusercontent.com/u/2248168?s=460&u=435ef6ade0785a7a135ce56cae751fb3ade1d126&v=4',
+          'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/common/businessman-1.png',
       social: {
-        linkedIn: 'https://www.linkedin.com/in/furkanyavuz',
-        twitter: 'https://twitter.com/furknyavuz',
+        linkedIn: '',
+        twitter: '',
       },
     },
     style: { themeColor: 'var(--warn)' },
@@ -20,13 +20,13 @@ export const TESTIMONIALS: Testimonial[] = [
     review:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
     reviewer: {
-      name: 'Fatih Turker',
-      title: 'Co-Founder & Contributor @ Open Template Hub',
+      name: 'Stephanie Doe',
+      title: 'CEO & Mitchell Ltd',
       photoUri:
-          'https://avatars1.githubusercontent.com/u/2202179?s=460&u=261b1129e7106c067783cb022ab9999aad833bdc&v=4',
+          'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/common/businesswoman-1.png',
       social: {
-        linkedIn: 'https://www.linkedin.com/in/fatihtrker',
-        twitter: 'https://twitter.com/remoklify',
+        linkedIn: '',
+        twitter: '',
       },
     },
     style: { themeColor: 'var(--error)' },
@@ -35,13 +35,13 @@ export const TESTIMONIALS: Testimonial[] = [
     review:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim. ',
     reviewer: {
-      name: 'Mert Sarac',
-      title: 'Contributor @ Open Template Hub',
+      name: 'Jack Avery',
+      title: 'CTO @ Krause GbR',
       photoUri:
-          'https://avatars1.githubusercontent.com/u/38442589?s=400&u=aa3cda11724fc297a0bfa6beb35c9be81687cf3c&v=4',
+          'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/common/businessman-2.png',
       social: {
-        linkedIn: 'https://www.linkedin.com/in/mertlsarac',
-        twitter: 'https://twitter.com/mertlsarac',
+        linkedIn: '',
+        twitter: '',
       },
     },
     style: { themeColor: 'var(--info)' },

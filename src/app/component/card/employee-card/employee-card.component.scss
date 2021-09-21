@@ -1,0 +1,67 @@
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
+
+.employee-card {
+
+  & .header {
+    // Design
+    margin-top: -60px;
+
+    & .profile-image {
+      @include util.margin-x-auto;
+      @include util.circle;
+
+      // Color
+      background-color: var(--card);
+
+      // Design
+      border: 2px solid var(--darker-contrast);
+      box-shadow: 0 -6px 15px -7px var(--shadow);
+      width: 120px;
+      padding: 5px;
+    }
+  }
+
+  & .body {
+    @include card.default-body;
+
+    // Design
+    min-height: 120px;
+
+    & .name {
+      // Design
+      font: {
+        size: 20px;
+        weight: 500;
+      }
+    }
+
+    & .title {
+      // Color
+      color: var(--lighter-contrast);
+
+      // Design
+      font-size: 17px;
+    }
+  }
+
+  & .footer {
+    @include card.default-footer;
+    @include card.default-footer-border-color;
+    @include util.flex-layout-row;
+
+    & i {
+      // Color
+      color: var(--theme-color-lighter-3);
+
+      // Design
+      margin: 0 5px;
+      font-size: 20px;
+
+      &:hover {
+        // Color
+        color: var(--theme-color-lighter-1);
+      }
+    }
+  }
+}

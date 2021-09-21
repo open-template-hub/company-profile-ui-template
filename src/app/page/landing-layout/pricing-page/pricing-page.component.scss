@@ -1,0 +1,56 @@
+@use '../../../../styles/util/util';
+
+.pricing-wrapper {
+  & > * {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .pricing-wrapper {
+    @include util.flex-layout-column;
+    @include util.flex-center-center;
+
+    justify-content: space-evenly;
+
+    width: 100vw;
+    margin-top: 0;
+
+    & > * {
+      width: 94vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .pricing-wrapper {
+    @include util.flex-layout-row;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin-top: 50px;
+
+    & > * {
+      width: 300px;
+      margin: {
+        left: 70px;
+        right: 70px;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+        transition: transform .5s;
+      }
+    }
+
+    & .bigger-card {
+      transform: scale(1.15);
+
+      &:hover {
+        transform: scale(1.18);
+      }
+    }
+  }
+}

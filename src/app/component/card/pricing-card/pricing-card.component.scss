@@ -1,0 +1,90 @@
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
+
+.pricing-card {
+
+  font-size: 0.85rem;
+
+  & .header {
+    // Design
+    padding-top: 20px;
+
+    & h4 {
+      letter-spacing: 0.6em;
+
+      // Design
+      text-align: center;
+    }
+
+    & .price-area {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+
+      & .currency {
+        font: {
+          size: 1.2em;
+          weight: lighter;
+        }
+
+        margin-top: 0.4em;
+      }
+
+      & .subscription-time {
+        margin-top: 2.5em;
+      }
+
+      & .currency, & .subscription-time {
+        color: var(--lighter-contrast)
+      }
+
+      & .price-value {
+        font-size: 4em;
+        letter-spacing: 0.1em;
+      }
+    }
+
+    & hr {
+      @include util.margin-x-auto;
+
+      color: var(--lighter-contrast);
+      width: 70%;
+
+      margin-top: 2em;
+    }
+  }
+
+  & .body {
+    @include card.default-body;
+
+    // Design
+    min-height: 100px;
+    margin-bottom: 80px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    & p {
+      @include util.flex-layout-row;
+
+      align-items: center;
+
+      & span {
+        padding-left: 1em;
+      }
+    }
+  }
+
+  & .footer {
+    @include card.default-footer;
+
+    border: 0;
+    padding-bottom: 30px;
+
+    & app-button1 {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      right: auto;
+    }
+  }
+}

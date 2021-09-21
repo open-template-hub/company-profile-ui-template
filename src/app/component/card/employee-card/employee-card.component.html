@@ -1,0 +1,43 @@
+<app-card [header]="header" [body]="body" [footer]="footer" *ngIf="employee.profile" class="employee-card">
+  <!-- Header -->
+  <ng-template #header>
+    <div class="header">
+      <img [src]="employee.profile.photoUri" alt="profile-img" class="profile-image"
+           onerror="this.src='./assets/common/profile-img.png'"/>
+    </div>
+  </ng-template>
+
+  <!-- Body -->
+  <ng-template #body>
+    <div class="body">
+      <p class="name">{{ employee.profile.name }}</p>
+      <p class="title">{{ employee.profile.title }}</p>
+    </div>
+  </ng-template>
+
+  <!-- Footer -->
+  <ng-template #footer>
+    <div class="footer">
+      <app-ext-link *ngIf="employee.profile.social.twitter" [href]="employee.profile.social.twitter">
+        <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-fw'"
+           aria-hidden="true" body>
+        </i>
+      </app-ext-link>
+      <app-ext-link *ngIf="employee.profile.social.linkedIn" [href]="employee.profile.social.linkedIn">
+        <i [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-fw'"
+           aria-hidden="true" body>
+        </i>
+      </app-ext-link>
+      <app-ext-link *ngIf="employee.profile.social.github" [href]="employee.profile.social.github">
+        <i [class]="'fab fa-' + environmentCommon.website.github.cssClass + ' fa-fw'"
+           aria-hidden="true" body>
+        </i>
+      </app-ext-link>
+      <app-ext-link *ngIf="employee.profile.social.mail" [href]="employee.profile.social.mail">
+        <i [class]="'fas fa-' + 'envelope' + ' fa-fw'"
+           aria-hidden="true" body>
+        </i>
+      </app-ext-link>
+    </div>
+  </ng-template>
+</app-card>

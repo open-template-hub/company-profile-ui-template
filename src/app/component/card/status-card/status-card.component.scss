@@ -1,0 +1,115 @@
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
+
+.status-card {
+
+  & .body {
+
+    // Design
+    min-height: 120px;
+
+    & .status-section {
+      @include util.flex-layout-row;
+
+      margin: 12px 0;
+
+      & .status-column {
+        @include util.flex-layout-row;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 25%;
+
+        & i {
+          margin-left: 4px;
+        }
+
+        &:first-child {
+          width: 50%;
+        }
+      }
+
+      & h4 {
+        text-align: left;
+      }
+
+      &.solo h4 {
+        font-weight: 500;
+        margin: 20px 0;
+      }
+    }
+  }
+
+  & .footer {
+    @include card.default-footer;
+    @include util.flex-layout-row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--lighter);
+
+    box-sizing: border-box;
+    padding: {
+      top: 20px;
+      bottom: 20px;
+    }
+
+    & small {
+
+      width: 25%;
+      text-align: left;
+
+      &:first-child {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .status-card {
+    font-size: 17px;
+
+    & .hero > * {
+      width: 94vw;
+    }
+
+    & .body {
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+    }
+
+    & .footer {
+      padding: {
+        left: 20px;
+        right: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .status-card {
+    font-size: 19px;
+
+    & .body {
+      width: 700px;
+
+      padding: {
+        left: 40px;
+        right: 40px;
+      }
+    }
+
+    & .footer {
+      padding: {
+        left: 40px;
+        right: 40px;
+      }
+    }
+  }
+}

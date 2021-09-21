@@ -15,6 +15,22 @@
   padding-bottom: 15px;
 }
 
+.success-border {
+  border-color: var(--success);
+}
+
+.info-border {
+  border-color: var(--info);
+}
+
+.warn-border {
+  border-color: var(--warn);
+}
+
+.error-border {
+  border-color: var(--error);
+}
+
 .success-text, .success-text p, .success-text i {
   color: var(--success);
 }

@@ -1,0 +1,159 @@
+.available-plans-button {
+  width: 12em;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--card);
+  background-color: var(--theme-color);
+  cursor: pointer;
+  transition: 0.2s ease;
+  vertical-align: text-bottom;
+  height: 35px;
+  margin-top: 24px;
+}
+
+.column-feature {
+  min-width: 20%;
+  text-align: center;
+  padding: 15px;
+}
+
+.column-header-feature {
+  width: 100%;
+  padding: 12px 24px;
+}
+
+.available-plans {
+  padding-bottom: 20px;
+}
+
+p {
+  font-size: 0.5em;
+}
+
+.available-plans-empty-view {
+  width: 100%;
+}
+
+.available-plans-content {
+  display: flex;
+}
+
+.feature-area-row {
+  display: flex;
+  align-items: center;
+  white-space: break-spaces;
+}
+
+.features-area-description-title {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.features-area-description-text {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.feature-by-price-plan p, .feature-by-price-plan i {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.feature-by-price-plan-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-width: 60%;
+}
+
+.feature-by-price-plan i {
+  color: var(--theme-color)
+}
+
+.price-plan-subtitle {
+  font-size: 16px;
+  background-color: var(--contrast);
+  padding: 13px 24px;
+}
+
+.available-plans-column-area h4 {
+  padding-bottom: 12px;
+  font-size: 24px;
+}
+
+.available-plans-column-area p {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.price-plan-main-feature-wrapper {
+  cursor: pointer;
+  padding-bottom: 40px;
+}
+
+.subfeature-wrapper {
+  height: auto; opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+
+.subfeature-wrapper.hide {
+  overflow: hidden;  /* Hide the element content, while height = 0 */
+  height: 0;
+  opacity: 0;
+  transition: height 0ms 400ms, opacity 400ms 0ms;
+}
+
+.feature-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 999px) {
+  .available-plans-empty-view {
+    display: none;
+  }
+
+  .feature-area-row {
+    white-space: break-spaces;
+    align-items: initial;
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .column-header-feature {
+    padding: 0
+  }
+
+  .feature-by-price-plan-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  .feature-by-price-plan-wrapper.available-plans-wrapper {
+    flex-direction: column;
+  }
+
+  .feature-by-price-plan {
+    display: flex;
+    padding: 10px;
+  }
+
+  .feature-by-price-plan p {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .feature-mobile {
+    display: flex;
+  }
+
+  .feature-desktop {
+    display: none;
+  }
+
+  .available-plans-content {
+    flex-direction: column;
+  }
+}

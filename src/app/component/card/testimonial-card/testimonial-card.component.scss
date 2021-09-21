@@ -1,0 +1,105 @@
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
+
+.testimonial-card {
+
+  & .header {
+    text-align: left;
+    padding: 1em 1em 0.1em;
+
+    & i {
+      color: var(--theme-color);
+    }
+  }
+
+  & .body {
+    @include card.default-body;
+
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    // Design
+    min-height: 250px;
+    padding: 25px;
+    text-align: center;
+
+    & .review {
+      @include util.flex-layout-column;
+
+      justify-content: flex-start;
+
+      & p {
+        color: var(--lighter-contrast);
+      }
+    }
+
+    & .reviewer {
+      @include util.flex-layout-column;
+
+      position: relative;
+
+      align-items: flex-start;
+
+      width: 100%;
+
+      z-index: 1;
+
+      & > * {
+        margin-left: 20%;
+      }
+
+      & svg {
+        position: absolute;
+        top: 50px;
+        left: -60px;
+        z-index: 1;
+      }
+
+      & img {
+        @include util.circle;
+
+        height: 100px;
+        margin-top: 50px;
+        border-bottom: 0.1em solid;
+        z-index: 2;
+      }
+
+      & .social {
+        @include util.flex-layout-row;
+        @include util.flex-center-center;
+
+        font-size: 0.7rem;
+        margin-top: 7px;
+        z-index: 2;
+      }
+    }
+
+    & .reviewer-info {
+      @include util.flex-layout-column;
+      @include util.flex-center-center;
+
+      align-items: flex-start;
+
+      z-index: 2;
+
+      padding-top: 50px;
+
+      max-width: 70%;
+
+      text-align: left;
+
+      & > * {
+        color: var(--lighter);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .testimonial-card {
+
+    & .body {
+      width: 260px;
+    }
+  }
+}

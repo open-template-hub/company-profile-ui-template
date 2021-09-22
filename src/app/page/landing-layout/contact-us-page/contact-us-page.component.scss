@@ -17,12 +17,22 @@
   min-height: 42px;
   margin-top: 0.8em;
   margin-bottom: 0.8em;
+  align-items: center;
 
   & h4 {
     font-weight: 500;
     white-space: break-spaces;
     text-align: left;
     padding-right: 10px;
+  }
+
+  & input,
+  textarea,
+  select {
+    width: 60%;
+    min-width: 60%;
+    height: -webkit-fit-content;
+    @include util.default-fonts;
   }
 }
 
@@ -71,7 +81,7 @@ select {
 
 .button-area {
   text-align: right;
-  margin-top: 35px;
+  margin-top: 70px;
 }
 
 app-button1 {
@@ -156,14 +166,6 @@ select {
   }
 }
 
-.your-message {
-  height: 76px;
-}
-
-.your-message h4 {
-  margin-top: 12px;
-}
-
 @media only screen and (max-width: 999px) {
   .contact-us-page-content {
     flex-direction: column;
@@ -198,7 +200,17 @@ select {
 
   .input-with-label {
     flex-direction: column-reverse;
-    height: 70px;
+    & input,
+    select,
+    textarea {
+      width: 90%;
+      margin-top: 5px;
+      align-items: center;
+    }
+
+    & textarea {
+      height: 100px;
+    }
   }
 
   .input-with-label:not(:first-child) {
@@ -208,23 +220,6 @@ select {
   .input-with-label select,
   .input-with-label textarea {
     width: 90%;
-  }
-
-  .input-with-label input,
-  .input-with-label select,
-  .input-with-label textarea {
-    width: 90%;
-    margin-top: 5px;
-    align-items: center;
-  }
-
-  .your-message {
-    height: 92px;
-  }
-
-  .your-message textarea {
-    text-align: left;
-    min-height: 50px;
   }
 }
 

@@ -14,12 +14,12 @@ import { ThemeService } from '../../service/theme/theme.service';
 } )
 export class ProductPresentationComponent {
 
-  @Input() product: Product = undefined;
+  @Input() product: Product;
+  @Input() productLineName: string;
 
   brand = {
     brandLogo: '',
   };
-
 
   SOCIAL_LOGIN_PARTNERS: Partner[] = [];
   PAYMENT_PARTNERS: Partner[] = [];

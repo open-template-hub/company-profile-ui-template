@@ -18,6 +18,8 @@
     @include util.flex-center-center;
 
     padding: 41px;
+
+    width: 100%;
   }
 
   & .presentation-card {
@@ -73,3 +75,17 @@
   height: 100px;
   width: 100px;
 }
+
+@media only screen and (max-width: 999px) {
+  .product-presentation {
+
+    & .presentation-card {
+      margin-top: 0;
+    }
+
+    & img {
+      max-width: 94%;
+    }
+  }
+}
+

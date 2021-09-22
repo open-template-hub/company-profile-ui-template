@@ -26,7 +26,7 @@
                 type="text"/>
             <app-button1 [isSleekButton]="true" [themeColor]="'default'"
                          (click)="router.navigate([URLS.maintenance])"
-                         class="top-right-bottom-left-rounded-box" [text]="'Request for Demo'">
+                         class="top-right-bottom-left-rounded-box" [text]="productLineName === 'services' ? 'Contact Us' : 'Request for Demo'">
             </app-button1>
           </div>
         </div>
@@ -34,7 +34,7 @@
     </app-card>
   </div>
   <div class="right">
-    <app-product-presentation [product]="product"></app-product-presentation>
+    <app-product-presentation [productLineName]="productLineName" [product]="product"></app-product-presentation>
   </div>
 </div>
 

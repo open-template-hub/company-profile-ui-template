@@ -61,13 +61,7 @@ const routes: Routes = [
       { path: URLS_RAW.status, component: StatusPageComponent },
       { path: URLS_RAW.u + '/' + ':username', component: PublicProfilePageComponent, data: { isPublic: true } },
       { path: URLS_RAW.pricing + '/' + ':productLine' + '/' + ':product', component: PricingPageComponent },
-      {
-        path: URLS_RAW.product + '/' + ':productLine' + '/' + ':product',
-        component: ProductPageComponent,
-        children: [
-          { path: '**', component: ProductPresentationComponent }
-        ]
-      },
+      { path: URLS_RAW.product + '/' + ':productLine' + '/' + ':product', component: ProductPageComponent },
     ]
   },
   {

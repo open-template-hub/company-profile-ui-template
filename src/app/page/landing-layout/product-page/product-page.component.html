@@ -1,22 +1,31 @@
 <div class="product-content">
-  <div class="product-content-left">
-    <p class="product-name">{{ product.name }}</p>
-    <p class="product-description">{{ product.description }}</p>
-    <div class="register-wrapper">
-      <input
-          [formControl]="emailControl"
-          class="top-right-bottom-left-rounded-box"
-          placeholder="Email address"
-          type="text"/>
-      <button
-          (click)="router.navigate([URLS.maintenance])"
-          class="register-button top-right-bottom-left-rounded-box">
-        Request for Demo
-      </button>
-    </div>
+  <div class="left">
+    <app-card [header]="header" [body]="body" [cardClass]="'transparent-card'">
+      <ng-template #header>
+        <div class="header">
+          <h3>{{ product.name }}</h3>
+        </div>
+      </ng-template>
+      <ng-template #body>
+        <div class="body">
+          <h5>{{ product.description }}</h5>
+          <div class="request-for-demo">
+            <input
+                [formControl]="emailControl"
+                class="top-right-bottom-left-rounded-box"
+                placeholder="Email address"
+                type="text"/>
+            <app-button1 [isSleekButton]="true" [themeColor]="'default'"
+                         (click)="router.navigate([URLS.maintenance])"
+                         class="top-right-bottom-left-rounded-box" [text]="'Request for Demo'">
+            </app-button1>
+          </div>
+        </div>
+      </ng-template>
+    </app-card>
   </div>
-  <div class="product-content-right">
-    <router-outlet></router-outlet>
+  <div class="right">
+    <app-product-presentation [product]="product"></app-product-presentation>
   </div>
 </div>
 

@@ -1,4 +1,5 @@
 @use '../../../styles/util/util';
+@use '../../component/card/card.component';
 
 .product-presentation {
   @include util.flex-layout-row;
@@ -6,6 +7,31 @@
 
   width: 100%;
   height: 100%;
+
+  & > * {
+    width: 94%;
+  }
+
+  & .body {
+    @include card.default-body;
+    @include util.flex-layout-column;
+    @include util.flex-center-center;
+
+    margin: 50px;
+  }
+
+  & .footer {
+    @include card.default-footer;
+    @include util.flex-layout-column;
+
+    padding: 20px 50px;
+    font-size: 18px;
+
+    & span {
+      font-weight: 300;
+      color: var(--theme-color-lighter-1);
+    }
+  }
 
   & img {
     max-height: 500px;
@@ -15,15 +41,6 @@
   & app-animated-code-editor, app-card1 {
     width: 100%;
   }
-}
-
-.auth-server-social-login-wrapper {
-  padding: 5vh 0;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .social-login-wrapper {
@@ -46,16 +63,4 @@
 .social-login-wrapper app-swiper-wrapper {
   height: 100px;
   width: 100px;
-}
-
-.supported-social-logins {
-  padding-top: 20px;
-  width: 90%;
-  word-wrap: break-word;
-  font-size: 18px;
-
-  & span {
-    font-weight: 300;
-    color: var(--theme-color);
-  }
 }

@@ -8,25 +8,25 @@
         <div class="available-plans-column-area column-feature">
           <h4>Essentials</h4>
           <p>Individual Needs</p>
-          <button class="available-plans-button top-right-bottom-left-rounded-box"
-                  [routerLink]="URLS.pricing + '/' + productLineName + '/' + product.key">
-            View Pricing
-          </button>
+          <app-button1 class="available-plans-button top-right-bottom-left-rounded-box" [text]="'View Pricing'"
+                       [isSleekButton]="true" [themeColor]="'default'"
+                       [routerLink]="URLS.pricing + '/' + productLineName + '/' + product.key">
+          </app-button1>
         </div>
         <div class="available-plans-column-area column-feature">
           <h4>Standard</h4>
           <p>Team Needs</p>
-          <button class="available-plans-button top-right-bottom-left-rounded-box"
-                  [routerLink]="URLS.pricing + '/' + productLineName + '/' + product.key">
-            View Pricing
-          </button>
+          <app-button1 class="available-plans-button top-right-bottom-left-rounded-box" [text]="'View Pricing'"
+                       [isSleekButton]="true" [themeColor]="'default'"
+                       [routerLink]="URLS.pricing + '/' + productLineName + '/' + product.key">
+          </app-button1>
         </div>
         <div class="available-plans-column-area column-feature">
           <h4>Premium</h4>
           <p>Advanced Team Needs</p>
-          <button class="available-plans-button top-right-bottom-left-rounded-box" [routerLink]="URLS.contactUs">
-            Contact Us
-          </button>
+          <app-button1 class="available-plans-button top-right-bottom-left-rounded-box" [text]="'View Pricing'"
+                       [isSleekButton]="true" [themeColor]="'default'" [routerLink]="URLS.contactUs">
+          </app-button1>
         </div>
       </div>
     </div>

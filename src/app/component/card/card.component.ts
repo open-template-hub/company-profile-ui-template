@@ -12,6 +12,8 @@ export class CardComponent {
   @Input() footer: TemplateRef<any>;
   @Input() bottomWrapper: TemplateRef<any>;
 
+  @Input() cardClass: string;
+
   @Input() defaultHeaderContent: string;
   @Input() defaultBodyContent: string;
   @Input() defaultFooterContent: string;

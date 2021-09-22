@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
@@ -14,7 +14,7 @@ import { ThemeService } from '../../service/theme/theme.service';
 } )
 export class ProductPresentationComponent {
 
-  product: Product = undefined;
+  @Input() product: Product = undefined;
 
   brand = {
     brandLogo: '',
@@ -27,10 +27,6 @@ export class ProductPresentationComponent {
       private productService: ProductService,
       private themeService: ThemeService
   ) {
-    this.productService.product.subscribe( product => {
-      this.product = product;
-    } );
-
     this.brand = this.themeService.brand;
 
     for ( const website in environment.oauth ) {

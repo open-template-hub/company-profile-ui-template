@@ -1,25 +1,22 @@
 <div class="splash-content flex-layout-column flex-center-center">
   <div class="splash-logos flex-layout-row flex-center-center">
     <img [src]="brand.brandLogo" alt="logo"/>
-    <i aria-hidden="true" class="fa fa-arrow-alt-circle-right success-text"></i>
-    <img
-        [src]="website.logo"
-        alt="partner"
-        onerror="this.src='./assets/common/globe.png'"
-    />
+    <i *ngIf="!error" aria-hidden="true" class="fa fa-arrow-alt-circle-right success-text"></i>
+    <i *ngIf="error" aria-hidden="true" class="fa fa-times-circle error-text"></i>
+    <img [src]="website?.logo" alt="external website" onerror="this.src='./assets/common/globe.png'"/>
   </div>
-  <div class="alert-with-icon">
-    <i aria-hidden="true" class="fas fa-info fa-lg fa-fw success-text"></i>
+  <div class="information-with-icon">
+    <i *ngIf="!error" aria-hidden="true" class="fas fa-info fa-lg fa-fw success-text"></i>
     <p>
       {{ info }}
     </p>
     <br/>
     <p>
-      {{ "Will be redirected to: " }}<br/><a
-        (click)="redirect()"
-        class="link green-theme"
-    >{{ href }}</a
-    >
+      {{ !error ? 'Will be redirected to: ' : 'Looks like the link is broken: ' }}
+      <br/>
+      <a (click)="redirect()" class="theme-color-link" [class]="error ? 'red-theme' : 'green-theme'">
+        {{ href }}
+      </a>
     </p>
   </div>
   <div class="external-component-button-wrapper">
@@ -29,17 +26,15 @@
         [routerLink]="URLS.root"
         [text]="'Home'"
         [themeColor]="ThemeColorSettings.green"
-        transparent="true"
-    >
+        transparent="true">
     </app-button1>
-    <app-button1
+    <app-button1 *ngIf="!error"
         (click)="redirect()"
         [isSleekButton]="true"
         [lighterContrast]="true"
         [text]="'Proceed'"
         [themeColor]="ThemeColorSettings.green"
-        transparent="true"
-    >
+        transparent="true">
     </app-button1>
   </div>
 </div>

@@ -1,0 +1,70 @@
+.theme-color-lighter-3-border {
+  border-color: var(--theme-color-lighter-3);
+}
+
+@mixin define-information-text($type) {
+  .#{$type}-text {
+    color: var(--#{$type});
+
+    & p, & i, & h1, & h2, & h3, & h4, & h5, & h6 {
+      color: var(--#{$type});
+    }
+  }
+}
+
+@mixin define-information-input($type) {
+  .#{$type}-input {
+
+    & input, & select {
+      border-color: var(--#{$type});
+
+      &:focus {
+        border-color: var(--#{$type});
+      }
+    }
+
+    &.input-with-icon, &.input-with-label {
+
+      & input {
+        &::placeholder, & p {
+          color: var(--#{$type});
+        }
+      }
+
+      & select {
+        color: var(--#{$type});
+      }
+
+      & i, & span {
+        color: var(--#{$type});
+      }
+
+      & input:focus {
+        & + i, & + span {
+          color: var(--#{$type});
+        }
+      }
+    }
+  }
+}
+
+@mixin define-information-border($type) {
+  .#{$type}-border {
+    border-color: var(--#{$type});
+  }
+}
+
+@include define-information-text(success);
+@include define-information-text(info);
+@include define-information-text(warning);
+@include define-information-text(error);
+
+@include define-information-input(success);
+@include define-information-input(info);
+@include define-information-input(warning);
+@include define-information-input(error);
+
+@include define-information-border(success);
+@include define-information-border(info);
+@include define-information-border(warning);
+@include define-information-border(error);

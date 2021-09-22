@@ -14,7 +14,7 @@ export const TESTIMONIALS: Testimonial[] = [
         twitter: '',
       },
     },
-    style: { themeColor: 'var(--warn)' },
+    style: { themeColor: 'var(--warning)' },
   },
   {
     review:

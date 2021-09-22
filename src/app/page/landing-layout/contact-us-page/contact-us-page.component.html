@@ -5,83 +5,58 @@
 </div>
 <div class="contact-us-page-content">
   <app-card1
-    [enableHeader]="false"
-    [isCardContentOverflowVisible]="true"
-    [paddingTopContent]="false"
-  >
+      [enableHeader]="false"
+      [isCardContentOverflowVisible]="true"
+      [paddingTopContent]="false">
     <div body class="section">
       <div *ngIf="emailSent">
         <label>Thank you for reaching us. Our team will contact with you soon.</label>
       </div>
       <form (ngSubmit)="onSubmit()" [formGroup]="form" *ngIf="!emailSent">
-        <div
-          [class.input-error]="submitted && form.controls.firstName.invalid"
-          class="input-with-label"
-        >
-          <input
-            formControlName="firstName"
-            placeholder="Jane"
-            required
-            type="text"
-          />
+        <div [class.error-input]="submitted && form.controls.firstName.invalid" class="input-with-label">
+          <input formControlName="firstName" placeholder="Jane" required type="text"/>
           <h4>First name</h4>
         </div>
         <div
-          [class.input-error]="submitted && form.controls.secondName.invalid"
-          class="input-with-label"
-        >
+            [class.error-input]="submitted && form.controls.secondName.invalid"
+            class="input-with-label">
           <input
-            formControlName="secondName"
-            placeholder="Doe"
-            required
-            type="text"
-          />
+              formControlName="secondName"
+              placeholder="Doe"
+              required
+              type="text"/>
           <h4>Second name</h4>
         </div>
         <div
-          [class.input-error]="submitted && form.controls.workEmail.invalid"
-          class="input-with-label"
-        >
+            [class.error-input]="submitted && form.controls.workEmail.invalid"
+            class="input-with-label">
           <input
-            formControlName="workEmail"
-            placeholder="jane.doe@example.com"
-            required
-            type="text"
-          />
+              formControlName="workEmail"
+              placeholder="jane.doe@example.com"
+              required
+              type="text"/>
           <h4>Work email</h4>
         </div>
         <div
-          [class.input-error]="submitted && form.controls.workPhone.invalid"
-          class="input-with-label"
-        >
+            [class.error-input]="submitted && form.controls.workPhone.invalid"
+            class="input-with-label">
           <input
-            formControlName="workPhone"
-            placeholder="+5 (555) 555-5555"
-            type="text"
-          />
+              formControlName="workPhone"
+              placeholder="+5 (555) 555-5555"
+              type="text"/>
           <h4>Work phone</h4>
         </div>
         <div
-          [class.input-error]="
-            submitted && form.controls.companyWebsite.invalid
-          "
-          class="input-with-label"
-        >
+            [class.error-input]="submitted && form.controls.companyWebsite.invalid"
+            class="input-with-label">
           <input
-            formControlName="companyWebsite"
-            placeholder="example.com"
-            type="text"
-          />
+              formControlName="companyWebsite"
+              placeholder="example.com"
+              type="text"/>
           <h4>Company website</h4>
         </div>
-        <div
-          [class.input-error]="submitted && form.controls.companySize.invalid"
-          class="input-with-label"
-        >
-          <select
-            (change)="changeCompanySize($event)"
-            formControlName="companySize"
-          >
+        <div [class.error-input]="submitted && form.controls.companySize.invalid" class="input-with-label">
+          <select (change)="changeCompanySize($event)" formControlName="companySize">
             <option class="default-option" disabled value="">
               Select range of employees
             </option>
@@ -91,10 +66,7 @@
           </select>
           <h4>Company size</h4>
         </div>
-        <div
-          [class.input-error]="submitted && form.controls.country.invalid"
-          class="input-with-label"
-        >
+        <div [class.error-input]="submitted && form.controls.country.invalid" class="input-with-label">
           <select (change)="changeCountry($event)" formControlName="country">
             <option class="default-option" disabled value="">
               Select a country
@@ -106,27 +78,25 @@
           <h4>Country</h4>
         </div>
         <div
-          [class.input-error]="submitted && form.controls.anythingElse.invalid"
-          class="input-with-label your-message"
-          style="align-items: initial"
-        >
+            [class.error-input]="submitted && form.controls.anythingElse.invalid"
+            class="input-with-label your-message"
+            style="align-items: initial">
           <textarea
-            formControlName="anythingElse"
-            maxlength="500"
-            placeholder="message..."
-            rows="2"
+              formControlName="anythingElse"
+              maxlength="500"
+              placeholder="message..."
+              rows="2"
           ></textarea>
           <h4>Your message</h4>
         </div>
         <div class="button-area">
           <app-button1
-            [isSleekButton]="true"
-            [relativeToParent]="true"
-            [smallButton]="true"
-            [text]="'CONTACT US'"
-            [icon]="'envelope'"
-            [themeColor]="'default'"
-          >
+              [isSleekButton]="true"
+              [relativeToParent]="true"
+              [smallButton]="true"
+              [text]="'CONTACT US'"
+              [icon]="'envelope'"
+              [themeColor]="'default'">
           </app-button1>
         </div>
       </form>
@@ -147,11 +117,9 @@
       <h4>General Communication</h4>
       <h4>
         For general queries, including partnership opportunities, please email
-        <a
-          [href]="'mailto: ' + environmentCommon.oth.email"
-          class="theme-color-link"
-          >{{ environmentCommon.oth.email }}</a
-        >
+        <a [href]="'mailto: ' + environmentCommon.oth.email" class="theme-color-link">
+          {{ environmentCommon.oth.email }}
+        </a>
       </h4>
     </div>
   </div>
@@ -161,9 +129,9 @@
       <h4>Technical or account support</h4>
       <h4>
         We're here to help! If you have technical issues,
-        <a [href]="URLS.maintenance" class="theme-color-link"
-          >contact support</a
-        >
+        <a [href]="URLS.maintenance" class="theme-color-link">
+          contact support
+        </a>
       </h4>
     </div>
   </div>

@@ -46,11 +46,6 @@
   height: -webkit-fit-content;
 }
 
-.input-with-label input::placeholder,
-.input-with-label textarea::placeholder {
-  color: var(--lighter-contrast);
-}
-
 .form-span-wrapper {
   display: flex;
   flex-direction: column;

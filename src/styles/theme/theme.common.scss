@@ -13,7 +13,7 @@
   // information level colors
   --success-light-mode: #228b22;
   --error-light-mode: #e23237;
-  --warn-light-mode: #d28f29;
+  --warning-light-mode: #d28f29;
   --info-light-mode: #5c98cd;
 
   // background
@@ -44,7 +44,7 @@
   // information level colors
   --success-dark-mode: #398039;
   --error-dark-mode: #e04e52;
-  --warn-dark-mode: #cda05c;
+  --warning-dark-mode: #cda05c;
   --info-dark-mode: #3d79ac;
 
   // background
@@ -75,7 +75,7 @@
   // information level colors
   --success: var(--success-light-mode);
   --error: var(--error-light-mode);
-  --warn: var(--warn-light-mode);
+  --warning: var(--warning-light-mode);
   --info: var(--info-light-mode);
 
   // background
@@ -108,7 +108,7 @@
   // information level colors
   --success: var(--success-dark-mode);
   --error: var(--error-dark-mode);
-  --warn: var(--warn-dark-mode);
+  --warning: var(--warning-dark-mode);
   --info: var(--info-dark-mode);
 
   // background

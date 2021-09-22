@@ -18,11 +18,11 @@
           </div>
           <form (ngSubmit)="onSubmit()" [formGroup]="form">
             <div class="section">
-              <div [class.input-error]="submitted && form.controls.username.invalid" class="input-with-icon">
+              <div [class.error-input]="submitted && form.controls.username.invalid" class="input-with-icon">
                 <input formControlName="username" placeholder="Username or Email..." required type="text">
                 <i aria-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
               </div>
-              <div [class.input-error]="submitted && form.controls.password.invalid" class="input-with-icon">
+              <div [class.error-input]="submitted && form.controls.password.invalid" class="input-with-icon">
                 <input formControlName="password" placeholder="Password..." required type="password">
                 <i aria-hidden="true" class="fas fa-lock fa-lg fa-fw"></i>
               </div>

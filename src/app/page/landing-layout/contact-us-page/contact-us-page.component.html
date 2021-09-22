@@ -24,7 +24,7 @@
             required
             type="text"
           />
-          <h4>First name</h4>
+          <h4>First Name</h4>
         </div>
         <div
           [class.input-error]="submitted && form.controls.secondName.invalid"
@@ -36,7 +36,7 @@
             required
             type="text"
           />
-          <h4>Second name</h4>
+          <h4>Last Name</h4>
         </div>
         <div
           [class.input-error]="submitted && form.controls.workEmail.invalid"
@@ -48,7 +48,7 @@
             required
             type="text"
           />
-          <h4>Work email</h4>
+          <h4>Email</h4>
         </div>
         <div
           [class.input-error]="submitted && form.controls.workPhone.invalid"
@@ -59,7 +59,7 @@
             placeholder="+5 (555) 555-5555"
             type="text"
           />
-          <h4>Work phone</h4>
+          <h4>Phone Number</h4>
         </div>
         <div
           [class.input-error]="
@@ -72,7 +72,7 @@
             placeholder="example.com"
             type="text"
           />
-          <h4>Company website</h4>
+          <h4>Website</h4>
         </div>
         <div
           [class.input-error]="submitted && form.controls.companySize.invalid"
@@ -89,7 +89,7 @@
               {{ option }}
             </option>
           </select>
-          <h4>Company size</h4>
+          <h4>Company Size</h4>
         </div>
         <div
           [class.input-error]="submitted && form.controls.country.invalid"
@@ -107,16 +107,15 @@
         </div>
         <div
           [class.input-error]="submitted && form.controls.anythingElse.invalid"
-          class="input-with-label your-message"
-          style="align-items: initial"
+          class="input-with-label"
         >
           <textarea
             formControlName="anythingElse"
             maxlength="500"
-            placeholder="message..."
-            rows="2"
+            placeholder="Tell us more about your project, needs, and timeline...."
+            rows="5"
           ></textarea>
-          <h4>Your message</h4>
+          <h4>Your Message</h4>
         </div>
         <div class="button-area">
           <app-button1

@@ -2,23 +2,21 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 
-@Injectable({
+@Injectable( {
   providedIn: 'root',
-})
+} )
 export class MailService {
-  constructor(private http: HttpClient) {}
+  constructor( private http: HttpClient ) {
+  }
 
-  sendContactUsMail(payload: any) {
-    var contactUs = {
+  sendContactUsMail( payload: any ) {
+    const contactUs = {
       params: payload,
     };
 
-    this.http
-      .post<any>(`${environment.serverUrl}/mail/contact`, {
-        contactUs,
-      })
-      .subscribe((data) => {
-        console.log(data);
-      });
+    this.http.post<any>( `${ environment.serverUrl }/mail/contact`, { contactUs } )
+    .subscribe( ( data ) => {
+      console.log( data );
+    } );
   }
 }

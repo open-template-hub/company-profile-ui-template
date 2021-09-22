@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductLinePresentationType } from 'src/app/data/product-line-presentation-type.enum';
 import { GithubProviderService } from 'src/app/service/provider/github-provider.service';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
@@ -37,7 +36,6 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     this.product = {
       name: '',
       description: '',
-      presentationType: ProductLinePresentationType.Image,
     } as Product;
 
     this.route.params.subscribe( params => {
@@ -91,5 +89,9 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.product = undefined;
+  }
+
+  redirect() {
+    window.open(this.product.href, '_blank');
   }
 }

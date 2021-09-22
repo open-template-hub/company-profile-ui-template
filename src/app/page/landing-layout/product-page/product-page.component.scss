@@ -1,4 +1,5 @@
 @use '../../../../styles/util/util';
+@use '../../../component/card/card.component';
 
 .features {
   display: flex;
@@ -18,10 +19,6 @@
   & a {
     letter-spacing: 0.04em;
   }
-}
-
-.demonstration {
-  max-width: 100%;
 }
 
 .counter-wrapper {
@@ -44,7 +41,7 @@
   font-weight: bold;
 }
 
-.product-content {
+.intro {
   @include util.flex-layout-row;
 
   align-items: flex-start;
@@ -61,29 +58,48 @@
       border-top-right-radius: 99em;
 
       background-color: var(--darker-contrast);
+
+      z-index: 2;
     }
 
     & .body {
 
       border-top-left-radius: 70px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+
       background-color: var(--shadow-lighter);
+
+      @include util.default-shadow;
+
+      & .open-source {
+        @include util.flex-layout-column;
+
+        box-sizing: border-box;
+
+        justify-content: center;
+
+        width: 100%;
+      }
 
       & .request-for-demo {
         @include util.flex-layout-column;
         @include util.flex-center-center;
 
+        box-sizing: border-box;
+
+        padding-top: 50px;
+
+        width: 100%;
+
         & input {
-          width: 35%;
-          margin: 25px 0;
+          margin-bottom: 20px;
           background-color: var(--card);
 
           &:focus {
             border: 1px solid;
             transition: 200ms;
           }
-        }
-
-        & > * {
         }
       }
     }
@@ -109,7 +125,7 @@ app-swiper-wrapper {
 }
 
 @media only screen and (max-width: 999px) {
-  .product-content {
+  .intro {
     @include util.flex-layout-column;
     @include util.flex-center-center;
 
@@ -119,18 +135,22 @@ app-swiper-wrapper {
     justify-content: flex-start;
 
     & .body {
-      padding: 30px;
+      padding: 50px 30px 30px;
+
+      & .open-source {
+        padding: 50px 10px 0;
+      }
     }
 
     & .left {
       border-bottom-right-radius: 125px;
-      padding-bottom: 40px;
+      padding-bottom: 10px;
       width: 94%;
     }
 
     & .right {
       width: 100%;
-      padding-bottom: 40px;
+      padding-bottom: 50px;
     }
   }
 
@@ -158,14 +178,22 @@ app-swiper-wrapper {
 
 @media only screen and (min-width: 1000px) {
 
-  .product-content {
+  .intro {
     padding-top: 80px;
     padding-bottom: 50px;
 
     flex-direction: row;
 
     & .body {
-      padding: 60px;
+      padding: 60px 60px 40px;
+
+      & .open-source {
+        padding: 50px 150px 0;
+      }
+
+      & .request-for-demo {
+        padding: 50px 150px 0;
+      }
     }
 
     & .left {
@@ -183,7 +211,7 @@ app-swiper-wrapper {
 
   .counters {
     padding-bottom: 160px;
-    margin-top: 50px;
+    margin-top: 10px;
   }
 
   .counters a:not(:first-child) {

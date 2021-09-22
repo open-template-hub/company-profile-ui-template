@@ -9,7 +9,7 @@
   height: 100%;
 
   & > * {
-    width: 94%;
+    max-width: 94%;
   }
 
   & .body {
@@ -17,7 +17,16 @@
     @include util.flex-layout-column;
     @include util.flex-center-center;
 
-    margin: 50px;
+    padding: 41px;
+  }
+
+  & .presentation-card {
+    @include util.default-shadow;
+
+    background-color: var(--shadow-lighter);
+    border-radius: 5px;
+
+    margin-top: 74px;
   }
 
   & .footer {
@@ -34,7 +43,7 @@
   }
 
   & img {
-    max-height: 500px;
+    max-height: 400px;
     max-width: 100%;
   }
 
@@ -44,8 +53,8 @@
 }
 
 .social-login-wrapper {
-  padding-bottom: 2vh;
-  width: 350px;
+  padding-bottom: 23px;
+  width: 320px;
   display: flex;
   flex-direction: row;
   justify-content: center;

@@ -20,7 +20,9 @@ export class ProductPresentationComponent {
     brandLogo: '',
   };
 
+
   SOCIAL_LOGIN_PARTNERS: Partner[] = [];
+  PAYMENT_PARTNERS: Partner[] = [];
 
   constructor(
       public router: Router,
@@ -31,9 +33,18 @@ export class ProductPresentationComponent {
 
     for ( const website in environment.oauth ) {
       // filter only oauth configured websites
-      if ( environmentCommon.website[ website ].tag && environmentCommon.website[ website ].logo ) {
+      if ( environmentCommon.website[ website ].logo ) {
         this.SOCIAL_LOGIN_PARTNERS.push( { brandLogo: environmentCommon.website[ website ].logo, name: website } );
       }
     }
+
+    for ( const website in environment.payment ) {
+      // filter only oauth configured websites
+      if ( environmentCommon.website[ website ].logo ) {
+        this.PAYMENT_PARTNERS.push( { brandLogo: environmentCommon.website[ website ].logo, name: website } );
+      }
+    }
+
+    console.log(this.PAYMENT_PARTNERS);
   }
 }

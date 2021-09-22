@@ -1,6 +1,6 @@
-<div class="product-content">
+<div class="intro">
   <div class="left">
-    <app-card [header]="header" [body]="body" [cardClass]="'transparent-card'">
+    <app-card [header]="header" [body]="body" [cardClass]="'transparent-card'" class="product-card">
       <ng-template #header>
         <div class="header">
           <h3>{{ product.name }}</h3>
@@ -9,7 +9,16 @@
       <ng-template #body>
         <div class="body">
           <h5>{{ product.description }}</h5>
-          <div class="request-for-demo">
+          <div class="open-source" *ngIf="product.openSource">
+            <app-button1 [isSleekButton]="true" (click)="redirect()" [brandIcon]="'github'"
+                         class="top-right-bottom-left-rounded-box" [text]="'Open Source'">
+            </app-button1>
+            <app-button1 [isSleekButton]="true" [themeColor]="'default'"
+                         (click)="router.navigate([URLS.contactUs])"
+                         class="top-right-bottom-left-rounded-box" [text]="'Professional help'">
+            </app-button1>
+          </div>
+          <div class="request-for-demo" *ngIf="!product.openSource">
             <input
                 [formControl]="emailControl"
                 class="top-right-bottom-left-rounded-box"

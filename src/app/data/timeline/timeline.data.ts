@@ -6,7 +6,7 @@ export const TIME_LINE: TimeLine[] = [
     title: 'Initial commit',
     date: '27 Feb 2020',
     paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
-    img: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png'
+    img: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server.png'
   },
   {
     title: 'Web UI template',
@@ -20,7 +20,7 @@ export const TIME_LINE: TimeLine[] = [
     date: '28 May 2020',
     paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
     img:
-        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png',
+        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server.png',
   },
   {
     title: 'Hello npm',

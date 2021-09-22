@@ -1,5 +1,4 @@
 import { CommandType } from 'src/app/data/command-type.enum';
-import { ProductLinePresentationType } from 'src/app/data/product-line-presentation-type.enum';
 import { PricingOption } from '../pricing/pricing.model';
 
 export interface PricingFeature {
@@ -8,17 +7,17 @@ export interface PricingFeature {
 }
 
 export interface Product {
-  key?: string; // no key means no product page available
+  key?: string;
   name: string;
   description: string;
   color?: string;
   href: string;
   logo: string;
   heroImage?: string;
+  openSource?: boolean
   counters?: ProductCounter[];
   features?: PricingFeature[];
   pricingOptions?: PricingOption[];
-  presentationType: ProductLinePresentationType;
   commandLines?: CommandLine[];
 }
 

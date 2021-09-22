@@ -88,6 +88,10 @@
   padding-bottom: 0.8em;
 }
 
+.button1.github {
+  background-color: var(--github);
+}
+
 @media only screen and (max-width: 999px) {
   .button1.mobile-view {
     width: -webkit-fill-available;

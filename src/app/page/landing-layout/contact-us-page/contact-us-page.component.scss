@@ -197,7 +197,17 @@ select {
 
   .input-with-label {
     flex-direction: column-reverse;
-    height: 70px;
+    & input,
+    select,
+    textarea {
+      width: 90%;
+      margin-top: 5px;
+      align-items: center;
+    }
+
+    & textarea {
+      height: 100px;
+    }
   }
 
   .input-with-label:not(:first-child) {
@@ -207,23 +217,6 @@ select {
   .input-with-label select,
   .input-with-label textarea {
     width: 90%;
-  }
-
-  .input-with-label input,
-  .input-with-label select,
-  .input-with-label textarea {
-    width: 90%;
-    margin-top: 5px;
-    align-items: center;
-  }
-
-  .your-message {
-    height: 92px;
-  }
-
-  .your-message textarea {
-    text-align: left;
-    min-height: 50px;
   }
 }
 

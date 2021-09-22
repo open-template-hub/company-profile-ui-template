@@ -51,7 +51,6 @@ const routes: Routes = [
       { path: URLS_RAW.cookiePolicy, component: CookiePolicyPageComponent },
       { path: URLS_RAW.privacyPolicy, component: PrivacyPolicyPageComponent },
       { path: URLS_RAW.terms, component: TermsPageComponent },
-      { path: URLS_RAW.pricing, component: PricingPageComponent },
       { path: URLS_RAW.about, component: AboutUsPageComponent },
       { path: URLS_RAW.showroom, component: ShowroomPageComponent },
       { path: URLS_RAW.signup, component: SignUpPageComponent },
@@ -61,6 +60,7 @@ const routes: Routes = [
       { path: URLS_RAW.contactUs, component: ContactUsPageComponent },
       { path: URLS_RAW.status, component: StatusPageComponent },
       { path: URLS_RAW.u + '/' + ':username', component: PublicProfilePageComponent, data: { isPublic: true } },
+      { path: URLS_RAW.pricing + '/' + ':productLine' + '/' + ':product', component: PricingPageComponent },
       {
         path: URLS_RAW.product + '/' + ':productLine' + '/' + ':product',
         component: ProductPageComponent,

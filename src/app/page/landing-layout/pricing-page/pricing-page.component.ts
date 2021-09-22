@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { URLS } from '../../../data/constant';
-import { PRODUCT_LINES } from '../../../data/product/product.data';
+import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
 import { PRICING_RIBBONS } from '../../../data/ribbon/ribbon.data';
 import { Product, ProductLine } from '../../../model/product/product.model';
+import { ProductService } from '../../../service/product/product.service';
 
 @Component( {
   selector: 'app-pricing-page',
@@ -17,23 +18,40 @@ export class PricingPageComponent {
 
   constructor(
       private route: ActivatedRoute,
-      public router: Router
+      public router: Router,
+      private productService: ProductService
   ) {
-    this.product = undefined;
-    this.route.queryParams.subscribe( params => {
-      if ( params.productLineName && params.productName ) {
-        const productLine: ProductLine = PRODUCT_LINES.find( p => p.key === params.productLineName );
+    this.route.params.subscribe( params => {
+      if ( !params.productLine || !params.product ) {
+        this.productService.setSelectedProduct( undefined );
+        this.router.navigate( [ URLS.notFound ] );
+        return;
+      }
 
-        if ( productLine ) {
-          const product = productLine.products.find( p => p.key === params.productName );
+      let productLine: ProductLine = PRODUCT_LINES.find( ( p ) => p.key === params.productLine );
 
-          if ( product ) {
-            this.product = product;
-            return;
-          }
+      if ( !productLine ) {
+        productLine = SERVICES.find( ( p ) => p.key === params.productLine );
+
+        if ( !productLine ) {
+          this.productService.setSelectedProduct( undefined );
+          this.router.navigate( [ URLS.notFound ] );
+          return;
         }
       }
-      this.router.navigate( [ URLS.notFound ] );
+
+      const product = productLine.products.find(
+          ( p ) => p.key === params.product
+      );
+
+      if ( !product ) {
+        this.productService.setSelectedProduct( undefined );
+        this.router.navigate( [ URLS.notFound ] );
+        return;
+      }
+
+      this.product = product;
+      this.productService.setSelectedProduct( this.product );
     } );
   }
 }

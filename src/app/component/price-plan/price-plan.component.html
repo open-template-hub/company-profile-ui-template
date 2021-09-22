@@ -8,16 +8,16 @@
         <div class="available-plans-column-area column-feature">
           <h4>Essentials</h4>
           <p>Individual Needs</p>
-          <button class="available-plans-button top-right-bottom-left-rounded-box" [routerLink]="URLS.pricing"
-                  [queryParams]="{productLineName: 'servers', productName: product.key}">
+          <button class="available-plans-button top-right-bottom-left-rounded-box"
+                  [routerLink]="URLS.pricing + '/' + productLineName + '/' + product.key">
             View Pricing
           </button>
         </div>
         <div class="available-plans-column-area column-feature">
           <h4>Standard</h4>
           <p>Team Needs</p>
-          <button class="available-plans-button top-right-bottom-left-rounded-box" [routerLink]="URLS.pricing"
-                  [queryParams]="{productLineName: 'servers', productName: product.key}">
+          <button class="available-plans-button top-right-bottom-left-rounded-box"
+                  [routerLink]="URLS.pricing + '/' + productLineName + '/' + product.key">
             View Pricing
           </button>
         </div>
@@ -35,7 +35,8 @@
   <div class="price-plan-main-feature-wrapper" *ngFor="let headerFeature of product?.features">
     <div class="price-plan-subtitle accordion-menu" (click)="accordionClicked( headerFeature.name )">
       {{ headerFeature.name }}
-      <i aria-hidden="true" [class]="hiddenMainFeatures.has( headerFeature.name ) ? 'fas fa-plus-circle fa-fw' : 'fas fa-minus-circle fa-fw'"></i>
+      <i aria-hidden="true"
+         [class]="hiddenMainFeatures.has( headerFeature.name ) ? 'fas fa-plus-circle fa-fw' : 'fas fa-minus-circle fa-fw'"></i>
     </div>
     <div class="subfeature-wrapper" [class.hide]="hiddenMainFeatures.has( headerFeature.name )">
       <div class="feature-area-row-wrapper" *ngFor="let feature of headerFeature.featureDetails; index as i">
@@ -46,9 +47,12 @@
           </div>
           <div class="feature-by-price-plan-wrapper">
             <div class="feature-by-price-plan column-feature" *ngFor="let pricingOption of product.pricingOptions">
-              <p class="feature-desktop" *ngIf="pricingOption.features[i] !== 'true'">{{ pricingOption.features[i] }}</p>
-              <i [class]="'feature-desktop'" *ngIf="pricingOption.features[i] === 'true'" aria-hidden="true" class="fas fa-check fa-fw"></i>
-              <i [class]="'feature-mobile'" *ngIf="pricingOption.features[i] !== ''" aria-hidden="true" class="fas fa-check fa-fw"></i>
+              <p class="feature-desktop"
+                 *ngIf="pricingOption.features[i] !== 'true'">{{ pricingOption.features[ i ] }}</p>
+              <i [class]="'feature-desktop'" *ngIf="pricingOption.features[i] === 'true'" aria-hidden="true"
+                 class="fas fa-check fa-fw"></i>
+              <i [class]="'feature-mobile'" *ngIf="pricingOption.features[i] !== ''" aria-hidden="true"
+                 class="fas fa-check fa-fw"></i>
               <p class="feature-mobile" *ngIf="pricingOption.features[i] !== ''">{{ pricingOption.title }}</p>
             </div>
           </div>

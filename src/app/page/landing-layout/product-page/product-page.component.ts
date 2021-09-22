@@ -15,9 +15,14 @@ import { ProductService } from '../../../service/product/product.service';
   styleUrls: [ './product-page.component.scss' ],
 } )
 export class ProductPageComponent implements OnInit, OnDestroy {
+
   URLS = URLS;
+
   environmentCommon = environmentCommon;
+
   product: Product;
+  productLineName: string;
+
   emailControl = new FormControl( '' );
 
   constructor(
@@ -41,6 +46,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
         this.router.navigate( [ URLS.notFound ] );
         return;
       }
+
+      this.productLineName = params.productLine;
 
       let productLine: ProductLine = PRODUCT_LINES.find( ( p ) => p.key === params.productLine );
 

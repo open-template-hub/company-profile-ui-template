@@ -14,9 +14,6 @@ export class MailService {
       params: payload,
     };
 
-    this.http.post<any>( `${ environment.serverUrl }/mail/contact`, { contactUs } )
-    .subscribe( ( data ) => {
-      console.log( data );
-    } );
+    return this.http.post<any>( `${ environment.serverUrl }/mail/contact`, { contactUs } );
   }
 }

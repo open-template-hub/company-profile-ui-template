@@ -6,6 +6,10 @@
 
   justify-content: center;
   margin: 30px 10px 0;
+
+  & label {
+    color: var(--success);
+  }
 }
 
 .input-with-label {
@@ -34,13 +38,16 @@
   }
 }
 
-.input-with-label input, .input-with-label textarea, .input-with-label select {
+.input-with-label input,
+.input-with-label textarea,
+.input-with-label select {
   width: 60%;
   min-width: 60%;
   height: -webkit-fit-content;
 }
 
-.input-with-label input::placeholder, .input-with-label textarea::placeholder {
+.input-with-label input::placeholder,
+.input-with-label textarea::placeholder {
   color: var(--lighter-contrast);
 }
 
@@ -48,7 +55,7 @@
   display: flex;
   flex-direction: column;
   margin-right: 10px;
-  margin-top: 12px
+  margin-top: 12px;
 }
 
 .input-with-label .span-description {
@@ -82,7 +89,9 @@ app-button1 {
   bottom: 2em;
 }
 
-textarea, input, select {
+textarea,
+input,
+select {
   transition: initial;
 }
 
@@ -201,11 +210,14 @@ textarea, input, select {
     margin-top: 35px;
   }
 
-  .input-with-label select, .input-with-label textarea {
+  .input-with-label select,
+  .input-with-label textarea {
     width: 90%;
   }
 
-  .input-with-label input, .input-with-label select, .input-with-label textarea {
+  .input-with-label input,
+  .input-with-label select,
+  .input-with-label textarea {
     width: 90%;
     margin-top: 5px;
     align-items: center;
@@ -222,7 +234,8 @@ textarea, input, select {
 }
 
 @media only screen and (min-width: 1000px) {
-  .contact-us-page-content, .footer {
+  .contact-us-page-content,
+  .footer {
     font-size: 19px;
   }
 

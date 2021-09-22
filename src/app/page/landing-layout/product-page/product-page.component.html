@@ -26,7 +26,8 @@
                 type="text"/>
             <app-button1 [isSleekButton]="true" [themeColor]="'default'"
                          (click)="router.navigate([URLS.maintenance])"
-                         class="top-right-bottom-left-rounded-box" [text]="productLineName === 'services' ? 'Contact Us' : 'Request for Demo'">
+                         class="top-right-bottom-left-rounded-box"
+                         [text]="productLineName === 'services' ? 'Contact Us' : 'Request for Demo'">
             </app-button1>
           </div>
         </div>
@@ -52,6 +53,38 @@
   </a>
 </div>
 
-<div class="pricing-plan-wrapper">
-  <app-price-plan [productLineName]="productLineName" [product]="product"></app-price-plan>
-</div>
+<ng-container [ngSwitch]="productLineName">
+  <ng-container [ngSwitch]="product.key" *ngSwitchCase="'services'">
+    <div class="testimonials-header">
+      <h2>Customer Testimonials</h2>
+      <h4>What our customers are saying...</h4>
+    </div>
+    <div class="testimonials-wrapper">
+      <app-testimonial-card *ngFor="let testimonial of TESTIMONIALS" [testimonial]="testimonial">
+      </app-testimonial-card>
+    </div>
+    <div class="partners-wrapper">
+      <app-swiper-wrapper [partners]="PARTNERS" [isGrayscale]="true" [isNavigationEnabled]="true" [height]="100"
+                          [isPaginationEnabled]="true" [breakpoints]="{
+      '640': {
+        slidesPerView: 1,
+        spaceBetween: 30
+      },
+      '768': {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      '1000': {
+        slidesPerView: 3,
+        spaceBetween: 50
+      }
+      }">
+      </app-swiper-wrapper>
+    </div>
+  </ng-container>
+  <ng-container [ngSwitch]="product.key" *ngSwitchDefault>
+    <div class="pricing-plan-wrapper">
+      <app-price-plan [productLineName]="productLineName" [product]="product"></app-price-plan>
+    </div>
+  </ng-container>
+</ng-container>

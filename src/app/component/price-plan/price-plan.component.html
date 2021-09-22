@@ -39,7 +39,7 @@
          [class]="hiddenMainFeatures.has( headerFeature.name ) ? 'fas fa-plus-circle fa-fw' : 'fas fa-minus-circle fa-fw'"></i>
     </div>
     <div class="subfeature-wrapper" [class.hide]="hiddenMainFeatures.has( headerFeature.name )">
-      <div class="feature-area-row-wrapper" *ngFor="let feature of headerFeature.featureDetails; index as i">
+      <div class="feature-area-row-wrapper" *ngFor="let feature of headerFeature.details; index as i">
         <div class="feature-area-row">
           <div class="features-area-description column-header-feature">
             <h5 class="features-area-description-title">{{ feature.name }}</h5>

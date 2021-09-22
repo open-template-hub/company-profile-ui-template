@@ -3,13 +3,11 @@ export const environment = {
 
   production: true,
 
-  // FIXME: After creating live env change this url
-  serverUrl: 'https://oth-server-orchestra-dev.herokuapp.com',
+  serverUrl: 'https://oth-server-orchestra-live.herokuapp.com',
 
   clientUrl: 'https://opentemplatehub.com',
 
-  // FIXME: After switching to live, change this to false
-  mockDataEnabled: true,
+  mockDataEnabled: false,
 
   oauth: {
     twitter: {

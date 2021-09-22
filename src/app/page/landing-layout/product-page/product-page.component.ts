@@ -1,9 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
 import { GithubProviderService } from 'src/app/service/provider/github-provider.service';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
+import { PARTNERS } from '../../../data/partner/partner.data';
 import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
 import { Product, ProductLine } from '../../../model/product/product.model';
 import { ProductService } from '../../../service/product/product.service';
@@ -16,6 +18,8 @@ import { ProductService } from '../../../service/product/product.service';
 export class ProductPageComponent implements OnInit, OnDestroy {
 
   URLS = URLS;
+  TESTIMONIALS = TESTIMONIALS;
+  PARTNERS = PARTNERS;
 
   environmentCommon = environmentCommon;
 
@@ -92,6 +96,6 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   }
 
   redirect() {
-    window.open(this.product.href, '_blank');
+    window.open( this.product.href, '_blank' );
   }
 }

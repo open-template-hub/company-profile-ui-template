@@ -19,10 +19,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
-                name: 'Signature requests',
+                name: 'Open Source',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
               },
               {
@@ -37,7 +37,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -54,7 +54,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -128,10 +128,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
-                name: 'Signature requests',
+                name: 'Open Source',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
               },
               {
@@ -146,7 +146,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -163,7 +163,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -245,10 +245,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
-                name: 'Signature requests',
+                name: 'Open Source',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
               },
               {
@@ -263,7 +263,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -280,7 +280,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -362,10 +362,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
-                name: 'Signature requests',
+                name: 'Open Source',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
               },
               {
@@ -380,7 +380,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -397,7 +397,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -479,10 +479,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
-                name: 'Signature requests',
+                name: 'Open Source',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
               },
               {
@@ -497,7 +497,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -514,7 +514,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -596,10 +596,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
-                name: 'Signature requests',
+                name: 'Open Source',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
               },
               {
@@ -614,7 +614,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -631,7 +631,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -721,10 +721,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
-                name: 'Signature requests',
+                name: 'Open Source',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
               },
               {
@@ -739,7 +739,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -756,7 +756,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -831,10 +831,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
-                name: 'Signature requests',
+                name: 'Open Source',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
               },
               {
@@ -849,7 +849,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -866,7 +866,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -941,10 +941,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
-                name: 'Signature requests',
+                name: 'Open Source',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
               },
               {
@@ -959,7 +959,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -976,7 +976,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1057,10 +1057,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
-                name: 'Signature requests',
+                name: 'Open Source',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
               },
               {
@@ -1075,7 +1075,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1092,7 +1092,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1220,10 +1220,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
-                name: 'Signature requests',
+                name: 'Open Source',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
               },
               {
@@ -1238,7 +1238,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1255,7 +1255,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1380,8 +1380,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         heroImage: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png',
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1398,7 +1398,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1415,7 +1415,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1499,25 +1499,8 @@ export const SERVICES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
-              {
-                name: 'Signature requests',
-                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description: 'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              }
-            ]
-          },
-          {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1534,7 +1517,7 @@ export const SERVICES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1548,54 +1531,6 @@ export const SERVICES: ProductLine[] = [
                 description: 'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
               }
             ]
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true', ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true', ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
           },
         ],
       },
@@ -1608,25 +1543,8 @@ export const SERVICES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo-pieces.png',
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
-              {
-                name: 'Signature requests',
-                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description: 'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              }
-            ]
-          },
-          {
-            name: 'Security and Trust',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1643,7 +1561,7 @@ export const SERVICES: ProductLine[] = [
           },
           {
             name: 'Data Validation',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1657,54 +1575,6 @@ export const SERVICES: ProductLine[] = [
                 description: 'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
               }
             ]
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true', ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true', ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
           },
         ],
       },
@@ -1717,8 +1587,8 @@ export const SERVICES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo-shine.png',
         features: [
           {
-            name: 'Core Feature',
-            featureDetails: [
+            name: 'Core Features',
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1735,7 +1605,7 @@ export const SERVICES: ProductLine[] = [
           },
           {
             name: 'Security and Trust',
-            featureDetails: [
+            details: [
               {
                 name: 'Signature requests',
                 description: 'Customers that pay per user can send out as many signature requests as they want per month!',
@@ -1749,72 +1619,7 @@ export const SERVICES: ProductLine[] = [
                 description: 'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
               }
             ]
-          },
-          {
-            name: 'Data Validation',
-            featureDetails: [
-              {
-                name: 'Signature requests',
-                description: 'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description: 'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description: 'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              }
-            ]
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true', ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true', ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
+          }
         ],
       },
     ],

@@ -7,7 +7,7 @@
         [class.theme-light-color]="themeLightColor"
         [class.transparent-theme-color]="transparent && themeColor"
         [class.transparent]="transparent"
-        [class]="classType" [disabled]="loading || disabled" [ngClass]="themeColor + '-theme' + ' ' + brandIcon ? brandIcon : ''"
+        [class]="classType" [disabled]="loading || disabled" [ngClass]="themeColor + '-theme' + ' ' + (brandIcon ? brandIcon : '')"
         [style.cursor]="cursor"
         class="button1">
   <i *ngIf="icon" [class]="'fas fa-' + icon + ' fa-lg fa-fw'" aria-hidden="true"></i>

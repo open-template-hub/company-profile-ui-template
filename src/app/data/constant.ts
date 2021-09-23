@@ -43,7 +43,9 @@ export const ThemeColorSettings = {
   red: 'red',
   yellow: 'yellow',
   blue: 'blue',
-  green: 'green'
+  green: 'green',
+  orange: 'orange',
+  purple: 'purple',
 };
 
 export const URLS_RAW = {

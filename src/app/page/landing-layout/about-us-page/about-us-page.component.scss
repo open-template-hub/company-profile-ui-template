@@ -47,7 +47,7 @@
 
   .timeline-wrapper {
     @include util.flex-layout-column;
-    padding: 3vh;
+    padding: 0 3vw;
 
     & .timeline-hr {
       height: 150px;

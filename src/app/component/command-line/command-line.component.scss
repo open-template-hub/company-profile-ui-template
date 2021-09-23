@@ -1,23 +1,23 @@
-.command {
-  font-size: 14px;
-  font-weight: 600;
-}
-
 .command-line {
   color: var(--contrast-light-mode);
   font-size: 14px;
   margin-top: 5px;
-}
 
-.response {
-  color: var(--warning);
-}
+  & .text {
+    margin-left: 10px;
+    white-space: pre-line;
+  }
 
-.request {
-  color: var(--error);
-}
+  & .response {
+    color: var(--warning);
+  }
 
-.command-in {
-  margin-left: 10px;
-  white-space: pre-line;
+  & .request {
+    color: var(--error);
+  }
+
+  & .command {
+    font-size: 14px;
+    font-weight: 600;
+  }
 }

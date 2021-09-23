@@ -1,5 +1,13 @@
 @use '../../../../styles/util/util';
 
+.hero {
+  & .hero-content {
+    & h4 {
+      padding-top: 50px;
+    }
+  }
+}
+
 .employees-wrapper {
   & > * {
     margin-top: 100px;
@@ -9,6 +17,17 @@
     margin: 0;
     flex-basis: 100%;
     visibility: hidden;
+  }
+}
+
+.timeline-wrapper {
+  @include util.flex-center-center;
+
+  flex-wrap: wrap;
+
+  & .timeline-hr {
+    border-left: 1px solid var(--contrast);
+    border-right: none;
   }
 }
 
@@ -23,6 +42,15 @@
 
     & > * {
       width: 94vw;
+    }
+  }
+
+  .timeline-wrapper {
+    @include util.flex-layout-column;
+    padding: 3vh;
+
+    & .timeline-hr {
+      height: 150px;
     }
   }
 }
@@ -44,6 +72,30 @@
         left: 40px;
         right: 40px;
       }
+    }
+  }
+
+  .timeline-wrapper {
+    @include util.flex-layout-row;
+    padding: 10%;
+
+    & .timeline-hr {
+      height: 700px;
+      width: 0;
+      margin: 0;
+
+      &.right {
+        display: none;
+      }
+    }
+
+    & > * {
+      width: 35%;
+      margin: 0 61px;
+    }
+
+    & .right {
+      margin: 150px 60px 0;
     }
   }
 }

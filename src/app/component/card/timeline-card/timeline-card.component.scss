@@ -1,0 +1,140 @@
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
+
+@mixin arrow {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+@mixin marker {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: var(--theme-color-lighter-2);
+  border: 5px solid var(--background-color);
+  border-radius: 12px;
+}
+
+.timeline-card {
+
+  & .header {
+    @include util.flex-layout-column;
+    @include util.flex-center-center;
+
+    // Design
+    height: 80px;
+
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+    // Color
+    background-color: var(--theme-color-lighter-2);
+    color: var(--color);
+  }
+
+  & .body {
+    @include card.default-body;
+
+    justify-content: space-evenly;
+
+    // Design
+    height: 420px;
+
+    & > * {
+      max-width: 100%;
+      max-height: 200px;
+      margin: 10px 0;
+    }
+
+  }
+
+  & .footer {
+    @include card.default-footer;
+    @include card.default-footer-border-color;
+    @include util.flex-layout-row;
+
+    justify-content: flex-end;
+
+    & img {
+      height: 35px;
+      margin-right: 10px;
+    }
+
+    & small {
+      color: var(--lighter-contrast);
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+
+  .timeline-card {
+
+    & .body {
+      padding: 30px 20px 20px;
+      font-size: 16px;
+    }
+
+    & .footer {
+      padding: 15px 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .timeline-card {
+
+    & .header {
+      &::before {
+        @include marker;
+      }
+
+      &.left::before {
+        left: calc(100% + 50px);
+      }
+
+      &.right::before {
+        right: calc(100% + 50px);
+      }
+
+      &::after {
+        @include arrow;
+        color: var(--theme-color-lighter-2);
+        top: 25px;
+      }
+
+      &.left::after {
+        border-left: {
+          width: 15px;
+          style: solid;
+        }
+
+        left: 100%;
+      }
+
+      &.right::after {
+        border-right: {
+          width: 15px;
+          style: solid;
+        }
+
+        right: 100%;
+      }
+    }
+
+    & .body {
+      padding: 50px 50px 20px;
+      font-size: 18px;
+    }
+
+    & .footer {
+      padding: 20px 30px;
+    }
+  }
+}

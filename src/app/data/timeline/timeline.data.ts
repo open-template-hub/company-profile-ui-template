@@ -42,7 +42,7 @@ export const OTH_TIME_LINE: TimeLineItem[] = [
     paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
     img: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
     theme: ThemeColorSettings.red,
-    footerText: '#initialcommit'
+    footerText: '#hellonpm'
   },
   {
     title: 'File Storage Server Template',

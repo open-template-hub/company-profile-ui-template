@@ -10,11 +10,14 @@
 }
 
 .response {
-  margin-right: 10px;
   color: var(--warning);
 }
 
 .request {
-  margin-right: 8px;
   color: var(--error);
+}
+
+.command-in {
+  margin-left: 10px;
+  white-space: pre-line;
 }

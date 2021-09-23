@@ -37,4 +37,5 @@ export interface ProductCounter {
 export interface CommandLine {
   command: string;
   type: CommandType;
+  timeout: number;
 }

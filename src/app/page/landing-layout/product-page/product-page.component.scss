@@ -72,25 +72,17 @@
 
       @include util.default-shadow;
 
-      & .open-source {
-        @include util.flex-layout-column;
-
-        box-sizing: border-box;
-
-        justify-content: center;
-
-        width: 100%;
-      }
-
-      & .request-for-demo {
+      & .open-source, & .request-for-demo {
         @include util.flex-layout-column;
         @include util.flex-center-center;
 
         box-sizing: border-box;
 
-        padding-top: 50px;
-
         width: 100%;
+      }
+
+      & .request-for-demo {
+        padding-top: 50px;
 
         & input {
           margin-bottom: 20px;
@@ -234,7 +226,11 @@ app-swiper-wrapper {
       }
 
       & .request-for-demo {
-        padding: 50px 150px 0;
+        padding: 50px 0;
+
+        & input {
+          width: 220px;
+        }
       }
     }
 

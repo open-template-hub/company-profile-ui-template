@@ -77,7 +77,8 @@
 
   .timeline-wrapper {
     @include util.flex-layout-row;
-    padding: 10%;
+
+    width: 1000px;
 
     & .timeline-hr {
       height: 700px;
@@ -90,12 +91,12 @@
     }
 
     & > * {
-      width: 35%;
-      margin: 0 61px;
+      width: 40%;
+      margin: 0 46px;
     }
 
     & .right {
-      margin: 150px 60px 0;
+      margin: 150px 45px 0;
     }
   }
 }

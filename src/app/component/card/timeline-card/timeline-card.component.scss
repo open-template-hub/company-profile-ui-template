@@ -96,11 +96,11 @@
       }
 
       &.left::before {
-        left: calc(100% + 50px);
+        left: calc(100% + 35px);
       }
 
       &.right::before {
-        right: calc(100% + 50px);
+        right: calc(100% + 35px);
       }
 
       &::after {

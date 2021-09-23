@@ -6,12 +6,12 @@
             [body]="body" [cardClass]="'transparent-card'" class="features-card">
           <ng-template #body>
             <div class="body">
-              <h4>Why Open Template Hub?</h4>
+              <h5>Why Open Template Hub?</h5>
               <ng-container *ngFor="let feature of product.features">
-                <h4>{{ feature.name }}</h4>
+                <h5>{{ feature.name }}</h5>
 
                 <div *ngFor="let detail of feature.details">
-                  <h5>{{ detail.name + ': ' + detail.description}}</h5>
+                  <h6>{{ detail.name + ': ' + detail.description}}</h6>
                 </div>
               </ng-container>
             </div>
@@ -56,12 +56,12 @@
             [body]="body" [cardClass]="'transparent-card'" class="features-card">
           <ng-template #body>
             <div class="body">
-              <h4>Why Open Template Hub?</h4>
+              <h5>Why Open Template Hub?</h5>
               <ng-container *ngFor="let feature of product.features">
-                <h4>{{ feature.name }}</h4>
+                <h5>{{ feature.name }}</h5>
 
                 <div *ngFor="let detail of feature.details">
-                  <h5>{{ detail.name + ': ' + detail.description}}</h5>
+                  <h6>{{ detail.name + ': ' + detail.description}}</h6>
                 </div>
               </ng-container>
             </div>

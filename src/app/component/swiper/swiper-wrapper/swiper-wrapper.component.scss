@@ -1,7 +1,6 @@
 @use '../../../../../node_modules/swiper/swiper-bundle.min.css';
 
 app-swiper-wrapper {
-  width: 850px;
   margin: 0 auto;
   position: relative;
 }
@@ -61,3 +60,17 @@ app-swiper-wrapper {
 .swiper-pagination-bullet-active {
   background: var(--theme-color-lighter-2);
 }
+
+@media only screen and (max-width: 999px) {
+  app-swiper-wrapper {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  app-swiper-wrapper {
+    width: 850px;
+  }
+}
+

@@ -1,0 +1,92 @@
+:root {
+
+  --theme-color-purple-theme: #8968CD;
+  --theme-color-default-theme: var(--theme-color-purple-theme);
+
+  --theme-color-purple-theme-lighter-1: #9172d0;
+  --theme-color-purple-theme-lighter-2: #997dd4;
+  --theme-color-purple-theme-lighter-3: #a288d7;
+  --theme-color-purple-theme-lighter-4: #aa92db;
+  --theme-color-purple-theme-lighter-5: #b29dde;
+  --theme-color-purple-theme-lighter-6: #bba8e2;
+  --theme-color-purple-theme-lighter-7: #d4c8ec;
+  --theme-color-purple-theme-lighter-8: #e4ddf3;
+  --theme-color-purple-theme-lighter-9: #f5f3fa;
+
+  --theme-color-purple-theme-darker-1: #8364c2;
+  --theme-color-purple-theme-darker-2: #7d60b7;
+  --theme-color-purple-theme-darker-3: #775dac;
+  --theme-color-purple-theme-darker-4: #7159a1;
+  --theme-color-purple-theme-darker-5: #6b5596;
+  --theme-color-purple-theme-darker-6: #65528b;
+  --theme-color-purple-theme-darker-7: #53476b;
+  --theme-color-purple-theme-darker-8: #473f55;
+  --theme-color-purple-theme-darker-9: #3b383f;
+
+  --hover-purple-theme-lighter: rgba(137, 104, 205, 0.3);
+  --hover-purple-theme-darker: rgba(137, 104, 205, 0.6);
+}
+
+:root .purple-theme, .light-theme.purple-theme {
+
+  --theme-color: var(--theme-color-purple-theme);
+
+  --theme-color-lighter-1: var(--theme-color-purple-theme-lighter-1);
+  --theme-color-lighter-2: var(--theme-color-purple-theme-lighter-2);
+  --theme-color-lighter-3: var(--theme-color-purple-theme-lighter-3);
+  --theme-color-lighter-4: var(--theme-color-purple-theme-lighter-4);
+  --theme-color-lighter-5: var(--theme-color-purple-theme-lighter-5);
+  --theme-color-lighter-6: var(--theme-color-purple-theme-lighter-6);
+  --theme-color-lighter-7: var(--theme-color-purple-theme-lighter-7);
+  --theme-color-lighter-8: var(--theme-color-purple-theme-lighter-8);
+  --theme-color-lighter-9: var(--theme-color-purple-theme-lighter-9);
+
+  --theme-color-darker-1: var(--theme-color-purple-theme-darker-1);
+  --theme-color-darker-2: var(--theme-color-purple-theme-darker-2);
+  --theme-color-darker-3: var(--theme-color-purple-theme-darker-3);
+  --theme-color-darker-4: var(--theme-color-purple-theme-darker-4);
+  --theme-color-darker-5: var(--theme-color-purple-theme-darker-5);
+  --theme-color-darker-6: var(--theme-color-purple-theme-darker-6);
+  --theme-color-darker-7: var(--theme-color-purple-theme-darker-7);
+  --theme-color-darker-8: var(--theme-color-purple-theme-darker-8);
+  --theme-color-darker-9: var(--theme-color-purple-theme-darker-9);
+
+  --hover: var(--hover-purple-theme-lighter);
+}
+
+@mixin purple-theme-dark-mode {
+
+  --theme-color: var(--theme-color-purple-theme);
+
+  --theme-color-lighter-1: var(--theme-color-purple-theme-darker-1);
+  --theme-color-lighter-2: var(--theme-color-purple-theme-darker-2);
+  --theme-color-lighter-3: var(--theme-color-purple-theme-darker-3);
+  --theme-color-lighter-4: var(--theme-color-purple-theme-darker-4);
+  --theme-color-lighter-5: var(--theme-color-purple-theme-darker-5);
+  --theme-color-lighter-6: var(--theme-color-purple-theme-darker-6);
+  --theme-color-lighter-7: var(--theme-color-purple-theme-darker-7);
+  --theme-color-lighter-8: var(--theme-color-purple-theme-darker-8);
+  --theme-color-lighter-9: var(--theme-color-purple-theme-darker-9);
+
+  --theme-color-darker-1: var(--theme-color-purple-theme-lighter-1);
+  --theme-color-darker-2: var(--theme-color-purple-theme-lighter-2);
+  --theme-color-darker-3: var(--theme-color-purple-theme-lighter-3);
+  --theme-color-darker-4: var(--theme-color-purple-theme-lighter-4);
+  --theme-color-darker-5: var(--theme-color-purple-theme-lighter-5);
+  --theme-color-darker-6: var(--theme-color-purple-theme-lighter-6);
+  --theme-color-darker-7: var(--theme-color-purple-theme-lighter-7);
+  --theme-color-darker-8: var(--theme-color-purple-theme-lighter-8);
+  --theme-color-darker-9: var(--theme-color-purple-theme-lighter-9);
+
+  --hover: var(--hover-purple-theme-darker);
+}
+
+.dark-theme.purple-theme {
+  @include purple-theme-dark-mode
+}
+
+@media (prefers-color-scheme: dark) {
+  :root .purple-theme {
+    @include purple-theme-dark-mode
+  }
+}

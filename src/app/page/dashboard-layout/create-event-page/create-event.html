@@ -6,15 +6,15 @@
       <form (ngSubmit)="onSubmit()" [formGroup]="form">
         <div class="form-content">
           <div class="left-column">
-            <div [class.input-error]="submitted && form.controls.title.invalid" class="input-with-icon">
+            <div [class.error-input]="submitted && form.controls.title.invalid" class="input-with-icon">
               <input formControlName="title" placeholder="Make a event..." required type="text">
               <i aria-hidden="true" class="fas fa-clipboard fa-lg fa-fw"></i>
             </div>
-            <div [class.input-error]="submitted && form.controls.description.invalid" class="input-with-icon">
+            <div [class.error-input]="submitted && form.controls.description.invalid" class="input-with-icon">
               <textarea formControlName="description" maxlength="500" placeholder="Description..." rows="2"></textarea>
               <i aria-hidden="true" class="fas fa-comment fa-lg fa-fw"></i>
             </div>
-            <div [class.input-error]="submitted && form.controls.link.invalid" class="input-with-icon">
+            <div [class.error-input]="submitted && form.controls.link.invalid" class="input-with-icon">
               <input formControlName="link" placeholder="Link..." type="text">
               <i aria-hidden="true" class="fas fa-link fa-lg fa-fw"></i>
             </div>
@@ -40,14 +40,14 @@
             </div>
           </div>
           <div class="right-column">
-            <div [class.input-error]="submitted && form.controls.date.invalid" class="input-with-icon">
+            <div [class.error-input]="submitted && form.controls.date.invalid" class="input-with-icon">
               <input #dateArea="dpDayPicker" [dpDayPicker]="dayPickerConfig" [mode]="'daytime'"
                      [placeholder]="'Date...'"
                      [theme]="'dp-material'" formControlName="date" type="text">
               <i aria-hidden="true" class="fas fa-calendar fa-lg fa-fw"></i>
             </div>
             <div *ngIf="form.controls.isDurationActive.value"
-                 [class.input-error]="submitted && (form.controls.durationMin.invalid || form.controls.durationHour.invalid)"
+                 [class.error-input]="submitted && (form.controls.durationMin.invalid || form.controls.durationHour.invalid)"
                  class="input-with-icon"
                  style="width: 300px;">
               <input (change)="form.controls.durationHour.value === '' ? form.controls.durationHour.setValue(0) : null"
@@ -63,7 +63,7 @@
               <i aria-hidden="true" class="fas fa-clock fa-lg fa-fw"></i>
             </div>
             <div *ngIf="form.controls.isPremium.value"
-                 [class.input-error]="submitted && form.controls.price.invalid" class="input-with-icon">
+                 [class.error-input]="submitted && form.controls.price.invalid" class="input-with-icon">
               <input formControlName="price" placeholder="Price..." type="text">
               <p>$</p>
               <i aria-hidden="true" class="fas fa-coins fa-lg fa-fw"></i>

@@ -12,8 +12,7 @@
   padding: 0 0 env(safe-area-inset-left);
 
   & .page-content {
-    min-height: 120vh;
-    overflow: auto;
+    overflow: initial;
     position: relative;
     z-index: 2;
 
@@ -100,7 +99,7 @@
 
       .hero-content {
         flex-direction: column;
-        max-width: 50vw;
+        max-width: 800px;
 
         & > * {
           flex-direction: column;

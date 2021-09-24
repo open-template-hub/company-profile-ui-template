@@ -15,6 +15,7 @@ export class Button1Component {
   @Input() success = false;
   @Input() isContribute = false;
   @Input() icon;
+  @Input() brandIcon;
   @Input() lighterContrast = false;
   @Input() hoverWithColor = true;
   @Input() mobileView = false;

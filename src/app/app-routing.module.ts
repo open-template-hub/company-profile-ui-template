@@ -13,24 +13,23 @@ import { MyProfilePageComponent } from './page/dashboard-layout/my-profile-page/
 import { PublicProfilePageComponent } from './page/dashboard-layout/public-profile-page/public-profile-page.component';
 import { AboutUsPageComponent } from './page/landing-layout/about-us-page/about-us-page.component';
 import { ContactUsPageComponent } from './page/landing-layout/contact-us-page/contact-us-page.component';
-import { CookiePolicyPageComponent } from './page/landing-layout/policy-pages/cookie-policy-page/cookie-policy-page.component';
 import { ForgetPasswordPageComponent } from './page/landing-layout/form-pages/forget-password-page/forget-password-page.component';
+import { LoginPageComponent } from './page/landing-layout/form-pages/login-page/login-page.component';
+import { ResetPasswordPageComponent } from './page/landing-layout/form-pages/reset-password-page/reset-password-page.component';
+import { SignUpPageComponent } from './page/landing-layout/form-pages/sign-up-page/sign-up-page.component';
 import { HomePageComponent } from './page/landing-layout/home-page/home-page.component';
 import { LandingLayoutComponent } from './page/landing-layout/landing-layout.component';
-import { LoginPageComponent } from './page/landing-layout/form-pages/login-page/login-page.component';
+import { CookiePolicyPageComponent } from './page/landing-layout/policy-pages/cookie-policy-page/cookie-policy-page.component';
+import { PrivacyPolicyPageComponent } from './page/landing-layout/policy-pages/privacy-policy-page/privacy-policy-page.component';
+import { TermsPageComponent } from './page/landing-layout/policy-pages/terms-page/terms-page.component';
+import { PricingPageComponent } from './page/landing-layout/pricing-page/pricing-page.component';
+import { ProductPageComponent } from './page/landing-layout/product-page/product-page.component';
 import { MaintenancePageComponent } from './page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component';
 import { NotFoundPageComponent } from './page/landing-layout/raw-content-pages/not-found-page/not-found-page.component';
-import { PricingPageComponent } from './page/landing-layout/pricing-page/pricing-page.component';
-import { PrivacyPolicyPageComponent } from './page/landing-layout/policy-pages/privacy-policy-page/privacy-policy-page.component';
-import { ProductPresentationComponent } from './component/product-represantation/product-presentation.component';
-import { ProductPageComponent } from './page/landing-layout/product-page/product-page.component';
-import { ResetPasswordPageComponent } from './page/landing-layout/form-pages/reset-password-page/reset-password-page.component';
-import { ShowroomPageComponent } from './page/landing-layout/showroom-page/showroom-page.component';
 import { SignUpSuccessPageComponent } from './page/landing-layout/raw-content-pages/sign-up-success-page/sign-up-success-page.component';
-import { SignUpPageComponent } from './page/landing-layout/form-pages/sign-up-page/sign-up-page.component';
-import { StatusPageComponent } from './page/landing-layout/status-page/status-page.component';
-import { TermsPageComponent } from './page/landing-layout/policy-pages/terms-page/terms-page.component';
 import { VerifyAccountPageComponent } from './page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component';
+import { ShowroomPageComponent } from './page/landing-layout/showroom-page/showroom-page.component';
+import { StatusPageComponent } from './page/landing-layout/status-page/status-page.component';
 import { EditProfilePageComponent } from './page/settings-layout/edit-profile-page/edit-profile-page.component';
 import { EditThemePageComponent } from './page/settings-layout/edit-theme-page/edit-theme-page.component';
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
@@ -51,7 +50,6 @@ const routes: Routes = [
       { path: URLS_RAW.cookiePolicy, component: CookiePolicyPageComponent },
       { path: URLS_RAW.privacyPolicy, component: PrivacyPolicyPageComponent },
       { path: URLS_RAW.terms, component: TermsPageComponent },
-      { path: URLS_RAW.pricing, component: PricingPageComponent },
       { path: URLS_RAW.about, component: AboutUsPageComponent },
       { path: URLS_RAW.showroom, component: ShowroomPageComponent },
       { path: URLS_RAW.signup, component: SignUpPageComponent },
@@ -61,13 +59,8 @@ const routes: Routes = [
       { path: URLS_RAW.contactUs, component: ContactUsPageComponent },
       { path: URLS_RAW.status, component: StatusPageComponent },
       { path: URLS_RAW.u + '/' + ':username', component: PublicProfilePageComponent, data: { isPublic: true } },
-      {
-        path: URLS_RAW.product + '/' + ':productLine' + '/' + ':product',
-        component: ProductPageComponent,
-        children: [
-          { path: '**', component: ProductPresentationComponent }
-        ]
-      },
+      { path: URLS_RAW.pricing + '/' + ':productLine' + '/' + ':product', component: PricingPageComponent },
+      { path: URLS_RAW.product + '/' + ':productLine' + '/' + ':product', component: ProductPageComponent },
     ]
   },
   {

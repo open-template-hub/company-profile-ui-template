@@ -1,10 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProductLinePresentationType } from 'src/app/data/product-line-presentation-type.enum';
+import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
 import { GithubProviderService } from 'src/app/service/provider/github-provider.service';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
+import { PARTNERS } from '../../../data/partner/partner.data';
 import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
 import { Product, ProductLine } from '../../../model/product/product.model';
 import { ProductService } from '../../../service/product/product.service';
@@ -15,9 +16,16 @@ import { ProductService } from '../../../service/product/product.service';
   styleUrls: [ './product-page.component.scss' ],
 } )
 export class ProductPageComponent implements OnInit, OnDestroy {
+
   URLS = URLS;
+  TESTIMONIALS = TESTIMONIALS;
+  PARTNERS = PARTNERS;
+
   environmentCommon = environmentCommon;
+
   product: Product;
+  productLineName: string;
+
   emailControl = new FormControl( '' );
 
   constructor(
@@ -32,7 +40,6 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     this.product = {
       name: '',
       description: '',
-      presentationType: ProductLinePresentationType.Image,
     } as Product;
 
     this.route.params.subscribe( params => {
@@ -41,6 +48,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
         this.router.navigate( [ URLS.notFound ] );
         return;
       }
+
+      this.productLineName = params.productLine;
 
       let productLine: ProductLine = PRODUCT_LINES.find( ( p ) => p.key === params.productLine );
 
@@ -84,5 +93,9 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.product = undefined;
+  }
+
+  redirect() {
+    window.open( this.product.href, '_blank' );
   }
 }

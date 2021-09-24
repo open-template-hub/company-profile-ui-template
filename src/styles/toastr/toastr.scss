@@ -1,4 +1,4 @@
-@use '../theme/theme.common';
+@use '../theme/color-theme.common';
 @use '../util/util';
 
 @mixin define-toast($type, $icon, $padding-left) {

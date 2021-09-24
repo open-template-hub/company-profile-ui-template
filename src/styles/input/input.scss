@@ -59,7 +59,7 @@ textarea, input, select {
     bottom: {
       width: 1px;
       style: solid;
-      color: var(--contrast);
+      color: var(--lighter-contrast);
     };
   }
 
@@ -75,7 +75,7 @@ textarea, input, select {
   padding: 8px;
 
   &::-webkit-input-placeholder {
-    color: var(--contrast);
+    color: var(--lighter-contrast);
   }
 
   &:focus {
@@ -104,7 +104,7 @@ input[type=checkbox] {
         radius: 3px;
         width: 2px;
         style: solid;
-        color: var(--contrast);
+        color: var(--lighter-contrast);
       }
 
       display: inline-block;
@@ -127,7 +127,7 @@ input[type=checkbox] {
   }
 
   &:checked + label:before {
-    color: var(--contrast);
+    color: var(--lighter-contrast);
     background-color: var(--color);
     border-color: var(--color);
   }
@@ -147,12 +147,11 @@ select {
   -moz-appearance: none; /* Firefox */
   -webkit-appearance: none; /* Safari and Chrome */
   appearance: none;
-  border: 1px solid var(--contrast);
-  background: transparent;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-  background-repeat: no-repeat;
+  border: 1px solid var(--lighter-contrast);
+  background: transparent url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat;
   background-position-x: 100%;
   background-position-y: 5px;
+  border-radius: 5px;
 }
 
 .input-with-icon, .input-with-label {
@@ -185,13 +184,13 @@ select {
 
   & i, & img {
     padding: 11px 8px;
-    color: var(--contrast);
+    color: var(--lighter-contrast);
     border-radius: 3px 0 0 3px;
     transition: 200ms;
   }
 
   & svg {
-    fill: var(--contrast);
+    fill: var(--lighter-contrast);
     border-radius: 3px 0 0 3px;
     transition: 200ms;
     width: 32px;
@@ -222,7 +221,7 @@ select {
       radius: 3px;
       width: 1px;
       style: solid;
-      color: var(--contrast);
+      color: var(--lighter-contrast);
     }
     margin-left: 1px;
     transition: 200ms;
@@ -237,7 +236,7 @@ select {
       top: 11px;
       width: 6px;
       height: 11px;
-      border: solid var(--contrast);
+      border: solid var(--lighter-contrast);
       border-width: 0 2px 2px 0;
     }
   }

@@ -15,6 +15,16 @@
     <h4>Minimizes your effort while building a new software business with our open source GitHub micro server
       templates and responsive web UI + mobile UI templates</h4>
   </div>
-  <app-timeline [timeline]="TIME_LINE">
-  </app-timeline>
+  <div class="timeline-wrapper">
+    <ng-container *ngFor="let timelineItem of OTH_TIME_LINE; index as i">
+      <app-timeline-card [timelineItem]="timelineItem" [arrow]="i % 2 === 0 ? 'left' : 'right'"
+                         [class.left]="i % 2 === 0"
+                         [class.right]="i % 2 === 1">
+      </app-timeline-card>
+      <hr class="timeline-hr"
+          [class.left]="i % 2 === 0"
+          [class.right]="i % 2 === 1"/>
+    </ng-container>
+  </div>
 </div>
+

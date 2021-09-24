@@ -1,25 +1,74 @@
-<div class="product-presentation" [ngSwitch]="product.presentationType" *ngIf="product">
-  <img *ngSwitchCase="1"
-       [src]="product.heroImage"
-       alt="oth-packages"
-       class="demonstration" [style]="!product.heroImage ? 'display: none' : ''"/>
+<ng-container *ngIf="product">
+  <div class="product-presentation">
+    <ng-container [ngSwitch]="productLineName">
+      <ng-container [ngSwitch]="product.key" *ngSwitchCase="'services'">
+        <app-card
+            [body]="body" [cardClass]="'transparent-card'" class="features-card">
+          <ng-template #body>
+            <div class="body">
+              <h5>Why Open Template Hub?</h5>
+              <ng-container *ngFor="let feature of product.features">
+                <h5>{{ feature.name }}</h5>
 
-  <app-card1 *ngSwitchCase="4" [enableHeader]="false">
-    <div body class="auth-server-social-login-wrapper">
-      <div class="social-login-wrapper">
-        <img [src]="brand.brandLogo" alt="logo" class="brand-logo" width="100"/>
-        <i aria-hidden="true" class="fa fa-check-circle"></i>
-        <app-swiper-wrapper [partners]="SOCIAL_LOGIN_PARTNERS"></app-swiper-wrapper>
-      </div>
-      <h6>Auth server supports social login functionality for OAuth1 and OAuth2</h6>
-      <div class="supported-social-logins">
-        <p>Some of the preconfigured social logins:</p>
+                <div *ngFor="let detail of feature.details">
+                  <h6>{{ detail.name + ': ' + detail.description}}</h6>
+                </div>
+              </ng-container>
+            </div>
+          </ng-template>
+        </app-card>
+      </ng-container>
+      <ng-container [ngSwitch]="product.key" *ngSwitchDefault>
+        <app-card
+            *ngSwitchCase="['auth-server-template', 'payment-server-template'].includes(product.key) ? product.key : ''"
+            [body]="body" [footer]="footer" [cardClass]="'transparent-card'" class="presentation-card">
+          <ng-template #body>
+            <div class="body">
+              <div class="social-login-wrapper">
+                <img [src]="brand.brandLogo" alt="logo" class="brand-logo" width="80"/>
+                <i aria-hidden="true" class="fa fa-check-circle"></i>
+                <app-swiper-wrapper
+                    [partners]="product.key === 'auth-server-template' ? SOCIAL_LOGIN_PARTNERS : PAYMENT_PARTNERS"></app-swiper-wrapper>
+              </div>
+              <h5 *ngIf="product.key === 'auth-server-template'">Auth server supports social login functionality for
+                OAuth1
+                and OAuth2</h5>
+              <h5 *ngIf="product.key === 'payment-server-template'">Integrate your servers with payment solution
+                providers
+                in minutes</h5>
+            </div>
+          </ng-template>
+          <ng-template #footer>
+            <div class="footer theme-color-lighter-3-border">
+              <p>Some of the preconfigured systems:</p>
+              <p>
         <span
-            *ngFor="let partner of SOCIAL_LOGIN_PARTNERS; last as isLast">{{ partner.name + ( !isLast ? ',' : '' ) + ' ' | titlecase }}</span>
-      </div>
-    </div>
-  </app-card1>
-  <app-animated-code-editor *ngSwitchCase="3"
-                            [commandLines]="product.commandLines">
-  </app-animated-code-editor>
-</div>
+            *ngFor="let partner of (product.key === 'auth-server-template' ? SOCIAL_LOGIN_PARTNERS : PAYMENT_PARTNERS); last as isLast">{{ partner.name + ( !isLast ? ',' : '' ) + ' ' | titlecase }}</span>
+              </p>
+            </div>
+          </ng-template>
+        </app-card>
+        <app-animated-code-editor
+            *ngSwitchCase="['server-generator', 'app-generator'].includes(product.key) ? product.key : ''"
+            [commandLines]="product.commandLines">
+        </app-animated-code-editor>
+        <app-card *ngSwitchDefault
+            [body]="body" [cardClass]="'transparent-card'" class="features-card">
+          <ng-template #body>
+            <div class="body">
+              <h5>Why Open Template Hub?</h5>
+              <ng-container *ngFor="let feature of product.features">
+                <h5>{{ feature.name }}</h5>
+
+                <div *ngFor="let detail of feature.details">
+                  <h6>{{ detail.name + ': ' + detail.description}}</h6>
+                </div>
+              </ng-container>
+            </div>
+          </ng-template>
+        </app-card>
+
+      </ng-container>
+    </ng-container>
+  </div>
+</ng-container>

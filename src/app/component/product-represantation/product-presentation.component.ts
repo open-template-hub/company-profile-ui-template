@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
@@ -14,30 +14,37 @@ import { ThemeService } from '../../service/theme/theme.service';
 } )
 export class ProductPresentationComponent {
 
-  product: Product = undefined;
+  @Input() product: Product;
+  @Input() productLineName: string;
 
   brand = {
     brandLogo: '',
   };
 
   SOCIAL_LOGIN_PARTNERS: Partner[] = [];
+  PAYMENT_PARTNERS: Partner[] = [];
 
   constructor(
       public router: Router,
       private productService: ProductService,
       private themeService: ThemeService
   ) {
-    this.productService.product.subscribe( product => {
-      this.product = product;
-    } );
-
     this.brand = this.themeService.brand;
 
     for ( const website in environment.oauth ) {
       // filter only oauth configured websites
-      if ( environmentCommon.website[ website ].tag && environmentCommon.website[ website ].logo ) {
+      if ( environmentCommon.website[ website ].logo ) {
         this.SOCIAL_LOGIN_PARTNERS.push( { brandLogo: environmentCommon.website[ website ].logo, name: website } );
       }
     }
+
+    for ( const website in environment.payment ) {
+      // filter only oauth configured websites
+      if ( environmentCommon.website[ website ].logo ) {
+        this.PAYMENT_PARTNERS.push( { brandLogo: environmentCommon.website[ website ].logo, name: website } );
+      }
+    }
+
+    console.log(this.PAYMENT_PARTNERS);
   }
 }

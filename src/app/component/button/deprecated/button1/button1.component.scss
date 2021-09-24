@@ -88,6 +88,15 @@
   padding-bottom: 0.8em;
 }
 
+.button1.github {
+  background-color: var(--github);
+  color: white;
+
+  &:hover {
+    color: white;
+  }
+}
+
 @media only screen and (max-width: 999px) {
   .button1.mobile-view {
     width: -webkit-fill-available;
@@ -108,10 +117,6 @@
 }
 
 @media (hover: hover) {
-  .button1.hover-with-color:hover {
-    color: var(--darker-contrast);
-  }
-
   .button1:hover {
     box-shadow: 0 3px 15px 1px var(--shadow);
   }
@@ -132,6 +137,10 @@
 
   .button1.hover-with-color.always-dark:hover {
     color: var(--darker-contrast-dark-mode);
+  }
+
+  .button1.theme-color:hover {
+    color: white;
   }
 
   .button1.selected:hover {

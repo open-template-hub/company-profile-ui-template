@@ -26,6 +26,7 @@ export class ContactUsPageComponent implements OnInit {
   submitted = false;
   URLS = URLS;
   environmentCommon = environmentCommon;
+  emailSent = false;
 
   features = CONTACT_US_FEATURES;
   countries = COUNTRIES;
@@ -84,16 +85,20 @@ export class ContactUsPageComponent implements OnInit {
     }
 
     if (this.form.valid) {
-      this.mailService.sendContactUsMail({
-        firstName: this.form.controls['firstName'].value,
-        lastName: this.form.controls['secondName'].value,
-        email: this.form.controls['workEmail'].value,
-        phone: this.form.controls['workPhone'].value,
-        website: this.form.controls['companyWebsite'].value,
-        companySize: this.form.controls['companySize'].value,
-        country: this.form.controls['country'].value,
-        message: this.form.controls['anythingElse'].value,
-      });
+      this.mailService
+        .sendContactUsMail({
+          firstName: this.form.controls.firstName.value,
+          lastName: this.form.controls.secondName.value,
+          email: this.form.controls.workEmail.value,
+          phone: this.form.controls.workPhone.value,
+          website: this.form.controls.companyWebsite.value,
+          companySize: this.form.controls.companySize.value,
+          country: this.form.controls.country.value,
+          message: this.form.controls.anythingElse.value,
+        })
+        .subscribe((data) => {
+          this.emailSent = data.success;
+        });
     }
   }
 

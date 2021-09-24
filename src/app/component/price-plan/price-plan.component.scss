@@ -1,21 +1,11 @@
-.available-plans-button {
-  width: 12em;
-  border: none;
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--card);
-  background-color: var(--theme-color);
-  cursor: pointer;
-  transition: 0.2s ease;
-  vertical-align: text-bottom;
-  height: 35px;
-  margin-top: 24px;
-}
-
 .column-feature {
   min-width: 20%;
   text-align: center;
   padding: 15px;
+
+  & p {
+    padding-bottom: 20px;
+  }
 }
 
 .column-header-feature {

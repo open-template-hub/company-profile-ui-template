@@ -13,6 +13,7 @@ export class ExternalRedirectPageComponent {
   href: any;
   info: string;
   website: any;
+  error = false;
 
   brand = {
     brandLogo: '',
@@ -29,6 +30,10 @@ export class ExternalRedirectPageComponent {
     this.brand = this.themeService.brand;
 
     this.route.queryParams.subscribe( ( params ) => {
+      if ( !params.href ) {
+        this.router.navigate( [ URLS.notFound ] );
+      }
+
       this.href = params.href;
       this.info = params.info;
 
@@ -40,14 +45,21 @@ export class ExternalRedirectPageComponent {
       }
 
       if ( !this.website ) {
-        const url = new URL( this.href );
+        let url;
 
-        const favicon =
-            'https://www.google.com/s2/favicons?sz=64&domain=' + url.origin;
+        try {
+          url = new URL( this.href );
 
-        this.website = {
-          logo: favicon,
-        };
+          const favicon =
+              'https://www.google.com/s2/favicons?sz=64&domain=' + url.origin;
+
+          this.website = {
+            logo: favicon,
+          };
+        } catch ( e ) {
+          console.error( 'Not valid URL', e );
+          this.error = true;
+        }
       }
     } );
   }

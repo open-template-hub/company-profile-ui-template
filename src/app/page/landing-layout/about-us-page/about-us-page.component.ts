@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TIME_LINE } from 'src/app/data/timeline/timeline.data';
+import { OTH_TIME_LINE } from 'src/app/data/timeline/timeline.data';
 import { EMPLOYEES } from 'src/app/data/employees/employees.data'
 
 @Component( {
@@ -9,7 +9,7 @@ import { EMPLOYEES } from 'src/app/data/employees/employees.data'
 } )
 export class AboutUsPageComponent {
 
-  TIME_LINE = TIME_LINE;
+  OTH_TIME_LINE = OTH_TIME_LINE;
   EMPLOYEES = EMPLOYEES;
 
   constructor() {

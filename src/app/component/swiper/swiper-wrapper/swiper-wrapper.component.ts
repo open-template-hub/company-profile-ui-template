@@ -16,5 +16,6 @@ export class SwiperWrapperComponent {
   @Input() isNavigationEnabled = false;
   @Input() isPaginationEnabled = false;
   @Input() isGrayscale = false;
+  @Input() height = 80;
   @Input() breakpoints: any = {};
 }

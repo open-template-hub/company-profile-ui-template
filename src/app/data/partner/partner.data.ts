@@ -1,10 +1,11 @@
 import { Partner } from '../../model/partner/partner.model';
 
 export const PARTNERS: Partner[] = [
-  { name: 'github', brandLogo: '../../../../assets/common/partners/github-logo.png' },
-  { name: 'aws', brandLogo: '../../../../assets/common/partners/aws-logo.png' },
-  { name: 'heroku', brandLogo: '../../../../assets/common/partners/heroku-logo.png' },
-  { name: 'google', brandLogo: '../../../../assets/common/partners/google-logo.png' },
-  { name: 'stripe', brandLogo: '../../../../assets/common/partners/stripe-logo.png' },
-  { name: 'netlify', brandLogo: '../../../../assets/common/partners/netlify-logo.png' },
+  { name: 'github', brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/companies/logo-wide/github.png' },
+  { name: 'aws', brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/companies/logo-wide/aws.png' },
+  { name: 'heroku', brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/companies/logo-wide/heroku.png' },
+  { name: 'google', brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/companies/logo-wide/google.png' },
+  { name: 'stripe', brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/companies/logo-wide/stripe.png' },
+  { name: 'netlify', brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/companies/logo-wide/netlify.png' },
+  { name: 'oracle', brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/companies/logo-wide/oracle.png' },
 ];

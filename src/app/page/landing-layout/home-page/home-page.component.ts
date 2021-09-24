@@ -19,7 +19,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 } )
 export class HomePageComponent implements AfterViewInit {
   npmDownloadCounter = { count: 0, id: 'npmDownloadCounterElement' };
-  serverTypesCounter = { count: 6, id: 'serverTypesCounterElement' };
+  serverTypesCounter = { count: 7, id: 'serverTypesCounterElement' };
   uiTypesCounter = { count: 3, id: 'uiTypesCounterElement' };
 
   brand = {

@@ -1,5 +1,24 @@
 @use '../splash-layout.component';
 
+.splash-content {
+  .information-with-icon {
+    width: 100%;
+    position: relative;
+    margin-top: 22px;
+    margin-bottom: 50px;
+    color: var(--color);
+
+    & p {
+      padding: 0;
+    }
+
+    & i {
+      position: relative;
+      padding-bottom: 15px;
+    }
+  }
+}
+
 @media only screen and (max-width: 999px) {
   .splash-content {
     margin-top: 18vh;
@@ -16,5 +35,17 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .information-with-icon {
+    max-width: 85vw;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .information-with-icon {
+    max-width: 35vw;
   }
 }

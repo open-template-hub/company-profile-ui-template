@@ -79,7 +79,8 @@
   <ng-template #footer>
     <div class="footer"
          [class.success-border]="overallSystemStatus.overall === 'UP'"
-         [class.error-border]="overallSystemStatus.overall === 'DOWN'">
+         [class.error-border]="overallSystemStatus.overall === 'DOWN'"
+         [class.warning-border]="!overallSystemStatus.overall">
       <small>{{ overallSystemStatus.checkDate ? 'Last check ' + ( overallSystemStatus.checkDate | date: 'dd MMM, HH:mm:ss' ) : '' }}</small>
       <small *ngIf="overallSystemStatus.overall === 'UP'">All systems are online</small>
     </div>

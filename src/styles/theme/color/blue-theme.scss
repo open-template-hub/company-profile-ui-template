@@ -1,32 +1,30 @@
 :root {
 
-  --theme-color-blue-theme: #4098d6;
+  --theme-color-blue-theme: #009ACD;
   --theme-color-default-theme: var(--theme-color-blue-theme);
 
-  --theme-color-blue-theme-lighter-1: #57abd8;
-  --theme-color-blue-theme-lighter-2: #67b7da;
-  --theme-color-blue-theme-lighter-3: #78c1dc;
-  --theme-color-blue-theme-lighter-4: #84c2dc;
-  --theme-color-blue-theme-lighter-5: #8cbedd;
-  --theme-color-blue-theme-lighter-6: #acd5e6;
-  --theme-color-blue-theme-lighter-7: #bedfeb;
-  --theme-color-blue-theme-lighter-8: #d9eef3;
-  --theme-color-blue-theme-lighter-9: #f0f8fa;
+  --theme-color-blue-theme-lighter-1: #12a1d0;
+  --theme-color-blue-theme-lighter-2: #24a8d4;
+  --theme-color-blue-theme-lighter-3: #36afd7;
+  --theme-color-blue-theme-lighter-4: #48b6db;
+  --theme-color-blue-theme-lighter-5: #5abdde;
+  --theme-color-blue-theme-lighter-6: #6cc4e2;
+  --theme-color-blue-theme-lighter-7: #a3daec;
+  --theme-color-blue-theme-lighter-8: #c7e8f3;
+  --theme-color-blue-theme-lighter-9: #ebf6fa;
 
-  --theme-color-blue-theme-darker-1: #4a9fc4;
-  --theme-color-blue-theme-darker-2: #498db2;
-  --theme-color-blue-theme-darker-3: #4a7895;
-  --theme-color-blue-theme-darker-4: #4a7785;
-  --theme-color-blue-theme-darker-5: #415867;
-  --theme-color-blue-theme-darker-6: #475a64;
-  --theme-color-blue-theme-darker-7: #445058;
-  --theme-color-blue-theme-darker-8: #41484d;
-  --theme-color-blue-theme-darker-9: #404142;
-
-  --theme-blue-theme-background: #1e7aab;
+  --theme-color-blue-theme-darker-1: #0392c2;
+  --theme-color-blue-theme-darker-2: #078bb7;
+  --theme-color-blue-theme-darker-3: #0b84ac;
+  --theme-color-blue-theme-darker-4: #0f7da1;
+  --theme-color-blue-theme-darker-5: #127596;
+  --theme-color-blue-theme-darker-6: #166e8b;
+  --theme-color-blue-theme-darker-7: #22596b;
+  --theme-color-blue-theme-darker-8: #294a55;
+  --theme-color-blue-theme-darker-9: #313c3f;
 
   --hover-blue-theme-lighter: rgba(64, 152, 214, 0.3);
-  --hover-blue-theme-darker: rgba(27, 67, 88, 0.6);
+  --hover-blue-theme-darker: rgba(64, 152, 214, 0.6);
 }
 
 :root .blue-theme, .light-theme.blue-theme {

@@ -3,26 +3,27 @@ import { Router } from '@angular/router';
 import { URLS } from '../../data/constant';
 import { Product } from '../../model/product/product.model';
 
-@Component({
+@Component( {
   selector: 'app-price-plan',
   templateUrl: './price-plan.component.html',
-  styleUrls: ['./price-plan.component.scss']
-})
+  styleUrls: [ './price-plan.component.scss' ]
+} )
 export class PricePlanComponent {
-  URLS = URLS
-  @Input() product: Product
+  URLS = URLS;
 
-  hiddenMainFeatures = new Set()
+  @Input() product: Product;
+  @Input() productLineName: string;
 
-  constructor(
-    public router: Router
-  ) { }
+  hiddenMainFeatures = new Set();
 
-  accordionClicked(coreFeature: string) {
-    if( this.hiddenMainFeatures.has( coreFeature ) ) {
-      this.hiddenMainFeatures.delete( coreFeature )
+  constructor( public router: Router ) {
+  }
+
+  accordionClicked( coreFeature: string ) {
+    if ( this.hiddenMainFeatures.has( coreFeature ) ) {
+      this.hiddenMainFeatures.delete( coreFeature );
     } else {
-      this.hiddenMainFeatures.add( coreFeature )
+      this.hiddenMainFeatures.add( coreFeature );
     }
   }
 }

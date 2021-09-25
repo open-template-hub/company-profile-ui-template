@@ -5,8 +5,8 @@ on:
     - cron: '0 8 * * 1'
 
 jobs:
-  reset-dependency-update-from-develop:
-    name: 'Reset Dependency Update From Develop'
+  cron-dependency-update:
+    name: 'Cron Dependency Update'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -28,11 +28,13 @@ jobs:
       - name: NPM Update
         run: npm up
       - name: NPM Install
-        run: npm install
+        run: npm i
       - name: Update Outdated Packages
-        run: node dependency-checker.ts > OUTDATED.md
+        run: npm run outdated
+      - name: Build
+        run: npm run buildProd
 
-      - name: Git Commit and Push Force
+      - name: Git Commit and Push by Force
         run: |
           git config --global user.email "furknyavuz@gmail.com"
           git config --global user.name "Furkan Yavuz"

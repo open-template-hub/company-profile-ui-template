@@ -20,26 +20,30 @@ console.log(
     '</h1>\n' +
     '\n' +
     'Run npm update to update outdated packages below with your own risk.\n'
-)
+);
 
 for ( const line of lines ) {
-  if (line.length === 0) {
+  if ( line.length === 0 ) {
     continue;
   }
 
   if ( lines.indexOf( line ) === 0 ) {
     columnIndexes[ 0 ] = line.indexOf( 'Current' );
-    columnIndexes[ 1 ] = line.indexOf( 'Wanted' )  + 3;
+    columnIndexes[ 1 ] = line.indexOf( 'Wanted' ) + 3;
     columnIndexes[ 2 ] = line.indexOf( 'Latest' ) + 6;
     columnIndexes[ 3 ] = line.indexOf( 'Location' ) + 9;
   }
 
   let modifiedLine = line;
 
-  for ( const columnIndex of columnIndexes ) {
-    modifiedLine = modifiedLine.substring( 0, columnIndex ) + ' | ' + modifiedLine.substring( columnIndex, modifiedLine.length );
+  if ( columnIndexes [ 0 ] >= 0 ) {
+    for ( const columnIndex of columnIndexes ) {
+      modifiedLine = modifiedLine.substring( 0, columnIndex ) + ' | ' + modifiedLine.substring( columnIndex, modifiedLine.length );
+    }
+    console.log( '| ' + modifiedLine + ' |' );
+  } else {
+    console.log( modifiedLine );
   }
-  console.log( '| ' + modifiedLine + ' |' );
 
   if ( lines.indexOf( line ) === 0 ) {
     console.log( '| --- | --- | --- | --- | --- |' );

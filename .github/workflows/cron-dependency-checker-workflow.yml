@@ -1,0 +1,36 @@
+name: Cron Dependency Checker Workflow
+
+on:
+  schedule:
+    - cron: '* * * * *'
+
+jobs:
+  reset-demo-from-develop:
+    name: 'Reset Demo From Develop'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
+          ref: 'workflow/dependency-update'
+
+      - name: Hard Reset Demo From Develop
+        run: |
+          git fetch origin develop:develop
+          git reset --hard develop
+
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: NPM Umpdate
+        run: npm up
+      - name: NPM Umpdate
+        run: node dependency-checker.ts > OUTDATED.md
+
+      - name: Git Push Force
+        run: |
+          git commit -a -m
+          git push -f

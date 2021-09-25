@@ -8,7 +8,7 @@ if [ $NODE_ENV = "development" ]; then
   eval "$build_dev"
 fi
 
-build_prod='ng build --prod'
+build_prod='ng build --configuration=production'
 if [ $NODE_ENV = "production" ]; then
   echo "running $build_prod ..."
   eval "$build_prod"

@@ -180,16 +180,22 @@ Refer to **[OUTDATED.md](OUTDATED.md)** to see outdated npm packages and update 
 
 ## Contributing
 
-Refer to **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** to see contributor covenant code of conduct.
+Refer to **[CONTRIBUTING.md](CONTRIBUTING.md)** to see how to contribute to Open Template Hub.
 
-* Fork it
-* Create your update branch (git checkout -b my-feature-branch)
-* Commit your changes (git commit -am 'Add some features')
-* Push to the branch (git push origin my-feature-branch)
-* Create new Pull Request
+<br/>
+
+## Code of Conduct
+
+Refer to **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** to see contributor covenant code of conduct.
 
 <br/>
 
 ## LICENSE
 
 The source code for this project is released under the [MIT License](LICENSE).
+
+
+
+
+
+<table align="right"><tr><td><a href="https://opentemplatehub.com"><img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png" width="50px" alt="oth"/></a></td><td><b>Open Template Hub © 2021</b></td></tr></table>

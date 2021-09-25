@@ -180,11 +180,15 @@ Refer to **[OUTDATED.md](OUTDATED.md)** to see outdated npm packages and update 
 
 ## Contributing
 
+Refer to **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** to see contributor covenant code of conduct.
+
 * Fork it
 * Create your update branch (git checkout -b my-feature-branch)
 * Commit your changes (git commit -am 'Add some features')
 * Push to the branch (git push origin my-feature-branch)
 * Create new Pull Request
+
+<br/>
 
 ## LICENSE
 

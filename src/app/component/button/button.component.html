@@ -1,0 +1,19 @@
+<button class="button" [class]="buttonClass + ' ' + buttonType">
+  <ng-container *ngTemplateOutlet="icon || defaultIcon">
+    <!-- icon of the card -->
+  </ng-container>
+  <ng-template #defaultIcon>
+    <i class="icon" *ngIf="defaultIconContent">
+      {{ defaultIconContent }}
+    </i>
+  </ng-template>
+
+  <ng-container *ngTemplateOutlet="text || defaultText">
+    <!-- Text of the card -->
+  </ng-container>
+  <ng-template #defaultText>
+    <ng-container *ngIf="defaultText">
+      {{ text }}
+    </ng-container>
+  </ng-template>
+</button>

@@ -1,0 +1,60 @@
+@use '../../../styles/util/util';
+
+@mixin default-button {
+  padding: 0.8em 2.2em;
+  background-color: var(--color);
+  transition: 200ms ease;
+  margin: 0.25em 0.25em 1em;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin default-button-shadow {
+  box-shadow: 0 3px 15px 1px var(--shadow);
+}
+
+.button {
+  // Include
+  @include default-button;
+
+  // Position
+  position: relative;
+
+  // Color
+  color: var(--contrast);
+
+  // Design
+  border: none;
+  cursor: pointer;
+
+  // Aligning
+  vertical-align: text-bottom;
+
+  // Font
+  font-weight: 300;
+  font-size: 14px;
+
+  &:hover {
+    @include default-button-shadow;
+  }
+
+  // Button Types
+  &.button-rounded-box {
+    @include util.top-right-bottom-left-rounded-box;
+  }
+
+  // Social
+  &.github {
+    background-color: var(--github);
+    color: white;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &.theme {
+    color: whitesmoke;
+    background-color: var(--theme-color);
+  }
+}

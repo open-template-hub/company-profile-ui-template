@@ -34,5 +34,7 @@ jobs:
 
       - name: Git Commit and Push Force
         run: |
+          git config --global user.email "furknyavuz@gmail.com"
+          git config --global user.name "Furkan Yavuz"
           git commit -a -m "Workflow/dependency update"
           git push -f

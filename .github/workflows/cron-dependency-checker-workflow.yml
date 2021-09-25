@@ -27,8 +27,12 @@ jobs:
 
       - name: NPM Update
         run: npm up
+      - name: NPM Install
+        run: npm i
       - name: Update Outdated Packages
-        run: node dependency-checker.ts > OUTDATED.md
+        run: npm run outdated
+      - name: Build
+        run: npm run buildProd
 
       - name: Git Commit and Push by Force
         run: |

@@ -16,3 +16,4 @@ Run npm update to update outdated packages below with your own risk.
 | Package                 | Current   | Wanted   | Latest   | Location |
 | --- | --- | --- | --- | --- |
 | @ng-toolkit/universal   |  1.1.51   | 1.1.51   |  8.1.0   | company-profile-ui-template |
+| typescript              |   4.3.5   |  4.3.5   |  4.4.3   | company-profile-ui-template |

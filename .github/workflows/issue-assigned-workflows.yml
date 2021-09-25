@@ -6,7 +6,7 @@ on:
 
 jobs:
   automate-project-columns:
-    name: "Automate Project Columns"
+    name: 'Automate Project Columns'
     runs-on: ubuntu-latest
 
     steps:

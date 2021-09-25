@@ -5,11 +5,11 @@ on:
     paths-ignore:
       - 'package.json'
     branches:
-      - "master"
+      - 'master'
 
 jobs:
   bump-version:
-    name: "Update Version"
+    name: 'Update Version'
     runs-on: ubuntu-latest
 
     steps:
@@ -30,7 +30,7 @@ jobs:
           token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
 
   create-version-update-pr:
-    name: "Create Version Update PR"
+    name: 'Create Version Update PR'
     runs-on: ubuntu-latest
     needs: bump-version
 

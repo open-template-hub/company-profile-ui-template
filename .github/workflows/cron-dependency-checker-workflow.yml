@@ -5,8 +5,8 @@ on:
     - cron: '0 8 * * 1'
 
 jobs:
-  cron-dependency-update:
-    name: 'Cron Dependency Update'
+  cron-dependency-checker:
+    name: 'Cron Dependency Checker'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -25,11 +25,9 @@ jobs:
         with:
           node-version: 12
 
-      - name: NPM Update
-        run: npm up
       - name: NPM Install
         run: npm i
-      - name: Update Outdated Packages
+      - name: Npm Outdated
         run: npm run outdated
       - name: Build
         run: npm run buildProd

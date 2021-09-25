@@ -18,6 +18,7 @@
     "startLocalFromIPhoneToStagingApi": "node version-generator.ts > ./src/environments/version.ts && ng serve --configuration=local-to-staging-api --host 0.0.0.0 --disable-host-check true",
     "startStaging": "node version-generator.ts > ./src/environments/version.ts && node server.js --configuration=staging",
     "start": "node server.js --configuration=production",
+    "outdated": "node dependency-checker.ts > OUTDATED.md",
     "test": "ng test"
   },
   "dependencies": {

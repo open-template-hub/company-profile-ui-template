@@ -155,6 +155,12 @@ We are using **[webhint](https://webhint.io)** to generate webhint report at the
 
 <br/>
 
+## Outdated
+
+Refer to **[OUTDATED.md](OUTDATED.md)** to see outdated npm packages and update them with your own risk.
+
+<br/>
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->

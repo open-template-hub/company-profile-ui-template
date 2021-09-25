@@ -1,18 +1,14 @@
-# dependabot.yml file with
-# customized npm configuration
-
 version: 2
-updates:
-  # Keep npm dependencies up to date
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "monday"
-      time: "08:00"
-      timezone: "Etc/GMT"
-    # Raise all npm pull requests with custom labels
-    labels:
-      - "workflow"
-    milestone: 1
 
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '08:00'
+      timezone: 'Etc/GMT'
+    target-branch: 'workflow/dependency-update'
+    labels:
+      - 'workflow'
+    milestone: 1

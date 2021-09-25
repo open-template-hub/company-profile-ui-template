@@ -2,11 +2,11 @@ name: Cron Dependency Checker Workflow
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '30 * * * *'
 
 jobs:
-  reset-demo-from-develop:
-    name: 'Reset Demo From Develop'
+  reset-dependency-update-from-develop:
+    name: 'Reset Dependency Update From Develop'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -15,7 +15,7 @@ jobs:
           token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
           ref: 'workflow/dependency-update'
 
-      - name: Hard Reset Demo From Develop
+      - name: Hard Reset Dependency Update From Develop
         run: |
           git fetch origin develop:develop
           git reset --hard develop

@@ -35,6 +35,7 @@
     "@fullcalendar/angular": "^5.8.0",
     "@fullcalendar/daygrid": "^5.8.0",
     "@fullcalendar/interaction": "^5.8.0",
+    "@ng-toolkit/universal": "^1.1.51",
     "@stripe/stripe-js": "^1.15.1",
     "@swimlane/ngx-charts": "^19.0.1",
     "@types/simple-icons": "^5.0.0",

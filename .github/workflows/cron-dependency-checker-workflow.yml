@@ -32,5 +32,5 @@ jobs:
 
       - name: Git Push Force
         run: |
-          git commit -a -m
+          git commit -a -m "Workflow/dependency update"
           git push -f

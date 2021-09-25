@@ -75,7 +75,7 @@
   @include prefix(border-radius, 99em, moz webkit);
 }
 
-.top-right-bottom-left-rounded-box {
+@mixin top-right-bottom-left-rounded-box {
   @include prefix(border-bottom-left-radius, 12px, moz webkit);
   @include prefix(border-top-right-radius, 6px, moz webkit);
 }

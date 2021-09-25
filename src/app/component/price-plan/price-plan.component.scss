@@ -1,11 +1,15 @@
 .column-feature {
-  min-width: 20%;
+  min-width: 29%;
   text-align: center;
   padding: 15px;
 
   & p {
     padding-bottom: 20px;
   }
+}
+
+app-button {
+  min-width: 220px;
 }
 
 .column-header-feature {
@@ -145,5 +149,9 @@ p {
 
   .available-plans-content {
     flex-direction: column;
+  }
+
+  app-button {
+    min-width: auto;
   }
 }

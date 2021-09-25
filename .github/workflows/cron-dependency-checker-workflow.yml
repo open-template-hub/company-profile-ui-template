@@ -2,7 +2,7 @@ name: Cron Dependency Checker Workflow
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '0 8 * * 1'
 
 jobs:
   reset-dependency-update-from-develop:
@@ -36,5 +36,5 @@ jobs:
         run: |
           git config --global user.email "furknyavuz@gmail.com"
           git config --global user.name "Furkan Yavuz"
-          git commit -a -m "Workflow/dependency update"
+          git commit -am "Workflow/dependency update"
           git push -f

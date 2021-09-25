@@ -25,12 +25,14 @@ jobs:
         with:
           node-version: 12
 
-      - name: NPM Umpdate
+      - name: NPM Update
         run: npm up
-      - name: NPM Umpdate
+      - name: NPM Install
+        run: npm install
+      - name: Update Outdated Packages
         run: node dependency-checker.ts > OUTDATED.md
 
-      - name: Git Push Force
+      - name: Git Commit and Push Force
         run: |
           git commit -a -m "Workflow/dependency update"
           git push -f

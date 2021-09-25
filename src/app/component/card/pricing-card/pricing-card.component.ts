@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { URLS } from '../../../data/constant';
 import { DEFAULT_RIBBON } from '../../../data/ribbon/ribbon.data';
 import { PricingOption } from '../../../model/pricing/pricing.model';
+import { ButtonType, ButtonClass } from '../../../component/button/button.component';
 
 @Component( {
   selector: 'app-pricing-card',
@@ -10,7 +11,8 @@ import { PricingOption } from '../../../model/pricing/pricing.model';
   styleUrls: [ './pricing-card.component.scss' ]
 } )
 export class PricingCardComponent {
-
+  ButtonType = ButtonType
+  ButtonClass = ButtonClass
   URLS = URLS;
 
   @Input() pricingOption: PricingOption = {

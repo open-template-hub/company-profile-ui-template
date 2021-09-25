@@ -28,10 +28,17 @@
   <!-- Footer -->
   <ng-template #footer>
     <div class="footer">
-      <app-button1 (click)="routeToEvent(pricingOption.link ? pricingOption.link : URLS.maintenance)"
-                   [icon]="'shopping-cart'" [isSleekButton]="true" [relativeToParent]="true" [text]="'Buy Now'"
-                   [themeColor]="'default'">
-      </app-button1>
+      <app-button [text]="text" [icon]="icon" [buttonType]="ButtonType.RoundedBox" [buttonClass]="ButtonClass.Theme">
+        <!-- Icon -->
+        <ng-template #icon>
+          <i [class]="'fas fa-' + 'shopping-cart' + ' fa-lg fa-fw'" aria-hidden="true"></i>
+        </ng-template>
+
+        <!-- Text -->
+        <ng-template #text>
+          <span class="button-text">Buy Now</span>
+        </ng-template>
+      </app-button>
     </div>
   </ng-template>
 </app-card>

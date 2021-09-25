@@ -9,6 +9,7 @@ import { PARTNERS } from '../../../data/partner/partner.data';
 import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
 import { Product, ProductLine } from '../../../model/product/product.model';
 import { ProductService } from '../../../service/product/product.service';
+import { ButtonType, ButtonClass } from '../../../component/button/button.component';
 
 @Component( {
   selector: 'app-product-page',
@@ -16,6 +17,8 @@ import { ProductService } from '../../../service/product/product.service';
   styleUrls: [ './product-page.component.scss' ],
 } )
 export class ProductPageComponent implements OnInit, OnDestroy {
+  ButtonType = ButtonType
+  ButtonClass = ButtonClass
 
   URLS = URLS;
   TESTIMONIALS = TESTIMONIALS;

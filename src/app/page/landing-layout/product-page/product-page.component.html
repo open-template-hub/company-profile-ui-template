@@ -10,13 +10,27 @@
         <div class="body">
           <h5>{{ product.description }}</h5>
           <div class="open-source" *ngIf="product.openSource">
-            <app-button1 [isSleekButton]="true" (click)="redirect()" [brandIcon]="'github'"
-                         class="top-right-bottom-left-rounded-box" [text]="'Open Source'">
-            </app-button1>
-            <app-button1 [isSleekButton]="true" [themeColor]="'default'"
-                         (click)="router.navigate([URLS.contactUs])"
-                         class="top-right-bottom-left-rounded-box" [text]="'Professional help'">
-            </app-button1>
+            <app-button (click)="redirect()" [icon]="icon" [text]="openSourceText"
+                        [buttonClass]="ButtonClass.Github"
+                        [buttonType]="ButtonType.RoundedBox">
+              <!-- Icon -->
+              <ng-template #icon>
+                <i [class]="'fab fa-' + 'github' + ' fa-lg fa-fw'" aria-hidden="true"></i>
+              </ng-template>
+
+              <!-- Text -->
+              <ng-template #openSourceText>
+                Open Source
+              </ng-template>
+            </app-button>
+
+            <app-button (click)="router.navigate([URLS.contactUs])"
+                        [text]="proHelp" [buttonType]="ButtonType.RoundedBox" [buttonClass]="ButtonClass.Theme">
+              <!-- Text -->
+              <ng-template #proHelp>
+                Professional help
+              </ng-template>
+            </app-button>
           </div>
           <div class="request-for-demo" *ngIf="!product.openSource">
             <input
@@ -24,11 +38,13 @@
                 class="top-right-bottom-left-rounded-box"
                 placeholder="Email address"
                 type="text"/>
-            <app-button1 [isSleekButton]="true" [themeColor]="'default'"
-                         (click)="router.navigate([URLS.maintenance])"
-                         class="top-right-bottom-left-rounded-box"
-                         [text]="productLineName === 'services' ? 'Contact Us' : 'Request for Demo'">
-            </app-button1>
+            <app-button (click)="router.navigate([URLS.maintenance])"
+                        [text]="maintenanceText" [buttonType]="ButtonType.RoundedBox" [buttonClass]="ButtonClass.Theme">
+              <!-- Text -->
+              <ng-template #maintenanceText>
+                {{ productLineName === 'services' ? 'Contact Us' : 'Request for Demo' }}
+              </ng-template>
+            </app-button>
           </div>
         </div>
       </ng-template>

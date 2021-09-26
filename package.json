@@ -1,7 +1,7 @@
 {
   "name": "company-profile-ui-template",
   "description": "Company Profile UI Template in Angular",
-  "version": "2.11.0",
+  "version": "2.11.1",
   "license": "MIT",
   "scripts": {
     "buildLocal": "ng build --configuration=local",

@@ -4,7 +4,7 @@ import { ButtonClass, ButtonType } from '../../../component/button/button.compon
 @Component({
   selector: 'app-theme-button',
   templateUrl: './theme-button.component.html',
-  styleUrls: ['./theme-button.component.scss']
+  styleUrls: [ ]
 })
 export class ThemeButtonComponent implements OnChanges {
   buttonType = ButtonType.RoundedBox
@@ -13,8 +13,6 @@ export class ThemeButtonComponent implements OnChanges {
   @Input() buttonBrandIcon: string;
   @Input() buttonIcon: string;
   @Input() buttonText: string;
-
-  constructor() { }
 
   ngOnChanges( changes: SimpleChanges ) {
     if ( this.buttonBrandIcon ) {

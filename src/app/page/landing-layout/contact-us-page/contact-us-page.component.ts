@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SeoMetaData } from 'src/app/model/seo/seo.model';
 import { MailService } from 'src/app/service/mail/mail.service';
+import { SeoService } from 'src/app/service/seo/seo.service';
 import { environmentCommon } from 'src/environments/environment-common';
 import { ButtonClass } from '../../../component/button/button.component';
 import { URLS } from '../../../data/constant';
@@ -41,7 +43,8 @@ export class ContactUsPageComponent implements OnInit {
     private formBuilder: FormBuilder,
     private loadingService: LoadingService,
     private toastService: ToastService,
-    private mailService: MailService
+    private mailService: MailService,
+    private seoService: SeoService
   ) {
     this.loadingService.sharedLoading.subscribe(
       (loading) => (this.loading = loading)
@@ -62,6 +65,14 @@ export class ContactUsPageComponent implements OnInit {
       country: ['', Validators.required],
       anythingElse: ['', Validators.maxLength(500)],
     });
+
+    const seoMetaData = {
+      title: 'Contact Us',
+      description: 'Open Template Hub - Contact Us',
+      keywords: ['contact us', 'open template hub'],
+      robots: ['contact us', 'open template hub'],
+    } as SeoMetaData;
+    this.seoService.setMetaData(seoMetaData);
   }
 
   onSubmit() {

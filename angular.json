@@ -36,6 +36,11 @@
                 "glob": "favicon.ico",
                 "input": "src/assets/favicons/",
                 "output": "/"
+              },
+              {
+                "glob": "manifest.json",
+                "input": "src/",
+                "output": "/"
               }
             ],
             "styles": [
@@ -143,6 +148,11 @@
               {
                 "glob": "favicon.ico",
                 "input": "src/assets/favicons/",
+                "output": "/"
+              },
+              {
+                "glob": "manifest.json",
+                "input": "src/",
                 "output": "/"
               }
             ],

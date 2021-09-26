@@ -1,5 +1,6 @@
 @use '../../../../styles/page/page';
 @use '../../../../styles/util/util';
+@use '../landing-layout.component';
 
 .hero {
   & .hero-content.home-design {
@@ -118,10 +119,6 @@
       & .hero-content-left {
         & h1 {
           padding: 50px 0;
-        }
-
-        & h6 {
-          text-align: left;
         }
       }
 

@@ -17,7 +17,7 @@ import { ToastService } from '../../../../service/toast/toast.service';
 @Component( {
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrls: [ './login-page.component.scss', '../../landing-layout.component.scss' ]
+  styleUrls: [ './login-page.component.scss' ]
 } )
 export class LoginPageComponent implements OnInit, OnDestroy {
   loginButtonClasses = [ ButtonClass.DefaultTheme ];

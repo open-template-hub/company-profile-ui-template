@@ -15,7 +15,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 @Component( {
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: [ './home-page.component.scss', '../landing-layout.component.scss' ],
+  styleUrls: [ './home-page.component.scss' ],
 } )
 export class HomePageComponent implements AfterViewInit {
   npmDownloadCounter = { count: 0, id: 'npmDownloadCounterElement' };

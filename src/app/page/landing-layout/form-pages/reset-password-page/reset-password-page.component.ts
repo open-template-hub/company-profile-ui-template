@@ -12,7 +12,7 @@ import { ToastService } from '../../../../service/toast/toast.service';
 @Component( {
   selector: 'app-reset-password-page',
   templateUrl: './reset-password-page.component.html',
-  styleUrls: [ './reset-password-page.component.scss', '../../landing-layout.component.scss' ]
+  styleUrls: [ './reset-password-page.component.scss' ]
 } )
 export class ResetPasswordPageComponent implements OnInit, OnDestroy {
   doneButtonClasses = ButtonClass.DefaultTheme

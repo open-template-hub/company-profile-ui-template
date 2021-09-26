@@ -12,7 +12,7 @@ import { ToastService } from '../../../../service/toast/toast.service';
 @Component( {
   selector: 'app-forget-password-page',
   templateUrl: './forget-password-page.component.html',
-  styleUrls: [ './forget-password-page.component.scss', '../../landing-layout.component.scss' ]
+  styleUrls: [ './forget-password-page.component.scss' ]
 } )
 export class ForgetPasswordPageComponent implements OnInit, OnDestroy {
   sendButtonClasses = [ ButtonClass.DefaultTheme ];

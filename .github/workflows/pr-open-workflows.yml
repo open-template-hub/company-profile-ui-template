@@ -3,7 +3,7 @@ name: PR Open Workflows
 on:
   pull_request:
     types: [ opened ]
-    branches-ignore: 'workflow/dependency-update'
+    branches-ignore: [ 'workflow/dependency-update' ]
 
 jobs:
   pr-labeler:
@@ -37,21 +37,3 @@ jobs:
         uses: Code-Hex/auto-milestone-binder@v1.0.1
         with:
           github-token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
-
-  continuous-integration:
-    name: 'Npm Continuous Integration'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
-
-      - name: Install Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-
-      - name: NPM Install
-        run: npm install
-      - name: NPM Continous Integration
-        run: npm ci

@@ -1,7 +1,7 @@
-<div class="form-page">
+<div class="form-page-layout">
   <div class="hero">
     <div class="hero-content">
-      <h3>Register</h3>
+      <h2>Register</h2>
     </div>
     <app-card [body]="body">
       <!-- Body -->
@@ -13,7 +13,7 @@
             <app-social-button (click)="socialLogin(environmentCommon.website.google)"
                                [brand]="environmentCommon.website.google.cssClass"></app-social-button>
           </div>
-          <div class="login-page-middle-text flex-layout-column flex-center-center">
+          <div class="flex-layout-column flex-center-center">
             <p>or</p>
           </div>
           <form (ngSubmit)="onSubmit()" [formGroup]="form">

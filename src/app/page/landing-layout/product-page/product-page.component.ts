@@ -17,8 +17,7 @@ import { ButtonType, ButtonClass } from '../../../component/button/button.compon
   styleUrls: [ './product-page.component.scss' ],
 } )
 export class ProductPageComponent implements OnInit, OnDestroy {
-  ButtonType = ButtonType
-  ButtonClass = ButtonClass
+  defaultButtonClass = ButtonClass.DefaultTheme
 
   URLS = URLS;
   TESTIMONIALS = TESTIMONIALS;

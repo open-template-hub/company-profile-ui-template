@@ -11,8 +11,7 @@ import { ButtonType, ButtonClass } from '../../../component/button/button.compon
   styleUrls: [ './pricing-card.component.scss' ]
 } )
 export class PricingCardComponent {
-  ButtonType = ButtonType
-  ButtonClass = ButtonClass
+  defaultButtonTheme = ButtonClass.DefaultTheme
   URLS = URLS;
 
   @Input() pricingOption: PricingOption = {

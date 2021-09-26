@@ -10,27 +10,11 @@
         <div class="body">
           <h5>{{ product.description }}</h5>
           <div class="open-source" *ngIf="product.openSource">
-            <app-button (click)="redirect()" [icon]="icon" [text]="openSourceText"
-                        [buttonClass]="ButtonClass.Github"
-                        [buttonType]="ButtonType.RoundedBox">
-              <!-- Icon -->
-              <ng-template #icon>
-                <i [class]="'fab fa-' + 'github' + ' fa-lg fa-fw'" aria-hidden="true"></i>
-              </ng-template>
+            <app-theme-button (click)="redirect()" [buttonBrandIcon]="'github'" [buttonText]="'Open Source'"></app-theme-button>
 
-              <!-- Text -->
-              <ng-template #openSourceText>
-                Open Source
-              </ng-template>
-            </app-button>
+            <app-theme-button (click)="router.navigate([URLS.contactUs])"
+                              [buttonText]="'Professional help'"></app-theme-button>
 
-            <app-button (click)="router.navigate([URLS.contactUs])"
-                        [text]="proHelp" [buttonType]="ButtonType.RoundedBox" [buttonClass]="ButtonClass.Theme">
-              <!-- Text -->
-              <ng-template #proHelp>
-                Professional help
-              </ng-template>
-            </app-button>
           </div>
           <div class="request-for-demo" *ngIf="!product.openSource">
             <input
@@ -38,13 +22,9 @@
                 class="top-right-bottom-left-rounded-box"
                 placeholder="Email address"
                 type="text"/>
-            <app-button (click)="router.navigate([URLS.maintenance])"
-                        [text]="maintenanceText" [buttonType]="ButtonType.RoundedBox" [buttonClass]="ButtonClass.Theme">
-              <!-- Text -->
-              <ng-template #maintenanceText>
-                {{ productLineName === 'services' ? 'Contact Us' : 'Request for Demo' }}
-              </ng-template>
-            </app-button>
+            <app-theme-button (click)="router.navigate([URLS.maintenance])"
+                              [buttonText]="productLineName === 'services' ? 'Contact Us' : 'Request for Demo'"
+                              [buttonClasses]="defaultButtonClass"></app-theme-button>
           </div>
         </div>
       </ng-template>

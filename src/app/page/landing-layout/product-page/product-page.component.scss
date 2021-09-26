@@ -165,16 +165,6 @@ app-swiper-wrapper {
 
       & .open-source {
         padding: 50px 10px 0;
-
-        & app-button {
-          min-width: auto;
-        }
-      }
-
-      & .request-for-demo {
-        & app-button {
-          min-width: auto;
-        }
       }
     }
 
@@ -233,18 +223,10 @@ app-swiper-wrapper {
 
       & .open-source {
         padding: 50px 150px 0;
-
-        & app-button {
-          min-width: 220px;
-        }
       }
 
       & .request-for-demo {
         padding: 50px 0;
-
-        & app-button {
-          min-width: 220px;
-        }
 
         & input {
           width: 220px;

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MailService } from 'src/app/service/mail/mail.service';
 import { environmentCommon } from 'src/environments/environment-common';
+import { ButtonClass } from '../../../component/button/button.component';
 import { URLS } from '../../../data/constant';
 import {
   CONTACT_US_FEATURES,
@@ -22,6 +23,8 @@ export interface ContactUsFeatures {
   styleUrls: ['./contact-us-page.component.scss'],
 })
 export class ContactUsPageComponent implements OnInit {
+  defaultButtonTheme = ButtonClass.DefaultTheme
+
   form: FormGroup;
   submitted = false;
   URLS = URLS;

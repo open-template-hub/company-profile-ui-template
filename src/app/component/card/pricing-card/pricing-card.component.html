@@ -28,17 +28,7 @@
   <!-- Footer -->
   <ng-template #footer>
     <div class="footer">
-      <app-button [text]="text" [icon]="icon" [buttonType]="ButtonType.RoundedBox" [buttonClass]="ButtonClass.Theme">
-        <!-- Icon -->
-        <ng-template #icon>
-          <i [class]="'fas fa-' + 'shopping-cart' + ' fa-lg fa-fw'" aria-hidden="true"></i>
-        </ng-template>
-
-        <!-- Text -->
-        <ng-template #text>
-          <span class="button-text">Buy Now</span>
-        </ng-template>
-      </app-button>
+      <app-theme-button [buttonText]="'Buy Now'" [buttonClasses]="[ defaultButtonTheme ]" [buttonIcon]="'shopping-cart'"></app-theme-button>
     </div>
   </ng-template>
 </app-card>

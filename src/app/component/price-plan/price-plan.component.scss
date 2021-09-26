@@ -8,10 +8,6 @@
   }
 }
 
-app-button {
-  min-width: 220px;
-}
-
 .column-header-feature {
   width: 100%;
   padding: 12px 24px;
@@ -149,9 +145,5 @@ p {
 
   .available-plans-content {
     flex-direction: column;
-  }
-
-  app-button {
-    min-width: auto;
   }
 }

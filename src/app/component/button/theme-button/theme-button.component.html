@@ -1,0 +1,14 @@
+<app-button [icon]="icon" [text]="openSourceText"
+            [buttonClasses]="buttonClasses"
+            [buttonType]="buttonType">
+  <!-- Icon -->
+  <ng-template #icon>
+    <i *ngIf="buttonBrandIcon" [class]="'fab fa-' + buttonBrandIcon + ' fa-lg fa-fw'" aria-hidden="true"></i>
+    <i *ngIf="buttonIcon" [class]="'fas fa-' + buttonIcon + ' fa-lg fa-fw'" aria-hidden="true"></i>
+  </ng-template>
+
+  <!-- Text -->
+  <ng-template #openSourceText>
+    {{ buttonText }}
+  </ng-template>
+</app-button>

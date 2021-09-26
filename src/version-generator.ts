@@ -1,4 +1,4 @@
-const version = require( './package.json' ).version;
+const version = require( '../package.json' ).version;
 const jsdom = require( 'jsdom' );
 const { JSDOM } = jsdom;
 const fs = require( 'fs' );
@@ -12,7 +12,6 @@ JSDOM.fromFile( './src/index.html' ).then( dom => {
   const favicons = [
     dom.window.document.querySelector( '[rel="apple-touch-icon"]' ),
     dom.window.document.querySelector( '[rel="shortcut icon"]' ),
-    dom.window.document.querySelector( '[rel="manifest"]' ),
     dom.window.document.querySelector( '[rel="mask-icon"]' ),
   ];
 

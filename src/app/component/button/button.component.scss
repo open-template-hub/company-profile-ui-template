@@ -42,7 +42,7 @@
     @include util.top-right-bottom-left-rounded-box;
   }
 
-  // Social
+  // Social Themes
   &.github {
     background-color: var(--github);
     color: white;
@@ -52,8 +52,20 @@
     }
   }
 
-  &.theme {
+  // App Themes
+  &.default-theme {
     color: whitesmoke;
     background-color: var(--theme-color);
+  }
+
+  &.transparent-button {
+    background-color: transparent;
+  }
+
+  // Borders And Font Colors
+  &.border-and-font {
+    border: 1px solid var(--success);
+    color: var(--theme-color);
+    border-color: var(--theme-color);
   }
 }

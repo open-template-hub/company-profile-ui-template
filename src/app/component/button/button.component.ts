@@ -7,7 +7,17 @@ export enum ButtonType {
 export enum ButtonClass {
   // Social themes
   Github = 'github',
-  Theme = 'theme'
+
+  // App themes
+  DefaultTheme = 'default-theme',
+  Red = 'default-theme red-theme',
+  Yellow = 'default-theme yellow-theme',
+  Green = 'default-theme green-theme',
+
+  Transparent = 'transparent-button',
+
+  // Borders
+  BorderAndFontByDefaultTheme = 'border-and-font'
 }
 
 @Component({
@@ -19,7 +29,7 @@ export class ButtonComponent {
   @Input() icon: TemplateRef<any>;
   @Input() text: TemplateRef<any>;
 
-  @Input() buttonClass: ButtonClass;
+  @Input() buttonClasses: ButtonClass[];
   @Input() buttonType: ButtonType;
 
   @Input() defaultIconContent: string;

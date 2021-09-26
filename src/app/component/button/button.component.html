@@ -1,4 +1,4 @@
-<button class="button" [class]="buttonClass + ' ' + buttonType">
+<button class="button" [class]="buttonClasses.join( ' ' ) + ' ' + buttonType">
   <ng-container *ngTemplateOutlet="icon || defaultIcon">
     <!-- icon of the card -->
   </ng-container>

@@ -1,0 +1,9 @@
+app-theme-button {
+  min-width: 220px;
+}
+
+@media only screen and (max-width: 999px) {
+  app-theme-button {
+    min-width: auto;
+  }
+}

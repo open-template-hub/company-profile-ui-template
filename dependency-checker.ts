@@ -19,7 +19,7 @@ console.log(
     '(outdated packages)\n' +
     '</h1>\n' +
     '\n' +
-    'Run npm update to update outdated packages below with your own risk.\n'
+    'Following packages are not updated in the develop branch yet. So, if you want to update outdated packages on your own risk, update the package.json and install dependencies.\n'
 );
 
 for ( const line of lines ) {

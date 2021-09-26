@@ -36,5 +36,5 @@ jobs:
         run: |
           git config --global user.email "furknyavuz@gmail.com"
           git config --global user.name "Furkan Yavuz"
-          git commit -am "Workflow/dependency update"
+          git commit -am "Workflow/dependency check"
           git push -f

@@ -11,7 +11,7 @@ Open Template Hub - Company Profile UI Template v2
 (outdated packages)
 </h1>
 
-Run npm update to update outdated packages below with your own risk.
+Following packages are not updated in the develop branch yet. So, if you want to update outdated packages on your own risk, update the package.json and install dependencies.
 
 | Package                 | Current   | Wanted   | Latest   | Location |
 | --- | --- | --- | --- | --- |

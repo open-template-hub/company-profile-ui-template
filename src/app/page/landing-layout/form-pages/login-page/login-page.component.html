@@ -35,7 +35,7 @@
               </div>
             </div>
             <div class="section-submit">
-              <app-button1 [text]="'LOG IN'" [themeColor]="'default'"></app-button1>
+              <app-theme-button [buttonText]="'LOG IN'" [buttonClasses]="loginButtonClasses"></app-theme-button>
               <p>
                 Don't have an account?
                 <a [routerLink]="URLS.signup" class="theme-color-link">

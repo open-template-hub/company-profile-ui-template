@@ -80,7 +80,6 @@ import { MaintenancePageComponent } from './page/landing-layout/raw-content-page
 import { NotFoundPageComponent } from './page/landing-layout/raw-content-pages/not-found-page/not-found-page.component';
 import { SignUpSuccessPageComponent } from './page/landing-layout/raw-content-pages/sign-up-success-page/sign-up-success-page.component';
 import { VerifyAccountPageComponent } from './page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component';
-import { ShowroomPageComponent } from './page/landing-layout/showroom-page/showroom-page.component';
 import { StatusPageComponent } from './page/landing-layout/status-page/status-page.component';
 import { EditProfilePageComponent } from './page/settings-layout/edit-profile-page/edit-profile-page.component';
 import { EditThemePageComponent } from './page/settings-layout/edit-theme-page/edit-theme-page.component';
@@ -133,7 +132,6 @@ FullCalendarModule.registerPlugins( [
     EventDataComponent,
     SettingsLayoutComponent,
     SideContentComponent,
-    ShowroomPageComponent,
     MyProfilePageComponent,
     EventPageComponent,
     EventHamburgerMenuComponent,

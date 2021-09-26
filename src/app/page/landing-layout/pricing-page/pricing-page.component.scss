@@ -26,8 +26,7 @@
   .pricing-wrapper {
     @include util.flex-layout-row;
 
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
 
     width: 100%;
     margin-top: 50px;
@@ -35,8 +34,8 @@
     & > * {
       width: 300px;
       margin: {
-        left: 70px;
-        right: 70px;
+        left: 15px;
+        right: 15px;
       }
 
       &:hover {

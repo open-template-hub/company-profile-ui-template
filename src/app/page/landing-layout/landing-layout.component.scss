@@ -14,7 +14,8 @@
   height: 90px;
 }
 
-.form-page {
+.form-page-layout {
+
   & app-card {
     & .body {
       box-sizing: border-box;
@@ -34,11 +35,13 @@
     display: none;
   }
 
-  .raw-content-page {
+  .raw-content-page-layout, .form-page-layout {
     padding: 0 3vw 50px;
+    min-height: 80vh;
   }
 
-  .form-page {
+  .form-page-layout {
+
     & app-card {
       & .body {
         width: 94vw;
@@ -53,11 +56,13 @@
     display: block;
   }
 
-  .raw-content-page {
+  .raw-content-page-layout, .form-page-layout {
     padding: 0 90px 50px;
+    min-height: 50vh;
   }
 
-  .form-page {
+  .form-page-layout {
+
     & app-card {
       & .body {
         width: 400px;

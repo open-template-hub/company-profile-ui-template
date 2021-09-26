@@ -1,16 +1,20 @@
-<div class="raw-content-page">
-  <div class="hero content">
-    <div class="logo-wrapper hero-content-column">
-      <img [src]="loading ? brand.brandLogoMerge : (error ? brand.brandLogoBroken : brand.brandLogoMerged)" alt="logo"
-           class="brand-logo" height="150"/>
+<div class="raw-content-page-layout">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="logo-wrapper">
+        <img [src]="loading ? brand.brandLogoMerge : (error ? brand.brandLogoBroken : brand.brandLogoMerged)" alt="logo"
+             class="brand-logo" height="150"/>
+      </div>
+      <div>
+        <h2 *ngIf="loading">Verifying account..</h2>
+        <h2 *ngIf="!loading && error">Account verification failed</h2>
+        <h2 *ngIf="!loading && !error">Account verified 🎉</h2>
+
+        <h4 *ngIf="!loading && error" class="error-text">Something went wrong!</h4>
+        <h4 *ngIf="!loading && !error">Please proceed with login</h4>
+
+      </div>
     </div>
-    <h2 *ngIf="loading">Verifying account..</h2>
-    <h2 *ngIf="!loading && error" class="error-text">Account verification failed</h2>
-    <h2 *ngIf="!loading && !error">Account verified 🎉</h2>
-
-    <h4 *ngIf="!loading && error" class="error-text">Something went wrong!</h4>
-    <h4 *ngIf="!loading && !error">Please proceed with login</h4>
-
     <app-button1 (click)="router.navigate([URLS.root])" *ngIf="!loading && error" [isSleekButton]="true" [text]="'HOME'"
                  [themeColor]="'red'">
     </app-button1>

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
-import { attendedEventsData, EventTypes, showroomEvents } from '../../data/event/events.data';
+import { attendedEventsData, EventTypes } from '../../data/event/events.data';
 import { Event, EventCount } from '../../model/event/event.model';
 import { CategoryService } from '../category/category.service';
 
@@ -164,10 +164,6 @@ export class EventService {
       excludeCurrentUserEvents = false, limit = 20 ) {
     if ( environment.mockDataEnabled ) {
       const searchedEvents = [];
-      showroomEvents.forEach( ( val, index ) => {
-        searchedEvents.push( Object.assign( {}, val ) );
-        searchedEvents[ index ].payload = Object.assign( {}, val.payload );
-      } );
       return of( this.searchProcess( searchedEvents, eventType ) );
     } else {
       return this.http.post<any>( `${ environment.serverUrl }/event/search`, {

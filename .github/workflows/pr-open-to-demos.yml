@@ -8,7 +8,7 @@ on:
 
 jobs:
   reset-demo-from-develop:
-    name: "Reset Demo From Develop"
+    name: 'Reset Demo From Develop'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo

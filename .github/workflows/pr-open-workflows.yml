@@ -3,10 +3,11 @@ name: PR Open Workflows
 on:
   pull_request:
     types: [ opened ]
+    branches-ignore: [ 'workflow/dependency-update' ]
 
 jobs:
   pr-labeler:
-    name: "Add Label to PR"
+    name: 'Add Label to PR'
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +17,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
 
   automate-project-columns:
-    name: "Automate Project Columns"
+    name: 'Automate Project Columns'
     runs-on: ubuntu-latest
 
     steps:
@@ -28,7 +29,7 @@ jobs:
           repo-token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
 
   milestone-binder:
-    name: "Milestone Binder"
+    name: 'Milestone Binder'
     runs-on: ubuntu-latest
 
     steps:

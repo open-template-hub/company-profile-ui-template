@@ -5,9 +5,14 @@ console.info( env.parsed );
 
 const path = require( "path" );
 const express = require( "express" );
+const compression = require( "compression" );
 
 // express init
 const app = express();
+
+// compression
+app.use( compression() );
+
 app.disable( "x-powered-by" );
 
 // directory that we will serve

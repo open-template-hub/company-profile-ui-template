@@ -1,0 +1,14 @@
+version: 2
+
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '08:00'
+      timezone: 'Etc/GMT'
+    target-branch: 'workflow/dependency-update'
+    labels:
+      - 'workflow'
+    milestone: 1

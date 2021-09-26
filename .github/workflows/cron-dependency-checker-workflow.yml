@@ -1,0 +1,40 @@
+name: Cron Dependency Checker Workflow
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'
+
+jobs:
+  cron-dependency-checker:
+    name: 'Cron Dependency Checker'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
+          ref: 'workflow/dependency-update'
+
+      - name: Hard Reset Dependency Update From Develop
+        run: |
+          git fetch origin develop:develop
+          git reset --hard develop
+
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: NPM Install
+        run: npm i
+      - name: Npm Outdated
+        run: npm run outdated
+      - name: Build
+        run: npm run buildProd
+
+      - name: Git Commit and Push by Force
+        run: |
+          git config --global user.email "furknyavuz@gmail.com"
+          git config --global user.name "Furkan Yavuz"
+          git commit -am "Workflow/dependency check"
+          git push -f

@@ -1,7 +1,9 @@
 <div class="hero">
   <div class="hero-content">
-    <h1 class="page-header">{{ product.name  + ' Pricing Plan'}}</h1>
-    <h3 class="page-description">No hidden fees. Cancel at any time.</h3>
+    <div>
+      <h1 class="page-header">{{ product.name + ' Pricing Plan'}}</h1>
+      <h3 class="page-description">No hidden fees. Cancel at any time.</h3>
+    </div>
   </div>
   <div *ngIf="product?.pricingOptions" class="pricing-wrapper">
     <ng-container *ngFor="let pricing of product.pricingOptions">

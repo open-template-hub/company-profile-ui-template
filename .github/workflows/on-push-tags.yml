@@ -7,12 +7,12 @@ on:
 
 jobs:
   tagged-release:
-    name: "Tagged Release"
-    runs-on: "ubuntu-latest"
+    name: 'Tagged Release'
+    runs-on: 'ubuntu-latest'
 
     steps:
       - name: Generate Release From Tag
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: 'marvinpinto/action-automatic-releases@latest'
         with:
-          repo_token: "${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}"
+          repo_token: '${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}'
           prerelease: false

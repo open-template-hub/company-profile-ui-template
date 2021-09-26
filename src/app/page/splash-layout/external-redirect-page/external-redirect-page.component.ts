@@ -11,7 +11,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
   styleUrls: [ './external-redirect-page.component.scss' ],
 } )
 export class ExternalRedirectPageComponent {
-  buttonClasses = [ ButtonClass.Green, ButtonClass.Transparent, ButtonClass.BorderAndFontByDefaultTheme ];
+  buttonClasses = [ ButtonClass.green, ButtonClass.Transparent, ButtonClass.BorderAndFontByDefaultTheme ];
 
   href: any;
   info: string;

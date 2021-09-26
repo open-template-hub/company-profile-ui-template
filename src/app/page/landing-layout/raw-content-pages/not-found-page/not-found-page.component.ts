@@ -9,7 +9,7 @@ import { ThemeService } from '../../../../service/theme/theme.service';
   styleUrls: [ './not-found-page.component.scss', '../../landing-layout.component.scss' ]
 } )
 export class NotFoundPageComponent {
-  redButtonClass = ButtonClass.Red
+  redButtonClass = ButtonClass.red
 
   brand = {
     brandLogoBroken: '',

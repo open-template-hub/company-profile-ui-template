@@ -10,14 +10,24 @@ export enum ButtonClass {
 
   // App themes
   DefaultTheme = 'default-theme',
-  Red = 'default-theme red-theme',
-  Yellow = 'default-theme yellow-theme',
-  Green = 'default-theme green-theme',
+  red = 'default-theme red-theme',
+  yellow = 'default-theme yellow-theme',
+  green = 'default-theme green-theme',
+  blue = 'default-theme blue-theme',
+  orange = 'default-theme orange-theme',
+  purple = 'default-theme purple-theme',
 
   Transparent = 'transparent-button',
 
   // Borders
-  BorderAndFontByDefaultTheme = 'border-and-font'
+  BorderAndFontByDefaultTheme = 'border-and-font',
+
+  // Shadows
+  SelectedButtonShadow = 'selected-button-shadow',
+
+  // Dark Light Mode
+  DisableLightMode = 'disable-light-mode',
+  DisableDarkMode = 'disable-dark-mode'
 }
 
 @Component({

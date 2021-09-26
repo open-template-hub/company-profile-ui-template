@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { ButtonClass } from '../../../../component/button/button.component';
 import { URLS } from '../../../../data/constant';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { InformationService } from '../../../../service/information/information.service';
@@ -13,6 +14,8 @@ import { ThemeService } from '../../../../service/theme/theme.service';
   styleUrls: [ './verify-account-page.component.scss', '../../landing-layout.component.scss' ]
 } )
 export class VerifyAccountPageComponent implements OnInit, OnDestroy {
+  homeButtonClasses = [ ButtonClass.red ]
+  loginButtonClasses: [ ButtonClass.DefaultTheme ]
 
   loading = true;
   error = '';

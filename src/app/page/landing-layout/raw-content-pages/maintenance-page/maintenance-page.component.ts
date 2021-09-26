@@ -9,7 +9,7 @@ import { ThemeService } from '../../../../service/theme/theme.service';
   styleUrls: [ './maintenance-page.component.scss', '../../landing-layout.component.scss' ]
 } )
 export class MaintenancePageComponent {
-  yellowButtonClass = ButtonClass.Yellow
+  yellowButtonClass = ButtonClass.yellow
 
   brand = {
     brandLogoMerge: ''

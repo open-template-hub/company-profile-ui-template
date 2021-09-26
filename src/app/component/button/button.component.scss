@@ -8,8 +8,8 @@
   width: 100%;
 }
 
-@mixin default-button-shadow {
-  box-shadow: 0 3px 15px 1px var(--shadow);
+@mixin selected-button-shadow {
+  box-shadow: 0 0 3px 3px var(--theme-color-lighter-1);
 }
 
 .button {
@@ -34,7 +34,8 @@
   font-size: 14px;
 
   &:hover {
-    @include default-button-shadow;
+    @include util.default-shadow;
+    @include selected-button-shadow;
   }
 
   // Button Types
@@ -67,5 +68,21 @@
     border: 1px solid var(--success);
     color: var(--theme-color);
     border-color: var(--theme-color);
+  }
+
+  // Shadows
+  &.selected-button-shadow {
+    @include selected-button-shadow;
+  }
+
+  // Dark Light Themes
+  &.disable-dark-mode {
+    color: var(--contrast-light-mode);
+    background-color: var(--color-light-mode);
+  }
+
+  &.disable-light-mode {
+    color: var(--contrast-dark-mode);
+    background-color: var(--color-dark-mode);
   }
 }

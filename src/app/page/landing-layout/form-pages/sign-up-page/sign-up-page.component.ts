@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { environment } from '../../../../../environments/environment';
 import { environmentCommon } from '../../../../../environments/environment-common';
+import { ButtonClass } from '../../../../component/button/button.component';
 import { URLS } from '../../../../data/constant';
 import { AnalyticsService } from '../../../../service/analytics/analytics.service';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
@@ -17,6 +18,7 @@ import { ToastService } from '../../../../service/toast/toast.service';
   styleUrls: [ './sign-up-page.component.scss', '../../landing-layout.component.scss' ]
 } )
 export class SignUpPageComponent implements OnInit, OnDestroy {
+  continueButtonClasses = [ ButtonClass.DefaultTheme ]
 
   form: FormGroup;
   submitted = false;

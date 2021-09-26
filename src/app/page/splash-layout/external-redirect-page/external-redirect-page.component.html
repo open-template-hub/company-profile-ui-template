@@ -20,21 +20,7 @@
     </p>
   </div>
   <div class="external-component-button-wrapper">
-    <app-button1
-        [isSleekButton]="true"
-        [lighterContrast]="true"
-        [routerLink]="URLS.root"
-        [text]="'Home'"
-        [themeColor]="ThemeColorSettings.green"
-        transparent="true">
-    </app-button1>
-    <app-button1 *ngIf="!error"
-        (click)="redirect()"
-        [isSleekButton]="true"
-        [lighterContrast]="true"
-        [text]="'Proceed'"
-        [themeColor]="ThemeColorSettings.green"
-        transparent="true">
-    </app-button1>
+    <app-theme-button [routerLink]="URLS.root" [buttonText]="'Home'" [buttonClasses]="buttonClasses"></app-theme-button>
+    <app-theme-button (click)="redirect()" [buttonText]="'Proceed'" [buttonClasses]="buttonClasses"></app-theme-button>
   </div>
 </div>

@@ -15,36 +15,16 @@
         <div class="body">
           <h5>{{ product.description }}</h5>
           <div class="open-source" *ngIf="product.openSource">
-            <app-button1
-              [isSleekButton]="true"
-              (click)="redirect()"
-              [brandIcon]="'github'"
-              class="top-right-bottom-left-rounded-box"
-              [text]="'Open Source'"
-            >
-            </app-button1>
-            <app-button1
-              [isSleekButton]="true"
-              [themeColor]="'default'"
-              (click)="router.navigate([URLS.contactUs])"
-              class="top-right-bottom-left-rounded-box"
-              [text]="'Professional Help'"
-            >
-            </app-button1>
+            <app-theme-button (click)="redirect()" [buttonBrandIcon]="'github'" [buttonText]="'Open Source'"></app-theme-button>
+
+            <app-theme-button (click)="router.navigate([URLS.contactUs])"
+                              [buttonText]="'Professional Help'"></app-theme-button>
+
           </div>
           <div class="request-for-demo" *ngIf="!product.openSource">
-            <app-button1
-              [isSleekButton]="true"
-              [themeColor]="'default'"
-              (click)="router.navigate([URLS.contactUs])"
-              class="top-right-bottom-left-rounded-box"
-              [text]="
-                productLineName === 'services'
-                  ? 'Contact Us'
-                  : 'Request for Demo'
-              "
-            >
-            </app-button1>
+            <app-theme-button (click)="router.navigate([URLS.contactUs])"
+                              [buttonText]="productLineName === 'services' ? 'Contact Us' : 'Request for Demo'"
+                              [buttonClasses]="defaultButtonClass"></app-theme-button>
           </div>
         </div>
       </ng-template>

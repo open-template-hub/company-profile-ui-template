@@ -9,7 +9,9 @@
         <h4 class="error-text">Something went wrong!</h4>
       </div>
     </div>
-    <app-button1 (click)="router.navigate(['/'])" [isSleekButton]="true" [text]="'HOME'" [themeColor]="'red'">
-    </app-button1>
+    <h2>404 Page not found</h2>
+    <h4>Something went wrong!</h4>
+    <app-theme-button (click)="router.navigate(['/'])" [buttonText]="'HOME'" [buttonClasses]="[ redButtonClass ]">
+    </app-theme-button>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ButtonClass } from '../../../component/button/button.component';
 import { DarkLightSettings, ThemeColorSettings } from '../../../data/constant';
 import { ThemeService } from '../../../service/theme/theme.service';
 
@@ -8,6 +9,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
   styleUrls: [ './edit-theme-page.component.scss' ]
 } )
 export class EditThemePageComponent {
+  ButtonClass = ButtonClass
 
   darkLightSetting: string;
   themeColorSetting: string;
@@ -41,5 +43,9 @@ export class EditThemePageComponent {
 
   setThemeColorSetting( themeColorSetting: string ) {
     this.themeService.setThemeColorSetting( themeColorSetting );
+  }
+
+  insertIf( condition: boolean, array: any[], element: any ) {
+    return condition ? [ ...array, element ] : array
   }
 }

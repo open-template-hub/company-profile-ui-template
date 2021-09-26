@@ -12,14 +12,11 @@
 
         <h4 *ngIf="!loading && error" class="error-text">Something went wrong!</h4>
         <h4 *ngIf="!loading && !error">Please proceed with login</h4>
-
       </div>
     </div>
-    <app-button1 (click)="router.navigate([URLS.root])" *ngIf="!loading && error" [isSleekButton]="true" [text]="'HOME'"
-                 [themeColor]="'red'">
-    </app-button1>
-    <app-button1 (click)="router.navigate([URLS.login])" *ngIf="!loading && !error" [isSleekButton]="true"
-                 [text]="'LOG IN'" [themeColor]="'default'">
-    </app-button1>
+    <app-theme-button (click)="router.navigate([URLS.root])" *ngIf="!loading && error"
+                      [buttonText]="'HOME'" [buttonClasses]="homeButtonClasses"></app-theme-button>
+    <app-theme-button (click)="router.navigate([URLS.login])" *ngIf="!loading && !error"
+                      [buttonText]="'LOG IN'" [buttonClasses]="loginButtonClasses"></app-theme-button>
   </div>
 </div>

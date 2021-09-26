@@ -80,11 +80,24 @@
     border: 0;
     padding-bottom: 30px;
 
-    & app-button1 {
-      position: relative;
-      bottom: auto;
-      left: auto;
-      right: auto;
+    & app-theme-button {
+      @include util.flex-layout-column;
+      @include util.flex-center-center;
+
+      & span {
+        margin-left: 5px;
+        letter-spacing: 0.1em;
+      }
+
+      & i {
+        font-size: 15px;
+      }
+
+      &:hover {
+        & i, & span {
+          color: var(--darker-contrast);
+        }
+      }
     }
   }
 }

@@ -87,6 +87,8 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { CallbackPageComponent } from './page/splash-layout/callback-page/callback-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
+import { ButtonComponent } from './component/button/button.component';
+import { ThemeButtonComponent } from './component/button/theme-button/theme-button.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -161,7 +163,9 @@ FullCalendarModule.registerPlugins( [
     ProductPresentationComponent,
     StatusCardComponent,
     PolicyCardComponent,
-    TimelineCardComponent
+    TimelineCardComponent,
+    ButtonComponent,
+    ThemeButtonComponent
   ],
   imports: [
     BrowserModule,

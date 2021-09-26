@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { environmentCommon } from 'src/environments/environment-common';
 import { environment } from '../../../../../environments/environment';
+import { ButtonClass } from '../../../../component/button/button.component';
 import { URLS } from '../../../../data/constant';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
@@ -19,7 +20,7 @@ import { ToastService } from '../../../../service/toast/toast.service';
   styleUrls: [ './login-page.component.scss' ]
 } )
 export class LoginPageComponent implements OnInit, OnDestroy {
-
+  loginButtonClasses = [ ButtonClass.DefaultTheme ];
   form: FormGroup;
   submitted = false;
   returnUrl: string;

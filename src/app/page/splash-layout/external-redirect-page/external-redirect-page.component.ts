@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environmentCommon } from '../../../../environments/environment-common';
+import { ButtonClass } from '../../../component/button/button.component';
 import { ThemeColorSettings, URLS } from '../../../data/constant';
 import { ThemeService } from '../../../service/theme/theme.service';
 
@@ -10,6 +11,8 @@ import { ThemeService } from '../../../service/theme/theme.service';
   styleUrls: [ './external-redirect-page.component.scss' ],
 } )
 export class ExternalRedirectPageComponent {
+  buttonClasses = [ ButtonClass.green, ButtonClass.Transparent, ButtonClass.BorderAndFontByDefaultTheme ];
+
   href: any;
   info: string;
   website: any;

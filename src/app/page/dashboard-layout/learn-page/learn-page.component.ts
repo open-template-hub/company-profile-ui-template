@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { IDayCalendarConfig } from 'ng2-date-picker';
 import { ToastrService } from 'ngx-toastr';
 import { URLS } from 'src/app/data/constant';
+import { ButtonClass } from '../../../component/button/button.component';
 import { EventTypes } from '../../../data/event/events.data';
 import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
 import { CategoryService } from '../../../service/category/category.service';
@@ -18,6 +19,7 @@ import { LoadingService } from '../../../service/loading/loading.service';
   styleUrls: [ './learn-page.component.scss' ]
 } )
 export class LearnPageComponent implements OnInit, OnDestroy {
+  searchButtonClasses = [ ButtonClass.DefaultTheme, ButtonClass.BorderAndFontByDefaultTheme, ButtonClass.Transparent ]
 
   searchedEvents: any;
   recommendedEvents = [];

@@ -73,17 +73,23 @@ select {
 
 .button-area {
   text-align: right;
+  float: right;
+  width: 45%;
   margin-top: 70px;
-}
 
-app-button1 {
-  cursor: pointer;
-  left: 0;
-  right: 0;
-  width: -webkit-fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 2em;
+  & app-theme-button {
+    bottom: 2em;
+    width: -webkit-fit-content;
+
+    & span {
+      margin-left: 5px;
+      letter-spacing: 0.1em;
+    }
+
+    & i {
+      font-size: 15px;
+    }
+  }
 }
 
 textarea,
@@ -212,6 +218,10 @@ select {
   .input-with-label select,
   .input-with-label textarea {
     width: 90%;
+  }
+
+  .button-area {
+    width: 100%;
   }
 }
 

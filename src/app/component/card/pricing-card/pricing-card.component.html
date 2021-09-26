@@ -28,10 +28,7 @@
   <!-- Footer -->
   <ng-template #footer>
     <div class="footer">
-      <app-button1 (click)="routeToEvent(pricingOption.link ? pricingOption.link : URLS.maintenance)"
-                   [icon]="'shopping-cart'" [isSleekButton]="true" [relativeToParent]="true" [text]="'Buy Now'"
-                   [themeColor]="'default'">
-      </app-button1>
+      <app-theme-button [buttonText]="'Buy Now'" [buttonClasses]="[ defaultButtonTheme ]" [buttonIcon]="'shopping-cart'"></app-theme-button>
     </div>
   </ng-template>
 </app-card>

@@ -4,6 +4,7 @@ import { SeoMetaData } from 'src/app/model/seo/seo.model';
 import { MailService } from 'src/app/service/mail/mail.service';
 import { SeoService } from 'src/app/service/seo/seo.service';
 import { environmentCommon } from 'src/environments/environment-common';
+import { ButtonClass } from '../../../component/button/button.component';
 import { URLS } from '../../../data/constant';
 import {
   CONTACT_US_FEATURES,
@@ -24,6 +25,8 @@ export interface ContactUsFeatures {
   styleUrls: ['./contact-us-page.component.scss'],
 })
 export class ContactUsPageComponent implements OnInit {
+  defaultButtonTheme = ButtonClass.DefaultTheme
+
   form: FormGroup;
   submitted = false;
   URLS = URLS;

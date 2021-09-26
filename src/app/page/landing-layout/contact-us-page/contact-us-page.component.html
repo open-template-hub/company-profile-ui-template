@@ -102,14 +102,8 @@
           <h4>Your Message</h4>
         </div>
         <div class="button-area">
-          <app-button1
-              [isSleekButton]="true"
-              [relativeToParent]="true"
-              [smallButton]="true"
-              [text]="'CONTACT US'"
-              [icon]="'envelope'"
-              [themeColor]="'default'">
-          </app-button1>
+          <app-theme-button [buttonText]="'CONTACT US'" [buttonIcon]="'envelope'" [buttonClasses]="[ defaultButtonTheme ]">
+          </app-theme-button>
         </div>
       </form>
     </div>

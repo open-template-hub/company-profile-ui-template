@@ -2,7 +2,7 @@ name: Cron Dependency Checker Workflow
 
 on:
   schedule:
-    - cron: '0 8 * * 1'
+    - cron: '* * * * *'
 
 jobs:
   cron-dependency-checker:
@@ -17,8 +17,7 @@ jobs:
 
       - name: Pull
         run: |
-          git fetch origin/workflow/dependency-update
-          git pull origin/workflow/dependency-update
+          git pull origin workflow/dependency-update
 
       - name: Hard Reset Dependency Update From Develop
         run: |

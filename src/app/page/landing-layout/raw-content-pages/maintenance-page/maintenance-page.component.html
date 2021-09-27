@@ -9,8 +9,6 @@
         <h4 class="warning-text">Please check again later</h4>
       </div>
     </div>
-    <h2>Under maintenance</h2>
-    <h4>Please check again later</h4>
-    <app-theme-button (click)="router.navigate(['/'])" [buttonText]="'HOME'" [buttonClasses]="[ yellowButtonClass ]"></app-theme-button>
+    <app-button (click)="router.navigate(['/'])" [text]="'HOME'"></app-button>
   </div>
 </div>

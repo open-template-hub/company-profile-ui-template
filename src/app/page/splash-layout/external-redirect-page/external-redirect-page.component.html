@@ -20,7 +20,7 @@
     </p>
   </div>
   <div class="external-component-button-wrapper">
-    <app-theme-button [routerLink]="URLS.root" [buttonText]="'Home'" [buttonClasses]="buttonClasses"></app-theme-button>
-    <app-theme-button (click)="redirect()" [buttonText]="'Proceed'" [buttonClasses]="buttonClasses"></app-theme-button>
+    <app-button [routerLink]="URLS.root" [text]="'Home'"></app-button>
+    <app-button (click)="redirect()" [text]="'Proceed'"></app-button>
   </div>
 </div>

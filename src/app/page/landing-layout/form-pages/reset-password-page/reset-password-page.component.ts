@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { ButtonClass } from '../../../../component/button/button.component';
 import { URLS } from '../../../../data/constant';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { InformationService } from '../../../../service/information/information.service';
@@ -15,7 +14,7 @@ import { ToastService } from '../../../../service/toast/toast.service';
   styleUrls: [ './reset-password-page.component.scss' ]
 } )
 export class ResetPasswordPageComponent implements OnInit, OnDestroy {
-  doneButtonClasses = ButtonClass.DefaultTheme
+
   form: FormGroup;
   submitted = false;
   token = '';

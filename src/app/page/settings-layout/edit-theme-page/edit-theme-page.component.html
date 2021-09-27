@@ -6,29 +6,21 @@
         <hr/>
       </div>
       <div class="section horizontal">
-        <app-theme-button (click)="setDarkLightSetting(DarkLightSettings.light)" [buttonIcon]="'sun'"
-                          [buttonText]="'Light theme'"
-                          [buttonClasses]=" insertIf( darkLightSetting === DarkLightSettings.light, [ ButtonClass.DisableLightMode ], ButtonClass.SelectedButtonShadow )">
-        </app-theme-button>
-        <app-theme-button (click)="setDarkLightSetting(DarkLightSettings.dark)" [buttonIcon]="'moon'"
-                          [buttonText]="'Dark theme'"
-                          [buttonClasses]=" insertIf( darkLightSetting === DarkLightSettings.dark, [ ButtonClass.DisableDarkMode ], ButtonClass.SelectedButtonShadow )">
-        </app-theme-button>
-        <app-theme-button (click)="setDarkLightSetting(DarkLightSettings.auto)" [buttonIcon]="'adjust'"
-                          [buttonText]="'Auto'"
-                          [buttonClasses]=" insertIf( darkLightSetting === DarkLightSettings.auto, [], ButtonClass.SelectedButtonShadow )">
-        </app-theme-button>
+        <app-button (click)="setDarkLightSetting(DarkLightSettings.light)" [icon]="'sun'" [text]="'Light theme'">
+        </app-button>
+        <app-button (click)="setDarkLightSetting(DarkLightSettings.dark)" [icon]="'moon'" [text]="'Dark theme'">
+        </app-button>
+        <app-button (click)="setDarkLightSetting(DarkLightSettings.auto)" [icon]="'adjust'" [text]="'Auto'">
+        </app-button>
       </div>
       <div class="section-header">
         <p class="dim">Theme Color</p>
         <hr/>
       </div>
       <div class="section horizontal">
-        <app-theme-button (click)="setThemeColorSetting(themeColor)" *ngFor="let themeColor of themeColorSettingsList"
-                          [buttonIcon]="'tint'" [buttonText]="themeColor + ' theme' | titlecase"
-                          [buttonClasses]=" insertIf( themeColorSetting === themeColor,[ ButtonClass.Transparent, ButtonClass[themeColor],
-                          ButtonClass.BorderAndFontByDefaultTheme ], ButtonClass.SelectedButtonShadow )">
-        </app-theme-button>
+        <app-button (click)="setThemeColorSetting(themeColor)" *ngFor="let themeColor of themeColorSettingsList"
+                          [icon]="'tint'" [text]="themeColor + ' theme' | titlecase">
+        </app-button>
       </div>
     </div>
   </app-card1>

@@ -11,9 +11,27 @@
 </div>
 <div class="hero">
   <div class="hero-content">
-    <h1>History of the Open Template Hub</h1>
-    <h4>Minimizes your effort while building a new software business with our open source GitHub micro server
-      templates and responsive web UI + mobile UI templates</h4>
+    <div>
+      <h1>Follow us on social media</h1>
+      <h4>Minimizes your effort while building a new software business with our open source GitHub micro server
+        templates and responsive web UI + mobile UI templates</h4>
+    </div>
+  </div>
+  <div class="websites-wrapper">
+    <ng-container *ngFor="let website of websites">
+      <app-brand-button (click)="redirect(website.url + '/' + website.handle)" [text]="website.name"
+                        [icon]="website.cssClass">
+      </app-brand-button>
+    </ng-container>
+  </div>
+</div>
+<div class="hero">
+  <div class="hero-content">
+    <div>
+      <h1>History of the Open Template Hub</h1>
+      <h4>Minimizes your effort while building a new software business with our open source GitHub micro server
+        templates and responsive web UI + mobile UI templates</h4>
+    </div>
   </div>
   <div class="timeline-wrapper">
     <ng-container *ngFor="let timelineItem of OTH_TIME_LINE; index as i">

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ButtonClass } from '../../../../component/button/button.component';
 import { ThemeService } from '../../../../service/theme/theme.service';
 
 @Component( {
@@ -9,7 +8,6 @@ import { ThemeService } from '../../../../service/theme/theme.service';
   styleUrls: [ './maintenance-page.component.scss' ]
 } )
 export class MaintenancePageComponent {
-  yellowButtonClass = ButtonClass.yellow
 
   brand = {
     brandLogoMerge: ''

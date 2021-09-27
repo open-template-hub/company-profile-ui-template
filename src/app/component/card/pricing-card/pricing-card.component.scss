@@ -80,7 +80,7 @@
     border: 0;
     padding-bottom: 30px;
 
-    & app-theme-button {
+    & app-brand-button {
       @include util.flex-layout-column;
       @include util.flex-center-center;
 

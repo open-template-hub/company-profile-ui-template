@@ -1,48 +1,43 @@
 import { Component, Input, TemplateRef } from '@angular/core';
 
-export enum ButtonType {
-  RoundedBox = 'button-rounded-box'
-}
+export const ButtonClasses = {
 
-export enum ButtonClass {
-  // Social themes
-  Github = 'github',
+  defaultTheme: 'default-theme',
+  red: 'red-theme',
+  yellow: 'default-theme yellow-theme',
+  green: 'default-theme green-theme',
+  blue: 'default-theme blue-theme',
+  orange: 'default-theme orange-theme',
+  purple: 'default-theme purple-theme',
 
-  // App themes
-  DefaultTheme = 'default-theme',
-  red = 'default-theme red-theme',
-  yellow = 'default-theme yellow-theme',
-  green = 'default-theme green-theme',
-  blue = 'default-theme blue-theme',
-  orange = 'default-theme orange-theme',
-  purple = 'default-theme purple-theme',
+  roundedBox: 'button-rounded-box',
 
-  Transparent = 'transparent-button',
+  transparent: 'transparent-button',
 
   // Borders
-  BorderAndFontByDefaultTheme = 'border-and-font',
+  borderAndFontByDefaultTheme: 'border-and-font',
 
   // Shadows
-  SelectedButtonShadow = 'selected-button-shadow',
+  selectedButtonShadow: 'selected-button-shadow',
 
   // Dark Light Mode
-  DisableLightMode = 'disable-light-mode',
-  DisableDarkMode = 'disable-dark-mode'
-}
+  disableLightMode: 'disable-light-mode',
+  disableDarkMode: 'disable-dark-mode'
+};
 
-@Component({
+@Component( {
   selector: 'app-button',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
-})
+  styleUrls: [ './button.component.scss' ]
+} )
 export class ButtonComponent {
-  @Input() icon: TemplateRef<any>;
-  @Input() text: TemplateRef<any>;
+  @Input() iconTemplate: TemplateRef<any>;
+  @Input() textTemplate: TemplateRef<any>;
 
-  @Input() buttonClasses: ButtonClass[];
-  @Input() buttonType: ButtonType;
+  @Input() buttonClasses: string[];
 
-  @Input() defaultIconContent: string;
+  @Input() icon: string;
+  @Input() text: string;
 
   constructor() {
     // Intentionally blank

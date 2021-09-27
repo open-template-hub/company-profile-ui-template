@@ -1,11 +1,25 @@
 @use '../../../styles/util/util';
 
 @mixin default-button {
+  @include util.flex-layout-row;
+  @include util.flex-center-center;
+  @include util.top-right-bottom-left-rounded-box;
+
   padding: 0.8em 2.2em;
-  background-color: var(--color);
-  transition: 200ms ease;
+
+  background-color: var(--theme-color);
+
   margin: 0.25em 0.25em 1em;
   width: 100%;
+}
+
+@mixin default-icon {
+  margin-right: 5px;
+}
+
+@mixin default-content {
+  color: var(--darker-contrast);
+  font-weight: 400;
 }
 
 @mixin selected-button-shadow {
@@ -19,9 +33,6 @@
   // Position
   position: relative;
 
-  // Color
-  color: var(--contrast);
-
   // Design
   border: none;
   cursor: pointer;
@@ -33,30 +44,93 @@
   font-weight: 300;
   font-size: 14px;
 
-  &:hover {
-    @include util.default-shadow;
-    @include selected-button-shadow;
-  }
+  & .content {
+    @include default-content;
 
-  // Button Types
-  &.button-rounded-box {
-    @include util.top-right-bottom-left-rounded-box;
-  }
-
-  // Social Themes
-  &.github {
-    background-color: var(--github);
-    color: white;
-
-    &:hover {
-      color: white;
+    & .icon {
+      @include default-icon;
     }
   }
 
-  // App Themes
-  &.default-theme {
-    color: whitesmoke;
-    background-color: var(--theme-color);
+  &:hover {
+    @include util.default-shadow;
+  }
+
+  &.brand-button {
+    background-color: var(--social);
+
+    & .content {
+      color: white;
+    }
+
+    // Todo: generate there via scss function with interpolation. Check information.scss for examples
+    &.twitter {
+      --social: var(--twitter);
+    }
+
+    &.google {
+      --social: var(--google);
+    }
+
+    &.facebook-f {
+      --social: var(--facebook);
+    }
+
+    &.linkedin-in {
+      --social: var(--linkedin);
+    }
+
+    &.vk {
+      --social: var(--vk);
+    }
+
+    &.twitch {
+      --social: var(--twitch);
+    }
+
+    &.dribbble {
+      --social: var(--dribbble);
+    }
+
+    &.reddit-alien {
+      --social: var(--reddit);
+    }
+
+    &.pinterest {
+      --social: var(--pinterest);
+    }
+
+    &.yandex {
+      --social: var(--yandex);
+    }
+
+    &.github {
+      --social: var(--github);
+    }
+
+    &.stripe-s {
+      --social: var(--stripe);
+    }
+
+    &.coinbase {
+      --social: var(--coinbase);
+    }
+
+    &.paypal {
+      --social: var(--paypal);
+    }
+
+    &.buymeacoffee {
+      --social: var(--buymeacoffee);
+    }
+
+    &.patreon {
+      --social: var(--patreon);
+    }
+
+    &.product-hunt {
+      --social: var(--product-hunt);
+    }
   }
 
   &.transparent-button {

@@ -8,8 +8,6 @@ import { INFORMATION_TYPES } from '../../../data/constant';
 } )
 export class InformationButtonComponent {
 
-  INFORMATION_TYPES = INFORMATION_TYPES;
-
   @Input() informationType: any;
   @Input() text: string;
 

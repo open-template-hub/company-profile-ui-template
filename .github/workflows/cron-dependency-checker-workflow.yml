@@ -15,6 +15,11 @@ jobs:
           token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
           ref: 'workflow/dependency-update'
 
+      - name: Pull
+        run: |
+          git fetch origin/workflow/dependency-update
+          git pull origin/workflow/dependency-update
+
       - name: Hard Reset Dependency Update From Develop
         run: |
           git fetch origin develop:develop

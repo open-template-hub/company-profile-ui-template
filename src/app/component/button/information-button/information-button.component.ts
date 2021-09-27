@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { INFORMATION_TYPES } from '../../../data/constant';
 
 @Component( {
   selector: 'app-information-button',

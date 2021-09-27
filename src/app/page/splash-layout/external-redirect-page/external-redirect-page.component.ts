@@ -10,6 +10,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
   styleUrls: [ './external-redirect-page.component.scss' ],
 } )
 export class ExternalRedirectPageComponent {
+
   href: any;
   info: string;
   website: any;

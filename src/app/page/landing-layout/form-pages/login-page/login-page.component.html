@@ -1,11 +1,11 @@
-<div class="form-page">
+<div class="form-page-layout">
   <div class="hero">
     <div class="hero-content">
-      <h3>Login</h3>
+      <h2>Login</h2>
     </div>
-    <app-card [body]="body">
+    <app-card [bodyTemplate]="bodyTemplate">
       <!-- Body -->
-      <ng-template #body>
+      <ng-template #bodyTemplate>
         <div class="body">
           <div class="flex-layout-row flex-center-center">
             <app-social-button (click)="socialLogin(environmentCommon.website.facebook)"
@@ -35,7 +35,7 @@
               </div>
             </div>
             <div class="section-submit">
-              <app-button1 [text]="'LOG IN'" [themeColor]="'default'"></app-button1>
+              <app-button [text]="'LOG IN'"></app-button>
               <p>
                 Don't have an account?
                 <a [routerLink]="URLS.signup" class="theme-color-link">

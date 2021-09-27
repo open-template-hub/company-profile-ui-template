@@ -10,10 +10,9 @@ import { ThemeService } from '../../../../service/theme/theme.service';
 @Component( {
   selector: 'app-verify-account-page',
   templateUrl: './verify-account-page.component.html',
-  styleUrls: [ './verify-account-page.component.scss', '../../landing-layout.component.scss' ]
+  styleUrls: [ './verify-account-page.component.scss' ]
 } )
 export class VerifyAccountPageComponent implements OnInit, OnDestroy {
-
   loading = true;
   error = '';
   token = '';

@@ -37,6 +37,7 @@ export const environmentCommon = {
       logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/companies/logo/linkedin.png',
       cssClass: 'linkedin-in',
       url: 'https://www.linkedin.com',
+      companyUrl: 'https://www.linkedin.com/company',
       shareUrl: 'https://www.linkedin.com/sharing/share-offsite/?url=',
       callbackParams: [ 'code', 'state' ],
       tag: environment.oauth.linkedin.tag,
@@ -98,7 +99,7 @@ export const environmentCommon = {
     },
     productHunt: {
       cssClass: 'product-hunt',
-      url: 'https://www.producthunt.com/'
+      url: 'https://www.producthunt.com'
     },
     appleCalendar: {
       logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/companies/logo/apple-calendar.png',

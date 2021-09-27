@@ -1,7 +1,7 @@
 {
   "name": "company-profile-ui-template",
   "description": "Company Profile UI Template in Angular",
-  "version": "2.11.0",
+  "version": "2.11.2",
   "license": "MIT",
   "scripts": {
     "buildLocal": "ng build --configuration=local",
@@ -12,13 +12,13 @@
     "heroku-postbuild": "bash heroku.sh",
     "lint": "ng lint",
     "ng": "ng",
-    "startLocal": "node version-generator.ts > ./src/environments/version.ts && ng serve --configuration=local",
-    "startLocalFromIPhone": "node version-generator.ts > ./src/environments/version.ts && ng serve --configuration=local --host 0.0.0.0 --disable-host-check true",
-    "startLocalToStagingApi": "node version-generator.ts > ./src/environments/version.ts && ng serve --configuration=local-to-staging-api",
-    "startLocalFromIPhoneToStagingApi": "node version-generator.ts > ./src/environments/version.ts && ng serve --configuration=local-to-staging-api --host 0.0.0.0 --disable-host-check true",
-    "startStaging": "node version-generator.ts > ./src/environments/version.ts && node server.js --configuration=staging",
+    "startLocal": "node src/version-generator.ts > ./src/environments/version.ts && ng serve --configuration=local",
+    "startLocalFromIPhone": "node src/version-generator.ts > ./src/environments/version.ts && ng serve --configuration=local --host 0.0.0.0 --disable-host-check true",
+    "startLocalToStagingApi": "node src/version-generator.ts > ./src/environments/version.ts && ng serve --configuration=local-to-staging-api",
+    "startLocalFromIPhoneToStagingApi": "node src/version-generator.ts > ./src/environments/version.ts && ng serve --configuration=local-to-staging-api --host 0.0.0.0 --disable-host-check true",
+    "startStaging": "node src/version-generator.ts > ./src/environments/version.ts && node server.js --configuration=staging",
     "start": "node server.js --configuration=production",
-    "outdated": "node dependency-checker.ts > OUTDATED.md",
+    "outdated": "node src/dependency-checker.ts > OUTDATED.md",
     "test": "ng test"
   },
   "dependencies": {
@@ -41,6 +41,7 @@
     "@types/simple-icons": "^5.0.0",
     "angular-google-tag-manager": "^1.4.2",
     "angular-in-memory-web-api": "^0.11.0",
+    "compression": "^1.7.4",
     "countup.js": "^2.0.7",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",

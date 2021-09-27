@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ShowroomPageComponent } from './showroom-page.component';
+import { BrandButtonComponent } from './brand-button.component';
 
-describe( 'ShowroomPageComponent', () => {
-  let component: ShowroomPageComponent;
-  let fixture: ComponentFixture<ShowroomPageComponent>;
+describe( 'BrandButtonComponent', () => {
+  let component: BrandButtonComponent;
+  let fixture: ComponentFixture<BrandButtonComponent>;
 
   beforeEach( async () => {
     await TestBed.configureTestingModule( {
-      declarations: [ ShowroomPageComponent ]
+      declarations: [ BrandButtonComponent ]
     } )
     .compileComponents();
   } );
 
   beforeEach( () => {
-    fixture = TestBed.createComponent( ShowroomPageComponent );
+    fixture = TestBed.createComponent( BrandButtonComponent );
     component = fixture.componentInstance;
     fixture.detectChanges();
   } );

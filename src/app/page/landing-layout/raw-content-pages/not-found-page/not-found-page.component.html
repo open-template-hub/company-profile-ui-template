@@ -1,11 +1,15 @@
-<div class="raw-content-page">
-  <div class="hero content">
-    <div class="logo-wrapper hero-content-column">
-      <img [src]="brand.brandLogoBroken" alt="logo" class="brand-logo" height="150"/>
+<div class="raw-content-page-layout">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="logo-wrapper">
+        <img [src]="brand.brandLogoBroken" alt="logo" class="brand-logo" height="150"/>
+      </div>
+      <div>
+        <h2>404 Page not found</h2>
+        <h4>Something went wrong!</h4>
+      </div>
     </div>
-    <h2>404 Page not found</h2>
-    <h4>Something went wrong!</h4>
-    <app-button1 (click)="router.navigate(['/'])" [isSleekButton]="true" [text]="'HOME'" [themeColor]="'red'">
-    </app-button1>
+    <app-button (click)="router.navigate(['/'])" [text]="'HOME'">
+    </app-button>
   </div>
 </div>

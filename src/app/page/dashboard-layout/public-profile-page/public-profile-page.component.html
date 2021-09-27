@@ -19,12 +19,8 @@
         </p>
       </div>
       <div *ngIf="isFollowing !== null" class="follow-button-area">
-        <app-button1 (click)="follow()" *ngIf="isFollowing === false" [fixedWidth]="true" [hoverWithColor]="false"
-                     [icon]="'plus'" [mobileView]="true" [success]="true" [text]="'Follow'"
-                     [transparent]="true"></app-button1>
-        <app-button1 (click)="unfollow()" *ngIf="isFollowing === true" [fixedWidth]="true" [hoverWithColor]="false"
-                     [icon]="'ban'" [lighterContrast]="true" [mobileView]="true" [text]="'Unfollow'"
-                     [transparent]="true"></app-button1>
+        <app-button (click)="follow()" *ngIf="isFollowing === false" [icon]="'plus'" [text]="'Follow'"></app-button>
+        <app-button (click)="unfollow()" *ngIf="isFollowing === true" [icon]="'ban'" [text]="'Unfollow'"></app-button>
       </div>
       <div [class.with-rate]="formattedRateNumber" class="column-first">
         <div class="section-header">

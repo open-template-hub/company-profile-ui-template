@@ -1,0 +1,20 @@
+<button [classList]="buttonClasses ? buttonClasses.join( ' ' ) + ' button' : 'button'">
+  <span class="content">
+    <ng-container *ngTemplateOutlet="iconTemplate || defaultIconTemplate">
+      <!-- Icon of the button -->
+    </ng-container>
+    <ng-template #defaultIconTemplate>
+      <i *ngIf="icon" [classList]="'icon fas fa-' + icon + ' fa-lg fa-fw'"
+         aria-hidden="true"></i>
+    </ng-template>
+
+    <ng-container *ngTemplateOutlet="textTemplate || defaultTextTemplate">
+      <!-- Text of the button -->
+    </ng-container>
+    <ng-template #defaultTextTemplate>
+      <span *ngIf="defaultTextTemplate" class="text">
+        {{ text }}
+      </span>
+    </ng-template>
+  </span>
+</button>

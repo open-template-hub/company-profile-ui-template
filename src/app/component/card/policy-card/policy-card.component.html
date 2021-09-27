@@ -1,6 +1,6 @@
-<app-card [header]="header" [body]="body" [footer]="footer" class="policy-card">
+<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" class="policy-card">
   <!-- Header -->
-  <ng-template #header>
+  <ng-template #headerTemplate>
     <ng-container *ngTemplateOutlet="policyHeader || defaultPolicyHeader">
       <!-- Header of the card -->
     </ng-container>
@@ -12,7 +12,7 @@
   </ng-template>
 
   <!-- Body -->
-  <ng-template #body>
+  <ng-template #bodyTemplate>
     <div class="body">
       <ng-container *ngTemplateOutlet="policyBody || defaultPolicyBody">
         <!-- Body of the card -->
@@ -26,7 +26,7 @@
   </ng-template>
 
   <!-- Footer -->
-  <ng-template #footer>
+  <ng-template #footerTemplate>
     <div class="footer">
       <img alt="logo" class="brand-logo" src="./assets/logo/brand-logo.png">
       <small>Open Template Hub <span class="copyright">© 2021</span></small>

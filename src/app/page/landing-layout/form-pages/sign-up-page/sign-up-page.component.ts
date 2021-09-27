@@ -14,7 +14,7 @@ import { ToastService } from '../../../../service/toast/toast.service';
 @Component( {
   selector: 'app-sign-up-page',
   templateUrl: './sign-up-page.component.html',
-  styleUrls: [ './sign-up-page.component.scss', '../../landing-layout.component.scss' ]
+  styleUrls: [ './sign-up-page.component.scss' ]
 } )
 export class SignUpPageComponent implements OnInit, OnDestroy {
 

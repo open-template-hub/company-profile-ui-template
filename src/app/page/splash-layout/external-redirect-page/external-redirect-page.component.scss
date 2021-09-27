@@ -1,5 +1,11 @@
 @use '../splash-layout.component';
 
+.external-component-button-wrapper {
+  & app-brand-button {
+    margin-right: 10px;
+  }
+}
+
 .splash-content {
   .information-with-icon {
     width: 100%;

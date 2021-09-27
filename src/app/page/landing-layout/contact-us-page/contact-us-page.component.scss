@@ -1,17 +1,6 @@
 @use '../../../../styles/util/util';
 @use '../../../../styles/page/page';
 
-.section {
-  @include util.flex-layout-column;
-
-  justify-content: center;
-  margin: 30px 10px 0;
-
-  & label {
-    color: var(--success);
-  }
-}
-
 .input-with-label {
   white-space: nowrap;
   min-height: 42px;
@@ -40,20 +29,22 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  min-height: -webkit-fit-content;
+
+  & .body {
+    @include util.flex-layout-column;
+
+    justify-content: center;
+    padding: 50px 30px;
+
+    & label {
+      color: var(--success);
+    }
+  }
 
   & > * {
     margin: 0 15px;
     text-align: center;
   }
-}
-
-.input-with-label input,
-.input-with-label textarea,
-.input-with-label select {
-  width: 60%;
-  min-width: 60%;
-  height: -webkit-fit-content;
 }
 
 .form-span-wrapper {
@@ -81,17 +72,23 @@ select {
 
 .button-area {
   text-align: right;
+  float: right;
+  width: 45%;
   margin-top: 70px;
-}
 
-app-button1 {
-  cursor: pointer;
-  left: 0;
-  right: 0;
-  width: -webkit-fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: 2em;
+  & app-brand-button {
+    bottom: 2em;
+    width: -webkit-fit-content;
+
+    & span {
+      margin-left: 5px;
+      letter-spacing: 0.1em;
+    }
+
+    & i {
+      font-size: 15px;
+    }
+  }
 }
 
 textarea,
@@ -169,11 +166,17 @@ select {
 @media only screen and (max-width: 999px) {
   .contact-us-page-content {
     flex-direction: column;
+
+    & > * {
+      width: 94vw;
+      margin: 50px 0;
+    }
   }
 
   .features-area {
     width: 90%;
     align-items: center;
+    justify-content: flex-start;
 
     & div {
       @include util.flex-layout-column;
@@ -200,6 +203,7 @@ select {
 
   .input-with-label {
     flex-direction: column-reverse;
+
     & input,
     select,
     textarea {
@@ -221,16 +225,22 @@ select {
   .input-with-label textarea {
     width: 90%;
   }
+
+  .button-area {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
+  .contact-us-page-content {
+    & .body {
+      width: 600px;
+    }
+  }
+
   .contact-us-page-content,
   .footer {
     font-size: 19px;
-  }
-
-  app-card1 {
-    min-width: 600px;
   }
 
   .footer-card-wrapper {

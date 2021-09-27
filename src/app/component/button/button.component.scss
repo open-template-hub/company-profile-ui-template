@@ -1,0 +1,162 @@
+@use '../../../styles/util/util';
+
+@mixin default-button {
+  @include util.flex-layout-row;
+  @include util.flex-center-center;
+  @include util.top-right-bottom-left-rounded-box;
+
+  padding: 0.8em 2.2em;
+
+  background-color: var(--theme-color);
+
+  margin: 0.25em 0.25em 1em;
+  width: 100%;
+}
+
+@mixin default-icon {
+  margin-right: 5px;
+}
+
+@mixin default-content {
+  color: var(--darker-contrast);
+  font-weight: 400;
+}
+
+@mixin selected-button-shadow {
+  box-shadow: 0 0 3px 3px var(--theme-color-lighter-1);
+}
+
+.button {
+  // Include
+  @include default-button;
+
+  // Position
+  position: relative;
+
+  // Design
+  border: none;
+  cursor: pointer;
+
+  // Aligning
+  vertical-align: text-bottom;
+
+  // Font
+  font-weight: 300;
+  font-size: 14px;
+
+  & .content {
+    @include default-content;
+
+    & .icon {
+      @include default-icon;
+    }
+  }
+
+  &:hover {
+    @include util.default-shadow;
+  }
+
+  &.brand-button {
+    background-color: var(--social);
+
+    & .content {
+      color: white;
+    }
+
+    // Todo: generate there via scss function with interpolation. Check information.scss for examples
+    &.twitter {
+      --social: var(--twitter);
+    }
+
+    &.google {
+      --social: var(--google);
+    }
+
+    &.facebook-f {
+      --social: var(--facebook);
+    }
+
+    &.linkedin-in {
+      --social: var(--linkedin);
+    }
+
+    &.vk {
+      --social: var(--vk);
+    }
+
+    &.twitch {
+      --social: var(--twitch);
+    }
+
+    &.dribbble {
+      --social: var(--dribbble);
+    }
+
+    &.reddit-alien {
+      --social: var(--reddit);
+    }
+
+    &.pinterest {
+      --social: var(--pinterest);
+    }
+
+    &.yandex {
+      --social: var(--yandex);
+    }
+
+    &.github {
+      --social: var(--github);
+    }
+
+    &.stripe-s {
+      --social: var(--stripe);
+    }
+
+    &.coinbase {
+      --social: var(--coinbase);
+    }
+
+    &.paypal {
+      --social: var(--paypal);
+    }
+
+    &.buymeacoffee {
+      --social: var(--buymeacoffee);
+    }
+
+    &.patreon {
+      --social: var(--patreon);
+    }
+
+    &.product-hunt {
+      --social: var(--product-hunt);
+    }
+  }
+
+  &.transparent-button {
+    background-color: transparent;
+  }
+
+  // Borders And Font Colors
+  &.border-and-font {
+    border: 1px solid var(--success);
+    color: var(--theme-color);
+    border-color: var(--theme-color);
+  }
+
+  // Shadows
+  &.selected-button-shadow {
+    @include selected-button-shadow;
+  }
+
+  // Dark Light Themes
+  &.disable-dark-mode {
+    color: var(--contrast-light-mode);
+    background-color: var(--color-light-mode);
+  }
+
+  &.disable-light-mode {
+    color: var(--contrast-dark-mode);
+    background-color: var(--color-dark-mode);
+  }
+}

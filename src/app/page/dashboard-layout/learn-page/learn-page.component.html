@@ -4,8 +4,8 @@
     <i aria-hidden="true" class="material-icons">search</i>
     <input #searchArea (keyup)="search($event)" placeholder="ex. title, username.." type="text">
   </div>
-  <app-button1 (click)="search(undefined)" [hoverWithColor]="false" [isSleekButton]="true" [lighterContrast]="true"
-               [text]="'Search'" [transparent]="true"></app-button1>
+  <app-button (click)="search(undefined)" [buttonClasses]="searchButtonClasses"
+              [text]="'Search'"></app-button>
   <div
       *ngIf="(categorySearchResults.length > 0) && searchEnabled"
       class="search-results">

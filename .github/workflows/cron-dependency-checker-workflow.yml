@@ -2,7 +2,7 @@ name: Cron Dependency Checker Workflow
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   cron-dependency-checker:

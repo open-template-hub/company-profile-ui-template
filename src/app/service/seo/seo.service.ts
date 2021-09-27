@@ -11,9 +11,10 @@ export class SeoService {
   setMetaData = (seo: SeoMetaData) => {
     try {
       this.titleService.setTitle(seo.title);
+      this.cleanUpMetaData();
       this.metaTagService.addTags([
-        { name: 'keywords', content: seo.keywords.join(',') },
-        { name: 'robots', content: seo.robots.join(',') },
+        { name: 'keywords', content: seo.keywords.join(', ') },
+        { name: 'robots', content: seo.robots.join(', ') },
         { name: 'authors', content: Authors },
         { name: 'description', content: seo.description },
         { charset: 'UTF-8' },
@@ -22,4 +23,11 @@ export class SeoService {
       console.warn('Unknown error occurred while setting Meta Tags ===> ', e);
     }
   };
+
+  cleanUpMetaData = () => {
+    this.metaTagService.removeTag("name=keywords");
+    this.metaTagService.removeTag("name=robots");
+    this.metaTagService.removeTag("name=authors");
+    this.metaTagService.removeTag("name=description");
+  }
 }

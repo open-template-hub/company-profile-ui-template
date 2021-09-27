@@ -41,6 +41,8 @@ export const OthStartDate = '2020-01-01';
 
 export const OthGithubName = 'open-template-hub';
 
+export const OthName = 'Open Template Hub';
+
 export const Authors = 'Fatih Turker, Furkan Yavuz, Mert Sarac';
 
 export const GithubCounters = {

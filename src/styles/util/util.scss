@@ -43,6 +43,11 @@
   justify-content: center;
 }
 
+@mixin flex-center-space-evenly {
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 @mixin flex-layout-row {
   display: flex;
   flex-direction: row;
@@ -86,6 +91,10 @@
 
 .flex-center-center {
   @include flex-center-center;
+}
+
+.flex-center-space-evenly {
+  @include flex-center-space-evenly;
 }
 
 .flex-layout-row {

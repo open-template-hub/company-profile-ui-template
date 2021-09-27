@@ -63,6 +63,8 @@
     }
 
     & .body {
+      @include util.flex-layout-column;
+      @include util.flex-center-center;
 
       border-top-left-radius: 70px;
       border-bottom-left-radius: 6px;
@@ -72,26 +74,17 @@
 
       @include util.default-shadow;
 
-      & .open-source, & .request-for-demo {
+      & .button-wrapper {
         @include util.flex-layout-column;
         @include util.flex-center-center;
 
         box-sizing: border-box;
 
         width: 100%;
-      }
 
-      & .request-for-demo {
-        padding-top: 50px;
-
-        & input {
-          margin-bottom: 20px;
-          background-color: var(--card);
-
-          &:focus {
-            border: 1px solid;
-            transition: 200ms;
-          }
+        & > * {
+          width: 100%;
+          margin: 5px 0;
         }
       }
     }
@@ -163,7 +156,7 @@ app-swiper-wrapper {
     & .body {
       padding: 50px 30px 30px;
 
-      & .open-source {
+      & .button-wrapper {
         padding: 50px 10px 0;
       }
     }
@@ -221,16 +214,10 @@ app-swiper-wrapper {
     & .body {
       padding: 60px 60px 40px;
 
-      & .open-source {
-        padding: 50px 150px 0;
-      }
+      & .button-wrapper {
 
-      & .request-for-demo {
-        padding: 50px 0;
-
-        & input {
-          width: 220px;
-        }
+        padding: 50px 50px 0;
+        max-width: 450px;
       }
     }
 

@@ -5,12 +5,12 @@
   @include util.flex-center-center;
   @include util.top-right-bottom-left-rounded-box;
 
-  padding: 0.8em 2.2em;
+  padding: 12px;
 
   background-color: var(--theme-color);
 
-  margin: 0.25em 0.25em 1em;
   width: 100%;
+  min-width: 150px;
 }
 
 @mixin default-icon {

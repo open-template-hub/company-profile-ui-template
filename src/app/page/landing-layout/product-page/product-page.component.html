@@ -13,14 +13,14 @@
       <ng-template #bodyTemplate>
         <div class="body">
           <h5>{{ product.description }}</h5>
-          <div class="open-source" *ngIf="product.openSource">
+          <div class="button-wrapper" *ngIf="product.openSource">
             <app-brand-button (click)="redirect()" [icon]="environmentCommon.website.github.cssClass"
                               [text]="'Open Source'"></app-brand-button>
 
             <app-button (click)="router.navigate([URLS.contactUs])"
                                     [text]="'Professional Help'"></app-button>
           </div>
-          <div class="request-for-demo" *ngIf="!product.openSource">
+          <div class="button-wrapper" *ngIf="!product.openSource">
             <app-button (click)="router.navigate([URLS.contactUs])"
                               [text]="productLineName === 'services' ? 'Contact Us' : 'Request for Demo'"></app-button>
           </div>

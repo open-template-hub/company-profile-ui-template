@@ -7,11 +7,11 @@
       <!-- Body -->
       <ng-template #bodyTemplate>
         <div class="body">
-          <div class="flex-layout-row flex-center-center">
-            <app-social-button (click)="socialLogin(environmentCommon.website.facebook)"
-                               [brand]="environmentCommon.website.facebook.cssClass"></app-social-button>
-            <app-social-button (click)="socialLogin(environmentCommon.website.google)"
-                               [brand]="environmentCommon.website.google.cssClass"></app-social-button>
+          <div class="flex-layout-row flex-center-space-evenly">
+            <app-brand-button (click)="socialLogin(environmentCommon.website.facebook)"
+                              [icon]="environmentCommon.website.facebook.cssClass"></app-brand-button>
+            <app-brand-button (click)="socialLogin(environmentCommon.website.google)"
+                              [icon]="environmentCommon.website.google.cssClass"></app-brand-button>
           </div>
           <div class="flex-layout-column flex-center-center" style="margin-bottom: 1.5rem; margin-top: 0.5rem;">
             <p>or</p>

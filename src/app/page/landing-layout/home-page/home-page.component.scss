@@ -9,6 +9,12 @@
     max-width: 100vw;
     width: 100%;
 
+    // add this class to home-design class to have background image
+    &.with-background-img {
+      background: url("../../../../assets/home-hero-background-wide.png") no-repeat center center;
+      background-size: cover;
+    }
+
     & .hero-content-left, & .hero-content-right {
       @include util.flex-layout-column;
       @include util.flex-center-center;
@@ -111,12 +117,15 @@
 
     & .hero-content.home-design {
       flex-direction: row;
+      padding-bottom: 50px;
 
       & .hero-content-left, & .hero-content-right {
         max-width: 45vw;
       }
 
       & .hero-content-left {
+        padding-bottom: 50px;
+
         & h1 {
           padding: 50px 0;
         }

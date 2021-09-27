@@ -1,5 +1,42 @@
-.theme-color-lighter-3-border {
-  border-color: var(--theme-color-lighter-3);
+:root {
+  // [LIGHT MODE DEFINITIONS BEGIN]
+  --success-light-mode: #228b22;
+  --error-light-mode: #e23237;
+  --warning-light-mode: #d28f29;
+  --info-light-mode: #5c98cd;
+
+  // [LIGHT MODE END]
+
+  // [DARK MODE DEFINITIONS BEGIN]
+  --success-dark-mode: #398039;
+  --error-dark-mode: #e04e52;
+  --warning-dark-mode: #cda05c;
+  --info-dark-mode: #3d79ac;
+  // [DARK MODE END]
+}
+
+:root, .light-theme {
+  --success: var(--success-light-mode);
+  --error: var(--error-light-mode);
+  --warning: var(--warning-light-mode);
+  --info: var(--info-light-mode);
+}
+
+@mixin theme-information-dark-mode {
+  --success: var(--success-dark-mode);
+  --error: var(--error-dark-mode);
+  --warning: var(--warning-dark-mode);
+  --info: var(--info-dark-mode);
+}
+
+.dark-theme {
+  @include theme-information-dark-mode;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include theme-information-dark-mode;
+  }
 }
 
 @mixin define-information-text($type) {

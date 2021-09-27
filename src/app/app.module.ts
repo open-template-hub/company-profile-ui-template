@@ -89,6 +89,7 @@ import { ExternalRedirectPageComponent } from './page/splash-layout/external-red
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 import { ButtonComponent } from './component/button/button.component';
 import { BrandButtonComponent } from './component/button/brand-button/brand-button.component';
+import { InformationButtonComponent } from './component/button/information-button/information-button.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -166,6 +167,7 @@ FullCalendarModule.registerPlugins( [
     TimelineCardComponent,
     ButtonComponent,
     BrandButtonComponent,
+    InformationButtonComponent,
   ],
   imports: [
     BrowserModule,

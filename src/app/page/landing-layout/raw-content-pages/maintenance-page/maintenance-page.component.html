@@ -9,6 +9,6 @@
         <h4>Please check again later</h4>
       </div>
     </div>
-    <app-button (click)="router.navigate(['/'])" [text]="'HOME'"></app-button>
+    <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.warning" [text]="'HOME'"></app-information-button>
   </div>
 </div>

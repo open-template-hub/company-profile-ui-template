@@ -14,9 +14,10 @@
         <h4 *ngIf="!loading && !error">Please proceed with login</h4>
       </div>
     </div>
-    <app-button (click)="router.navigate([URLS.root])" *ngIf="!loading && error"
-                      [text]="'HOME'"></app-button>
-    <app-button (click)="router.navigate([URLS.login])" *ngIf="!loading && !error"
-                      [text]="'LOG IN'"></app-button>
+
+    <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.error"
+                            *ngIf="!loading && error" [text]="'HOME'"></app-information-button>
+    <app-information-button (click)="router.navigate([URLS.login])" [informationType]="INFORMATION_TYPES.success"
+                            *ngIf="!loading && !error" [text]="'LOG IN'"></app-information-button>
   </div>
 </div>

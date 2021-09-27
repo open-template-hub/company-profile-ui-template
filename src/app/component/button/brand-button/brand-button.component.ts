@@ -9,4 +9,8 @@ export class BrandButtonComponent {
 
   @Input() icon: string;
   @Input() text: string;
+
+  constructor() {
+    // Intentionally blank
+  }
 }

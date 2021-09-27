@@ -13,6 +13,24 @@ export const ResponseCode = {
   SERVICE_UNAVAILABLE: 503,
 };
 
+export const INFORMATION_TYPES = {
+  error: {
+    cssClass: 'error',
+    icon: 'times'
+  },
+  warning: {
+    cssClass: 'warning',
+    icon: 'exclamation-triangle'
+  },
+  success: {
+    cssClass: 'success', icon: 'check'
+  },
+  info: {
+    cssClass: 'info',
+    icon: 'info-circle'
+  }
+};
+
 export const NpmPackages = [
   '@open-template-hub/server-generator',
   '@open-template-hub/common',
@@ -139,7 +157,7 @@ export const URLS = {
   dashboard: {
     root: '/' + URLS_RAW.dashboard.root,
     myProfile:
-      '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.myProfile,
+        '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.myProfile,
     contribute: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.event,
     learn: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.learn,
     event: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.createEvent,
@@ -151,7 +169,7 @@ export const URLS = {
   // Settings Layout
   settings: {
     editProfile:
-      '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.editProfile,
+        '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.editProfile,
     editTheme: '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.editTheme,
   },
 };

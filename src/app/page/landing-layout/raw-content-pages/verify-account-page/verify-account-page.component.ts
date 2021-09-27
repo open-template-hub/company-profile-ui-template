@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { URLS } from '../../../../data/constant';
+import { INFORMATION_TYPES, URLS } from '../../../../data/constant';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { InformationService } from '../../../../service/information/information.service';
 import { LoadingService } from '../../../../service/loading/loading.service';
@@ -13,6 +13,9 @@ import { ThemeService } from '../../../../service/theme/theme.service';
   styleUrls: [ './verify-account-page.component.scss' ]
 } )
 export class VerifyAccountPageComponent implements OnInit, OnDestroy {
+
+  INFORMATION_TYPES = INFORMATION_TYPES;
+
   loading = true;
   error = '';
   token = '';

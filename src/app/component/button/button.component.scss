@@ -56,6 +56,23 @@
     @include util.default-shadow;
   }
 
+  // Todo: generate there via scss function with interpolation. Check information.scss for examples
+  &.information-button.error {
+    background-color: var(--error);
+  }
+
+  &.information-button.warning {
+    background-color: var(--warning);
+  }
+
+  &.information-button.success {
+    background-color: var(--success);
+  }
+
+  &.information-button.info {
+    background-color: var(--info);
+  }
+
   &.brand-button {
     background-color: var(--social);
 

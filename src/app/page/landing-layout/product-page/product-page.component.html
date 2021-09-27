@@ -1,16 +1,16 @@
 <div class="intro">
   <div class="left">
     <app-card
-        [header]="header"
-        [body]="body"
+        [headerTemplate]="headerTemplate"
+        [bodyTemplate]="bodyTemplate"
         [cardClass]="'transparent-card'"
         class="product-card">
-      <ng-template #header>
+      <ng-template #headerTemplate>
         <div class="header">
           <h3>{{ product.name }}</h3>
         </div>
       </ng-template>
-      <ng-template #body>
+      <ng-template #bodyTemplate>
         <div class="body">
           <h5>{{ product.description }}</h5>
           <div class="open-source" *ngIf="product.openSource">

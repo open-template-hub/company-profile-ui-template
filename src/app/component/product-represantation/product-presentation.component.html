@@ -3,8 +3,8 @@
     <ng-container [ngSwitch]="productLineName">
       <ng-container [ngSwitch]="product.key" *ngSwitchCase="'services'">
         <app-card
-            [body]="body" [cardClass]="'transparent-card'" class="features-card">
-          <ng-template #body>
+            [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
+          <ng-template #bodyTemplate>
             <div class="body">
               <h5>Why Open Template Hub?</h5>
               <ng-container *ngFor="let feature of product.features">
@@ -21,8 +21,8 @@
       <ng-container [ngSwitch]="product.key" *ngSwitchDefault>
         <app-card
             *ngSwitchCase="['auth-server-template', 'payment-server-template'].includes(product.key) ? product.key : ''"
-            [body]="body" [footer]="footer" [cardClass]="'transparent-card'" class="presentation-card">
-          <ng-template #body>
+            [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" [cardClass]="'transparent-card'" class="presentation-card">
+          <ng-template #bodyTemplate>
             <div class="body">
               <div class="social-login-wrapper">
                 <img [src]="brand.brandLogo" alt="logo" class="brand-logo" width="80"/>
@@ -38,7 +38,7 @@
                 in minutes</h5>
             </div>
           </ng-template>
-          <ng-template #footer>
+          <ng-template #footerTemplate>
             <div class="footer theme-color-lighter-3-border">
               <p>Some of the preconfigured systems:</p>
               <p>
@@ -53,8 +53,8 @@
             [commandLines]="product.commandLines">
         </app-animated-code-editor>
         <app-card *ngSwitchDefault
-            [body]="body" [cardClass]="'transparent-card'" class="features-card">
-          <ng-template #body>
+            [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
+          <ng-template #bodyTemplate>
             <div class="body">
               <h5>Why Open Template Hub?</h5>
               <ng-container *ngFor="let feature of product.features">

@@ -3,9 +3,9 @@
     <div class="hero-content">
       <h2>Login</h2>
     </div>
-    <app-card [body]="body">
+    <app-card [bodyTemplate]="bodyTemplate">
       <!-- Body -->
-      <ng-template #body>
+      <ng-template #bodyTemplate>
         <div class="body">
           <div class="flex-layout-row flex-center-center">
             <app-social-button (click)="socialLogin(environmentCommon.website.facebook)"

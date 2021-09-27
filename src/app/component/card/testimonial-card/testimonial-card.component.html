@@ -1,13 +1,13 @@
-<app-card [header]="header" [body]="body" *ngIf="testimonial.reviewer.name" class="testimonial-card">
+<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" *ngIf="testimonial.reviewer.name" class="testimonial-card">
   <!-- Header -->
-  <ng-template #header>
+  <ng-template #headerTemplate>
     <div class="header">
       <i [style.color]="testimonial.style.themeColor" aria-hidden="true" class="fas fa-quote-left fa-lg fa-fw"></i>
     </div>
   </ng-template>
 
   <!-- Body -->
-  <ng-template #body>
+  <ng-template #bodyTemplate>
     <div class="body">
       <div class="review">
         <p>

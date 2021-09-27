@@ -7,16 +7,16 @@ import { Ribbon } from '../../model/ribbon/ribbon.model';
   styleUrls: [ './card.component.scss' ]
 } )
 export class CardComponent {
-  @Input() header: TemplateRef<any>;
-  @Input() body: TemplateRef<any>;
-  @Input() footer: TemplateRef<any>;
-  @Input() bottomWrapper: TemplateRef<any>;
+  @Input() headerTemplate: TemplateRef<any>;
+  @Input() bodyTemplate: TemplateRef<any>;
+  @Input() footerTemplate: TemplateRef<any>;
+  @Input() bottomWrapperTemplate: TemplateRef<any>;
 
   @Input() cardClass: string;
 
-  @Input() defaultHeaderContent: string;
-  @Input() defaultBodyContent: string;
-  @Input() defaultFooterContent: string;
+  @Input() header: string;
+  @Input() body: string;
+  @Input() footer: string;
 
   @Input() ribbon: Ribbon;
 

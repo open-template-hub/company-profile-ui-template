@@ -1,7 +1,7 @@
-<app-card [header]="header" [body]="body" [footer]="footer" *ngIf="pricingOption" class="pricing-card"
+<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" *ngIf="pricingOption" class="pricing-card"
           [ribbon]="pricingOption.ribbon || undefined">
   <!-- Header -->
-  <ng-template #header>
+  <ng-template #headerTemplate>
     <div class="header">
       <h4>{{ pricingOption.title }}</h4>
       <div class="price-area">
@@ -14,7 +14,7 @@
   </ng-template>
 
   <!-- Body -->
-  <ng-template #body>
+  <ng-template #bodyTemplate>
     <div class="body">
       <ng-container *ngFor="let feature of pricingOption.features">
         <p *ngIf="feature && feature !== 'true'">
@@ -26,7 +26,7 @@
   </ng-template>
 
   <!-- Footer -->
-  <ng-template #footer>
+  <ng-template #footerTemplate>
     <div class="footer">
       <app-button [text]="'Buy Now'" [icon]="'shopping-cart'"></app-button>
     </div>

@@ -3,37 +3,37 @@
     <!-- Ribbon of the card -->
   </span>
 
-  <ng-container *ngTemplateOutlet="header || defaultHeader">
+  <ng-container *ngTemplateOutlet="headerTemplate || defaultHeaderTemplate">
     <!-- Header of the card -->
   </ng-container>
-  <ng-template #defaultHeader>
-    <div class="header" *ngIf="defaultHeaderContent">
-      {{ defaultHeaderContent }}
+  <ng-template #defaultHeaderTemplate>
+    <div class="header" *ngIf="header">
+      {{ header }}
     </div>
   </ng-template>
 
-  <ng-container *ngTemplateOutlet="body || defaultBody">
+  <ng-container *ngTemplateOutlet="bodyTemplate || defaultBodyTemplate">
     <!-- Body of the card -->
   </ng-container>
-  <ng-template #defaultBody>
-    <div class="body" *ngIf="defaultBodyContent">
-      {{ defaultBodyContent }}
+  <ng-template #defaultBodyTemplate>
+    <div class="body" *ngIf="body">
+      {{ body }}
     </div>
   </ng-template>
 
-  <ng-container *ngTemplateOutlet="footer || defaultFooter">
+  <ng-container *ngTemplateOutlet="footerTemplate || defaultFooterTemplate">
     <!-- Footer of the card -->
   </ng-container>
-  <ng-template #defaultFooter>
-    <div class="footer" *ngIf="defaultFooterContent">
-      {{ defaultFooterContent }}
+  <ng-template #defaultFooterTemplate>
+    <div class="footer" *ngIf="footer">
+      {{ footer }}
     </div>
   </ng-template>
 
-  <ng-container *ngTemplateOutlet="bottomWrapper || defaultBottomWrapper">
+  <ng-container *ngTemplateOutlet="bottomWrapperTemplate || defaultBottomWrapperTemplate">
     <!-- Bottom wrapper of the card -->
   </ng-container>
-  <ng-template #defaultBottomWrapper>
+  <ng-template #defaultBottomWrapperTemplate>
     <div class="bottom-wrapper"></div>
   </ng-template>
 </div>

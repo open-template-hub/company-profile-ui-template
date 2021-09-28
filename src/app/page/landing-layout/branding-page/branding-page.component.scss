@@ -35,14 +35,14 @@
       @include util.flex-layout-row;
       @include util.flex-center-center;
 
-      justify-content: space-evenly;
+      justify-content: center;
 
       width: 800px;
 
       flex-wrap: wrap;
 
       & > * {
-        margin: 15px 0;
+        margin: 15px;
       }
     }
   }

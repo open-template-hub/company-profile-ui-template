@@ -77,7 +77,7 @@
     &.logo-item {
 
       & .presentation-item-content {
-        height: 250px;
+        height: 220px;
         box-shadow: none;
       }
     }
@@ -116,14 +116,12 @@
         }
       }
 
-      &.product-item {
-        height: 450px;
+      &.logo-item {
+        height: 280px;
       }
 
-      &.logo-item {
-        & .presentation-item-content {
-          height: calc(55vw - 100px);
-        }
+      &.product-item {
+        height: 450px;
       }
     }
   }
@@ -143,7 +141,7 @@
 
       &.logo-item, &.product-item {
         & .presentation-item-content {
-          width: 250px;
+          width: 200px;
         }
       }
 

@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PROFILE_IMG, URLS } from '../../../data/constant';
 import { EventTypes } from '../../../data/event/events.data';
-import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
+import { BusinessLogicService } from '../../../service/business-logic/business-logic.service';
 import { EventService } from '../../../service/event/event.service';
 import { FileStorageService } from '../../../service/file-storage/file-storage.service';
 
@@ -25,7 +25,7 @@ export class EventPageComponent implements OnInit, OnDestroy {
   constructor(
       private route: ActivatedRoute,
       private eventService: EventService,
-      private basicInfoService: BasicInfoService,
+      private businessLogicService: BusinessLogicService,
       private fileStorageService: FileStorageService,
       private router: Router
   ) {
@@ -42,7 +42,7 @@ export class EventPageComponent implements OnInit, OnDestroy {
           this.completed = false;
         }
 
-        this.basicInfoService.getUser( this.event.user.username )
+        this.businessLogicService.getUser( this.event.user.username )
         .subscribe( visitedUserInfo => {
           if ( visitedUserInfo.payload?.profileImageId ) {
             this.fileStorageService.downloadVisitedProfileImage( visitedUserInfo.payload?.profileImageId ).subscribe( profileImg => {

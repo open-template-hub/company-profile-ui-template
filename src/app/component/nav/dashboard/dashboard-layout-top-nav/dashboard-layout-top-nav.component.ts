@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { PROFILE_IMG, URLS } from '../../../../data/constant';
-import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
+import { BusinessLogicService } from '../../../../service/business-logic/business-logic.service';
 import { CategoryService } from '../../../../service/category/category.service';
 import { FileStorageService } from '../../../../service/file-storage/file-storage.service';
 import { LoadingService } from '../../../../service/loading/loading.service';
@@ -30,7 +30,7 @@ export class DashboardLayoutTopNavComponent {
   @ViewChild( 'searchArea' ) searchArea: ElementRef;
 
   constructor(
-      private basicInfoService: BasicInfoService,
+      private businessLogicService: BusinessLogicService,
       private fileStorageService: FileStorageService,
       private themeService: ThemeService,
       private loadingService: LoadingService,
@@ -39,7 +39,7 @@ export class DashboardLayoutTopNavComponent {
   ) {
     this.brand = this.themeService.brand;
 
-    this.basicInfoService.userInfo.subscribe( userInfo => {
+    this.businessLogicService.userInfo.subscribe( userInfo => {
           if ( userInfo ) {
             this.userInfo = userInfo;
           }
@@ -78,7 +78,7 @@ export class DashboardLayoutTopNavComponent {
       return;
     }
 
-    this.basicInfoService.search( q ).subscribe( results => {
+    this.businessLogicService.search( q ).subscribe( results => {
       this.userSearchResults = results.slice( 0, 10 );
     } );
 

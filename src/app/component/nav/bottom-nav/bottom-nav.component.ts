@@ -5,7 +5,7 @@ import { URLS } from '../../../data/constant';
 import { AuthToken } from '../../../model/auth/auth-token.model';
 import { ProductLine } from '../../../model/product/product.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
-import { BasicInfoService } from '../../../service/basic-info/basic-info.service';
+import { BusinessLogicService } from '../../../service/business-logic/business-logic.service';
 import { LoadingService } from '../../../service/loading/loading.service';
 
 @Component( {
@@ -33,7 +33,7 @@ export class BottomNavComponent {
       private router: Router,
       private authenticationService: AuthenticationService,
       private loadingService: LoadingService,
-      private basicInfoService: BasicInfoService,
+      private businessLogicService: BusinessLogicService,
   ) {
     this.authenticationService.currentUser.subscribe( currentUser => {
       this.currentUser = currentUser;
@@ -41,7 +41,7 @@ export class BottomNavComponent {
 
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
 
-    this.basicInfoService.userInfo.subscribe( userInfo => {
+    this.businessLogicService.userInfo.subscribe( userInfo => {
           if ( userInfo ) {
             this.userInfo = userInfo;
           }

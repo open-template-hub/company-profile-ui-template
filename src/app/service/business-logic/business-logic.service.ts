@@ -7,13 +7,15 @@ import { environment } from '../../../environments/environment';
 @Injectable( {
   providedIn: 'root'
 } )
-export class BasicInfoService {
+export class BusinessLogicService {
 
   public userInfo: Observable<any>;
   public userInfoSubject: BehaviorSubject<any>;
 
   constructor( private http: HttpClient ) {
-    const userInfoStorageItem = localStorage.getItem( 'userInfo' ) ? localStorage.getItem( 'userInfo' ) : sessionStorage.getItem( 'userInfo' );
+    const userInfoStorageItem = localStorage.getItem( 'userInfo' ) ?
+        localStorage.getItem( 'userInfo' ) :
+        sessionStorage.getItem( 'userInfo' );
     this.userInfoSubject = new BehaviorSubject<any>( JSON.parse( userInfoStorageItem ) );
     this.userInfo = this.userInfoSubject.asObservable();
   }

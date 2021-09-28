@@ -1,0 +1,54 @@
+@use '../landing-layout.component';
+@use '../../../../styles/util/util';
+@use '../../../component/card/policy-card/policy-card.component';
+
+.raw-content-page-layout {
+  & .policy-content {
+    text-align: left;
+  }
+
+  & .color-content {
+    @include util.flex-layout-row;
+    @include util.flex-center-center;
+
+    padding: 0 50px 50px;
+
+    & > * {
+      margin: 10px;
+    }
+
+    & .color-item {
+      @include util.flex-layout-column;
+      @include util.top-right-bottom-left-rounded-box;
+      @include util.default-shadow;
+
+      align-items: center;
+      justify-content: flex-start;
+
+      color: var(--color);
+      height: 200px;
+
+      & .color {
+        @include util.top-right-bottom-left-rounded-box;
+        @include util.default-shadow;
+
+        background-color: var(--theme-color);
+
+        &.card-color-light-mode {
+          background-color: var(--card-light-mode);
+        }
+
+        &.card-color-dark-mode {
+          background-color: var(--card-dark-mode);
+        }
+
+        width: 200px;
+        height: 100px;
+      }
+
+      & > * {
+        margin: 10px;
+      }
+    }
+  }
+}

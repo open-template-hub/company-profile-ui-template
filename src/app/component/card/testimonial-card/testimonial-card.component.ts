@@ -3,7 +3,6 @@ import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
 import { URLS } from '../../../data/constant';
 import { Testimonial } from '../../../model/testimonial/testimonial.model';
-import { ThemeService } from '../../../service/theme/theme.service';
 
 @Component( {
   selector: 'app-testimonial-card',
@@ -15,10 +14,6 @@ export class TestimonialCardComponent {
 
   environment = environment;
   environmentCommon = environmentCommon;
-
-  brand = {
-    brandLogo: '',
-  };
 
   @Input() testimonial: Testimonial = {
     review:
@@ -37,6 +32,7 @@ export class TestimonialCardComponent {
     },
   };
 
-  constructor( private themeService: ThemeService ) {
+  constructor() {
+    // Intentionally blank
   }
 }

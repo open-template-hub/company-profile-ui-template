@@ -7,7 +7,7 @@
     text-align: left;
   }
 
-  & .color-content {
+  & .branding-item-wrapper {
     @include util.flex-layout-row;
     @include util.flex-center-center;
 
@@ -16,40 +16,92 @@
     padding-bottom: 50px;
 
     & > * {
-      margin: 10px;
+      margin: 15px;
     }
+  }
 
-    & .color-item {
-      @include util.flex-layout-column;
+  & .branding-item {
+    @include util.flex-layout-column;
+    @include util.top-right-bottom-left-rounded-box;
+    @include util.default-shadow;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    & .branding-item-content {
       @include util.top-right-bottom-left-rounded-box;
+      @include util.flex-layout-column;
+      @include util.flex-center-center;
       @include util.default-shadow;
 
-      align-items: center;
-      justify-content: flex-start;
+      overflow: hidden;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
 
-      color: var(--color);
-      height: 200px;
+    & p, & a {
+      font-size: 18px;
 
-      & .color {
-        @include util.top-right-bottom-left-rounded-box;
-        @include util.default-shadow;
+      &:last-child {
+        font-weight: 500;
+      }
+    }
 
-        background-color: var(--theme-color);
+    & > * {
+      margin: 0 15px 12px;
+    }
+  }
 
-        &.card-color-light-mode {
-          background-color: var(--card-light-mode);
-        }
+  & .color-item {
+    height: 200px;
 
-        &.card-color-dark-mode {
-          background-color: var(--card-dark-mode);
-        }
+    & .color {
+      background-color: var(--theme-color);
 
-        width: 200px;
-        height: 100px;
+      &.card-color-light-mode {
+        background-color: var(--card-light-mode);
       }
 
-      & > * {
-        margin: 10px;
+      &.card-color-dark-mode {
+        background-color: var(--card-dark-mode);
+      }
+
+      width: 200px;
+      height: 100px;
+    }
+  }
+
+  & .logo-item {
+    height: 350px;
+
+    & .logo {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .raw-content-page-layout {
+    & .wallpaper-item {
+      height: 450px;
+
+      & .wallpaper {
+        max-width: 85vw;
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .raw-content-page-layout {
+    & .wallpaper-item {
+      height: 450px;
+
+      & .wallpaper {
+        max-width: 750px;
+        height: 400px;
       }
     }
   }

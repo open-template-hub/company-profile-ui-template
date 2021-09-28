@@ -31,8 +31,6 @@ export const INFORMATION_TYPES = {
   }
 };
 
-export const BrandName = 'Open Template Hub';
-
 export const NpmPackages = [
   '@open-template-hub/server-generator',
   '@open-template-hub/common',

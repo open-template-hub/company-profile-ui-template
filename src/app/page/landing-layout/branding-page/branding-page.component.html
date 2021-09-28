@@ -48,23 +48,58 @@
           </div>
         </ng-template>
       </app-policy-card>
+    </div>
+    <div class="hero-content">
       <h2>Color Palette</h2>
-      <div class="color-content">
-        <div class="color-item">
-          <div class="color" [class]="themeColorSetting + '-theme'">
+      <div class="branding-item-wrapper">
+        <div class="branding-item color-item">
+          <div class="branding-item-content color" [class]="themeColorSetting + '-theme'">
           </div>
-          <small>Brand Color</small>
+          <p>Brand Color</p>
+          <p>{{ colorPalette.brandColor | uppercase }}</p>
         </div>
-        <div class="color-item">
-          <div class="color card-color-light-mode">
+        <div class="branding-item color-item">
+          <div class="branding-item-content color card-color-light-mode">
           </div>
-          <small>Card Color Light Mode</small>
+          <p>Card Color Light Mode</p>
+          <p>{{ colorPalette.cardColorLightMode | uppercase }}</p>
         </div>
-        <div class="color-item">
-          <div class="color card-color-dark-mode">
+        <div class="branding-item color-item">
+          <div class="branding-item-content color card-color-dark-mode">
           </div>
-          <small>Card Color Dark Mode</small>
+          <p>Card Color Dark Mode</p>
+          <p>{{ colorPalette.cardColorDarkMode | uppercase }}</p>
         </div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h2>Logos</h2>
+      <div class="branding-item-wrapper">
+        <div class="branding-item logo-item">
+          <div class="branding-item-content logo">
+            <a [href]="brand.brandLogo" target="_blank">
+              <img [src]="brand.brandLogo" height="220">
+            </a>
+          </div>
+          <p>Brand Logo</p>
+          <a class="theme-color-link" [href]="brand.brandLogo" target="_blank">PNG</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h2>Wallpapers</h2>
+      <div class="branding-item-wrapper">
+        <ng-container *ngFor="let wallpaper of brand.wallpapers; index as i">
+          <div class="branding-item wallpaper-item">
+            <div class="branding-item-content wallpaper">
+              <a [href]="wallpaper" target="_blank">
+                <img [src]="wallpaper" height="400">
+              </a>
+            </div>
+            <p>{{ wallpaper.substring( wallpaper.lastIndexOf( '/' ) + 1, wallpaper.lastIndexOf( '.' ) ) }}</p>
+            <a class="theme-color-link" [href]="wallpaper" target="_blank">PNG</a>
+          </div>
+        </ng-container>
       </div>
     </div>
   </div>

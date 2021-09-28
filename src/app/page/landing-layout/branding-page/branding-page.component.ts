@@ -21,6 +21,8 @@ export class BrandingPageComponent {
     cardColorDarkMode: ''
   };
 
+  externalColorInfoUrl = 'https://color-hex.org/color/';
+
   constructor( private themeService: ThemeService ) {
     this.brand = this.themeService.brand;
 

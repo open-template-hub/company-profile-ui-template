@@ -1,0 +1,115 @@
+@use '../../../../styles/util/util';
+
+.branding-item {
+  @include util.flex-layout-column;
+  @include util.top-right-bottom-left-rounded-box;
+  @include util.default-shadow;
+
+  align-items: center;
+  justify-content: flex-start;
+
+
+  box-sizing: border-box;
+  padding: 15px 15px 12px;
+
+  & .branding-item-content {
+    @include util.top-right-bottom-left-rounded-box;
+    @include util.flex-layout-column;
+    @include util.flex-center-center;
+    @include util.default-shadow;
+
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  & p, & a {
+    font-size: 18px;
+
+    &:last-child {
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+  }
+
+  & > * {
+    margin-bottom: 12px;
+  }
+
+  &.color-item {
+
+    & div {
+      background-color: var(--theme-color);
+    }
+
+    &.card-color-light-mode {
+      & div {
+        background-color: var(--card-light-mode);
+      }
+    }
+
+    &.card-color-dark-mode {
+      & div {
+        background-color: var(--card-dark-mode);
+      }
+    }
+  }
+
+  &.logo-item {
+    height: 350px;
+
+    & div {
+      height: 250px;
+    }
+  }
+
+  &.wallpaper-item {
+    height: 450px;
+
+    & div {
+      height: 400px;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .branding-item {
+    width: 94vw;
+    height: 55vw;
+
+    & div {
+      width: 100%;
+    }
+
+    &.color-item {
+      & div {
+        height: calc(55vw - 100px);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .branding-item {
+    &.color-item {
+      height: 200px;
+
+      & div {
+        height: 100px;
+        width: 200px;
+      }
+    }
+
+    &.logo-item {
+      & div {
+        width: 250px;
+      }
+    }
+
+    &.wallpaper-item {
+      & div {
+        max-width: 750px;
+      }
+    }
+  }
+}
+

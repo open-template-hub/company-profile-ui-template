@@ -1,0 +1,16 @@
+<app-card [bodyTemplate]="bodyTemplate" [bottomWrapperTemplate]="bottomWrapperTemplate"
+          class="presentation-card" [cardClass]="'transparent-card'">
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div class="branding-item" [class]="presentationItemClass">
+      <div class="branding-item-content">
+        <a [href]="href" target="_blank">
+          <img [src]="src" *ngIf="src" [height]="imgHeight" alt="wallpaper">
+        </a>
+      </div>
+      <p>{{ text }}</p>
+      <a class="theme-color-link" *ngIf="href" [href]="href" target="_blank">{{ secondaryText }}</a>
+    </div>
+  </ng-template>
+  <ng-template #bottomWrapperTemplate></ng-template>
+</app-card>

@@ -13,21 +13,43 @@ export const ResponseCode = {
   SERVICE_UNAVAILABLE: 503,
 };
 
+export const INFORMATION_TYPES = {
+  error: {
+    cssClass: 'error',
+    icon: 'times'
+  },
+  warning: {
+    cssClass: 'warning',
+    icon: 'exclamation-triangle'
+  },
+  success: {
+    cssClass: 'success', icon: 'check'
+  },
+  info: {
+    cssClass: 'info',
+    icon: 'info-circle'
+  }
+};
+
 export const NpmPackages = [
   '@open-template-hub/server-generator',
   '@open-template-hub/common',
-  '@open-template-hub/app-generator'
+  '@open-template-hub/app-generator',
 ];
 
 export const OthStartDate = '2020-01-01';
 
 export const OthGithubName = 'open-template-hub';
 
+export const OthName = 'Open Template Hub';
+
+export const Authors = 'Fatih Turker, Furkan Yavuz, Mert Sarac';
+
 export const GithubCounters = {
   Stars: 'Stars',
   Forks: 'Forks',
   Subscribers: 'Subscribers',
-  ReleaseVersion: 'Release Version'
+  ReleaseVersion: 'Release Version',
 };
 
 export const PROFILE_IMG = './assets/common/profile-img.png';
@@ -35,7 +57,7 @@ export const PROFILE_IMG = './assets/common/profile-img.png';
 export const DarkLightSettings = {
   dark: 'dark',
   light: 'light',
-  auto: 'auto'
+  auto: 'auto',
 };
 
 export const ThemeColorSettings = {
@@ -94,8 +116,7 @@ export const URLS_RAW = {
   // Settings Layout
   settings: {
     root: 'settings',
-    editProfile: 'edit-profile',
-    editTheme: 'edit-theme'
+    editTheme: 'edit-theme',
   },
 };
 
@@ -136,18 +157,18 @@ export const URLS = {
   // Dashboard Layout
   dashboard: {
     root: '/' + URLS_RAW.dashboard.root,
-    myProfile: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.myProfile,
+    myProfile:
+        '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.myProfile,
     contribute: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.event,
     learn: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.learn,
     event: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.createEvent,
     privacy: '/' + URLS_RAW.dashboard.root + '/' + URLS_RAW.dashboard.privacy,
   },
   user: {
-    root: '/' + URLS_RAW.user
+    root: '/' + URLS_RAW.user,
   },
   // Settings Layout
   settings: {
-    editProfile: '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.editProfile,
-    editTheme: '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.editTheme
+    editTheme: '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.editTheme,
   },
 };

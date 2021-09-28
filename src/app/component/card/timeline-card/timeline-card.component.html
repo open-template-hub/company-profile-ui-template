@@ -1,7 +1,7 @@
-<app-card [header]="header" [body]="body" [footer]="footer" *ngIf="timelineItem" class="timeline-card"
+<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" *ngIf="timelineItem" class="timeline-card"
           [class]="timelineItem.theme ? timelineItem.theme + '-theme' : ''">
   <!-- Header -->
-  <ng-template #header>
+  <ng-template #headerTemplate>
     <div class="header" [class.left]="arrow === 'left'" [class.right]="arrow === 'right'">
       <h4>{{ timelineItem.title }}</h4>
       <h5>{{ timelineItem.date }}</h5>
@@ -9,7 +9,7 @@
   </ng-template>
 
   <!-- Body -->
-  <ng-template #body>
+  <ng-template #bodyTemplate>
     <div class="body">
       <h3>{{ timelineItem.paragraph }}</h3>
       <img *ngIf="timelineItem.img" [src]="timelineItem.img" alt="img">
@@ -17,7 +17,7 @@
   </ng-template>
 
   <!-- Footer -->
-  <ng-template #footer>
+  <ng-template #footerTemplate>
     <div class="footer" *ngIf="timelineItem.footerText">
       <small>{{ timelineItem.footerText }}</small>
     </div>

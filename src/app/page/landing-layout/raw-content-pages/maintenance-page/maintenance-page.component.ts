@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { INFORMATION_TYPES, URLS } from '../../../../data/constant';
 import { ThemeService } from '../../../../service/theme/theme.service';
 
 @Component( {
@@ -8,6 +9,9 @@ import { ThemeService } from '../../../../service/theme/theme.service';
   styleUrls: [ './maintenance-page.component.scss' ]
 } )
 export class MaintenancePageComponent {
+
+  URLS = URLS;
+  INFORMATION_TYPES = INFORMATION_TYPES;
 
   brand = {
     brandLogoMerge: ''

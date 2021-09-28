@@ -3,15 +3,15 @@
     <div class="hero-content">
       <h2>Register</h2>
     </div>
-    <app-card [body]="body">
+    <app-card [bodyTemplate]="bodyTemplate">
       <!-- Body -->
-      <ng-template #body>
+      <ng-template #bodyTemplate>
         <div class="body">
-          <div class="flex-layout-row flex-center-center">
-            <app-social-button (click)="socialLogin(environmentCommon.website.facebook)"
-                               [brand]="environmentCommon.website.facebook.cssClass"></app-social-button>
-            <app-social-button (click)="socialLogin(environmentCommon.website.google)"
-                               [brand]="environmentCommon.website.google.cssClass"></app-social-button>
+          <div class="flex-layout-column flex-center-center social-login-wrapper">
+            <app-brand-button (click)="socialLogin(environmentCommon.website.facebook)"
+                              [icon]="environmentCommon.website.facebook.cssClass"></app-brand-button>
+            <app-brand-button (click)="socialLogin(environmentCommon.website.google)"
+                              [icon]="environmentCommon.website.google.cssClass"></app-brand-button>
           </div>
           <div class="flex-layout-column flex-center-center">
             <p>or</p>
@@ -37,7 +37,7 @@
               </div>
             </div>
             <div class="section-submit">
-              <app-button1 [text]="'CONTINUE'" [themeColor]="'default'"></app-button1>
+              <app-button [text]="'CONTINUE'"></app-button>
               <p>
                 <small class="dim">By signing up, you agree
                   <a class="theme-color-link" rel=noopener routerLink="{{URLS.terms}}" target="_blank">Terms of Use</a>,

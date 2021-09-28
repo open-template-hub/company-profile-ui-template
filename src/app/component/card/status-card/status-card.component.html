@@ -1,7 +1,7 @@
-<app-card [body]="body" [footer]="footer" *ngIf="overallSystemStatus.systemStatuses" class="status-card">
+<app-card [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" *ngIf="overallSystemStatus.systemStatuses" class="status-card">
 
   <!-- Body -->
-  <ng-template #body>
+  <ng-template #bodyTemplate>
     <div class="body">
       <ng-container *ngFor="let systemStatus of overallSystemStatus.systemStatuses">
         <div class="status-section solo">
@@ -76,7 +76,7 @@
   </ng-template>
 
   <!-- Footer -->
-  <ng-template #footer>
+  <ng-template #footerTemplate>
     <div class="footer"
          [class.success-border]="overallSystemStatus.overall === 'UP'"
          [class.error-border]="overallSystemStatus.overall === 'DOWN'"

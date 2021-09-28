@@ -16,14 +16,15 @@
 
 .form-page-layout {
 
-  & app-card {
-    & .body {
-      box-sizing: border-box;
-      padding: 25px;
-      font-size: 17px;
+  & .body {
+    box-sizing: border-box;
+    padding: 25px;
+    font-size: 17px;
 
-      & app-social-button {
-        margin: 8px;
+    & .social-login-wrapper {
+      & > * {
+        width: 100%;
+        margin: 0 0 10px;
       }
     }
   }
@@ -41,11 +42,8 @@
   }
 
   .form-page-layout {
-
-    & app-card {
-      & .body {
-        width: 94vw;
-      }
+    & .body {
+      width: 94vw;
     }
   }
 }
@@ -62,11 +60,8 @@
   }
 
   .form-page-layout {
-
-    & app-card {
-      & .body {
-        width: 400px;
-      }
+    & .body {
+      width: 400px;
     }
   }
 }

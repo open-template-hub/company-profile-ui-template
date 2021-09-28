@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LoadingService } from '../../../service/loading/loading.service';
+import { LoadingService } from '../../../../service/loading/loading.service';
 
 @Component( {
   selector: 'app-social-button',

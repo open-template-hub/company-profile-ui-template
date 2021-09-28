@@ -16,7 +16,6 @@ import { ProductService } from '../../../service/product/product.service';
   styleUrls: [ './product-page.component.scss' ],
 } )
 export class ProductPageComponent implements OnInit, OnDestroy {
-
   URLS = URLS;
   TESTIMONIALS = TESTIMONIALS;
   PARTNERS = PARTNERS;

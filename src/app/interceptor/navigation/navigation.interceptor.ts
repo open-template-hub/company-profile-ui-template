@@ -1,0 +1,48 @@
+import { Injectable } from '@angular/core';
+import {
+  ActivatedRouteSnapshot,
+  CanActivate,
+  RouterStateSnapshot,
+  UrlTree,
+} from '@angular/router';
+import { Observable } from 'rxjs';
+import { NAVIGATIONS } from 'src/app/data/navigation/navigation.data';
+import { SeoMetaData } from 'src/app/model/seo/seo.model';
+import { SeoService } from 'src/app/service/seo/seo.service';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class NavigationInterceptor implements CanActivate {
+  constructor(private seoService: SeoService) {}
+
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ):
+    | Observable<boolean | UrlTree>
+    | Promise<boolean | UrlTree>
+    | boolean
+    | UrlTree {
+    var navObj = this.getObjectByUrl(state.url);
+    if (navObj && navObj.title) {
+      const seoMetaData = {
+        title: navObj.title,
+        description: navObj.description,
+        keywords: navObj.keywords,
+        robots: navObj.keywords,
+      } as SeoMetaData;
+      this.seoService.setMetaData(seoMetaData);
+    }
+
+    return true;
+  }
+
+  getObjectByUrl = (url: string) => {
+    var splittedUrl = url.split('/')[1];
+    var key = Object.keys(NAVIGATIONS).find(
+      (k: string) => NAVIGATIONS[k].url === splittedUrl
+    );
+    return NAVIGATIONS[key];
+  };
+}

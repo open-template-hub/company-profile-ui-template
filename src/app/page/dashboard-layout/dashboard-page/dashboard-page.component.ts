@@ -116,7 +116,7 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
           if ( !this.userInfo.payload ) {
             this.basicInfoService.createMyInfo()
             .subscribe( () => {
-                  this.router.navigate( [ URLS.settings.editProfile ] );
+                  this.router.navigate( [ URLS.maintenance ] );
                 }
             );
           } else {

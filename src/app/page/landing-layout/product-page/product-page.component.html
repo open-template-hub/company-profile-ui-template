@@ -1,50 +1,28 @@
 <div class="intro">
   <div class="left">
     <app-card
-      [header]="header"
-      [body]="body"
-      [cardClass]="'transparent-card'"
-      class="product-card"
-    >
-      <ng-template #header>
+        [headerTemplate]="headerTemplate"
+        [bodyTemplate]="bodyTemplate"
+        [cardClass]="'transparent-card'"
+        class="product-card">
+      <ng-template #headerTemplate>
         <div class="header">
           <h3>{{ product.name }}</h3>
         </div>
       </ng-template>
-      <ng-template #body>
+      <ng-template #bodyTemplate>
         <div class="body">
           <h5>{{ product.description }}</h5>
-          <div class="open-source" *ngIf="product.openSource">
-            <app-button1
-              [isSleekButton]="true"
-              (click)="redirect()"
-              [brandIcon]="'github'"
-              class="top-right-bottom-left-rounded-box"
-              [text]="'Open Source'"
-            >
-            </app-button1>
-            <app-button1
-              [isSleekButton]="true"
-              [themeColor]="'default'"
-              (click)="router.navigate([URLS.contactUs])"
-              class="top-right-bottom-left-rounded-box"
-              [text]="'Professional Help'"
-            >
-            </app-button1>
+          <div class="button-wrapper" *ngIf="product.openSource">
+            <app-brand-button (click)="redirect()" [icon]="environmentCommon.website.github.cssClass"
+                              [text]="'Open Source'"></app-brand-button>
+
+            <app-button (click)="router.navigate([URLS.contactUs])"
+                                    [text]="'Professional Help'"></app-button>
           </div>
-          <div class="request-for-demo" *ngIf="!product.openSource">
-            <app-button1
-              [isSleekButton]="true"
-              [themeColor]="'default'"
-              (click)="router.navigate([URLS.contactUs])"
-              class="top-right-bottom-left-rounded-box"
-              [text]="
-                productLineName === 'services'
-                  ? 'Contact Us'
-                  : 'Request for Demo'
-              "
-            >
-            </app-button1>
+          <div class="button-wrapper" *ngIf="!product.openSource">
+            <app-button (click)="router.navigate([URLS.contactUs])"
+                              [text]="productLineName === 'services' ? 'Contact Us' : 'Request for Demo'"></app-button>
           </div>
         </div>
       </ng-template>
@@ -52,23 +30,23 @@
   </div>
   <div class="right">
     <app-product-presentation
-      [productLineName]="productLineName"
-      [product]="product"
+        [productLineName]="productLineName"
+        [product]="product"
     ></app-product-presentation>
   </div>
 </div>
 
 <div *ngIf="product.counters" class="counters">
   <a
-    *ngFor="let counter of product.counters"
-    [href]="
+      *ngFor="let counter of product.counters"
+      [href]="
       environmentCommon.website.github.url +
       '/' +
       environmentCommon.oth.social.github
     "
-    class="counter-wrapper"
-    rel="noopener"
-    target="_blank"
+      class="counter-wrapper"
+      rel="noopener"
+      target="_blank"
   >
     <h2 *ngIf="counter.value" class="counter" id="npmCounterElement">
       {{ counter.value }}
@@ -87,19 +65,19 @@
     </div>
     <div class="testimonials-wrapper">
       <app-testimonial-card
-        *ngFor="let testimonial of TESTIMONIALS"
-        [testimonial]="testimonial"
+          *ngFor="let testimonial of TESTIMONIALS"
+          [testimonial]="testimonial"
       >
       </app-testimonial-card>
     </div>
     <div class="partners-wrapper">
       <app-swiper-wrapper
-        [partners]="PARTNERS"
-        [isGrayscale]="true"
-        [isNavigationEnabled]="true"
-        [height]="100"
-        [isPaginationEnabled]="true"
-        [breakpoints]="{
+          [partners]="PARTNERS"
+          [isGrayscale]="true"
+          [isNavigationEnabled]="true"
+          [height]="100"
+          [isPaginationEnabled]="true"
+          [breakpoints]="{
           '640': {
             slidesPerView: 1,
             spaceBetween: 30
@@ -120,8 +98,8 @@
   <ng-container [ngSwitch]="product.key" *ngSwitchDefault>
     <div class="pricing-plan-wrapper">
       <app-price-plan
-        [productLineName]="productLineName"
-        [product]="product"
+          [productLineName]="productLineName"
+          [product]="product"
       ></app-price-plan>
     </div>
   </ng-container>

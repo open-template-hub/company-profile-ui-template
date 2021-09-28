@@ -42,4 +42,8 @@ export class EditThemePageComponent {
   setThemeColorSetting( themeColorSetting: string ) {
     this.themeService.setThemeColorSetting( themeColorSetting );
   }
+
+  insertIf( condition: boolean, array: any[], element: any ) {
+    return condition ? [ ...array, element ] : array;
+  }
 }

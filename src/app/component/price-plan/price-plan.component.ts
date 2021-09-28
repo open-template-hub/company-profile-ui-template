@@ -9,6 +9,7 @@ import { Product } from '../../model/product/product.model';
   styleUrls: [ './price-plan.component.scss' ]
 } )
 export class PricePlanComponent {
+
   URLS = URLS;
 
   @Input() product: Product;

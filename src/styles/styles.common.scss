@@ -106,6 +106,10 @@ a.theme-color-link {
   vertical-align: text-top;
 }
 
+.theme-color-lighter-3-border {
+  border-color: var(--theme-color-lighter-3);
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     &::-webkit-scrollbar-track:vertical {

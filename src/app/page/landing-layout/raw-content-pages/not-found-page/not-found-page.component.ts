@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { INFORMATION_TYPES, URLS } from 'src/app/data/constant';
 import { ThemeService } from '../../../../service/theme/theme.service';
 
 @Component( {
@@ -8,6 +9,9 @@ import { ThemeService } from '../../../../service/theme/theme.service';
   styleUrls: [ './not-found-page.component.scss' ]
 } )
 export class NotFoundPageComponent {
+
+  URLS = URLS;
+  INFORMATION_TYPES = INFORMATION_TYPES;
 
   brand = {
     brandLogoBroken: '',

@@ -2,7 +2,7 @@ name: Cron Dependency Checker Workflow
 
 on:
   schedule:
-    - cron: '0 8 * * 1'
+    - cron: '0 4 * * 1'
 
 jobs:
   cron-dependency-checker:
@@ -13,12 +13,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
-          ref: 'workflow/dependency-update'
-
-      - name: Hard Reset Dependency Update From Develop
-        run: |
-          git fetch origin develop:develop
-          git reset --hard develop
 
       - name: Install Node
         uses: actions/setup-node@v1
@@ -32,9 +26,9 @@ jobs:
       - name: Build
         run: npm run buildProd
 
-      - name: Git Commit and Push by Force
+      - name: Git Commit and Push
         run: |
           git config --global user.email "furknyavuz@gmail.com"
           git config --global user.name "Furkan Yavuz"
           git commit -am "Workflow/dependency check"
-          git push -f
+          git push

@@ -19,5 +19,5 @@ jobs:
       - name: Hard Reset Demo From Develop
         run: |
           git fetch origin develop:develop
-          git reset --hard develop
+          git reset --hard origin/develop
           git push -f

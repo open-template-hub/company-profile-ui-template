@@ -1,6 +1,6 @@
-<app-card [header]="header" [body]="body" [footer]="footer" *ngIf="employee.profile" class="employee-card">
+<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" *ngIf="employee.profile" class="employee-card">
   <!-- Header -->
-  <ng-template #header>
+  <ng-template #headerTemplate>
     <div class="header">
       <img [src]="employee.profile.photoUri" alt="profile-img" class="profile-image"
            onerror="this.src='./assets/common/profile-img.png'"/>
@@ -8,7 +8,7 @@
   </ng-template>
 
   <!-- Body -->
-  <ng-template #body>
+  <ng-template #bodyTemplate>
     <div class="body">
       <p class="name">{{ employee.profile.name }}</p>
       <p class="title">{{ employee.profile.title }}</p>
@@ -16,7 +16,7 @@
   </ng-template>
 
   <!-- Footer -->
-  <ng-template #footer>
+  <ng-template #footerTemplate>
     <div class="footer">
       <app-ext-link *ngIf="employee.profile.social.twitter" [href]="employee.profile.social.twitter">
         <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-fw'"

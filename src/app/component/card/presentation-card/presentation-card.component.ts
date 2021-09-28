@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component( {
   selector: 'app-presentation-card',
@@ -7,8 +8,7 @@ import { Component, Input } from '@angular/core';
 } )
 export class PresentationCardComponent {
 
-  @Input() href: string;
-  @Input() internalLink: string;
+  @Input() href: string = undefined;
   @Input() src: string;
   @Input() title: string;
   @Input() secondaryText: string;
@@ -16,7 +16,21 @@ export class PresentationCardComponent {
   @Input() presentationItemClass: string;
   @Input() imgHeight: number;
 
-  constructor() {
+  constructor( private router: Router ) {
     // Intentionally blank
+  }
+
+  redirect() {
+    if ( !this.href ) {
+      return;
+    }
+
+    if ( this.href.startsWith( '/' ) ) {
+      this.router.navigate( [ this.href ] ).then( () => {
+        return true;
+      } );
+    } else {
+      window.open( this.href, '_blank' );
+    }
   }
 }

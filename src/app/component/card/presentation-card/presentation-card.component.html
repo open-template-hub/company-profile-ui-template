@@ -3,21 +3,16 @@
   <!-- Body -->
   <ng-template #bodyTemplate>
     <div class="presentation-item" [class]="presentationItemClass">
-      <a class="presentation-item-content"
-         [attr.href]="href ? href : null"
-         [routerLink]="internalLink ? internalLink : null"
-         [target]="href ? '_blank' : null">
+      <a class="presentation-item-content" (click)="redirect()">
         <img [src]="src" *ngIf="src" [height]="imgHeight" alt="wallpaper">
       </a>
 
       <p>{{ title }}</p>
 
-      <a class="presentation-link theme-color-link" *ngIf="href && secondaryText"
-         [attr.href]="href ? href : null"
-         [target]="href ? '_blank' : null">
+      <a class="presentation-link theme-color-link" *ngIf="!href.startsWith('/') && secondaryText" (click)="redirect()">
         {{ secondaryText }}
       </a>
-      <p class="presentation-description" *ngIf="!href && secondaryText">{{ secondaryText }}</p>
+      <p class="presentation-description" *ngIf="href.startsWith('/') && secondaryText">{{ secondaryText }}</p>
       <p class="presentation-footer" *ngIf="footerText">{{ footerText }}</p>
     </div>
   </ng-template>

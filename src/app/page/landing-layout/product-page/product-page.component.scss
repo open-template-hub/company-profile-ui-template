@@ -54,8 +54,8 @@
     & .header {
       padding: 20px;
 
-      border-bottom-left-radius: 99em;
-      border-top-right-radius: 99em;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 30px;
 
       background-color: var(--darker-contrast);
 
@@ -66,8 +66,7 @@
       @include util.flex-layout-column;
       @include util.flex-center-center;
 
-      border-top-left-radius: 70px;
-      border-bottom-left-radius: 6px;
+      border-bottom-left-radius: 45px;
       border-bottom-right-radius: 6px;
 
       background-color: var(--shadow-lighter);

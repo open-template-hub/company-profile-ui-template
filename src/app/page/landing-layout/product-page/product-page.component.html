@@ -3,6 +3,7 @@
     <app-card
         [headerTemplate]="headerTemplate"
         [bodyTemplate]="bodyTemplate"
+        [bottomWrapperTemplate]="bottomWrapperTemplate"
         [cardClass]="'transparent-card'"
         class="product-card">
       <ng-template #headerTemplate>
@@ -25,6 +26,8 @@
                               [text]="productLineName === 'services' ? 'Contact Us' : 'Request for Demo'"></app-button>
           </div>
         </div>
+      </ng-template>
+      <ng-template #bottomWrapperTemplate>
       </ng-template>
     </app-card>
   </div>

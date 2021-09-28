@@ -19,7 +19,7 @@
   </div>
   <div class="websites-wrapper">
     <ng-container *ngFor="let website of websites">
-      <app-brand-button (click)="redirect(website.url + '/' + website.handle)" [text]="website.name"
+      <app-brand-button (click)="redirect(website.url + '/' + website.handle)" [text]="website.name | titlecase"
                         [icon]="website.cssClass">
       </app-brand-button>
     </ng-container>

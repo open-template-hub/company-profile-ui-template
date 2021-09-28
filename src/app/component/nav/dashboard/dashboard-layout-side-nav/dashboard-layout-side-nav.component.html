@@ -39,7 +39,7 @@
     </a>
     <div *ngIf="openSettings" class="side-nav-sub">
       <a *ngIf="currentUser" [display]="sideNavClosed==='true'" placement="right"
-         routerLink="{{URLS.settings.editProfile}}"
+         routerLink="{{URLS.maintenance}}"
          show-delay="500" tooltip="edit profile">
         <i aria-hidden="true" class="material-icons">person</i>
         <span *ngIf="sideNavClosed === 'false'">

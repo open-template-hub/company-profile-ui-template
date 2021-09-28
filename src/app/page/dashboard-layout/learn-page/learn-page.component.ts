@@ -19,7 +19,6 @@ import { LoadingService } from '../../../service/loading/loading.service';
   styleUrls: [ './learn-page.component.scss' ]
 } )
 export class LearnPageComponent implements OnInit, OnDestroy {
-  searchButtonClasses = [ ButtonClasses.defaultTheme, ButtonClasses.borderAndFontByDefaultTheme, ButtonClasses.transparent ];
 
   searchedEvents: any;
   recommendedEvents = [];

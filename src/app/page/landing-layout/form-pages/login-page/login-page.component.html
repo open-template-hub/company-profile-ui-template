@@ -7,7 +7,7 @@
       <!-- Body -->
       <ng-template #bodyTemplate>
         <div class="body">
-          <div class="flex-layout-row flex-center-space-evenly">
+          <div class="flex-layout-column flex-center-space-evenly social-login-wrapper">
             <app-brand-button (click)="socialLogin(environmentCommon.website.facebook)"
                               [icon]="environmentCommon.website.facebook.cssClass"></app-brand-button>
             <app-brand-button (click)="socialLogin(environmentCommon.website.google)"

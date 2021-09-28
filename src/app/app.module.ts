@@ -20,13 +20,16 @@ import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AnimatedCodeEditorComponent } from './component/animated-code-editor/animated-code-editor.component';
+import { BrandButtonComponent } from './component/button/brand-button/brand-button.component';
+import { ButtonComponent } from './component/button/button.component';
 import { Button1Component } from './component/button/deprecated/button1/button1.component';
 import { SocialButtonComponent } from './component/button/deprecated/social-button/social-button.component';
+import { InformationButtonComponent } from './component/button/information-button/information-button.component';
 import { CalendarComponent } from './component/calendar/calendar.component';
 import { CardComponent } from './component/card/card.component';
 import { Card1Component } from './component/card/deprecated/card1/card1.component';
-import { EmployeeCardComponent } from './component/card/employee-card/employee-card.component';
 import { EventCardComponent } from './component/card/deprecated/event-card/event-card.component';
+import { EmployeeCardComponent } from './component/card/employee-card/employee-card.component';
 import { PolicyCardComponent } from './component/card/policy-card/policy-card.component';
 import { PricingCardComponent } from './component/card/pricing-card/pricing-card.component';
 import { StatusCardComponent } from './component/card/status-card/status-card.component';
@@ -81,15 +84,11 @@ import { NotFoundPageComponent } from './page/landing-layout/raw-content-pages/n
 import { SignUpSuccessPageComponent } from './page/landing-layout/raw-content-pages/sign-up-success-page/sign-up-success-page.component';
 import { VerifyAccountPageComponent } from './page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component';
 import { StatusPageComponent } from './page/landing-layout/status-page/status-page.component';
-import { EditProfilePageComponent } from './page/settings-layout/edit-profile-page/edit-profile-page.component';
 import { EditThemePageComponent } from './page/settings-layout/edit-theme-page/edit-theme-page.component';
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
 import { CallbackPageComponent } from './page/splash-layout/callback-page/callback-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
-import { ButtonComponent } from './component/button/button.component';
-import { BrandButtonComponent } from './component/button/brand-button/brand-button.component';
-import { InformationButtonComponent } from './component/button/information-button/information-button.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -120,7 +119,6 @@ FullCalendarModule.registerPlugins( [
     SocialButtonComponent,
     LabelDataComponent,
     DashboardLayoutTopNavComponent,
-    EditProfilePageComponent,
     LabelWithIconDataComponent,
     NotFoundPageComponent,
     LearnPageComponent,

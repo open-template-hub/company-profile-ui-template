@@ -31,7 +31,6 @@ import { NotFoundPageComponent } from './page/landing-layout/raw-content-pages/n
 import { SignUpSuccessPageComponent } from './page/landing-layout/raw-content-pages/sign-up-success-page/sign-up-success-page.component';
 import { VerifyAccountPageComponent } from './page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component';
 import { StatusPageComponent } from './page/landing-layout/status-page/status-page.component';
-import { EditProfilePageComponent } from './page/settings-layout/edit-profile-page/edit-profile-page.component';
 import { EditThemePageComponent } from './page/settings-layout/edit-theme-page/edit-theme-page.component';
 import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
 import { CallbackPageComponent } from './page/splash-layout/callback-page/callback-page.component';
@@ -240,14 +239,10 @@ const routes: Routes = [
     component: SettingsLayoutComponent,
     children: [
       {
-        path: URLS_RAW.settings.editProfile,
-        component: EditProfilePageComponent,
-        canActivate: [AuthGuard],
-      },
-      {
         path: URLS_RAW.settings.editTheme,
-        component: EditThemePageComponent,
-        canActivate: [AuthGuard],
+        component: EditThemePageComponent
+        /* Todo: add auth guard when needed
+            canActivate: [AuthGuard], */
       },
     ],
   },

@@ -1,17 +1,37 @@
 @use '../../../styles/page/page';
 
-.page-content {
-  padding: 0 2rem 2em;
+.settings-form-page-layout {
+
+  & app-card {
+    & .body {
+      box-sizing: border-box;
+      padding: 25px;
+      font-size: 17px;
+    }
+  }
 }
 
 @media only screen and (max-width: 999px) {
   .page {
-    min-height: 200vh;
     margin-top: 55px;
+
+    & .page-content {
+      padding-bottom: 50px;
+    }
   }
 
   .page, .footer-wrap {
     margin-left: 0;
+  }
+
+  .settings-form-page-layout {
+    min-height: 80vh;
+
+    & app-card {
+      & .body {
+        width: 94vw;
+      }
+    }
   }
 }
 
@@ -19,20 +39,30 @@
   .side-nav-closed .page, .side-nav-closed .footer-wrap, .page, .footer-wrap {
     margin-left: 80px;
   }
-}
 
-@media only screen and (min-width: 1000px) {
   .page, .footer-wrap {
     margin-left: 256px;
   }
-}
 
-@media only screen and (min-width: 1000px) {
   .page {
     margin-top: 0;
+
+    & .page-content {
+      padding: 0 2rem 2em;
+    }
   }
 
   .side-nav-closed .page, .side-nav-closed .footer-wrap {
     margin-left: 80px;
+  }
+
+  .settings-form-page-layout {
+    min-height: 60vh;
+
+    & app-card {
+      & .body {
+        width: 400px;
+      }
+    }
   }
 }

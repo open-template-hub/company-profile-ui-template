@@ -19,7 +19,7 @@ export class AboutUsPageComponent {
     for ( const website in environmentCommon.oth.social ) {
       if ( environmentCommon.oth.social[ website ] ) {
         this.websites.push( {
-          name: website,
+          name: website.split( /(?=[A-Z])/ ).join( ' ' ),
           handle: environmentCommon.oth.social[ website ],
           cssClass: environmentCommon.website[ website ].cssClass,
           url: environmentCommon.website[ website ].companyUrl ?

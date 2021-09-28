@@ -131,7 +131,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
           if ( !userInfo.payload ) {
             this.basicInfoService.createMyInfo()
             .subscribe( () => {
-                  this.router.navigate( [ URLS.settings.editProfile ] );
+                  this.router.navigate( [ URLS.maintenance ] );
                 }
             );
           } else {

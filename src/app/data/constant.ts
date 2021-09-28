@@ -116,7 +116,6 @@ export const URLS_RAW = {
   // Settings Layout
   settings: {
     root: 'settings',
-    editProfile: 'edit-profile',
     editTheme: 'edit-theme',
   },
 };
@@ -170,8 +169,6 @@ export const URLS = {
   },
   // Settings Layout
   settings: {
-    editProfile:
-        '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.editProfile,
     editTheme: '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.editTheme,
   },
 };

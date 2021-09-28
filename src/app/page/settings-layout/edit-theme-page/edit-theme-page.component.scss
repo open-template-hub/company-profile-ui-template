@@ -1,25 +1,18 @@
+@use '../settings-layout.component';
+
 .section.horizontal {
   width: 100%;
 }
 
 @media only screen and (min-width: 1000px) {
-  .edit-theme-page {
-    display: block;
-    align-items: center;
-    padding-top: 110px;
-  }
-
-  .edit-theme-page app-card1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .section.horizontal {
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
+
+    & > * {
+      margin: 10px;
+    }
   }
 
   .section.horizontal app-brand-button {
@@ -28,16 +21,10 @@
 }
 
 @media only screen and (max-width: 999px) {
-  .edit-theme-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 85px;
-  }
+  .section.horizontal {
 
-  .edit-theme-page app-card1 {
-    display: flex;
-    justify-content: center;
+    & > * {
+      margin: 10px 0;
+    }
   }
-
 }

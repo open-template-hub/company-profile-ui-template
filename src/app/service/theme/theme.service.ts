@@ -22,7 +22,8 @@ export class ThemeService {
     brandLogo: '',
     brandLogoBroken: '',
     brandLogoMerge: '',
-    brandLogoMerged: ''
+    brandLogoMerged: '',
+    wallpapers: []
   };
 
   colors = [
@@ -75,6 +76,13 @@ export class ThemeService {
     this.brand.brandLogoBroken = './assets/logo/brand-logo-broken.png';
     this.brand.brandLogoMerge = './assets/logo/brand-logo-merge.gif';
     this.brand.brandLogoMerged = './assets/logo/brand-logo-merged.png';
+
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/logo-text-v-color.png' );
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/logo-text-v-light.png' );
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/logo-text-v-dark.png' );
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/oth-packages-color.png' );
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/oth-packages-light.png' );
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/oth-packages-dark.png' );
 
     if ( version ) {
       this.appVersion = version;

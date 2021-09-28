@@ -14,6 +14,7 @@ import { LearnPageComponent } from './page/dashboard-layout/learn-page/learn-pag
 import { MyProfilePageComponent } from './page/dashboard-layout/my-profile-page/my-profile-page.component';
 import { PublicProfilePageComponent } from './page/dashboard-layout/public-profile-page/public-profile-page.component';
 import { AboutUsPageComponent } from './page/landing-layout/about-us-page/about-us-page.component';
+import { BrandingPageComponent } from './page/landing-layout/branding-page/branding-page.component';
 import { ContactUsPageComponent } from './page/landing-layout/contact-us-page/contact-us-page.component';
 import { ForgetPasswordPageComponent } from './page/landing-layout/form-pages/forget-password-page/forget-password-page.component';
 import { LoginPageComponent } from './page/landing-layout/form-pages/login-page/login-page.component';
@@ -95,6 +96,11 @@ const routes: Routes = [
       {
         path: NAVIGATIONS.login.url,
         component: LoginPageComponent,
+        canActivate: [NavigationInterceptor],
+      },
+      {
+        path: NAVIGATIONS.branding.url,
+        component: BrandingPageComponent,
         canActivate: [NavigationInterceptor],
       },
       {

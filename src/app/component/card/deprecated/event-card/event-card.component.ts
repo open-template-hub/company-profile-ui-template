@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { DEFAULT_RIBBON, EVENT_RIBBONS } from 'src/app/data/ribbon/ribbon.data';
 import { URLS } from '../../../../data/constant';
-import { BasicInfoService } from '../../../../service/basic-info/basic-info.service';
+import { BusinessLogicService } from '../../../../service/business-logic/business-logic.service';
 
 @Component( {
   selector: 'app-event-card',
@@ -37,13 +37,13 @@ export class EventCardComponent implements OnInit {
 
   constructor(
       private router: Router,
-      private basicInfoService: BasicInfoService
+      private businessLogicService: BusinessLogicService
   ) {
     // Intentionally blank
   }
 
   ngOnInit(): void {
-    this.basicInfoService.userInfo.subscribe( userInfo => {
+    this.businessLogicService.userInfo.subscribe( userInfo => {
       this.username = userInfo?.username;
     } );
   }

@@ -662,16 +662,16 @@ export const PRODUCT_LINES: ProductLine[] = [
         ],
       },
       {
-        key: 'basic-info-server-template',
-        name: 'Basic Info Server',
-        description: 'Basic Info Server Template for generic usage in Node.js',
+        key: 'business-logic-server-template',
+        name: 'Business Logic Server',
+        description: 'Business Logic Server Template for generic usage in Node.js',
         href:
           environmentCommon.website.github.url +
           '/' +
           environmentCommon.oth.social.github +
           '/' +
-          'basic-info-server-template',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/basic-info-server-logo.png',
+          'business-logic-server-template',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/business-logic-server-logo.png',
         openSource: true,
         features: [
           {
@@ -1312,7 +1312,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             command:
-              '1) Payment Server\n2) Auth Server\n3) Basic Info Server\n4) File Storage Server\n5) Analytics Server\n6) Mail Server\nPlease enter a server type you want to generate:',
+              '1) Payment Server\n2) Auth Server\n3) Business Logic Server\n4) File Storage Server\n5) Analytics Server\n6) Mail Server\nPlease enter a server type you want to generate:',
             type: CommandType.Response,
             timeout: 20,
           },

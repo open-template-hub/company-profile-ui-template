@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { DarkLightSettings, ThemeColorSettings } from '../../data/constant';
 import { AuthToken } from '../../model/auth/auth-token.model';
-import { BasicInfoService } from '../basic-info/basic-info.service';
+import { BusinessLogicService } from '../business-logic/business-logic.service';
 import { EventService } from '../event/event.service';
 import { FileStorageService } from '../file-storage/file-storage.service';
 import { ThemeService } from '../theme/theme.service';
@@ -20,7 +20,7 @@ export class AuthenticationService {
 
   constructor( private http: HttpClient,
       private themeService: ThemeService,
-      private basicInfoService: BasicInfoService,
+      private businessLogicService: BusinessLogicService,
       private eventService: EventService,
       private fileStorageService: FileStorageService
   ) {
@@ -151,9 +151,9 @@ export class AuthenticationService {
     this.currentUserSubject.next( null );
 
     this.currentUser.subscribe( () => {
-      this.basicInfoService.logout();
+      this.businessLogicService.logout();
       this.eventService.logout();
-      this.basicInfoService.userInfo.subscribe( () => {
+      this.businessLogicService.userInfo.subscribe( () => {
         this.fileStorageService.logout();
       } );
     } );

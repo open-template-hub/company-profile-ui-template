@@ -17,10 +17,10 @@ export const OTH_TIME_LINE: TimeLineItem[] = [
     theme: ThemeColorSettings.blue
   },
   {
-    title: 'Basic Info Server Template',
+    title: 'Business Logic Server Template',
     date: '23 May 2020',
     paragraph: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis deserunt doloribus consequatur, laudantium odio dolorum laboriosam.',
-    img: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/basic-info-server-logo.png',
+    img: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/business-logic-server-logo.png',
     theme: ThemeColorSettings.purple
   },
   {

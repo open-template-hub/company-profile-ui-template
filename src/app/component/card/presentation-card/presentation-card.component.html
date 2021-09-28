@@ -2,14 +2,23 @@
           class="presentation-card" [cardClass]="'transparent-card'">
   <!-- Body -->
   <ng-template #bodyTemplate>
-    <div class="branding-item" [class]="presentationItemClass">
-      <div class="branding-item-content">
-        <a [href]="href" target="_blank">
-          <img [src]="src" *ngIf="src" [height]="imgHeight" alt="wallpaper">
-        </a>
-      </div>
-      <p>{{ text }}</p>
-      <a class="theme-color-link" *ngIf="href" [href]="href" target="_blank">{{ secondaryText }}</a>
+    <div class="presentation-item" [class]="presentationItemClass">
+      <a class="presentation-item-content"
+         [attr.href]="href ? href : null"
+         [routerLink]="internalLink ? internalLink : null"
+         [target]="href ? '_blank' : null">
+        <img [src]="src" *ngIf="src" [height]="imgHeight" alt="wallpaper">
+      </a>
+
+      <p>{{ title }}</p>
+
+      <a class="presentation-link theme-color-link" *ngIf="href && secondaryText"
+         [attr.href]="href ? href : null"
+         [target]="href ? '_blank' : null">
+        {{ secondaryText }}
+      </a>
+      <p class="presentation-description" *ngIf="!href && secondaryText">{{ secondaryText }}</p>
+      <p class="presentation-footer" *ngIf="footerText">{{ footerText }}</p>
     </div>
   </ng-template>
   <ng-template #bottomWrapperTemplate></ng-template>

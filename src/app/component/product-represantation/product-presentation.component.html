@@ -1,6 +1,6 @@
 <ng-container *ngIf="product">
   <div class="product-presentation">
-    <ng-container [ngSwitch]="productLineName">
+    <ng-container [ngSwitch]="productLineKey">
       <ng-container [ngSwitch]="product.key" *ngSwitchCase="'services'">
         <app-card
             [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">

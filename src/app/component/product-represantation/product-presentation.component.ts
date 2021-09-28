@@ -15,7 +15,7 @@ import { ThemeService } from '../../service/theme/theme.service';
 export class ProductPresentationComponent {
 
   @Input() product: Product;
-  @Input() productLineName: string;
+  @Input() productLineKey: string;
 
   brand = {
     brandLogo: '',
@@ -44,7 +44,5 @@ export class ProductPresentationComponent {
         this.PAYMENT_PARTNERS.push( { brandLogo: environmentCommon.website[ website ].logo, name: website } );
       }
     }
-
-    console.log(this.PAYMENT_PARTNERS);
   }
 }

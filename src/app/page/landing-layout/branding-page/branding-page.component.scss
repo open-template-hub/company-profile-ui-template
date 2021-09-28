@@ -7,7 +7,7 @@
     text-align: left;
   }
 
-  & .branding-item-wrapper {
+  & .related-products-wrapper {
     @include util.flex-center-center;
 
     padding-bottom: 50px;
@@ -17,7 +17,7 @@
 @media only screen and (max-width: 999px) {
   .raw-content-page-layout {
 
-    & .branding-item-wrapper {
+    & .related-products-wrapper {
       @include util.flex-layout-column;
 
       padding-bottom: 50px;
@@ -31,13 +31,18 @@
 
 @media only screen and (min-width: 1000px) {
   .raw-content-page-layout {
-    & .branding-item-wrapper {
+    & .related-products-wrapper {
       @include util.flex-layout-row;
+      @include util.flex-center-center;
+
+      justify-content: space-evenly;
+
+      width: 800px;
 
       flex-wrap: wrap;
 
       & > * {
-        margin: 15px;
+        margin: 15px 0;
       }
     }
   }

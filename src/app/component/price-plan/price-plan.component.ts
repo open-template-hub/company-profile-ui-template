@@ -13,7 +13,7 @@ export class PricePlanComponent {
   URLS = URLS;
 
   @Input() product: Product;
-  @Input() productLineName: string;
+  @Input() productLineKey: string;
 
   hiddenMainFeatures = new Set();
 

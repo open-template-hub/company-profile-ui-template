@@ -51,18 +51,18 @@
     </div>
     <div class="hero-content">
       <h2>Color Palette</h2>
-      <div class="branding-item-wrapper">
-        <app-presentation-card [text]="'Brand Color'"
+      <div class="related-products-wrapper">
+        <app-presentation-card [title]="'Brand Color'"
                                [href]="externalColorInfoUrl + colorPalette.brandColor.substring(1, colorPalette.brandColor.length)"
                                [secondaryText]="colorPalette.brandColor | uppercase"
                                [presentationItemClass]="'color-item'">
         </app-presentation-card>
-        <app-presentation-card [text]="'Card Color Light Mode'"
+        <app-presentation-card [title]="'Card Color Light Mode'"
                                [href]="externalColorInfoUrl + colorPalette.cardColorLightMode.substring(1, colorPalette.cardColorLightMode.length)"
                                [secondaryText]="colorPalette.cardColorLightMode | uppercase"
                                [presentationItemClass]="'color-item card-color-light-mode'">
         </app-presentation-card>
-        <app-presentation-card [text]="'Card Color Dark Mode'"
+        <app-presentation-card [title]="'Card Color Dark Mode'"
                                [href]="externalColorInfoUrl + colorPalette.cardColorDarkMode.substring(1, colorPalette.cardColorDarkMode.length)"
                                [secondaryText]="colorPalette.cardColorDarkMode | uppercase"
                                [presentationItemClass]="'color-item card-color-dark-mode'">
@@ -71,19 +71,19 @@
     </div>
     <div class="hero-content">
       <h2>Logos</h2>
-      <div class="branding-item-wrapper">
+      <div class="related-products-wrapper">
         <app-presentation-card [href]="brand.brandLogo" [src]="brand.brandLogo"
-                               [text]="brand.brandLogo.substring( brand.brandLogo.lastIndexOf( '/' ) + 1, brand.brandLogo.lastIndexOf( '.' ) )"
+                               [title]="brand.brandLogo.substring( brand.brandLogo.lastIndexOf( '/' ) + 1, brand.brandLogo.lastIndexOf( '.' ) )"
                                [secondaryText]="'PNG'" [presentationItemClass]="'logo-item'" imgHeight="220">
         </app-presentation-card>
       </div>
     </div>
     <div class="hero-content">
       <h2>Wallpapers</h2>
-      <div class="branding-item-wrapper">
+      <div class="related-products-wrapper">
         <ng-container *ngFor="let wallpaper of brand.wallpapers; index as i">
           <app-presentation-card [href]="wallpaper" [src]="wallpaper"
-                                 [text]="wallpaper.substring( wallpaper.lastIndexOf( '/' ) + 1, wallpaper.lastIndexOf( '.' ) )"
+                                 [title]="wallpaper.substring( wallpaper.lastIndexOf( '/' ) + 1, wallpaper.lastIndexOf( '.' ) )"
                                  [secondaryText]="'PNG'" [presentationItemClass]="'wallpaper-item'" [imgHeight]="400">
           </app-presentation-card>
         </ng-container>

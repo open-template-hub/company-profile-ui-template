@@ -1,113 +1,160 @@
 @use '../../../../styles/util/util';
+@use '../card.component';
 
-.branding-item {
-  @include util.flex-layout-column;
-  @include util.top-right-bottom-left-rounded-box;
-  @include util.default-shadow;
+.presentation-card {
 
-  align-items: center;
-  justify-content: flex-start;
-
-
-  box-sizing: border-box;
-  padding: 15px 15px 12px;
-
-  & .branding-item-content {
-    @include util.top-right-bottom-left-rounded-box;
+  & .presentation-item {
     @include util.flex-layout-column;
-    @include util.flex-center-center;
+    @include util.top-right-bottom-left-rounded-box;
     @include util.default-shadow;
 
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
+    background-color: var(--card);
 
-  & p, & a {
-    font-size: 18px;
+    align-items: center;
+    justify-content: flex-start;
 
-    &:last-child {
+    box-sizing: border-box;
+    padding: 15px 15px 12px;
+
+    & .presentation-item-content {
+      @include util.top-right-bottom-left-rounded-box;
+      @include util.flex-layout-column;
+      @include util.flex-center-center;
+      @include util.default-shadow;
+
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    & p, & a {
+      font-size: 18px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    & .presentation-link {
       font-weight: 500;
-      margin-bottom: 0;
-    }
-  }
-
-  & > * {
-    margin-bottom: 12px;
-  }
-
-  &.color-item {
-
-    & div {
-      background-color: var(--theme-color);
     }
 
-    &.card-color-light-mode {
-      & div {
-        background-color: var(--card-light-mode);
+    & .presentation-description, & .presentation-footer {
+      font-size: 15px;
+      color: var(--lighter-contrast);
+      font-weight: lighter;
+      padding: 0 10px;
+    }
+
+    & .presentation-footer {
+      margin-left: auto;
+      margin-top: auto;
+      color: var(--theme-color-lighter-4);
+    }
+
+    & > * {
+      margin-bottom: 12px;
+    }
+
+    &.color-item {
+
+      & .presentation-item-content {
+        background-color: var(--theme-color);
+      }
+
+      &.card-color-light-mode {
+        & .presentation-item-content {
+          background-color: var(--card-light-mode);
+        }
+      }
+
+      &.card-color-dark-mode {
+        & .presentation-item-content {
+          background-color: var(--card-dark-mode);
+        }
       }
     }
 
-    &.card-color-dark-mode {
-      & div {
-        background-color: var(--card-dark-mode);
+    &.logo-item {
+
+      & .presentation-item-content {
+        height: 250px;
+        box-shadow: none;
       }
     }
-  }
 
-  &.logo-item {
-    height: 350px;
+    &.product-item {
 
-    & div {
-      height: 250px;
+      & .presentation-item-content {
+        height: 150px;
+        box-shadow: none;
+      }
     }
-  }
 
-  &.wallpaper-item {
-    height: 450px;
+    &.wallpaper-item {
+      height: 450px;
 
-    & div {
-      height: 400px;
+      & .presentation-item-content {
+        height: 400px;
+      }
     }
   }
 }
 
 @media only screen and (max-width: 999px) {
-  .branding-item {
-    width: 94vw;
-    height: 55vw;
+  .presentation-card {
+    & .presentation-item {
+      width: 94vw;
+      height: 55vw;
 
-    & div {
-      width: 100%;
-    }
+      & .presentation-item-content {
+        width: 100%;
+      }
 
-    &.color-item {
-      & div {
-        height: calc(55vw - 100px);
+      &.color-item {
+        & .presentation-item-content {
+          height: calc(55vw - 100px);
+        }
+      }
+
+      &.product-item {
+        height: 450px;
+      }
+
+      &.logo-item {
+        & .presentation-item-content {
+          height: calc(55vw - 100px);
+        }
       }
     }
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  .branding-item {
-    &.color-item {
-      height: 200px;
+  .presentation-card {
+    & .presentation-item {
+      &.color-item {
+        height: 200px;
 
-      & div {
-        height: 100px;
-        width: 200px;
+        & .presentation-item-content {
+          height: 100px;
+          width: 200px;
+        }
       }
-    }
 
-    &.logo-item {
-      & div {
-        width: 250px;
+      &.logo-item, &.product-item {
+        & .presentation-item-content {
+          width: 250px;
+        }
       }
-    }
 
-    &.wallpaper-item {
-      & div {
-        max-width: 750px;
+      &.product-item {
+        height: 450px;
+      }
+
+      &.wallpaper-item {
+        & .presentation-item-content {
+          max-width: 750px;
+        }
       }
     }
   }

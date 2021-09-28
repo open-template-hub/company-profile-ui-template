@@ -39,9 +39,9 @@ export class NavigationInterceptor implements CanActivate {
   }
 
   getObjectByUrl = (url: string) => {
-    var splittedUrl = url.split('/')[1];
+    var moduleName = url.substring(url.lastIndexOf('/') + 1);
     var key = Object.keys(NAVIGATIONS).find(
-      (k: string) => NAVIGATIONS[k].url === splittedUrl
+      (k: string) => NAVIGATIONS[k].url === moduleName
     );
     return NAVIGATIONS[key];
   };

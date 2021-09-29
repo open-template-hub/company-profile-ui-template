@@ -22,7 +22,7 @@ export class BrandingPageComponent {
     tertiaryColor: ''
   };
 
-  externalColorInfoUrl = 'https://encycolorpedia.com/';
+  externalColorInfoUrl = 'https://color-hex.org/color/';
 
   constructor( private themeService: ThemeService ) {
     this.brand = this.themeService.brand;

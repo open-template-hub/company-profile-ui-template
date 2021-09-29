@@ -1,5 +1,7 @@
 :root {
   --theme-color-yellow: #d6b140;
+  --theme-color-yellow-secondary: #91782a;
+  --theme-color-yellow-tertiary: #fcdb7b;
 
   --theme-color-yellow-lighter-1: #d8b64d;
   --theme-color-yellow-lighter-2: #dbbc5b;
@@ -28,7 +30,8 @@
 :root .yellow-theme, .light-theme.yellow-theme {
 
   --theme-color: var(--theme-color-yellow);
-
+  --theme-color-secondary: var(--theme-color-yellow-secondary);
+  --theme-color-tertiary: var(--theme-color-yellow-tertiary);
   --theme-color-lighter-1: var(--theme-color-yellow-lighter-1);
   --theme-color-lighter-2: var(--theme-color-yellow-lighter-2);
   --theme-color-lighter-3: var(--theme-color-yellow-lighter-3);

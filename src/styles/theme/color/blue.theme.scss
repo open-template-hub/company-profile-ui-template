@@ -1,5 +1,7 @@
 :root {
   --theme-color-blue: #009ACD;
+  --theme-color-blue-secondary: #005470;
+  --theme-color-blue-tertiary: #46caf5;
 
   --theme-color-blue-lighter-1: #12a1d0;
   --theme-color-blue-lighter-2: #24a8d4;
@@ -28,6 +30,8 @@
 :root .blue-theme, .light-theme.blue-theme {
 
   --theme-color: var(--theme-color-blue);
+  --theme-color-secondary: var(--theme-color-blue-secondary);
+  --theme-color-tertiary: var(--theme-color-blue-tertiary);
 
   --theme-color-lighter-1: var(--theme-color-blue-lighter-1);
   --theme-color-lighter-2: var(--theme-color-blue-lighter-2);

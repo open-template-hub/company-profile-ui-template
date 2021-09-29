@@ -1,5 +1,7 @@
 :root {
   --theme-color-green: #43b043;
+  --theme-color-green-secondary: #205f20;
+  --theme-color-green-tertiary: #71dc70;
 
   --theme-color-green-lighter-1: #50b550;
   --theme-color-green-lighter-2: #5dbb5d;
@@ -28,6 +30,8 @@
 :root .green-theme, .light-theme.green-theme {
 
   --theme-color: var(--theme-color-green);
+  --theme-color-secondary: var(--theme-color-green-secondary);
+  --theme-color-tertiary: var(--theme-color-green-tertiary);
 
   --theme-color-lighter-1: var(--theme-color-green-lighter-1);
   --theme-color-lighter-2: var(--theme-color-green-lighter-2);

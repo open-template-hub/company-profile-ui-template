@@ -1,5 +1,7 @@
 :root {
   --theme-color-red: #d56666;
+  --theme-color-red-secondary: #803c3c;
+  --theme-color-red-tertiary: #faa5a5;
 
   --theme-color-red-lighter-1: #d77070;
   --theme-color-red-lighter-2: #da7b7b;
@@ -28,6 +30,8 @@
 :root .red-theme, .light-theme.red-theme {
 
   --theme-color: var(--theme-color-red);
+  --theme-color-secondary: var(--theme-color-red-secondary);
+  --theme-color-tertiary: var(--theme-color-red-tertiary);
 
   --theme-color-lighter-1: var(--theme-color-red-lighter-1);
   --theme-color-lighter-2: var(--theme-color-red-lighter-2);

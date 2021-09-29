@@ -57,15 +57,15 @@
                                [secondaryText]="colorPalette.brandColor | uppercase"
                                [presentationItemClass]="'color-item'">
         </app-presentation-card>
-        <app-presentation-card [title]="'Card Color Light Mode'"
-                               [href]="externalColorInfoUrl + colorPalette.cardColorLightMode.substring(1, colorPalette.cardColorLightMode.length)"
-                               [secondaryText]="colorPalette.cardColorLightMode | uppercase"
-                               [presentationItemClass]="'color-item card-color-light-mode'">
+        <app-presentation-card [title]="'Secondary Color'"
+                               [href]="externalColorInfoUrl + colorPalette.secondaryColor.substring(1, colorPalette.secondaryColor.length)"
+                               [secondaryText]="colorPalette.secondaryColor | uppercase"
+                               [presentationItemClass]="'color-item secondary'">
         </app-presentation-card>
-        <app-presentation-card [title]="'Card Color Dark Mode'"
-                               [href]="externalColorInfoUrl + colorPalette.cardColorDarkMode.substring(1, colorPalette.cardColorDarkMode.length)"
-                               [secondaryText]="colorPalette.cardColorDarkMode | uppercase"
-                               [presentationItemClass]="'color-item card-color-dark-mode'">
+        <app-presentation-card [title]="'Tertiary Color'"
+                               [href]="externalColorInfoUrl + colorPalette.tertiaryColor.substring(1, colorPalette.tertiaryColor.length)"
+                               [secondaryText]="colorPalette.tertiaryColor | uppercase"
+                               [presentationItemClass]="'color-item tertiary'">
         </app-presentation-card>
       </div>
     </div>

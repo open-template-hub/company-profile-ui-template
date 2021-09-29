@@ -1,5 +1,7 @@
 :root {
   --theme-color-orange: #ED9121;
+  --theme-color-orange-secondary: #915b14;
+  --theme-color-orange-tertiary: #ffb054;
 
   --theme-color-orange-lighter-1: #ee9830;
   --theme-color-orange-lighter-2: #efa040;
@@ -28,6 +30,8 @@
 :root .orange-theme, .light-theme.orange-theme {
 
   --theme-color: var(--theme-color-orange);
+  --theme-color-secondary: var(--theme-color-orange-secondary);
+  --theme-color-tertiary: var(--theme-color-orange-tertiary);
 
   --theme-color-lighter-1: var(--theme-color-orange-lighter-1);
   --theme-color-lighter-2: var(--theme-color-orange-lighter-2);

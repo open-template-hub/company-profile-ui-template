@@ -1,5 +1,7 @@
 :root {
   --theme-color-purple: #8968CD;
+  --theme-color-purple-secondary: #503b77;
+  --theme-color-purple-tertiary: #bca2f6;
 
   --theme-color-purple-lighter-1: #9172d0;
   --theme-color-purple-lighter-2: #997dd4;
@@ -28,6 +30,8 @@
 :root .purple-theme, .light-theme.purple-theme {
 
   --theme-color: var(--theme-color-purple);
+  --theme-color-secondary: var(--theme-color-purple-secondary);
+  --theme-color-tertiary: var(--theme-color-purple-tertiary);
 
   --theme-color-lighter-1: var(--theme-color-purple-lighter-1);
   --theme-color-lighter-2: var(--theme-color-purple-lighter-2);

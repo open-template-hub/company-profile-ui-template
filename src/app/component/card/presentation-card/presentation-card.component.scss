@@ -61,15 +61,15 @@
         background-color: var(--theme-color);
       }
 
-      &.card-color-light-mode {
+      &.secondary {
         & .presentation-item-content {
-          background-color: var(--card-light-mode);
+          background-color: var(--theme-color-secondary);
         }
       }
 
-      &.card-color-dark-mode {
+      &.tertiary {
         & .presentation-item-content {
-          background-color: var(--card-dark-mode);
+          background-color: var(--theme-color-tertiary);
         }
       }
     }

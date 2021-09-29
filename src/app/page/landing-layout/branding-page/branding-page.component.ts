@@ -10,7 +10,8 @@ export class BrandingPageComponent {
 
   brand = {
     brandLogo: '',
-    wallpapers: []
+    wallpapers: [],
+    badges: []
   };
 
   themeColorSetting: string;

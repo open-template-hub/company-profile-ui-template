@@ -74,11 +74,21 @@
       <div class="related-products-wrapper">
         <app-presentation-card [href]="brand.brandLogo" [src]="brand.brandLogo"
                                [title]="brand.brandLogo.substring( brand.brandLogo.lastIndexOf( '/' ) + 1, brand.brandLogo.lastIndexOf( '.' ) )"
-                               [secondaryText]="'PNG'" [presentationItemClass]="'logo-item'" imgHeight="180">
+                               [secondaryText]="'PNG'" [presentationItemClass]="'logo-item'" imgHeight="175">
         </app-presentation-card>
       </div>
     </div>
     <div class="hero-content">
+      <h2>Other Assets</h2>
+      <h2>Badges</h2>
+      <div class="related-products-wrapper">
+        <ng-container *ngFor="let badge of brand.badges; index as i">
+          <app-presentation-card [href]="badge" [src]="badge"
+                                 [title]="badge.substring( badge.lastIndexOf( '/' ) + 1, badge.lastIndexOf( '.' ) )"
+                                 [secondaryText]="'PNG'" [presentationItemClass]="'logo-item'" [imgHeight]="40">
+          </app-presentation-card>
+        </ng-container>
+      </div>
       <h2>Wallpapers</h2>
       <div class="related-products-wrapper">
         <ng-container *ngFor="let wallpaper of brand.wallpapers; index as i">

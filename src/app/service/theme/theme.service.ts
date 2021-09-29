@@ -23,7 +23,8 @@ export class ThemeService {
     brandLogoBroken: '',
     brandLogoMerge: '',
     brandLogoMerged: '',
-    wallpapers: []
+    wallpapers: [],
+    badges: []
   };
 
   colors = [
@@ -83,6 +84,9 @@ export class ThemeService {
     this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/oth-packages-color.png' );
     this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/oth-packages-light.png' );
     this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/oth-packages-dark.png' );
+
+    this.brand.badges.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/badges/powered-by-light-mode.png' );
+    this.brand.badges.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/badges/powered-by-dark-mode.png' );
 
     if ( version ) {
       this.appVersion = version;

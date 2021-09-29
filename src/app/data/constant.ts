@@ -66,6 +66,7 @@ export const ThemeColorSettings = {
   green: 'green-theme',
   orange: 'orange-theme',
   purple: 'purple-theme',
+  pink: 'pink-theme'
 };
 
 export const URLS_RAW = {

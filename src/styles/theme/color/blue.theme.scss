@@ -1,0 +1,88 @@
+:root {
+  --theme-color-blue: #009ACD;
+
+  --theme-color-blue-lighter-1: #12a1d0;
+  --theme-color-blue-lighter-2: #24a8d4;
+  --theme-color-blue-lighter-3: #36afd7;
+  --theme-color-blue-lighter-4: #48b6db;
+  --theme-color-blue-lighter-5: #5abdde;
+  --theme-color-blue-lighter-6: #6cc4e2;
+  --theme-color-blue-lighter-7: #a3daec;
+  --theme-color-blue-lighter-8: #c7e8f3;
+  --theme-color-blue-lighter-9: #ebf6fa;
+
+  --theme-color-blue-darker-1: #0392c2;
+  --theme-color-blue-darker-2: #078bb7;
+  --theme-color-blue-darker-3: #0b84ac;
+  --theme-color-blue-darker-4: #0f7da1;
+  --theme-color-blue-darker-5: #127596;
+  --theme-color-blue-darker-6: #166e8b;
+  --theme-color-blue-darker-7: #22596b;
+  --theme-color-blue-darker-8: #294a55;
+  --theme-color-blue-darker-9: #313c3f;
+
+  --hover-blue-theme-lighter: rgba(64, 152, 214, 0.3);
+  --hover-blue-theme-darker: rgba(64, 152, 214, 0.6);
+}
+
+:root .blue-theme, .light-theme.blue-theme {
+
+  --theme-color: var(--theme-color-blue);
+
+  --theme-color-lighter-1: var(--theme-color-blue-lighter-1);
+  --theme-color-lighter-2: var(--theme-color-blue-lighter-2);
+  --theme-color-lighter-3: var(--theme-color-blue-lighter-3);
+  --theme-color-lighter-4: var(--theme-color-blue-lighter-4);
+  --theme-color-lighter-5: var(--theme-color-blue-lighter-5);
+  --theme-color-lighter-6: var(--theme-color-blue-lighter-6);
+  --theme-color-lighter-7: var(--theme-color-blue-lighter-7);
+  --theme-color-lighter-8: var(--theme-color-blue-lighter-8);
+  --theme-color-lighter-9: var(--theme-color-blue-lighter-9);
+
+  --theme-color-darker-1: var(--theme-color-blue-darker-1);
+  --theme-color-darker-2: var(--theme-color-blue-darker-2);
+  --theme-color-darker-3: var(--theme-color-blue-darker-3);
+  --theme-color-darker-4: var(--theme-color-blue-darker-4);
+  --theme-color-darker-5: var(--theme-color-blue-darker-5);
+  --theme-color-darker-6: var(--theme-color-blue-darker-6);
+  --theme-color-darker-7: var(--theme-color-blue-darker-7);
+  --theme-color-darker-8: var(--theme-color-blue-darker-8);
+  --theme-color-darker-9: var(--theme-color-blue-darker-9);
+
+  --hover: var(--hover-blue-theme-lighter);
+}
+
+@mixin blue-theme-dark-mode {
+
+  --theme-color-lighter-1: var(--theme-color-blue-darker-1);
+  --theme-color-lighter-2: var(--theme-color-blue-darker-2);
+  --theme-color-lighter-3: var(--theme-color-blue-darker-3);
+  --theme-color-lighter-4: var(--theme-color-blue-darker-4);
+  --theme-color-lighter-5: var(--theme-color-blue-darker-5);
+  --theme-color-lighter-6: var(--theme-color-blue-darker-6);
+  --theme-color-lighter-7: var(--theme-color-blue-darker-7);
+  --theme-color-lighter-8: var(--theme-color-blue-darker-8);
+  --theme-color-lighter-9: var(--theme-color-blue-darker-9);
+
+  --theme-color-darker-1: var(--theme-color-blue-lighter-1);
+  --theme-color-darker-2: var(--theme-color-blue-lighter-2);
+  --theme-color-darker-3: var(--theme-color-blue-lighter-3);
+  --theme-color-darker-4: var(--theme-color-blue-lighter-4);
+  --theme-color-darker-5: var(--theme-color-blue-lighter-5);
+  --theme-color-darker-6: var(--theme-color-blue-lighter-6);
+  --theme-color-darker-7: var(--theme-color-blue-lighter-7);
+  --theme-color-darker-8: var(--theme-color-blue-lighter-8);
+  --theme-color-darker-9: var(--theme-color-blue-lighter-9);
+
+  --hover: var(--hover-blue-theme-darker);
+}
+
+.dark-theme.blue-theme {
+  @include blue-theme-dark-mode
+}
+
+@media (prefers-color-scheme: dark) {
+  :root .blue-theme {
+    @include blue-theme-dark-mode
+  }
+}

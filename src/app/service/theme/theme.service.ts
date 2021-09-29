@@ -52,7 +52,7 @@ export class ThemeService {
   constructor() {
     let themeColorSettingStorageItem = localStorage.getItem( 'themeColorSetting' ) ?
         localStorage.getItem( 'themeColorSetting' ) : sessionStorage.getItem( 'themeColorSetting' );
-    themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : 'default';
+    themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : ThemeColorSettings.default;
 
     this.themeColorSettingSubject = new BehaviorSubject<string>( themeColorSettingStorageItem );
     this.themeColorSetting = this.themeColorSettingSubject.asObservable();

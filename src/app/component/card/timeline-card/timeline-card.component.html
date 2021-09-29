@@ -1,5 +1,5 @@
 <app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" *ngIf="timelineItem" class="timeline-card"
-          [class]="timelineItem.theme ? timelineItem.theme + '-theme' : ''">
+          [class]="timelineItem.theme ? timelineItem.theme : ''">
   <!-- Header -->
   <ng-template #headerTemplate>
     <div class="header" [class.left]="arrow === 'left'" [class.right]="arrow === 'right'">

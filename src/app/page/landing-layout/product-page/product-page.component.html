@@ -117,7 +117,7 @@
               *ngIf="productLineKey === 'premium' ? productLine.key === 'servers' : (productLine.key === productLineKey || productLine.key === 'premium')">
             <ng-container *ngFor="let relatedProduct of productLine.products">
               <app-presentation-card *ngIf="product.key !== relatedProduct.key" class="related-product"
-                                     [class]="relatedProduct.color ? relatedProduct.color + '-theme' : ''"
+                                     [class]="relatedProduct.color ? relatedProduct.color : ''"
                                      [title]="relatedProduct.name"
                                      [footerText]="relatedProduct.openSource ? '#opensource' : '#premium'"
                                      [src]="relatedProduct.logo" [secondaryText]="relatedProduct.description"

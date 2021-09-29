@@ -4,9 +4,9 @@
       <p>Products</p>
       <div *ngFor="let productLine of PRODUCT_LINES" class="footer-link-group">
         <p *ngIf="productLine.name"
-           [class]="productLine.color ? productLine.color + '-theme' : ''">{{ productLine.name }}</p>
+           [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
         <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
-           [class]="productLine.color ? productLine.color + '-theme' : ''"
+           [class]="productLine.color ? productLine.color : ''"
            [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
            class="footer-link-item">
           {{ product.name }}
@@ -17,9 +17,9 @@
       <div class="footer-link-inner-column">
         <div *ngFor="let productLine of SERVICES" class="footer-link-group">
           <p *ngIf="productLine.name"
-             [class]="productLine.color ? productLine.color + '-theme' : ''">{{ productLine.name }}</p>
+             [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
           <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
-             [class]="productLine.color ? productLine.color + '-theme' : ''"
+             [class]="productLine.color ? productLine.color : ''"
              [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
              class="footer-link-item">
             {{ product.name }}

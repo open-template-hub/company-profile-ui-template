@@ -2,24 +2,24 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PresentationCardComponent } from './presentation-card.component';
 
-describe('PresentationCardComponent', () => {
+describe( 'PresentationCardComponent', () => {
   let component: PresentationCardComponent;
   let fixture: ComponentFixture<PresentationCardComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  beforeEach( async () => {
+    await TestBed.configureTestingModule( {
       declarations: [ PresentationCardComponent ]
-    })
+    } )
     .compileComponents();
-  });
+  } );
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PresentationCardComponent);
+  beforeEach( () => {
+    fixture = TestBed.createComponent( PresentationCardComponent );
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  } );
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  it( 'should create', () => {
+    expect( component ).toBeTruthy();
+  } );
+} );

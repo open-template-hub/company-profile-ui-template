@@ -19,8 +19,8 @@
   </div>
   <div class="websites-wrapper">
     <ng-container *ngFor="let website of websites">
-      <app-brand-button (click)="redirect(website.url + '/' + website.handle)" [text]="website.name | titlecase"
-                        [icon]="website.cssClass">
+      <app-brand-button (click)="redirect(website.url + '/' + website.handle)" [icon]="website.cssClass"
+                        [text]="website.name | titlecase">
       </app-brand-button>
     </ng-container>
   </div>
@@ -35,13 +35,13 @@
   </div>
   <div class="timeline-wrapper">
     <ng-container *ngFor="let timelineItem of OTH_TIME_LINE; index as i">
-      <app-timeline-card [timelineItem]="timelineItem" [arrow]="i % 2 === 0 ? 'left' : 'right'"
-                         [class.left]="i % 2 === 0"
-                         [class.right]="i % 2 === 1">
+      <app-timeline-card [arrow]="i % 2 === 0 ? 'left' : 'right'" [class.left]="i % 2 === 0"
+                         [class.right]="i % 2 === 1"
+                         [timelineItem]="timelineItem">
       </app-timeline-card>
-      <hr class="timeline-hr"
-          [class.left]="i % 2 === 0"
-          [class.right]="i % 2 === 1"/>
+      <hr [class.left]="i % 2 === 0"
+          [class.right]="i % 2 === 1"
+          class="timeline-hr"/>
     </ng-container>
   </div>
 </div>

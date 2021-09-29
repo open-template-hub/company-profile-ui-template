@@ -1,4 +1,5 @@
-<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" *ngIf="employee.profile" class="employee-card">
+<app-card *ngIf="employee.profile" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
+          [headerTemplate]="headerTemplate" class="employee-card">
   <!-- Header -->
   <ng-template #headerTemplate>
     <div class="header">

@@ -1,19 +1,19 @@
 <app-card [bodyTemplate]="bodyTemplate" [bottomWrapperTemplate]="bottomWrapperTemplate"
-          class="presentation-card" [cardClass]="'transparent-card'">
+          [cardClass]="'transparent-card'" class="presentation-card">
   <!-- Body -->
   <ng-template #bodyTemplate>
-    <div class="presentation-item" [class]="presentationItemClass">
-      <a class="presentation-item-content" (click)="redirect()">
-        <img [src]="src" *ngIf="src" [height]="imgHeight" alt="wallpaper">
+    <div [class]="presentationItemClass" class="presentation-item">
+      <a (click)="redirect()" class="presentation-item-content">
+        <img *ngIf="src" [height]="imgHeight" [src]="src" alt="wallpaper">
       </a>
 
       <p>{{ title }}</p>
 
-      <a class="presentation-link theme-color-link" *ngIf="!href.startsWith('/') && secondaryText" (click)="redirect()">
+      <a (click)="redirect()" *ngIf="!href.startsWith('/') && secondaryText" class="presentation-link theme-color-link">
         {{ secondaryText }}
       </a>
-      <p class="presentation-description" *ngIf="href.startsWith('/') && secondaryText">{{ secondaryText }}</p>
-      <p class="presentation-footer" *ngIf="footerText">{{ footerText }}</p>
+      <p *ngIf="href.startsWith('/') && secondaryText" class="presentation-description">{{ secondaryText }}</p>
+      <p *ngIf="footerText" class="presentation-footer">{{ footerText }}</p>
     </div>
   </ng-template>
   <ng-template #bottomWrapperTemplate></ng-template>

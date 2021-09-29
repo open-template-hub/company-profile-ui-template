@@ -14,7 +14,8 @@
     <p>
       {{ !error ? 'Will be redirected to: ' : 'Looks like the link is broken: ' }}
       <br/>
-      <a (click)="redirect()" class="theme-color-link" [class]="error ? ThemeColorSettings.red : ThemeColorSettings.green">
+      <a (click)="redirect()" [class]="error ? ThemeColorSettings.red : ThemeColorSettings.green"
+         class="theme-color-link">
         {{ href }}
       </a>
     </p>

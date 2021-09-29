@@ -7,9 +7,8 @@ import { Product } from '../../model/product/product.model';
 } )
 export class ProductService {
 
-  private productSubject: BehaviorSubject<Product>;
-
   public product: Observable<Product>;
+  private productSubject: BehaviorSubject<Product>;
 
   constructor() {
     let productStorageItem: Product = JSON.parse( localStorage.getItem( 'product' ) ?

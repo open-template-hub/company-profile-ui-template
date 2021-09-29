@@ -2,10 +2,10 @@
   <div class="intro">
     <div class="left">
       <app-card
-          [headerTemplate]="headerTemplate"
           [bodyTemplate]="bodyTemplate"
           [bottomWrapperTemplate]="bottomWrapperTemplate"
           [cardClass]="'transparent-card'"
+          [headerTemplate]="headerTemplate"
           class="product-card">
         <ng-template #headerTemplate>
           <div class="header">
@@ -15,14 +15,14 @@
         <ng-template #bodyTemplate>
           <div class="body">
             <h5>{{ product.description }}</h5>
-            <div class="button-wrapper" *ngIf="product.openSource">
+            <div *ngIf="product.openSource" class="button-wrapper">
               <app-brand-button (click)="redirect()" [icon]="environmentCommon.website.github.cssClass"
                                 [text]="'Open Source'"></app-brand-button>
 
               <app-button (click)="router.navigate([URLS.contactUs])"
                           [text]="'Professional Help'"></app-button>
             </div>
-            <div class="button-wrapper" *ngIf="!product.openSource">
+            <div *ngIf="!product.openSource" class="button-wrapper">
               <app-button (click)="router.navigate([URLS.contactUs])"
                           [text]="productLineKey === 'services' ? 'Contact Us' : 'Request for Demo'"></app-button>
             </div>
@@ -62,7 +62,7 @@
   </div>
 
   <ng-container [ngSwitch]="productLineKey">
-    <ng-container [ngSwitch]="product.key" *ngSwitchCase="'services'">
+    <ng-container *ngSwitchCase="'services'" [ngSwitch]="product.key">
       <div class="testimonials-header">
         <h2>Customer Testimonials</h2>
         <h4>What our customers are saying...</h4>
@@ -74,32 +74,8 @@
         >
         </app-testimonial-card>
       </div>
-      <div class="partners-wrapper">
-        <app-swiper-wrapper
-            [partners]="PARTNERS"
-            [isGrayscale]="true"
-            [isNavigationEnabled]="true"
-            [height]="100"
-            [isPaginationEnabled]="true"
-            [breakpoints]="{
-          '640': {
-            slidesPerView: 1,
-            spaceBetween: 30
-          },
-          '768': {
-            slidesPerView: 2,
-            spaceBetween: 40
-          },
-          '1000': {
-            slidesPerView: 3,
-            spaceBetween: 50
-          }
-        }"
-        >
-        </app-swiper-wrapper>
-      </div>
     </ng-container>
-    <ng-container [ngSwitch]="product.key" *ngSwitchDefault>
+    <ng-container *ngSwitchDefault [ngSwitch]="product.key">
       <div class="pricing-plan-wrapper">
         <app-price-plan
             [productLineKey]="productLineKey"
@@ -116,13 +92,13 @@
           <ng-container
               *ngIf="productLineKey === 'premium' ? productLine.key === 'servers' : (productLine.key === productLineKey || productLine.key === 'premium')">
             <ng-container *ngFor="let relatedProduct of productLine.products">
-              <app-presentation-card *ngIf="product.key !== relatedProduct.key" class="related-product"
-                                     [class]="relatedProduct.color ? relatedProduct.color : ''"
-                                     [title]="relatedProduct.name"
+              <app-presentation-card *ngIf="product.key !== relatedProduct.key" [class]="relatedProduct.color ? relatedProduct.color : ''"
                                      [footerText]="relatedProduct.openSource ? '#opensource' : '#premium'"
-                                     [src]="relatedProduct.logo" [secondaryText]="relatedProduct.description"
-                                     [presentationItemClass]="'product-item'" [imgHeight]="150"
-                                     [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"></app-presentation-card>
+                                     [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
+                                     [imgHeight]="150"
+                                     [presentationItemClass]="'product-item'" [secondaryText]="relatedProduct.description"
+                                     [src]="relatedProduct.logo" [title]="relatedProduct.name"
+                                     class="related-product"></app-presentation-card>
             </ng-container>
           </ng-container>
         </ng-container>

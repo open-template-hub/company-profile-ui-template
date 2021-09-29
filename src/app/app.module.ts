@@ -31,6 +31,7 @@ import { Card1Component } from './component/card/deprecated/card1/card1.componen
 import { EventCardComponent } from './component/card/deprecated/event-card/event-card.component';
 import { EmployeeCardComponent } from './component/card/employee-card/employee-card.component';
 import { PolicyCardComponent } from './component/card/policy-card/policy-card.component';
+import { PresentationCardComponent } from './component/card/presentation-card/presentation-card.component';
 import { PricingCardComponent } from './component/card/pricing-card/pricing-card.component';
 import { StatusCardComponent } from './component/card/status-card/status-card.component';
 import { TestimonialCardComponent } from './component/card/testimonial-card/testimonial-card.component';
@@ -67,6 +68,7 @@ import { LearnPageComponent } from './page/dashboard-layout/learn-page/learn-pag
 import { MyProfilePageComponent } from './page/dashboard-layout/my-profile-page/my-profile-page.component';
 import { PublicProfilePageComponent } from './page/dashboard-layout/public-profile-page/public-profile-page.component';
 import { AboutUsPageComponent } from './page/landing-layout/about-us-page/about-us-page.component';
+import { BrandingPageComponent } from './page/landing-layout/branding-page/branding-page.component';
 import { ContactUsPageComponent } from './page/landing-layout/contact-us-page/contact-us-page.component';
 import { ForgetPasswordPageComponent } from './page/landing-layout/form-pages/forget-password-page/forget-password-page.component';
 import { LoginPageComponent } from './page/landing-layout/form-pages/login-page/login-page.component';
@@ -89,8 +91,6 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { CallbackPageComponent } from './page/splash-layout/callback-page/callback-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
-import { BrandingPageComponent } from './page/landing-layout/branding-page/branding-page.component';
-import { PresentationCardComponent } from './component/card/presentation-card/presentation-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,

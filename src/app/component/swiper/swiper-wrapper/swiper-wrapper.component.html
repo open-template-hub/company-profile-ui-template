@@ -1,18 +1,18 @@
 <swiper
-    [slidesPerView]="1"
-    [spaceBetween]="10"
-    [loop]="true"
     [autoplay]="{
       delay: 2500,
       disableOnInteraction: false
     }"
+    [breakpoints]="breakpoints"
     [loopFillGroupWithBlank]="true"
+    [loop]="true"
+    [navigation]="isNavigationEnabled"
     [pagination]="isPaginationEnabled ? {
       clickable: true
     } : undefined"
-    [navigation]="isNavigationEnabled"
-    [breakpoints]="breakpoints">
+    [slidesPerView]="1"
+    [spaceBetween]="10">
   <ng-template *ngFor="let partner of partners" swiperSlide>
-    <img [src]="partner.brandLogo" alt="logo" class="brand-logo " [class.grayscale]="isGrayscale" [height]="height"/>
+    <img [class.grayscale]="isGrayscale" [height]="height" [src]="partner.brandLogo" alt="logo" class="brand-logo "/>
   </ng-template>
 </swiper>

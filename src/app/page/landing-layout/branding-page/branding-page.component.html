@@ -52,29 +52,29 @@
     <div class="hero-content">
       <h2>Color Palette</h2>
       <div class="related-products-wrapper">
-        <app-presentation-card [title]="'Brand Color'"
-                               [href]="colorPalette.brandColor ? externalColorInfoUrl + colorPalette.brandColor.substring(1, colorPalette.brandColor.length) : ''"
+        <app-presentation-card [href]="colorPalette.brandColor ? externalColorInfoUrl + colorPalette.brandColor.substring(1, colorPalette.brandColor.length) : ''"
+                               [presentationItemClass]="'color-item'"
                                [secondaryText]="colorPalette.brandColor | uppercase"
-                               [presentationItemClass]="'color-item'">
+                               [title]="'Brand Color'">
         </app-presentation-card>
-        <app-presentation-card [title]="'Secondary Color'"
-                               [href]="colorPalette.secondaryColor ? externalColorInfoUrl + colorPalette.secondaryColor.substring(1, colorPalette.secondaryColor.length) : ''"
+        <app-presentation-card [href]="colorPalette.secondaryColor ? externalColorInfoUrl + colorPalette.secondaryColor.substring(1, colorPalette.secondaryColor.length) : ''"
+                               [presentationItemClass]="'color-item secondary'"
                                [secondaryText]="colorPalette.secondaryColor | uppercase"
-                               [presentationItemClass]="'color-item secondary'">
+                               [title]="'Secondary Color'">
         </app-presentation-card>
-        <app-presentation-card [title]="'Tertiary Color'"
-                               [href]="colorPalette.tertiaryColor ? externalColorInfoUrl + colorPalette.tertiaryColor.substring(1, colorPalette.tertiaryColor.length) : ''"
+        <app-presentation-card [href]="colorPalette.tertiaryColor ? externalColorInfoUrl + colorPalette.tertiaryColor.substring(1, colorPalette.tertiaryColor.length) : ''"
+                               [presentationItemClass]="'color-item tertiary'"
                                [secondaryText]="colorPalette.tertiaryColor | uppercase"
-                               [presentationItemClass]="'color-item tertiary'">
+                               [title]="'Tertiary Color'">
         </app-presentation-card>
       </div>
     </div>
     <div class="hero-content">
       <h2>Logos</h2>
       <div class="related-products-wrapper">
-        <app-presentation-card [href]="brand.brandLogo" [src]="brand.brandLogo"
-                               [title]="brand.brandLogo.substring( brand.brandLogo.lastIndexOf( '/' ) + 1, brand.brandLogo.lastIndexOf( '.' ) )"
-                               [secondaryText]="'PNG'" [presentationItemClass]="'logo-item'" imgHeight="175">
+        <app-presentation-card [href]="brand.brandLogo" [presentationItemClass]="'logo-item'"
+                               [secondaryText]="'PNG'"
+                               [src]="brand.brandLogo" [title]="brand.brandLogo.substring( brand.brandLogo.lastIndexOf( '/' ) + 1, brand.brandLogo.lastIndexOf( '.' ) )" imgHeight="175">
         </app-presentation-card>
       </div>
     </div>
@@ -83,18 +83,18 @@
       <h2>Badges</h2>
       <div class="related-products-wrapper">
         <ng-container *ngFor="let badge of brand.badges; index as i">
-          <app-presentation-card [href]="badge" [src]="badge"
-                                 [title]="badge.substring( badge.lastIndexOf( '/' ) + 1, badge.lastIndexOf( '.' ) )"
-                                 [secondaryText]="'PNG'" [presentationItemClass]="'logo-item'" [imgHeight]="40">
+          <app-presentation-card [href]="badge" [imgHeight]="40"
+                                 [presentationItemClass]="'logo-item'"
+                                 [secondaryText]="'PNG'" [src]="badge" [title]="badge.substring( badge.lastIndexOf( '/' ) + 1, badge.lastIndexOf( '.' ) )">
           </app-presentation-card>
         </ng-container>
       </div>
       <h2>Wallpapers</h2>
       <div class="related-products-wrapper">
         <ng-container *ngFor="let wallpaper of brand.wallpapers; index as i">
-          <app-presentation-card [href]="wallpaper" [src]="wallpaper"
-                                 [title]="wallpaper.substring( wallpaper.lastIndexOf( '/' ) + 1, wallpaper.lastIndexOf( '.' ) )"
-                                 [secondaryText]="'PNG'" [presentationItemClass]="'wallpaper-item'" [imgHeight]="400">
+          <app-presentation-card [href]="wallpaper" [imgHeight]="400"
+                                 [presentationItemClass]="'wallpaper-item'"
+                                 [secondaryText]="'PNG'" [src]="wallpaper" [title]="wallpaper.substring( wallpaper.lastIndexOf( '/' ) + 1, wallpaper.lastIndexOf( '.' ) )">
           </app-presentation-card>
         </ng-container>
       </div>

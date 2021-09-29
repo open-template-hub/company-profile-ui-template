@@ -25,7 +25,7 @@ export class CommandLineComponent implements OnInit {
     if ( this.counter < this.commandLine.command.length ) {
       this.animatedText += this.commandLine.command.charAt( this.counter );
       this.counter++;
-      setTimeout( this.animateCommand, this.commandLine.timeout);
+      setTimeout( this.animateCommand, this.commandLine.timeout );
     } else {
       this.animationComplete();
     }

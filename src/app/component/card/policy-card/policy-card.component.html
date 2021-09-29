@@ -1,11 +1,12 @@
-<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" class="policy-card">
+<app-card [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" [headerTemplate]="headerTemplate"
+          class="policy-card">
   <!-- Header -->
   <ng-template #headerTemplate>
     <ng-container *ngTemplateOutlet="policyHeader || defaultPolicyHeader">
       <!-- Header of the card -->
     </ng-container>
     <ng-template #defaultPolicyHeader>
-      <div class="header" *ngIf="defaultHeaderContent">
+      <div *ngIf="defaultHeaderContent" class="header">
         {{ defaultHeaderContent }}
       </div>
     </ng-template>
@@ -18,7 +19,7 @@
         <!-- Body of the card -->
       </ng-container>
       <ng-template #defaultPolicyBody>
-        <div class="body" *ngIf="defaultBodyContent">
+        <div *ngIf="defaultBodyContent" class="body">
           {{ defaultBodyContent }}
         </div>
       </ng-template>

@@ -1,7 +1,7 @@
 <ng-container *ngIf="product">
   <div class="product-presentation">
     <ng-container [ngSwitch]="productLineKey">
-      <ng-container [ngSwitch]="product.key" *ngSwitchCase="'services'">
+      <ng-container *ngSwitchCase="'services'" [ngSwitch]="product.key">
         <app-card
             [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
           <ng-template #bodyTemplate>
@@ -18,10 +18,11 @@
           </ng-template>
         </app-card>
       </ng-container>
-      <ng-container [ngSwitch]="product.key" *ngSwitchDefault>
+      <ng-container *ngSwitchDefault [ngSwitch]="product.key">
         <app-card
             *ngSwitchCase="['auth-server-template', 'payment-server-template'].includes(product.key) ? product.key : ''"
-            [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" [cardClass]="'transparent-card'" class="presentation-card">
+            [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" [footerTemplate]="footerTemplate"
+            class="presentation-card">
           <ng-template #bodyTemplate>
             <div class="body">
               <div class="social-login-wrapper">
@@ -53,7 +54,7 @@
             [commandLines]="product.commandLines">
         </app-animated-code-editor>
         <app-card *ngSwitchDefault
-            [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
+                  [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
           <ng-template #bodyTemplate>
             <div class="body">
               <h5>Why Open Template Hub?</h5>

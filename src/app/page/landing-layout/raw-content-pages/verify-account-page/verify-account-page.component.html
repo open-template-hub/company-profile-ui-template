@@ -15,9 +15,9 @@
       </div>
     </div>
 
-    <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.error"
-                            *ngIf="!loading && error" [text]="'HOME'"></app-information-button>
-    <app-information-button (click)="router.navigate([URLS.login])" [informationType]="INFORMATION_TYPES.success"
-                            *ngIf="!loading && !error" [text]="'LOG IN'"></app-information-button>
+    <app-information-button (click)="router.navigate([URLS.root])" *ngIf="!loading && error"
+                            [informationType]="INFORMATION_TYPES.error" [text]="'HOME'"></app-information-button>
+    <app-information-button (click)="router.navigate([URLS.login])" *ngIf="!loading && !error"
+                            [informationType]="INFORMATION_TYPES.success" [text]="'LOG IN'"></app-information-button>
   </div>
 </div>

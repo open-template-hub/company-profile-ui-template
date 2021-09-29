@@ -147,7 +147,7 @@ app-swiper-wrapper {
   }
 }
 
-.partners-wrapper, .related-products-wrapper {
+.related-products-wrapper {
   @include util.flex-layout-column;
   @include util.flex-center-center;
 

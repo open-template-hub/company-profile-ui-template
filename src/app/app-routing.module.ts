@@ -46,98 +46,98 @@ const routes: Routes = [
       {
         path: '',
         component: HomePageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.notFound.url,
         component: NotFoundPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.maintenance.url,
         component: MaintenancePageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.signupSuccess.url,
         component: SignUpSuccessPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.verifyAccount.url,
         component: VerifyAccountPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.cookiePolicy.url,
         component: CookiePolicyPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.privacyPolicy.url,
         component: PrivacyPolicyPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.terms.url,
         component: TermsPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.about.url,
         component: AboutUsPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.signup.url,
         component: SignUpPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.login.url,
         component: LoginPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.branding.url,
         component: BrandingPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.forgetPassword.url,
         component: ForgetPasswordPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.resetPassword.url,
         component: ResetPasswordPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.contactUs.url,
         component: ContactUsPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.status.url,
         component: StatusPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.u.url + '/' + ':username',
         component: PublicProfilePageComponent,
         data: { isPublic: true },
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.pricing.url + '/' + ':productLine' + '/' + ':product',
         component: PricingPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.product.url + '/' + ':productLine' + '/' + ':product',
         component: ProductPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
     ],
   },
@@ -195,37 +195,37 @@ const routes: Routes = [
   {
     path: URLS_RAW.external,
     component: SplashLayoutComponent,
-    children: [{ path: '', component: ExternalRedirectPageComponent }],
+    children: [ { path: '', component: ExternalRedirectPageComponent } ],
   },
   {
     path: URLS_RAW.dashboard.root,
     component: DashboardLayoutComponent,
     children: [
-      { path: '', component: DashboardPageComponent, canActivate: [AuthGuard] },
+      { path: '', component: DashboardPageComponent, canActivate: [ AuthGuard ] },
       {
         path: URLS_RAW.dashboard.myProfile,
         component: MyProfilePageComponent,
-        canActivate: [AuthGuard],
+        canActivate: [ AuthGuard ],
       },
       {
         path: URLS_RAW.dashboard.createEvent,
         component: CreateEventPageComponent,
-        canActivate: [AuthGuard],
+        canActivate: [ AuthGuard ],
       },
       {
         path: URLS_RAW.dashboard.learn,
         component: LearnPageComponent,
-        canActivate: [AuthGuard],
+        canActivate: [ AuthGuard ],
       },
       {
         path: URLS_RAW.dashboard.event,
         component: EventPageComponent,
-        canActivate: [AuthGuard],
+        canActivate: [ AuthGuard ],
       },
       {
         path: URLS_RAW.dashboard.privacy,
         component: MaintenancePageComponent,
-        canActivate: [AuthGuard],
+        canActivate: [ AuthGuard ],
       },
     ],
   },
@@ -236,7 +236,7 @@ const routes: Routes = [
       {
         path: ':username',
         component: PublicProfilePageComponent,
-        canActivate: [PublicProfileGuard],
+        canActivate: [ PublicProfileGuard ],
       },
     ],
   },
@@ -248,7 +248,7 @@ const routes: Routes = [
         path: URLS_RAW.settings.editTheme,
         component: EditThemePageComponent
         /* Todo: add auth guard when needed
-            canActivate: [AuthGuard], */
+         canActivate: [AuthGuard], */
       },
     ],
   },
@@ -256,13 +256,14 @@ const routes: Routes = [
   { path: '**', redirectTo: NAVIGATIONS.notFound.url },
 ];
 
-@NgModule({
+@NgModule( {
   imports: [
-    RouterModule.forRoot(routes, {
+    RouterModule.forRoot( routes, {
       scrollPositionRestoration: 'enabled',
       onSameUrlNavigation: 'reload',
-    }),
+    } ),
   ],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}
+  exports: [ RouterModule ],
+} )
+export class AppRoutingModule {
+}

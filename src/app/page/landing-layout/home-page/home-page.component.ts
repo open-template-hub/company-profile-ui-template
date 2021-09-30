@@ -12,11 +12,11 @@ import { Partner } from '../../../model/partner/partner.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { ThemeService } from '../../../service/theme/theme.service';
 
-@Component( {
+@Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: [ './home-page.component.scss' ],
-} )
+  styleUrls: ['./home-page.component.scss'],
+})
 export class HomePageComponent implements AfterViewInit {
   npmDownloadCounter = { count: 0, id: 'npmDownloadCounterElement' };
   serverTypesCounter = { count: 7, id: 'serverTypesCounterElement' };
@@ -37,15 +37,15 @@ export class HomePageComponent implements AfterViewInit {
   environmentCommon = environmentCommon;
 
   constructor(
-      private formBuilder: FormBuilder,
-      public router: Router,
-      private authenticationService: AuthenticationService,
-      private themeService: ThemeService,
-      private npmProviderService: NpmProviderService
+    private formBuilder: FormBuilder,
+    public router: Router,
+    private authenticationService: AuthenticationService,
+    private themeService: ThemeService,
+    private npmProviderService: NpmProviderService
   ) {
     // redirect to home if already logged in
-    if ( this.authenticationService.currentUserValue ) {
-      this.router.navigate( [ URLS.dashboard.root ] );
+    if (this.authenticationService.currentUserValue) {
+      this.router.navigate([URLS.dashboard.root]);
     }
 
     this.brand = this.themeService.brand;
@@ -55,14 +55,14 @@ export class HomePageComponent implements AfterViewInit {
     this.initCountUps();
   }
 
-  countUpFormatter( n: number ) {
-    if ( n < this.KILO ) {
+  countUpFormatter(n: number) {
+    if (n < this.KILO) {
       return n + '';
     } else {
-      if ( n < this.MILLION ) {
-        return Math.round( ( n / this.KILO ) * 10 ) / 10 + 'k';
+      if (n < this.MILLION) {
+        return Math.round((n / this.KILO) * 10) / 10 + 'k';
       } else {
-        return Math.round( ( n / this.MILLION ) * 10 ) / 10 + 'M';
+        return Math.round((n / this.MILLION) * 10) / 10 + 'M';
       }
     }
   }
@@ -74,38 +74,38 @@ export class HomePageComponent implements AfterViewInit {
       formattingFn: undefined,
     };
 
-    this.npmProviderService.getNpmPackagesDownloadCount().then( count => {
+    this.npmProviderService.getNpmPackagesDownloadCount().then((count) => {
       this.npmDownloadCounter.count = count;
-      this.startCounter( options, this.npmDownloadCounter );
-    } );
+      this.startCounter(options, this.npmDownloadCounter);
+    });
 
-    this.startCounter( options, this.serverTypesCounter );
+    this.startCounter(options, this.serverTypesCounter);
 
-    this.startCounter( options, this.uiTypesCounter );
+    this.startCounter(options, this.uiTypesCounter);
   }
 
-  private startCounter( options: { duration: number; useGrouping: boolean; formattingFn }, counter ) {
-    options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n );
+  private startCounter(
+    options: { duration: number; useGrouping: boolean; formattingFn },
+    counter
+  ) {
+    options.formattingFn = (n: number) => {
+      return this.countUpFormatter(n);
     };
 
-    if ( counter.count < this.KILO ) {
+    if (counter.count < this.KILO) {
       options.duration = 2;
-    } else if ( counter.count < this.MILLION ) {
+    } else if (counter.count < this.MILLION) {
       options.duration = 3;
     } else {
       options.duration = 4;
     }
-
-    const eventCountUp = new CountUp(
-        counter.id,
-        counter.count,
-        options
-    );
-    if ( !eventCountUp.error ) {
-      eventCountUp.start();
-    } else {
-      console.error( eventCountUp.error );
+    if (counter && counter.id) {
+      const eventCountUp = new CountUp(counter.id, counter.count, options);
+      if (!eventCountUp.error) {
+        eventCountUp.start();
+      } else {
+        console.error(eventCountUp.error);
+      }
     }
   }
 }

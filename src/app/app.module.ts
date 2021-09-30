@@ -172,7 +172,7 @@ FullCalendarModule.registerPlugins( [
     PresentationCardComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,

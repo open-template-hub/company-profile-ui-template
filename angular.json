@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/company-profile-ui-template",
+            "outputPath": "dist/company-profile-ui-template/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -186,6 +186,86 @@
               "devServerTarget": "company-profile-ui-template:serve:production"
             }
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/company-profile-ui-template/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "sourceMap": false,
+              "extractLicenses": true
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.staging.ts"
+                }
+              ]
+            },
+            "local": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            },
+            "local-to-staging-api": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local-to-staging-api.ts"
+                }
+              ],
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "local": {
+              "browserTarget": "company-profile-ui-template:build:local",
+              "serverTarget": "company-profile-ui-template:server:local"
+            },
+            "production": {
+              "browserTarget": "company-profile-ui-template:build:production",
+              "serverTarget": "company-profile-ui-template:server:production"
+            }
+          },
+          "defaultConfiguration": "local"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "company-profile-ui-template:build:production",
+              "serverTarget": "company-profile-ui-template:server:production"
+            },
+            "local": {
+              "browserTarget": "company-profile-ui-template:build:local",
+              "serverTarget": "company-profile-ui-template:server:local"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

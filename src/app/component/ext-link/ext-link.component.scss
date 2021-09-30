@@ -1,3 +1,24 @@
+@use '../../../styles/util/util';
+
 .ext-link {
+  @include util.flex-layout-column;
+  @include util.flex-center-center;
+
   cursor: pointer;
+
+  box-sizing: border-box;
+
+  &.align-flex-start {
+    align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .ext-link {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
 }

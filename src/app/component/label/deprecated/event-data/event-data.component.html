@@ -61,23 +61,23 @@
   </div>
   <div class="event-last-item">
     <app-button1 (click)="onEditClick()" *ngIf="isEditable && !inProgress && !showRateBar && !completed"
-                 [icon]="'pen'" [isSleekButton]="true" [text]="'Edit'" [themeColor]="'default'">
+                 [icon]="'pen'" [isSleekButton]="true" [text]="'Edit'" [themeColor]="'default-theme'">
     </app-button1>
     <app-button1 (click)="onBuyNowClick()"
                  *ngIf="!isEditable && isPremium && attendeeButton && !showRateBar && !completed"
                  [icon]="'shopping-cart'" [isSleekButton]="true" [text]="'Buy Now ' + (price ? '(' + price + '$)' : '')"
-                 [themeColor]="'default'">
+                 [themeColor]="'default-theme'">
     </app-button1>
     <app-button1 (click)="onAttendClick()"
                  *ngIf="!isEditable && !isPremium && attendeeButton && !showRateBar && !completed"
-                 [isSleekButton]="true" [text]="'Attend'" [themeColor]="'default'">
+                 [isSleekButton]="true" [text]="'Attend'" [themeColor]="'default-theme'">
     </app-button1>
     <app-button1 (click)="onDropClick()" *ngIf="!isEditable && dropButton && !showRateBar && !completed && !isPremium"
                  [hoverWithColor]="false"
                  [isSleekButton]="true" [lighterContrast]="true" [text]="'Drop'" [transparent]="true">
     </app-button1>
     <app-button1 (click)="onMarkAsCompletedClick()" *ngIf="markAsCompleted && !showRateBar && !completed"
-                 [icon]="'check'" [isSleekButton]="true" [text]="'Mark As Completed'" [themeColor]="'default'">
+                 [icon]="'check'" [isSleekButton]="true" [text]="'Mark As Completed'" [themeColor]="'default-theme'">
     </app-button1>
     <app-button1 *ngIf="!isEditable && dropButton && !showRateBar && !completed && isPremium" [isSleekButton]="true"
                  [text]="'Attended'" [themeLightColor]="true">
@@ -86,7 +86,7 @@
                  [themeLightColor]="true">
     </app-button1>
     <app-button1 (click)="onRateClick()" *ngIf="showRateBar"
-                 [isSleekButton]="true" [text]="'Rate'" [themeColor]="'default'">
+                 [isSleekButton]="true" [text]="'Rate'" [themeColor]="'default-theme'">
     </app-button1>
     <app-button1 *ngIf="inProgress" [cursor]="'not-allowed'"
                  [icon]="'hourglass'" [isSleekButton]="true" [text]="'In Progress'" [themeLightColor]="true">

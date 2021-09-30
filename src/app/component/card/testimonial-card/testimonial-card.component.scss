@@ -68,7 +68,7 @@
         @include util.flex-layout-row;
         @include util.flex-center-center;
 
-        font-size: 0.7rem;
+        font-size: 1rem;
         margin-top: 7px;
         z-index: 2;
       }
@@ -94,3 +94,4 @@
     }
   }
 }
+

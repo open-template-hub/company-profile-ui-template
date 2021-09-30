@@ -2,15 +2,15 @@ import { TestBed } from '@angular/core/testing';
 
 import { SeoService } from './seo.service';
 
-describe('SeoService', () => {
+describe( 'SeoService', () => {
   let service: SeoService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(SeoService);
-  });
+  beforeEach( () => {
+    TestBed.configureTestingModule( {} );
+    service = TestBed.inject( SeoService );
+  } );
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+  it( 'should be created', () => {
+    expect( service ).toBeTruthy();
+  } );
+} );

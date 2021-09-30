@@ -1,14 +1,25 @@
 @use '../../../../styles/util/util';
 @use '../../../component/card/card.component';
 
+.product-page-content {
+  @include util.flex-layout-column;
+  @include util.flex-center-center;
+
+  width: 100%;
+}
+
 .features {
   display: flex;
   flex-direction: column;
   position: relative;
+
+  width: 94%;
 }
 
 .counters {
   @include util.flex-layout-row;
+
+  width: 94%;
 
   box-sizing: border-box;
   margin: 0 50px;
@@ -33,8 +44,10 @@
   font-weight: 500;
 }
 
-.counter-wrapper h4 {
+.counter-wrapper p {
   color: var(--lighter-contrast);
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .counter-wrapper h2 {
@@ -48,14 +61,15 @@
   justify-content: space-evenly;
 
   text-align: center;
+  width: 94%;
 
   & .left {
 
     & .header {
       padding: 20px;
 
-      border-bottom-left-radius: 99em;
-      border-top-right-radius: 99em;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 30px;
 
       background-color: var(--darker-contrast);
 
@@ -65,14 +79,16 @@
     & .body {
       @include util.flex-layout-column;
       @include util.flex-center-center;
+      @include util.default-shadow;
 
-      border-top-left-radius: 70px;
-      border-bottom-left-radius: 6px;
+      border-bottom-left-radius: 45px;
       border-bottom-right-radius: 6px;
 
       background-color: var(--shadow-lighter);
 
-      @include util.default-shadow;
+      & p {
+        font-size: 20px;
+      }
 
       & .button-wrapper {
         @include util.flex-layout-column;
@@ -136,7 +152,7 @@ app-swiper-wrapper {
   }
 }
 
-.partners-wrapper {
+.related-products-wrapper {
   @include util.flex-layout-column;
   @include util.flex-center-center;
 
@@ -199,6 +215,16 @@ app-swiper-wrapper {
 
     & > * {
       width: 94vw;
+    }
+  }
+
+  .related-products-wrapper {
+    @include util.flex-layout-column;
+
+    padding-bottom: 50px;
+
+    & > * {
+      margin: 15px 0;
     }
   }
 }
@@ -272,6 +298,21 @@ app-swiper-wrapper {
         left: 10px;
         right: 10px;
       }
+    }
+  }
+
+  .related-products-wrapper {
+    @include util.flex-layout-row;
+
+    justify-content: center;
+
+    width: 85vw;
+
+    flex-wrap: wrap;
+
+    & > * {
+      margin: 15px;
+      width: 300px;
     }
   }
 }

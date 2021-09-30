@@ -1,106 +1,110 @@
 <div class="raw-content-page-layout">
-  <div class="hero">
-    <div class="hero-content">
-      <h1>Brand Resources</h1>
-      <app-policy-card [policyBody]="body">
-        <!-- Body -->
-        <ng-template #body>
-          <div class="policy-content">
-            <p>
-              All of Open Template Hub’s brand features including <strong>Open Template Hub</strong>,
-              <strong>OTH</strong>
-              and the
-              <strong>Open Template Hub</strong> logo are protected by applicable
-              trademark, copyright and other intellectual property laws. Any use of a <strong>Open Template Hub
-              trademark</strong> is subject to the <strong>Open Template Hub Trademark Standards</strong> for Use.
-            </p>
-            <p>
-              Basic usage guidelines can be found below. If you have any questions or want to request approval to use
-              these
-              assets, please do not hesitate to contact us or email <a
-                href="mailto:info@opentemplatehub.com">info@opentemplatehub.com</a>
-            </p>
-            <br/>
-            <p>
-              <strong>
-                Basic Usage Guidelines:
-              </strong>
-            </p>
-            <p>
-              - Do not rotate the <strong>Open Template Hub</strong> logo.
-            </p>
-            <p>
-              - Do not change the color of the <strong>Open Template Hub</strong> logo.
-            </p>
-            <p>
-              - Do not distort the <strong>Open Template Hub</strong> logo (be sure to scale proportionately).
-            </p>
-            <p>
-              - Allow an appropriate amount of white space around the <strong>Open Template Hub </strong>logo, at least
-              as much as the x-height of
-              the logo (suggested).
-            </p>
-            <p>
-              - Preferred minimum size for the <strong>Open Template Hub</strong> logo is 100px wide. For smaller sizes,
-              you must seek permission
-              from the Open Template Hub team.
-            </p>
-          </div>
-        </ng-template>
-      </app-policy-card>
-    </div>
-    <div class="hero-content">
-      <h2>Color Palette</h2>
-      <div class="branding-item-wrapper">
-        <div class="branding-item color-item">
-          <div class="branding-item-content color" [class]="themeColorSetting + '-theme'">
-          </div>
-          <p>Brand Color</p>
-          <p>{{ colorPalette.brandColor | uppercase }}</p>
-        </div>
-        <div class="branding-item color-item">
-          <div class="branding-item-content color card-color-light-mode">
-          </div>
-          <p>Card Color Light Mode</p>
-          <p>{{ colorPalette.cardColorLightMode | uppercase }}</p>
-        </div>
-        <div class="branding-item color-item">
-          <div class="branding-item-content color card-color-dark-mode">
-          </div>
-          <p>Card Color Dark Mode</p>
-          <p>{{ colorPalette.cardColorDarkMode | uppercase }}</p>
-        </div>
+  <!-- Brand Resources -->
+  <app-hero [contents]="[{text: 'Brand Resources', level: 1}]"></app-hero>
+  <app-policy-card [policyBody]="body">
+    <!-- Body -->
+    <ng-template #body>
+      <div class="policy-content">
+        <p>
+          All of Open Template Hub’s brand features including <strong>Open Template Hub</strong>,
+          <strong>OTH</strong>
+          and the
+          <strong>Open Template Hub</strong> logo are protected by applicable
+          trademark, copyright and other intellectual property laws. Any use of a <strong>Open Template Hub
+          trademark</strong> is subject to the <strong>Open Template Hub Trademark Standards</strong> for Use.
+        </p>
+        <p>
+          Basic usage guidelines can be found below. If you have any questions or want to request approval to use
+          these
+          assets, please do not hesitate to contact us or email <a
+            href="mailto:info@opentemplatehub.com">info@opentemplatehub.com</a>
+        </p>
+        <br/>
+        <p>
+          <strong>
+            Basic Usage Guidelines:
+          </strong>
+        </p>
+        <p>
+          - Do not rotate the <strong>Open Template Hub</strong> logo.
+        </p>
+        <p>
+          - Do not change the color of the <strong>Open Template Hub</strong> logo.
+        </p>
+        <p>
+          - Do not distort the <strong>Open Template Hub</strong> logo (be sure to scale proportionately).
+        </p>
+        <p>
+          - Allow an appropriate amount of white space around the <strong>Open Template Hub </strong>logo, at least
+          as much as the x-height of
+          the logo (suggested).
+        </p>
+        <p>
+          - Preferred minimum size for the <strong>Open Template Hub</strong> logo is 100px wide. For smaller sizes,
+          you must seek permission
+          from the Open Template Hub team.
+        </p>
       </div>
-    </div>
-    <div class="hero-content">
-      <h2>Logos</h2>
-      <div class="branding-item-wrapper">
-        <div class="branding-item logo-item">
-          <div class="branding-item-content logo">
-            <a [href]="brand.brandLogo" target="_blank">
-              <img [src]="brand.brandLogo" height="220" alt="logo">
-            </a>
-          </div>
-          <p>Brand Logo</p>
-          <a class="theme-color-link" [href]="brand.brandLogo" target="_blank">PNG</a>
-        </div>
-      </div>
-    </div>
-    <div class="hero-content">
-      <h2>Wallpapers</h2>
-      <div class="branding-item-wrapper">
-        <ng-container *ngFor="let wallpaper of brand.wallpapers; index as i">
-          <div class="branding-item wallpaper-item">
-            <div class="branding-item-content wallpaper">
-              <a [href]="wallpaper" target="_blank">
-                <img [src]="wallpaper" height="400"  alt="wallpaper">
-              </a>
-            </div>
-            <p>{{ wallpaper.substring( wallpaper.lastIndexOf( '/' ) + 1, wallpaper.lastIndexOf( '.' ) ) }}</p>
-            <a class="theme-color-link" [href]="wallpaper" target="_blank">PNG</a>
-          </div>
-        </ng-container>
-      </div>
-    </div>
+    </ng-template>
+  </app-policy-card>
+
+  <!-- Color Palette -->
+  <app-hero [contents]="[{text: 'Color Palette', level: 2}]"></app-hero>
+  <div class="branding-resources-wrapper">
+    <app-presentation-card
+        [href]="colorPalette.brandColor ? externalColorInfoUrl + colorPalette.brandColor.substring(1, colorPalette.brandColor.length) : ''"
+        [presentationItemClass]="'color-item'"
+        [secondaryText]="colorPalette.brandColor | uppercase"
+        [title]="'Brand Color'">
+    </app-presentation-card>
+    <app-presentation-card
+        [href]="colorPalette.secondaryColor ? externalColorInfoUrl + colorPalette.secondaryColor.substring(1, colorPalette.secondaryColor.length) : ''"
+        [presentationItemClass]="'color-item secondary'"
+        [secondaryText]="colorPalette.secondaryColor | uppercase"
+        [title]="'Secondary Color'">
+    </app-presentation-card>
+    <app-presentation-card
+        [href]="colorPalette.tertiaryColor ? externalColorInfoUrl + colorPalette.tertiaryColor.substring(1, colorPalette.tertiaryColor.length) : ''"
+        [presentationItemClass]="'color-item tertiary'"
+        [secondaryText]="colorPalette.tertiaryColor | uppercase"
+        [title]="'Tertiary Color'">
+    </app-presentation-card>
+  </div>
+
+  <!-- Logos -->
+  <app-hero [contents]="[{text: 'Logos', level: 2}]"></app-hero>
+  <div class="branding-resources-wrapper">
+    <app-presentation-card [href]="brand.brandLogo.replace('min/', '').replace('.min', '')" [presentationItemClass]="'logo-item'"
+                           [secondaryText]="'PNG'"
+                           [src]="brand.brandLogo"
+                           [title]="brand.brandLogo.substring( brand.brandLogo.lastIndexOf( '/' ) + 1, brand.brandLogo.lastIndexOf( '.min.png' ) )"
+                           imgHeight="175">
+    </app-presentation-card>
+  </div>
+
+  <!-- Other Assets -->
+  <app-hero [contents]="[{text: 'Other Assets', level: 2},{text: 'Badges', level: 2}]"></app-hero>
+
+  <!-- Badges -->
+  <div class="branding-resources-wrapper">
+    <ng-container *ngFor="let badge of brand.badges; index as i">
+      <app-presentation-card [href]="badge.replace('min/', '').replace('.min', '')" [imgHeight]="40"
+                             [presentationItemClass]="'logo-item'"
+                             [secondaryText]="'PNG'" [src]="badge"
+                             [title]="badge.substring( badge.lastIndexOf( '/' ) + 1, badge.lastIndexOf( '.min.png' ) )">
+      </app-presentation-card>
+    </ng-container>
+  </div>
+
+  <!-- Wallpapers -->
+  <app-hero [contents]="[{text: 'Wallpapers', level: 2}]"></app-hero>
+  <div class="branding-resources-wrapper">
+    <ng-container *ngFor="let wallpaper of brand.wallpapers; index as i">
+      <app-presentation-card [href]="wallpaper.replace('min/', '').replace('.min', '')" [imgHeight]="400"
+                             [presentationItemClass]="'wallpaper-item'"
+                             [secondaryText]="'PNG'" [src]="wallpaper"
+                             [title]="wallpaper.substring( wallpaper.lastIndexOf( '/' ) + 1, wallpaper.lastIndexOf( '.min.png' ) )">
+      </app-presentation-card>
+    </ng-container>
   </div>
 </div>

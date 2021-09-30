@@ -1,5 +1,6 @@
-<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" *ngIf="pricingOption" class="pricing-card"
-          [ribbon]="pricingOption.ribbon || undefined">
+<app-card *ngIf="pricingOption" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
+          [headerTemplate]="headerTemplate" [ribbon]="pricingOption.ribbon || undefined"
+          class="pricing-card">
   <!-- Header -->
   <ng-template #headerTemplate>
     <div class="header">
@@ -28,7 +29,7 @@
   <!-- Footer -->
   <ng-template #footerTemplate>
     <div class="footer">
-      <app-button [text]="'Buy Now'" [icon]="'shopping-cart'"></app-button>
+      <app-button [icon]="'shopping-cart'" [text]="'Buy Now'"></app-button>
     </div>
   </ng-template>
 </app-card>

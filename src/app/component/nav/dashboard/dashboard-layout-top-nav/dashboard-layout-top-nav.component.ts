@@ -37,7 +37,7 @@ export class DashboardLayoutTopNavComponent {
       private _eref: ElementRef,
       private categoryService: CategoryService
   ) {
-    this.brand = this.themeService.brand;
+    this.brand = themeService.brand;
 
     this.businessLogicService.userInfo.subscribe( userInfo => {
           if ( userInfo ) {

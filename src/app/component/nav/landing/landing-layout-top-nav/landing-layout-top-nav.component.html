@@ -2,7 +2,7 @@
   <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
      [routerLink]="URLS.root"
      class="brand">
-    <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="40"/>
+    <img [src]="brand.brandLogo" alt="logo" class="brand-logo" width="40" height="40"/>
     <h2>Open Template Hub</h2>
   </a>
   <div class="left-item-wrapper">
@@ -29,6 +29,14 @@
        [routerLink]="URLS.about">
       <span>
         About
+      </span>
+    </a>
+
+    <!-- TODO: Remove this after development is done -->
+    <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
+       [routerLink]="URLS.settings.editTheme">
+      <span>
+        Theme
       </span>
     </a>
   </div>

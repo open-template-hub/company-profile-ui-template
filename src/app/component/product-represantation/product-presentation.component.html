@@ -1,14 +1,14 @@
 <ng-container *ngIf="product">
   <div class="product-presentation">
-    <ng-container [ngSwitch]="productLineName">
-      <ng-container [ngSwitch]="product.key" *ngSwitchCase="'services'">
+    <ng-container [ngSwitch]="productLineKey">
+      <ng-container *ngSwitchCase="'services'" [ngSwitch]="product.key">
         <app-card
             [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
           <ng-template #bodyTemplate>
             <div class="body">
-              <h5>Why Open Template Hub?</h5>
+              <p class="title">Why Open Template Hub?</p>
               <ng-container *ngFor="let feature of product.features">
-                <h5>{{ feature.name }}</h5>
+                <p class="feature-title">{{ feature.name }}</p>
 
                 <div *ngFor="let detail of feature.details">
                   <h6>{{ detail.name + ': ' + detail.description}}</h6>
@@ -18,10 +18,11 @@
           </ng-template>
         </app-card>
       </ng-container>
-      <ng-container [ngSwitch]="product.key" *ngSwitchDefault>
+      <ng-container *ngSwitchDefault [ngSwitch]="product.key">
         <app-card
             *ngSwitchCase="['auth-server-template', 'payment-server-template'].includes(product.key) ? product.key : ''"
-            [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" [cardClass]="'transparent-card'" class="presentation-card">
+            [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" [footerTemplate]="footerTemplate"
+            class="presentation-card">
           <ng-template #bodyTemplate>
             <div class="body">
               <div class="social-login-wrapper">
@@ -30,12 +31,12 @@
                 <app-swiper-wrapper
                     [partners]="product.key === 'auth-server-template' ? SOCIAL_LOGIN_PARTNERS : PAYMENT_PARTNERS"></app-swiper-wrapper>
               </div>
-              <h5 *ngIf="product.key === 'auth-server-template'">Auth server supports social login functionality for
+              <p class="feature-title" *ngIf="product.key === 'auth-server-template'">Auth server supports social login functionality for
                 OAuth1
-                and OAuth2</h5>
-              <h5 *ngIf="product.key === 'payment-server-template'">Integrate your servers with payment solution
+                and OAuth2</p>
+              <p class="feature-title" *ngIf="product.key === 'payment-server-template'">Integrate your servers with payment solution
                 providers
-                in minutes</h5>
+                in minutes</p>
             </div>
           </ng-template>
           <ng-template #footerTemplate>
@@ -53,12 +54,12 @@
             [commandLines]="product.commandLines">
         </app-animated-code-editor>
         <app-card *ngSwitchDefault
-            [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
+                  [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
           <ng-template #bodyTemplate>
             <div class="body">
-              <h5>Why Open Template Hub?</h5>
+              <p class="title">Why Open Template Hub?</p>
               <ng-container *ngFor="let feature of product.features">
-                <h5>{{ feature.name }}</h5>
+                <p class="feature-title">{{ feature.name }}</p>
 
                 <div *ngFor="let detail of feature.details">
                   <h6>{{ detail.name + ': ' + detail.description}}</h6>

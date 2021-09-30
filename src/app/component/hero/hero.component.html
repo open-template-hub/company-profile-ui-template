@@ -1,0 +1,17 @@
+<div class="hero" [class]="heroClass">
+  <div class="body">
+    <div class="contents">
+      <ng-container *ngFor="let content of contents">
+        <ng-container [ngSwitch]="content.level">
+          <h1 *ngSwitchCase="1">{{ content.text }}</h1>
+          <h2 *ngSwitchCase="2">{{ content.text }}</h2>
+          <h3 *ngSwitchCase="3">{{ content.text }}</h3>
+          <h4 *ngSwitchCase="4">{{ content.text }}</h4>
+          <h5 *ngSwitchCase="5">{{ content.text }}</h5>
+          <h6 *ngSwitchCase="6">{{ content.text }}</h6>
+          <p *ngSwitchDefault>{{ content.text }}</p>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>

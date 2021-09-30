@@ -1,4 +1,5 @@
-<div id="oth-component" [class.dark-theme]="darkLightSetting === 'dark'" [class.light-theme]="darkLightSetting === 'light'"
-     [class]="themeColorSetting ? themeColorSetting + '-theme' : 'default-theme'">
+<div [class.dark-theme]="darkLightSetting === 'dark'" [class.light-theme]="darkLightSetting === 'light'"
+     [class]="themeColorSetting ? themeColorSetting : 'default-theme'"
+     id="oth-component">
   <router-outlet></router-outlet>
 </div>

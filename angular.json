@@ -41,6 +41,16 @@
                 "glob": "manifest.json",
                 "input": "src/",
                 "output": "/"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "seo/",
+                "output": "/"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "seo/",
+                "output": "/"
               }
             ],
             "styles": [
@@ -58,7 +68,7 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
+              "sourceMap": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -153,6 +163,16 @@
               {
                 "glob": "manifest.json",
                 "input": "src/",
+                "output": "/"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "seo/",
+                "output": "/"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "seo/",
                 "output": "/"
               }
             ],

@@ -14,7 +14,7 @@ export interface Product {
   href: string;
   logo: string;
   heroImage?: string;
-  openSource?: boolean
+  openSource?: boolean;
   counters?: ProductCounter[];
   features?: PricingFeature[];
   pricingOptions?: PricingOption[];

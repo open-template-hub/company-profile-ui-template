@@ -41,7 +41,6 @@ export class DashboardLayoutSideNavComponent {
       private businessLogicService: BusinessLogicService,
       private fileStorageService: FileStorageService,
       private themeService: ThemeService,
-      private _eref: ElementRef,
       private categoryService: CategoryService
   ) {
     this.authenticationService.currentUser.subscribe( currentUser => {
@@ -52,7 +51,7 @@ export class DashboardLayoutSideNavComponent {
       this.sideNavClosed = sideNavClosed;
     } );
 
-    this.brand = this.themeService.brand;
+    this.brand = themeService.brand;
 
     this.businessLogicService.userInfo.subscribe( userInfo => {
           if ( userInfo ) {

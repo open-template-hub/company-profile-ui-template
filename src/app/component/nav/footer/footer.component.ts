@@ -35,7 +35,7 @@ export class FooterComponent {
   constructor( private router: Router,
       private themeService: ThemeService
   ) {
-    this.brand = this.themeService.brand;
-    this.appVersion = this.themeService.appVersion;
+    this.brand = themeService.brand;
+    this.appVersion = themeService.appVersion;
   }
 }

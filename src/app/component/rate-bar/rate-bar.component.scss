@@ -1,3 +1,5 @@
+@use '../../../styles/util/util';
+
 .rate-wrapper {
   display: flex;
   margin-right: 30px;
@@ -15,8 +17,8 @@
   }
 
   .rate-wrapper {
+    @include util.margin-x-auto;
+
     width: -webkit-fit-content;
-    margin-left: auto;
-    margin-right: auto;
   }
 }

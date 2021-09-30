@@ -1,13 +1,9 @@
 <div class="raw-content-page-layout">
-  <div class="hero">
-    <div class="hero-content">
-      <div class="logo-wrapper">
-        <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="150"/>
-      </div>
-      <div>
-        <h2>Registration successful 🎉</h2>
-        <h4>{{'Verification email sent to: '}} <a class="theme-color-link">{{email}}</a></h4>
-      </div>
-    </div>
+  <div class="logo-wrapper">
+    <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="150"/>
   </div>
+
+  <!-- Registration successful -->
+  <app-hero [contents]="[{text: 'Registration successful 🎉', level: 2}, {text: 'Verification email sent to: ' + email}]"
+            [heroClass]="'no-padding-top'"></app-hero>
 </div>

@@ -1,23 +1,24 @@
 <div class="raw-content-page-layout">
-  <div class="hero">
-    <div class="hero-content">
-      <div class="logo-wrapper">
-        <img [src]="loading ? brand.brandLogoMerge : (error ? brand.brandLogoBroken : brand.brandLogoMerged)" alt="logo"
-             class="brand-logo" height="150"/>
-      </div>
-      <div>
-        <h2 *ngIf="loading">Verifying account..</h2>
-        <h2 *ngIf="!loading && error">Account verification failed</h2>
-        <h2 *ngIf="!loading && !error">Account verified 🎉</h2>
-
-        <h4 *ngIf="!loading && error">Something went wrong!</h4>
-        <h4 *ngIf="!loading && !error">Please proceed with login</h4>
-      </div>
-    </div>
-
-    <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.error"
-                            *ngIf="!loading && error" [text]="'HOME'"></app-information-button>
-    <app-information-button (click)="router.navigate([URLS.login])" [informationType]="INFORMATION_TYPES.success"
-                            *ngIf="!loading && !error" [text]="'LOG IN'"></app-information-button>
+  <div class="logo-wrapper">
+    <img [src]="loading ? brand.brandLogoMerge : (error ? brand.brandLogoBroken : brand.brandLogoMerged)" alt="logo"
+         class="brand-logo" height="150"/>
   </div>
+
+  <!-- Verifying account -->
+  <app-hero *ngIf="loading" [contents]="[{text: 'Verifying account...', level: 2}]"
+            [heroClass]="'no-padding-top'"></app-hero>
+
+  <!-- Account verification failed -->
+  <app-hero *ngIf="!loading && error"
+            [contents]="[{text: 'Account verification failed', level: 2}, {text: 'Something went wrong!'}]"
+            [heroClass]="'no-padding-top'"></app-hero>
+  <app-information-button (click)="router.navigate([URLS.root])" *ngIf="!loading && error"
+                          [informationType]="INFORMATION_TYPES.error" [text]="'HOME'"></app-information-button>
+
+  <!-- Account verified -->
+  <app-hero *ngIf="!loading && !error"
+            [contents]="[{text: 'Account verified 🎉', level: 2}, {text: 'Please proceed with login'}]"
+            [heroClass]="'no-padding-top'"></app-hero>
+  <app-information-button (click)="router.navigate([URLS.login])" *ngIf="!loading && !error"
+                          [informationType]="INFORMATION_TYPES.success" [text]="'LOG IN'"></app-information-button>
 </div>

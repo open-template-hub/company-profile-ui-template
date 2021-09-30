@@ -13,7 +13,7 @@
     <div [style]="'min-width: ' + (330 * calculatedColumns) + 'px;'" class="section-column-wrapper">
       <div *ngFor="let productLine of productLines; last as isLastColumn; index as i"
            [class.section-column-right-border]="!(i == calculatedColumns - 1 || isLastColumn)"
-           [class]="productLine.color ? productLine.color + '-theme' : ''"
+           [class]="productLine.color ? productLine.color : ''"
            [style]="'max-height: ' + ((60  + (150 * calculatedRows)) + 1) + 'px;'"
            class="section-column">
         <div *ngIf="productLine.name" class="section-header">
@@ -28,7 +28,7 @@
 
         <a (click)="closeDropDownInternal()"
            *ngFor="let product of productLine.products; last as isLast; first as isFirst"
-           [class]="product.color ? product.color + '-theme' : ''"
+           [class]="product.color ? product.color : ''"
            [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
            class="dropdown-item">
 

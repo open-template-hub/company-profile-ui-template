@@ -1,8 +1,5 @@
-<div class="hero">
-  <div class="hero-content">
-    <h1>Contact Us</h1>
-  </div>
-</div>
+<!-- Contact Us -->
+<app-hero [contents]="[{text: 'Contact Us', level: 1}]"></app-hero>
 <div class="contact-us-page-content">
   <app-card [bodyTemplate]="bodyTemplate">
     <ng-template #bodyTemplate>
@@ -10,7 +7,7 @@
         <div *ngIf="emailSent">
           <label>Thank you for reaching us. Our team will contact with you soon.</label>
         </div>
-        <form (ngSubmit)="onSubmit()" [formGroup]="form" *ngIf="!emailSent">
+        <form (ngSubmit)="onSubmit()" *ngIf="!emailSent" [formGroup]="form">
           <div
               [class.error-input]="submitted && form.controls.firstName.invalid"
               class="input-with-label">
@@ -98,7 +95,7 @@
             <h4>Your Message</h4>
           </div>
           <div class="button-area">
-            <app-button [text]="'CONTACT US'" [icon]="'envelope'">
+            <app-button [icon]="'envelope'" [text]="'CONTACT US'">
             </app-button>
           </div>
         </form>

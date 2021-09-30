@@ -2,17 +2,17 @@ import { TestBed } from '@angular/core/testing';
 
 import { NavigationInterceptor } from './navigation.interceptor';
 
-describe('RequestInterceptor', () => {
-  beforeEach(() =>
-    TestBed.configureTestingModule({
-      providers: [NavigationInterceptor],
-    })
+describe( 'RequestInterceptor', () => {
+  beforeEach( () =>
+      TestBed.configureTestingModule( {
+        providers: [ NavigationInterceptor ],
+      } )
   );
 
-  it('should be created', () => {
+  it( 'should be created', () => {
     const interceptor: NavigationInterceptor = TestBed.inject(
-      NavigationInterceptor
+        NavigationInterceptor
     );
-    expect(interceptor).toBeTruthy();
-  });
-});
+    expect( interceptor ).toBeTruthy();
+  } );
+} );

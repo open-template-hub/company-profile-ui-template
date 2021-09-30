@@ -24,11 +24,11 @@ export class SettingsLayoutComponent {
       private loadingService: LoadingService
   ) {
 
-    this.themeService.sideNavClosed.subscribe( sideNavClosed => {
+    themeService.sideNavClosed.subscribe( sideNavClosed => {
       this.sideNavClosed = sideNavClosed;
     } );
 
-    this.brand = this.themeService.brand;
+    this.brand = themeService.brand;
 
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
   }

@@ -22,8 +22,10 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   environmentCommon = environmentCommon;
 
+  PRODUCT_LINES = PRODUCT_LINES;
+
   product: Product;
-  productLineName: string;
+  productLineKey: string;
 
   emailControl = new FormControl( '' );
 
@@ -48,7 +50,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
         return;
       }
 
-      this.productLineName = params.productLine;
+      this.productLineKey = params.productLine;
 
       let productLine: ProductLine = PRODUCT_LINES.find( ( p ) => p.key === params.productLine );
 

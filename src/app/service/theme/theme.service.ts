@@ -9,23 +9,17 @@ import { DarkLightSettings, ThemeColorSettings } from '../../data/constant';
 export class ThemeService {
 
   public appVersion = '1.0.0';
-
-  private darkLightSettingSubject: BehaviorSubject<string>;
-  private themeColorSettingSubject: BehaviorSubject<string>;
-  private sideNavClosedSubject: BehaviorSubject<string>;
-
   public darkLightSetting: Observable<string>;
   public themeColorSetting: Observable<string>;
   public sideNavClosed: Observable<string>;
-
   public brand = {
     brandLogo: '',
     brandLogoBroken: '',
     brandLogoMerge: '',
     brandLogoMerged: '',
-    wallpapers: []
+    wallpapers: [],
+    badges: []
   };
-
   colors = [
     '--theme-color',
     '--theme-color-lighter-1',
@@ -47,11 +41,14 @@ export class ThemeService {
     '--theme-color-darker-8',
     '--theme-color-darker-9'
   ];
+  private darkLightSettingSubject: BehaviorSubject<string>;
+  private themeColorSettingSubject: BehaviorSubject<string>;
+  private sideNavClosedSubject: BehaviorSubject<string>;
 
   constructor() {
     let themeColorSettingStorageItem = localStorage.getItem( 'themeColorSetting' ) ?
         localStorage.getItem( 'themeColorSetting' ) : sessionStorage.getItem( 'themeColorSetting' );
-    themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : 'default';
+    themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : ThemeColorSettings.default;
 
     this.themeColorSettingSubject = new BehaviorSubject<string>( themeColorSettingStorageItem );
     this.themeColorSetting = this.themeColorSettingSubject.asObservable();
@@ -72,17 +69,22 @@ export class ThemeService {
 
     this.sideNavClosedSubject = new BehaviorSubject<string>( sideNavClosedStorageItem );
     this.sideNavClosed = this.sideNavClosedSubject.asObservable();
-    this.brand.brandLogo = './assets/logo/brand-logo.png';
-    this.brand.brandLogoBroken = './assets/logo/brand-logo-broken.png';
-    this.brand.brandLogoMerge = './assets/logo/brand-logo-merge.gif';
-    this.brand.brandLogoMerged = './assets/logo/brand-logo-merged.png';
 
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/logo-text-v-color.png' );
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/logo-text-v-light.png' );
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/logo-text-v-dark.png' );
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/oth-packages-color.png' );
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/oth-packages-light.png' );
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/other/wallpaper/oth-packages-dark.png' );
+    this.brand.brandLogo = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png';
+    this.brand.brandLogoBroken = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-broken.png';
+    this.brand.brandLogoMerge = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-merge.gif';
+    this.brand.brandLogoMerged = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-merged.png';
+
+    this.brand.badges.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-light-mode.min.png' );
+    this.brand.badges.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-dark-mode.min.png' );
+
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/logo-text-v-color.min.png' );
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/logo-text-v-light.min.png' );
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/logo-text-v-dark.min.png' );
+
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-color.min.png' );
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-light.min.png' );
+    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-dark.min.png' );
 
     if ( version ) {
       this.appVersion = version;

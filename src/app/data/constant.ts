@@ -59,13 +59,14 @@ export const DarkLightSettings = {
 };
 
 export const ThemeColorSettings = {
-  default: 'default',
-  red: 'red',
-  yellow: 'yellow',
-  blue: 'blue',
-  green: 'green',
-  orange: 'orange',
-  purple: 'purple',
+  default: 'default-theme',
+  red: 'red-theme',
+  yellow: 'yellow-theme',
+  blue: 'blue-theme',
+  green: 'green-theme',
+  orange: 'orange-theme',
+  purple: 'purple-theme',
+  pink: 'pink-theme'
 };
 
 export const URLS_RAW = {

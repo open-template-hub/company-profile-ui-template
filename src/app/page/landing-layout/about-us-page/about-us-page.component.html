@@ -1,48 +1,38 @@
-<div class="hero">
-  <div class="hero-content">
-    <h1>Team Behind the Open Template Hub</h1>
-  </div>
-  <div class="employees-wrapper">
-    <ng-container *ngFor="let employee of EMPLOYEES; last as isLast">
-      <hr *ngIf="isLast"/>
-      <app-employee-card [employee]="employee"></app-employee-card>
-    </ng-container>
-  </div>
-</div>
-<div class="hero">
-  <div class="hero-content">
-    <div>
-      <h1>Follow us on social media</h1>
-      <h4>Minimizes your effort while building a new software business with our open source GitHub micro server
-        templates and responsive web UI + mobile UI templates</h4>
-    </div>
-  </div>
-  <div class="websites-wrapper">
-    <ng-container *ngFor="let website of websites">
-      <app-brand-button (click)="redirect(website.url + '/' + website.handle)" [text]="website.name | titlecase"
-                        [icon]="website.cssClass">
-      </app-brand-button>
-    </ng-container>
-  </div>
-</div>
-<div class="hero">
-  <div class="hero-content">
-    <div>
-      <h1>History of the Open Template Hub</h1>
-      <h4>Minimizes your effort while building a new software business with our open source GitHub micro server
-        templates and responsive web UI + mobile UI templates</h4>
-    </div>
-  </div>
-  <div class="timeline-wrapper">
-    <ng-container *ngFor="let timelineItem of OTH_TIME_LINE; index as i">
-      <app-timeline-card [timelineItem]="timelineItem" [arrow]="i % 2 === 0 ? 'left' : 'right'"
-                         [class.left]="i % 2 === 0"
-                         [class.right]="i % 2 === 1">
-      </app-timeline-card>
-      <hr class="timeline-hr"
-          [class.left]="i % 2 === 0"
-          [class.right]="i % 2 === 1"/>
-    </ng-container>
-  </div>
+<!-- Employees -->
+<app-hero [contents]="[{text: 'Team Behind the Open Template Hub', level: 1}]"></app-hero>
+<div class="employees-wrapper">
+  <ng-container *ngFor="let employee of EMPLOYEES; last as isLast">
+    <hr *ngIf="isLast"/>
+    <app-employee-card [employee]="employee"></app-employee-card>
+  </ng-container>
 </div>
 
+<!-- Follow Us -->
+<app-hero [contents]="[
+{text: 'Follow us on social media', level: 2},
+{text: 'Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates'}]">
+</app-hero>
+<div class="websites-wrapper">
+  <ng-container *ngFor="let website of websites">
+    <app-brand-button (click)="redirect(website.url + '/' + website.handle)" [icon]="website.cssClass"
+                      [text]="website.name | titlecase">
+    </app-brand-button>
+  </ng-container>
+</div>
+
+<!-- History of Us -->
+<app-hero [contents]="[
+{text: 'History of the Open Template Hub', level: 2},
+{text: 'Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates'}]">
+</app-hero>
+<div class="timeline-wrapper">
+  <ng-container *ngFor="let timelineItem of OTH_TIME_LINE; index as i">
+    <app-timeline-card [arrow]="i % 2 === 0 ? 'left' : 'right'" [class.left]="i % 2 === 0"
+                       [class.right]="i % 2 === 1"
+                       [timelineItem]="timelineItem">
+    </app-timeline-card>
+    <hr [class.left]="i % 2 === 0"
+        [class.right]="i % 2 === 1"
+        class="timeline-hr"/>
+  </ng-container>
+</div>

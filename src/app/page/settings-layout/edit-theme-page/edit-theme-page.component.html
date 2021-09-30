@@ -24,8 +24,8 @@
           </div>
           <div class="section horizontal">
             <app-button (click)="setThemeColorSetting(themeColor)" *ngFor="let themeColor of themeColorSettingsList"
-                        [icon]="'tint'" [text]="themeColor + ' theme' | titlecase"
-                        [buttonClasses]="[themeColor + '-theme']">
+                        [buttonClasses]="[themeColor]" [icon]="'tint'"
+                        [text]="themeColor.split('-').join(' ') | titlecase">
             </app-button>
           </div>
         </div>

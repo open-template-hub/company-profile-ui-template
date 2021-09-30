@@ -1,9 +1,6 @@
 <div class="raw-content-page-layout">
-  <div class="hero">
-    <div class="hero-content">
-      <h2>Privacy Policy</h2>
-    </div>
-  </div>
+  <!-- Privacy Policy -->
+  <app-hero [contents]="[{text: 'Privacy Policy', level: 1}]"></app-hero>
   <app-policy-card [policyBody]="body">
     <!-- Body -->
     <ng-template #body>

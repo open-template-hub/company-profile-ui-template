@@ -7,88 +7,23 @@
     text-align: left;
   }
 
-  & .branding-item-wrapper {
-    @include util.flex-layout-row;
+  & .branding-resources-wrapper {
     @include util.flex-center-center;
 
-    flex-wrap: wrap;
-
     padding-bottom: 50px;
-
-    & > * {
-      margin: 15px;
-    }
-  }
-
-  & .branding-item {
-    @include util.flex-layout-column;
-    @include util.top-right-bottom-left-rounded-box;
-    @include util.default-shadow;
-
-    align-items: center;
-    justify-content: flex-start;
-
-    & .branding-item-content {
-      @include util.top-right-bottom-left-rounded-box;
-      @include util.flex-layout-column;
-      @include util.flex-center-center;
-      @include util.default-shadow;
-
-      overflow: hidden;
-      margin-top: 15px;
-      margin-bottom: 20px;
-    }
-
-    & p, & a {
-      font-size: 18px;
-
-      &:last-child {
-        font-weight: 500;
-      }
-    }
-
-    & > * {
-      margin: 0 15px 12px;
-    }
-  }
-
-  & .color-item {
-    height: 200px;
-
-    & .color {
-      background-color: var(--theme-color);
-
-      &.card-color-light-mode {
-        background-color: var(--card-light-mode);
-      }
-
-      &.card-color-dark-mode {
-        background-color: var(--card-dark-mode);
-      }
-
-      width: 200px;
-      height: 100px;
-    }
-  }
-
-  & .logo-item {
-    height: 350px;
-
-    & .logo {
-      width: 250px;
-      height: 250px;
-    }
   }
 }
 
 @media only screen and (max-width: 999px) {
   .raw-content-page-layout {
-    & .wallpaper-item {
-      height: 450px;
 
-      & .wallpaper {
-        max-width: 85vw;
-        height: 400px;
+    & .branding-resources-wrapper {
+      @include util.flex-layout-column;
+
+      padding-bottom: 50px;
+
+      & > * {
+        margin: 15px 0;
       }
     }
   }
@@ -96,12 +31,19 @@
 
 @media only screen and (min-width: 1000px) {
   .raw-content-page-layout {
-    & .wallpaper-item {
-      height: 450px;
+    & .branding-resources-wrapper {
+      @include util.flex-layout-row;
+      @include util.flex-center-center;
+      @include util.margin-x-auto;
 
-      & .wallpaper {
-        max-width: 750px;
-        height: 400px;
+      justify-content: center;
+
+      width: 800px;
+
+      flex-wrap: wrap;
+
+      & > * {
+        margin: 15px;
       }
     }
   }

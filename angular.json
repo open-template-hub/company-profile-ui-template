@@ -39,7 +39,7 @@
               },
               {
                 "glob": "manifest.json",
-                "input": "seo/",
+                "input": "src/",
                 "output": "/"
               },
               {
@@ -162,7 +162,7 @@
               },
               {
                 "glob": "manifest.json",
-                "input": "seo/",
+                "input": "src/",
                 "output": "/"
               },
               {

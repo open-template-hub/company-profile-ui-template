@@ -60,10 +60,12 @@
         & .hero-content {
           @include util.flex-layout-column;
 
+          font-size: 0.8em;
+
           & > * {
             @include util.flex-layout-column;
             @include util.card-width-sm;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
           }
 
           & img {

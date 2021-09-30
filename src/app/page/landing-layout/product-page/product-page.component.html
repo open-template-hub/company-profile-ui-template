@@ -14,7 +14,7 @@
         </ng-template>
         <ng-template #bodyTemplate>
           <div class="body">
-            <h5>{{ product.description }}</h5>
+            <p>{{ product.description }}</p>
             <div *ngIf="product.openSource" class="button-wrapper">
               <app-brand-button (click)="redirect()" [icon]="environmentCommon.website.github.cssClass"
                                 [text]="'Open Source'"></app-brand-button>
@@ -55,9 +55,9 @@
       <h2 *ngIf="counter.value" class="counter" id="npmCounterElement">
         {{ counter.value }}
       </h2>
-      <h4>
+      <p>
         {{ counter.name }}
-      </h4>
+      </p>
     </a>
   </div>
 

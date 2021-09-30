@@ -68,14 +68,14 @@ p {
   padding: 13px 24px;
 }
 
-.available-plans-column-area h4 {
-  padding-bottom: 12px;
-  font-size: 24px;
-}
-
 .available-plans-column-area p {
   font-size: 13px;
   white-space: nowrap;
+
+  &:first-child {
+    padding-bottom: 12px;
+    font-size: 24px;
+  }
 }
 
 .price-plan-main-feature-wrapper {

@@ -19,6 +19,10 @@
       @include util.flex-layout-column;
       @include util.flex-center-center;
     }
+
+    & .hero-content-left p {
+      font-size: 25px;
+    }
   }
 }
 
@@ -39,7 +43,7 @@
       font-weight: 400;
     }
 
-    & h6 {
+    & .description {
       width: auto;
       margin: 5px 30px 0;
       padding-bottom: 12px;
@@ -78,6 +82,10 @@
         & h1 {
           padding: 30px 0;
         }
+
+        & p {
+          font-size: 18px;
+        }
       }
 
       & .hero-content-right img {
@@ -94,6 +102,14 @@
     & .counter-wrapper {
       min-height: 120px;
       padding-top: 10px;
+
+      & .counter {
+        font-size: 28px;
+      }
+
+      & .description {
+        font-size: 18px;
+      }
     }
   }
 
@@ -141,6 +157,16 @@
     box-sizing: border-box;
     padding: 180px 50px 50px;
     width: 1000px;
+
+    & .counter-wrapper {
+      & .counter {
+        font-size: 33px;
+      }
+
+      & .description {
+        font-size: 21px;
+      }
+    }
   }
 
   .testimonials-wrapper {

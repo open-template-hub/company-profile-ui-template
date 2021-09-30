@@ -44,8 +44,10 @@
   font-weight: 500;
 }
 
-.counter-wrapper h4 {
+.counter-wrapper p {
   color: var(--lighter-contrast);
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .counter-wrapper h2 {
@@ -77,13 +79,16 @@
     & .body {
       @include util.flex-layout-column;
       @include util.flex-center-center;
+      @include util.default-shadow;
 
       border-bottom-left-radius: 45px;
       border-bottom-right-radius: 6px;
 
       background-color: var(--shadow-lighter);
 
-      @include util.default-shadow;
+      & p {
+        font-size: 20px;
+      }
 
       & .button-wrapper {
         @include util.flex-layout-column;

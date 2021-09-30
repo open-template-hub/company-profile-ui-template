@@ -6,19 +6,19 @@
       <div class="available-plans-empty-view column-header-feature"></div>
       <div class="feature-by-price-plan-wrapper available-plans-wrapper">
         <div class="available-plans-column-area column-feature">
-          <h4>Essentials</h4>
+          <p>Essentials</p>
           <p>Individual Needs</p>
           <app-button [routerLink]="URLS.pricing + '/' + productLineKey + '/' + product.key"
                       [text]="'View Pricing'"></app-button>
         </div>
         <div class="available-plans-column-area column-feature">
-          <h4>Standard</h4>
+          <p>Standard</p>
           <p>Team Needs</p>
           <app-button [routerLink]="URLS.pricing + '/' + productLineKey + '/' + product.key"
                       [text]="'View Pricing'"></app-button>
         </div>
         <div class="available-plans-column-area column-feature">
-          <h4>Premium</h4>
+          <p>Premium</p>
           <p>Advanced Team Needs</p>
           <app-button [routerLink]="URLS.pricing + '/' + productLineKey + '/' + product.key"
                       [text]="'View Pricing'"></app-button>
@@ -37,8 +37,8 @@
       <div *ngFor="let feature of headerFeature.details; index as i" class="feature-area-row-wrapper">
         <div class="feature-area-row">
           <div class="features-area-description column-header-feature">
-            <h5 class="features-area-description-title">{{ feature.name }}</h5>
-            <h6 class="features-area-description-text">{{ feature.description }}</h6>
+            <p class="features-area-description-title">{{ feature.name }}</p>
+            <p class="features-area-description-text">{{ feature.description }}</p>
           </div>
           <div class="feature-by-price-plan-wrapper">
             <div *ngFor="let pricingOption of product.pricingOptions" class="feature-by-price-plan column-feature">

@@ -34,7 +34,7 @@ export class DropdownMenuComponent {
       private themeService: ThemeService,
       private utilService: UtilService
   ) {
-    this.brand = this.themeService.brand;
+    this.brand = themeService.brand;
     this.calculatedColumns = this.minimumColumns;
     this.calculatedRows = this.minimumRows;
   }

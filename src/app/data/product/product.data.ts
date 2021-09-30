@@ -21,7 +21,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github +
             '/' +
             'auth-server-template',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/auth-server-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/auth-server-logo.min.png',
         openSource: true,
         features: [
           {
@@ -145,7 +145,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github +
             '/' +
             'payment-server-template',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/payment-server-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/payment-server-logo.min.png',
         openSource: true,
         features: [
           {
@@ -277,7 +277,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github +
             '/' +
             'file-storage-server-template',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/file-storage-server-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/file-storage-server-logo.min.png',
         openSource: true,
         features: [
           {
@@ -409,7 +409,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github +
             '/' +
             'mail-server-template',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/mail-server-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/mail-server-logo.min.png',
         openSource: true,
         features: [
           {
@@ -540,7 +540,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github +
             '/' +
             'analytics-server-template',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/analytics-server-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/analytics-server-logo.min.png',
         openSource: true,
         features: [
           {
@@ -671,7 +671,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github +
             '/' +
             'business-logic-server-template',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/business-logic-server-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/business-logic-server-logo.min.png',
         openSource: true,
         features: [
           {
@@ -809,9 +809,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github +
             '/' +
             'company-profile-ui-template',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
-        heroImage:
-            'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/demonstration.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
         openSource: true,
         features: [
           {
@@ -934,9 +932,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github +
             '/' +
             'web-ui-template',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png',
-        heroImage:
-            'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/demonstration.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
         openSource: true,
         features: [
           {
@@ -1059,9 +1055,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github +
             '/' +
             'mobile-ui-template',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/mobile-ui-logo.png',
-        heroImage:
-            'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/mobile-ui/demo-light.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/mobile-ui-logo.min.png',
         openSource: true,
         features: [
           {
@@ -1192,7 +1186,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github +
             '/' +
             'server-generator',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
         features: [
           {
@@ -1349,7 +1343,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github +
             '/' +
             'app-generator',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/generator/server-generator-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
         features: [
           {
@@ -1511,10 +1505,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.website.github.url +
             '/' +
             environmentCommon.oth.social.github,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/server/orchestration-server-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/orchestration-server-logo.min.png',
         color: ThemeColorSettings.yellow,
-        heroImage:
-            'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png',
         features: [
           {
             name: 'Core Features',
@@ -1645,7 +1637,7 @@ export const SERVICES: ProductLine[] = [
             environmentCommon.website.github.url +
             '/' +
             environmentCommon.oth.social.github,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
         features: [
           {
             name: 'Security and Trust',
@@ -1698,7 +1690,7 @@ export const SERVICES: ProductLine[] = [
             environmentCommon.website.github.url +
             '/' +
             environmentCommon.oth.social.github,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo-pieces.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-pieces.min.png',
         features: [
           {
             name: 'Core Features',
@@ -1751,7 +1743,7 @@ export const SERVICES: ProductLine[] = [
             environmentCommon.website.github.url +
             '/' +
             environmentCommon.oth.social.github,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo-shine.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-shine.min.png',
         features: [
           {
             name: 'Core Features',

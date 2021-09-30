@@ -48,7 +48,7 @@ export class HomePageComponent implements AfterViewInit {
       this.router.navigate( [ URLS.dashboard.root ] );
     }
 
-    this.brand = this.themeService.brand;
+    this.brand = themeService.brand;
   }
 
   ngAfterViewInit() {

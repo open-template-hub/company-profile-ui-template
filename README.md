@@ -21,11 +21,11 @@ Company Profile UI Template for generic usage in Angular (generated from [Web UI
 
 <h3 align="center">
   For demo click the image below ⬇️
-</p>
+</h3>
 
 <p align="center">
   <a href="https://opentemplatehub.com">
-    <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/demonstration.png" alt="Screenshot" width="800px">
+    <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/company-profile-ui-demo-light.png" alt="Screenshot" width="800px">
   </a>
 </p>
 

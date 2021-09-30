@@ -25,7 +25,7 @@ export class BrandingPageComponent {
   externalColorInfoUrl = 'https://color-hex.org/color/';
 
   constructor( private themeService: ThemeService ) {
-    this.brand = this.themeService.brand;
+    this.brand = themeService.brand;
 
     this.themeService.themeColorSetting.subscribe( themeColorSetting => {
       this.themeColorSetting = themeColorSetting;

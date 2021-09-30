@@ -28,7 +28,7 @@ export class ExternalRedirectPageComponent {
       private router: Router,
       private themeService: ThemeService
   ) {
-    this.brand = this.themeService.brand;
+    this.brand = themeService.brand;
 
     this.route.queryParams.subscribe( ( params ) => {
       if ( !params.href ) {

@@ -7,7 +7,7 @@
 
   <div class="hero-right">
     <img
-        [src]="'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png'"
+        [src]="'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/oth-packages.min.png'"
         alt="oth-packages"/>
   </div>
 </div>
@@ -51,7 +51,8 @@
 </div>
 
 <!-- Business partners -->
-<app-swiper-wrapper [breakpoints]="{
+<div class="business-partners-wrapper">
+  <app-swiper-wrapper [breakpoints]="{
       '640': {
         slidesPerView: 1,
         spaceBetween: 30
@@ -65,6 +66,7 @@
         spaceBetween: 50
       }
       }" [height]="100" [isGrayscale]="true" [isNavigationEnabled]="true"
-                    [isPaginationEnabled]="true" [partners]="PARTNERS">
-</app-swiper-wrapper>
-<app-cookies></app-cookies>
+                      [isPaginationEnabled]="true" [partners]="PARTNERS">
+  </app-swiper-wrapper>
+  <app-cookies></app-cookies>
+</div>

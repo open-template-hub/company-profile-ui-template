@@ -29,7 +29,7 @@ export class LandingLayoutTopNavComponent {
       private themeService: ThemeService,
       private loadingService: LoadingService
   ) {
-    this.brand = this.themeService.brand;
+    this.brand = themeService.brand;
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
   }
 }

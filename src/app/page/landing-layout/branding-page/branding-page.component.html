@@ -74,10 +74,10 @@
   <!-- Logos -->
   <app-hero [contents]="[{text: 'Logos', level: 2}]"></app-hero>
   <div class="branding-resources-wrapper">
-    <app-presentation-card [href]="brand.brandLogo" [presentationItemClass]="'logo-item'"
+    <app-presentation-card [href]="brand.brandLogo.replace('min/', '').replace('.min', '')" [presentationItemClass]="'logo-item'"
                            [secondaryText]="'PNG'"
                            [src]="brand.brandLogo"
-                           [title]="brand.brandLogo.substring( brand.brandLogo.lastIndexOf( '/' ) + 1, brand.brandLogo.lastIndexOf( '.' ) )"
+                           [title]="brand.brandLogo.substring( brand.brandLogo.lastIndexOf( '/' ) + 1, brand.brandLogo.lastIndexOf( '.min.png' ) )"
                            imgHeight="175">
     </app-presentation-card>
   </div>
@@ -88,10 +88,10 @@
   <!-- Badges -->
   <div class="branding-resources-wrapper">
     <ng-container *ngFor="let badge of brand.badges; index as i">
-      <app-presentation-card [href]="badge" [imgHeight]="40"
+      <app-presentation-card [href]="badge.replace('min/', '').replace('.min', '')" [imgHeight]="40"
                              [presentationItemClass]="'logo-item'"
                              [secondaryText]="'PNG'" [src]="badge"
-                             [title]="badge.substring( badge.lastIndexOf( '/' ) + 1, badge.lastIndexOf( '.' ) )">
+                             [title]="badge.substring( badge.lastIndexOf( '/' ) + 1, badge.lastIndexOf( '.min.png' ) )">
       </app-presentation-card>
     </ng-container>
   </div>
@@ -100,10 +100,10 @@
   <app-hero [contents]="[{text: 'Wallpapers', level: 2}]"></app-hero>
   <div class="branding-resources-wrapper">
     <ng-container *ngFor="let wallpaper of brand.wallpapers; index as i">
-      <app-presentation-card [href]="wallpaper" [imgHeight]="400"
+      <app-presentation-card [href]="wallpaper.replace('min/', '').replace('.min', '')" [imgHeight]="400"
                              [presentationItemClass]="'wallpaper-item'"
                              [secondaryText]="'PNG'" [src]="wallpaper"
-                             [title]="wallpaper.substring( wallpaper.lastIndexOf( '/' ) + 1, wallpaper.lastIndexOf( '.' ) )">
+                             [title]="wallpaper.substring( wallpaper.lastIndexOf( '/' ) + 1, wallpaper.lastIndexOf( '.min.png' ) )">
       </app-presentation-card>
     </ng-container>
   </div>

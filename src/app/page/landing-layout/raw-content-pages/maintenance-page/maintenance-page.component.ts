@@ -22,6 +22,6 @@ export class MaintenancePageComponent {
       public router: Router,
       private themeService: ThemeService ) {
 
-    this.brand = this.themeService.brand;
+    this.brand = themeService.brand;
   }
 }

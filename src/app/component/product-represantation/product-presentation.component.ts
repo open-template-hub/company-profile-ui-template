@@ -29,7 +29,7 @@ export class ProductPresentationComponent {
       private productService: ProductService,
       private themeService: ThemeService
   ) {
-    this.brand = this.themeService.brand;
+    this.brand = themeService.brand;
 
     for ( const website in environment.oauth ) {
       // filter only oauth configured websites

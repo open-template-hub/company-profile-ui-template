@@ -1,4 +1,5 @@
 import { Component, Input, TemplateRef } from '@angular/core';
+import { ThemeService } from '../../../service/theme/theme.service';
 
 @Component( {
   selector: 'app-policy-card',
@@ -13,7 +14,11 @@ export class PolicyCardComponent {
   @Input() defaultHeaderContent: string;
   @Input() defaultBodyContent: string;
 
-  constructor() {
-    // Intentionally blank
+  brand = {
+    brandLogo: ''
+  };
+
+  constructor( private themeService: ThemeService ) {
+    this.brand = themeService.brand;
   }
 }

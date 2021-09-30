@@ -13,11 +13,6 @@
 
   text-align: center;
 
-  &.with-background-img {
-    background: url("../../../../assets/home-hero-background-wide.png") no-repeat center center;
-    background-size: cover;
-  }
-
   & .hero-left, & .hero-right {
     @include util.flex-layout-column;
     @include util.flex-center-center;
@@ -72,6 +67,20 @@
     width: 300px;
     margin-top: 50px;
   }
+}
+
+.business-partners-wrapper {
+  @include util.flex-layout-column;
+  @include util.flex-center-center;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding-left: 3vw;
+  padding-right: 3vw;
+
+  padding-bottom: 100px;
 }
 
 @media only screen and (max-width: 999px) {

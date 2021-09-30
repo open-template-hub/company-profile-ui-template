@@ -22,8 +22,9 @@
     "test": "ng test",
     "dev:ssr": "ng run company-profile-ui-template:serve-ssr",
     "serve:ssr": "node dist/company-profile-ui-template/server/main.js",
-    "build:ssr": "ng build && ng run company-profile-ui-template:server",
-    "prerender": "ng run company-profile-ui-template:prerender"
+    "build:ssr": "ng build --configuration=production && ng run company-profile-ui-template:server",
+    "prerender": "ng run company-profile-ui-template:prerender",
+    "postinstall": "npm run build:ssr"
   },
   "dependencies": {
     "@angular/animations": "^12.2.5",

@@ -1,1 +1,1 @@
-web: node dist/company-profile-ui-template/server/main.js
+web: npm run serve:ssr

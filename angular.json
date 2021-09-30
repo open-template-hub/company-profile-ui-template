@@ -39,7 +39,17 @@
               },
               {
                 "glob": "manifest.json",
-                "input": "src/",
+                "input": "seo/",
+                "output": "/"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "seo/",
+                "output": "/"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "seo/",
                 "output": "/"
               }
             ],
@@ -152,7 +162,17 @@
               },
               {
                 "glob": "manifest.json",
-                "input": "src/",
+                "input": "seo/",
+                "output": "/"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "seo/",
+                "output": "/"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "seo/",
                 "output": "/"
               }
             ],

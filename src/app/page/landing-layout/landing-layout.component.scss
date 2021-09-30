@@ -14,8 +14,14 @@
   height: 90px;
 }
 
-.form-page-layout {
+.raw-content-page-layout, .form-page-layout {
+  @include util.flex-layout-column;
 
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form-page-layout {
   & .body {
     box-sizing: border-box;
     padding: 25px;
@@ -30,6 +36,10 @@
   }
 }
 
+.raw-content-page-layout {
+  padding: 7vh 0;
+}
+
 @media only screen and (max-width: 999px) {
 
   .header, .header-filler {
@@ -37,7 +47,8 @@
   }
 
   .raw-content-page-layout, .form-page-layout {
-    padding: 0 3vw 50px;
+    padding-left: 3vw;
+    padding-right: 3vw;
     min-height: 80vh;
   }
 
@@ -55,7 +66,8 @@
   }
 
   .raw-content-page-layout, .form-page-layout {
-    padding: 0 90px 50px;
+    padding-left: 90px;
+    padding-right: 90px;
     min-height: 50vh;
   }
 

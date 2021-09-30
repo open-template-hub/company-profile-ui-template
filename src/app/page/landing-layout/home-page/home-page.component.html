@@ -1,60 +1,57 @@
 <div class="hero">
-  <div class="hero-content home-design">
-    <div class="hero-content-left">
-      <h1>Open Template Hub</h1>
-      <p>Minimizes your effort while building a new software business with our open source GitHub micro server
-        templates and responsive web UI + mobile UI templates</p>
-    </div>
-
-    <div class="hero-content-right">
-      <img
-          [src]="'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png'"
-          alt="oth-packages"/>
-    </div>
+  <div class="hero-left">
+    <h1>Open Template Hub</h1>
+    <p>Minimizes your effort while building a new software business with our open source GitHub micro server
+      templates and responsive web UI + mobile UI templates</p>
   </div>
-  <div class="counters">
-    <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
-       class="counter-wrapper"
-       rel=noopener target="_blank">
-      <p class="counter" id="npmDownloadCounterElement">
-        0
-      </p>
-      <p class="description">
-        Npm Downloads
-      </p>
-    </a>
-    <a [href]="'https://github.com/open-template-hub/server-generator'"
-       class="counter-wrapper counter-alter" rel=noopener target="_blank">
-      <p class="counter" id="serverTypesCounterElement">
-        0
-      </p>
-      <p class="description">
-        Server Types
-      </p>
-    </a>
-    <a [href]="'https://github.com/open-template-hub/app-generator'" class="counter-wrapper" rel=noopener
-       target="_blank">
-      <p class="counter" id="uiTypesCounterElement">
-        0
-      </p>
-      <p class="description">
-        UI Types
-      </p>
-    </a>
+
+  <div class="hero-right">
+    <img
+        [src]="'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/products/company-profile-ui/oth-packages.png'"
+        alt="oth-packages"/>
   </div>
 </div>
-<div class="hero">
-  <div class="hero-content">
-    <div class="hero-content-sub-group">
-      <h2>Customer Testimonials</h2>
-      <h3>What our customers are saying...</h3>
-    </div>
-  </div>
-  <div class="testimonials-wrapper">
-    <app-testimonial-card *ngFor="let testimonial of TESTIMONIALS" [testimonial]="testimonial">
-    </app-testimonial-card>
-  </div>
-  <app-swiper-wrapper [breakpoints]="{
+<div class="counters">
+  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
+     class="counter-wrapper"
+     rel=noopener target="_blank">
+    <p class="counter" id="npmDownloadCounterElement">
+      0
+    </p>
+    <p class="description">
+      Npm Downloads
+    </p>
+  </a>
+  <a [href]="'https://github.com/open-template-hub/server-generator'"
+     class="counter-wrapper counter-alter" rel=noopener target="_blank">
+    <p class="counter" id="serverTypesCounterElement">
+      0
+    </p>
+    <p class="description">
+      Server Types
+    </p>
+  </a>
+  <a [href]="'https://github.com/open-template-hub/app-generator'" class="counter-wrapper" rel=noopener
+     target="_blank">
+    <p class="counter" id="uiTypesCounterElement">
+      0
+    </p>
+    <p class="description">
+      UI Types
+    </p>
+  </a>
+</div>
+
+<!-- Customer testimonials -->
+<app-hero
+    [contents]="[{text: 'Customer testimonials', level: 1}, {text: 'What our customers are saying...'}]"></app-hero>
+<div class="testimonials-wrapper">
+  <app-testimonial-card *ngFor="let testimonial of TESTIMONIALS" [testimonial]="testimonial">
+  </app-testimonial-card>
+</div>
+
+<!-- Business partners -->
+<app-swiper-wrapper [breakpoints]="{
       '640': {
         slidesPerView: 1,
         spaceBetween: 30
@@ -68,7 +65,6 @@
         spaceBetween: 50
       }
       }" [height]="100" [isGrayscale]="true" [isNavigationEnabled]="true"
-                      [isPaginationEnabled]="true" [partners]="PARTNERS">
-  </app-swiper-wrapper>
-</div>
+                    [isPaginationEnabled]="true" [partners]="PARTNERS">
+</app-swiper-wrapper>
 <app-cookies></app-cookies>

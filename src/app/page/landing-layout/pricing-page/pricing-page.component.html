@@ -1,14 +1,9 @@
-<div class="hero">
-  <div class="hero-content">
-    <div>
-      <h1 class="page-header">{{ product.name + ' Pricing Plan'}}</h1>
-      <h3 class="page-description">No hidden fees. Cancel at any time.</h3>
-    </div>
-  </div>
-  <div *ngIf="product?.pricingOptions" class="pricing-wrapper">
-    <ng-container *ngFor="let pricing of product.pricingOptions">
-      <app-pricing-card [class.bigger-card]="pricing.ribbon === PRICING_RIBBONS.get('deal')"
-                        [pricingOption]="pricing"></app-pricing-card>
-    </ng-container>
-  </div>
+<!-- Pricing Plan -->
+<app-hero
+    [contents]="[{text: product.name + ' Pricing Plan', level: 1}, {text: 'No hidden fees. Cancel at any time.'}]"></app-hero>
+<div *ngIf="product?.pricingOptions" class="pricing-wrapper">
+  <ng-container *ngFor="let pricing of product.pricingOptions">
+    <app-pricing-card [class.bigger-card]="pricing.ribbon === PRICING_RIBBONS.get('deal')"
+                      [pricingOption]="pricing"></app-pricing-card>
+  </ng-container>
 </div>

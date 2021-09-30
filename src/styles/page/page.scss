@@ -15,20 +15,6 @@
     overflow: initial;
     position: relative;
     z-index: 2;
-
-    & .hero {
-      @include util.flex-layout-column;
-
-      position: relative;
-
-      text-align: center;
-      align-items: center;
-
-      & .hero-content {
-        padding-top: 7vh;
-        display: flex;
-      }
-    }
   }
 }
 
@@ -53,59 +39,18 @@
 
 @media only screen and (max-width: 999px) {
   .page {
-    font-size: 17px;
-
-    & .page-content {
-      & .hero {
-        & .hero-content {
-          @include util.flex-layout-column;
-
-          font-size: 0.8em;
-
-          & > * {
-            @include util.flex-layout-column;
-            @include util.card-width-sm;
-            margin-bottom: 40px;
-          }
-
-          & img {
-            min-width: initial;
-            width: initial;
-            max-width: initial;
-          }
-        }
-      }
-
-    }
+    font-size: 18px;
   }
 
   .top-svg {
     top: 0;
   }
-
 }
 
 @media only screen and (min-width: 1000px) {
   .page {
     font-size: 25px;
     padding-bottom: 100px;
-
-    & .page-content {
-
-      & .hero {
-        padding-bottom: 50px;
-
-        & .hero-content {
-          flex-direction: column;
-          max-width: 800px;
-
-          & > * {
-            flex-direction: column;
-            margin-bottom: 50px;
-          }
-        }
-      }
-    }
   }
 
   .top-svg {

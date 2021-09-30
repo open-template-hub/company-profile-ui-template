@@ -46,8 +46,8 @@
     }
 
     & .presentation-footer {
-      margin-left: auto;
-      margin-top: auto;
+      @include util.margin-x-auto;
+
       color: var(--theme-color-lighter-4);
     }
 

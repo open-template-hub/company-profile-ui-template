@@ -1,0 +1,66 @@
+@use '../../../styles/util/util';
+
+.hero {
+  padding-top: 7vh;
+
+  &.no-padding-top {
+    padding-top: 0;
+  }
+
+  & .body {
+    @include util.flex-layout-column;
+
+    position: relative;
+
+    text-align: center;
+    align-items: center;
+
+    & .contents {
+      display: flex;
+
+      & p {
+        color: var(--lighter);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .hero {
+    & .body {
+      & .contents {
+        @include util.flex-layout-column;
+
+        & > * {
+          @include util.flex-layout-column;
+          @include util.card-width-sm;
+          margin-bottom: 20px;
+        }
+
+        & img {
+          min-width: initial;
+          width: initial;
+          max-width: initial;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .hero {
+    & .body {
+      padding-bottom: 50px;
+
+      & .contents {
+        flex-direction: column;
+        max-width: 800px;
+
+        & > * {
+          flex-direction: column;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

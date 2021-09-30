@@ -6,6 +6,7 @@
   & .header {
     // Design
     margin-top: -60px;
+    text-align: center;
 
     & .profile-image {
       @include util.margin-x-auto;
@@ -15,7 +16,7 @@
       background-color: var(--card);
 
       // Design
-      border: 2px solid var(--darker-contrast);
+      border: 2px solid var(--shadow-lighter);
       box-shadow: 0 -6px 15px -7px var(--shadow);
       width: 120px;
       padding: 5px;

@@ -1,15 +1,11 @@
 <div class="raw-content-page-layout">
-  <div class="hero">
-    <div class="hero-content">
-      <div class="logo-wrapper">
-        <img [src]="brand.brandLogoBroken" alt="logo" class="brand-logo" height="150"/>
-      </div>
-      <div>
-        <h2>404 Page not found</h2>
-        <h4>Something went wrong!</h4>
-      </div>
-    </div>
-    <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.error"
-                            [text]="'HOME'"></app-information-button>
+  <div class="logo-wrapper">
+    <img [src]="brand.brandLogoBroken" alt="logo" class="brand-logo" height="150"/>
   </div>
+
+  <!-- 404 Page not found -->
+  <app-hero [contents]="[{text: '404 Page not found', level: 1}, {text: 'Something went wrong!'}]"
+            [heroClass]="'no-padding-top'"></app-hero>
+  <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.error"
+                          [text]="'HOME'"></app-information-button>
 </div>

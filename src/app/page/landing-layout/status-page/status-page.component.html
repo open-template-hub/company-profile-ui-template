@@ -1,8 +1,5 @@
 <div class="form-page-layout">
-  <div class="hero">
-    <div class="hero-content">
-      <h1>System Status</h1>
-    </div>
-    <app-status-card [overallSystemStatus]="overallSystemStatus"></app-status-card>
-  </div>
+  <!-- System status -->
+  <app-hero [contents]="[{text: 'System status', level: 1}]"></app-hero>
+  <app-status-card [overallSystemStatus]="overallSystemStatus"></app-status-card>
 </div>

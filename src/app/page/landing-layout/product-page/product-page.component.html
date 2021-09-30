@@ -82,11 +82,9 @@
             [product]="product"
         ></app-price-plan>
       </div>
-      <div class="hero">
-        <div class="hero-content">
-          <h2>Related Products</h2>
-        </div>
-      </div>
+
+      <!-- Related Products -->
+      <app-hero [contents]="[{text: 'Related Products', level: 2}]"></app-hero>
       <div class="related-products-wrapper">
         <ng-container *ngFor="let productLine of PRODUCT_LINES">
           <ng-container

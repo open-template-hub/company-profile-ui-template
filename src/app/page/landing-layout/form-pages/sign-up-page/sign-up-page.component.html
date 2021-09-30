@@ -1,65 +1,62 @@
 <div class="form-page-layout">
-  <div class="hero">
-    <div class="hero-content">
-      <h2>Register</h2>
-    </div>
-    <app-card [bodyTemplate]="bodyTemplate">
-      <!-- Body -->
-      <ng-template #bodyTemplate>
-        <div class="body">
-          <div class="flex-layout-column flex-center-center social-login-wrapper">
-            <app-brand-button (click)="socialLogin(environmentCommon.website.facebook)"
-                              [icon]="environmentCommon.website.facebook.cssClass"></app-brand-button>
-            <app-brand-button (click)="socialLogin(environmentCommon.website.google)"
-                              [icon]="environmentCommon.website.google.cssClass"></app-brand-button>
-          </div>
-          <div class="flex-layout-column flex-center-center">
-            <p>or</p>
-          </div>
-          <form (ngSubmit)="onSubmit()" [formGroup]="form">
-            <div class="section">
-
-              <div [class.error-input]="submitted && form.controls.username.invalid" class="input-with-icon">
-                <input formControlName="username" placeholder="Username..." required type="text">
-                <i aria-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
-              </div>
-              <div [class.error-input]="submitted && form.controls.email.invalid" class="input-with-icon">
-                <input formControlName="email" placeholder="Email..." required type="email">
-                <i aria-hidden="true" class="fas fa-envelope fa-lg fa-fw"></i>
-              </div>
-              <div [class.error-input]="submitted && form.controls.password.invalid" class="input-with-icon">
-                <input formControlName="password" placeholder="Password..." required type="password">
-                <i aria-hidden="true" class="fas fa-key fa-lg fa-fw"></i>
-              </div>
-              <div [class.error-input]="submitted && form.controls.confirmPassword.invalid" class="input-with-icon">
-                <input formControlName="confirmPassword" placeholder="Confirm Password..." required type="password">
-                <i aria-hidden="true" class="fas fa-lock fa-lg fa-fw"></i>
-              </div>
-            </div>
-            <div class="section-submit">
-              <app-button [text]="'CONTINUE'"></app-button>
-              <p>
-                <small class="dim">By signing up, you agree
-                  <a class="theme-color-link" rel=noopener routerLink="{{URLS.terms}}" target="_blank">Terms of Use</a>,
-                  <a class="theme-color-link" rel=noopener routerLink="{{URLS.privacyPolicy}}" target="_blank">Privacy
-                    Policy</a>
-                  and
-                  <a class="theme-color-link" rel=noopener routerLink="{{URLS.cookiePolicy}}" target="_blank">Cookie
-                    Policy</a>
-                </small>
-              </p>
-              <hr class="dim"/>
-              <p>
-                Already have an account?
-                <a [routerLink]="URLS.login" class="theme-color-link">
-                  Login
-                </a>
-              </p>
-            </div>
-          </form>
+  <!-- Register -->
+  <app-hero [contents]="[{text: 'Register', level: 1}]"></app-hero>
+  <app-card [bodyTemplate]="bodyTemplate">
+    <!-- Body -->
+    <ng-template #bodyTemplate>
+      <div class="body">
+        <div class="flex-layout-column flex-center-center social-login-wrapper">
+          <app-brand-button (click)="socialLogin(environmentCommon.website.facebook)"
+                            [icon]="environmentCommon.website.facebook.cssClass"></app-brand-button>
+          <app-brand-button (click)="socialLogin(environmentCommon.website.google)"
+                            [icon]="environmentCommon.website.google.cssClass"></app-brand-button>
         </div>
-      </ng-template>
-    </app-card>
-  </div>
+        <div class="flex-layout-column flex-center-center">
+          <p>or</p>
+        </div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="form">
+          <div class="section">
+
+            <div [class.error-input]="submitted && form.controls.username.invalid" class="input-with-icon">
+              <input formControlName="username" placeholder="Username..." required type="text">
+              <i aria-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
+            </div>
+            <div [class.error-input]="submitted && form.controls.email.invalid" class="input-with-icon">
+              <input formControlName="email" placeholder="Email..." required type="email">
+              <i aria-hidden="true" class="fas fa-envelope fa-lg fa-fw"></i>
+            </div>
+            <div [class.error-input]="submitted && form.controls.password.invalid" class="input-with-icon">
+              <input formControlName="password" placeholder="Password..." required type="password">
+              <i aria-hidden="true" class="fas fa-key fa-lg fa-fw"></i>
+            </div>
+            <div [class.error-input]="submitted && form.controls.confirmPassword.invalid" class="input-with-icon">
+              <input formControlName="confirmPassword" placeholder="Confirm Password..." required type="password">
+              <i aria-hidden="true" class="fas fa-lock fa-lg fa-fw"></i>
+            </div>
+          </div>
+          <div class="section-submit">
+            <app-button [text]="'CONTINUE'"></app-button>
+            <p>
+              <small class="dim">By signing up, you agree
+                <a class="theme-color-link" rel=noopener routerLink="{{URLS.terms}}" target="_blank">Terms of Use</a>,
+                <a class="theme-color-link" rel=noopener routerLink="{{URLS.privacyPolicy}}" target="_blank">Privacy
+                  Policy</a>
+                and
+                <a class="theme-color-link" rel=noopener routerLink="{{URLS.cookiePolicy}}" target="_blank">Cookie
+                  Policy</a>
+              </small>
+            </p>
+            <hr class="dim"/>
+            <p>
+              Already have an account?
+              <a [routerLink]="URLS.login" class="theme-color-link">
+                Login
+              </a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </ng-template>
+  </app-card>
 </div>
 <app-cookies></app-cookies>

@@ -1,58 +1,55 @@
 <div class="form-page-layout">
-  <div class="hero">
-    <div class="hero-content">
-      <h2>Login</h2>
-    </div>
-    <app-card [bodyTemplate]="bodyTemplate">
-      <!-- Body -->
-      <ng-template #bodyTemplate>
-        <div class="body">
-          <div class="flex-layout-column flex-center-space-evenly social-login-wrapper">
-            <app-brand-button (click)="socialLogin(environmentCommon.website.facebook)"
-                              [icon]="environmentCommon.website.facebook.cssClass"></app-brand-button>
-            <app-brand-button (click)="socialLogin(environmentCommon.website.google)"
-                              [icon]="environmentCommon.website.google.cssClass"></app-brand-button>
-          </div>
-          <div class="flex-layout-column flex-center-center" style="margin-bottom: 1.5rem; margin-top: 0.5rem;">
-            <p>or</p>
-          </div>
-          <form (ngSubmit)="onSubmit()" [formGroup]="form">
-            <div class="section">
-              <div [class.error-input]="submitted && form.controls.username.invalid" class="input-with-icon">
-                <input formControlName="username" placeholder="Username or Email..." required type="text">
-                <i aria-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
-              </div>
-              <div [class.error-input]="submitted && form.controls.password.invalid" class="input-with-icon">
-                <input formControlName="password" placeholder="Password..." required type="password">
-                <i aria-hidden="true" class="fas fa-lock fa-lg fa-fw"></i>
-              </div>
-              <div class="input-checkbox">
-                <label class="input-checkbox-label">
-                  <input formControlName="rememberMe" type="checkbox">
-                  <span></span>
-                  <p>Remember Me</p>
-                </label>
-              </div>
-            </div>
-            <div class="section-submit">
-              <app-button [text]="'LOG IN'"></app-button>
-              <p>
-                Don't have an account?
-                <a [routerLink]="URLS.signup" class="theme-color-link">
-                  Sign Up
-                </a>
-              </p>
-              <p>
-                <a [routerLink]="URLS.forgetPassword" class="theme-color-link">
-                  Forget password?
-                </a>
-              </p>
-            </div>
-          </form>
+  <!-- Welcome -->
+  <app-hero [contents]="[{text: 'Welcome', level: 1}]"></app-hero>
+  <app-card [bodyTemplate]="bodyTemplate">
+    <!-- Body -->
+    <ng-template #bodyTemplate>
+      <div class="body">
+        <div class="flex-layout-column flex-center-space-evenly social-login-wrapper">
+          <app-brand-button (click)="socialLogin(environmentCommon.website.facebook)"
+                            [icon]="environmentCommon.website.facebook.cssClass"></app-brand-button>
+          <app-brand-button (click)="socialLogin(environmentCommon.website.google)"
+                            [icon]="environmentCommon.website.google.cssClass"></app-brand-button>
         </div>
-      </ng-template>
-    </app-card>
-  </div>
+        <div class="flex-layout-column flex-center-center" style="margin-bottom: 1.5rem; margin-top: 0.5rem;">
+          <p>or</p>
+        </div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="form">
+          <div class="section">
+            <div [class.error-input]="submitted && form.controls.username.invalid" class="input-with-icon">
+              <input formControlName="username" placeholder="Username or Email..." required type="text">
+              <i aria-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
+            </div>
+            <div [class.error-input]="submitted && form.controls.password.invalid" class="input-with-icon">
+              <input formControlName="password" placeholder="Password..." required type="password">
+              <i aria-hidden="true" class="fas fa-lock fa-lg fa-fw"></i>
+            </div>
+            <div class="input-checkbox">
+              <label class="input-checkbox-label">
+                <input formControlName="rememberMe" type="checkbox">
+                <span></span>
+                <p>Remember Me</p>
+              </label>
+            </div>
+          </div>
+          <div class="section-submit">
+            <app-button [text]="'LOG IN'"></app-button>
+            <p>
+              Don't have an account?
+              <a [routerLink]="URLS.signup" class="theme-color-link">
+                Sign Up
+              </a>
+            </p>
+            <p>
+              <a [routerLink]="URLS.forgetPassword" class="theme-color-link">
+                Forget password?
+              </a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </ng-template>
+  </app-card>
 </div>
 <app-cookies></app-cookies>
 

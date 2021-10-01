@@ -53,14 +53,20 @@
         top: 50px;
         left: -60px;
         z-index: 1;
+
+        & .svg-path {
+          fill: var(--theme-color);
+        }
       }
 
       & img {
         @include util.circle;
 
+        box-shadow: 0 3px 15px -5px var(--theme-color);
+
         height: 100px;
         margin-top: 50px;
-        border-bottom: 0.1em solid;
+        border-bottom: 2px solid var(--theme-color);
         z-index: 2;
       }
 
@@ -71,6 +77,10 @@
         font-size: 1rem;
         margin-top: 7px;
         z-index: 2;
+
+        & i {
+          color: var(--theme-color);
+        }
       }
     }
 
@@ -87,6 +97,10 @@
       max-width: 70%;
 
       text-align: left;
+
+      & .title {
+        color: var(--theme-color-darker-2);
+      }
 
       & > * {
         color: var(--lighter);

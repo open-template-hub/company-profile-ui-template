@@ -1,4 +1,5 @@
 import { Testimonial } from '../../model/testimonial/testimonial.model';
+import { ThemeColorSettings } from '../constant';
 
 export const TESTIMONIALS: Testimonial[] = [
   {
@@ -14,7 +15,7 @@ export const TESTIMONIALS: Testimonial[] = [
         twitter: '',
       },
     },
-    style: { themeColor: 'var(--warning)' },
+    theme: ThemeColorSettings.yellow,
   },
   {
     review:
@@ -29,7 +30,7 @@ export const TESTIMONIALS: Testimonial[] = [
         twitter: '',
       },
     },
-    style: { themeColor: 'var(--error)' },
+    theme: ThemeColorSettings.red,
   },
   {
     review:
@@ -44,6 +45,6 @@ export const TESTIMONIALS: Testimonial[] = [
         twitter: '',
       },
     },
-    style: { themeColor: 'var(--info)' },
+    theme: ThemeColorSettings.blue,
   }
 ];

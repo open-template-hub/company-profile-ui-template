@@ -92,6 +92,7 @@ import { CallbackPageComponent } from './page/splash-layout/callback-page/callba
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 import { HeroComponent } from './component/hero/hero.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -189,7 +190,13 @@ FullCalendarModule.registerPlugins( [
     FullCalendarModule,
     SwiperModule,
     ToastrModule.forRoot( { preventDuplicates: true } ),
-    GoogleTagManagerModule.forRoot( { id: environment.analytics.google.tag } )
+    GoogleTagManagerModule.forRoot( { id: environment.analytics.google.tag } ),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
     /*HttpClientInMemoryWebApiModule.forRoot(
      InMemoryDataService, { dataEncapsulation: false } )*/
   ],

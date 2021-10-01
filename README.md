@@ -139,7 +139,7 @@ To be able to generate brand color scales, we are using **[Colllor](http://colll
 
 ## Favicon Generation
 
-To be able to generate favicon, refer to **[FAVICON_GENERATION.md](FAVICON_GENERATION.md)** file.
+To be able to generate favicon, refer to **[FAVICON_GENERATION.md](docs/FAVICON_GENERATION.md)** file.
 
 <br/>
 
@@ -151,7 +151,7 @@ To be able to generate cookie policy, use **[cookiepolicygenerator](https://www.
 
 ## Outdated
 
-Refer to **[OUTDATED.md](OUTDATED.md)** to see outdated npm packages and update them with your own risk.
+Refer to **[OUTDATED.md](docs/OUTDATED.md)** to see outdated npm packages and update them with your own risk.
 
 <br/>
 
@@ -174,13 +174,13 @@ Refer to **[OUTDATED.md](OUTDATED.md)** to see outdated npm packages and update 
 
 ## Contributing
 
-Refer to **[CONTRIBUTING.md](CONTRIBUTING.md)** to see how to contribute to Open Template Hub.
+Refer to **[CONTRIBUTING.md](docs/CONTRIBUTING.md)** to see how to contribute to Open Template Hub.
 
 <br/>
 
 ## Code of Conduct
 
-Refer to **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** to see contributor covenant code of conduct.
+Refer to **[CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md)** to see contributor covenant code of conduct.
 
 <br/>
 

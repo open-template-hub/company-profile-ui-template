@@ -57,7 +57,7 @@
 .intro {
   @include util.flex-layout-row;
 
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
 
   text-align: center;

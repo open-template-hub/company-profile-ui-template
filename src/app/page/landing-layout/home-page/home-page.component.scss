@@ -4,11 +4,12 @@
 
 .hero {
   @include util.flex-layout-row;
-  @include util.flex-center-center;
+  @include util.margin-x-auto;
 
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 
-  max-width: 100vw;
+  max-width: 94vw;
   width: 100%;
 
   padding-top: 7vh;
@@ -21,7 +22,7 @@
   }
 
   & .hero-left p {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   & .hero-right img {
@@ -147,15 +148,17 @@
 @media only screen and (min-width: 1000px) {
 
   .hero {
-    font-size: 35px;
     flex-direction: row;
     padding-bottom: 50px;
 
-    & .hero-left, & .hero-right {
-      max-width: 45vw;
+    & .hero-left, &.hero-right {
+      min-width: 450px;
     }
 
-    & .hero-left {
+    & .hero-left, {
+      font-size: 36px;
+      max-width: 50%;
+
       padding-bottom: 50px;
 
       & h1 {

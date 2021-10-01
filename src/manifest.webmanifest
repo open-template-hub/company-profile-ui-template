@@ -1,7 +1,11 @@
 {
-  "name": "OpenTemplateHub",
+  "name": "open-template-hub",
   "short_name": "oth",
-  "start_url": "./index.html",
+  "theme_color": "#FEFEFE",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
   "icons": [
     {
       "src": "./assets/favicons/android-chrome-192x192.png",
@@ -19,8 +23,5 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#FEFEFE",
-  "background_color": "#FFFFFF",
-  "display": "standalone"
+  ]
 }

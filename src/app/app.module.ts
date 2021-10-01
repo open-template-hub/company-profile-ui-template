@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
@@ -40,6 +41,7 @@ import { ColorChartComponent } from './component/color-chart/color-chart.compone
 import { CommandLineComponent } from './component/command-line/command-line.component';
 import { DropdownMenuComponent } from './component/dropdown-menu/dropdown-menu.component';
 import { ExtLinkComponent } from './component/ext-link/ext-link.component';
+import { HeroComponent } from './component/hero/hero.component';
 import { EventDataComponent } from './component/label/deprecated/event-data/event-data.component';
 import { EventHamburgerMenuComponent } from './component/label/deprecated/event-hamburger-menu/event-hamburger-menu.component';
 import { LabelDataComponent } from './component/label/deprecated/label-data/label-data.component';
@@ -91,7 +93,6 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { CallbackPageComponent } from './page/splash-layout/callback-page/callback-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
-import { HeroComponent } from './component/hero/hero.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -189,7 +190,13 @@ FullCalendarModule.registerPlugins( [
     FullCalendarModule,
     SwiperModule,
     ToastrModule.forRoot( { preventDuplicates: true } ),
-    GoogleTagManagerModule.forRoot( { id: environment.analytics.google.tag } )
+    GoogleTagManagerModule.forRoot( { id: environment.analytics.google.tag } ),
+    ServiceWorkerModule.register( 'ngsw-worker.js', {
+      enabled: [ 'production', 'staging' ].includes( environment.identity ),
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerImmediately'
+    } )
     /*HttpClientInMemoryWebApiModule.forRoot(
      InMemoryDataService, { dataEncapsulation: false } )*/
   ],

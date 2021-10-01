@@ -13,6 +13,6 @@
     [slidesPerView]="1"
     [spaceBetween]="10">
   <ng-template *ngFor="let partner of partners" swiperSlide>
-    <img [class.grayscale]="isGrayscale" [height]="height" [src]="partner.brandLogo" alt="logo" class="brand-logo "/>
+    <img [class.grayscale]="isGrayscale" [height]="height" [src]="partner.brandLogo" width="auto" alt="logo" class="brand-logo"/>
   </ng-template>
 </swiper>

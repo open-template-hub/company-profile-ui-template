@@ -8,7 +8,5 @@ export interface Testimonial {
     photoUri: string;
     social: Social;
   };
-  style: {
-    themeColor: string;
-  };
+  theme?: string;
 }

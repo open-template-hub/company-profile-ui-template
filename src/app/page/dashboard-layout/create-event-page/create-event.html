@@ -91,7 +91,7 @@
             </span>
           </div>
           <div class="contribute-button-area">
-            <app-button1 [isContribute]="true" [text]="'CONTRIBUTE'" class="contribute-button"></app-button1>
+            <app-button [text]="'CONTRIBUTE'"></app-button>
           </div>
         </div>
       </form>
@@ -129,9 +129,7 @@
       <i aria-hidden="true" class="material-icons">search</i>
       <input #searchArea (keyup)="searchInAllEvents($event)" placeholder="ex. title.." type="text">
     </div>
-    <app-button1 (click)="searchInAllEvents(undefined)" [hoverWithColor]="false" [isSleekButton]="true"
-                 [lighterContrast]="true"
-                 [text]="'Search'" [transparent]="true"></app-button1>
+    <app-button (click)="searchInAllEvents(undefined)" [text]="'Search'"></app-button>
   </div>
   <!--END OF SEARCH AREA-->
   <div class="searched-events" style="margin-top: 70px;">

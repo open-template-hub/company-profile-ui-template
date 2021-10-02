@@ -23,8 +23,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AnimatedCodeEditorComponent } from './component/animated-code-editor/animated-code-editor.component';
 import { BrandButtonComponent } from './component/button/brand-button/brand-button.component';
 import { ButtonComponent } from './component/button/button.component';
-import { Button1Component } from './component/button/deprecated/button1/button1.component';
-import { SocialButtonComponent } from './component/button/deprecated/social-button/social-button.component';
 import { InformationButtonComponent } from './component/button/information-button/information-button.component';
 import { CalendarComponent } from './component/calendar/calendar.component';
 import { CardComponent } from './component/card/card.component';
@@ -93,6 +91,7 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { CallbackPageComponent } from './page/splash-layout/callback-page/callback-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
+import { EventButtonComponent } from './component/button/event-button/event-button.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -117,10 +116,8 @@ FullCalendarModule.registerPlugins( [
     BottomNavComponent,
     FooterComponent,
     Card1Component,
-    Button1Component,
     SplashLayoutComponent,
     CallbackPageComponent,
-    SocialButtonComponent,
     LabelDataComponent,
     DashboardLayoutTopNavComponent,
     LabelWithIconDataComponent,
@@ -173,6 +170,7 @@ FullCalendarModule.registerPlugins( [
     BrandingPageComponent,
     PresentationCardComponent,
     HeroComponent,
+    EventButtonComponent,
   ],
   imports: [
     BrowserModule,

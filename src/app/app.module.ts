@@ -26,8 +26,6 @@ import { ButtonComponent } from './component/button/button.component';
 import { InformationButtonComponent } from './component/button/information-button/information-button.component';
 import { CalendarComponent } from './component/calendar/calendar.component';
 import { CardComponent } from './component/card/card.component';
-import { Card1Component } from './component/card/deprecated/card1/card1.component';
-import { EventCardComponent } from './component/card/deprecated/event-card/event-card.component';
 import { EmployeeCardComponent } from './component/card/employee-card/employee-card.component';
 import { PolicyCardComponent } from './component/card/policy-card/policy-card.component';
 import { PresentationCardComponent } from './component/card/presentation-card/presentation-card.component';
@@ -92,6 +90,7 @@ import { CallbackPageComponent } from './page/splash-layout/callback-page/callba
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 import { EventButtonComponent } from './component/button/event-button/event-button.component';
+import { EventCardComponent } from './component/card/event-card/event-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -115,7 +114,6 @@ FullCalendarModule.registerPlugins( [
     DashboardLayoutSideNavComponent,
     BottomNavComponent,
     FooterComponent,
-    Card1Component,
     SplashLayoutComponent,
     CallbackPageComponent,
     LabelDataComponent,
@@ -126,7 +124,6 @@ FullCalendarModule.registerPlugins( [
     MaintenancePageComponent,
     CookiePopupComponent,
     CreateEventPageComponent,
-    EventCardComponent,
     CookiePolicyPageComponent,
     PrivacyPolicyPageComponent,
     TermsPageComponent,
@@ -171,6 +168,7 @@ FullCalendarModule.registerPlugins( [
     PresentationCardComponent,
     HeroComponent,
     EventButtonComponent,
+    EventCardComponent,
   ],
   imports: [
     BrowserModule,

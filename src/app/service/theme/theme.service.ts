@@ -72,7 +72,7 @@ export class ThemeService {
 
     this.brand.brandLogo = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png';
     this.brand.brandLogoBroken = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-broken.png';
-    this.brand.brandLogoMerge = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-merge.gif';
+    this.brand.brandLogoMerge = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo-merge.gif';
     this.brand.brandLogoMerged = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-merged.png';
 
     this.brand.badges.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-light-mode.min.png' );

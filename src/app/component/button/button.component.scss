@@ -1,4 +1,6 @@
 @use '../../../styles/util/util';
+@use '../../../styles/social/social';
+@use '../../../styles/information/information';
 
 @mixin default-button {
   @include util.flex-layout-row;
@@ -56,97 +58,19 @@
     @include util.default-shadow;
   }
 
-  // Todo: generate there via scss function with interpolation. Check information.scss for examples
-  &.information-button.error {
-    background-color: var(--error);
-  }
-
-  &.information-button.warning {
-    background-color: var(--warning);
-  }
-
-  &.information-button.success {
-    background-color: var(--success);
-  }
-
-  &.information-button.info {
+  &.information-button {
     background-color: var(--info);
   }
 
   &.brand-button {
     background-color: var(--social);
 
+    &.just-icon {
+      min-width: 50px;
+    }
+
     & .content {
       color: white;
-    }
-
-    // Todo: generate there via scss function with interpolation. Check information.scss for examples
-    &.twitter {
-      --social: var(--twitter);
-    }
-
-    &.google {
-      --social: var(--google);
-    }
-
-    &.facebook-f {
-      --social: var(--facebook);
-    }
-
-    &.linkedin-in {
-      --social: var(--linkedin);
-    }
-
-    &.vk {
-      --social: var(--vk);
-    }
-
-    &.twitch {
-      --social: var(--twitch);
-    }
-
-    &.dribbble {
-      --social: var(--dribbble);
-    }
-
-    &.reddit-alien {
-      --social: var(--reddit);
-    }
-
-    &.pinterest {
-      --social: var(--pinterest);
-    }
-
-    &.yandex {
-      --social: var(--yandex);
-    }
-
-    &.github {
-      --social: var(--github);
-    }
-
-    &.stripe-s {
-      --social: var(--stripe);
-    }
-
-    &.coinbase {
-      --social: var(--coinbase);
-    }
-
-    &.paypal {
-      --social: var(--paypal);
-    }
-
-    &.buymeacoffee {
-      --social: var(--buymeacoffee);
-    }
-
-    &.patreon {
-      --social: var(--patreon);
-    }
-
-    &.product-hunt {
-      --social: var(--product-hunt);
     }
   }
 
@@ -154,16 +78,49 @@
     background-color: transparent;
   }
 
-  // Borders And Font Colors
-  &.border-and-font {
-    border: 1px solid var(--success);
-    color: var(--theme-color);
-    border-color: var(--theme-color);
+  // Borders
+  $border-colors: (
+    "lighter-contrast": var(--lighter-contrast)
+  );
+  @each $border-color-name, $border-color in $border-colors {
+    &.#{$border-color-name}-border-color {
+      border: 1px solid #{$border-color};
+    }
+  }
+
+  // Font Colors
+  $font-colors: (
+    "lighter-contrast": var(--lighter-contrast),
+    "whitesmoke": whitesmoke
+  );
+  @each $font-color-name, $font-color in $font-colors {
+    &.#{$font-color-name}-font-color .content {
+      color: #{$font-color};
+    }
+  }
+
+  // Background Colors
+  $background-colors: (
+    "theme-color-lighter-4": var(--theme-color-lighter-4)
+  );
+  @each $background-color-name, $background-color in $background-colors {
+    &.#{$background-color-name}-background-color {
+      background-color: #{$background-color};
+    }
   }
 
   // Shadows
   &.selected-button-shadow {
     @include selected-button-shadow;
+  }
+
+  &.no-shadow-box {
+    box-shadow: initial;
+  }
+
+  // Cursor
+  &.cursor-not-allowed {
+    cursor: not-allowed;
   }
 
   // Dark Light Themes

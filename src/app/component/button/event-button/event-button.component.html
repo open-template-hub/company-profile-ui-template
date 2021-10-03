@@ -1,0 +1,9 @@
+<app-button [buttonClasses]="['event-button', eventTypes[eventType] ? eventTypes[eventType] : '']"
+            [iconTemplate]="iconTemplate" [text]="text"
+            class="event-button">
+  <ng-template #iconTemplate>
+    <i *ngIf="icon" [class]="'fas fa-' + icon + ' fa-lg fa-fw '" aria-hidden="true" class="icon"></i>
+  </ng-template>
+</app-button>
+
+

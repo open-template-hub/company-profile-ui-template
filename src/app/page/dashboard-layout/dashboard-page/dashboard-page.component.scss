@@ -1,75 +1,108 @@
-.interest-list app-label-with-icon-data {
-  margin: 5px;
-  min-width: -webkit-fit-content;
-  display: flex;
-  align-items: center;
-}
+.dashboard-page {
+  & app-card {
+    & .content-column-wrapper {
+      & .rate-badge-wrapper {
+        position: absolute;
+        top: 45px;
+        left: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-.interest-list {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  flex-wrap: wrap;
-}
+        & label {
+          font-size: 1.5em;
+        }
+      }
 
-.follower-following-count-area {
-  display: flex;
-  margin-top: 0.7em;
-  margin-left: 0.4em;
-  font-weight: 300;
-  color: var(--color);
-  flex-wrap: wrap;
-}
+      & .column-first {
+        & .section-output {
+          & .follower-following-count-area {
+            display: flex;
+            margin-top: 0.7em;
+            margin-left: 0.4em;
+            font-weight: 300;
+            color: var(--color);
+            flex-wrap: wrap;
 
-.follower-count-area, .following-count-area {
-  margin-right: 20px;
-}
+            & .follower-count-area {
+              margin-right: 20px;
+              & .follower-count {
+                font-style: normal;
+                color: var(--theme-color);
+              }
+            }
 
-.follower-count, .following-count, .event-count {
-  font-style: normal;
-  color: var(--theme-color);
-}
+            & .following-count-area {
+              margin-right: 20px;
+              & .following-count {
+                font-style: normal;
+                color: var(--theme-color);
+              }
+            }
 
-.dashboard-page-events {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
+            & .event-count-area {
+              & .event-count {
+                font-style: normal;
+                color: var(--theme-color);
+              }
+            }
+          }
+        }
+      }
 
-.rate-badge-wrapper {
-  position: absolute;
-  top: 45px;
-  left: 26px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      & .column-second {
+        & .interest-list {
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          position: relative;
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+          flex-wrap: wrap;
 
-.rate-badge-wrapper label {
-  font-size: 1.5em;
-}
+          & app-label-with-icon-data {
+            margin: 5px;
+            min-width: -webkit-fit-content;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
 
-.rate-wrapper {
-  display: flex;
-  margin-right: 30px;
+  & .dashboard-page-events {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
 }
 
 @media only screen and (min-width: 1300px) {
-  app-card1 .content-column-wrapper {
-    display: flex;
-    flex-direction: row;
-  }
+  .dashboard-page {
+    & app-card {
+      &.bigger-card:hover {
+        transform: scale(1.15);
 
-  app-card1 .column-second {
-    display: flex;
-    flex-direction: column;
-    max-width: 40%;
+        &:hover {
+          transform: scale(1.18);
+        }
+      }
+
+      & .content-column-wrapper {
+        display: flex;
+        flex-direction: row;
+
+        & .column-second {
+          display: flex;
+          flex-direction: column;
+          max-width: 40%;
+        }
+      }
+    }
   }
 }
 
@@ -78,42 +111,31 @@
     display: block;
     align-items: center;
     padding-top: 110px;
-  }
 
-  .dashboard-page app-card1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+    & app-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-  app-card1 .column-first {
-    display: flex;
-    flex-direction: column;
-  }
+      & .content-column-wrapper {
+        & .column-first {
+          display: flex;
+          flex-direction: column;
+          width: -webkit-fill-available;
+        }
 
-  app-card1 .img-wrapper {
-    padding-bottom: 0.5em;
-    margin-bottom: 1.5em;
-    margin-top: 0.5em;
-    margin-left: 1.1em;
-    overflow-x: auto;
-    text-align: left;
-    flex-direction: row;
-    box-sizing: border-box;
-    display: flex;
-    place-content: center flex-start;
-    align-items: center;
-  }
+        & .column-second {
+          width: -webkit-fill-available;
 
-  app-card1 .column-first, app-card1 .column-second {
-    width: -webkit-fill-available;
-  }
-
-  .interest-list {
-    flex-direction: row;
-    place-content: center flex-start;
-    align-items: center;
+          & .interest-list {
+            flex-direction: row;
+            place-content: center flex-start;
+            align-items: center;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -124,48 +146,52 @@
     justify-content: center;
     align-items: center;
     padding-top: 85px;
-  }
 
-  .dashboard-page app-card1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    & app-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-  app-card1 .img-wrapper {
-    margin-bottom: 1.5em;
-    margin-top: 0.5em;
-    overflow-x: auto;
-    text-align: center;
-    flex-direction: column;
-    box-sizing: border-box;
-    display: flex;
-    place-content: center;
-    align-items: center;
-  }
+      & .content-column-wrapper {
+        & .rate-badge-wrapper {
+          left: 0;
+          width: 100%;
+          display: block;
 
-  .interest-list {
-    flex-direction: column;
-    place-content: flex-start;
-  }
+          & .badge-area {
+            padding-top: 5px;
+            margin-left: initial;
+            text-align: center;
+          }
 
-  .rate-badge-wrapper label {
-    font-size: 1.4em;
-  }
+          & label {
+            font-size: 1.4em;
+          }
+        }
 
-  .rate-badge-wrapper {
-    left: 0;
-    width: 100%;
-    display: block;
-  }
+        & .column-first {
+          &.with-rate {
+            margin-top: 30px;
+          }
+        }
 
-  .column-first.with-rate {
-    margin-top: 30px;
+        & .column-second {
+          & .interest-list {
+            flex-direction: column;
+            place-content: flex-start;
+          }
+        }
+      }
+    }
   }
+}
 
-  .badge-area {
-    padding-top: 5px;
-    margin-left: initial;
-    text-align: center;
+app-event-card {
+  &.bigger-card:hover {
+    transform: scale(1.15);
+
+    &:hover {
+      transform: scale(1.18);
+    }
   }
 }

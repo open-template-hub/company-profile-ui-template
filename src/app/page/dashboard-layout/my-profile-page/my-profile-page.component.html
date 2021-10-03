@@ -1,6 +1,5 @@
 <div class="my-profile-page">
   <!--MY PROFILE CARD-->
-  <!-- Todo: Create new card and replace it-->
   <app-card [headerTemplate]="header" [bodyTemplate]="body">
     <ng-template #header>
       <img *ngIf="profileImg" [src]="profileImg" alt="wallpaper" style="width: 150px; height: 150px; margin-top: -100px;">
@@ -104,7 +103,6 @@
   </app-card>
   <!--END OF DASHBOARD CARD-->
   <!--LESSONS TAKEN CARD-->
-  <!-- TODO: Create new card and replace it-->
   <app-card *ngIf="lessonsInfo.length > 0" [headerTemplate]="header" [bodyTemplate]="body">
     <ng-template #header>
       <p>Lessons Taken</p>

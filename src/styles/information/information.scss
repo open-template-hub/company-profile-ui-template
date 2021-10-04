@@ -1,15 +1,15 @@
 $information-colors-light-mode: (
-  "success": #228b22,
+  "success": #2bb22b,
   "error": #e23237,
-  "warning": #d28f29,
-  "info": #5c98cd
+  "warning": #e8a830,
+  "info": #579edc
 );
 
 $information-colors-dark-mode: (
-  "success": #398039,
+  "success": #40b940,
   "error": #e04e52,
-  "warning": #cda05c,
-  "info": #3d79ac
+  "warning": #e7b049,
+  "info": #6aa7dc
 );
 
 :root {
@@ -22,9 +22,9 @@ $information-colors-dark-mode: (
   }
 }
 
-.light-theme {
+:root, .light-theme {
   @each $info, $color in $information-colors-light-mode {
-    --#{$info}: var(--#{$color}-light-mode);
+    --#{$info}: var(--#{$info}-light-mode);
   }
 }
 

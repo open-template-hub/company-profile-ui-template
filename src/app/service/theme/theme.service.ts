@@ -71,7 +71,7 @@ export class ThemeService {
     this.sideNavClosed = this.sideNavClosedSubject.asObservable();
 
     this.brand.brandLogo = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png';
-    this.brand.brandLogoBroken = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-broken.png';
+    this.brand.brandLogoBroken = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-broken.min.png';
     this.brand.brandLogoMerge = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo-merge.gif';
     this.brand.brandLogoMerged = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-merged.png';
 

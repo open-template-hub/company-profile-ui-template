@@ -79,8 +79,12 @@
       <div class="pricing-plan-wrapper">
         <app-price-plan
             [productLineKey]="productLineKey"
-            [product]="product"
-        ></app-price-plan>
+            [product]="product">
+        </app-price-plan>
+      </div>
+      <div class="activity-history-wrapper">
+        <app-activity-history-card *ngIf="product.openSource" [title]="'Activity history'" [activities]="commitActivities">
+        </app-activity-history-card>
       </div>
 
       <!-- Related Products -->
@@ -90,11 +94,13 @@
           <ng-container
               *ngIf="productLineKey === 'premium' ? productLine.key === 'servers' : (productLine.key === productLineKey || productLine.key === 'premium')">
             <ng-container *ngFor="let relatedProduct of productLine.products">
-              <app-presentation-card *ngIf="product.key !== relatedProduct.key" [class]="relatedProduct.color ? relatedProduct.color : ''"
+              <app-presentation-card *ngIf="product.key !== relatedProduct.key"
+                                     [class]="relatedProduct.color ? relatedProduct.color : ''"
                                      [footerText]="relatedProduct.openSource ? '#opensource' : '#premium'"
                                      [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
                                      [imgHeight]="150"
-                                     [presentationItemClass]="'product-item'" [secondaryText]="relatedProduct.description"
+                                     [presentationItemClass]="'product-item'"
+                                     [secondaryText]="relatedProduct.description"
                                      [src]="relatedProduct.logo" [title]="relatedProduct.name"
                                      class="related-product"></app-presentation-card>
             </ng-container>

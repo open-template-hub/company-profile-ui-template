@@ -1,0 +1,9 @@
+<div class="activity-history">
+  <p class="title">{{ title }}</p>
+  <div class="activity-content">
+    <ng-container *ngFor="let j of days">
+      <div class="day" [class]="getDayClass(j)">
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -5,8 +5,8 @@ import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
 import { GithubProviderService } from 'src/app/service/provider/github-provider.service';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
-import { PARTNERS } from '../../../data/partner/partner.data';
 import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
+import { Activity } from '../../../model/activity/activity.model';
 import { Product, ProductLine } from '../../../model/product/product.model';
 import { ProductService } from '../../../service/product/product.service';
 
@@ -18,9 +18,9 @@ import { ProductService } from '../../../service/product/product.service';
 export class ProductPageComponent implements OnInit, OnDestroy {
   URLS = URLS;
   TESTIMONIALS = TESTIMONIALS;
-  PARTNERS = PARTNERS;
 
   environmentCommon = environmentCommon;
+  commitActivities: Activity[] = [];
 
   PRODUCT_LINES = PRODUCT_LINES;
 
@@ -35,6 +35,64 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       private githubService: GithubProviderService,
       private productService: ProductService,
   ) {
+
+    // Todo: fill this dynamically from github for open source projects
+    const date = new Date();
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 6, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 6, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 5, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 1, 14, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 2, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 2, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 2, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 2, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 2, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 6, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( { type: 'commit', payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22', date } );
+    this.commitActivities.push( { type: 'commit', payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22', date } );
+    this.commitActivities.push( { type: 'commit', payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22', date } );
+    this.commitActivities.push( { type: 'commit', payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22', date } );
+    this.commitActivities.push( { type: 'commit', payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22', date } );
   }
 
   ngOnInit(): void {

@@ -1,0 +1,71 @@
+@use '../../../styles/util/util';
+
+.activity-history {
+  @include util.flex-layout-column;
+  @include util.default-shadow;
+  @include util.margin-x-auto;
+
+  align-items: flex-start;
+
+  background-color: var(--card);
+  border-radius: 4px;
+
+  & p {
+    color: var(--color);
+    font-size: 19px;
+    margin-bottom: 15px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid var(--theme-color-lighter-5);
+  }
+
+  max-width: calc(calc(20px * 52) + 20px);
+  padding: 20px;
+
+  overflow-x: auto;
+
+  & .activity-content {
+    @include util.flex-layout-column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    width: calc(20px * 52);
+    height: calc(20px * 7);
+
+    & .day {
+      box-sizing: border-box;
+      margin: 1px;
+
+      border-radius: 4px;
+
+      width: 18px;
+      height: 18px;
+
+      background-color: var(--darker-contrast);
+      border: 1px solid var(--contrast);
+
+      &.number-of-activity-4 {
+        background-color: var(--theme-color-lighter-2);
+        border-color: var(--theme-color);
+      }
+
+      &.number-of-activity-3 {
+        background-color: var(--theme-color-lighter-3);
+        border-color: var(--theme-color-lighter-2);
+      }
+
+      &.number-of-activity-2 {
+        background-color: var(--theme-color-lighter-6);
+        border-color: var(--theme-color-lighter-5);
+      }
+
+      &.number-of-activity-1 {
+        background-color: var(--theme-color-lighter-8);
+        border-color: var(--theme-color-lighter-7);
+      }
+    }
+  }
+}

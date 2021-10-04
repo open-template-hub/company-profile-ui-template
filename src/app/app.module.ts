@@ -91,6 +91,7 @@ import { ExternalRedirectPageComponent } from './page/splash-layout/external-red
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 import { EventButtonComponent } from './component/button/event-button/event-button.component';
 import { EventCardComponent } from './component/card/event-card/event-card.component';
+import { ActivityHistoryComponent } from './component/activity-history/activity-history.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -169,6 +170,7 @@ FullCalendarModule.registerPlugins( [
     HeroComponent,
     EventButtonComponent,
     EventCardComponent,
+    ActivityHistoryComponent,
   ],
   imports: [
     BrowserModule,

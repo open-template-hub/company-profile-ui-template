@@ -51,6 +51,81 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     this.commitActivities.push( {
       type: 'commit',
       payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 6, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 6, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2020, 11, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2020, 11, 14, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2020, 11, 14, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2020, 11, 14, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2020, 11, 14, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2020, 11, 14, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2020, 11, 14, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2020, 11, 14, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2020, 11, 14, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2020, 11, 13, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2020, 11, 12, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 6, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
+      date: new Date( 2021, 6, 15, 12, 10, 0 )
+    } );
+    this.commitActivities.push( {
+      type: 'commit',
+      payload: 'e82c868c324a76216ca84f0e407ae4f2e2b62d22',
       date: new Date( 2021, 5, 15, 12, 10, 0 )
     } );
     this.commitActivities.push( {

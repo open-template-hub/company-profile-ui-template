@@ -125,6 +125,10 @@ app-swiper-wrapper {
   padding-bottom: 50px;
 }
 
+.activity-history-wrapper {
+  max-width: 92vw;
+}
+
 .testimonials-header {
   @include util.flex-layout-column;
   @include util.flex-center-center;
@@ -204,11 +208,14 @@ app-swiper-wrapper {
     text-align: center;
   }
 
-  .pricing-plan-wrapper {
+  .pricing-plan-wrapper, .activity-history-wrapper {
+    width: 94vw;
+
     & > * {
-      width: 94%;
+      width: 94vw;
     }
   }
+
 
   .testimonials-wrapper {
     font-size: 18px;
@@ -316,4 +323,3 @@ app-swiper-wrapper {
     }
   }
 }
-

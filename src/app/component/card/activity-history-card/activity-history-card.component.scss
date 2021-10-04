@@ -1,0 +1,101 @@
+@use '../../../../styles/util/util';
+@use '../card.component';
+
+.activity-history-card {
+
+  & .header {
+    @include card.default-header;
+
+    align-items: flex-start;
+
+    color: var(--color);
+    font-size: 19px;
+    box-shadow: none;
+
+    & p {
+      margin-left: 15px;
+      padding-bottom: 3px;
+      border-bottom: 2px solid var(--theme-color-lighter-5);
+    }
+  }
+
+  & .body {
+    @include card.default-body;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    overflow-x: auto;
+
+    & .activity-content {
+      @include util.flex-layout-column;
+
+      align-items: center;
+      justify-content: flex-start;
+
+      flex-wrap: wrap;
+      box-sizing: border-box;
+
+      height: calc(20px * 7);
+
+      & .day {
+        box-sizing: border-box;
+        margin: 1px;
+
+        border-radius: 4px;
+
+        width: 18px;
+        height: 18px;
+
+        background-color: var(--darker-contrast);
+        border: 1px solid var(--contrast);
+
+        &.number-of-activity-4 {
+          background-color: var(--theme-color-lighter-2);
+          border-color: var(--theme-color);
+        }
+
+        &.number-of-activity-3 {
+          background-color: var(--theme-color-lighter-3);
+          border-color: var(--theme-color-lighter-2);
+        }
+
+        &.number-of-activity-2 {
+          background-color: var(--theme-color-lighter-6);
+          border-color: var(--theme-color-lighter-5);
+        }
+
+        &.number-of-activity-1 {
+          background-color: var(--theme-color-lighter-8);
+          border-color: var(--theme-color-lighter-7);
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 999px) {
+  .activity-history-card {
+
+    & .body {
+      & .activity-content {
+        max-width: calc(20px * 53);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .activity-history-card {
+    & .body {
+
+      & .activity-content {
+        width: calc(20px * 53);
+      }
+    }
+  }
+}

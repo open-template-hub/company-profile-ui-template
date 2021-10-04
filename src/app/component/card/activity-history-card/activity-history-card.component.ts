@@ -1,12 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Activity } from '../../model/activity/activity.model';
+import { Activity } from '../../../model/activity/activity.model';
 
 @Component( {
-  selector: 'app-activity-history',
-  templateUrl: './activity-history.component.html',
-  styleUrls: [ './activity-history.component.scss' ]
+  selector: 'app-activity-history-card',
+  templateUrl: './activity-history-card.component.html',
+  styleUrls: [ './activity-history-card.component.scss' ]
 } )
-export class ActivityHistoryComponent implements OnInit {
+export class ActivityHistoryCardComponent implements OnInit {
 
   @Input() title: string;
   @Input() activities: Activity[] = [];
@@ -23,14 +23,14 @@ export class ActivityHistoryComponent implements OnInit {
   ngOnInit(): void {
     const today = new Date( new Date().toISOString().split( 'T' )[ 0 ] );
 
-    this.activities.map( activity => {
+    for ( const activity of this.activities ) {
       const dateStr = activity.date.toISOString().split( 'T' )[ 0 ];
       if ( this.activitySumByDate.has( dateStr ) ) {
         this.activitySumByDate.set( dateStr, this.activitySumByDate.get( dateStr ) + 1 );
       } else {
         this.activitySumByDate.set( dateStr, 1 );
       }
-    } );
+    }
 
     for ( const activitySum of this.activitySumByDate ) {
 

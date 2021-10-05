@@ -54,17 +54,17 @@ var exposedRoutemap = [
   },
 ];
 
-function getSitemap(url, routes) {
-  var sitemap = '';
+function getSitemap(path, routes) {
+  var sitemapStr = '';
   routes.forEach((r) => {
-    var nUrl = url + r.path;
-    sitemap +=
+    var nUrl = path + r.path;
+    sitemapStr +=
       '<url><loc>' + nUrl + '</loc><lastmod>2021-09-30</lastmod></url>';
     if (r.children && r.children.length > 0) {
-      sitemap += getSitemap(nUrl, r.children);
+      sitemapStr += getSitemap(nUrl, r.children);
     }
   });
-  return sitemap;
+  return sitemapStr;
 }
 
 var sitemap =

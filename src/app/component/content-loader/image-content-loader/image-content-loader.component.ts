@@ -8,8 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ImageContentLoaderComponent implements OnInit {
   @Input() size: string;
 
-  constructor() {}
+  constructor() {
+    /* Intentionally blank */
+  }
 
   ngOnInit(): void {
+    /* Intentionally blank */
   }
 }

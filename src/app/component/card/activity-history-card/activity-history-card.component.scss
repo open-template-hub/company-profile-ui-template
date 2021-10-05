@@ -13,7 +13,8 @@
     box-shadow: none;
 
     & p {
-      margin-left: 15px;
+      margin-top: 5px;
+      margin-left: 25px;
       padding-bottom: 3px;
       border-bottom: 2px solid var(--theme-color-lighter-5);
     }
@@ -51,21 +52,21 @@
         height: 18px;
 
         background-color: var(--darker-contrast);
-        border: 1px solid var(--contrast);
+        border: 1px solid var(--shadow-lighter);
 
         &.number-of-activity-4 {
-          background-color: var(--theme-color-lighter-2);
+          background-color: var(--theme-color-lighter-3);
           border-color: var(--theme-color);
         }
 
         &.number-of-activity-3 {
-          background-color: var(--theme-color-lighter-3);
-          border-color: var(--theme-color-lighter-2);
+          background-color: var(--theme-color-lighter-5);
+          border-color: var(--theme-color-lighter-3);
         }
 
         &.number-of-activity-2 {
-          background-color: var(--theme-color-lighter-6);
-          border-color: var(--theme-color-lighter-5);
+          background-color: var(--theme-color-lighter-7);
+          border-color: var(--theme-color-lighter-6);
         }
 
         &.number-of-activity-1 {

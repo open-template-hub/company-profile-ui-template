@@ -46,13 +46,13 @@ export class ActivityHistoryCardComponent implements OnInit {
   getDayClass( numberOfActivity?: number ) {
     if ( !numberOfActivity ) {
       return '';
-    } else if ( numberOfActivity >= 50 ) {
-      return 'number-of-activity-4';
-    } else if ( numberOfActivity >= 20 ) {
-      return 'number-of-activity-3';
     } else if ( numberOfActivity >= 5 ) {
+      return 'number-of-activity-4';
+    } else if ( numberOfActivity >= 4 ) {
+      return 'number-of-activity-3';
+    } else if ( numberOfActivity >= 2 ) {
       return 'number-of-activity-2';
-    } else if ( numberOfActivity >= 0 ) {
+    } else if ( numberOfActivity >= 1 ) {
       return 'number-of-activity-1';
     }
   }

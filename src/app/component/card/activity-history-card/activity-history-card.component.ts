@@ -13,7 +13,6 @@ export class ActivityHistoryCardComponent implements OnChanges {
 
   activitySumByDate: Map<string, number> = new Map();
 
-  weeks;
   days;
 
   constructor() {
@@ -34,8 +33,10 @@ export class ActivityHistoryCardComponent implements OnChanges {
     }
   }
 
+
   ngOnChanges( changes: SimpleChanges ): void {
     this.activitySumByDate = new Map();
+    this.days = new Array( 365 );
 
     const today = new Date( new Date().toISOString().split( 'T' )[ 0 ] );
 

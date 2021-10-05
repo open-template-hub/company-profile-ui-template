@@ -54,12 +54,14 @@ var exposedRoutemap = [
   },
 ];
 
+var today = new Date().toISOString().split('T')[0];
+
 function getSitemap(path, routes) {
   var sitemapStr = '';
   routes.forEach((r) => {
     var nUrl = path + r.path;
     sitemapStr +=
-      '<url><loc>' + nUrl + '</loc><lastmod>2021-09-30</lastmod></url>';
+      '<url><loc>' + nUrl + '</loc><lastmod>' + today + '</lastmod></url>';
     if (r.children && r.children.length > 0) {
       sitemapStr += getSitemap(nUrl, r.children);
     }

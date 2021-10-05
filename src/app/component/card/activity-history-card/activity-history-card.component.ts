@@ -35,6 +35,7 @@ export class ActivityHistoryCardComponent implements OnChanges {
   }
 
   ngOnChanges( changes: SimpleChanges ): void {
+    this.activitySumByDate = new Map();
 
     const today = new Date( new Date().toISOString().split( 'T' )[ 0 ] );
 

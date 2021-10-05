@@ -1,5 +1,6 @@
 @use '../../../../styles/util/util';
 @use '../card.component';
+@use '../../color-chart/color-chart.component';
 
 .activity-history-card {
 
@@ -14,7 +15,7 @@
 
     & p {
       margin-top: 5px;
-      margin-left: 25px;
+      margin-left: 20px;
       padding-bottom: 3px;
       border-bottom: 2px solid var(--theme-color-lighter-5);
     }
@@ -31,6 +32,8 @@
     margin-top: 10px;
     overflow-x: auto;
 
+    min-height: 160px;
+
     & .activity-content {
       @include util.flex-layout-column;
 
@@ -43,41 +46,19 @@
       height: calc(20px * 7);
 
       & .day {
-        box-sizing: border-box;
-        margin: 1px;
-
-        border-radius: 4px;
-
-        width: 18px;
-        height: 18px;
-
-        background-color: var(--darker-contrast);
-        border: 1px solid var(--shadow-lighter);
-
-        &.number-of-activity-4 {
-          background-color: var(--theme-color-lighter-3);
-          border-color: var(--theme-color);
-        }
-
-        &.number-of-activity-3 {
-          background-color: var(--theme-color-lighter-5);
-          border-color: var(--theme-color-lighter-3);
-        }
-
-        &.number-of-activity-2 {
-          background-color: var(--theme-color-lighter-7);
-          border-color: var(--theme-color-lighter-6);
-        }
-
-        &.number-of-activity-1 {
-          background-color: var(--theme-color-lighter-8);
-          border-color: var(--theme-color-lighter-7);
-        }
+        @include color-chart.default-chart-item;
       }
     }
   }
-}
 
+  & .footer {
+    @include card.default-footer;
+
+    padding: 0 20px;
+
+    align-items: flex-end;
+  }
+}
 
 @media only screen and (max-width: 999px) {
   .activity-history-card {

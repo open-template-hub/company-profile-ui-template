@@ -43,17 +43,17 @@ export class ActivityHistoryCardComponent implements OnInit {
     }
   }
 
-  getDayClass( numberOfActivity?: number ) {
-    if ( !numberOfActivity ) {
+  getChartItemClass( numberOfActivities?: number ) {
+    if ( !numberOfActivities ) {
       return '';
-    } else if ( numberOfActivity >= 5 ) {
-      return 'number-of-activity-4';
-    } else if ( numberOfActivity >= 4 ) {
-      return 'number-of-activity-3';
-    } else if ( numberOfActivity >= 2 ) {
-      return 'number-of-activity-2';
-    } else if ( numberOfActivity >= 1 ) {
-      return 'number-of-activity-1';
+    } else if ( numberOfActivities >= 5 ) {
+      return 'level-4';
+    } else if ( numberOfActivities >= 4 ) {
+      return 'level-3';
+    } else if ( numberOfActivities >= 2 ) {
+      return 'level-2';
+    } else if ( numberOfActivities >= 1 ) {
+      return 'level-1';
     }
   }
 }

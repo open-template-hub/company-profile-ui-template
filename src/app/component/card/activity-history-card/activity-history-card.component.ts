@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Activity } from '../../../model/activity/activity.model';
 
 @Component( {
@@ -6,7 +6,7 @@ import { Activity } from '../../../model/activity/activity.model';
   templateUrl: './activity-history-card.component.html',
   styleUrls: [ './activity-history-card.component.scss' ]
 } )
-export class ActivityHistoryCardComponent implements OnInit {
+export class ActivityHistoryCardComponent implements OnChanges {
 
   @Input() title: string;
   @Input() activities: Activity[] = [];
@@ -20,7 +20,23 @@ export class ActivityHistoryCardComponent implements OnInit {
     this.days = Array( 365 );
   }
 
-  ngOnInit(): void {
+  getChartItemClass( numberOfActivities?: number ) {
+    if ( !numberOfActivities ) {
+      return '';
+    } else if ( numberOfActivities >= 5 ) {
+      return 'level-4';
+    } else if ( numberOfActivities >= 4 ) {
+      return 'level-3';
+    } else if ( numberOfActivities >= 2 ) {
+      return 'level-2';
+    } else if ( numberOfActivities >= 1 ) {
+      return 'level-1';
+    }
+  }
+
+  ngOnChanges( changes: SimpleChanges ): void {
+    console.log( this.activities );
+
     const today = new Date( new Date().toISOString().split( 'T' )[ 0 ] );
 
     for ( const activity of this.activities ) {
@@ -40,20 +56,6 @@ export class ActivityHistoryCardComponent implements OnInit {
       const diffDays = Math.ceil( diff / ( 1000 * 3600 * 24 ) );
 
       this.days[ 364 - diffDays ] = activitySum[ 1 ];
-    }
-  }
-
-  getChartItemClass( numberOfActivities?: number ) {
-    if ( !numberOfActivities ) {
-      return '';
-    } else if ( numberOfActivities >= 5 ) {
-      return 'level-4';
-    } else if ( numberOfActivities >= 4 ) {
-      return 'level-3';
-    } else if ( numberOfActivities >= 2 ) {
-      return 'level-2';
-    } else if ( numberOfActivities >= 1 ) {
-      return 'level-1';
     }
   }
 }

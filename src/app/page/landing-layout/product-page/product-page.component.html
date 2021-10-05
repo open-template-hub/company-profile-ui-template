@@ -82,7 +82,7 @@
             [product]="product">
         </app-price-plan>
       </div>
-      <div class="activity-history-wrapper">
+      <div class="activity-history-wrapper" *ngIf="commitActivities.length > 0">
         <app-activity-history-card *ngIf="product.openSource" [title]="'Activity history'" [activities]="commitActivities">
         </app-activity-history-card>
       </div>

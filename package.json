@@ -11,6 +11,7 @@
     "e2e": "ng e2e",
     "heroku-postbuild": "bash heroku.sh",
     "lint": "ng lint",
+    "sitemap": "node src/sitemap-generator.ts > seo/sitemap.xml",
     "ng": "ng",
     "startLocal": "node src/version-generator.ts > ./src/environments/version.ts && ng serve --configuration=local",
     "startLocalFromIPhone": "node src/version-generator.ts > ./src/environments/version.ts && ng serve --configuration=local --host 0.0.0.0 --disable-host-check true",

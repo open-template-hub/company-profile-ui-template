@@ -92,6 +92,8 @@ import { SplashLayoutComponent } from './page/splash-layout/splash-layout.compon
 import { EventButtonComponent } from './component/button/event-button/event-button.component';
 import { EventCardComponent } from './component/card/event-card/event-card.component';
 import { ActivityHistoryCardComponent } from './component/card/activity-history-card/activity-history-card.component';
+import { ContentLoaderComponent } from './component/content-loader/content-loader.component';
+import { ImageContentLoaderComponent } from './component/content-loader/image-content-loader/image-content-loader.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -171,6 +173,8 @@ FullCalendarModule.registerPlugins( [
     EventButtonComponent,
     EventCardComponent,
     ActivityHistoryCardComponent,
+    ContentLoaderComponent,
+    ImageContentLoaderComponent,
   ],
   imports: [
     BrowserModule,

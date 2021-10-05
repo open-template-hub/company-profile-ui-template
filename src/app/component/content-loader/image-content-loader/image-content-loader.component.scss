@@ -1,0 +1,25 @@
+.image {
+  @mixin defaultBackground {
+    background: linear-gradient(
+      to right,
+      var(--theme-color-lighter-3) 50%,
+      var(--theme-color-lighter-6) 50%
+    );
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+
+  @keyframes animateColor {
+    from {
+      @include defaultBackground();
+      transition: all 0.5s ease-out;
+    }
+    to {
+      background-position: left bottom;
+    }
+  }
+
+  @include defaultBackground();
+
+  animation: animateColor 2s infinite;
+}

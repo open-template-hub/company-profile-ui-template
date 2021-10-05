@@ -12,7 +12,7 @@ export class CommandLineComponent implements OnInit {
   counter = 0;
 
   defaultCallback = () => {
-    console.log( 'Animation completed for ', this.commandLine.command );
+    // Intentionally blank
   };
 
   @Input() animationComplete?: any = this.defaultCallback;

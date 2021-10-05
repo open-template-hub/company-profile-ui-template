@@ -35,7 +35,6 @@ export class ActivityHistoryCardComponent implements OnChanges {
   }
 
   ngOnChanges( changes: SimpleChanges ): void {
-    console.log( this.activities );
 
     const today = new Date( new Date().toISOString().split( 'T' )[ 0 ] );
 

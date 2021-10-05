@@ -126,7 +126,7 @@ export class EventDataComponent implements OnInit {
 
     createEvent( event, ( error, value ) => {
           if ( error ) {
-            console.log( 'Error occurred while creating .ics file: ' + error );
+            console.error( 'Error occurred while creating .ics file: ' + error );
           } else {
             const blob = new Blob( [ value ], { type: 'text/calendar' } );
 

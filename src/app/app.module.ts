@@ -94,6 +94,8 @@ import { EventCardComponent } from './component/card/event-card/event-card.compo
 import { ActivityHistoryCardComponent } from './component/card/activity-history-card/activity-history-card.component';
 import { ContentLoaderComponent } from './component/content-loader/content-loader.component';
 import { ImageContentLoaderComponent } from './component/content-loader/image-content-loader/image-content-loader.component';
+import { TextContentLoaderComponent } from './component/content-loader/text-content-loader/text-content-loader.component';
+import { BoxContentLoaderComponent } from './component/content-loader/box-content-loader/box-content-loader.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -175,6 +177,8 @@ FullCalendarModule.registerPlugins( [
     ActivityHistoryCardComponent,
     ContentLoaderComponent,
     ImageContentLoaderComponent,
+    TextContentLoaderComponent,
+    BoxContentLoaderComponent,
   ],
   imports: [
     BrowserModule,

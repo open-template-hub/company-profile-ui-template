@@ -1,0 +1,10 @@
+@import '../../../../styles/loading/loading';
+
+.text {
+  @include default-background;
+
+  height: 10px;
+  border-radius: 5px;
+
+  animation: animate-color 2s infinite;
+}

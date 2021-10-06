@@ -26,6 +26,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   product: Product;
   productLineKey: string;
+  isOpenSource = false;
 
   emailControl = new FormControl( '' );
 
@@ -56,6 +57,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       let productLine: ProductLine = PRODUCT_LINES.find( ( p ) => p.key === params.productLine );
 
       let isService = false;
+      this.isOpenSource = false;
 
       if ( !productLine ) {
         productLine = SERVICES.find( ( p ) => p.key === params.productLine );
@@ -79,6 +81,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       }
 
       if ( !isService ) {
+        this.isOpenSource = true;
         this.githubService.getGithubCounters( product.key )
         .then( counters => {
           product.counters = counters;

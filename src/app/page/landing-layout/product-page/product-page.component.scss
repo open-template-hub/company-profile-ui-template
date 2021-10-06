@@ -32,6 +32,15 @@
   }
 }
 
+:host ::ng-deep app-box-content-loader app-content-loader .loader {
+  & .box-content {
+    height: 60px;
+    width: 160px;
+    margin-top: 10px;
+    margin-left: 60px;
+  }
+}
+
 .counter-wrapper {
   text-align: center;
   display: flex;
@@ -64,7 +73,6 @@
   width: 94%;
 
   & .left {
-
     & .header {
       padding: 20px;
 
@@ -116,7 +124,9 @@ app-swiper-wrapper {
   height: 200px;
 }
 
-.pricing-plan-wrapper, .activity-history-wrapper, .related-products-wrapper {
+.pricing-plan-wrapper,
+.activity-history-wrapper,
+.related-products-wrapper {
   padding-bottom: 50px;
 }
 
@@ -208,14 +218,14 @@ app-swiper-wrapper {
     text-align: center;
   }
 
-  .pricing-plan-wrapper, .activity-history-wrapper {
+  .pricing-plan-wrapper,
+  .activity-history-wrapper {
     width: 94vw;
 
     & > * {
       width: 94vw;
     }
   }
-
 
   .testimonials-wrapper {
     font-size: 18px;
@@ -237,7 +247,6 @@ app-swiper-wrapper {
 }
 
 @media only screen and (min-width: 1000px) {
-
   .intro {
     padding-top: 80px;
     padding-bottom: 50px;
@@ -248,7 +257,6 @@ app-swiper-wrapper {
       padding: 60px 60px 40px;
 
       & .button-wrapper {
-
         padding: 50px 50px 0;
         max-width: 450px;
       }

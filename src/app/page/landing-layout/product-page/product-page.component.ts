@@ -87,6 +87,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
           product.counters = counters;
         } )
         .catch( error => {
+          this.isOpenSource = false;
           console.error( 'Error while getting Github Counters for product: ', product.key, error );
         } );
       }

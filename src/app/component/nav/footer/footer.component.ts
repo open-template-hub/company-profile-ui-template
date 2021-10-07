@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
+import { BRAND } from '../../../data/brand/brand.data';
 import { URLS } from '../../../data/constant';
 import { ProductLine } from '../../../model/product/product.model';
 import { ThemeService } from '../../../service/theme/theme.service';
@@ -21,10 +22,7 @@ export class FooterComponent {
 
   PRODUCT_LINES: ProductLine[] = PRODUCT_LINES;
   SERVICES: ProductLine[] = SERVICES;
-
-  brand = {
-    brandLogo: '',
-  };
+  BRAND = BRAND;
 
   appVersion = '1.0.0';
 
@@ -32,10 +30,7 @@ export class FooterComponent {
   environmentCommon = environmentCommon;
   URLS = URLS;
 
-  constructor( private router: Router,
-      private themeService: ThemeService
-  ) {
-    this.brand = themeService.brand;
+  constructor( private router: Router, private themeService: ThemeService ) {
     this.appVersion = themeService.appVersion;
   }
 }

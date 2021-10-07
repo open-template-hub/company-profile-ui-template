@@ -6,7 +6,6 @@ import { BusinessLogicService } from '../../service/business-logic/business-logi
 import { CategoryService } from '../../service/category/category.service';
 import { EventService } from '../../service/event/event.service';
 import { InformationService } from '../../service/information/information.service';
-import { ThemeService } from '../../service/theme/theme.service';
 
 @Component( {
   selector: 'app-side-content',
@@ -25,7 +24,6 @@ export class SideContentComponent {
   maxNumberOfServiceCall = 1;
 
   constructor(
-      private themeService: ThemeService,
       private categoryService: CategoryService,
       private businessLogicService: BusinessLogicService,
       private eventService: EventService,

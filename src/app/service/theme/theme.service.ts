@@ -12,15 +12,8 @@ export class ThemeService {
   public darkLightSetting: Observable<string>;
   public themeColorSetting: Observable<string>;
   public sideNavClosed: Observable<string>;
-  public brand = {
-    brandLogo: '',
-    brandLogoBroken: '',
-    brandLogoMerge: '',
-    brandLogoMerged: '',
-    wallpapers: [],
-    badges: []
-  };
-  colors = [
+
+  private colors = [
     '--theme-color',
     '--theme-color-lighter-1',
     '--theme-color-lighter-2',
@@ -69,22 +62,6 @@ export class ThemeService {
 
     this.sideNavClosedSubject = new BehaviorSubject<string>( sideNavClosedStorageItem );
     this.sideNavClosed = this.sideNavClosedSubject.asObservable();
-
-    this.brand.brandLogo = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png';
-    this.brand.brandLogoBroken = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-broken.min.png';
-    this.brand.brandLogoMerge = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo-merge.gif';
-    this.brand.brandLogoMerged = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-merged.png';
-
-    this.brand.badges.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-light-mode.min.png' );
-    this.brand.badges.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-dark-mode.min.png' );
-
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/logo-text-v-color.min.png' );
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/logo-text-v-light.min.png' );
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/logo-text-v-dark.min.png' );
-
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-color.min.png' );
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-light.min.png' );
-    this.brand.wallpapers.push( 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-dark.min.png' );
 
     if ( version ) {
       this.appVersion = version;

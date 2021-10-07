@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BRAND } from '../../../data/brand/brand.data';
 import { ThemeService } from '../../../service/theme/theme.service';
 
 @Component( {
@@ -8,11 +9,7 @@ import { ThemeService } from '../../../service/theme/theme.service';
 } )
 export class BrandingPageComponent {
 
-  brand = {
-    brandLogo: '',
-    wallpapers: [],
-    badges: []
-  };
+  BRAND = BRAND;
 
   themeColorSetting: string;
 
@@ -25,7 +22,6 @@ export class BrandingPageComponent {
   externalColorInfoUrl = 'https://color-hex.org/color/';
 
   constructor( private themeService: ThemeService ) {
-    this.brand = themeService.brand;
 
     this.themeService.themeColorSetting.subscribe( themeColorSetting => {
       this.themeColorSetting = themeColorSetting;

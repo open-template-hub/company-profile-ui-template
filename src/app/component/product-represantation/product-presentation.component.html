@@ -26,7 +26,7 @@
           <ng-template #bodyTemplate>
             <div class="body">
               <div class="social-login-wrapper">
-                <img [src]="brand.brandLogo" alt="logo" class="brand-logo" width="80"/>
+                <img [src]="BRAND.logo.main" alt="logo" class="brand-logo" width="80"/>
                 <i aria-hidden="true" class="fa fa-check-circle"></i>
                 <app-swiper-wrapper
                     [partners]="product.key === 'auth-server-template' ? SOCIAL_LOGIN_PARTNERS : PAYMENT_PARTNERS"></app-swiper-wrapper>

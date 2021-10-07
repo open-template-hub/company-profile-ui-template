@@ -12,10 +12,6 @@ export class SettingsLayoutComponent {
 
   loading = false;
 
-  brand = {
-    brandLogo: '',
-  };
-
   sideNavClosed = 'false';
 
   constructor(
@@ -27,9 +23,6 @@ export class SettingsLayoutComponent {
     themeService.sideNavClosed.subscribe( sideNavClosed => {
       this.sideNavClosed = sideNavClosed;
     } );
-
-    this.brand = themeService.brand;
-
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
   }
 }

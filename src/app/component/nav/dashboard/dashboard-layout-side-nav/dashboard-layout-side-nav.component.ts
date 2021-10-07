@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { BRAND } from '../../../../data/brand/brand.data';
 import { PROFILE_IMG, URLS } from '../../../../data/constant';
 import { AuthToken } from '../../../../model/auth/auth-token.model';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
@@ -22,11 +23,8 @@ export class DashboardLayoutSideNavComponent {
   categorySearchResults = [];
   searchEnabled = true;
 
-  brand = {
-    brandLogo: '',
-  };
-
   URLS = URLS;
+  BRAND = BRAND;
 
   currentUser: AuthToken;
   openSettings = false;
@@ -50,8 +48,6 @@ export class DashboardLayoutSideNavComponent {
     this.themeService.sideNavClosed.subscribe( sideNavClosed => {
       this.sideNavClosed = sideNavClosed;
     } );
-
-    this.brand = themeService.brand;
 
     this.businessLogicService.userInfo.subscribe( userInfo => {
           if ( userInfo ) {

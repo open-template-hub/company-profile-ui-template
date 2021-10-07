@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environmentCommon } from '../../../../environments/environment-common';
+import { BRAND } from '../../../data/brand/brand.data';
 import { ThemeColorSettings, URLS } from '../../../data/constant';
-import { ThemeService } from '../../../service/theme/theme.service';
 
 @Component( {
   selector: 'app-external-redirect-page',
@@ -16,20 +16,12 @@ export class ExternalRedirectPageComponent {
   website: any;
   error = false;
 
-  brand = {
-    brandLogo: '',
-  };
+  BRAND = BRAND;
 
   ThemeColorSettings = ThemeColorSettings;
   URLS = URLS;
 
-  constructor(
-      private route: ActivatedRoute,
-      private router: Router,
-      private themeService: ThemeService
-  ) {
-    this.brand = themeService.brand;
-
+  constructor( private route: ActivatedRoute, private router: Router ) {
     this.route.queryParams.subscribe( ( params ) => {
       if ( !params.href ) {
         this.router.navigate( [ URLS.notFound ] );

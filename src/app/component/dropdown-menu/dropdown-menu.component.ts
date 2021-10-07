@@ -1,7 +1,6 @@
 import { Component, ElementRef, HostListener, Input, ViewChild } from '@angular/core';
 import { URLS } from '../../data/constant';
 import { ProductLine } from '../../model/product/product.model';
-import { ThemeService } from '../../service/theme/theme.service';
 import { UtilService } from '../../service/util/util.service';
 
 @Component( {
@@ -10,9 +9,6 @@ import { UtilService } from '../../service/util/util.service';
   styleUrls: [ './dropdown-menu.component.scss' ]
 } )
 export class DropdownMenuComponent {
-  brand = {
-    brandLogo: '',
-  };
 
   URLS = URLS;
 
@@ -30,11 +26,7 @@ export class DropdownMenuComponent {
   @ViewChild( 'toggleButton' ) toggleButton: ElementRef;
   @ViewChild( 'dropdownContent' ) dropdownContent: ElementRef;
 
-  constructor(
-      private themeService: ThemeService,
-      private utilService: UtilService
-  ) {
-    this.brand = themeService.brand;
+  constructor( private utilService: UtilService ) {
     this.calculatedColumns = this.minimumColumns;
     this.calculatedRows = this.minimumRows;
   }

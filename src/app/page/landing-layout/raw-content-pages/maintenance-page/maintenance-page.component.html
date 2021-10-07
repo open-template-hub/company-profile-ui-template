@@ -1,10 +1,11 @@
 <div class="raw-content-page-layout">
   <div class="logo-wrapper">
-    <img [src]="brand.brandLogoMerge" alt="logo" class="brand-logo" height="150"/>
+    <img [src]="BRAND.logo.maintenance" alt="logo" class="brand-logo" height="150"/>
   </div>
 
   <!-- Under maintenance -->
-  <app-hero [contents]="[{text: 'Under maintenance', level: 1}, {text: 'Please check again later'}]" [heroClass]="'no-padding-top'"></app-hero>
+  <app-hero [contents]="[{text: 'Under maintenance', level: 1}, {text: 'Please check again later'}]"
+            [heroClass]="'no-padding-top'"></app-hero>
   <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.warning"
                           [text]="'HOME'"></app-information-button>
 </div>

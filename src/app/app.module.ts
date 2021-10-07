@@ -23,10 +23,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AnimatedCodeEditorComponent } from './component/animated-code-editor/animated-code-editor.component';
 import { BrandButtonComponent } from './component/button/brand-button/brand-button.component';
 import { ButtonComponent } from './component/button/button.component';
+import { EventButtonComponent } from './component/button/event-button/event-button.component';
 import { InformationButtonComponent } from './component/button/information-button/information-button.component';
 import { CalendarComponent } from './component/calendar/calendar.component';
+import { ActivityHistoryCardComponent } from './component/card/activity-history-card/activity-history-card.component';
 import { CardComponent } from './component/card/card.component';
 import { EmployeeCardComponent } from './component/card/employee-card/employee-card.component';
+import { EventCardComponent } from './component/card/event-card/event-card.component';
 import { PolicyCardComponent } from './component/card/policy-card/policy-card.component';
 import { PresentationCardComponent } from './component/card/presentation-card/presentation-card.component';
 import { PricingCardComponent } from './component/card/pricing-card/pricing-card.component';
@@ -35,6 +38,10 @@ import { TestimonialCardComponent } from './component/card/testimonial-card/test
 import { TimelineCardComponent } from './component/card/timeline-card/timeline-card.component';
 import { ColorChartComponent } from './component/color-chart/color-chart.component';
 import { CommandLineComponent } from './component/command-line/command-line.component';
+import { BoxContentLoaderComponent } from './component/content-loader/box-content-loader/box-content-loader.component';
+import { ContentLoaderComponent } from './component/content-loader/content-loader.component';
+import { ImageContentLoaderComponent } from './component/content-loader/image-content-loader/image-content-loader.component';
+import { TextContentLoaderComponent } from './component/content-loader/text-content-loader/text-content-loader.component';
 import { DropdownMenuComponent } from './component/dropdown-menu/dropdown-menu.component';
 import { ExtLinkComponent } from './component/ext-link/ext-link.component';
 import { HeroComponent } from './component/hero/hero.component';
@@ -89,13 +96,6 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { CallbackPageComponent } from './page/splash-layout/callback-page/callback-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
-import { EventButtonComponent } from './component/button/event-button/event-button.component';
-import { EventCardComponent } from './component/card/event-card/event-card.component';
-import { ActivityHistoryCardComponent } from './component/card/activity-history-card/activity-history-card.component';
-import { ContentLoaderComponent } from './component/content-loader/content-loader.component';
-import { ImageContentLoaderComponent } from './component/content-loader/image-content-loader/image-content-loader.component';
-import { TextContentLoaderComponent } from './component/content-loader/text-content-loader/text-content-loader.component';
-import { BoxContentLoaderComponent } from './component/content-loader/box-content-loader/box-content-loader.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,

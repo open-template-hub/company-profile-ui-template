@@ -74,10 +74,11 @@
   <!-- Logos -->
   <app-hero [contents]="[{text: 'Logos', level: 2}]"></app-hero>
   <div class="branding-resources-wrapper">
-    <app-presentation-card [href]="brand.brandLogo.replace('min/', '').replace('.min', '')" [presentationItemClass]="'logo-item'"
+    <app-presentation-card [href]="BRAND.logo.main.replace('min/', '').replace('.min', '')"
+                           [presentationItemClass]="'logo-item'"
                            [secondaryText]="'PNG'"
-                           [src]="brand.brandLogo"
-                           [title]="brand.brandLogo.substring( brand.brandLogo.lastIndexOf( '/' ) + 1, brand.brandLogo.lastIndexOf( '.min.png' ) )"
+                           [src]="BRAND.logo.main"
+                           [title]="BRAND.logo.main.substring( BRAND.logo.main.lastIndexOf( '/' ) + 1, BRAND.logo.main.lastIndexOf( '.min.png' ) )"
                            imgHeight="175">
     </app-presentation-card>
   </div>
@@ -87,7 +88,7 @@
 
   <!-- Badges -->
   <div class="branding-resources-wrapper">
-    <ng-container *ngFor="let badge of brand.badges; index as i">
+    <ng-container *ngFor="let badge of BRAND.badges; index as i">
       <app-presentation-card [href]="badge.replace('min/', '').replace('.min', '')" [imgHeight]="40"
                              [presentationItemClass]="'logo-item'"
                              [secondaryText]="'PNG'" [src]="badge"
@@ -99,7 +100,7 @@
   <!-- Wallpapers -->
   <app-hero [contents]="[{text: 'Wallpapers', level: 2}]"></app-hero>
   <div class="branding-resources-wrapper">
-    <ng-container *ngFor="let wallpaper of brand.wallpapers; index as i">
+    <ng-container *ngFor="let wallpaper of BRAND.wallpapers; index as i">
       <app-presentation-card [href]="wallpaper.replace('min/', '').replace('.min', '')" [imgHeight]="400"
                              [presentationItemClass]="'wallpaper-item'"
                              [secondaryText]="'PNG'" [src]="wallpaper"

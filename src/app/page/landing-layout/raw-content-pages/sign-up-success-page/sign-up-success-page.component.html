@@ -1,9 +1,10 @@
 <div class="raw-content-page-layout">
   <div class="logo-wrapper">
-    <img [src]="brand.brandLogo" alt="logo" class="brand-logo" height="150"/>
+    <img [src]="BRAND.logo.main" alt="logo" class="brand-logo" height="150"/>
   </div>
 
   <!-- Registration successful -->
-  <app-hero [contents]="[{text: 'Registration successful 🎉', level: 2}, {text: 'Verification email sent to: ' + email}]"
-            [heroClass]="'no-padding-top'"></app-hero>
+  <app-hero
+      [contents]="[{text: 'Registration successful 🎉', level: 2}, {text: 'Verification email sent to: ' + email}]"
+      [heroClass]="'no-padding-top'"></app-hero>
 </div>

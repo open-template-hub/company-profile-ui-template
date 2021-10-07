@@ -2,7 +2,7 @@
 </div>
 <nav class="dashboard-layout-top-nav">
   <a routerLink="{{URLS.dashboard.root}}">
-    <img [src]="brand.brandLogo" alt="brand logo" class="brand-logo" height="40"/>
+    <img [src]="BRAND.logo.main" alt="brand logo" class="brand-logo" height="40"/>
   </a>
   <div #searchArea class="input-with-icon">
     <input (keyup)="search($event)" placeholder="Search..." type="text">

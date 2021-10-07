@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ThemeService } from '../../../../service/theme/theme.service';
+import { BRAND } from '../../../../data/brand/brand.data';
 
 @Component( {
   selector: 'app-sign-up-success-page',
@@ -11,14 +11,10 @@ export class SignUpSuccessPageComponent implements OnInit {
 
   email = '';
 
-  brand = {
-    brandLogo: '',
-  };
+  BRAND = BRAND;
 
-  constructor(
-      private route: ActivatedRoute,
-      public router: Router,
-      private themeService: ThemeService ) {
+  constructor( private route: ActivatedRoute, public router: Router ) {
+    // Intentionally blank
   }
 
   ngOnInit(): void {
@@ -27,7 +23,5 @@ export class SignUpSuccessPageComponent implements OnInit {
         this.email = params.email;
       }
     } );
-
-    this.brand = this.themeService.brand;
   }
 }

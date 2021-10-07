@@ -1,35 +1,50 @@
-<div class="settings-form-page-layout">
-  <div class="hero">
-    <div class="hero-content">
-      <h2>Theme Settings</h2>
-    </div>
-    <app-card [bodyTemplate]="bodyTemplate">
-      <ng-template #bodyTemplate>
-        <div class="body">
-          <div class="section-header">
-            <p class="dim">Dark/Light Mode</p>
-            <hr/>
-          </div>
-          <div class="section horizontal">
-            <app-button (click)="setDarkLightSetting(DarkLightSettings.light)" [icon]="'sun'" [text]="'Light theme'">
-            </app-button>
-            <app-button (click)="setDarkLightSetting(DarkLightSettings.dark)" [icon]="'moon'" [text]="'Dark theme'">
-            </app-button>
-            <app-button (click)="setDarkLightSetting(DarkLightSettings.auto)" [icon]="'adjust'" [text]="'Auto'">
-            </app-button>
-          </div>
-          <div class="section-header">
-            <p class="dim">Theme Color</p>
-            <hr/>
-          </div>
-          <div class="section horizontal">
-            <app-button (click)="setThemeColorSetting(themeColor)" *ngFor="let themeColor of themeColorSettingsList"
-                        [buttonClasses]="[themeColor]" [icon]="'tint'"
-                        [text]="themeColor.split('-').join(' ') | titlecase">
-            </app-button>
-          </div>
+<app-hero [contents]="[{text: 'Theme Settings', level: 2}]"></app-hero>
+<div class="settings-form-wrapper">
+  <app-card [bodyTemplate]="bodyTemplate">
+    <ng-template #bodyTemplate>
+      <div class="body">
+        <div class="section-header">
+          <p class="dim">Dark/Light Mode</p>
+          <hr/>
         </div>
-      </ng-template>
-    </app-card>
-  </div>
+        <div class="section horizontal">
+          <app-button (click)="setDarkLightSetting(DarkLightSettings.light)" [icon]="'sun'" [text]="'Light theme'">
+          </app-button>
+          <app-button (click)="setDarkLightSetting(DarkLightSettings.dark)" [icon]="'moon'" [text]="'Dark theme'">
+          </app-button>
+          <app-button (click)="setDarkLightSetting(DarkLightSettings.auto)" [icon]="'adjust'" [text]="'Auto'">
+          </app-button>
+        </div>
+        <div class="section-header">
+          <p class="dim">Color</p>
+          <hr/>
+        </div>
+        <div class="section horizontal">
+          <app-button (click)="setThemeColorSetting(themeColor)" *ngFor="let themeColor of themeColorSettingsList"
+                      [buttonClasses]="[themeColor]" [icon]="'tint'"
+                      [text]="themeColor.split('-').join(' ') | titlecase">
+          </app-button>
+        </div>
+        <div class="section-header">
+          <p class="dim">Design</p>
+          <hr/>
+        </div>
+        <div class="section horizontal">
+          <app-button (click)="setThemeDesignSetting(themeDesign)" *ngFor="let themeDesign of themeDesignSettingsList"
+                      [buttonClasses]="[themeDesign]" [icon]="'draw-polygon'"
+                      [text]="themeDesign.split('-').join(' ') | titlecase">
+          </app-button>
+        </div>
+        <div class="section-header">
+          <p class="dim">Default</p>
+          <hr/>
+        </div>
+        <div class="section horizontal">
+          <app-button (click)="restoreDefaultSettings()" [buttonClasses]="[DEFAULT_THEME]" [icon]="'undo-alt'"
+                      [text]="DEFAULT_THEME.split('-').join(' ') | titlecase">
+          </app-button>
+        </div>
+      </div>
+    </ng-template>
+  </app-card>
 </div>

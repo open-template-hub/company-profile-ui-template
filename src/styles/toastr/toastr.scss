@@ -1,4 +1,4 @@
-@use '../theme/color-theme.common';
+@use '../theme/color/color.theme';
 @use '../information/information';
 @use '../util/util';
 
@@ -86,7 +86,7 @@ button.toast-close-button {
 }
 
 .ngx-toastr {
-  @include util.top-right-bottom-left-rounded-box;
+  @include util.default-border-radius;
 
   box-shadow: 0 0 15px -2px var(--shadow);
 

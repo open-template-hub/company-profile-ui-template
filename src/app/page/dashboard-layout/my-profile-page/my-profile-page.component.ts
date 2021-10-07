@@ -107,7 +107,6 @@ export class MyProfilePageComponent implements OnDestroy {
         this.userActivityService.getEventsTaken( userInfo.username ).subscribe( eventList => {
           this.lessonsInfo = eventList;
           this.loadingLessonsTaken = false;
-          this.colors = this.themeService.barCustomColors( this.lessonsInfo );
         } );
 
         this.followerService.count( userInfo.username ).subscribe( followerCount => {

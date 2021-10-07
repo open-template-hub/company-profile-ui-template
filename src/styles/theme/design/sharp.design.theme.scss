@@ -1,0 +1,9 @@
+@use '../../util/util';
+
+:root {
+  --border-radius-sharp: 0;
+}
+
+.sharp-theme {
+  --border-radius: var(--border-radius-sharp);
+}

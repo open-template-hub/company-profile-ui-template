@@ -5,6 +5,10 @@
   #{$property}: $value;
 }
 
+@mixin default-border-radius {
+  @include prefix(border-radius, var(--border-radius), moz webkit);
+}
+
 @mixin no-padding-no-margin {
   padding: 0;
   margin: 0;
@@ -78,11 +82,6 @@
 
 @mixin circle {
   @include prefix(border-radius, 99em, moz webkit);
-}
-
-@mixin top-right-bottom-left-rounded-box {
-  @include prefix(border-bottom-left-radius, 12px, moz webkit);
-  @include prefix(border-top-right-radius, 6px, moz webkit);
 }
 
 .rounded-box {

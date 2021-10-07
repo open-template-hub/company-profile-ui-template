@@ -5,7 +5,7 @@
 
   & .presentation-item {
     @include util.flex-layout-column;
-    @include util.top-right-bottom-left-rounded-box;
+    @include util.default-border-radius;
     @include util.default-shadow;
 
     background-color: var(--card);
@@ -17,7 +17,7 @@
     padding: 15px 15px 12px;
 
     & .presentation-item-content {
-      @include util.top-right-bottom-left-rounded-box;
+      @include util.default-border-radius;
       @include util.flex-layout-column;
       @include util.flex-center-center;
       @include util.default-shadow;

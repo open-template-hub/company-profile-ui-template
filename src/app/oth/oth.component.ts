@@ -12,6 +12,7 @@ export class OthComponent {
 
   darkLightSetting: string;
   themeColorSetting: string;
+  themeDesignSetting: string;
 
   constructor(
       private themeService: ThemeService,
@@ -37,5 +38,23 @@ export class OthComponent {
     this.themeService.themeColorSetting.subscribe( themeColorSetting => {
       this.themeColorSetting = themeColorSetting;
     } );
+
+    this.themeService.themeDesignSetting.subscribe( themeDesignSetting => {
+      this.themeDesignSetting = themeDesignSetting;
+    } );
+  }
+
+  setTheme() {
+    let themeConfig = 'default-theme';
+
+    if ( this.themeColorSetting ) {
+      themeConfig = this.themeColorSetting;
+    }
+
+    if ( this.themeDesignSetting ) {
+      themeConfig += ' ' + this.themeDesignSetting;
+    }
+
+    return themeConfig;
   }
 }

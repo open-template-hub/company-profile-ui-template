@@ -58,8 +58,9 @@ export const DarkLightSettings = {
   auto: 'auto',
 };
 
+export const DEFAULT_THEME = 'default-theme';
+
 export const ThemeColorSettings = {
-  default: 'default-theme',
   red: 'red-theme',
   yellow: 'yellow-theme',
   blue: 'blue-theme',
@@ -67,6 +68,11 @@ export const ThemeColorSettings = {
   orange: 'orange-theme',
   purple: 'purple-theme',
   pink: 'pink-theme'
+};
+
+export const ThemeDesignSettings = {
+  round: 'round-theme',
+  sharp: 'sharp-theme'
 };
 
 export const URLS_RAW = {

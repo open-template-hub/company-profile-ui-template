@@ -1,0 +1,9 @@
+@use '../../util/util';
+
+:root {
+  --border-radius-round: 0 6px 0 12px;
+}
+
+.round-theme {
+  --border-radius: var(--border-radius-round);
+}

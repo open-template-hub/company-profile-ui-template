@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
-import { DarkLightSettings, ThemeColorSettings } from '../../data/constant';
+import { DarkLightSettings, DEFAULT_THEME } from '../../data/constant';
 import { AuthToken } from '../../model/auth/auth-token.model';
 import { BusinessLogicService } from '../business-logic/business-logic.service';
 import { EventService } from '../event/event.service';
@@ -48,7 +48,8 @@ export class AuthenticationService {
       this.currentUserSubject.next( currentUser );
 
       this.themeService.setDarkLightSetting( DarkLightSettings.auto );
-      this.themeService.setThemeColorSetting( ThemeColorSettings.default );
+      this.themeService.setThemeColorSetting( DEFAULT_THEME );
+      this.themeService.setThemeDesignSetting( DEFAULT_THEME );
       this.themeService.initSideNavClosed( false );
 
       return currentUser;
@@ -133,7 +134,8 @@ export class AuthenticationService {
       this.currentUserSubject.next( currentUser );
 
       this.themeService.setDarkLightSetting( DarkLightSettings.auto );
-      this.themeService.setThemeColorSetting( ThemeColorSettings.default );
+      this.themeService.setThemeColorSetting( DEFAULT_THEME );
+      this.themeService.setThemeDesignSetting( DEFAULT_THEME );
       this.themeService.initSideNavClosed( false );
 
       return currentUser;

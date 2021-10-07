@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { version } from '../../../environments/version';
-import { DarkLightSettings, ThemeColorSettings } from '../../data/constant';
+import { DarkLightSettings, DEFAULT_THEME } from '../../data/constant';
 
 @Injectable( {
   providedIn: 'root'
@@ -11,40 +11,28 @@ export class ThemeService {
   public appVersion = '1.0.0';
   public darkLightSetting: Observable<string>;
   public themeColorSetting: Observable<string>;
+  public themeDesignSetting: Observable<string>;
   public sideNavClosed: Observable<string>;
 
-  private colors = [
-    '--theme-color',
-    '--theme-color-lighter-1',
-    '--theme-color-lighter-2',
-    '--theme-color-lighter-3',
-    '--theme-color-lighter-4',
-    '--theme-color-lighter-5',
-    '--theme-color-lighter-6',
-    '--theme-color-lighter-7',
-    '--theme-color-lighter-8',
-    '--theme-color-lighter-9',
-    '--theme-color-darker-1',
-    '--theme-color-darker-2',
-    '--theme-color-darker-3',
-    '--theme-color-darker-4',
-    '--theme-color-darker-5',
-    '--theme-color-darker-6',
-    '--theme-color-darker-7',
-    '--theme-color-darker-8',
-    '--theme-color-darker-9'
-  ];
   private darkLightSettingSubject: BehaviorSubject<string>;
   private themeColorSettingSubject: BehaviorSubject<string>;
+  private themeDesignSettingSubject: BehaviorSubject<string>;
   private sideNavClosedSubject: BehaviorSubject<string>;
 
   constructor() {
     let themeColorSettingStorageItem = localStorage.getItem( 'themeColorSetting' ) ?
         localStorage.getItem( 'themeColorSetting' ) : sessionStorage.getItem( 'themeColorSetting' );
-    themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : ThemeColorSettings.default;
+    themeColorSettingStorageItem = themeColorSettingStorageItem ? themeColorSettingStorageItem : DEFAULT_THEME;
 
     this.themeColorSettingSubject = new BehaviorSubject<string>( themeColorSettingStorageItem );
     this.themeColorSetting = this.themeColorSettingSubject.asObservable();
+
+    let themeDesignSettingStorageItem = localStorage.getItem( 'themeDesignSetting' ) ?
+        localStorage.getItem( 'themeDesignSetting' ) : sessionStorage.getItem( 'themeDesignSetting' );
+    themeDesignSettingStorageItem = themeDesignSettingStorageItem ? themeDesignSettingStorageItem : DEFAULT_THEME;
+
+    this.themeDesignSettingSubject = new BehaviorSubject<string>( themeDesignSettingStorageItem );
+    this.themeDesignSetting = this.themeDesignSettingSubject.asObservable();
 
     let darkLightSettingStorageItem = localStorage.getItem( 'darkLightSetting' ) ?
         localStorage.getItem( 'darkLightSetting' ) : sessionStorage.getItem( 'darkLightSetting' );
@@ -88,6 +76,16 @@ export class ThemeService {
     this.themeColorSettingSubject.next( themeColorSetting );
   }
 
+  setThemeDesignSetting( themeDesignSetting: string ) {
+    if ( localStorage.getItem( 'currentUser' ) ) {
+      sessionStorage.removeItem( 'themeDesignSetting' );
+      localStorage.setItem( 'themeDesignSetting', themeDesignSetting );
+    } else {
+      sessionStorage.setItem( 'themeDesignSetting', themeDesignSetting );
+    }
+    this.themeDesignSettingSubject.next( themeDesignSetting );
+  }
+
   initSideNavClosed( sideNavClosePreferred: boolean ) {
     const sideNavClosedStorageItem = sideNavClosePreferred ? 'true' : 'false';
 
@@ -120,33 +118,17 @@ export class ThemeService {
     if ( localStorage.getItem( 'currentUser' ) ) {
       localStorage.removeItem( 'darkLightSetting' );
       localStorage.removeItem( 'themeColorSetting' );
+      localStorage.removeItem( 'themeDesignSetting' );
       localStorage.removeItem( 'sideNavClosed' );
     }
     sessionStorage.removeItem( 'darkLightSetting' );
     sessionStorage.removeItem( 'themeColorSetting' );
+    sessionStorage.removeItem( 'themeDesignSetting' );
     sessionStorage.removeItem( 'sideNavClosed' );
 
     this.darkLightSettingSubject.next( DarkLightSettings.auto );
-    this.themeColorSettingSubject.next( ThemeColorSettings.default );
+    this.themeColorSettingSubject.next( DEFAULT_THEME );
+    this.themeDesignSettingSubject.next( DEFAULT_THEME );
     this.sideNavClosedSubject.next( 'false' );
-  }
-
-  barCustomColors( array: any[] ) {
-    const result: any[] = [];
-
-    for ( let i = 0; i < array.length; i++ ) {
-      let value;
-      if ( i >= this.colors.length ) {
-        value = 'var(' + this.colors[ length - 1 ] + ')';
-      } else {
-        value = 'var(' + this.colors[ i ] + ')';
-      }
-
-      result.push( {
-        name: array[ i ].name, value
-      } );
-    }
-
-    return result;
   }
 }

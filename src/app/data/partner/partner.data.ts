@@ -3,30 +3,37 @@ import { Partner } from '../../model/partner/partner.model';
 export const PARTNERS: Partner[] = [
   {
     name: 'github',
-    brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/github.png'
+    logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/github.png',
+    url: 'https://github.com'
   },
   {
     name: 'aws',
-    brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/aws.png'
+    logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/aws.png',
+    url: 'https://aws.amazon.com'
   },
   {
     name: 'heroku',
-    brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/heroku.png'
+    logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/heroku.png',
+    url: 'https://heroku.com'
   },
   {
     name: 'google',
-    brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/google.png'
+    logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/google.png',
+    url: 'https://google.com'
   },
   {
     name: 'stripe',
-    brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/stripe.png'
+    logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/stripe.png',
+    url: 'https://stripe.com'
   },
   {
     name: 'netlify',
-    brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/netlify.png'
+    logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/netlify.png',
+    url: 'https://www.netlify.com'
   },
   {
     name: 'oracle',
-    brandLogo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/oracle.png'
+    logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/oracle.png',
+    url: 'https://oracle.com'
   },
 ];

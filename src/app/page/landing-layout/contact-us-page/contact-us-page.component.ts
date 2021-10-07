@@ -3,15 +3,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MailService } from 'src/app/service/mail/mail.service';
 import { environmentCommon } from 'src/environments/environment-common';
 import { URLS } from '../../../data/constant';
-import { CONTACT_US_FEATURES, SIZE_OPTIONS, } from '../../../data/contact-us/contactUsData';
+import { CONTACT_US_FEATURES, SIZE_OPTIONS, } from '../../../data/contact-us/contact-us.data';
 import { COUNTRIES } from '../../../data/countries';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ToastService } from '../../../service/toast/toast.service';
-
-export interface ContactUsFeatures {
-  title: string;
-  features: string[];
-}
 
 @Component( {
   selector: 'app-contact-us-page',

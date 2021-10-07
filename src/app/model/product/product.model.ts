@@ -1,4 +1,4 @@
-import { CommandType } from 'src/app/data/command-type.enum';
+import { CommandType } from 'src/app/data/command-type/command-type.enum';
 import { PricingOption } from '../pricing/pricing.model';
 
 export interface PricingFeature {

@@ -1,4 +1,4 @@
-import { CommandType } from 'src/app/data/command-type.enum';
+import { CommandType } from 'src/app/data/command-type/command-type.enum';
 import { environmentCommon } from '../../../environments/environment-common';
 import { ProductLine } from '../../model/product/product.model';
 import { ThemeColorSettings } from '../constant';

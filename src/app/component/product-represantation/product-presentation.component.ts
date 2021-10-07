@@ -25,14 +25,22 @@ export class ProductPresentationComponent {
     for ( const website in environment.oauth ) {
       // filter only oauth configured websites
       if ( environmentCommon.website[ website ].logo ) {
-        this.SOCIAL_LOGIN_PARTNERS.push( { brandLogo: environmentCommon.website[ website ].logo, name: website } );
+        this.SOCIAL_LOGIN_PARTNERS.push( {
+          name: website,
+          logo: environmentCommon.website[ website ].logo,
+          url: environmentCommon.website[ website ].url
+        } );
       }
     }
 
     for ( const website in environment.payment ) {
       // filter only oauth configured websites
       if ( environmentCommon.website[ website ].logo ) {
-        this.PAYMENT_PARTNERS.push( { brandLogo: environmentCommon.website[ website ].logo, name: website } );
+        this.PAYMENT_PARTNERS.push( {
+          name: website,
+          logo: environmentCommon.website[ website ].logo,
+          url: environmentCommon.website[ website ].url
+        } );
       }
     }
   }

@@ -1,0 +1,7 @@
+@import '../../../../styles/loading/loading';
+
+.image {
+  @include default-background;
+
+  animation: animate-color 2s infinite;
+}

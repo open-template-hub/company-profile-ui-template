@@ -6,13 +6,11 @@
       <hr>
       <div class="content flex-layout-row">
         <a (click)="shareViaClicked.emit( 'twitter' )" class="twitter-area">
-          <app-social-button [brand]="environmentCommon.website.twitter.cssClass"
-                             [classType]="'circle'" [isSmallLogo]="true"></app-social-button>
+          <app-brand-button [icon]="environmentCommon.website.twitter.cssClass"></app-brand-button>
           <p>Twitter</p>
         </a>
         <a (click)="shareViaClicked.emit( 'linkedin' )" class="linkedin-area" style="margin-left: 30px;">
-          <app-social-button [brand]="environmentCommon.website.linkedin.cssClass"
-                             [classType]="'circle'" [isSmallLogo]="true"></app-social-button>
+          <app-brand-button [icon]="environmentCommon.website.linkedin.cssClass"></app-brand-button>
           <p>Linkedin</p>
         </a>
       </div>
@@ -21,19 +19,8 @@
       <p>Calendar</p>
       <hr>
       <div class="content flex-layout-row">
-        <app-social-button (click)="calendarClicked.emit(true)"
-                           [brand]="environmentCommon.website.appleCalendar.cssClass"
-                           [flexStart]="true"
-                           [localImage]="environmentCommon.website.appleCalendar.logo"
-                           [noTextStyle]="true"
-                           class="apple-calendar"></app-social-button>
-        <app-social-button (click)="calendarClicked.emit(true)"
-                           [brand]="environmentCommon.website.googleCalendar.cssClass"
-                           [flexStart]="true"
-                           [localImage]="environmentCommon.website.googleCalendar.logo"
-                           [noTextStyle]="true"
-                           class="google-calendar"
-                           style="margin-left: 30px;"></app-social-button>
+        <app-brand-button [icon]="environmentCommon.website.appleCalendar.cssClass"></app-brand-button>
+        <app-brand-button [icon]="environmentCommon.website.googleCalendar.cssClass"></app-brand-button>
       </div>
     </div>
   </div>

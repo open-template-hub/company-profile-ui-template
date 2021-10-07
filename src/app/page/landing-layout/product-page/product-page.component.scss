@@ -25,10 +25,19 @@
   margin: 0 50px;
   padding: 20px;
 
-  border-top: 1px solid var(--theme-color-lighter-4);
+  border-top: 2px solid var(--theme-color-lighter-4);
 
   & a {
     letter-spacing: 0.04em;
+  }
+}
+
+:host ::ng-deep app-box-content-loader app-content-loader .loader {
+  & .box-content {
+    height: 60px;
+    width: 160px;
+    margin-top: 10px;
+    margin-left: 60px;
   }
 }
 
@@ -57,14 +66,13 @@
 .intro {
   @include util.flex-layout-row;
 
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
 
   text-align: center;
   width: 94%;
 
   & .left {
-
     & .header {
       padding: 20px;
 
@@ -116,13 +124,21 @@ app-swiper-wrapper {
   height: 200px;
 }
 
+.pricing-plan-wrapper,
+.activity-history-wrapper,
+.related-products-wrapper {
+  padding-bottom: 50px;
+}
+
 .pricing-plan-wrapper {
   @include util.flex-layout-column;
   @include util.flex-center-center;
 
   width: 100%;
+}
 
-  padding-bottom: 50px;
+.activity-history-wrapper {
+  max-width: 92vw;
 }
 
 .testimonials-header {
@@ -155,8 +171,6 @@ app-swiper-wrapper {
 .related-products-wrapper {
   @include util.flex-layout-column;
   @include util.flex-center-center;
-
-  padding-bottom: 50px;
 }
 
 @media only screen and (max-width: 999px) {
@@ -204,9 +218,12 @@ app-swiper-wrapper {
     text-align: center;
   }
 
-  .pricing-plan-wrapper {
+  .pricing-plan-wrapper,
+  .activity-history-wrapper {
+    width: 94vw;
+
     & > * {
-      width: 94%;
+      width: 94vw;
     }
   }
 
@@ -230,7 +247,6 @@ app-swiper-wrapper {
 }
 
 @media only screen and (min-width: 1000px) {
-
   .intro {
     padding-top: 80px;
     padding-bottom: 50px;
@@ -241,7 +257,6 @@ app-swiper-wrapper {
       padding: 60px 60px 40px;
 
       & .button-wrapper {
-
         padding: 50px 50px 0;
         max-width: 450px;
       }
@@ -316,4 +331,3 @@ app-swiper-wrapper {
     }
   }
 }
-

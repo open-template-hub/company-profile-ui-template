@@ -21,7 +21,7 @@
             {{ productLine.name }}
           </h4>
           <p>
-            {{ productLine.description }}
+            {{ productLine.description.length < 80 ? productLine.description : productLine.description.substring(0, 80) + '..' }}
           </p>
           <hr/>
         </div>
@@ -39,7 +39,7 @@
               {{ product.name }}
             </h6>
             <p>
-              {{ product.description }}
+              {{ product.description.length < 200 ? product.description : product.description.substring(0, 200) + '..' }}
             </p>
           </div>
         </a>

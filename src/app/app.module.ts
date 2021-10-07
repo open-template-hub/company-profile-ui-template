@@ -23,13 +23,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AnimatedCodeEditorComponent } from './component/animated-code-editor/animated-code-editor.component';
 import { BrandButtonComponent } from './component/button/brand-button/brand-button.component';
 import { ButtonComponent } from './component/button/button.component';
-import { Button1Component } from './component/button/deprecated/button1/button1.component';
-import { SocialButtonComponent } from './component/button/deprecated/social-button/social-button.component';
 import { InformationButtonComponent } from './component/button/information-button/information-button.component';
 import { CalendarComponent } from './component/calendar/calendar.component';
 import { CardComponent } from './component/card/card.component';
-import { Card1Component } from './component/card/deprecated/card1/card1.component';
-import { EventCardComponent } from './component/card/deprecated/event-card/event-card.component';
 import { EmployeeCardComponent } from './component/card/employee-card/employee-card.component';
 import { PolicyCardComponent } from './component/card/policy-card/policy-card.component';
 import { PresentationCardComponent } from './component/card/presentation-card/presentation-card.component';
@@ -93,6 +89,13 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { CallbackPageComponent } from './page/splash-layout/callback-page/callback-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
+import { EventButtonComponent } from './component/button/event-button/event-button.component';
+import { EventCardComponent } from './component/card/event-card/event-card.component';
+import { ActivityHistoryCardComponent } from './component/card/activity-history-card/activity-history-card.component';
+import { ContentLoaderComponent } from './component/content-loader/content-loader.component';
+import { ImageContentLoaderComponent } from './component/content-loader/image-content-loader/image-content-loader.component';
+import { TextContentLoaderComponent } from './component/content-loader/text-content-loader/text-content-loader.component';
+import { BoxContentLoaderComponent } from './component/content-loader/box-content-loader/box-content-loader.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -116,11 +119,8 @@ FullCalendarModule.registerPlugins( [
     DashboardLayoutSideNavComponent,
     BottomNavComponent,
     FooterComponent,
-    Card1Component,
-    Button1Component,
     SplashLayoutComponent,
     CallbackPageComponent,
-    SocialButtonComponent,
     LabelDataComponent,
     DashboardLayoutTopNavComponent,
     LabelWithIconDataComponent,
@@ -129,7 +129,6 @@ FullCalendarModule.registerPlugins( [
     MaintenancePageComponent,
     CookiePopupComponent,
     CreateEventPageComponent,
-    EventCardComponent,
     CookiePolicyPageComponent,
     PrivacyPolicyPageComponent,
     TermsPageComponent,
@@ -173,6 +172,13 @@ FullCalendarModule.registerPlugins( [
     BrandingPageComponent,
     PresentationCardComponent,
     HeroComponent,
+    EventButtonComponent,
+    EventCardComponent,
+    ActivityHistoryCardComponent,
+    ContentLoaderComponent,
+    ImageContentLoaderComponent,
+    TextContentLoaderComponent,
+    BoxContentLoaderComponent,
   ],
   imports: [
     BrowserModule,

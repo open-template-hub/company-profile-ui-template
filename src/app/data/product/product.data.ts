@@ -14,7 +14,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'auth-server-template',
         name: 'Auth Server',
         description:
-            'Authentication Server Template supporting both regular signup and login processes and login with social networks that support OAuth and OAuth2.0',
+            'Auth Server Template is an open source authentication server that has simple and generic design to connect your authentication system with every OAuth 2.0 and OAuth supporting third party companies like Google, Facebook, Twitter or LinkedIn. We are also supporting regular username password authentication system',
         href:
             environmentCommon.website.github.url +
             '/' +

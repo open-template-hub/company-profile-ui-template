@@ -17,7 +17,7 @@
     @include util.flex-layout-column;
     @include util.flex-center-center;
 
-    padding: 41px;
+    padding: 35px;
 
     width: 100%;
   }
@@ -32,10 +32,6 @@
       font-size: 19px;
       margin: 15px 0;
     }
-  }
-
-  & .presentation-card {
-    margin-top: 74px;
   }
 
   & .features-card {
@@ -68,7 +64,7 @@
     max-width: 100%;
   }
 
-  & app-animated-code-editor, app-card1 {
+  & app-animated-code-editor {
     width: 100%;
   }
 }
@@ -97,10 +93,6 @@
 
 @media only screen and (max-width: 999px) {
   .product-presentation {
-
-    & .presentation-card, & .features-card {
-      margin-top: 0;
-    }
 
     & img {
       max-width: 94%;

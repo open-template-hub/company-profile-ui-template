@@ -5,8 +5,8 @@ import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
 import { GithubProviderService } from 'src/app/service/provider/github-provider.service';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
-import { PARTNERS } from '../../../data/partner/partner.data';
 import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
+import { Activity } from '../../../model/activity/activity.model';
 import { Product, ProductLine } from '../../../model/product/product.model';
 import { ProductService } from '../../../service/product/product.service';
 
@@ -18,14 +18,15 @@ import { ProductService } from '../../../service/product/product.service';
 export class ProductPageComponent implements OnInit, OnDestroy {
   URLS = URLS;
   TESTIMONIALS = TESTIMONIALS;
-  PARTNERS = PARTNERS;
 
   environmentCommon = environmentCommon;
+  commitActivities: Activity[] = [];
 
   PRODUCT_LINES = PRODUCT_LINES;
 
   product: Product;
   productLineKey: string;
+  isOpenSource = false;
 
   emailControl = new FormControl( '' );
 
@@ -35,6 +36,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       private githubService: GithubProviderService,
       private productService: ProductService,
   ) {
+
   }
 
   ngOnInit(): void {
@@ -55,6 +57,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       let productLine: ProductLine = PRODUCT_LINES.find( ( p ) => p.key === params.productLine );
 
       let isService = false;
+      this.isOpenSource = false;
 
       if ( !productLine ) {
         productLine = SERVICES.find( ( p ) => p.key === params.productLine );
@@ -78,14 +81,24 @@ export class ProductPageComponent implements OnInit, OnDestroy {
       }
 
       if ( !isService ) {
+        this.isOpenSource = true;
         this.githubService.getGithubCounters( product.key )
         .then( counters => {
           product.counters = counters;
         } )
         .catch( error => {
+          this.isOpenSource = false;
           console.error( 'Error while getting Github Counters for product: ', product.key, error );
         } );
       }
+
+      this.githubService.getCommitHistory( product.key )
+      .then( commitActivities => {
+        this.commitActivities = commitActivities;
+      } )
+      .catch( error => {
+        console.error( 'Error while getting Github CommitHistory for product: ', product.key, error );
+      } );
 
       this.product = product;
       this.productService.setSelectedProduct( this.product );

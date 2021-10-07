@@ -1,0 +1,9 @@
+@import '../../../../styles/loading/loading';
+
+.box {
+  @include default-background;
+
+  border-radius: 5px;
+
+  animation: animate-color 2s infinite;
+}

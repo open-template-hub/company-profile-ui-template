@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EventCardComponent } from './event-card.component';
+import { ActivityHistoryCardComponent } from './activity-history-card.component';
 
-describe( 'EventCardComponent', () => {
-  let component: EventCardComponent;
-  let fixture: ComponentFixture<EventCardComponent>;
+describe( 'ActivityHistoryCardComponent', () => {
+  let component: ActivityHistoryCardComponent;
+  let fixture: ComponentFixture<ActivityHistoryCardComponent>;
 
   beforeEach( async () => {
     await TestBed.configureTestingModule( {
-      declarations: [ EventCardComponent ]
+      declarations: [ ActivityHistoryCardComponent ]
     } )
     .compileComponents();
   } );
 
   beforeEach( () => {
-    fixture = TestBed.createComponent( EventCardComponent );
+    fixture = TestBed.createComponent( ActivityHistoryCardComponent );
     component = fixture.componentInstance;
     fixture.detectChanges();
   } );

@@ -1,0 +1,6 @@
+<div [class]="contentLoaderClass ? contentLoaderClass : '' + ' loader'">
+  <ng-container *ngTemplateOutlet="contentTemplate || defaultContent">
+    <!-- Loader Content -->
+  </ng-container>
+  <ng-template #defaultContent> </ng-template>
+</div>

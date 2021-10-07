@@ -37,7 +37,11 @@
 }
 
 .raw-content-page-layout {
-  padding: 7vh 0;
+  padding: 0 0 7vh;
+
+  & .logo-wrapper {
+    padding-top: 5vh;
+  }
 }
 
 @media only screen and (max-width: 999px) {

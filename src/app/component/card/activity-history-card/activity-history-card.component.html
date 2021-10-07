@@ -1,0 +1,27 @@
+<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" class="activity-history-card">
+  <!-- Header -->
+  <ng-template #headerTemplate>
+    <div class="header">
+      <p class="title">{{ title }}</p>
+    </div>
+  </ng-template>
+
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div class="body">
+      <div class="activity-content">
+        <ng-container *ngFor="let j of days">
+          <div class="day" [class]="getChartItemClass(j)">
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- Footer -->
+  <ng-template #footerTemplate>
+    <div class="footer">
+      <app-color-chart></app-color-chart>
+    </div>
+  </ng-template>
+</app-card>

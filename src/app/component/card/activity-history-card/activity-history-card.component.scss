@@ -1,0 +1,83 @@
+@use '../../../../styles/util/util';
+@use '../card.component';
+@use '../../color-chart/color-chart.component';
+
+.activity-history-card {
+
+  & .header {
+    @include card.default-header;
+
+    align-items: flex-start;
+
+    color: var(--color);
+    font-size: 19px;
+    box-shadow: none;
+
+    & p {
+      margin-top: 5px;
+      margin-left: 20px;
+      padding-bottom: 3px;
+      border-bottom: 2px solid var(--theme-color-lighter-5);
+    }
+  }
+
+  & .body {
+    @include card.default-body;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    overflow-x: auto;
+
+    min-height: 160px;
+
+    & .activity-content {
+      @include util.flex-layout-column;
+
+      align-items: center;
+      justify-content: flex-start;
+
+      flex-wrap: wrap;
+      box-sizing: border-box;
+
+      height: calc(20px * 7);
+
+      & .day {
+        @include color-chart.default-chart-item;
+      }
+    }
+  }
+
+  & .footer {
+    @include card.default-footer;
+
+    padding: 0 20px;
+
+    align-items: flex-end;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .activity-history-card {
+
+    & .body {
+      & .activity-content {
+        max-width: calc(20px * 53);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .activity-history-card {
+    & .body {
+
+      & .activity-content {
+        width: calc(20px * 53);
+      }
+    }
+  }
+}

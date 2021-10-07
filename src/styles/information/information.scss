@@ -1,32 +1,37 @@
+$information-colors-light-mode: (
+  "success": #2bb22b,
+  "error": #e23237,
+  "warning": #e8a830,
+  "info": #579edc
+);
+
+$information-colors-dark-mode: (
+  "success": #40b940,
+  "error": #e04e52,
+  "warning": #e7b049,
+  "info": #6aa7dc
+);
+
 :root {
-  // [LIGHT MODE DEFINITIONS BEGIN]
-  --success-light-mode: #228b22;
-  --error-light-mode: #e23237;
-  --warning-light-mode: #d28f29;
-  --info-light-mode: #5c98cd;
+  @each $info, $color in $information-colors-light-mode {
+    --#{$info}-light-mode: #{$color};
+  }
 
-  // [LIGHT MODE END]
-
-  // [DARK MODE DEFINITIONS BEGIN]
-  --success-dark-mode: #398039;
-  --error-dark-mode: #e04e52;
-  --warning-dark-mode: #cda05c;
-  --info-dark-mode: #3d79ac;
-  // [DARK MODE END]
+  @each $info, $color in $information-colors-dark-mode {
+    --#{$info}-dark-mode: #{$color};
+  }
 }
 
 :root, .light-theme {
-  --success: var(--success-light-mode);
-  --error: var(--error-light-mode);
-  --warning: var(--warning-light-mode);
-  --info: var(--info-light-mode);
+  @each $info, $color in $information-colors-light-mode {
+    --#{$info}: var(--#{$info}-light-mode);
+  }
 }
 
 @mixin theme-information-dark-mode {
-  --success: var(--success-dark-mode);
-  --error: var(--error-dark-mode);
-  --warning: var(--warning-dark-mode);
-  --info: var(--info-dark-mode);
+  @each $info, $color in $information-colors-dark-mode {
+    --#{$info}: var(--#{$info}-dark-mode);
+  }
 }
 
 .dark-theme {
@@ -91,17 +96,15 @@
   }
 }
 
-@include define-information-text(success);
-@include define-information-text(info);
-@include define-information-text(warning);
-@include define-information-text(error);
+@mixin define-information-color($type) {
+  .#{$type}-background-color {
+    --info: var(--#{$type});
+  }
+}
 
-@include define-information-input(success);
-@include define-information-input(info);
-@include define-information-input(warning);
-@include define-information-input(error);
-
-@include define-information-border(success);
-@include define-information-border(info);
-@include define-information-border(warning);
-@include define-information-border(error);
+@each $info, $_ in $information-colors-light-mode {
+  @include define-information-text(#{$info});
+  @include define-information-input(#{$info});
+  @include define-information-border(#{$info});
+  @include define-information-color(#{$info});
+}

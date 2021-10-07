@@ -1,10 +1,10 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { BRAND } from '../../../../data/brand/brand.data';
 import { PROFILE_IMG, URLS } from '../../../../data/constant';
 import { BusinessLogicService } from '../../../../service/business-logic/business-logic.service';
 import { CategoryService } from '../../../../service/category/category.service';
 import { FileStorageService } from '../../../../service/file-storage/file-storage.service';
 import { LoadingService } from '../../../../service/loading/loading.service';
-import { ThemeService } from '../../../../service/theme/theme.service';
 
 @Component( {
   selector: 'app-dashboard-layout-top-nav',
@@ -22,23 +22,18 @@ export class DashboardLayoutTopNavComponent {
 
   searchEnabled = true;
 
-  brand = {
-    brandLogo: ''
-  };
-
   URLS = URLS;
+  BRAND = BRAND;
+
   @ViewChild( 'searchArea' ) searchArea: ElementRef;
 
   constructor(
       private businessLogicService: BusinessLogicService,
       private fileStorageService: FileStorageService,
-      private themeService: ThemeService,
       private loadingService: LoadingService,
       private _eref: ElementRef,
       private categoryService: CategoryService
   ) {
-    this.brand = themeService.brand;
-
     this.businessLogicService.userInfo.subscribe( userInfo => {
           if ( userInfo ) {
             this.userInfo = userInfo;
@@ -62,11 +57,7 @@ export class DashboardLayoutTopNavComponent {
 
   @HostListener( 'document:click', [ '$event' ] )
   onDocumentClick( event ) {
-    if ( this.searchArea.nativeElement.contains( event.target ) ) {
-      this.searchEnabled = true;
-    } else {
-      this.searchEnabled = false;
-    }
+    this.searchEnabled = !!this.searchArea.nativeElement.contains( event.target );
   }
 
   search( event: any ) {

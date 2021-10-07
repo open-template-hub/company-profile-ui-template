@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { BRAND } from '../../../data/brand/brand.data';
 import { URLS } from '../../../data/constant';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { InformationService } from '../../../service/information/information.service';
 import { PaymentService } from '../../../service/payment/payment.service';
-import { ThemeService } from '../../../service/theme/theme.service';
 
 @Component( {
   selector: 'app-callback-page',
@@ -21,25 +21,20 @@ export class CallbackPageComponent implements OnInit {
 
   error = '';
 
-  brand = {
-    brandLogo: '',
-  };
-
   URLS = URLS;
+  BRAND = BRAND;
 
   constructor(
       private route: ActivatedRoute,
       private router: Router,
-      private themeService: ThemeService,
       private authenticationService: AuthenticationService,
       private informationService: InformationService,
       private paymentService: PaymentService
   ) {
+    // Intentionally blank
   }
 
   ngOnInit(): void {
-    this.brand = this.themeService.brand;
-
     this.oauth = this.route.snapshot.data.oauth;
     this.payment = this.route.snapshot.data.payment;
 

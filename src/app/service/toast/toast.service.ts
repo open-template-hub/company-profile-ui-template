@@ -9,9 +9,7 @@ export class ToastService {
 
   darkLightSetting: string;
 
-  constructor(
-      private toastrService: ToastrService,
-      private themeService: ThemeService ) {
+  constructor( private toastrService: ToastrService, private themeService: ThemeService ) {
 
     this.themeService.darkLightSetting.subscribe( darkLightSetting => {
       this.darkLightSetting = darkLightSetting;

@@ -1,8 +1,120 @@
-import { CommandType } from 'src/app/data/command-type.enum';
+import { CommandType } from 'src/app/data/command-type/command-type.enum';
 import { environmentCommon } from '../../../environments/environment-common';
 import { ProductLine } from '../../model/product/product.model';
 import { ThemeColorSettings } from '../constant';
 import { PRICING_RIBBONS } from '../ribbon/ribbon.data';
+
+const DEFAULT_FEATURES = [
+  {
+    name: 'Core Features',
+    details: [
+      {
+        name: 'Open Source',
+        description:
+            'Customers that pay per user can send out as many signature requests as they want per month!',
+      },
+      {
+        name: 'Templates',
+        description:
+            'Streamline documents that need to be reused and sent out for eSignature frequently.',
+      },
+      {
+        name: 'Audio Trail',
+        description:
+            'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
+      },
+    ],
+  },
+  {
+    name: 'Security and Trust',
+    details: [
+      {
+        name: 'Signature requests',
+        description:
+            'Customers that pay per user can send out as many signature requests as they want per month!',
+      },
+      {
+        name: 'Templates',
+        description:
+            'Streamline documents that need to be reused and sent out for eSignature frequently.',
+      },
+      {
+        name: 'Audio Trail',
+        description:
+            'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
+      },
+    ],
+  },
+  {
+    name: 'Data Validation',
+    details: [
+      {
+        name: 'Signature requests',
+        description:
+            'Customers that pay per user can send out as many signature requests as they want per month!',
+      },
+      {
+        name: 'Templates',
+        description:
+            'Streamline documents that need to be reused and sent out for eSignature frequently.',
+      },
+      {
+        name: 'Audio Trail',
+        description:
+            'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
+      },
+    ],
+  },
+];
+
+const DEFAULT_PRICING_OPTIONS = [
+  {
+    title: 'STARTER',
+    price: {
+      currency: '$',
+      value: '9',
+      subscriptionTime: 'mo.',
+    },
+    features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
+    styles: {
+      width: '300px',
+      height: '400px',
+      fontSize: '1em',
+      featureHeight: '10em',
+    },
+  },
+  {
+    title: 'BASIC',
+    ribbon: PRICING_RIBBONS.get( 'deal' ),
+    price: {
+      currency: '$',
+      value: '49',
+      subscriptionTime: 'mo.',
+    },
+    features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true' ],
+    styles: {
+      width: '370px',
+      height: '520px',
+      fontSize: '1.2em',
+      featureHeight: '13em',
+    },
+  },
+  {
+    title: 'PRO',
+    price: {
+      currency: '$',
+      value: '99',
+      subscriptionTime: 'mo.',
+    },
+    features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true' ],
+    styles: {
+      width: '300px',
+      height: '400px',
+      fontSize: '1em',
+      featureHeight: '10em',
+    },
+  },
+];
 
 export const PRODUCT_LINES: ProductLine[] = [
   {
@@ -13,126 +125,12 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'auth-server-template',
         name: 'Auth Server',
-        description:
-            'Auth Server Template is an open source authentication server that has simple and generic design to connect your authentication system with every OAuth 2.0 and OAuth supporting third party companies like Google, Facebook, Twitter or LinkedIn. We are also supporting regular username password authentication system',
-        href:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github +
-            '/' +
-            'auth-server-template',
+        description: 'Auth Server Template is an open source authentication server that has simple and generic design to connect your authentication system with every OAuth 2.0 and OAuth supporting third party companies like Google, Facebook, Twitter or LinkedIn. We are also supporting regular username password authentication system',
+        href: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'auth-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/auth-server-logo.min.png',
         openSource: true,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Open Source',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true' ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
       },
       {
         key: 'payment-server-template',
@@ -147,124 +145,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             'payment-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/payment-server-logo.min.png',
         openSource: true,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Open Source',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [
-              'Up to 10 users',
-              'Maximum 100 photos/mo.',
-              '500 queries',
-            ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [
-              'Unlimited users',
-              'Unlimited photos/mo.',
-              '5000 queries',
-            ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
       },
       {
         key: 'file-storage-server-template',
@@ -279,124 +161,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             'file-storage-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/file-storage-server-logo.min.png',
         openSource: true,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Open Source',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [
-              'Up to 10 users',
-              'Maximum 100 photos/mo.',
-              '500 queries',
-            ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [
-              'Unlimited users',
-              'Unlimited photos/mo.',
-              '5000 queries',
-            ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
       },
       {
         key: 'mail-server-template',
@@ -411,124 +177,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             'mail-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/mail-server-logo.min.png',
         openSource: true,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Open Source',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [
-              'Up to 10 users',
-              'Maximum 100 photos/mo.',
-              '500 queries',
-            ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [
-              'Unlimited users',
-              'Unlimited photos/mo.',
-              '5000 queries',
-            ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
       },
       {
         key: 'analytics-server-template',
@@ -542,124 +192,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             'analytics-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/analytics-server-logo.min.png',
         openSource: true,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Open Source',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [
-              'Up to 10 users',
-              'Maximum 100 photos/mo.',
-              '500 queries',
-            ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [
-              'Unlimited users',
-              'Unlimited photos/mo.',
-              '5000 queries',
-            ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
       },
       {
         key: 'business-logic-server-template',
@@ -673,124 +207,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             'business-logic-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/business-logic-server-logo.min.png',
         openSource: true,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Open Source',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '50 queries' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [
-              'Up to 10 users',
-              'Maximum 100 photos/mo.',
-              '500 queries',
-            ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [
-              'Unlimited users',
-              'Unlimited photos/mo.',
-              '5000 queries',
-            ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
       },
     ],
   },
@@ -811,116 +229,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             'company-profile-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
         openSource: true,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Open Source',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true' ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
       },
       {
         key: 'web-ui-template',
@@ -934,116 +244,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             'web-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
         openSource: true,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Open Source',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true' ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
       },
       {
         key: 'mobile-ui-template',
@@ -1057,116 +259,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             'mobile-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/mobile-ui-logo.min.png',
         openSource: true,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Open Source',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true' ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
       },
     ],
   },
@@ -1188,116 +282,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             'server-generator',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Open Source',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true' ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
         commandLines: [
           {
             command: 'open-template-hub-server-generator',
@@ -1345,116 +331,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             'app-generator',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Open Source',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true' ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
         commandLines: [
           {
             command: 'open-template-hub-app-generator',
@@ -1507,116 +385,8 @@ export const PRODUCT_LINES: ProductLine[] = [
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/orchestration-server-logo.min.png',
         color: ThemeColorSettings.yellow,
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: 'STARTER',
-            price: {
-              currency: '$',
-              value: '9',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-          {
-            title: 'BASIC',
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
-            price: {
-              currency: '$',
-              value: '49',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true' ],
-            styles: {
-              width: '370px',
-              height: '520px',
-              fontSize: '1.2em',
-              featureHeight: '13em',
-            },
-          },
-          {
-            title: 'PRO',
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: 'mo.',
-            },
-            features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true' ],
-            styles: {
-              width: '300px',
-              height: '400px',
-              fontSize: '1em',
-              featureHeight: '10em',
-            },
-          },
-        ],
+        features: DEFAULT_FEATURES,
+        pricingOptions: DEFAULT_PRICING_OPTIONS,
       },
     ],
   },
@@ -1638,48 +408,7 @@ export const SERVICES: ProductLine[] = [
             '/' +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
-        features: [
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
+        features: DEFAULT_FEATURES,
       },
       {
         key: 'software-integration',
@@ -1691,48 +420,7 @@ export const SERVICES: ProductLine[] = [
             '/' +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-pieces.min.png',
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Data Validation',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
+        features: DEFAULT_FEATURES,
       },
       {
         key: 'quality-assurance',
@@ -1744,48 +432,7 @@ export const SERVICES: ProductLine[] = [
             '/' +
             environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-shine.min.png',
-        features: [
-          {
-            name: 'Core Features',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-          {
-            name: 'Security and Trust',
-            details: [
-              {
-                name: 'Signature requests',
-                description:
-                    'Customers that pay per user can send out as many signature requests as they want per month!',
-              },
-              {
-                name: 'Templates',
-                description:
-                    'Streamline documents that need to be reused and sent out for eSignature frequently.',
-              },
-              {
-                name: 'Audio Trail',
-                description:
-                    'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
-              },
-            ],
-          },
-        ],
+        features: DEFAULT_FEATURES,
       },
     ],
   },

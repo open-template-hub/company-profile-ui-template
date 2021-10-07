@@ -40,15 +40,16 @@
   & .body {
     @include card.default-body;
 
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     // Design
     height: 420px;
+    padding: 20px;
 
     & > * {
       max-width: 100%;
       max-height: 200px;
-      margin: 10px 0;
+      margin: 10px 0 0;
     }
 
   }
@@ -76,7 +77,6 @@
   .timeline-card {
 
     & .body {
-      padding: 30px 20px 20px;
       font-size: 16px;
     }
 
@@ -129,7 +129,6 @@
     }
 
     & .body {
-      padding: 50px 50px 20px;
       font-size: 18px;
     }
 

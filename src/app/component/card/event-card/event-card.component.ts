@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { DEFAULT_RIBBON, EVENT_RIBBONS } from 'src/app/data/ribbon/ribbon.data';
 import { URLS } from '../../../data/constant';
 import { BusinessLogicService } from '../../../service/business-logic/business-logic.service';
-import { DEFAULT_RIBBON, EVENT_RIBBONS } from 'src/app/data/ribbon/ribbon.data';
 
 @Component({
   selector: 'app-event-card',

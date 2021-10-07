@@ -1,11 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { BRAND } from '../../../../data/brand/brand.data';
 import { INFORMATION_TYPES, URLS } from '../../../../data/constant';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { InformationService } from '../../../../service/information/information.service';
 import { LoadingService } from '../../../../service/loading/loading.service';
-import { ThemeService } from '../../../../service/theme/theme.service';
 
 @Component( {
   selector: 'app-verify-account-page',
@@ -20,18 +20,12 @@ export class VerifyAccountPageComponent implements OnInit, OnDestroy {
   error = '';
   token = '';
 
-  brand = {
-    brandLogoBroken: '',
-    brandLogoMerge: '',
-    brandLogoMerged: '',
-  };
-
   URLS = URLS;
+  BRAND = BRAND;
 
   constructor( private route: ActivatedRoute,
       public router: Router,
       private authenticationService: AuthenticationService,
-      private themeService: ThemeService,
       private loadingService: LoadingService,
       private informationService: InformationService
   ) {
@@ -46,8 +40,6 @@ export class VerifyAccountPageComponent implements OnInit, OnDestroy {
       this.authenticationService.verify( this.token )
       .pipe( first() ).subscribe();
     } );
-
-    this.brand = this.themeService.brand;
   }
 
   ngOnDestroy() {

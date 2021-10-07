@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { INFORMATION_TYPES, URLS } from 'src/app/data/constant';
-import { ThemeService } from '../../../../service/theme/theme.service';
+import { BRAND } from '../../../../data/brand/brand.data';
 
 @Component( {
   selector: 'app-not-found-page',
@@ -11,15 +11,9 @@ import { ThemeService } from '../../../../service/theme/theme.service';
 export class NotFoundPageComponent {
 
   URLS = URLS;
+  BRAND = BRAND;
   INFORMATION_TYPES = INFORMATION_TYPES;
 
-  brand = {
-    brandLogoBroken: '',
-  };
-
-  constructor(
-      public router: Router,
-      private themeService: ThemeService ) {
-    this.brand = themeService.brand;
+  constructor( public router: Router ) {
   }
 }

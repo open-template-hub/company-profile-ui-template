@@ -4,7 +4,6 @@ export const enum EventTypes {
   Recommended,
   Searched,
   Attended,
-  RecommendedByFollowingList,
   Other
 }
 
@@ -18,7 +17,7 @@ export const attendedEventsData = [
     duration: 45,
     createdDate: '2021-07-03T08:05:54.001Z',
     user: {
-      username: 'gandalf',
+      username: 'instructor1',
       email: null
     },
     payload: {
@@ -44,7 +43,7 @@ export const attendedEventsData = [
     duration: 45,
     createdDate: '2021-07-03T08:10:48.916Z',
     user: {
-      username: 'gandalf', email: null
+      username: 'instructor1', email: null
     },
     payload: {
       description: 'Python basics',
@@ -68,7 +67,7 @@ export const attendedEventsData = [
     duration: 50,
     createdDate: '2021-07-03T08:10:48.916Z',
     user: {
-      username: 'gandalf', email: null
+      username: 'instructor2', email: null
     },
     payload: {
       description: 'Python basics',
@@ -92,7 +91,7 @@ export const attendedEventsData = [
     duration: 45,
     createdDate: '2021-07-03T08:05:54.001Z',
     user: {
-      username: 'gandalf',
+      username: 'instructor3',
       email: null
     },
     payload: {
@@ -118,7 +117,7 @@ export const attendedEventsData = [
     duration: 45,
     createdDate: '2021-07-03T08:10:48.916Z',
     user: {
-      username: 'gandalf', email: null
+      username: 'instructor4', email: null
     },
     payload: {
       description: 'Python basics',
@@ -142,7 +141,7 @@ export const attendedEventsData = [
     duration: 50,
     createdDate: '2021-07-03T08:10:48.916Z',
     user: {
-      username: 'gandalf', email: null
+      username: 'instructor5', email: null
     },
     payload: {
       description: 'Python basics',
@@ -161,7 +160,7 @@ export const attendedEventsData = [
 
 export const unratedCompletedEventsData = [
   {
-    _id: 'gollum',
+    _id: 'user1',
     completedEvents: [
       {
         _id: '60e08389fdc012001e1ad181',
@@ -178,7 +177,7 @@ export const unratedCompletedEventsData = [
       {
         _id: '60e1855f14c710001efecfb5',
         user: {
-          username: 'gandalf', email: null
+          username: 'instructor1', email: null
         },
         title: 'Mobile Development Fundamentals',
         payload:
@@ -191,7 +190,7 @@ export const unratedCompletedEventsData = [
       {
         _id: '60e184f414c710001efecfa0',
         user: {
-          username: 'gandalf', email: null
+          username: 'instructor2', email: null
         },
         title: 'Data Science 101',
         payload:

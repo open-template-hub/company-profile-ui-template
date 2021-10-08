@@ -16,7 +16,8 @@
 
   text-align: center;
 
-  & .hero-left, & .hero-right {
+  & .hero-left,
+  & .hero-right {
     @include util.flex-layout-column;
     @include util.flex-center-center;
   }
@@ -46,6 +47,10 @@
     & .counter {
       color: var(--theme-color);
       font-weight: 400;
+    }
+
+    & .loader {
+      padding: 16px;
     }
 
     & .description {
@@ -146,16 +151,16 @@
 }
 
 @media only screen and (min-width: 1000px) {
-
   .hero {
     flex-direction: row;
     padding-bottom: 50px;
 
-    & .hero-left, &.hero-right {
+    & .hero-left,
+    &.hero-right {
       min-width: 450px;
     }
 
-    & .hero-left, {
+    & .hero-left {
       font-size: 36px;
       max-width: 50%;
 
@@ -202,6 +207,4 @@
   app-swiper-wrapper {
     margin: 80px 0 50px;
   }
-
 }
-

@@ -1,5 +1,6 @@
 @use '../../../../styles/util/util';
 @use '../../../component/card/card.component';
+@use '../../../component/content-loader/box-content-loader/box-content-loader.component';
 
 .product-page-content {
   @include util.flex-layout-column;
@@ -29,15 +30,6 @@
 
   & a {
     letter-spacing: 0.04em;
-  }
-}
-
-:host ::ng-deep app-box-content-loader app-content-loader .loader {
-  & .box-content {
-    height: 60px;
-    width: 160px;
-    margin-top: 10px;
-    margin-left: 60px;
   }
 }
 
@@ -207,6 +199,7 @@ app-swiper-wrapper {
     flex-direction: column;
     padding-top: 40px;
     padding-bottom: 80px;
+    align-items: center;
   }
 
   .counter-wrapper {

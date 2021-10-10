@@ -65,26 +65,7 @@
 
 <!-- Business partners -->
 <div class="business-partners-wrapper">
-  <app-swiper-wrapper
-    [breakpoints]="{
-      '640': {
-        slidesPerView: 1,
-        spaceBetween: 30
-      },
-      '768': {
-        slidesPerView: 2,
-        spaceBetween: 40
-      },
-      '1000': {
-        slidesPerView: 3,
-        spaceBetween: 50
-      }
-    }"
-    [height]="100"
-    [isGrayscale]="true"
-    [isNavigationEnabled]="true"
-    [isPaginationEnabled]="true"
-    [partners]="PARTNERS">
-  </app-swiper-wrapper>
+  <app-business-partner-swiper [partners]="PARTNERS">
+  </app-business-partner-swiper>
   <app-cookies></app-cookies>
 </div>

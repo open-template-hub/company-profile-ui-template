@@ -1,0 +1,18 @@
+<swiper
+  [autoplay]="{
+      delay: 2500,
+      disableOnInteraction: false
+    }"
+  [breakpoints]="breakpoints"
+  [loopFillGroupWithBlank]="true"
+  [loop]="true"
+  [navigation]="isNavigationEnabled"
+  [pagination]="isPaginationEnabled ? {
+      clickable: true
+    } : undefined"
+  [slidesPerView]="1"
+  [spaceBetween]="10">
+  <ng-template *ngFor="let item of items" swiperSlide>
+    <img [class.grayscale]="isGrayscale" [height]="height" [src]="item" width="auto" alt="logo" class="brand-logo"/>
+  </ng-template>
+</swiper>

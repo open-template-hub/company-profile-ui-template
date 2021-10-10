@@ -1,6 +1,6 @@
 @use '../../../../../node_modules/swiper/swiper-bundle.min.css';
 
-app-swiper-wrapper {
+app-presentation-swiper {
   margin: 0 auto;
   position: relative;
 
@@ -66,13 +66,13 @@ app-swiper-wrapper {
 }
 
 @media only screen and (max-width: 999px) {
-  app-swiper-wrapper {
+  app-presentation-swiper {
     width: 70%;
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  app-swiper-wrapper {
+  app-presentation-swiper {
     width: 850px;
   }
 }

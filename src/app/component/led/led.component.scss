@@ -1,0 +1,17 @@
+.led {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+@mixin set-led-color($name, $color, $box-shadow-color-1, $box-shadow-color-2, $box-shadow-color-3) {
+  .led.#{$name} {
+    background-color: #{$color};
+    box-shadow: #{$box-shadow-color-1} 0 -1px 7px 1px, inset #{$box-shadow-color-2} 0 -1px 9px, #{$box-shadow-color-3} 0 2px 12px;
+  }
+}
+
+@include set-led-color("red", #940, #000, #600, #F00);
+@include set-led-color("yellow", #A90, #000, #660, #DD0);
+@include set-led-color("green", #690, #000, #460, #7D0);
+@include set-led-color("blue", #4AB, #000, #006, #06F);

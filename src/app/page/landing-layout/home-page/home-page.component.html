@@ -9,13 +9,16 @@
   </div>
 
   <div class="hero-right">
+    <app-image-content-loader
+            *ngIf="!brandLogoLoaded" [imageContentLoaderClass]="'brand-logo-main'"></app-image-content-loader>
     <img
       [src]="
         'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/oth-packages.min.png'
       "
       alt="oth-packages"
       width="800"
-      height="450" />
+      height="450"
+      (load)="setBrandLogoLoaded()" />
   </div>
 </div>
 <div class="counters">

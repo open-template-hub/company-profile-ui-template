@@ -86,7 +86,7 @@ export const environmentCommon = {
       cssClass: 'paypal',
       version: '5.0.128',
       tag: environment.payment.paypal.tag,
-      clientId: environment.payment.paypal.cliendId,
+      clientId: environment.payment.paypal.clientId,
       env: environment.payment.paypal.env
     },
     instagram: {

@@ -6,7 +6,7 @@
         (height ? 'height:' + height + 'px;' : '')
       "
       [class]="
-        boxContentLoaderClass ? boxContentLoaderClass + ' box' : 'box'
+        'box' + (boxContentLoaderClass ? ' ' + boxContentLoaderClass : '')
       "></div>
   </ng-template>
 </app-content-loader>

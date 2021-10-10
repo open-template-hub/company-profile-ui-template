@@ -2,11 +2,11 @@
 @use '../../card/card.component';
 
 .employee-card {
-
   & .header {
     // Design
     margin-top: -60px;
     text-align: center;
+    align-self: center;
 
     & .profile-image {
       @include util.margin-x-auto;

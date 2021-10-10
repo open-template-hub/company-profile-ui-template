@@ -6,8 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./image-content-loader.component.scss'],
 })
 export class ImageContentLoaderComponent implements OnInit {
-  @Input() size: string;
-
+  @Input() imageContentLoaderClass?: string;
   constructor() {
     /* Intentionally blank */
   }

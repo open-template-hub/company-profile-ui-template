@@ -47,10 +47,10 @@
   </div>
 
   <div class="counters" *ngIf="isOpenSource && !product.counters">
-    <app-box-content-loader [boxContentLoaderClass]="'box-content'"></app-box-content-loader>
-    <app-box-content-loader [boxContentLoaderClass]="'box-content'"></app-box-content-loader>
-    <app-box-content-loader [boxContentLoaderClass]="'box-content'"></app-box-content-loader>
-    <app-box-content-loader [boxContentLoaderClass]="'box-content'"></app-box-content-loader>
+    <app-box-content-loader [boxContentLoaderClass]="'product-counter'"></app-box-content-loader>
+    <app-box-content-loader [boxContentLoaderClass]="'product-counter margined'"></app-box-content-loader>
+    <app-box-content-loader [boxContentLoaderClass]="'product-counter margined'"></app-box-content-loader>
+    <app-box-content-loader [boxContentLoaderClass]="'product-counter margined'"></app-box-content-loader>
   </div>
   <div *ngIf="product.counters" class="counters">
     <a

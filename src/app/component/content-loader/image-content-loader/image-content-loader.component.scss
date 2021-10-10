@@ -4,4 +4,22 @@
   @include default-background;
 
   animation: animate-color 2s infinite;
+
+  &.dropdown-item {
+    width: 50px;
+    height: 50px;
+    border-radius: 2px;
+  }
+
+  &.brand-logo-main {
+    width: 800px;
+    height: 450px;
+    border-radius: 12px;
+  }
+
+  &.employee-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+  }
 }

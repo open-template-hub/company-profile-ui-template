@@ -6,4 +6,24 @@
   border-radius: 5px;
 
   animation: animate-color 2s infinite;
+
+  &.product-counter {
+    height: 40px;
+    width: 160px;
+    margin-top: 10px;
+
+    &.margined {
+      margin-left: 6vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .box {
+    &.product-counter {
+      &.margined {
+        margin-left: 0vw;
+      }
+    }
+  }
 }

@@ -14,8 +14,6 @@
       & p {
         color: var(--theme-color);
         font-weight: 400;
-        margin-top: 15px;
-        margin-bottom: 10px;
       }
 
       & .link-group {
@@ -39,10 +37,16 @@
 
         & p {
           text-align: center;
+          min-height: 48px;
         }
 
         & .link-group {
           @include util.flex-center-center;
+
+
+          & .link-item {
+            min-height: 48px;
+          }
         }
       }
     }
@@ -61,6 +65,10 @@
       & .column {
         max-width: 250px;
         margin: 0 20px;
+
+        & p, & .link-item {
+          margin: 0 0 15px;
+        }
       }
     }
   }
@@ -69,7 +77,6 @@
 @media (hover: hover) {
 
   .link-item {
-
     &:hover {
       background: none;
       color: var(--theme-color);

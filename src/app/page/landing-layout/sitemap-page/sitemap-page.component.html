@@ -56,12 +56,6 @@
           <div class="link-inner-column">
             <div class="link-group">
               <p>Developers</p>
-              <app-ext-link [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
-                            [linkClass]="'align-flex-start link'">
-          <span body>
-            Open Source
-          </span>
-              </app-ext-link>
               <a [routerLink]="URLS.maintenance" class="link-item">
                 Docs
               </a>
@@ -70,10 +64,6 @@
               </a>
               <a [routerLink]="URLS.status" class="link-item">
                 Status
-              </a>
-              <!-- TODO: Remove this after development is done -->
-              <a [routerLink]="URLS.settings.editTheme" class="link-item">
-                Theme
               </a>
             </div>
             <div class="link-group">

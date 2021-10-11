@@ -23,12 +23,12 @@ export class FooterComponent {
   PRODUCT_LINES: ProductLine[] = PRODUCT_LINES;
   SERVICES: ProductLine[] = SERVICES;
   BRAND = BRAND;
+  URLS = URLS;
 
   appVersion = '1.0.0';
 
   environment = environment;
   environmentCommon = environmentCommon;
-  URLS = URLS;
 
   constructor( private router: Router, private themeService: ThemeService ) {
     this.appVersion = themeService.appVersion;

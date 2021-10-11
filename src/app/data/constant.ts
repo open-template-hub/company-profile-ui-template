@@ -94,6 +94,7 @@ export const URLS_RAW = {
   resetPassword: 'reset-password',
   contactUs: 'contact-us',
   status: 'status',
+  sitemap: 'sitemap',
   u: 'u',
   // SplashLayout
   callback: {
@@ -146,6 +147,7 @@ export const URLS = {
   resetPassword: '/' + URLS_RAW.resetPassword,
   contactUs: '/' + URLS_RAW.contactUs,
   status: '/' + URLS_RAW.status,
+  sitemap: '/' + URLS_RAW.sitemap,
   u: '/' + 'u',
   // SplashLayout
   callback: {

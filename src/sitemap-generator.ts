@@ -1,6 +1,6 @@
 const url = 'https://opentemplatehub.com';
 
-const exposedRoutemap = [
+const exposedRouteMap = [
   {
     path: '',
     children: [
@@ -8,6 +8,7 @@ const exposedRoutemap = [
       { path: '/contact-us', children: null },
       { path: '/branding', children: null },
       { path: '/terms', children: null },
+      { path: '/sitemap', children: null },
       {
         path: '/product',
         children: [
@@ -72,7 +73,7 @@ function getSitemap(path, routes) {
 let sitemap =
   '<?xml version="1.0" encoding="UTF-8"?>' +
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-sitemap += getSitemap(url, exposedRoutemap);
+sitemap += getSitemap(url, exposedRouteMap);
 sitemap += '</urlset>';
 
 console.log(sitemap);

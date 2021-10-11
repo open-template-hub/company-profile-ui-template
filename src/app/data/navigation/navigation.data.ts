@@ -111,6 +111,12 @@ export const NAVIGATIONS = {
     description: BRAND.name + ': Status',
     keywords: [ BRAND.name, 'oth', 'Status' ],
   },
+  sitemap: {
+    url: 'sitemap',
+    title: 'Sitemap - ' + BRAND.name,
+    description: BRAND.name + ': Sitemap',
+    keywords: [ BRAND.name, 'oth', 'Sitemap' ],
+  },
   u: {
     url: 'u',
     title: 'User - ' + BRAND.name,

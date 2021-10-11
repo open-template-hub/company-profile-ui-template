@@ -98,6 +98,7 @@ import { SplashLayoutComponent } from './page/splash-layout/splash-layout.compon
 import { LedComponent } from './component/led/led.component';
 import { BusinessPartnerSwiperComponent } from './component/swiper/business-partner-swiper/business-partner-swiper.component';
 import { PresentationSwiperComponent } from './component/swiper/presentation-swiper/presentation-swiper.component';
+import { SitemapPageComponent } from './page/landing-layout/sitemap-page/sitemap-page.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -183,6 +184,7 @@ FullCalendarModule.registerPlugins( [
     LedComponent,
     BusinessPartnerSwiperComponent,
     PresentationSwiperComponent,
+    SitemapPageComponent,
   ],
   imports: [
     BrowserModule,

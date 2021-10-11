@@ -1,0 +1,78 @@
+@use '../landing-layout.component';
+@use '../../../component/card/card.component';
+@use '../../../../styles/util/util';
+
+.form-page-layout {
+  & .body {
+    @include card.default-body;
+
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 30px 0 50px;
+
+    & .column {
+      & p {
+        color: var(--theme-color);
+        font-weight: 400;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+
+      & .link-group {
+        @include util.flex-layout-column;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 999px) {
+
+  .form-page-layout {
+    & .body {
+      @include util.flex-center-center;
+
+      width: 94vw;
+
+      & .column {
+        @include util.flex-center-center;
+
+        & p {
+          text-align: center;
+        }
+
+        & .link-group {
+          @include util.flex-center-center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .form-page-layout {
+    & .body {
+      width: 550px;
+
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      & .column {
+        max-width: 250px;
+        margin: 0 20px;
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+
+  .link-item {
+
+    &:hover {
+      background: none;
+      color: var(--theme-color);
+    }
+  }
+}

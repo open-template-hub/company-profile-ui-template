@@ -4,6 +4,7 @@
 .status-card {
   & .header {
     display: flex;
+
     & .available-icon-status {
       margin-left: auto;
     }
@@ -14,6 +15,7 @@
       align-items: center;
       color: var(--color);
       padding: 15px;
+
       & app-led {
         margin-right: 12px;
       }
@@ -26,6 +28,8 @@
     min-height: 120px;
     display: flex;
     flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 50px;
 
     & .status-section {
       @include util.flex-layout-column;
@@ -44,9 +48,7 @@
           left: 25px;
         }
 
-        border: 1px solid var(--contrast);
-        border-left: none;
-        border-right-color: var(--color);
+        border-top: 1px solid var(--darker-contrast);
 
         & i {
           margin-left: auto;
@@ -92,6 +94,7 @@
   & .footer {
     @include card.default-footer;
     @include util.flex-layout-row;
+    @include card.default-footer-border-color;
 
     justify-content: space-between;
     align-items: center;
@@ -105,7 +108,7 @@
 
     & small {
 
-      width: 25%;
+      min-width: 15%;
       text-align: left;
 
       &:first-child {

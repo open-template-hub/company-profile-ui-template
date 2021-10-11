@@ -1,65 +1,43 @@
-<app-card *ngIf="overallSystemStatus.systemStatuses" [headerTemplate]="headerTemplate"
-          [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
-          class="status-card">
-  <!-- Header -->
-  <ng-template #headerTemplate>
-    <div class="header">
-      <div class="available-icon-status">
-        <app-led [color]="'green'"></app-led>
-        <small>Available</small>
-      </div>
-      <div class="unavailable-icon-status" *ngIf="overallSystemStatus.overall !== 'UP'">
-        <app-led [color]="'red'"></app-led>
-        <small>Unavailable</small>
-      </div>
-    </div>
-    <hr>
-  </ng-template>
+<app-card *ngIf="overallSystemStatus.systemStatuses" [bodyTemplate]="bodyTemplate"
+          [footerTemplate]="footerTemplate" class="status-card">
   <!-- Body -->
   <ng-template #bodyTemplate>
     <div class="body">
       <ng-container *ngFor="let systemStatus of overallSystemStatus.systemStatuses">
         <div class="status-section solo">
           <div class="status-column">
-            <app-led [color]="systemStatus.overall === 'UP' ? 'green' : systemStatus.overall === 'DOWN' ? 'red' : 'yellow'"></app-led>
+            <app-led
+                [color]="systemStatus.overall === 'UP' ? 'success' : systemStatus.overall === 'DOWN' ? 'error' : 'yellow'"></app-led>
             <h4>{{ systemStatus.name | titlecase }}
             </h4>
           </div>
         </div>
         <div *ngFor="let status of systemStatus.statuses; index as i" class="status-section">
           <div class="status-column" *ngIf="i % 2 == 0">
-            <app-led [color]="status.alive === 'UP' ? 'green' : status.alive === 'DOWN' ? 'red' : ''"></app-led>
+            <app-led [color]="status.alive === 'UP' ? 'success' : status.alive === 'DOWN' ? 'error' : ''"></app-led>
             <h4>{{ status.name | titlecase}}
             </h4>
-            <i aria-hidden="true" class="fas fa-external-link-alt fa-lg fa-fw" (click)="navigate( systemStatus.name, status.name )"></i>
+            <i aria-hidden="true" class="fas fa-external-link-alt fa-lg fa-fw"
+               (click)="navigate( systemStatus.name, status.name )"></i>
           </div>
           <div class="status-column second" *ngIf="i % 2 != 0">
-            <app-led [color]="status.alive === 'UP' ? 'green' : status.alive === 'DOWN' ? 'red' : ''"></app-led>
+            <app-led [color]="status.alive === 'UP' ? 'success' : status.alive === 'DOWN' ? 'error' : ''"></app-led>
             <h4>{{ status.name | titlecase}}
             </h4>
-            <i aria-hidden="true" class="fas fa-external-link-alt fa-lg fa-fw" (click)="navigate( systemStatus.name, status.name )"></i>
+            <i aria-hidden="true" class="fas fa-external-link-alt fa-lg fa-fw"
+               (click)="navigate( systemStatus.name, status.name )"></i>
           </div>
         </div>
       </ng-container>
-
-      <div *ngIf="overallSystemStatus.overall" class="status-section solo">
-        <div class="status-column">
-          <app-led [color]="overallSystemStatus.overall === 'UP' ? 'green' : overallSystemStatus.overall === 'DOWN' ? 'red' : ''"></app-led>
-          <h4>Overall Status
-          </h4>
-        </div>
-      </div>
     </div>
   </ng-template>
 
   <!-- Footer -->
   <ng-template #footerTemplate>
-    <div [class.error-border]="overallSystemStatus.overall === 'DOWN'"
-         [class.success-border]="overallSystemStatus.overall === 'UP'"
-         [class.warning-border]="!overallSystemStatus.overall"
-         class="footer">
+    <div class="footer">
       <small>{{ overallSystemStatus.checkDate ? 'Last check ' + ( overallSystemStatus.checkDate | date: 'dd MMM, HH:mm:ss' ) : '' }}</small>
-      <small *ngIf="overallSystemStatus.overall === 'UP'">All systems are online</small>
+      <small>Overall Status: </small>
+      <app-led [color]="overallSystemStatus.overall === 'UP' ? 'success' : 'error'"></app-led>
     </div>
   </ng-template>
 </app-card>

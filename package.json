@@ -50,7 +50,7 @@
     "graphql-tag": "^2.12.5",
     "helmet": "^4.6.0",
     "ics": "^2.29.0",
-    "jsdom": "^17.0.0",
+    "jsdom": "^18.0.0",
     "ng2-date-picker": "^12.0.3",
     "ng2-tooltip-directive": "^2.10.1",
     "ngx-image-cropper": "^4.0.1",

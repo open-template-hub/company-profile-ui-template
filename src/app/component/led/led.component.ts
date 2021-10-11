@@ -1,17 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-@Component({
+@Component( {
   selector: 'app-led',
   templateUrl: './led.component.html',
-  styleUrls: ['./led.component.scss']
-})
-export class LedComponent implements OnInit {
+  styleUrls: [ './led.component.scss' ]
+} )
+export class LedComponent {
 
   @Input() color: 'green' | 'red' | 'yellow' | 'blue' | '' = 'yellow';
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
+    // Intentionally blank
   }
-
 }

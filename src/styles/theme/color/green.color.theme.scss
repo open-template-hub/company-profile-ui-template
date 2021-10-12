@@ -27,7 +27,7 @@
   --hover-green-theme-darker: rgba(67, 176, 67, 0.6);
 }
 
-:root .green-theme, .light-theme.green-theme {
+:root .green-theme, :root .light-theme.green-theme {
 
   --theme-color: var(--theme-color-green);
   --theme-color-secondary: var(--theme-color-green-secondary);

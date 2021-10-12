@@ -27,7 +27,7 @@
   --hover-pink-theme-darker: rgba(205, 104, 185, 0.6);
 }
 
-:root .pink-theme, .light-theme.pink-theme {
+:root .pink-theme, :root .light-theme.pink-theme {
 
   --theme-color: var(--theme-color-pink);
   --theme-color-secondary: var(--theme-color-pink-secondary);

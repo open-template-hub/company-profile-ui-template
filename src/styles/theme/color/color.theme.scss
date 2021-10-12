@@ -57,7 +57,7 @@
   // [DARK MODE END]
 }
 
-:root, .light-theme {
+:root, :root .light-theme {
   // color scale
   --lighter: var(--lighter-light-mode);
   --color: var(--color-light-mode);

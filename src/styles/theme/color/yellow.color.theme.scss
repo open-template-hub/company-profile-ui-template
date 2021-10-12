@@ -27,7 +27,7 @@
   --hover-yellow-theme-darker: rgba(214, 177, 64, 0.6);
 }
 
-:root .yellow-theme, .light-theme.yellow-theme {
+:root .yellow-theme, :root .light-theme.yellow-theme {
 
   --theme-color: var(--theme-color-yellow);
   --theme-color-secondary: var(--theme-color-yellow-secondary);

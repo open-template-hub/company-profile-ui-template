@@ -122,6 +122,10 @@
 
       min-height: 48px;
     }
+
+    & p {
+      text-decoration: underline;
+    }
   }
 
   .footer-link-inner-column {
@@ -169,6 +173,7 @@
 
     & p {
       margin: 20px 0 4px;
+      border-bottom: 1px solid var(--theme-color);
     }
 
     &.double {

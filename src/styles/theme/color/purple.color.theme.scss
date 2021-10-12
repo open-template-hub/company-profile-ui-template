@@ -27,7 +27,7 @@
   --hover-purple-theme-darker: rgba(137, 104, 205, 0.6);
 }
 
-:root .purple-theme, .light-theme.purple-theme {
+:root .purple-theme, :root .light-theme.purple-theme {
 
   --theme-color: var(--theme-color-purple);
   --theme-color-secondary: var(--theme-color-purple-secondary);

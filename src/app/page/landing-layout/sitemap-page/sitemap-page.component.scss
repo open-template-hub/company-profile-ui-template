@@ -8,7 +8,7 @@
 
     flex-wrap: wrap;
     align-items: flex-start;
-    padding: 30px 0 50px;
+    padding: 50px 0;
 
     & .column {
       & p {
@@ -37,12 +37,12 @@
 
         & p {
           text-align: center;
+          text-decoration: underline;
           min-height: 48px;
         }
 
         & .link-group {
           @include util.flex-center-center;
-
 
           & .link-item {
             min-height: 48px;
@@ -57,7 +57,7 @@
 
   .form-page-layout {
     & .body {
-      width: 550px;
+      width: 600px;
 
       flex-direction: row;
       justify-content: space-evenly;
@@ -67,7 +67,11 @@
         margin: 0 20px;
 
         & p, & .link-item {
-          margin: 0 0 15px;
+          margin: 0 0 20px;
+        }
+
+        & p {
+          border-bottom: 1px solid var(--theme-color);
         }
       }
     }

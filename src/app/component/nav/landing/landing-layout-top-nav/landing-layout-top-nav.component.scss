@@ -1,3 +1,5 @@
+@use '../../../../../styles/util/util';
+
 .top-nav {
   height: 50px;
   padding: 20px 45px;
@@ -6,16 +8,15 @@
   background-color: var(--background-color-alpha);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-}
 
-.top-nav a {
-  border-radius: 3px;
-  padding: 10px 17px;
-  display: inline-flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 500;
-  margin-right: 10px;
+  & a {
+    padding: 10px 17px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+  }
 }
 
 .brand {
@@ -23,9 +24,10 @@
 }
 
 .top-nav .right-item-wrapper .contact {
+
   color: var(--theme-color);
-  border-radius: 0;
-  border-bottom: var(--theme-color) 1px solid;
+
+  border-bottom: var(--theme-color) 2px solid;
 }
 
 .top-nav .brand > * {
@@ -70,8 +72,11 @@ app-dropdown-menu i {
   }
 
   .top-nav .right-item-wrapper .contact:hover {
+    @include util.default-border-radius;
+
+    transition: 0.3s ease-in-out;
+
     color: white;
-    border-radius: 3px;
     background-color: var(--theme-color);
   }
 

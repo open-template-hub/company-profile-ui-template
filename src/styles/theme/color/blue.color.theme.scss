@@ -27,7 +27,7 @@
   --hover-blue-theme-darker: rgba(64, 152, 214, 0.6);
 }
 
-:root .blue-theme, .light-theme.blue-theme {
+:root .blue-theme, :root .light-theme.blue-theme {
 
   --theme-color: var(--theme-color-blue);
   --theme-color-secondary: var(--theme-color-blue-secondary);

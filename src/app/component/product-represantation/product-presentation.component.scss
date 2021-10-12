@@ -24,10 +24,10 @@
 
   & .presentation-card, & .features-card {
     @include util.default-shadow;
+    @include util.default-border-radius;
 
     background-color: var(--shadow-lighter);
-    border-radius: 5px;
-
+    
     & .title, & .feature-title {
       font-size: 19px;
       margin: 15px 0;

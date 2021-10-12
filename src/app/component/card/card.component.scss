@@ -62,7 +62,8 @@
 }
 
 @mixin default-bottom-wrapper {
-  @include util.default-border-radius;
+  @include util.default-border-radius-bottom-line;
+  @include util.default-width-bottom-line;
 
   // Position
   position: absolute;
@@ -75,7 +76,6 @@
 
   // Design
   overflow: hidden;
-  width: 100%;
   height: 4px;
 }
 

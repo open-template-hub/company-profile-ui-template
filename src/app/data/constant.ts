@@ -72,7 +72,8 @@ export const ThemeColorSettings = {
 
 export const ThemeDesignSettings = {
   round: 'round-theme',
-  sharp: 'sharp-theme'
+  sharp: 'sharp-theme',
+  buble: 'buble-theme'
 };
 
 export const URLS_RAW = {

@@ -2,10 +2,16 @@
 
 :root {
   --border-radius-round: 0 6px 0 12px;
-  --border-radius-image-round: 120px;
+  --border-radius-image-round: 0 6px 0 12px;
+  --border-radius-bottom-line-round: 0 6px 0 12px;
+  --border-radius-product-line-round: var(--border-radius-round);
+  --width-bottom-line-round: 100%;
 }
 
 .round-theme {
   --border-radius: var(--border-radius-round);
   --border-radius-image: var(--border-radius-image-round);
+  --border-radius-bottom-line: var(--border-radius-bottom-line-round);
+  --border-radius-product-line: var(--border-radius-product-line-round);
+  --width-bottom-line: var(--width-bottom-line-round);
 }

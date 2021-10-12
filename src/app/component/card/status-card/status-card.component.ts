@@ -15,23 +15,40 @@ export class StatusCardComponent {
     checkDate: undefined
   };
 
-  PRODUCT_LINES = PRODUCT_LINES
+  PRODUCT_LINES = PRODUCT_LINES;
 
   constructor(
-    private router: Router
+      private router: Router
   ) {
     // Intentionally blank
   }
 
   navigate( overallStatusName: string, statusName: string ) {
-    for( const product of PRODUCT_LINES ) {
-      if( product.name.toLowerCase() === overallStatusName.toLowerCase() ) {
-        for( const subProduct of product.products ) {
+    for ( const product of PRODUCT_LINES ) {
+      if ( product.name.toLowerCase() === overallStatusName.toLowerCase() ) {
+        for ( const subProduct of product.products ) {
           if ( statusName.toLowerCase() === subProduct.name.toLowerCase() ) {
             this.router.navigate( [ URLS.product + '/' + product.key + '/' + subProduct.key ] );
             break;
           }
         }
+      }
+    }
+  }
+
+  setOverallStatusLed() {
+    switch ( this.overallSystemStatus.overall ) {
+      case 'UP': {
+        return 'success';
+      }
+      case 'WARN': {
+        return 'warning';
+      }
+      case 'DOWN': {
+        return 'error';
+      }
+      default: {
+        return 'info';
       }
     }
   }

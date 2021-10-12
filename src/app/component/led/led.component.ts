@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 } )
 export class LedComponent {
 
-  @Input() color: 'green' | 'red' | 'yellow' | 'blue' | '' = 'yellow';
+  @Input() informationType = '';
 
   constructor() {
     // Intentionally blank

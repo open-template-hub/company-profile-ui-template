@@ -7,21 +7,23 @@
         <div class="status-section solo">
           <div class="status-column">
             <app-led
-                [color]="systemStatus.overall === 'UP' ? 'success' : systemStatus.overall === 'DOWN' ? 'error' : 'yellow'"></app-led>
+                [informationType]="systemStatus.overall === 'UP' ? 'success' : systemStatus.overall === 'DOWN' ? 'error' : 'yellow'"></app-led>
             <h4>{{ systemStatus.name | titlecase }}
             </h4>
           </div>
         </div>
         <div *ngFor="let status of systemStatus.statuses; index as i" class="status-section">
           <div class="status-column" *ngIf="i % 2 == 0">
-            <app-led [color]="status.alive === 'UP' ? 'success' : status.alive === 'DOWN' ? 'error' : ''"></app-led>
+            <app-led
+                [informationType]="status.alive === 'UP' ? 'success' : status.alive === 'DOWN' ? 'error' : ''"></app-led>
             <h4>{{ status.name | titlecase}}
             </h4>
             <i aria-hidden="true" class="fas fa-external-link-alt fa-lg fa-fw"
                (click)="navigate( systemStatus.name, status.name )"></i>
           </div>
           <div class="status-column second" *ngIf="i % 2 != 0">
-            <app-led [color]="status.alive === 'UP' ? 'success' : status.alive === 'DOWN' ? 'error' : ''"></app-led>
+            <app-led
+                [informationType]="status.alive === 'UP' ? 'success' : status.alive === 'DOWN' ? 'error' : ''"></app-led>
             <h4>{{ status.name | titlecase}}
             </h4>
             <i aria-hidden="true" class="fas fa-external-link-alt fa-lg fa-fw"
@@ -36,8 +38,10 @@
   <ng-template #footerTemplate>
     <div class="footer">
       <small>{{ overallSystemStatus.checkDate ? 'Last check ' + ( overallSystemStatus.checkDate | date: 'dd MMM, HH:mm:ss' ) : '' }}</small>
-      <small>Overall Status: </small>
-      <app-led [color]="overallSystemStatus.overall === 'UP' ? 'success' : 'error'"></app-led>
+      <div class="right">
+        <small>Overall Status: </small>
+        <app-led [informationType]="setOverallStatusLed()"></app-led>
+      </div>
     </div>
   </ng-template>
 </app-card>

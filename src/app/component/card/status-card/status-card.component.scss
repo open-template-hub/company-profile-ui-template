@@ -106,13 +106,29 @@
       bottom: 20px;
     }
 
+    & .right {
+      @include util.flex-layout-row;
+      @include util.flex-center-center;
+
+      justify-content: flex-end;
+
+      & small {
+        text-align: right;
+      }
+
+      min-width: 30%;
+
+      & > * {
+        margin: 10px;
+      }
+    }
+
     & small {
 
-      min-width: 15%;
       text-align: left;
 
       &:first-child {
-        width: 75%;
+        width: 70%;
       }
     }
   }

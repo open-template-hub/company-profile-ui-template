@@ -13,12 +13,8 @@
   @include prefix(border-radius, var(--border-radius-image), moz webkit);
 }
 
-@mixin default-border-radius-bottom-line {
-  @include prefix(border-radius, var(--border-radius-bottom-line), moz webkit);
-}
-
-@mixin default-width-bottom-line {
-  @include prefix(width, var(--width-bottom-line), moz webkit);
+@mixin default-height-bottom-line {
+  @include prefix(height, var(--height-bottom-line), moz webkit);
 }
 
 @mixin default-border-radius-product-line {

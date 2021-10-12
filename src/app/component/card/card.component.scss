@@ -62,21 +62,21 @@
 }
 
 @mixin default-bottom-wrapper {
-  @include util.default-border-radius-bottom-line;
-  @include util.default-width-bottom-line;
+  @include util.default-border-radius;
+  @include util.default-height-bottom-line;
 
   // Position
   position: absolute;
   z-index: 9;
   bottom: 0;
-  left: 0;
+  right: 0;
 
   // Color
   background-color: var(--darker-contrast);
 
   // Design
   overflow: hidden;
-  height: 4px;
+  width: 100%;
 }
 
 .card {

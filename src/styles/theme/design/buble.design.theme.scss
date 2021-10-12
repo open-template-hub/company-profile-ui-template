@@ -3,15 +3,13 @@
 :root {
   --border-radius-buble: 0 3em 0 3em;
   --border-radius-image-buble: 0 3em 0 3em;
-  --border-radius-bottom-line-buble: 0 3em 0 3em;
   --border-radius-product-line-buble: 3em 0em 0em 3em;
-  --width-bottom-line-buble: 90%;
+  --height-bottom-line-buble: 0;
 }
 
 .buble-theme {
   --border-radius: var(--border-radius-buble);
   --border-radius-image: var(--border-radius-image-buble);
-  --border-radius-bottom-line: var(--border-radius-bottom-line-buble);
   --border-radius-product-line: var(--border-radius-product-line-buble);
-  --width-bottom-line: var(--width-bottom-line-buble);
+  --height-bottom-line: var(--height-bottom-line-buble);
 }

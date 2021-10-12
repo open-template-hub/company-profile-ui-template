@@ -3,15 +3,13 @@
 :root {
   --border-radius-sharp: 0;
   --border-radius-image-sharp: 0;
-  --border-radius-bottom-line-sharp: 0;
   --border-radius-product-line-sharp: var(--border-radius-sharp);
-  --width-bottom-line-sharp: 100%;
+  --height-bottom-line-sharp: 4px;
 }
 
 .sharp-theme {
   --border-radius: var(--border-radius-sharp);
   --border-radius-image: var(--border-radius-image-sharp);
-  --border-radius-bottom-line: var(--border-radius-bottom-line-sharp);
   --border-radius-product-line: var(--border-radius-product-line-sharp);
-  --width-bottom-line: var(--width-bottom-line-sharp);
+  --height-bottom-line: var(--height-bottom-line-sharp);
 }

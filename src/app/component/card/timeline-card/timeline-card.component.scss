@@ -11,13 +11,14 @@
 }
 
 @mixin marker {
+  @include util.default-border-radius;
+
   position: absolute;
   content: "";
   width: 12px;
   height: 12px;
   background-color: var(--theme-color-lighter-2);
   border: 5px solid var(--background-color);
-  border-radius: 12px;
 }
 
 .timeline-card {
@@ -25,12 +26,10 @@
   & .header {
     @include util.flex-layout-column;
     @include util.flex-center-center;
+    @include util.default-border-radius;
 
     // Design
     height: 80px;
-
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
 
     // Color
     background-color: var(--theme-color-lighter-2);

@@ -20,6 +20,7 @@
   @include util.flex-layout-column;
   @include util.margin-x-auto;
   @include util.default-shadow;
+  @include util.default-border-radius;
 
   // Position
   z-index: 10;
@@ -28,8 +29,6 @@
   overflow: hidden;
   width: 100%;
   padding: 15px 0;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
 }
 
 @mixin default-body {
@@ -86,15 +85,13 @@
   // Include
   @include util.flex-layout-column;
   @include default-card;
+  @include util.default-border-radius;
 
   // Position
   position: relative;
 
   // Color
   color: var(--contrast);
-
-  // Design
-  border-radius: 6px;
 
   & .header {
     @include default-header;

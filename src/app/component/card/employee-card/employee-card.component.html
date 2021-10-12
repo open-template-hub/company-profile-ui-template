@@ -14,6 +14,7 @@
         [src]="employee.profile.photoUri"
         alt="profile-img"
         class="profile-image"
+        [style]="'display:' + (!employeePhotoLoaded ? 'none;' : 'block;')"
         onerror="this.src='./assets/common/profile-img.png'"
         (load)="setEmployeePhotoLoaded()" />
     </div>

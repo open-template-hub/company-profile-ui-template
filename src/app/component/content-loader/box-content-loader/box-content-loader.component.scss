@@ -1,9 +1,9 @@
+@use '../../../../styles/util/util';
 @import '../../../../styles/loading/loading';
 
 .box {
   @include default-background;
-
-  border-radius: 5px;
+  @include util.default-border-radius;
 
   animation: animate-color 2s infinite;
 

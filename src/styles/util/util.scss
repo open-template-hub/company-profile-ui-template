@@ -9,6 +9,10 @@
   @include prefix(border-radius, var(--border-radius), moz webkit);
 }
 
+@mixin default-border-radius-image {
+  @include prefix(border-radius, var(--border-radius-image), moz webkit);
+}
+
 @mixin no-padding-no-margin {
   padding: 0;
   margin: 0;

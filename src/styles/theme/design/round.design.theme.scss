@@ -2,8 +2,10 @@
 
 :root {
   --border-radius-round: 0 6px 0 12px;
+  --border-radius-image-round: 120px;
 }
 
 .round-theme {
   --border-radius: var(--border-radius-round);
+  --border-radius-image: var(--border-radius-image-round);
 }

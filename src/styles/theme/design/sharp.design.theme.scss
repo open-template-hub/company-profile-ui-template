@@ -2,8 +2,10 @@
 
 :root {
   --border-radius-sharp: 0;
+  --border-radius-image-sharp: 0;
 }
 
 .sharp-theme {
   --border-radius: var(--border-radius-sharp);
+  --border-radius-image: var(--border-radius-image-sharp);
 }

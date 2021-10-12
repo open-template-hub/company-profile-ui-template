@@ -1,10 +1,10 @@
+@use '../../../../styles/util/util';
 @import '../../../../styles/loading/loading';
 
 .text {
   @include default-background;
+  @include util.default-border-radius;
 
   height: 10px;
-  border-radius: 5px;
-
   animation: animate-color 2s infinite;
 }

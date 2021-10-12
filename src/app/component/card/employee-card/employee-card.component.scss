@@ -10,7 +10,7 @@
 
     & .profile-image {
       @include util.margin-x-auto;
-      @include util.circle;
+      @include util.default-border-radius-image;
 
       // Color
       background-color: var(--card);

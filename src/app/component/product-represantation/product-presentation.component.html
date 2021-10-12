@@ -29,7 +29,7 @@
                 <img [src]="BRAND.logo.main" alt="logo" class="brand-logo" width="80"/>
                 <i aria-hidden="true" class="fa fa-check-circle"></i>
                 <app-presentation-swiper
-                    [items]="product.key === 'auth-server-template' ? SOCIAL_LOGIN_PARTNERS : PAYMENT_PARTNERS"></app-presentation-swiper>
+                    [items]="getPresentationSwiper()"></app-presentation-swiper>
               </div>
               <p class="feature-title" *ngIf="product.key === 'auth-server-template'">Auth server supports social login functionality for
                 OAuth1

@@ -72,8 +72,9 @@ export const ThemeColorSettings = {
 
 export const ThemeDesignSettings = {
   round: 'round-theme',
+  counterBorders: 'counter-borders-theme',
   sharp: 'sharp-theme',
-  buble: 'buble-theme'
+  leaf: 'leaf-theme'
 };
 
 export const URLS_RAW = {

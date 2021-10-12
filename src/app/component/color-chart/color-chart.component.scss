@@ -4,7 +4,7 @@
   box-sizing: border-box;
   margin: 1px;
 
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 
   width: 18px;
   height: 18px;

@@ -92,7 +92,6 @@
     & .header {
       &::before {
         @include marker;
-        top: 3.4em;
       }
 
       &.left::before {
@@ -106,7 +105,7 @@
       &::after {
         @include arrow;
         color: var(--theme-color-lighter-2);
-        top: 3.2em;
+        top: 25px;
       }
 
       &.left::after {

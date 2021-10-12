@@ -1,0 +1,15 @@
+@use '../../util/util';
+
+:root {
+  --border-radius-counter-borders: 0 6px 0 12px;
+  --border-radius-image-counter-borders: 0 6px 0 12px;
+  --border-radius-product-line-counter-borders: var(--border-radius-counter-borders);
+  --height-bottom-line-counter-borders: 4px;
+}
+
+.counter-borders-theme {
+  --border-radius: var(--border-radius-counter-borders);
+  --border-radius-image: var(--border-radius-image-counter-borders);
+  --border-radius-product-line: var(--border-radius-product-line-counter-borders);
+  --height-bottom-line: var(--height-bottom-line-counter-borders);
+}

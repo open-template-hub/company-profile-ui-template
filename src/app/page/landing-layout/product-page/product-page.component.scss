@@ -66,10 +66,9 @@
 
   & .left {
     & .header {
-      padding: 20px;
+      @include util.default-border-radius;
 
-      border-top-left-radius: 6px;
-      border-top-right-radius: 30px;
+      padding: 20px;
 
       background-color: var(--darker-contrast);
 
@@ -81,8 +80,9 @@
       @include util.flex-center-center;
       @include util.default-shadow;
 
-      border-bottom-left-radius: 45px;
-      border-bottom-right-radius: 6px;
+      @include util.default-border-radius;
+
+      margin-top: -10px;
 
       background-color: var(--shadow-lighter);
 

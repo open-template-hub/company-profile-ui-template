@@ -15,10 +15,9 @@
 
   position: absolute;
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   background-color: var(--theme-color-lighter-2);
-  border: 5px solid var(--background-color);
 }
 
 .timeline-card {
@@ -26,7 +25,6 @@
   & .header {
     @include util.flex-layout-column;
     @include util.flex-center-center;
-    @include util.default-border-radius;
 
     // Design
     height: 80px;

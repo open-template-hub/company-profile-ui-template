@@ -10,16 +10,27 @@ import { PRODUCT_LINES } from '../../../data/product/product.data';
 } )
 export class StatusCardComponent {
   @Input() overallSystemStatus = {
-    systemStatuses: [],
+    systemStatuses: [
+      {
+        name: 'servers',
+        overall: '',
+        statuses: [
+          { name: 'Auth Server', alive: '' },
+          { name: 'Business Logic Server', alive: '' },
+          { name: 'File Storage Server', alive: '' },
+          { name: 'Payment Server', alive: '' },
+          { name: 'Analytics Server', alive: '' },
+          { name: 'Mail Server', alive: '' },
+        ]
+      }
+    ],
     overall: '',
     checkDate: undefined
   };
 
   PRODUCT_LINES = PRODUCT_LINES;
 
-  constructor(
-      private router: Router
-  ) {
+  constructor( private router: Router ) {
     // Intentionally blank
   }
 
@@ -36,19 +47,21 @@ export class StatusCardComponent {
     }
   }
 
-  setOverallStatusLed() {
-    switch ( this.overallSystemStatus.overall ) {
+  setStatusLed( status: string ) {
+    console.log( this.overallSystemStatus );
+
+    switch ( status ) {
       case 'UP': {
         return 'success';
       }
       case 'WARN': {
-        return 'warning';
+        return 'warning animate';
       }
       case 'DOWN': {
-        return 'error';
+        return 'error animate';
       }
       default: {
-        return 'info';
+        return 'info animate';
       }
     }
   }

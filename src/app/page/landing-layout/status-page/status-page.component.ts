@@ -44,8 +44,14 @@ export class StatusPageComponent {
             continue;
           }
 
+          let name = status[ 0 ].toUpperCase();
+
+          if ( status.length > 1 ) {
+            name += status.substring( 1 ).split( /(?=[A-Z])/ ).join( ' ' );
+          }
+
           systemStatus.statuses.push( {
-            name: status.split( /(?=[A-Z])/ ).join( ' ' ),
+            name,
             alive: systemStatuses[ systemStatusKey ][ status ].alive
           } );
 

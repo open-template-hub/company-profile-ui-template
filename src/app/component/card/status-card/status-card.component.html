@@ -7,7 +7,7 @@
         <div class="status-section solo">
           <div class="status-column">
             <app-led
-                [informationType]="systemStatus.overall === 'UP' ? 'success' : systemStatus.overall === 'DOWN' ? 'error' : 'yellow'"></app-led>
+                [informationType]="setStatusLed(systemStatus.overall)"></app-led>
             <h4>{{ systemStatus.name | titlecase }}
             </h4>
           </div>
@@ -15,7 +15,7 @@
         <div *ngFor="let status of systemStatus.statuses; index as i" class="status-section">
           <div class="status-column" *ngIf="i % 2 == 0">
             <app-led
-                [informationType]="status.alive === 'UP' ? 'success' : status.alive === 'DOWN' ? 'error' : ''"></app-led>
+                [informationType]="setStatusLed(status.alive)"></app-led>
             <h4>{{ status.name | titlecase}}
             </h4>
             <i aria-hidden="true" class="fas fa-external-link-alt fa-lg fa-fw"
@@ -23,7 +23,7 @@
           </div>
           <div class="status-column second" *ngIf="i % 2 != 0">
             <app-led
-                [informationType]="status.alive === 'UP' ? 'success' : status.alive === 'DOWN' ? 'error' : ''"></app-led>
+                [informationType]="setStatusLed(status.alive)"></app-led>
             <h4>{{ status.name | titlecase}}
             </h4>
             <i aria-hidden="true" class="fas fa-external-link-alt fa-lg fa-fw"
@@ -40,7 +40,7 @@
       <small>{{ overallSystemStatus.checkDate ? 'Last check ' + ( overallSystemStatus.checkDate | date: 'dd MMM, HH:mm:ss' ) : '' }}</small>
       <div class="right">
         <small>Overall Status: </small>
-        <app-led [informationType]="setOverallStatusLed()"></app-led>
+        <app-led [informationType]="setStatusLed(overallSystemStatus.overall)"></app-led>
       </div>
     </div>
   </ng-template>

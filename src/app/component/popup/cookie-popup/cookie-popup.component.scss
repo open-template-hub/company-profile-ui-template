@@ -21,7 +21,7 @@
   overflow: hidden;
 
   & > * {
-    color: var(--lighter-contrast);
+    color: var(--lighter);
   }
 }
 
@@ -46,6 +46,14 @@
 
 .accept:hover p {
   color: white;
+}
+
+.cookie-message {
+  display: flex;
+
+  & a {
+    margin-left: 5px;
+  }
 }
 
 @media only screen and (max-width: 999px) {

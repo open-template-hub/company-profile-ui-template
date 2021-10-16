@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DEFAULT_SYSTEM_STATUS } from '../../../data/status/status.data';
 import { MonitoringService } from '../../../service/monitoring/monitoring.service';
 
 @Component( {
@@ -8,11 +9,7 @@ import { MonitoringService } from '../../../service/monitoring/monitoring.servic
 } )
 export class StatusPageComponent {
 
-  overallSystemStatus = {
-    systemStatuses: [],
-    overall: '',
-    checkDate: undefined
-  };
+  overallSystemStatus = DEFAULT_SYSTEM_STATUS;
 
   constructor( private monitoringService: MonitoringService ) {
     this.monitoringService.alive();

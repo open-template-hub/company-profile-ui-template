@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { URLS } from '../../../data/constant';
 import { PRODUCT_LINES } from '../../../data/product/product.data';
+import { DEFAULT_SYSTEM_STATUS } from '../../../data/status/status.data';
 
 @Component( {
   selector: 'app-status-card',
@@ -9,24 +10,7 @@ import { PRODUCT_LINES } from '../../../data/product/product.data';
   styleUrls: [ './status-card.component.scss' ]
 } )
 export class StatusCardComponent {
-  @Input() overallSystemStatus = {
-    systemStatuses: [
-      {
-        name: 'servers',
-        overall: '',
-        statuses: [
-          { name: 'Auth Server', alive: '' },
-          { name: 'Business Logic Server', alive: '' },
-          { name: 'File Storage Server', alive: '' },
-          { name: 'Payment Server', alive: '' },
-          { name: 'Analytics Server', alive: '' },
-          { name: 'Mail Server', alive: '' },
-        ]
-      }
-    ],
-    overall: '',
-    checkDate: undefined
-  };
+  @Input() overallSystemStatus = DEFAULT_SYSTEM_STATUS;
 
   PRODUCT_LINES = PRODUCT_LINES;
 
@@ -48,8 +32,6 @@ export class StatusCardComponent {
   }
 
   setStatusLed( status: string ) {
-    console.log( this.overallSystemStatus );
-
     switch ( status ) {
       case 'UP': {
         return 'success';

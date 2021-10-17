@@ -48,14 +48,6 @@
   color: white;
 }
 
-.cookie-message {
-  display: flex;
-
-  & a {
-    margin-left: 5px;
-  }
-}
-
 @media only screen and (max-width: 999px) {
   .cookie-popup {
     bottom: calc(55px + env(safe-area-inset-bottom));

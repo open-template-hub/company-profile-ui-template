@@ -6,7 +6,7 @@
 
 
 <h1 align="center">
-Open Template Hub - Company Profile UI Template v2
+Open Template Hub - Company Profile UI Template v3
   <br/>
 (outdated packages)
 </h1>

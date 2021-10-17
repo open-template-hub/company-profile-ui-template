@@ -1,0 +1,15 @@
+@use '../../util/util';
+
+:root {
+  --border-radius-leaf: 0 3em 0 3em;
+  --border-radius-image-leaf: 0 3em 0 3em;
+  --border-radius-product-line-leaf: 3em 0em 0em 3em;
+  --height-bottom-line-leaf: 0;
+}
+
+.leaf-theme {
+  --border-radius: var(--border-radius-leaf);
+  --border-radius-image: var(--border-radius-image-leaf);
+  --border-radius-product-line: var(--border-radius-product-line-leaf);
+  --height-bottom-line: var(--height-bottom-line-leaf);
+}

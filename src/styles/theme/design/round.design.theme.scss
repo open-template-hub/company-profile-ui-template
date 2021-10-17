@@ -1,0 +1,15 @@
+@use '../../util/util';
+
+:root {
+  --border-radius-round: 4px;
+  --border-radius-image-round: var(--border-radius-round);
+  --border-radius-product-line-round: var(--border-radius-round);
+  --height-bottom-line-round: var(--border-radius-round);
+}
+
+.round-theme {
+  --border-radius: var(--border-radius-round);
+  --border-radius-image: var(--border-radius-image-round);
+  --border-radius-product-line: var(--border-radius-product-line-round);
+  --height-bottom-line: var(--height-bottom-line-round);
+}

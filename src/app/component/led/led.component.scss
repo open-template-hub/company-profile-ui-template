@@ -1,0 +1,41 @@
+@mixin set-led-color($information-type) {
+  .led.#{$information-type} {
+    background-color: var(--#{$information-type});
+    box-shadow: var(--shadow-darker) 0 -1px 7px 1px, inset var(--#{$information-type}-darker) 0 -1px 9px, var(--#{$information-type}-lighter) 0 2px 12px;
+
+    &.animate {
+      animation: {
+        name: led-keyframes-#{$information-type};
+        duration: 1.5s;
+        direction: normal;
+        timing-function: ease-in-out;
+        iteration-count: infinite;
+      }
+    }
+  }
+
+  @keyframes led-keyframes-#{$information-type} {
+    0% {
+      box-shadow: var(--shadow-darker) 0 -1px 7px 1px, inset var(--#{$information-type}-darker) 0 -1px 9px, var(--#{$information-type}-lighter) 0 2px 12px;
+    }
+
+    50% {
+      box-shadow: var(--shadow-darker) 0 -1px 7px 1px, inset var(--#{$information-type}-lighter) 0 -1px 9px, var(--#{$information-type}-lighter) 0 2px 12px;
+    }
+
+    100% {
+      box-shadow: var(--shadow-darker) 0 -1px 7px 1px, inset var(--#{$information-type}-darker) 0 -1px 9px, var(--#{$information-type}-lighter) 0 2px 12px;
+    }
+  }
+}
+
+@include set-led-color("error");
+@include set-led-color("warning");
+@include set-led-color("success");
+@include set-led-color("info");
+
+.led {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}

@@ -1,4 +1,6 @@
-export const environment = {
+import { EnvironmentModel } from '../app/model/environment/environment.model';
+
+export const environment: EnvironmentModel = {
   identity: 'local',
 
   production: false,
@@ -47,7 +49,7 @@ export const environment = {
     },
     paypal: {
       tag: 'PAYPAL_LOCAL',
-      cliendId: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
+      clientId: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
       env: 'sandbox'
     }
   },

@@ -20,7 +20,7 @@ export class NavigationInterceptor implements CanActivate {
       | Promise<boolean | UrlTree>
       | boolean
       | UrlTree {
-    var navObj = this.getObjectByUrl( state.url );
+    const navObj = this.getObjectByUrl( state.url );
     if ( navObj && navObj.title ) {
       const seoMetaData = {
         title: navObj.title,
@@ -35,8 +35,8 @@ export class NavigationInterceptor implements CanActivate {
   }
 
   getObjectByUrl = ( url: string ) => {
-    var moduleName = url.substring( url.lastIndexOf( '/' ) + 1 );
-    var key = Object.keys( NAVIGATIONS ).find(
+    const moduleName = url.substring( url.lastIndexOf( '/' ) + 1 );
+    const key = Object.keys( NAVIGATIONS ).find(
         ( k: string ) => NAVIGATIONS[ k ].url === moduleName
     );
     return NAVIGATIONS[ key ];

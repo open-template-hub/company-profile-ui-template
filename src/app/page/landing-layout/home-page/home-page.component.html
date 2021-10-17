@@ -9,13 +9,17 @@
   </div>
 
   <div class="hero-right">
+    <app-image-content-loader
+            *ngIf="!brandLogoLoaded" [imageContentLoaderClass]="'brand-logo-main'"></app-image-content-loader>
     <img
       [src]="
         'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/oth-packages.min.png'
       "
       alt="oth-packages"
       width="800"
-      height="450" />
+      height="450"
+      [style]="'display:' + (!brandLogoLoaded ? 'none;' : 'block;')"
+      (load)="setBrandLogoLoaded()" />
   </div>
 </div>
 <div class="counters">
@@ -28,7 +32,7 @@
     class="counter-wrapper"
     rel="noopener"
     target="_blank">
-    <app-text-content-loader [size]="30" *ngIf="npmCounterLoading"></app-text-content-loader>
+    <app-text-content-loader [size]="30" *ngIf="npmCounterLoading" class="loader"></app-text-content-loader>
     <p class="counter" id="npmDownloadCounterElement"></p>
     <p class="description">Npm Downloads</p>
   </a>
@@ -65,26 +69,7 @@
 
 <!-- Business partners -->
 <div class="business-partners-wrapper">
-  <app-swiper-wrapper
-    [breakpoints]="{
-      '640': {
-        slidesPerView: 1,
-        spaceBetween: 30
-      },
-      '768': {
-        slidesPerView: 2,
-        spaceBetween: 40
-      },
-      '1000': {
-        slidesPerView: 3,
-        spaceBetween: 50
-      }
-    }"
-    [height]="100"
-    [isGrayscale]="true"
-    [isNavigationEnabled]="true"
-    [isPaginationEnabled]="true"
-    [partners]="PARTNERS">
-  </app-swiper-wrapper>
+  <app-business-partner-swiper [partners]="PARTNERS">
+  </app-business-partner-swiper>
   <app-cookies></app-cookies>
 </div>

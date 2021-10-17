@@ -21,27 +21,30 @@
   overflow: hidden;
 
   & > * {
-    color: var(--lighter-contrast);
+    color: var(--lighter);
+  }
+
+  & .cookie-message .cookie-link {
+    color: var(--lighter);
+    font-weight: normal;
   }
 }
 
 .accept {
-  color: var(--theme-color);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+
+  & p {
+    margin: 0;
+    white-space: nowrap;
+  }
 }
 
 .accept:hover {
   background: var(--theme-color);
   cursor: pointer;
-}
-
-.accept p {
-  color: var(--theme-color);
-  margin: 0;
-  white-space: nowrap;
 }
 
 .accept:hover p {

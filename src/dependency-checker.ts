@@ -7,7 +7,7 @@ const columnIndexes = [ 0, 0, 0, 0 ];
 
 console.log(
     '<p align="center">\n' +
-    '  <a href="http://opentemplatehub.com">\n' +
+    '  <a href="https://opentemplatehub.com">\n' +
     '    <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png" alt="Logo" width=200>\n' +
     '  </a>\n' +
     '</p>\n' +

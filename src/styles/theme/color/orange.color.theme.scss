@@ -27,7 +27,7 @@
   --hover-orange-theme-darker: rgba(237, 145, 33, 0.6);
 }
 
-:root .orange-theme, .light-theme.orange-theme {
+:root .orange-theme, :root .light-theme.orange-theme {
 
   --theme-color: var(--theme-color-orange);
   --theme-color-secondary: var(--theme-color-orange-secondary);

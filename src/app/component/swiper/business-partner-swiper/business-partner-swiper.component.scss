@@ -1,0 +1,78 @@
+@use '../../../../../node_modules/swiper/swiper-bundle.min.css';
+
+app-business-partner-swiper {
+  margin: 0 auto;
+  position: relative;
+
+  & .swiper {
+    width: 100%;
+    height: 100%;
+    position: initial;
+
+    & .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: transparent;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+
+      & img {
+        display: block;
+        object-fit: cover;
+
+        &.grayscale {
+          filter: contrast(0);
+        }
+      }
+    }
+
+    @mixin swiper-button {
+      color: var(--contrast);
+      &:after {
+        font-size: 30px;
+      }
+    }
+
+    & .swiper-button-prev {
+      left: -40px;
+      @include swiper-button;
+    }
+
+    & .swiper-button-next {
+      right: -40px;
+      @include swiper-button;
+    }
+
+    & .swiper-pagination-bullet-active {
+      background: var(--theme-color-lighter-2);
+    }
+
+    & .swiper-pagination {
+      bottom: -40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  app-business-partner-swiper {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  app-business-partner-swiper {
+    width: 850px;
+  }
+}

@@ -58,8 +58,9 @@ export const DarkLightSettings = {
   auto: 'auto',
 };
 
+export const DEFAULT_THEME = 'default-theme';
+
 export const ThemeColorSettings = {
-  default: 'default-theme',
   red: 'red-theme',
   yellow: 'yellow-theme',
   blue: 'blue-theme',
@@ -67,6 +68,13 @@ export const ThemeColorSettings = {
   orange: 'orange-theme',
   purple: 'purple-theme',
   pink: 'pink-theme'
+};
+
+export const ThemeDesignSettings = {
+  round: 'round-theme',
+  counterBorders: 'counter-borders-theme',
+  sharp: 'sharp-theme',
+  leaf: 'leaf-theme'
 };
 
 export const URLS_RAW = {
@@ -88,6 +96,7 @@ export const URLS_RAW = {
   resetPassword: 'reset-password',
   contactUs: 'contact-us',
   status: 'status',
+  sitemap: 'sitemap',
   u: 'u',
   // SplashLayout
   callback: {
@@ -140,6 +149,7 @@ export const URLS = {
   resetPassword: '/' + URLS_RAW.resetPassword,
   contactUs: '/' + URLS_RAW.contactUs,
   status: '/' + URLS_RAW.status,
+  sitemap: '/' + URLS_RAW.sitemap,
   u: '/' + 'u',
   // SplashLayout
   callback: {

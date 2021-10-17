@@ -44,4 +44,18 @@ export class ProductPresentationComponent {
       }
     }
   }
+
+  getPresentationSwiper() {
+    switch ( this.product.key ) {
+      case 'auth-server-template': {
+        return this.SOCIAL_LOGIN_PARTNERS.map( partner => partner.logo );
+      }
+      case 'payment-server-template': {
+        return this.PAYMENT_PARTNERS.map( partner => partner.logo );
+      }
+      default: {
+        return [];
+      }
+    }
+  }
 }

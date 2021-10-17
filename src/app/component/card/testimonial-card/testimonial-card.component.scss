@@ -29,7 +29,7 @@
       justify-content: flex-start;
 
       & p {
-        color: var(--lighter-contrast);
+        color: var(--lighter);
       }
     }
 
@@ -98,8 +98,12 @@
 
       text-align: left;
 
+      & .name {
+        font-weight: bold;
+      }
+
       & .title {
-        color: var(--theme-color-darker-2);
+        color: var(--lighter);
       }
 
       & > * {

@@ -60,7 +60,6 @@ import { ProductPresentationComponent } from './component/product-represantation
 import { RateBarComponent } from './component/rate-bar/rate-bar.component';
 import { SearchComponent } from './component/search/search.component';
 import { SideContentComponent } from './component/side-content/side-content.component';
-import { SwiperWrapperComponent } from './component/swiper/swiper-wrapper/swiper-wrapper.component';
 import { RequestInterceptor } from './interceptor/request/request.interceptor';
 import { ResponseInterceptor } from './interceptor/response/response.interceptor';
 import { OthComponent } from './oth/oth.component';
@@ -96,6 +95,10 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { CallbackPageComponent } from './page/splash-layout/callback-page/callback-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
+import { LedComponent } from './component/led/led.component';
+import { BusinessPartnerSwiperComponent } from './component/swiper/business-partner-swiper/business-partner-swiper.component';
+import { PresentationSwiperComponent } from './component/swiper/presentation-swiper/presentation-swiper.component';
+import { SitemapPageComponent } from './page/landing-layout/sitemap-page/sitemap-page.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -148,7 +151,6 @@ FullCalendarModule.registerPlugins( [
     TestimonialCardComponent,
     DropdownMenuComponent,
     EditThemePageComponent,
-    SwiperWrapperComponent,
     ColorChartComponent,
     ProductPageComponent,
     ExtLinkComponent,
@@ -179,6 +181,10 @@ FullCalendarModule.registerPlugins( [
     ImageContentLoaderComponent,
     TextContentLoaderComponent,
     BoxContentLoaderComponent,
+    LedComponent,
+    BusinessPartnerSwiperComponent,
+    PresentationSwiperComponent,
+    SitemapPageComponent,
   ],
   imports: [
     BrowserModule,

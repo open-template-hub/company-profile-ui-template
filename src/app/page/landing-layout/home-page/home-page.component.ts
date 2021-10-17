@@ -21,6 +21,7 @@ export class HomePageComponent implements AfterViewInit {
   serverTypesCounter = { count: 7, id: 'serverTypesCounterElement' };
   uiTypesCounter = { count: 3, id: 'uiTypesCounterElement' };
   npmCounterLoading = true;
+  brandLogoLoaded = false;
 
   URLS = URLS;
   PARTNERS: Partner[] = PARTNERS;
@@ -76,6 +77,10 @@ export class HomePageComponent implements AfterViewInit {
     this.startCounter( options, this.serverTypesCounter );
 
     this.startCounter( options, this.uiTypesCounter );
+  }
+
+  setBrandLogoLoaded = () => {
+    this.brandLogoLoaded = true;
   }
 
   private startCounter(

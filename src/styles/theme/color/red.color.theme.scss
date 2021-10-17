@@ -27,7 +27,7 @@
   --hover-red-theme-darker: rgba(213, 102, 102, 0.6);
 }
 
-:root .red-theme, .light-theme.red-theme {
+:root .red-theme, :root .light-theme.red-theme {
 
   --theme-color: var(--theme-color-red);
   --theme-color-secondary: var(--theme-color-red-secondary);

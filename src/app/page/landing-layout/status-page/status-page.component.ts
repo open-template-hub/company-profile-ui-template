@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DEFAULT_SYSTEM_STATUS } from '../../../data/status/status.data';
 import { MonitoringService } from '../../../service/monitoring/monitoring.service';
 
 @Component( {
@@ -8,11 +9,7 @@ import { MonitoringService } from '../../../service/monitoring/monitoring.servic
 } )
 export class StatusPageComponent {
 
-  overallSystemStatus = {
-    systemStatuses: [],
-    overall: '',
-    checkDate: undefined
-  };
+  overallSystemStatus = DEFAULT_SYSTEM_STATUS;
 
   constructor( private monitoringService: MonitoringService ) {
     this.monitoringService.alive();
@@ -44,8 +41,14 @@ export class StatusPageComponent {
             continue;
           }
 
+          let name = status[ 0 ].toUpperCase();
+
+          if ( status.length > 1 ) {
+            name += status.substring( 1 ).split( /(?=[A-Z])/ ).join( ' ' );
+          }
+
           systemStatus.statuses.push( {
-            name: status.split( /(?=[A-Z])/ ).join( ' ' ),
+            name,
             alive: systemStatuses[ systemStatusKey ][ status ].alive
           } );
 

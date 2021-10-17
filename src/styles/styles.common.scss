@@ -86,11 +86,11 @@ a {
   &:hover {
     color: var(--darker);
   }
-}
 
-a.link {
-  &:hover {
-    color: var(--theme-color);
+  &.link {
+    &:hover {
+      color: var(--theme-color-darker-1);
+    }
   }
 }
 
@@ -98,7 +98,7 @@ a.theme-color-link {
 
   @extend .link;
 
-  color: var(--theme-color-lighter-2);
+  color: var(--theme-color);
   font-weight: normal;
 }
 

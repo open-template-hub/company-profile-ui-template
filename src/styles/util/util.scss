@@ -5,6 +5,22 @@
   #{$property}: $value;
 }
 
+@mixin default-border-radius {
+  @include prefix(border-radius, var(--border-radius), moz webkit);
+}
+
+@mixin default-border-radius-image {
+  @include prefix(border-radius, var(--border-radius-image), moz webkit);
+}
+
+@mixin default-height-bottom-line {
+  @include prefix(height, var(--height-bottom-line), moz webkit);
+}
+
+@mixin default-border-radius-product-line {
+  @include prefix(border-radius, var(--border-radius-product-line), moz webkit);
+}
+
 @mixin no-padding-no-margin {
   padding: 0;
   margin: 0;
@@ -71,18 +87,13 @@
 
 @mixin font-awesome {
   font: {
-    family: "Font Awesome 5 Free", sans-serif;
+    family: 'Font Awesome 5 Free', sans-serif;
     weight: 900;
   }
 }
 
 @mixin circle {
   @include prefix(border-radius, 99em, moz webkit);
-}
-
-@mixin top-right-bottom-left-rounded-box {
-  @include prefix(border-bottom-left-radius, 12px, moz webkit);
-  @include prefix(border-top-right-radius, 6px, moz webkit);
 }
 
 .rounded-box {

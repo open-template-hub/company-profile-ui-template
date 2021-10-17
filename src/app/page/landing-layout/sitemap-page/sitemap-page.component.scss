@@ -1,0 +1,89 @@
+@use '../landing-layout.component';
+@use '../../../component/card/card.component';
+@use '../../../../styles/util/util';
+
+.form-page-layout {
+  & .body {
+    @include card.default-body;
+
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 50px 0;
+
+    & .column {
+      & p {
+        color: var(--theme-color);
+        font-weight: 400;
+      }
+
+      & .link-group {
+        @include util.flex-layout-column;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 999px) {
+
+  .form-page-layout {
+    & .body {
+      @include util.flex-center-center;
+
+      width: 94vw;
+
+      & .column {
+        @include util.flex-center-center;
+
+        & p {
+          text-align: center;
+          text-decoration: underline;
+          min-height: 48px;
+        }
+
+        & .link-group {
+          @include util.flex-center-center;
+
+          & .link-item {
+            min-height: 48px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .form-page-layout {
+    & .body {
+      width: 600px;
+
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      & .column {
+        max-width: 250px;
+        margin: 0 20px;
+
+        & p, & .link-item {
+          margin: 0 0 20px;
+        }
+
+        & p {
+          border-bottom: 1px solid var(--theme-color);
+        }
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+
+  .link-item {
+    &:hover {
+      background: none;
+      color: var(--theme-color);
+    }
+  }
+}

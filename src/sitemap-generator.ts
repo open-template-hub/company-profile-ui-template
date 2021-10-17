@@ -1,6 +1,6 @@
-var url = 'https://opentemplatehub.com';
+const url = 'https://opentemplatehub.com';
 
-var exposedRoutemap = [
+const exposedRouteMap = [
   {
     path: '',
     children: [
@@ -8,6 +8,7 @@ var exposedRoutemap = [
       { path: '/contact-us', children: null },
       { path: '/branding', children: null },
       { path: '/terms', children: null },
+      { path: '/sitemap', children: null },
       {
         path: '/product',
         children: [
@@ -54,12 +55,12 @@ var exposedRoutemap = [
   },
 ];
 
-var today = new Date().toISOString().split('T')[0];
+const today = new Date().toISOString().split('T')[0];
 
 function getSitemap(path, routes) {
-  var sitemapStr = '';
+  let sitemapStr = '';
   routes.forEach((r) => {
-    var nUrl = path + r.path;
+    const nUrl = path + r.path;
     sitemapStr +=
       '<url><loc>' + nUrl + '</loc><lastmod>' + today + '</lastmod></url>';
     if (r.children && r.children.length > 0) {
@@ -69,10 +70,10 @@ function getSitemap(path, routes) {
   return sitemapStr;
 }
 
-var sitemap =
+let sitemap =
   '<?xml version="1.0" encoding="UTF-8"?>' +
   '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-sitemap += getSitemap(url, exposedRoutemap);
+sitemap += getSitemap(url, exposedRouteMap);
 sitemap += '</urlset>';
 
 console.log(sitemap);

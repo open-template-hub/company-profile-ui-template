@@ -16,7 +16,8 @@
 
   text-align: center;
 
-  & .hero-left, & .hero-right {
+  & .hero-left,
+  & .hero-right {
     @include util.flex-layout-column;
     @include util.flex-center-center;
   }
@@ -44,15 +45,19 @@
     width: 100%;
 
     & .counter {
-      color: var(--theme-color);
+      color: var(--theme-color-darker-1);
       font-weight: 400;
+    }
+
+    & .loader {
+      padding: 16px;
     }
 
     & .description {
       width: auto;
       margin: 5px 30px 0;
       padding-bottom: 12px;
-      border-bottom: 2px solid var(--theme-color-lighter-2);
+      border-bottom: 2px solid var(--theme-color-darker-1);
     }
   }
 }
@@ -146,16 +151,16 @@
 }
 
 @media only screen and (min-width: 1000px) {
-
   .hero {
     flex-direction: row;
     padding-bottom: 50px;
 
-    & .hero-left, &.hero-right {
+    & .hero-left,
+    &.hero-right {
       min-width: 450px;
     }
 
-    & .hero-left, {
+    & .hero-left {
       font-size: 36px;
       max-width: 50%;
 
@@ -202,6 +207,4 @@
   app-swiper-wrapper {
     margin: 80px 0 50px;
   }
-
 }
-

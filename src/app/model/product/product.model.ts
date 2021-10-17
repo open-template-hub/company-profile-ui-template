@@ -19,6 +19,7 @@ export interface Product {
   features?: PricingFeature[];
   pricingOptions?: PricingOption[];
   commandLines?: CommandLine[];
+  imageLoaded?: boolean;
 }
 
 export interface ProductLine {

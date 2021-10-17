@@ -1,30 +1,61 @@
 @use '../settings-layout.component';
+@use '../../../component/card/card.component';
 
-.section.horizontal {
-  width: 100%;
-}
+.settings-form-wrapper {
 
-@media only screen and (min-width: 1000px) {
-  .section.horizontal {
-    flex-direction: row;
+  & .body {
+    @include card.default-body;
+
     justify-content: flex-start;
-    flex-wrap: wrap;
+    align-items: flex-start;
 
-    & > * {
-      margin: 10px;
+    box-sizing: border-box;
+    padding: 25px;
+    font-size: 17px;
+
+    & .section-header {
+      width: 100%;
     }
   }
-
-  .section.horizontal app-brand-button {
-    padding-right: 15px;
-  }
 }
 
-@media only screen and (max-width: 999px) {
-  .section.horizontal {
+.section {
+  margin: 15px 0;
+
+  &.horizontal {
+    width: 100%;
 
     & > * {
       margin: 10px 0;
     }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .settings-form-wrapper {
+    min-height: 80vh;
+    padding: 0 3vw;
+
+    & .body {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .section {
+    &.horizontal {
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      & > * {
+        margin: 10px;
+      }
+    }
+  }
+
+  .settings-form-wrapper {
+    min-height: 60vh;
   }
 }

@@ -1,16 +1,5 @@
 @use '../../../styles/page/page';
 
-.settings-form-page-layout {
-
-  & app-card {
-    & .body {
-      box-sizing: border-box;
-      padding: 25px;
-      font-size: 17px;
-    }
-  }
-}
-
 @media only screen and (max-width: 999px) {
   .page {
     margin-top: 55px;
@@ -22,16 +11,6 @@
 
   .page, .footer-wrap {
     margin-left: 0;
-  }
-
-  .settings-form-page-layout {
-    min-height: 80vh;
-
-    & app-card {
-      & .body {
-        width: 94vw;
-      }
-    }
   }
 }
 
@@ -54,15 +33,5 @@
 
   .side-nav-closed .page, .side-nav-closed .footer-wrap {
     margin-left: 80px;
-  }
-
-  .settings-form-page-layout {
-    min-height: 60vh;
-
-    & app-card {
-      & .body {
-        width: 400px;
-      }
-    }
   }
 }

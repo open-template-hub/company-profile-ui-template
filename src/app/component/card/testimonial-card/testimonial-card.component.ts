@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
-import { ThemeColorSettings, URLS } from '../../../data/constant';
+import { DEFAULT_THEME, URLS } from '../../../data/constant';
 import { Testimonial } from '../../../model/testimonial/testimonial.model';
 
 @Component( {
@@ -27,7 +27,7 @@ export class TestimonialCardComponent {
         twitter: '',
       },
     },
-    theme: ThemeColorSettings.default
+    theme: DEFAULT_THEME
   };
 
   constructor() {

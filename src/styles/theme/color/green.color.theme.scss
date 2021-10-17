@@ -1,5 +1,5 @@
 :root {
-  --theme-color-green: #43b043;
+  --theme-color-green: #45b445;
   --theme-color-green-secondary: #205f20;
   --theme-color-green-tertiary: #71dc70;
 
@@ -27,7 +27,7 @@
   --hover-green-theme-darker: rgba(67, 176, 67, 0.6);
 }
 
-:root .green-theme, .light-theme.green-theme {
+:root .green-theme, :root .light-theme.green-theme {
 
   --theme-color: var(--theme-color-green);
   --theme-color-secondary: var(--theme-color-green-secondary);

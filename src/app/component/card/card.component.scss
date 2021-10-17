@@ -20,6 +20,7 @@
   @include util.flex-layout-column;
   @include util.margin-x-auto;
   @include util.default-shadow;
+  @include util.default-border-radius;
 
   // Position
   z-index: 10;
@@ -28,8 +29,6 @@
   overflow: hidden;
   width: 100%;
   padding: 15px 0;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
 }
 
 @mixin default-body {
@@ -63,11 +62,14 @@
 }
 
 @mixin default-bottom-wrapper {
+  @include util.default-border-radius;
+  @include util.default-height-bottom-line;
+
   // Position
   position: absolute;
   z-index: 9;
   bottom: 0;
-  left: 0;
+  right: 0;
 
   // Color
   background-color: var(--darker-contrast);
@@ -75,26 +77,19 @@
   // Design
   overflow: hidden;
   width: 100%;
-  height: 4px;
-  border-bottom: {
-    left-radius: 7px;
-    right-radius: 7px;
-  }
 }
 
 .card {
   // Include
   @include util.flex-layout-column;
   @include default-card;
+  @include util.default-border-radius;
 
   // Position
   position: relative;
 
   // Color
   color: var(--contrast);
-
-  // Design
-  border-radius: 6px;
 
   & .header {
     @include default-header;

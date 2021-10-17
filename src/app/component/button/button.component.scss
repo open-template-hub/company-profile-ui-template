@@ -5,7 +5,7 @@
 @mixin default-button {
   @include util.flex-layout-row;
   @include util.flex-center-center;
-  @include util.top-right-bottom-left-rounded-box;
+  @include util.default-border-radius;
 
   padding: 12px;
 

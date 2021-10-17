@@ -15,7 +15,7 @@
 
   --theme-color-blue-darker-1: #0392c2;
   --theme-color-blue-darker-2: #078bb7;
-  --theme-color-blue-darker-3: #0b84ac;
+  --theme-color-blue-darker-3: #0b7fa5;
   --theme-color-blue-darker-4: #0f7da1;
   --theme-color-blue-darker-5: #127596;
   --theme-color-blue-darker-6: #166e8b;
@@ -27,7 +27,7 @@
   --hover-blue-theme-darker: rgba(64, 152, 214, 0.6);
 }
 
-:root .blue-theme, .light-theme.blue-theme {
+:root .blue-theme, :root .light-theme.blue-theme {
 
   --theme-color: var(--theme-color-blue);
   --theme-color-secondary: var(--theme-color-blue-secondary);

@@ -1,0 +1,38 @@
+@use '../../../styles/util/util';
+
+.feature-card {
+  & .header {
+    text-align: left;
+    padding: 1em 1em 0.1em;
+
+    & i {
+      color: var(--theme-color);
+    }
+
+    & p {
+      @include util.default-border-radius;
+
+      color: var(--lighter);
+      font-size: 18px;
+      font-weight: 600;
+      margin-top: 15px;
+      border-left: 2px solid var(--theme-color);
+      border-right: 2px solid var(--theme-color);
+      text-align: center;
+    }
+  }
+
+  & .body {
+    text-align: left;
+    padding: 1em 1em 0.1em;
+    min-height: 420px;
+
+    & p {
+      color: var(--lighter);
+      font-size: 18px;
+      font-weight: 300;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+  }
+}

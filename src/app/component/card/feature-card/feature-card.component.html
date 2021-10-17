@@ -1,0 +1,17 @@
+<app-card
+  *ngIf="feature.title"
+  [bodyTemplate]="bodyTemplate"
+  [headerTemplate]="headerTemplate"
+  class="feature-card">
+  <ng-template #headerTemplate>
+    <div class="header">
+      <i aria-hidden="true" [class]="feature.icon"></i>
+      <p>{{ feature.title }}</p>
+    </div>
+  </ng-template>
+  <ng-template #bodyTemplate>
+    <div class="body">
+      <p>{{ feature.description }}</p>
+    </div>
+  </ng-template>
+</app-card>

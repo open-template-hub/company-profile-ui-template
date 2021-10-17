@@ -2,8 +2,11 @@ import { AfterViewInit, Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CountUp } from 'countup.js';
+import { FEATURES } from 'src/app/data/feature/feature.data';
 import { PARTNERS } from 'src/app/data/partner/partner.data';
 import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
+import { Feature } from 'src/app/model/feature/feature.model';
+import { Testimonial } from 'src/app/model/testimonial/testimonial.model';
 import { NpmProviderService } from 'src/app/service/provider/npm-provider.service';
 import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
@@ -11,11 +14,11 @@ import { URLS } from '../../../data/constant';
 import { Partner } from '../../../model/partner/partner.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 
-@Component( {
+@Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: [ './home-page.component.scss' ],
-} )
+  styleUrls: ['./home-page.component.scss'],
+})
 export class HomePageComponent implements AfterViewInit {
   npmDownloadCounter = { count: 0, id: 'npmDownloadCounterElement' };
   serverTypesCounter = { count: 7, id: 'serverTypesCounterElement' };
@@ -25,7 +28,8 @@ export class HomePageComponent implements AfterViewInit {
 
   URLS = URLS;
   PARTNERS: Partner[] = PARTNERS;
-  TESTIMONIALS = TESTIMONIALS;
+  TESTIMONIALS: Testimonial[] = TESTIMONIALS;
+  FEATURES: Feature[] = FEATURES;
 
   KILO = 1000;
   MILLION = this.KILO * this.KILO;
@@ -34,14 +38,14 @@ export class HomePageComponent implements AfterViewInit {
   environmentCommon = environmentCommon;
 
   constructor(
-      private formBuilder: FormBuilder,
-      public router: Router,
-      private authenticationService: AuthenticationService,
-      private npmProviderService: NpmProviderService
+    private formBuilder: FormBuilder,
+    public router: Router,
+    private authenticationService: AuthenticationService,
+    private npmProviderService: NpmProviderService
   ) {
     // redirect to home if already logged in
-    if ( this.authenticationService.currentUserValue ) {
-      this.router.navigate( [ URLS.dashboard.root ] );
+    if (this.authenticationService.currentUserValue) {
+      this.router.navigate([URLS.dashboard.root]);
     }
   }
 
@@ -49,14 +53,14 @@ export class HomePageComponent implements AfterViewInit {
     this.initCountUps();
   }
 
-  countUpFormatter( n: number ) {
-    if ( n < this.KILO ) {
+  countUpFormatter(n: number) {
+    if (n < this.KILO) {
       return n + '';
     } else {
-      if ( n < this.MILLION ) {
-        return Math.round( ( n / this.KILO ) * 10 ) / 10 + 'k';
+      if (n < this.MILLION) {
+        return Math.round((n / this.KILO) * 10) / 10 + 'k';
       } else {
-        return Math.round( ( n / this.MILLION ) * 10 ) / 10 + 'M';
+        return Math.round((n / this.MILLION) * 10) / 10 + 'M';
       }
     }
   }
@@ -68,42 +72,42 @@ export class HomePageComponent implements AfterViewInit {
       formattingFn: undefined,
     };
 
-    this.npmProviderService.getNpmPackagesDownloadCount().then( ( count ) => {
+    this.npmProviderService.getNpmPackagesDownloadCount().then((count) => {
       this.npmDownloadCounter.count = count;
       this.npmCounterLoading = false;
-      this.startCounter( options, this.npmDownloadCounter );
-    } );
+      this.startCounter(options, this.npmDownloadCounter);
+    });
 
-    this.startCounter( options, this.serverTypesCounter );
+    this.startCounter(options, this.serverTypesCounter);
 
-    this.startCounter( options, this.uiTypesCounter );
+    this.startCounter(options, this.uiTypesCounter);
   }
 
   setBrandLogoLoaded = () => {
     this.brandLogoLoaded = true;
-  }
+  };
 
   private startCounter(
-      options: { duration: number; useGrouping: boolean; formattingFn },
-      counter
+    options: { duration: number; useGrouping: boolean; formattingFn },
+    counter
   ) {
-    options.formattingFn = ( n: number ) => {
-      return this.countUpFormatter( n );
+    options.formattingFn = (n: number) => {
+      return this.countUpFormatter(n);
     };
 
-    if ( counter.count < this.KILO ) {
+    if (counter.count < this.KILO) {
       options.duration = 2;
-    } else if ( counter.count < this.MILLION ) {
+    } else if (counter.count < this.MILLION) {
       options.duration = 3;
     } else {
       options.duration = 4;
     }
 
-    const eventCountUp = new CountUp( counter.id, counter.count, options );
-    if ( !eventCountUp.error ) {
+    const eventCountUp = new CountUp(counter.id, counter.count, options);
+    if (!eventCountUp.error) {
       eventCountUp.start();
     } else {
-      console.error( eventCountUp.error );
+      console.error(eventCountUp.error);
     }
   }
 }

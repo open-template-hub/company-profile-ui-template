@@ -10,7 +10,8 @@
 
   <div class="hero-right">
     <app-image-content-loader
-            *ngIf="!brandLogoLoaded" [imageContentLoaderClass]="'brand-logo-main'"></app-image-content-loader>
+      *ngIf="!brandLogoLoaded"
+      [imageContentLoaderClass]="'brand-logo-main'"></app-image-content-loader>
     <img
       [src]="
         'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/oth-packages.min.png'
@@ -32,7 +33,10 @@
     class="counter-wrapper"
     rel="noopener"
     target="_blank">
-    <app-text-content-loader [size]="30" *ngIf="npmCounterLoading" class="loader"></app-text-content-loader>
+    <app-text-content-loader
+      [size]="30"
+      *ngIf="npmCounterLoading"
+      class="loader"></app-text-content-loader>
     <p class="counter" id="npmDownloadCounterElement"></p>
     <p class="description">Npm Downloads</p>
   </a>
@@ -72,4 +76,18 @@
   <app-business-partner-swiper [partners]="PARTNERS">
   </app-business-partner-swiper>
   <app-cookies></app-cookies>
+</div>
+
+<div class="features-section-wrapper">
+  <h1 class="section-header">Why Open Template Hub?</h1>
+  <p class="section-description">
+    Minimize your effort while building a new software business with our open
+    source microserver templates and ui templates
+  </p>
+  <div class="section-content">
+    <app-feature-card
+      *ngFor="let feature of FEATURES"
+      [feature]="feature">
+    </app-feature-card>
+  </div>
 </div>

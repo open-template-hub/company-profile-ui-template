@@ -30,7 +30,14 @@ export class FooterComponent {
   environment = environment;
   environmentCommon = environmentCommon;
 
-  constructor( private router: Router, private themeService: ThemeService ) {
+  constructor(
+    private router: Router,
+    private themeService: ThemeService
+  ) {
     this.appVersion = themeService.appVersion;
+  }
+
+  getCurrentRoute() {
+    return this.router.url
   }
 }

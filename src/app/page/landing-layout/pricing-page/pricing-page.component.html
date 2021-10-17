@@ -1,6 +1,6 @@
 <!-- Pricing Plan -->
-<app-hero
-    [contents]="[{text: product.name + ' Pricing Plan', level: 1}, {text: 'No hidden fees. Cancel at any time.'}]"></app-hero>
+<app-hero *ngIf="appHeroContents"
+    [contents]="appHeroContents"></app-hero>
 <div *ngIf="product?.pricingOptions" class="pricing-wrapper">
   <ng-container *ngFor="let pricing of product.pricingOptions">
     <app-pricing-card [class.bigger-card]="pricing.ribbon === PRICING_RIBBONS.get('deal')"

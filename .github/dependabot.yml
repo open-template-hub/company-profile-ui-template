@@ -11,4 +11,4 @@ updates:
     target-branch: 'workflow/dependency-update'
     labels:
       - 'workflow'
-    milestone: 1
+    milestone: 2

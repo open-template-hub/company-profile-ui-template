@@ -114,5 +114,10 @@ export const environmentCommon = {
         download: 'https://api.npmjs.org/downloads/point'
       }
     }
+  },
+
+  languages: {
+    english: 'en-US',
+    french: 'fr'
   }
 };

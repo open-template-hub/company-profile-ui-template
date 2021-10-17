@@ -127,6 +127,11 @@ export const URLS_RAW = {
     root: 'settings',
     editTheme: 'edit-theme',
   },
+  // Languages
+  languages: {
+    english: 'en',
+    french: 'fr'
+  }
 };
 
 export const URLS = {
@@ -182,4 +187,9 @@ export const URLS = {
   settings: {
     editTheme: '/' + URLS_RAW.settings.root + '/' + URLS_RAW.settings.editTheme,
   },
+  // Languages
+  languages: {
+    english: '/' + URLS_RAW.languages.english,
+    french: '/' + URLS_RAW.languages.french
+  }
 };

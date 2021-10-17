@@ -6,62 +6,62 @@ import { PRICING_RIBBONS } from '../ribbon/ribbon.data';
 
 const DEFAULT_FEATURES = [
   {
-    name: 'Core Features',
+    name: $localize `Core Features`,
     details: [
       {
-        name: 'Open Source',
+        name: $localize `Open Source`,
         description:
             'Customers that pay per user can send out as many signature requests as they want per month!',
       },
       {
-        name: 'Templates',
+        name: $localize `Templates`,
         description:
-            'Streamline documents that need to be reused and sent out for eSignature frequently.',
+            $localize `Streamline documents that need to be reused and sent out for eSignature frequently.`,
       },
       {
-        name: 'Audio Trail',
+        name: $localize `Audio Trail`,
         description:
-            'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
+            $localize `Audit trails are associated with transactions to ensure actions are tracked and time-stamped.`,
       },
     ],
   },
   {
-    name: 'Security and Trust',
+    name: $localize `Security and Trust`,
     details: [
       {
-        name: 'Signature requests',
+        name: $localize `Signature requests`,
         description:
-            'Customers that pay per user can send out as many signature requests as they want per month!',
+            $localize `Customers that pay per user can send out as many signature requests as they want per month!`,
       },
       {
-        name: 'Templates',
+        name: $localize `Templates`,
         description:
-            'Streamline documents that need to be reused and sent out for eSignature frequently.',
+            $localize `Streamline documents that need to be reused and sent out for eSignature frequently.`,
       },
       {
-        name: 'Audio Trail',
+        name: $localize `Audio Trail`,
         description:
-            'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
+            $localize `Audit trails are associated with transactions to ensure actions are tracked and time-stamped.`,
       },
     ],
   },
   {
-    name: 'Data Validation',
+    name: $localize `Data Validation`,
     details: [
       {
-        name: 'Signature requests',
+        name: $localize `Signature requests`,
         description:
-            'Customers that pay per user can send out as many signature requests as they want per month!',
+            $localize `Customers that pay per user can send out as many signature requests as they want per month!`,
       },
       {
-        name: 'Templates',
+        name: $localize `Templates`,
         description:
-            'Streamline documents that need to be reused and sent out for eSignature frequently.',
+            $localize `Streamline documents that need to be reused and sent out for eSignature frequently.`,
       },
       {
-        name: 'Audio Trail',
+        name: $localize `Audio Trail`,
         description:
-            'Audit trails are associated with transactions to ensure actions are tracked and time-stamped.',
+            $localize `Audit trails are associated with transactions to ensure actions are tracked and time-stamped.`,
       },
     ],
   },
@@ -69,13 +69,13 @@ const DEFAULT_FEATURES = [
 
 const DEFAULT_PRICING_OPTIONS = [
   {
-    title: 'STARTER',
+    title: $localize `STARTER`,
     price: {
       currency: '$',
       value: '9',
       subscriptionTime: 'mo.',
     },
-    features: [ 'Up to 5 users', 'Maximum 100 photos/mo.', '' ],
+    features: [ $localize `Up to 5 users`, $localize `Maximum 100 photos/mo.`, '' ],
     styles: {
       width: '300px',
       height: '400px',
@@ -84,14 +84,14 @@ const DEFAULT_PRICING_OPTIONS = [
     },
   },
   {
-    title: 'BASIC',
+    title: $localize `BASIC`,
     ribbon: PRICING_RIBBONS.get( 'deal' ),
     price: {
       currency: '$',
       value: '49',
       subscriptionTime: 'mo.',
     },
-    features: [ 'Up to 10 users', 'Maximum 100 photos/mo.', 'true' ],
+    features: [ $localize `Up to 10 users`, $localize `Maximum 100 photos/mo.`, 'true' ],
     styles: {
       width: '370px',
       height: '520px',
@@ -100,13 +100,13 @@ const DEFAULT_PRICING_OPTIONS = [
     },
   },
   {
-    title: 'PRO',
+    title: $localize `PRO`,
     price: {
       currency: '$',
       value: '99',
       subscriptionTime: 'mo.',
     },
-    features: [ 'Unlimited users', 'Unlimited photos/mo.', 'true' ],
+    features: [ $localize `Unlimited users`, $localize `Unlimited photos/mo.`, 'true' ],
     styles: {
       width: '300px',
       height: '400px',
@@ -120,12 +120,12 @@ export const PRODUCT_LINES: ProductLine[] = [
   {
     key: 'servers',
     name: 'Servers',
-    description: 'Micro server solutions for your needs',
+    description: $localize `Micro server solutions for your needs`,
     products: [
       {
         key: 'auth-server-template',
         name: 'Auth Server',
-        description: 'Auth Server Template is an open source authentication server that has simple and generic design to connect your authentication system with every OAuth 2.0 and OAuth supporting third party companies like Google, Facebook, Twitter or LinkedIn. We are also supporting regular username password authentication system',
+        description: $localize `Auth Server Template is an open source authentication server that has simple and generic design to connect your authentication system with every OAuth 2.0 and OAuth supporting third party companies like Google, Facebook, Twitter or LinkedIn. We are also supporting regular username password authentication system`,
         href: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'auth-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/auth-server-logo.min.png',
         openSource: true,
@@ -136,7 +136,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'payment-server-template',
         name: 'Payment Server',
         description:
-            'Payment Server Template is an open source payment server that has simple and generic design to be able to integrated with payment solution providers like Stripe or Coinbase',
+            $localize `Payment Server Template is an open source payment server that has simple and generic design to be able to integrated with payment solution providers like Stripe or Coinbase`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -152,7 +152,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'file-storage-server-template',
         name: 'File Storage Server',
         description:
-            'File Storage Server Template that supports uploading and downloading files from AWS S3',
+            $localize `File Storage Server Template that supports uploading and downloading files from AWS S3`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -168,7 +168,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'mail-server-template',
         name: 'Mail Server',
         description:
-            'Mail Server Template supporting both regular public and private mail send processes in Message Queue Architecture',
+            $localize `Mail Server Template supporting both regular public and private mail send processes in Message Queue Architecture`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -183,7 +183,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'analytics-server-template',
         name: 'Analytics Server',
-        description: 'Analytics Server Template for generic usage in Node.js',
+        description: $localize `Analytics Server Template for generic usage in Node.js`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -198,7 +198,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'business-logic-server-template',
         name: 'Business Logic Server',
-        description: 'Business Logic Server Template for generic usage in Node.js',
+        description: $localize `Business Logic Server Template for generic usage in Node.js`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -220,7 +220,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'company-profile-ui-template',
         name: 'Company Profile UI',
-        description: 'Company Profile UI Template for generic usage in Angular',
+        description: $localize `Company Profile UI Template for generic usage in Angular`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -235,7 +235,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'web-ui-template',
         name: 'Web UI',
-        description: 'Web UI Template for generic usage in Angular',
+        description: $localize `Web UI Template for generic usage in Angular`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -250,7 +250,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'mobile-ui-template',
         name: 'Mobile UI',
-        description: 'Mobile UI Template for generic usage in React Native',
+        description: $localize `Mobile UI Template for generic usage in React Native`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -267,13 +267,13 @@ export const PRODUCT_LINES: ProductLine[] = [
   {
     key: 'cli-generators',
     name: 'CLI Generators',
-    description: 'Command line interface generators',
+    description: $localize `Command line interface generators`,
     products: [
       {
         key: 'server-generator',
         name: 'Server Generator',
         description:
-            'Command line interface generator of the servers at Open Template Hub',
+            $localize `Command line interface generator of the servers at Open Template Hub`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -322,7 +322,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'app-generator',
         name: 'UI Generator',
         description:
-            'Command line interface generator of the user interfaces at Open Template Hub',
+            $localize `Command line interface generator of the user interfaces at Open Template Hub`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -378,7 +378,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'orchestration-server',
         name: 'Orchestration Server',
-        description: 'One server to orchestrate them all!',
+        description: $localize `One server to orchestrate them all!`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -396,13 +396,13 @@ export const SERVICES: ProductLine[] = [
   {
     key: 'services',
     name: 'Services',
-    description: 'Services that we provide',
+    description: $localize `Services that we provide`,
     products: [
       {
         key: 'software-consultancy',
         name: 'Software Consultancy',
         description:
-            'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+            $localize `Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -414,7 +414,7 @@ export const SERVICES: ProductLine[] = [
         key: 'software-integration',
         name: 'Software Integration',
         description:
-            'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+            $localize `Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -426,7 +426,7 @@ export const SERVICES: ProductLine[] = [
         key: 'quality-assurance',
         name: 'Quality Assurance',
         description:
-            'Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..',
+            $localize `Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
         href:
             environmentCommon.website.github.url +
             '/' +

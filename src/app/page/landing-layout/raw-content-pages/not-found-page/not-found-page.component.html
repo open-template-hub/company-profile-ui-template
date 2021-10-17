@@ -4,8 +4,8 @@
   </div>
 
   <!-- 404 Page not found -->
-  <app-hero [contents]="[{text: '404 Page not found', level: 1}, {text: 'Something went wrong!'}]"
+  <app-hero [contents]="appHeroContents"
             [heroClass]="'no-padding-top'"></app-hero>
   <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.error"
-                          [text]="'HOME'"></app-information-button>
+                          i18n-text text="'HOME'"></app-information-button>
 </div>

@@ -112,4 +112,10 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   redirect() {
     window.open( this.product.href, '_blank' );
   }
+
+  getContactUsButtonText(productLineKey) {
+    return productLineKey === 'services'
+      ? $localize `Contact Us`
+      : $localize `Request for Demo`
+  }
 }

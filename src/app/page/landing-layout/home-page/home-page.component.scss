@@ -96,6 +96,43 @@
   padding-bottom: 100px;
 }
 
+.features-section-wrapper {
+  @include util.flex-layout-column;
+  @include util.flex-center-center;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding: 50px;
+
+  & .section-header {
+    color: var(--darker);
+    text-align: center;
+  }
+
+  & .section-description {
+    color: var(--lighter);
+    padding: 30px;
+    text-align: center;
+  }
+
+  & .section-content {
+    @include util.flex-layout-row;
+    @include util.flex-center-center;
+
+    width: 100%;
+    padding-left: 3vw;
+    padding-right: 4.5vw;
+    margin-top: 30px;
+
+    & app-feature-card {
+      margin-left: 15px;
+      width: 16em;
+    }
+  }
+}
+
 @media only screen and (max-width: 999px) {
   .hero {
     flex-direction: column;
@@ -142,6 +179,21 @@
 
     & > * {
       width: 94vw;
+    }
+  }
+
+  .features-section-wrapper {
+    & .section-content {
+      @include util.flex-layout-column;
+      @include util.flex-center-center;
+
+      padding-left: 3vw;
+      padding-right: 5vw;
+
+      & app-feature-card {
+        margin-top: 20px;
+        width: 90%;
+      }
     }
   }
 

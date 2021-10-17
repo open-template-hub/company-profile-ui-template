@@ -21,7 +21,7 @@ export const TESTIMONIALS: Testimonial[] = [
     review: DEFAULT_REVIEW,
     reviewer: {
       name: 'Stephanie Doe',
-      title: 'CEO & Mitchell Ltd',
+      title: 'CEO @ Mitchell Ltd',
       photoUri: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/common/businesswoman-1.png',
       social: {
         linkedIn: '',

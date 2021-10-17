@@ -1,5 +1,5 @@
 <div [class.footer-hide-shadow]="hideShadow" [class.footer-popup-padding]="popupPadding" class="footer">
-  <div class="footer-links">
+  <div class="footer-links-wrapper">
     <div class="footer-link-column">
       <p>Products</p>
       <div *ngFor="let productLine of PRODUCT_LINES" class="footer-link-group">
@@ -128,7 +128,6 @@
         </i>
       </app-ext-link>
     </div>
-    <div
-        class="footer-version">{{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '' )}}</div>
+    <div class="footer-version">{{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '' )}}</div>
   </div>
 </div>

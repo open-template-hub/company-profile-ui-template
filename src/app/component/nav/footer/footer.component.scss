@@ -67,9 +67,8 @@
 
   & p {
     box-sizing: border-box;
-    border-bottom: 1px solid var(--theme-color);
     font-weight: bold;
-    color: var(--theme-color);
+    border-bottom: 1px solid var(--theme-color);
   }
 }
 
@@ -87,7 +86,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: var(--theme-color);
+  color: var(--lighter);
 }
 
 .footer-social i {
@@ -172,7 +171,6 @@
 
     & p {
       margin: 20px 0 4px;
-      border-bottom: 1px solid var(--theme-color-lighter-5);
     }
 
     &.double {

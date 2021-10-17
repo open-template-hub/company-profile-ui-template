@@ -45,7 +45,7 @@
     width: 100%;
 
     & .counter {
-      color: var(--theme-color);
+      color: var(--theme-color-darker-1);
       font-weight: 400;
     }
 
@@ -57,7 +57,7 @@
       width: auto;
       margin: 5px 30px 0;
       padding-bottom: 12px;
-      border-bottom: 2px solid var(--theme-color-lighter-2);
+      border-bottom: 2px solid var(--theme-color-darker-1);
     }
   }
 }

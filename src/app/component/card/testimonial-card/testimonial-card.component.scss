@@ -98,8 +98,12 @@
 
       text-align: left;
 
+      & .name {
+        font-weight: bold;
+      }
+
       & .title {
-        color: var(--theme-color-darker-3);
+        color: var(--lighter);
       }
 
       & > * {

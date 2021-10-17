@@ -1,5 +1,5 @@
 <!-- Employees -->
-<app-hero [contents]="[{text: 'Team Behind the Open Template Hub', level: 1}]"></app-hero>
+<app-hero [contents]="employeeAppHeroContents"></app-hero>
 <div class="employees-wrapper">
   <ng-container *ngFor="let employee of EMPLOYEES; last as isLast">
     <hr *ngIf="isLast"/>
@@ -8,9 +8,7 @@
 </div>
 
 <!-- Follow Us -->
-<app-hero [contents]="[
-{text: 'Follow us on social media', level: 2},
-{text: 'Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates'}]">
+<app-hero [contents]="followUsAppHeroContents">
 </app-hero>
 <div class="websites-wrapper">
   <ng-container *ngFor="let website of websites">
@@ -21,9 +19,7 @@
 </div>
 
 <!-- History of Us -->
-<app-hero [contents]="[
-{text: 'History of the Open Template Hub', level: 2},
-{text: 'Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates'}]">
+<app-hero [contents]="historyOfUsAppHerContents">
 </app-hero>
 <div class="timeline-wrapper">
   <ng-container *ngFor="let timelineItem of OTH_TIME_LINE; index as i">

@@ -127,6 +127,11 @@
         <i [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'" aria-hidden="true" body>
         </i>
       </app-ext-link>
+      <div class="footer-language">
+        <p>Choose language:</p>
+        <a href="/{{ environmentCommon.languages.english }}/{{ getCurrentRoute() }}">English</a>
+        <a href="/{{ environmentCommon.languages.french }}/{{ getCurrentRoute() }}">French</a>
+      </div>
     </div>
     <div class="footer-version">{{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '' )}}</div>
   </div>

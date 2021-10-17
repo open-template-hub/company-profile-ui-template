@@ -5,7 +5,7 @@
     <ng-template #bodyTemplate>
       <div class="body">
         <div *ngIf="emailSent">
-          <label>Thank you for reaching us. Our team will contact with you soon.</label>
+          <label i18n>Thank you for reaching us. Our team will contact with you soon.</label>
         </div>
         <form (ngSubmit)="onSubmit()" *ngIf="!emailSent" [formGroup]="form">
           <div
@@ -17,7 +17,7 @@
                 required
                 type="text"
             />
-            <h4>First Name</h4>
+            <h4 i18n>First Name</h4>
           </div>
           <div
               [class.error-input]="submitted && form.controls.secondName.invalid"
@@ -27,7 +27,7 @@
                 placeholder="Doe"
                 required
                 type="text"/>
-            <h4>Last Name</h4>
+            <h4 i18n>Last Name</h4>
           </div>
           <div
               [class.error-input]="submitted && form.controls.workEmail.invalid"
@@ -38,7 +38,7 @@
                 required
                 type="text"
             />
-            <h4>Email</h4>
+            <h4 i18n>Email</h4>
           </div>
           <div
               [class.error-input]="submitted && form.controls.workPhone.invalid"
@@ -48,7 +48,7 @@
                 placeholder="+5 (555) 555-5555"
                 type="text"
             />
-            <h4>Phone Number</h4>
+            <h4 i18n>Phone Number</h4>
           </div>
           <div
               [class.error-input]="submitted && form.controls.companyWebsite.invalid"
@@ -58,22 +58,22 @@
                 placeholder="example.com"
                 type="text"
             />
-            <h4>Website</h4>
+            <h4 i18n>Website</h4>
           </div>
           <div [class.error-input]="submitted && form.controls.companySize.invalid" class="input-with-label">
             <select (change)="changeCompanySize($event)" formControlName="companySize">
-              <option class="default-option" disabled value="">
+              <option i18n class="default-option" disabled value="">
                 Select range of employees
               </option>
               <option *ngFor="let option of sizeOptions" [ngValue]="option">
                 {{ option }}
               </option>
             </select>
-            <h4>Company Size</h4>
+            <h4 i18n>Company Size</h4>
           </div>
           <div [class.error-input]="submitted && form.controls.country.invalid" class="input-with-label">
             <select (change)="changeCountry($event)" formControlName="country">
-              <option class="default-option" disabled value="">
+              <option i18n class="default-option" disabled value="">
                 Select a country
               </option>
               <option *ngFor="let country of countries" [ngValue]="country">
@@ -89,7 +89,7 @@
           <textarea
               formControlName="anythingElse"
               maxlength="500"
-              placeholder="Tell us more about your project, needs, and timeline...."
+              i18n-placeholder placeholder="Tell us more about your project, needs, and timeline...."
               rows="5"
           ></textarea>
             <h4>Your Message</h4>
@@ -114,9 +114,9 @@
   <div class="footer-card-wrapper">
     <i aria-hidden="true" class="fa fa-comments fa-fw"></i>
     <div class="footer-card-right-column">
-      <h4>General Communication</h4>
+      <h4 i18n>General Communication</h4>
       <h4>
-        For general queries, including partnership opportunities, please email
+        <ng-container i18n>For general queries, including partnership opportunities, please email</ng-container>
         <a [href]="'mailto: ' + environmentCommon.oth.email" class="theme-color-link">
           {{ environmentCommon.oth.email }}
         </a>
@@ -126,10 +126,10 @@
   <div class="footer-card-wrapper">
     <i aria-hidden="true" class="fa fa-life-ring fa-fw"></i>
     <div class="footer-card-right-column">
-      <h4>Technical or account support</h4>
+      <h4 i18n>Technical or account support</h4>
       <h4>
-        We're here to help! If you have technical issues,
-        <a [href]="URLS.maintenance" class="theme-color-link">
+        <ng-container i18n>We're here to help! If you have technical issues,</ng-container>
+        <a i18n [href]="URLS.maintenance" class="theme-color-link">
           contact support
         </a>
       </h4>

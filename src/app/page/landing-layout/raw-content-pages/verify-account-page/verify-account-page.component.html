@@ -5,20 +5,20 @@
   </div>
 
   <!-- Verifying account -->
-  <app-hero *ngIf="loading" [contents]="[{text: 'Verifying account...', level: 2}]"
+  <app-hero *ngIf="loading" [contents]="verifyingAccountAppHeroContents"
             [heroClass]="'no-padding-top'"></app-hero>
 
   <!-- Account verification failed -->
   <app-hero *ngIf="!loading && error"
-            [contents]="[{text: 'Account verification failed', level: 2}, {text: 'Something went wrong!'}]"
+            [contents]="accountVerificationFailedAppHeroContents"
             [heroClass]="'no-padding-top'"></app-hero>
   <app-information-button (click)="router.navigate([URLS.root])" *ngIf="!loading && error"
-                          [informationType]="INFORMATION_TYPES.error" [text]="'HOME'"></app-information-button>
+                          [informationType]="INFORMATION_TYPES.error" i18n-text text="HOME"></app-information-button>
 
   <!-- Account verified -->
   <app-hero *ngIf="!loading && !error"
-            [contents]="[{text: 'Account verified 🎉', level: 2}, {text: 'Please proceed with login'}]"
+            [contents]="accountVerifiedAppHeroContents"
             [heroClass]="'no-padding-top'"></app-hero>
   <app-information-button (click)="router.navigate([URLS.login])" *ngIf="!loading && !error"
-                          [informationType]="INFORMATION_TYPES.success" [text]="'LOG IN'"></app-information-button>
+                          [informationType]="INFORMATION_TYPES.success" i18n-text text="LOG IN"></app-information-button>
 </div>

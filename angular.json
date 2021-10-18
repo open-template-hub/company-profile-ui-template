@@ -113,7 +113,8 @@
               "sourceMap": true,
               "buildOptimizer": false,
               "extractLicenses": false,
-              "vendorChunk": true
+              "vendorChunk": true,
+              "localize": false
             },
             "local-to-staging-api": {
               "optimization": false,
@@ -121,6 +122,7 @@
               "buildOptimizer": false,
               "extractLicenses": false,
               "vendorChunk": true,
+              "localize": false,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",

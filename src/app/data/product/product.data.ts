@@ -125,7 +125,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'auth-server-template',
         name: 'Auth Server',
-        description: $localize `Auth Server Template is an generic open source authentication server that has simple yet powerful design to connect your business with all OAuth 2.0 and OAuth supporting third party companies (like Google, Facebook, Twitter or LinkedIn). It also supports basic username password authentication system.`,
+        description: $localize `Auth Server Template is a generic open source authentication server that has simple yet powerful design to connect your business with all OAuth 2.0 and OAuth supporting third party companies (like Google, Facebook, Twitter or LinkedIn). It also supports basic username password authentication system.`,
         href: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'auth-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/auth-server-logo.min.png',
         openSource: true,
@@ -135,8 +135,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'payment-server-template',
         name: 'Payment Server',
-        description:
-            $localize `Payment Server Template is an open source payment server that has simple and generic design to be able to integrated with payment solution providers like Stripe or Coinbase`,
+        description: $localize `Payment Server Template is a generic open source payment server that has simple yet powerful design to connect your business with third party payment solution provider companies (like Stripe or Coinbase).`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -151,8 +150,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'file-storage-server-template',
         name: 'File Storage Server',
-        description:
-            $localize `File Storage Server Template that supports uploading and downloading files from AWS S3`,
+        description: $localize `File Storage Server Template is a generic open source file storage server that has simple yet powerful design to connect your business with third party file storage provider companies (like AWS S3).`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -167,8 +165,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'mail-server-template',
         name: 'Mail Server',
-        description:
-            $localize `Mail Server Template supporting both regular public and private mail send processes in Message Queue Architecture`,
+        description: $localize `Mail Server Template supporting both regular public and private mail send processes in Message Queue Architecture`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -272,8 +269,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'server-generator',
         name: 'Server Generator',
-        description:
-            $localize `Command line interface generator of the servers at Open Template Hub`,
+        description: $localize `Command line interface generator of the servers at Open Template Hub`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -401,8 +397,7 @@ export const SERVICES: ProductLine[] = [
       {
         key: 'software-consultancy',
         name: 'Software Consultancy',
-        description:
-            $localize `Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
+        description: $localize `Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -413,8 +408,7 @@ export const SERVICES: ProductLine[] = [
       {
         key: 'software-integration',
         name: 'Software Integration',
-        description:
-            $localize `Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
+        description: $localize `Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
         href:
             environmentCommon.website.github.url +
             '/' +
@@ -425,8 +419,7 @@ export const SERVICES: ProductLine[] = [
       {
         key: 'quality-assurance',
         name: 'Quality Assurance',
-        description:
-            $localize `Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
+        description: $localize `Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
         href:
             environmentCommon.website.github.url +
             '/' +

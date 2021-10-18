@@ -1871,24 +1871,24 @@
         </context-group>
       </trans-unit>
       <trans-unit id="5163471992667677575" datatype="html">
-        <source>Auth Server Template is an generic open source authentication server that has simple yet powerful design to connect your business with all OAuth 2.0 and OAuth supporting third party companies (like Google, Facebook, Twitter or LinkedIn). It also supports basic username password authentication system.</source>
-        <target>Auth Server Template est un serveur d'authentification open source générique qui a une conception simple mais puissante pour connecter votre entreprise avec toutes les sociétés tierces prenant en charge OAuth 2.0 et OAuth (comme Google, Facebook, Twitter ou LinkedIn). Il prend également en charge le système d'authentification par mot de passe du nom d'utilisateur de base.</target>
+        <source>Auth Server Template is a generic open source authentication server that has simple yet powerful design to connect your business with all OAuth 2.0 and OAuth supporting third party companies (like Google, Facebook, Twitter or LinkedIn). It also supports basic username password authentication system.</source>
+        <target>Le modèle de serveur d'authentification est un serveur d'authentification open source générique doté d'une conception simple mais puissante pour connecter votre entreprise à toutes les sociétés tierces prenant en charge OAuth 2.0 et OAuth (comme Google, Facebook, Twitter ou LinkedIn). Il prend également en charge le système d'authentification par mot de passe du nom d'utilisateur de base.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">128</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6373617410970623501" datatype="html">
-        <source>Payment Server Template is an open source payment server that has simple and generic design to be able to integrated with payment solution providers like Stripe or Coinbase</source>
-        <target>Le modèle de serveur de paiement est un serveur de paiement open source qui a une conception simple et générique pour pouvoir s'intégrer aux fournisseurs de solutions de paiement comme Stripe ou Coinbase</target>
+        <source>Payment Server Template is a generic open source payment server that has simple yet powerful design to connect your business with third party payment solution provider companies (like Stripe or Coinbase).</source>
+        <target>Le modèle de serveur de paiement est un serveur de paiement open source générique qui a une conception simple mais puissante pour connecter votre entreprise avec des fournisseurs de solutions de paiement tiers (comme Stripe ou Coinbase).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">139</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5376108531044848524" datatype="html">
-        <source>File Storage Server Template that supports uploading and downloading files from AWS S3</source>
-        <target>Modèle de serveur de stockage de fichiers qui prend en charge le chargement et le téléchargement de fichiers à partir d'AWS S3</target>
+        <source>File Storage Server Template is a generic open source file storage server that has simple yet powerful design to connect your business with third party file storage provider companies (like AWS S3).</source>
+        <target>Le modèle de serveur de stockage de fichiers est un serveur de stockage de fichiers open source générique doté d'une conception simple mais puissante pour connecter votre entreprise à des fournisseurs de stockage de fichiers tiers (comme AWS S3).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">155</context>

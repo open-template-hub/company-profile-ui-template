@@ -67,7 +67,8 @@ export const ThemeColorSettings = {
   green: 'green-theme',
   orange: 'orange-theme',
   purple: 'purple-theme',
-  pink: 'pink-theme'
+  pink: 'pink-theme',
+  gray: 'gray-theme'
 };
 
 export const ThemeDesignSettings = {

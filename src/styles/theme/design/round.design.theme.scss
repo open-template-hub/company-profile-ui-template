@@ -5,6 +5,7 @@
   --border-radius-image-round: var(--border-radius-round);
   --border-radius-product-line-round: var(--border-radius-round);
   --height-bottom-line-round: var(--border-radius-round);
+  --padding-line-round: 1.2em;
 }
 
 .round-theme {
@@ -12,4 +13,5 @@
   --border-radius-image: var(--border-radius-image-round);
   --border-radius-product-line: var(--border-radius-product-line-round);
   --height-bottom-line: var(--height-bottom-line-round);
+  --padding-line: var(--padding-line-round);
 }

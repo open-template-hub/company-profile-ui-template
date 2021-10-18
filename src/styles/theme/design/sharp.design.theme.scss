@@ -5,6 +5,7 @@
   --border-radius-image-sharp: 0;
   --border-radius-product-line-sharp: var(--border-radius-sharp);
   --height-bottom-line-sharp: 4px;
+  --padding-line-sharp: 1.2em;
 }
 
 .sharp-theme {
@@ -12,4 +13,5 @@
   --border-radius-image: var(--border-radius-image-sharp);
   --border-radius-product-line: var(--border-radius-product-line-sharp);
   --height-bottom-line: var(--height-bottom-line-sharp);
+  --padding-line: var(--padding-line-sharp);
 }

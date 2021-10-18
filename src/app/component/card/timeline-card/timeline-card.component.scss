@@ -36,12 +36,12 @@
 
   & .body {
     @include card.default-body;
+    @include util.default-padding-line;
 
     justify-content: space-between;
 
     // Design
     height: 420px;
-    padding: 20px;
 
     & > * {
       max-width: 100%;

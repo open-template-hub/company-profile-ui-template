@@ -5,6 +5,7 @@
   --border-radius-image-leaf: 0 3em 0 3em;
   --border-radius-product-line-leaf: 3em 0em 0em 3em;
   --height-bottom-line-leaf: 0;
+  --padding-line-leaf: 1.2em 1.2em 2em 1.2em;
 }
 
 .leaf-theme {
@@ -12,4 +13,5 @@
   --border-radius-image: var(--border-radius-image-leaf);
   --border-radius-product-line: var(--border-radius-product-line-leaf);
   --height-bottom-line: var(--height-bottom-line-leaf);
+  --padding-line: var(--padding-line-leaf);
 }

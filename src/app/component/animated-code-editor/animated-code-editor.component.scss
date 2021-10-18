@@ -18,7 +18,7 @@
   }
 
   & .content {
-    padding: 20px 15px 25px 15px;
+    @include util.default-padding-line;
     font-family: 'JetBrains Mono', monospace;
   }
 

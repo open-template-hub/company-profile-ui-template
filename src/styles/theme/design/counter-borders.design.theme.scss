@@ -5,6 +5,7 @@
   --border-radius-image-counter-borders: 0 6px 0 12px;
   --border-radius-product-line-counter-borders: var(--border-radius-counter-borders);
   --height-bottom-line-counter-borders: 4px;
+  --padding-line-counter-borders: 1.2em;
 }
 
 .counter-borders-theme {
@@ -12,4 +13,5 @@
   --border-radius-image: var(--border-radius-image-counter-borders);
   --border-radius-product-line: var(--border-radius-product-line-counter-borders);
   --height-bottom-line: var(--height-bottom-line-counter-borders);
+  --padding-line: var(--padding-line-counter-borders);
 }

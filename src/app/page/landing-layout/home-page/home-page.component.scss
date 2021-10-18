@@ -127,7 +127,7 @@
     margin-top: 30px;
 
     & app-feature-card {
-      margin-left: 15px;
+      margin-left: 30px;
       width: 16em;
     }
   }
@@ -187,12 +187,12 @@
       @include util.flex-layout-column;
       @include util.flex-center-center;
 
-      padding-left: 3vw;
-      padding-right: 5vw;
+      padding: 0 3vw 0 3vw;
 
       & app-feature-card {
         margin-top: 20px;
-        width: 90%;
+        margin-left: 0px;
+        width: 94vw;
       }
     }
   }

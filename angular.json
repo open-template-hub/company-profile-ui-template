@@ -65,7 +65,7 @@
             "scripts": [],
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json",
-            "localize": false
+            "localize": true
           },
           "configurations": {
             "fr": {

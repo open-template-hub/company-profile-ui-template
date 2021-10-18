@@ -1871,8 +1871,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="5163471992667677575" datatype="html">
-        <source>Auth Server Template is an open source authentication server that has simple and generic design to connect your authentication system with every OAuth 2.0 and OAuth supporting third party companies like Google, Facebook, Twitter or LinkedIn. We are also supporting regular username password authentication system</source>
-        <target>Auth Server Template est un serveur d'authentification open source qui a une conception simple et générique pour connecter votre système d'authentification à chaque OAuth 2.0 et OAuth prenant en charge des sociétés tierces comme Google, Facebook, Twitter ou LinkedIn. Nous soutenons également le système d'authentification de mot de passe de nom d'utilisateur régulier</target>
+        <source>Auth Server Template is an generic open source authentication server that has simple yet powerful design to connect your business with all OAuth 2.0 and OAuth supporting third party companies (like Google, Facebook, Twitter or LinkedIn). It also supports basic username password authentication system.</source>
+        <target>Auth Server Template est un serveur d'authentification open source générique qui a une conception simple mais puissante pour connecter votre entreprise avec toutes les sociétés tierces prenant en charge OAuth 2.0 et OAuth (comme Google, Facebook, Twitter ou LinkedIn). Il prend également en charge le système d'authentification par mot de passe du nom d'utilisateur de base.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">128</context>

@@ -125,7 +125,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'auth-server-template',
         name: 'Auth Server',
-        description: $localize `Auth Server Template is an open source authentication server that has simple and generic design to connect your authentication system with every OAuth 2.0 and OAuth supporting third party companies like Google, Facebook, Twitter or LinkedIn. We are also supporting regular username password authentication system`,
+        description: $localize `Auth Server Template is an generic open source authentication server that has simple yet powerful design to connect your business with all OAuth 2.0 and OAuth supporting third party companies (like Google, Facebook, Twitter or LinkedIn). It also supports basic username password authentication system.`,
         href: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'auth-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/auth-server-logo.min.png',
         openSource: true,

@@ -1643,7 +1643,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="5163471992667677575" datatype="html">
-        <source>Auth Server Template is an open source authentication server that has simple and generic design to connect your authentication system with every OAuth 2.0 and OAuth supporting third party companies like Google, Facebook, Twitter or LinkedIn. We are also supporting regular username password authentication system</source>
+        <source>Auth Server Template is an generic open source authentication server that has simple yet powerful design to connect your business with all OAuth 2.0 and OAuth supporting third party companies (like Google, Facebook, Twitter or LinkedIn). It also supports basic username password authentication system.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">128</context>

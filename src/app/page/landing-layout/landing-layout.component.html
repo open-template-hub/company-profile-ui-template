@@ -6,7 +6,16 @@
     <div class="header-filler"></div>
     <div class="top-svg">
       <svg preserveAspectRatio="xMidYMax slice" viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg">
-        <path [attr.d]="topSvgPath" style="fill: var(--theme-color-lighter-2);"></path>
+        <defs id="defs905">
+          <linearGradient id="linearGradient1484">
+            <stop id="stop1480" offset="0" style="stop-color:var(--theme-color-lighter-2);stop-opacity:1"/>
+            <stop id="stop1482" offset="1" style="stop-color:var(--theme-color-lighter-3);stop-opacity:1"/>
+          </linearGradient>
+          <linearGradient gradientUnits="userSpaceOnUse" id="linearGradient1486" x1="477.7688" x2="500.07684"
+                          xlink:href="#linearGradient1484"
+                          y1="1.5330492" y2="173.84599"/>
+        </defs>
+        <path [attr.d]="topSvgPath" style="fill:url(#linearGradient1486);fill-opacity:1;"></path>
       </svg>
     </div>
     <div class="page-content">

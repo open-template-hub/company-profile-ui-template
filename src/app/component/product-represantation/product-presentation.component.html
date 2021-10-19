@@ -20,7 +20,7 @@
       </ng-container>
       <ng-container *ngSwitchDefault [ngSwitch]="product.key">
         <app-card
-            *ngSwitchCase="['auth-server-template', 'payment-server-template'].includes(product.key) ? product.key : ''"
+            *ngSwitchCase="['auth-server-template', 'payment-server-template', 'file-storage-server-template'].includes(product.key) ? product.key : ''"
             [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" [footerTemplate]="footerTemplate"
             class="presentation-card">
           <ng-template #bodyTemplate>
@@ -29,22 +29,18 @@
                 <img [src]="BRAND.logo.main" alt="logo" class="brand-logo" width="80"/>
                 <i aria-hidden="true" class="fa fa-check-circle"></i>
                 <app-presentation-swiper
-                    [items]="getPresentationSwiper()"></app-presentation-swiper>
+                    [items]="setPresentation()"></app-presentation-swiper>
               </div>
-              <p class="feature-title" *ngIf="product.key === 'auth-server-template'">Auth server supports social login functionality for
-                OAuth1
-                and OAuth2</p>
-              <p class="feature-title" *ngIf="product.key === 'payment-server-template'">Integrate your servers with payment solution
-                providers
-                in minutes</p>
+              <p class="feature-title">{{ presentationText }}</p>
             </div>
           </ng-template>
           <ng-template #footerTemplate>
             <div class="footer theme-color-lighter-3-border">
               <p>Some of the preconfigured systems:</p>
               <p>
-        <span
-            *ngFor="let partner of (product.key === 'auth-server-template' ? SOCIAL_LOGIN_PARTNERS : PAYMENT_PARTNERS); last as isLast">{{ partner.name + ( !isLast ? ',' : '' ) + ' ' | titlecase }}</span>
+                <span *ngFor="let partner of presentationPartners; last as isLast">
+                  {{ partner.name + ( !isLast ? ',' : '' ) + ' ' | titlecase }}
+                </span>
               </p>
             </div>
           </ng-template>

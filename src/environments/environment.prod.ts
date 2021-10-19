@@ -54,6 +54,12 @@ export const environment: EnvironmentModel = {
     }
   },
 
+  fileStorage: {
+    aws: {
+      tag: 'AWS'
+    }
+  },
+
   analytics: {
     google: {
       tag: 'GTM-NNRF845'

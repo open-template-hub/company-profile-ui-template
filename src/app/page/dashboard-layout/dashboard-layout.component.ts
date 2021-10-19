@@ -19,10 +19,7 @@ export class DashboardLayoutComponent {
       private themeService: ThemeService,
       private loadingService: LoadingService
   ) {
-    this.themeService.sideNavClosed.subscribe( sideNavClosed => {
-      this.sideNavClosed = sideNavClosed;
-    } );
-
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
+    this.themeService.sideNavClosed.subscribe( sideNavClosed => this.sideNavClosed = sideNavClosed );
   }
 }

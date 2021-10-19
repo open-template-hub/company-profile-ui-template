@@ -43,7 +43,6 @@ const routes: Routes = [
   {
     path: '',
     component: LandingLayoutComponent,
-    data: { customTopSvgDesign: false },
     children: [
       {
         path: '',

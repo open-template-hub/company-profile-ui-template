@@ -34,7 +34,6 @@
   }
 
   position: absolute;
-  left: 0;
 }
 
 @media only screen and (max-width: 999px) {
@@ -51,9 +50,5 @@
   .page {
     font-size: 25px;
     padding-bottom: 100px;
-  }
-
-  .top-svg {
-    top: 90px;
   }
 }

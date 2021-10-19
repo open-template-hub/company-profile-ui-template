@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { DEFAULT_THEME, ThemeDesignSettings } from '../../data/constant';
+import { ActivatedRoute } from '@angular/router';
+import { ThemeDesignSettings } from '../../data/constant';
 import { LoadingService } from '../../service/loading/loading.service';
 import { ThemeService } from '../../service/theme/theme.service';
 
@@ -12,37 +13,16 @@ export class LandingLayoutComponent {
 
   loading = false;
 
-  private DEFAULT_SVG_PATH = 'M 0,240 1000,110 V 0 H 0 Z';
+  themeDesignSetting;
 
-  topSvgPath = this.DEFAULT_SVG_PATH;
+  ThemeDesignSettings = ThemeDesignSettings;
 
-  constructor( private loadingService: LoadingService, private themeService: ThemeService ) {
+  constructor( private loadingService: LoadingService, private themeService: ThemeService, private route: ActivatedRoute, ) {
 
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
 
-    this.themeService.themeDesignSetting.subscribe( themeDesignSetting => this.setDesign( themeDesignSetting ) );
-  }
-
-  private setDesign( themeDesignSetting: string ) {
-
-    switch ( themeDesignSetting ) {
-      case ThemeDesignSettings.sharp :
-        this.topSvgPath = this.DEFAULT_SVG_PATH;
-        break;
-      case ThemeDesignSettings.leaf :
-        this.topSvgPath = this.DEFAULT_SVG_PATH;
-        break;
-      case ThemeDesignSettings.counterBorders :
-        this.topSvgPath = this.DEFAULT_SVG_PATH;
-        break;
-      case ThemeDesignSettings.round :
-        this.topSvgPath = this.DEFAULT_SVG_PATH;
-        break;
-      case DEFAULT_THEME :
-      default : {
-        this.topSvgPath = this.DEFAULT_SVG_PATH;
-        break;
-      }
+    if ( this.route.snapshot.data.customTopSvgDesign ) {
+      this.themeService.themeDesignSetting.subscribe( themeDesignSetting => this.themeDesignSetting = themeDesignSetting );
     }
   }
 }

@@ -1895,8 +1895,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="647530394998776480" datatype="html">
-        <source>Mail Server Template supporting both regular public and private mail send processes in Message Queue Architecture</source>
-        <target>Modèle de serveur de messagerie prenant en charge les processus d'envoi de courrier public et privé standard dans Message Queue Architecture</target>
+        <source>Mail Server Template is a generic open source mail server that has simple yet powerful design to connect your business with third party email service providers (like Gmail, Yahoo or Outlook).</source>
+        <target>Le modèle de serveur de messagerie est un serveur de messagerie open source générique doté d'une conception simple mais puissante pour connecter votre entreprise à des fournisseurs de services de messagerie tiers (comme Gmail, Yahoo ou Outlook).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">171</context>

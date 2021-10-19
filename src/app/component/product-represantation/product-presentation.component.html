@@ -20,7 +20,7 @@
       </ng-container>
       <ng-container *ngSwitchDefault [ngSwitch]="product.key">
         <app-card
-            *ngSwitchCase="['auth-server-template', 'payment-server-template', 'file-storage-server-template'].includes(product.key) ? product.key : ''"
+            *ngSwitchCase="['auth-server-template', 'payment-server-template', 'file-storage-server-template', 'mail-server-template'].includes(product.key) ? product.key : ''"
             [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" [footerTemplate]="footerTemplate"
             class="presentation-card">
           <ng-template #bodyTemplate>

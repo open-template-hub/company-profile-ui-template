@@ -1664,7 +1664,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="647530394998776480" datatype="html">
-        <source>Mail Server Template supporting both regular public and private mail send processes in Message Queue Architecture</source>
+        <source>Mail Server Template is a generic open source mail server that has simple yet powerful design to connect your business with third party email service providers (like Gmail, Yahoo or Outlook).</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">171</context>

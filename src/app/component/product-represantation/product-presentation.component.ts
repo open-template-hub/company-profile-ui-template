@@ -19,6 +19,7 @@ export class ProductPresentationComponent {
   SOCIAL_LOGIN_PARTNERS: Partner[] = [];
   PAYMENT_PARTNERS: Partner[] = [];
   FILE_STORAGE_PARTNERS: Partner[] = [];
+  MAIL_PARTNERS: Partner[] = [];
   BRAND = BRAND;
 
   presentationText: string;
@@ -58,6 +59,17 @@ export class ProductPresentationComponent {
         } );
       }
     }
+
+    for ( const website in environment.mail ) {
+      // filter only oauth configured websites
+      if ( environmentCommon.website[ website ].logo ) {
+        this.MAIL_PARTNERS.push( {
+          name: website,
+          logo: environmentCommon.website[ website ].logo,
+          url: environmentCommon.website[ website ].url
+        } );
+      }
+    }
   }
 
   setPresentation() {
@@ -76,6 +88,11 @@ export class ProductPresentationComponent {
         this.presentationText = 'Integrate your servers with file storage solution providers in minutes';
         this.presentationPartners = this.FILE_STORAGE_PARTNERS;
         return this.FILE_STORAGE_PARTNERS.map( partner => partner.logo );
+      }
+      case 'mail-server-template': {
+        this.presentationText = 'Integrate your servers with email service providers in minutes';
+        this.presentationPartners = this.MAIL_PARTNERS;
+        return this.MAIL_PARTNERS.map( partner => partner.logo );
       }
       default: {
         return [];

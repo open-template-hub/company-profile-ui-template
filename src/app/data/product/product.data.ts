@@ -165,7 +165,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'mail-server-template',
         name: 'Mail Server',
-        description: $localize `Mail Server Template supporting both regular public and private mail send processes in Message Queue Architecture`,
+        description: $localize `Mail Server Template is a generic open source mail server that has simple yet powerful design to connect your business with third party email service providers (like Gmail, Yahoo or Outlook).`,
         href:
             environmentCommon.website.github.url +
             '/' +

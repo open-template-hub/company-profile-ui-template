@@ -60,6 +60,18 @@ export const environment: EnvironmentModel = {
     }
   },
 
+  mail: {
+    gmail: {
+      tag: 'GMAIL_DEVELOPMENT'
+    },
+    yahoo: {
+      tag: 'YAHOO_DEVELOPMENT'
+    },
+    outlook: {
+      tag: 'OUTLOOK_DEVELOPMENT'
+    }
+  },
+
   analytics: {
     google: {
       tag: 'GTM-P8BM922'

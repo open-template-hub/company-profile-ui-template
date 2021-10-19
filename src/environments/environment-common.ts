@@ -101,6 +101,26 @@ export const environmentCommon = {
       tag: environment.fileStorage.aws.tag,
     },
 
+    // mail
+    gmail: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/gmail.png',
+      cssClass: 'gmail',
+      url: 'https://gmail.com',
+      tag: environment.mail.gmail.tag,
+    },
+    yahoo: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/yahoo.png',
+      cssClass: 'yahoo',
+      url: 'https://yahoo.com',
+      tag: environment.mail.yahoo.tag,
+    },
+    outlook: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/outlook.png',
+      cssClass: 'outlook',
+      url: 'https://outlook.com',
+      tag: environment.mail.outlook.tag,
+    },
+
     // other
     instagram: {
       cssClass: 'instagram',

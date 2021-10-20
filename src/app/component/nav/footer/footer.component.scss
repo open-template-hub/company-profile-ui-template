@@ -40,9 +40,10 @@
   & .footer-language {
     @include util.flex-layout-row;
     @include util.flex-center-center;
+    font-size: 22px;
 
     & a {
-      font-size: 27px;
+      font-size: 28px;
       width: 48px;
       height: 48px;
     }

@@ -2,8 +2,10 @@ import { Ribbon } from '../ribbon/ribbon.model';
 
 export interface PricingOption {
   title: string,
+  description: string,
   ribbon?: Ribbon,
-  price: {
+  contactRequired?: boolean,
+  price?: {
     currency: string,
     value: string,
     subscriptionTime: string

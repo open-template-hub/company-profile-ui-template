@@ -61,7 +61,7 @@
   }
 }
 
-.testimonials-wrapper {
+.cards-wrapper {
   @include util.flex-layout-row;
 
   align-items: center;
@@ -175,7 +175,7 @@
     }
   }
 
-  .testimonials-wrapper {
+  .cards-wrapper {
     font-size: 18px;
 
     & > * {
@@ -246,7 +246,7 @@
     }
   }
 
-  .testimonials-wrapper {
+  .cards-wrapper {
     @include util.margin-x-auto;
 
     font-size: 18px;

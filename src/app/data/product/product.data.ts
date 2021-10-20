@@ -52,13 +52,14 @@ const DEFAULT_FEATURES = [
 
 const DEFAULT_PRICING_OPTIONS = [
   {
-    title: $localize`STARTER`,
+    title: `Free`,
+    description: 'For Individuals',
     price: {
       currency: '$',
       value: '0',
       subscriptionTime: 'mo.',
     },
-    features: [ [ 'true', '', '' ], [ '', ''], [ '', '' ] ],
+    features: [ [ 'true', '', '' ], [ '', '' ], [ '', '' ] ],
     styles: {
       width: '300px',
       height: '400px',
@@ -67,14 +68,11 @@ const DEFAULT_PRICING_OPTIONS = [
     },
   },
   {
-    title: $localize`BASIC`,
+    title: `Standard`,
+    description: 'For Startups',
     ribbon: PRICING_RIBBONS.get( 'deal' ),
-    price: {
-      currency: '$',
-      value: '99',
-      subscriptionTime: 'mo.',
-    },
-    features: [ [ 'true', 'true', '' ], [ 'true', ''], [ $localize`Up to 10 users`, '' ] ],
+    contactRequired: true,
+    features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`Up to 10 users`, '' ] ],
     styles: {
       width: '370px',
       height: '520px',
@@ -83,12 +81,9 @@ const DEFAULT_PRICING_OPTIONS = [
     },
   },
   {
-    title: $localize`PRO`,
-    price: {
-      currency: '$',
-      value: '199',
-      subscriptionTime: 'mo.',
-    },
+    title: `Enterprise`,
+    description: 'For Enterprises',
+    contactRequired: true,
     features: [ [ 'true', 'true', 'true' ], [ 'true', 'true' ], [ $localize`Unlimited users`, 'true' ] ],
     styles: {
       width: '300px',

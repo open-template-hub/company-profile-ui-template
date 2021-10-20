@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { URLS } from '../../../data/constant';
-import { DEFAULT_RIBBON } from '../../../data/ribbon/ribbon.data';
 import { PricingOption } from '../../../model/pricing/pricing.model';
 import { PricingFeature } from '../../../model/product/product.model';
 
@@ -18,23 +17,7 @@ export class PricingCardComponent {
 
   @Input() pricingFeatures: PricingFeature[];
 
-  @Input() pricingOption: PricingOption = {
-    title: '',
-    ribbon: DEFAULT_RIBBON,
-    price: {
-      currency: '',
-      value: '',
-      subscriptionTime: ''
-    },
-    features: [],
-    styles: {
-      width: '340px',
-      height: '440px',
-      fontSize: '0.8em',
-      featureHeight: '10em'
-    },
-    link: URLS.maintenance
-  };
+  @Input() pricingOption: PricingOption;
 
   constructor( private router: Router ) {
     // Intentionally blank

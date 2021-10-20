@@ -140,7 +140,7 @@ app-swiper-wrapper {
   margin-top: 80px;
 }
 
-.testimonials-wrapper {
+.cards-wrapper {
   @include util.flex-layout-row;
 
   align-items: center;
@@ -220,7 +220,7 @@ app-swiper-wrapper {
     }
   }
 
-  .testimonials-wrapper {
+  .cards-wrapper {
     font-size: 18px;
 
     & > * {
@@ -297,7 +297,7 @@ app-swiper-wrapper {
     }
   }
 
-  .testimonials-wrapper {
+  .cards-wrapper {
     font-size: 18px;
     padding-top: 20px;
 

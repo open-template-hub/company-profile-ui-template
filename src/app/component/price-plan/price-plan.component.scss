@@ -170,12 +170,3 @@ p {
     flex-direction: column;
   }
 }
-
-@media only screen and (min-width: 1000px) {
-  .column-feature {
-    & p {
-    }
-  }
-}
-
-

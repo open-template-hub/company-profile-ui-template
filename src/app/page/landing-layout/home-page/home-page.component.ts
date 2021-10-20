@@ -37,9 +37,14 @@ export class HomePageComponent implements AfterViewInit {
   environment = environment;
   environmentCommon = environmentCommon;
 
-  appHeroContents = [
+  customerTestimonialsTitle = [
     { text: $localize `Customer testimonials`, level: 1 },
     { text: $localize `What our customers are saying...` }
+  ]
+
+  whyUsTitle = [
+    { text: `Why Open Template Hub?`, level: 1 },
+    { text: `Just focus on your business and leave us all others` }
   ]
 
   constructor(

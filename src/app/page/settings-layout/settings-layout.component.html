@@ -1,9 +1,9 @@
 <div [class.side-nav-closed]="sideNavClosed === 'true'">
   <app-dashboard-layout-top-nav></app-dashboard-layout-top-nav>
   <app-dashboard-layout-side-nav></app-dashboard-layout-side-nav>
+  <app-top-svg></app-top-svg>
   <div class="page">
-    <div [class.dashboard-layout-page-top-loading-bar]="loading">
-    </div>
+    <div [class.dashboard-layout-page-top-loading-bar]="loading"></div>
     <div class="page-content">
       <router-outlet></router-outlet>
     </div>

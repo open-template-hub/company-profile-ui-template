@@ -5,6 +5,10 @@
   #{$property}: $value;
 }
 
+@mixin default-padding-line {
+  @include prefix(padding, var(--padding-line), moz webkit);
+}
+
 @mixin default-border-radius {
   @include prefix(border-radius, var(--border-radius), moz webkit);
 }

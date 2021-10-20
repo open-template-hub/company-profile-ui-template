@@ -14,6 +14,8 @@ export class MaintenancePageComponent {
   BRAND = BRAND;
   INFORMATION_TYPES = INFORMATION_TYPES;
 
+  appHeroContents = [{text: $localize `Under maintenance`, level: 1}, {text: $localize `Please check again later`}]
+
   constructor( public router: Router ) {
   }
 }

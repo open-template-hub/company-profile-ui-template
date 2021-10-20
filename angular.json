@@ -16,6 +16,12 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": "src/locale/messages.fr.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -58,9 +64,15 @@
             ],
             "scripts": [],
             "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "ngswConfigPath": "ngsw-config.json",
+            "localize": true
           },
           "configurations": {
+            "fr": {
+              "localize": [
+                "fr"
+              ]
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -101,7 +113,8 @@
               "sourceMap": true,
               "buildOptimizer": false,
               "extractLicenses": false,
-              "vendorChunk": true
+              "vendorChunk": true,
+              "localize": false
             },
             "local-to-staging-api": {
               "optimization": false,
@@ -109,6 +122,7 @@
               "buildOptimizer": false,
               "extractLicenses": false,
               "vendorChunk": true,
+              "localize": false,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -124,6 +138,9 @@
             "browserTarget": "company-profile-ui-template:build"
           },
           "configurations": {
+            "fr": {
+              "browserTarget": "company-profile-ui-template:build:fr"
+            },
             "production": {
               "browserTarget": "company-profile-ui-template:build:production"
             },

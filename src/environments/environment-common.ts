@@ -12,6 +12,7 @@ export const environmentCommon = {
   },
 
   website: {
+    // oauth
     twitter: {
       logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/twitter.png',
       cssClass: 'twitter',
@@ -70,6 +71,8 @@ export const environmentCommon = {
       callbackParams: [ 'code', 'state' ],
       tag: environment.oauth.reddit.tag,
     },
+
+    // payment
     stripe: {
       logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/stripe.png',
       cssClass: 'stripe-s',
@@ -89,6 +92,36 @@ export const environmentCommon = {
       clientId: environment.payment.paypal.clientId,
       env: environment.payment.paypal.env
     },
+
+    // file storage
+    aws: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/aws.png',
+      cssClass: 'aws',
+      url: 'https://aws.amazon.com',
+      tag: environment.fileStorage.aws.tag,
+    },
+
+    // mail
+    gmail: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/gmail.png',
+      cssClass: 'gmail',
+      url: 'https://gmail.com',
+      tag: environment.mail.gmail.tag,
+    },
+    yahoo: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/yahoo.png',
+      cssClass: 'yahoo',
+      url: 'https://yahoo.com',
+      tag: environment.mail.yahoo.tag,
+    },
+    outlook: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/outlook.png',
+      cssClass: 'outlook',
+      url: 'https://outlook.com',
+      tag: environment.mail.outlook.tag,
+    },
+
+    // other
     instagram: {
       cssClass: 'instagram',
       url: 'https://www.instagram.com'
@@ -114,5 +147,10 @@ export const environmentCommon = {
         download: 'https://api.npmjs.org/downloads/point'
       }
     }
+  },
+
+  languages: {
+    english: 'en-US',
+    french: 'fr'
   }
 };

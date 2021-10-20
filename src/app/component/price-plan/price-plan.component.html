@@ -26,15 +26,14 @@
       </div>
     </div>
   </div>
-  <!--Core Features-->
-  <div *ngFor="let headerFeature of product?.features" class="price-plan-main-feature-wrapper">
+  <div *ngFor="let headerFeature of product?.features; index as i" class="price-plan-main-feature-wrapper">
     <div (click)="accordionClicked( headerFeature.name )" class="price-plan-subtitle accordion-menu">
       {{ headerFeature.name }}
       <i [class]="hiddenMainFeatures.has( headerFeature.name ) ? 'fas fa-plus-circle fa-fw' : 'fas fa-minus-circle fa-fw'"
          aria-hidden="true"></i>
     </div>
     <div [class.hide]="hiddenMainFeatures.has( headerFeature.name )" class="subfeature-wrapper">
-      <div *ngFor="let feature of headerFeature.details; index as i" class="feature-area-row-wrapper">
+      <div *ngFor="let feature of headerFeature.details; index as j" class="feature-area-row-wrapper">
         <div class="feature-area-row">
           <div class="features-area-description column-header-feature">
             <p class="features-area-description-title">{{ feature.name }}</p>
@@ -42,13 +41,16 @@
           </div>
           <div class="feature-by-price-plan-wrapper">
             <div *ngFor="let pricingOption of product.pricingOptions" class="feature-by-price-plan column-feature">
-              <p *ngIf="pricingOption.features[i] !== 'true'"
-                 class="feature-desktop">{{ pricingOption.features[ i ] }}</p>
-              <i *ngIf="pricingOption.features[i] === 'true'" [class]="'feature-desktop'" aria-hidden="true"
-                 class="fas fa-check fa-fw"></i>
-              <i *ngIf="pricingOption.features[i] !== ''" [class]="'feature-mobile'" aria-hidden="true"
-                 class="fas fa-check fa-fw"></i>
-              <p *ngIf="pricingOption.features[i] !== ''" class="feature-mobile">{{ pricingOption.title }}</p>
+              <p *ngIf="pricingOption.features[i][j] !== 'true'" class="feature-desktop">
+                {{ pricingOption.features[ i ][ j ] }}
+              </p>
+              <i *ngIf="pricingOption.features[i][j] === 'true'" [class]="'feature-desktop'" aria-hidden="true"
+                 class="fas fa-check fa-fw success-text"></i>
+              <i *ngIf="pricingOption.features[i][j] !== ''" [class]="'feature-mobile'" aria-hidden="true"
+                 class="fas fa-check fa-fw success-text"></i>
+              <p *ngIf="pricingOption.features[i][j] !== ''" class="feature-mobile">
+                {{ pricingOption.title }}
+              </p>
             </div>
           </div>
         </div>

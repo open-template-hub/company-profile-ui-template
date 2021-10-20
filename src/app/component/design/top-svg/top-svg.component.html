@@ -1,0 +1,8 @@
+<div class="top-svg">
+  <ng-container [ngSwitch]="themeDesignSetting">
+    <app-sharp-top-svg *ngSwitchCase="ThemeDesignSettings.sharp"></app-sharp-top-svg>
+    <app-leaf-top-svg *ngSwitchCase="ThemeDesignSettings.leaf"></app-leaf-top-svg>
+    <app-counter-borders-top-svg *ngSwitchCase="ThemeDesignSettings.counterBorders"></app-counter-borders-top-svg>
+    <app-default-top-svg *ngSwitchDefault></app-default-top-svg>
+  </ng-container>
+</div>

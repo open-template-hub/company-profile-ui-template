@@ -4,8 +4,8 @@
   </div>
 
   <!-- Under maintenance -->
-  <app-hero [contents]="[{text: 'Under maintenance', level: 1}, {text: 'Please check again later'}]"
+  <app-hero [contents]="appHeroContents"
             [heroClass]="'no-padding-top'"></app-hero>
   <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.warning"
-                          [text]="'HOME'"></app-information-button>
+                          i18n-text text="HOME"></app-information-button>
 </div>

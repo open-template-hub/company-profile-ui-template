@@ -12,7 +12,7 @@
     </p>
     <br/>
     <p>
-      {{ !error ? 'Will be redirected to: ' : 'Looks like the link is broken: ' }}
+      {{ getRedirectText( error ) }}
       <br/>
       <a (click)="redirect()" [class]="error ? ThemeColorSettings.red : ThemeColorSettings.green"
          class="theme-color-link">
@@ -21,7 +21,7 @@
     </p>
   </div>
   <div class="external-component-button-wrapper">
-    <app-button [routerLink]="URLS.root" [text]="'Home'"></app-button>
-    <app-button (click)="redirect()" [text]="'Proceed'"></app-button>
+    <app-button [routerLink]="URLS.root" i18n-text text="Home"></app-button>
+    <app-button (click)="redirect()" i18n-text text="Proceed"></app-button>
   </div>
 </div>

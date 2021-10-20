@@ -1,7 +1,10 @@
+@use '../../../styles/util/util';
+
 .code-editor {
+  @include util.default-border-radius;
+
   background: var(--darker-light-mode);
   width: 100%;
-  border-radius: 5px;
   min-height: 220px;
   overflow: auto;
   text-align: left;
@@ -15,7 +18,7 @@
   }
 
   & .content {
-    padding: 20px 15px 25px 15px;
+    @include util.default-padding-line;
     font-family: 'JetBrains Mono', monospace;
   }
 

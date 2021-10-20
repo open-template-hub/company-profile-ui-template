@@ -99,6 +99,12 @@ import { LedComponent } from './component/led/led.component';
 import { BusinessPartnerSwiperComponent } from './component/swiper/business-partner-swiper/business-partner-swiper.component';
 import { PresentationSwiperComponent } from './component/swiper/presentation-swiper/presentation-swiper.component';
 import { SitemapPageComponent } from './page/landing-layout/sitemap-page/sitemap-page.component';
+import { FeatureCardComponent } from './component/card/feature-card/feature-card.component';
+import { SharpTopSvgComponent } from './component/design/top-svg/sharp-top-svg/sharp-top-svg.component';
+import { DefaultTopSvgComponent } from './component/design/top-svg/default-top-svg/default-top-svg.component';
+import { CounterBordersTopSvgComponent } from './component/design/top-svg/counter-borders-top-svg/counter-borders-top-svg.component';
+import { TopSvgComponent } from './component/design/top-svg/top-svg.component';
+import { LeafTopSvgComponent } from './component/design/top-svg/leaf-top-svg/leaf-top-svg.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -185,6 +191,12 @@ FullCalendarModule.registerPlugins( [
     BusinessPartnerSwiperComponent,
     PresentationSwiperComponent,
     SitemapPageComponent,
+    FeatureCardComponent,
+    SharpTopSvgComponent,
+    DefaultTopSvgComponent,
+    CounterBordersTopSvgComponent,
+    TopSvgComponent,
+    LeafTopSvgComponent,
   ],
   imports: [
     BrowserModule,

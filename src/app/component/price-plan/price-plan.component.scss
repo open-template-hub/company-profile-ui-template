@@ -1,11 +1,12 @@
+@use '../../../styles/util/util';
+
 .column-feature {
+  @include util.flex-layout-column;
+  @include util.flex-center-center;
+
   min-width: 29%;
   text-align: center;
   padding: 15px;
-
-  & p {
-    padding-bottom: 20px;
-  }
 }
 
 .column-header-feature {
@@ -58,10 +59,6 @@ p {
   min-width: 60%;
 }
 
-.feature-by-price-plan i {
-  color: var(--theme-color)
-}
-
 .price-plan-subtitle {
   font-size: 16px;
   background-color: var(--contrast);
@@ -101,6 +98,15 @@ p {
 }
 
 @media only screen and (max-width: 999px) {
+
+  .column-header-feature {
+    @include util.flex-layout-column;
+    @include util.flex-center-center;
+
+    text-align: center;
+  }
+
+
   .available-plans-empty-view {
     display: none;
   }
@@ -148,3 +154,13 @@ p {
     flex-direction: column;
   }
 }
+
+@media only screen and (min-width: 1000px) {
+  .column-feature {
+    & p {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+

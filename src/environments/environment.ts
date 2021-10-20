@@ -54,6 +54,24 @@ export const environment: EnvironmentModel = {
     }
   },
 
+  fileStorage: {
+    aws: {
+      tag: 'AWS_LOCAL'
+    }
+  },
+
+  mail: {
+    gmail: {
+      tag: 'GMAIL_LOCAL'
+    },
+    yahoo: {
+      tag: 'YAHOO_LOCAL'
+    },
+    outlook: {
+      tag: 'OUTLOOK_LOCAL'
+    }
+  },
+
   analytics: {
     google: {
       tag: 'GTM-P4FHG76'

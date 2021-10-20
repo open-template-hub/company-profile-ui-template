@@ -4,10 +4,10 @@
   "version": "3.0.1",
   "license": "MIT",
   "scripts": {
-    "buildLocal": "ng build --configuration=local",
-    "buildLocalToStagingApi": "ng build --configuration=local-to-staging-api",
-    "buildStaging": "ng build --configuration=staging",
-    "buildProd": "ng build --configuration=production",
+    "buildLocal": "ng build --configuration=local --localize",
+    "buildLocalToStagingApi": "ng build --configuration=local-to-staging-api --localize",
+    "buildStaging": "ng build --configuration=staging --localize",
+    "buildProd": "ng build --configuration=production --localize",
     "e2e": "ng e2e",
     "heroku-postbuild": "bash heroku.sh",
     "lint": "ng lint",
@@ -20,7 +20,8 @@
     "startStaging": "node src/version-generator.ts > ./src/environments/version.ts && node server.js --configuration=staging",
     "start": "node server.js --configuration=production",
     "outdated": "node src/dependency-checker.ts > docs/OUTDATED.md",
-    "test": "ng test"
+    "test": "ng test",
+    "updateMessages": "node src/messages-generator.ts"
   },
   "dependencies": {
     "@angular/animations": "^12.2.5",
@@ -68,6 +69,7 @@
     "@angular/cli": "^12.2.5",
     "@angular/compiler-cli": "^12.2.5",
     "@angular/language-service": "^12.2.5",
+    "@angular/localize": "^12.2.5",
     "@types/jasmine": "^3.9.0",
     "@types/jasminewd2": "^2.0.9",
     "@types/node": "^16.9.0",

@@ -14,7 +14,7 @@ console.log(
     '\n' +
     '\n' +
     '<h1 align="center">\n' +
-    'Open Template Hub - Company Profile UI Template v2\n' +
+    'Open Template Hub - Company Profile UI Template v3\n' +
     '  <br/>\n' +
     '(outdated packages)\n' +
     '</h1>\n' +

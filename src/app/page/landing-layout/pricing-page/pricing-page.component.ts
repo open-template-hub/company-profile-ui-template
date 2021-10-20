@@ -16,6 +16,8 @@ export class PricingPageComponent {
 
   PRICING_RIBBONS = PRICING_RIBBONS;
 
+  appHeroContents;
+
   constructor(
       private route: ActivatedRoute,
       public router: Router,
@@ -51,6 +53,7 @@ export class PricingPageComponent {
       }
 
       this.product = product;
+      this.appHeroContents = [{text: product.name + $localize ` Pricing Plan`, level: 1}, {text: $localize `No hidden fees. Cancel at any time.`}]
       this.productService.setSelectedProduct( this.product );
     } );
   }

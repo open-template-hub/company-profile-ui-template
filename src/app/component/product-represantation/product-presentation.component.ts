@@ -18,7 +18,12 @@ export class ProductPresentationComponent {
 
   SOCIAL_LOGIN_PARTNERS: Partner[] = [];
   PAYMENT_PARTNERS: Partner[] = [];
+  FILE_STORAGE_PARTNERS: Partner[] = [];
+  MAIL_PARTNERS: Partner[] = [];
   BRAND = BRAND;
+
+  presentationText: string;
+  presentationPartners: Partner[] = [];
 
   constructor( public router: Router ) {
 
@@ -43,15 +48,51 @@ export class ProductPresentationComponent {
         } );
       }
     }
+
+    for ( const website in environment.fileStorage ) {
+      // filter only oauth configured websites
+      if ( environmentCommon.website[ website ].logo ) {
+        this.FILE_STORAGE_PARTNERS.push( {
+          name: website,
+          logo: environmentCommon.website[ website ].logo,
+          url: environmentCommon.website[ website ].url
+        } );
+      }
+    }
+
+    for ( const website in environment.mail ) {
+      // filter only oauth configured websites
+      if ( environmentCommon.website[ website ].logo ) {
+        this.MAIL_PARTNERS.push( {
+          name: website,
+          logo: environmentCommon.website[ website ].logo,
+          url: environmentCommon.website[ website ].url
+        } );
+      }
+    }
   }
 
-  getPresentationSwiper() {
+  setPresentation() {
     switch ( this.product.key ) {
       case 'auth-server-template': {
+        this.presentationText = 'Integrate your servers with social login providers in minutes';
+        this.presentationPartners = this.SOCIAL_LOGIN_PARTNERS;
         return this.SOCIAL_LOGIN_PARTNERS.map( partner => partner.logo );
       }
       case 'payment-server-template': {
+        this.presentationText = 'Integrate your servers with payment solution providers in minutes';
+        this.presentationPartners = this.PAYMENT_PARTNERS;
         return this.PAYMENT_PARTNERS.map( partner => partner.logo );
+      }
+      case 'file-storage-server-template': {
+        this.presentationText = 'Integrate your servers with file storage solution providers in minutes';
+        this.presentationPartners = this.FILE_STORAGE_PARTNERS;
+        return this.FILE_STORAGE_PARTNERS.map( partner => partner.logo );
+      }
+      case 'mail-server-template': {
+        this.presentationText = 'Integrate your servers with email service providers in minutes';
+        this.presentationPartners = this.MAIL_PARTNERS;
+        return this.MAIL_PARTNERS.map( partner => partner.logo );
       }
       default: {
         return [];

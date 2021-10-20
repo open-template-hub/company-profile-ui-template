@@ -14,6 +14,8 @@ export class NotFoundPageComponent {
   BRAND = BRAND;
   INFORMATION_TYPES = INFORMATION_TYPES;
 
+  appHeroContents = [{text: $localize `404 Page not found`, level: 1}, {text: $localize `Something went wrong!`}]
+
   constructor( public router: Router ) {
   }
 }

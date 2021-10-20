@@ -19,10 +19,7 @@ export class SettingsLayoutComponent {
       private themeService: ThemeService,
       private loadingService: LoadingService
   ) {
-
-    themeService.sideNavClosed.subscribe( sideNavClosed => {
-      this.sideNavClosed = sideNavClosed;
-    } );
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
+    this.themeService.sideNavClosed.subscribe( sideNavClosed => this.sideNavClosed = sideNavClosed );
   }
 }

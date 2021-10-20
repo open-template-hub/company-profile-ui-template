@@ -100,6 +100,12 @@ export const environmentCommon = {
       url: 'https://aws.amazon.com',
       tag: environment.fileStorage.aws.tag,
     },
+    googleCloud: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/google-cloud.png',
+      cssClass: 'google-cloud',
+      url: 'https://cloud.google.com/storage',
+      tag: environment.fileStorage.googleCloud.tag,
+    },
 
     // mail
     gmail: {

@@ -30,6 +30,7 @@ export interface EnvironmentModel {
 
   fileStorage: {
     aws: FileStorageModel
+    googleCloud: FileStorageModel
   };
 
   mail: {

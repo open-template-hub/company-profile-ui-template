@@ -31,8 +31,8 @@
   <!-- Footer -->
   <ng-template #footerTemplate>
     <div class="footer">
-      <app-button *ngIf="pricingOption.price.value === '0'" [icon]="'check'" [text]="'Start Now'"></app-button>
-      <app-button *ngIf="pricingOption.price.value !== '0'" [icon]="'shopping-cart'" [text]="'Buy Now'"></app-button>
+      <app-button *ngIf="pricingOption.price.value === '0'" [icon]="'check'" [text]="'Start Now'" (click)="callToAction(demoLink)"></app-button>
+      <app-button *ngIf="pricingOption.price.value !== '0'" [icon]="'shopping-cart'" [text]="'Buy Now'" (click)="callToAction()"></app-button>
     </div>
   </ng-template>
 </app-card>

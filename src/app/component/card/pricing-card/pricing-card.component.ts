@@ -14,6 +14,8 @@ export class PricingCardComponent {
 
   URLS = URLS;
 
+  @Input() demoLink: string;
+
   @Input() pricingFeatures: PricingFeature[];
 
   @Input() pricingOption: PricingOption = {
@@ -38,7 +40,21 @@ export class PricingCardComponent {
     // Intentionally blank
   }
 
-  routeToEvent( path: string ) {
-    this.router.navigate( [ path ] );
+  callToAction( link?: string ) {
+    if ( link ) {
+      this.redirect( link );
+    } else if ( this.pricingOption.link ) {
+      this.redirect( this.pricingOption.link );
+    } else {
+      this.redirect( URLS.maintenance );
+    }
+  }
+
+  redirect( href: string ) {
+    if ( href.startsWith( '/' ) ) {
+      this.router.navigate( [ href ] );
+    } else {
+      window.location.href = href;
+    }
   }
 }

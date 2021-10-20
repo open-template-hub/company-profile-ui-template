@@ -59,6 +59,7 @@
 
     // Design
     min-height: 100px;
+    margin-top: 20px;
     margin-bottom: 80px;
     align-items: flex-start;
     justify-content: space-evenly;
@@ -67,6 +68,7 @@
       @include util.flex-layout-row;
 
       align-items: center;
+      height: 22px;
 
       & span {
         padding-left: 1em;

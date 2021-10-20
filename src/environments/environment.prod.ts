@@ -57,6 +57,9 @@ export const environment: EnvironmentModel = {
   fileStorage: {
     aws: {
       tag: 'AWS'
+    },
+    googleCloud: {
+      tag: 'GOOGLE_CLOUD'
     }
   },
 

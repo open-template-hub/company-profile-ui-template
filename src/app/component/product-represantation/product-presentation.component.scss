@@ -27,7 +27,7 @@
     @include util.default-border-radius;
 
     background-color: var(--shadow-lighter);
-    
+
     & .title, & .feature-title {
       font-size: 19px;
       margin: 15px 0;
@@ -56,6 +56,11 @@
     & span {
       font-weight: 300;
       color: var(--theme-color-lighter-1);
+    }
+
+    & small {
+      margin-top: 5px;
+      color: var(--lighter-contrast);
     }
   }
 

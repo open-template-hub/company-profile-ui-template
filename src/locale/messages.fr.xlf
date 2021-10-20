@@ -1707,8 +1707,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="4075291760211082530" datatype="html">
-        <source>Streamline documents that need to be reused and sent out for eSignature frequently.</source>
-        <target>Rationalisez les documents qui doivent être réutilisés et envoyés fréquemment pour la signature électronique.</target>
+        <source>Get an up and running server.</source>
+        <target>Obtenez un serveur opérationnel.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">19</context>
@@ -1739,8 +1739,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="2862124119800921852" datatype="html">
-        <source>Audit trails are associated with transactions to ensure actions are tracked and time-stamped.</source>
-        <target>Des pistes d'audit sont associées aux transactions pour garantir le suivi et l'horodatage des actions.</target>
+        <source>Get a CI/CD integration with automated API tests.</source>
+        <target>Bénéficiez d'une intégration CI/CD avec des tests API automatisés</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">24</context>

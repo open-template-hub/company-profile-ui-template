@@ -4,6 +4,6 @@
 <div *ngIf="product?.pricingOptions" class="pricing-wrapper">
   <ng-container *ngFor="let pricing of product.pricingOptions">
     <app-pricing-card [class.bigger-card]="pricing.ribbon === PRICING_RIBBONS.get('deal')"
-                      [pricingOption]="pricing"></app-pricing-card>
+                      [pricingOption]="pricing" [pricingFeatures]="product?.features"></app-pricing-card>
   </ng-container>
 </div>

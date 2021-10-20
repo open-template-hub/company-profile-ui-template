@@ -10,18 +10,16 @@ const DEFAULT_FEATURES = [
     details: [
       {
         name: $localize `Open Source`,
-        description:
-            'Customers that pay per user can send out as many signature requests as they want per month!',
+        description: 'No need to pay a price to get started. Get the latest updates from community driven open source project.',
       },
       {
-        name: $localize `Templates`,
-        description:
-            $localize `Streamline documents that need to be reused and sent out for eSignature frequently.`,
+        name: $localize `Professional Help`,
+        description: $localize `Get an up and running server.`,
       },
       {
-        name: $localize `Audio Trail`,
+        name: $localize `CI/CD Automation`,
         description:
-            $localize `Audit trails are associated with transactions to ensure actions are tracked and time-stamped.`,
+            $localize `Get a CI/CD integration with automated API tests.`,
       },
     ],
   },
@@ -35,8 +33,7 @@ const DEFAULT_FEATURES = [
       },
       {
         name: $localize `Templates`,
-        description:
-            $localize `Streamline documents that need to be reused and sent out for eSignature frequently.`,
+        description: `Streamline documents that need to be reused and sent out for eSignature frequently.`,
       },
       {
         name: $localize `Audio Trail`,
@@ -55,8 +52,7 @@ const DEFAULT_FEATURES = [
       },
       {
         name: $localize `Templates`,
-        description:
-            $localize `Streamline documents that need to be reused and sent out for eSignature frequently.`,
+        description: `Streamline documents that need to be reused and sent out for eSignature frequently.`,
       },
       {
         name: $localize `Audio Trail`,
@@ -72,10 +68,10 @@ const DEFAULT_PRICING_OPTIONS = [
     title: $localize `STARTER`,
     price: {
       currency: '$',
-      value: '9',
+      value: '0',
       subscriptionTime: 'mo.',
     },
-    features: [ $localize `Up to 5 users`, $localize `Maximum 100 photos/mo.`, '' ],
+    features: [ [ 'true', '', '' ], [ $localize`Up to 5 users`, $localize`Up to 5 users`, $localize`Up to 5 users` ], [ $localize`Up to 5 users`, $localize`Up to 5 users`, $localize`Up to 5 users` ] ],
     styles: {
       width: '300px',
       height: '400px',
@@ -88,10 +84,10 @@ const DEFAULT_PRICING_OPTIONS = [
     ribbon: PRICING_RIBBONS.get( 'deal' ),
     price: {
       currency: '$',
-      value: '49',
+      value: '99',
       subscriptionTime: 'mo.',
     },
-    features: [ $localize `Up to 10 users`, $localize `Maximum 100 photos/mo.`, 'true' ],
+    features: [ [ 'true', 'true', '' ], [ $localize`Up to 10 users`, $localize`Up to 10 users`, $localize`Up to 10 users` ], [ $localize`Up to 10 users`, $localize`Up to 10 users`, $localize`Up to 10 users` ] ],
     styles: {
       width: '370px',
       height: '520px',
@@ -103,10 +99,10 @@ const DEFAULT_PRICING_OPTIONS = [
     title: $localize `PRO`,
     price: {
       currency: '$',
-      value: '99',
+      value: '199',
       subscriptionTime: 'mo.',
     },
-    features: [ $localize `Unlimited users`, $localize `Unlimited photos/mo.`, 'true' ],
+    features: [ [ 'true', 'true', 'true' ], [ $localize`Unlimited users`, $localize`Unlimited users`, $localize`Unlimited users` ], [ $localize`Unlimited users`, $localize`Unlimited users`, $localize`Unlimited users` ] ],
     styles: {
       width: '300px',
       height: '400px',

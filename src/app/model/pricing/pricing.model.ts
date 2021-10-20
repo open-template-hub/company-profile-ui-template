@@ -8,7 +8,7 @@ export interface PricingOption {
     value: string,
     subscriptionTime: string
   },
-  features: string[],
+  features: string[][],
   styles: {
     height: string,
     width: string,

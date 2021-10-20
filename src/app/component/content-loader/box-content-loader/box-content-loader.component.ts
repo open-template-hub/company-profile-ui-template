@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-@Component({
+@Component( {
   selector: 'app-box-content-loader',
   templateUrl: './box-content-loader.component.html',
-  styleUrls: ['./box-content-loader.component.scss'],
-})
+  styleUrls: [ './box-content-loader.component.scss' ],
+} )
 export class BoxContentLoaderComponent implements OnInit {
   @Input() width?: string;
   @Input() height?: string;

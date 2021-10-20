@@ -80,7 +80,7 @@
 
   // Borders
   $border-colors: (
-    "lighter-contrast": var(--lighter-contrast)
+      "lighter-contrast": var(--lighter-contrast)
   );
   @each $border-color-name, $border-color in $border-colors {
     &.#{$border-color-name}-border-color {
@@ -90,8 +90,8 @@
 
   // Font Colors
   $font-colors: (
-    "lighter-contrast": var(--lighter-contrast),
-    "whitesmoke": whitesmoke
+      "lighter-contrast": var(--lighter-contrast),
+      "whitesmoke": whitesmoke
   );
   @each $font-color-name, $font-color in $font-colors {
     &.#{$font-color-name}-font-color .content {
@@ -101,7 +101,7 @@
 
   // Background Colors
   $background-colors: (
-    "theme-color-lighter-4": var(--theme-color-lighter-4)
+      "theme-color-lighter-4": var(--theme-color-lighter-4)
   );
   @each $background-color-name, $background-color in $background-colors {
     &.#{$background-color-name}-background-color {

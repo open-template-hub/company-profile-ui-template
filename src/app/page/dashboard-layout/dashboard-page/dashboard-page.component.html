@@ -2,7 +2,8 @@
   <!--DASHBOARD CARD-->
   <app-card [bodyTemplate]="body" [headerTemplate]="header">
     <ng-template #header>
-      <img *ngIf="profileImg" [src]="profileImg" alt="wallpaper" style="width: 150px; height: 150px; margin-top: -100px;">
+      <img *ngIf="profileImg" [src]="profileImg" alt="wallpaper"
+           style="width: 150px; height: 150px; margin-top: -100px;">
     </ng-template>
 
     <ng-template #body>
@@ -34,7 +35,8 @@
             <app-label-data *ngIf="userInfo?.payload?.bio"
                             [data]="userInfo.payload.bio">
             </app-label-data>
-            <div *ngIf="followerCount !== undefined && followeeCount !== undefined" class="follower-following-count-area">
+            <div *ngIf="followerCount !== undefined && followeeCount !== undefined"
+                 class="follower-following-count-area">
               <div class="follower-count-area">
                 <em class="follower-count">{{followerCount}}</em> Following
               </div>
@@ -74,10 +76,10 @@
 
   <div *ngIf="userInfo?.payload?.userProfileActivated && myRecentlyCompletedEvents.length > 0"
        class="dashboard-page-events">
-    <app-event-card class="bigger-card" (markAsCompletedButtonClicked)="markAsCompletedButtonClicked($event)"
-                    *ngFor="let event of myRecentlyCompletedEvents" [event]="event"
-                    [markAsCompleted]="true"
-                    [showCalendar]="false">
+    <app-event-card (markAsCompletedButtonClicked)="markAsCompletedButtonClicked($event)" *ngFor="let event of myRecentlyCompletedEvents"
+                    [event]="event" [markAsCompleted]="true"
+                    [showCalendar]="false"
+                    class="bigger-card">
     </app-event-card>
   </div>
   <!--END OF RECENTLY PASSED CONTRIBUTIONS-->
@@ -92,9 +94,9 @@
     </div>
 
     <div *ngIf="myUpcomingEvents.length > 0" class="dashboard-page-events">
-      <app-event-card class="bigger-card" (itemIdForFillingForm)="fillForm($event)"
-                      *ngFor="let event of myUpcomingEvents" [event]="event" [inProgress]="event.inProgress"
-                      [isEditable]="true">
+      <app-event-card (itemIdForFillingForm)="fillForm($event)" *ngFor="let event of myUpcomingEvents"
+                      [event]="event" [inProgress]="event.inProgress" [isEditable]="true"
+                      class="bigger-card">
       </app-event-card>
     </div>
   </div>
@@ -109,8 +111,8 @@
   </div>
 
   <div *ngIf="attendedEvents?.length > 0" class="dashboard-page-events">
-    <app-event-card class="bigger-card" *ngFor="let event of attendedEvents"
-                    [event]="event" [inProgress]="event.inProgress"></app-event-card>
+    <app-event-card *ngFor="let event of attendedEvents" [event]="event"
+                    [inProgress]="event.inProgress" class="bigger-card"></app-event-card>
   </div>
   <!--END OF ATTENDED CONTRIBUTIONS-->
   <!--UNRATED CONTRIBUTIONS-->
@@ -118,9 +120,10 @@
     <h2>Completed Events</h2>
   </div>
   <div *ngIf="unratedEvents?.length > 0" class="dashboard-page-events">
-    <app-event-card class="bigger-card" (rateButtonClicked)="fetchUnratedCompletedEvents()" *ngFor="let event of unratedEvents"
-                    [event]="event" [showHamburgerMenu]="false"
-                    [showRateBar]="true">
+    <app-event-card (rateButtonClicked)="fetchUnratedCompletedEvents()" *ngFor="let event of unratedEvents"
+                    [event]="event"
+                    [showHamburgerMenu]="false" [showRateBar]="true"
+                    class="bigger-card">
     </app-event-card>
   </div>
   <!--END OF UNRATED CONTRIBUTIONS-->

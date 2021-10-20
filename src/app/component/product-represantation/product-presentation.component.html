@@ -39,7 +39,7 @@
               <p>Some of the preconfigured systems:</p>
               <p>
                 <span *ngFor="let partner of presentationPartners; last as isLast">
-                  {{ partnerNameFormat(partner.name, isLast) | titlecase }}
+                  {{ partnerNameFormat( partner.name, isLast ) | titlecase }}
                 </span>
               </p>
               <small>*configuration still requires some level of developer experience</small>

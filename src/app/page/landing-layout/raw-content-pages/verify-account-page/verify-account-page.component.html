@@ -20,5 +20,6 @@
             [contents]="accountVerifiedAppHeroContents"
             [heroClass]="'no-padding-top'"></app-hero>
   <app-information-button (click)="router.navigate([URLS.login])" *ngIf="!loading && !error"
-                          [informationType]="INFORMATION_TYPES.success" i18n-text text="LOG IN"></app-information-button>
+                          [informationType]="INFORMATION_TYPES.success" i18n-text
+                          text="LOG IN"></app-information-button>
 </div>

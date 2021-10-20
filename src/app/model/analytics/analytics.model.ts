@@ -1,3 +1,3 @@
 export interface AnalyticsModel {
-  tag: string
+  tag: string;
 }

@@ -4,11 +4,11 @@ import { DEFAULT_RIBBON, EVENT_RIBBONS } from 'src/app/data/ribbon/ribbon.data';
 import { URLS } from '../../../data/constant';
 import { BusinessLogicService } from '../../../service/business-logic/business-logic.service';
 
-@Component({
+@Component( {
   selector: 'app-event-card',
   templateUrl: './event-card.component.html',
-  styleUrls: ['./event-card.component.scss']
-})
+  styleUrls: [ './event-card.component.scss' ]
+} )
 export class EventCardComponent implements OnInit {
   DEFAULT_RIBBON = DEFAULT_RIBBON;
   EVENT_RIBBONS = EVENT_RIBBONS;
@@ -35,9 +35,10 @@ export class EventCardComponent implements OnInit {
   @Output() rateButtonClicked = new EventEmitter();
 
   constructor(
-    private router: Router,
-    private businessLogicService: BusinessLogicService
-  ) { }
+      private router: Router,
+      private businessLogicService: BusinessLogicService
+  ) {
+  }
 
   ngOnInit(): void {
     this.businessLogicService.userInfo.subscribe( userInfo => {

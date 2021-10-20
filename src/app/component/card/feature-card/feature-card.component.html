@@ -1,11 +1,11 @@
 <app-card
-  *ngIf="feature.title"
-  [bodyTemplate]="bodyTemplate"
-  [headerTemplate]="headerTemplate"
-  class="feature-card">
+    *ngIf="feature.title"
+    [bodyTemplate]="bodyTemplate"
+    [headerTemplate]="headerTemplate"
+    class="feature-card">
   <ng-template #headerTemplate>
     <div class="header">
-      <i aria-hidden="true" [class]="feature.icon"></i>
+      <i [class]="feature.icon" aria-hidden="true"></i>
       <p>{{ feature.title }}</p>
     </div>
   </ng-template>

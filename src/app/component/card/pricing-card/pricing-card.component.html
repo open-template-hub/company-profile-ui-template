@@ -37,13 +37,13 @@
   <ng-template #footerTemplate>
     <div class="footer">
       <ng-container *ngIf="pricingOption.contactRequired">
-        <app-button [text]="'Contact Us'" (click)="callToAction(URLS.contactUs)"></app-button>
+        <app-button (click)="callToAction(URLS.contactUs)" [text]="'Contact Us'"></app-button>
       </ng-container>
       <ng-container *ngIf="!pricingOption.contactRequired">
-        <app-button *ngIf="pricingOption.price.value === '0'" [text]="'Get Started'"
-                    (click)="callToAction(demoLink)"></app-button>
-        <app-button *ngIf="pricingOption.price.value !== '0'" [icon]="'shopping-cart'" [text]="'Buy Now'"
-                    (click)="callToAction()"></app-button>
+        <app-button (click)="callToAction(demoLink)" *ngIf="pricingOption.price.value === '0'"
+                    [text]="'Get Started'"></app-button>
+        <app-button (click)="callToAction()" *ngIf="pricingOption.price.value !== '0'" [icon]="'shopping-cart'"
+                    [text]="'Buy Now'"></app-button>
       </ng-container>
     </div>
   </ng-template>

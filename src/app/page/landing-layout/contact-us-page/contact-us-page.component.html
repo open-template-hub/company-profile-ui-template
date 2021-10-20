@@ -62,7 +62,7 @@
           </div>
           <div [class.error-input]="submitted && form.controls.companySize.invalid" class="input-with-label">
             <select (change)="changeCompanySize($event)" formControlName="companySize">
-              <option i18n class="default-option" disabled value="">
+              <option class="default-option" disabled i18n value="">
                 Select range of employees
               </option>
               <option *ngFor="let option of sizeOptions" [ngValue]="option">
@@ -73,7 +73,7 @@
           </div>
           <div [class.error-input]="submitted && form.controls.country.invalid" class="input-with-label">
             <select (change)="changeCountry($event)" formControlName="country">
-              <option i18n class="default-option" disabled value="">
+              <option class="default-option" disabled i18n value="">
                 Select a country
               </option>
               <option *ngFor="let country of countries" [ngValue]="country">
@@ -88,8 +88,8 @@
           >
           <textarea
               formControlName="anythingElse"
-              maxlength="500"
-              i18n-placeholder placeholder="Tell us more about your project, needs, and timeline...."
+              i18n-placeholder
+              maxlength="500" placeholder="Tell us more about your project, needs, and timeline...."
               rows="5"
           ></textarea>
             <h4>Your Message</h4>
@@ -129,7 +129,7 @@
       <h4 i18n>Technical or account support</h4>
       <h4>
         <ng-container i18n>We're here to help! If you have technical issues,</ng-container>
-        <a i18n [href]="URLS.maintenance" class="theme-color-link">
+        <a [href]="URLS.maintenance" class="theme-color-link" i18n>
           contact support
         </a>
       </h4>

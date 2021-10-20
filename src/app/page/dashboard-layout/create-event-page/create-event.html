@@ -11,7 +11,8 @@
                 <i aria-hidden="true" class="fas fa-clipboard fa-lg fa-fw"></i>
               </div>
               <div [class.error-input]="submitted && form.controls.description.invalid" class="input-with-icon">
-                <textarea formControlName="description" maxlength="500" placeholder="Description..." rows="2"></textarea>
+                <textarea formControlName="description" maxlength="500" placeholder="Description..."
+                          rows="2"></textarea>
                 <i aria-hidden="true" class="fas fa-comment fa-lg fa-fw"></i>
               </div>
               <div [class.error-input]="submitted && form.controls.link.invalid" class="input-with-icon">
@@ -50,10 +51,11 @@
                    [class.error-input]="submitted && (form.controls.durationMin.invalid || form.controls.durationHour.invalid)"
                    class="input-with-icon"
                    style="width: 300px;">
-                <input (change)="form.controls.durationHour.value === '' ? form.controls.durationHour.setValue(0) : null"
-                       formControlName="durationMin"
-                       placeholder="Minute..."
-                       required type="text">
+                <input
+                    (change)="form.controls.durationHour.value === '' ? form.controls.durationHour.setValue(0) : null"
+                    formControlName="durationMin"
+                    placeholder="Minute..."
+                    required type="text">
                 <p>:</p>
                 <input (change)="form.controls.durationMin.value === '' ? form.controls.durationMin.setValue(0) : null"
                        formControlName="durationHour"
@@ -73,8 +75,8 @@
           <div class="section-footer">
             <div class="section-footer-icons">
             <span
-              (click)="form.controls.isEmailAllowed.setValue( !form.controls.isEmailAllowed.value )"
-              class="tooltip" show-delay="500" tooltip="Add my email address">
+                (click)="form.controls.isEmailAllowed.setValue( !form.controls.isEmailAllowed.value )"
+                class="tooltip" show-delay="500" tooltip="Add my email address">
                   <i [class.button-active]="form.controls.isEmailAllowed.value" aria-hidden="true"
                      class="fas fa-envelope fa-lg fa-fw"></i>
             </span>
@@ -84,8 +86,8 @@
                      class="fas fa-crown fa-lg fa-fw"></i>
             </span>
               <span
-                (click)="form.controls.isDurationActive.setValue( !form.controls.isDurationActive.value )"
-                class="tooltip" show-delay="500" tooltip="Add duration">
+                  (click)="form.controls.isDurationActive.setValue( !form.controls.isDurationActive.value )"
+                  class="tooltip" show-delay="500" tooltip="Add duration">
                   <i [class.button-active]="form.controls.isDurationActive.value" aria-hidden="true"
                      class="fas fa-clock fa-lg fa-fw"></i>
             </span>

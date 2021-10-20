@@ -22,7 +22,7 @@ export class ForgetPasswordPageComponent implements OnInit, OnDestroy {
 
   URLS = URLS;
 
-  appHeroContents = [{text: $localize `Forget password`, level: 1}]
+  appHeroContents = [ { text: $localize`Forget password`, level: 1 } ];
 
   constructor(
       private formBuilder: FormBuilder,
@@ -59,7 +59,7 @@ export class ForgetPasswordPageComponent implements OnInit, OnDestroy {
     this.submitted = true;
 
     if ( this.forgetPasswordForm.controls.username.invalid ) {
-      this.toastService.error( $localize `Please provide a valid username.`, '' );
+      this.toastService.error( $localize`Please provide a valid username.`, '' );
       return;
     }
 

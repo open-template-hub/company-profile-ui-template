@@ -1,22 +1,22 @@
 <app-card
-  *ngIf="employee.profile"
-  [headerTemplate]="headerTemplate"
-  [bodyTemplate]="bodyTemplate"
-  [footerTemplate]="footerTemplate"
-  class="employee-card">
+    *ngIf="employee.profile"
+    [bodyTemplate]="bodyTemplate"
+    [footerTemplate]="footerTemplate"
+    [headerTemplate]="headerTemplate"
+    class="employee-card">
   <!-- Header -->
   <ng-template #headerTemplate>
     <div class="header">
       <app-image-content-loader
-        *ngIf="!employeePhotoLoaded"
-        [imageContentLoaderClass]="'employee-photo'"></app-image-content-loader>
+          *ngIf="!employeePhotoLoaded"
+          [imageContentLoaderClass]="'employee-photo'"></app-image-content-loader>
       <img
-        [src]="employee.profile.photoUri"
-        alt="profile-img"
-        class="profile-image"
-        [style]="'display:' + (!employeePhotoLoaded ? 'none;' : 'block;')"
-        onerror="this.src='./assets/common/profile-img.png'"
-        (load)="setEmployeePhotoLoaded()" />
+          (load)="setEmployeePhotoLoaded()"
+          [src]="employee.profile.photoUri"
+          [style]="'display:' + (!employeePhotoLoaded ? 'none;' : 'block;')"
+          alt="profile-img"
+          class="profile-image"
+          onerror="this.src='./assets/common/profile-img.png'"/>
     </div>
   </ng-template>
 
@@ -32,25 +32,25 @@
   <ng-template #footerTemplate>
     <div class="footer">
       <app-ext-link
-        *ngIf="employee.profile.social.linkedIn"
-        [href]="employee.profile.social.linkedIn">
+          *ngIf="employee.profile.social.linkedIn"
+          [href]="employee.profile.social.linkedIn">
         <i
-          [class]="
+            [class]="
             'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-fw'
           "
-          aria-hidden="true"
-          body>
+            aria-hidden="true"
+            body>
         </i>
       </app-ext-link>
       <app-ext-link
-        *ngIf="employee.profile.social.github"
-        [href]="employee.profile.social.github">
+          *ngIf="employee.profile.social.github"
+          [href]="employee.profile.social.github">
         <i
-          [class]="
+            [class]="
             'fab fa-' + environmentCommon.website.github.cssClass + ' fa-fw'
           "
-          aria-hidden="true"
-          body>
+            aria-hidden="true"
+            body>
         </i>
       </app-ext-link>
     </div>

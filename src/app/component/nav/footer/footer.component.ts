@@ -57,15 +57,15 @@ export class FooterComponent {
     } );
   }
 
+  getCurrentRoute() {
+    return this.router.url;
+  }
+
   private updatePoweredByWithDarkLightMode() {
     if ( window.matchMedia && window.matchMedia( '(prefers-color-scheme: dark)' ).matches ) {
       this.poweredBy = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-dark-mode.min.png';
     } else {
       this.poweredBy = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-light-mode.min.png';
     }
-  }
-
-  getCurrentRoute() {
-    return this.router.url;
   }
 }

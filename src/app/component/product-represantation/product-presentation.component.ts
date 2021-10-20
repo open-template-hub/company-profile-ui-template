@@ -101,6 +101,6 @@ export class ProductPresentationComponent {
   }
 
   partnerNameFormat( name: string, isLast: boolean ) {
-    return name.split( /(?=[A-Z])/ ).join( ' ' ) + (isLast ? '*' : ',');
+    return name.split( /(?=[A-Z])/ ).join( ' ' ) + ( isLast ? '*' : ',' );
   }
 }

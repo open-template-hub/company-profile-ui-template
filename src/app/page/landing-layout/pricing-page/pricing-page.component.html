@@ -1,9 +1,10 @@
 <!-- Pricing Plan -->
 <app-hero *ngIf="appHeroContents"
-    [contents]="appHeroContents"></app-hero>
+          [contents]="appHeroContents"></app-hero>
 <div *ngIf="product?.pricingOptions" class="pricing-wrapper">
   <ng-container *ngFor="let pricing of product.pricingOptions">
     <app-pricing-card [class.bigger-card]="pricing.ribbon === PRICING_RIBBONS.get('deal')"
-                      [pricingOption]="pricing" [pricingFeatures]="product?.features" [demoLink]="product.href"></app-pricing-card>
+                      [demoLink]="product.href" [pricingFeatures]="product?.features"
+                      [pricingOption]="pricing"></app-pricing-card>
   </ng-container>
 </div>

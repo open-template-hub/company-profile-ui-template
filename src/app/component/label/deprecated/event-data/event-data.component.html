@@ -62,18 +62,21 @@
   <div class="event-last-item">
     <app-event-button (click)="onEditClick()" *ngIf="isEditable && !inProgress && !showRateBar && !completed"
                       [icon]="'pen'"></app-event-button>
-    <app-event-button (click)="onBuyNowClick()" *ngIf="!isEditable && isPremium && attendeeButton && !showRateBar && !completed"
-                      [icon]="'shopping-cart'" [text]="'Buy Now ' + (price ? '(' + price + '$)' : '')"></app-event-button>
+    <app-event-button (click)="onBuyNowClick()"
+                      *ngIf="!isEditable && isPremium && attendeeButton && !showRateBar && !completed"
+                      [icon]="'shopping-cart'"
+                      [text]="'Buy Now ' + (price ? '(' + price + '$)' : '')"></app-event-button>
     <app-event-button (click)="onAttendClick()"
                       *ngIf="!isEditable && !isPremium && attendeeButton && !showRateBar && !completed"
                       [text]="'Attend'"></app-event-button>
-    <app-event-button (click)="onDropClick()" *ngIf="!isEditable && dropButton && !showRateBar && !completed && !isPremium"
+    <app-event-button (click)="onDropClick()"
+                      *ngIf="!isEditable && dropButton && !showRateBar && !completed && !isPremium"
                       [eventType]="'drop'" [text]="'Drop'"></app-event-button>
     <app-event-button (click)="onMarkAsCompletedClick()" *ngIf="markAsCompleted && !showRateBar && !completed"
                       [icon]="'check'" [text]="'Mark As Completed'"></app-event-button>
-    <app-event-button *ngIf="!isEditable && dropButton && !showRateBar && !completed && isPremium" [text]="'Attended'"
-                      [eventType]="'attended'"></app-event-button>
-    <app-event-button *ngIf="completed" [text]="'Completed'" [eventType]="'completed'"></app-event-button>
+    <app-event-button *ngIf="!isEditable && dropButton && !showRateBar && !completed && isPremium" [eventType]="'attended'"
+                      [text]="'Attended'"></app-event-button>
+    <app-event-button *ngIf="completed" [eventType]="'completed'" [text]="'Completed'"></app-event-button>
     <app-event-button (click)="onRateClick()" *ngIf="showRateBar" [text]="'Rate'"></app-event-button>
     <app-event-button *ngIf="inProgress" [eventType]="'inProgress'" [icon]="'hourglass'" [text]="'In Progress'">
     </app-event-button>

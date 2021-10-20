@@ -73,9 +73,9 @@
 
 @mixin default-background {
   background: linear-gradient(
-    to right,
-    var(--theme-color-lighter-3) 50%,
-    var(--theme-color-lighter-6) 50%
+          to right,
+          var(--theme-color-lighter-3) 50%,
+          var(--theme-color-lighter-6) 50%
   );
   background-size: 200% 100%;
   background-position: right bottom;

@@ -23,9 +23,12 @@ export class VerifyAccountPageComponent implements OnInit, OnDestroy {
   URLS = URLS;
   BRAND = BRAND;
 
-  verifyingAccountAppHeroContents = [{text: $localize `Verifying account...`, level: 2}]
-  accountVerificationFailedAppHeroContents = [{text: $localize `Account verification failed`, level: 2}, {text: $localize `Something went wrong!`}]
-  accountVerifiedAppHeroContents = [{text: $localize `Account verified 🎉`, level: 2}, {text: $localize `Please proceed with login`}]
+  verifyingAccountAppHeroContents = [ { text: $localize`Verifying account...`, level: 2 } ];
+  accountVerificationFailedAppHeroContents = [ {
+    text: $localize`Account verification failed`,
+    level: 2
+  }, { text: $localize`Something went wrong!` } ];
+  accountVerifiedAppHeroContents = [ { text: $localize`Account verified 🎉`, level: 2 }, { text: $localize`Please proceed with login` } ];
 
   constructor( private route: ActivatedRoute,
       public router: Router,

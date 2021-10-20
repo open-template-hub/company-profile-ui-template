@@ -32,6 +32,23 @@
     justify-content: center;
     padding: 5px 0;
   }
+
+  & .brand-logo {
+    margin: 0 5px;
+  }
+
+  & .footer-language {
+    @include util.flex-layout-row;
+    @include util.flex-center-center;
+
+    & a {
+      font-size: 27px;
+      width: 48px;
+      height: 48px;
+    }
+
+    margin-right: 15px;
+  }
 }
 
 .footer-hr-row {
@@ -69,25 +86,6 @@
     box-sizing: border-box;
     font-weight: bold;
     border-bottom: 1px solid var(--theme-color);
-  }
-}
-
-.footer-brand-row {
-  & .brand-logo {
-    margin: 0 5px;
-  }
-
-  & .footer-language {
-    @include util.flex-layout-row;
-    @include util.flex-center-center;
-
-    & a {
-      font-size: 27px;
-      width: 48px;
-      height: 48px;
-    }
-
-    margin-right: 15px;
   }
 }
 

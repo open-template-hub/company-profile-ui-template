@@ -10,10 +10,13 @@ SwiperCore.use( [ Pagination, Navigation, Autoplay ] );
   encapsulation: ViewEncapsulation.None
 } )
 export class PresentationSwiperComponent {
+
   @Input() items: string[] = [];
+  @Input() height = 75;
+
   isNavigationEnabled = false;
   isPaginationEnabled = false;
   isGrayscale = false;
-  height = 75;
+
   breakpoints: any = {};
 }

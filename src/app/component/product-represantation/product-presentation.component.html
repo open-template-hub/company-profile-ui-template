@@ -20,16 +20,16 @@
       </ng-container>
       <ng-container *ngSwitchDefault [ngSwitch]="product.key">
         <app-card
-            *ngSwitchCase="['auth-server-template', 'payment-server-template', 'file-storage-server-template', 'mail-server-template'].includes(product.key) ? product.key : ''"
+            *ngSwitchCase="['auth-server-template', 'payment-server-template', 'file-storage-server-template', 'mail-server-template', 'orchestration-server-template'].includes(product.key) ? product.key : ''"
             [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" [footerTemplate]="footerTemplate"
             class="presentation-card">
           <ng-template #bodyTemplate>
             <div class="body">
               <div class="social-login-wrapper">
-                <img [src]="BRAND.logo.main" alt="logo" class="brand-logo" width="80"/>
+                <img [src]="product.logo" alt="logo" class="brand-logo" width="90"/>
                 <i aria-hidden="true" class="fa fa-check-circle"></i>
                 <app-presentation-swiper
-                    [items]="setPresentation()"></app-presentation-swiper>
+                    [items]="setPresentation()" [height]="product.key === 'orchestration-server-template' ? 90 : 75"></app-presentation-swiper>
               </div>
               <p class="feature-title">{{ presentationText }}</p>
             </div>

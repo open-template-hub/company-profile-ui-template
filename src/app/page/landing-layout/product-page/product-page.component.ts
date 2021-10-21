@@ -110,7 +110,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   }
 
   redirect() {
-    window.open( this.product.href, '_blank' );
+    window.open( this.product.url, '_blank' );
   }
 
   getContactUsButtonText( productLineKey ) {

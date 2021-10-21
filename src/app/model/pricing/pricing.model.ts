@@ -10,12 +10,6 @@ export interface PricingOption {
     value: string,
     subscriptionTime: string
   },
-  features: string[][],
-  styles: {
-    height: string,
-    width: string,
-    fontSize: string,
-    featureHeight: string
-  },
+  features: string[][]
   link?: string
 }

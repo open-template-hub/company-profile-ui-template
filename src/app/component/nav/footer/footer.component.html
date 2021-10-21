@@ -134,15 +134,14 @@
         /
         <a href="/{{ environmentCommon.languages.french }}{{ getCurrentRoute() }}">🇫🇷</a>
       </div>
-      {{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '' )}}
-    </div>
-  </div>
-  <div class="footer-brand-row">
-    <div class="footer-right-element">
+      <p>
+        {{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '' )}}
+      </p>
       <!-- Do not remove this -->
       <a href="https://opentemplatehub.com">
         <img [src]="poweredBy" alt="powered-by" class="brand-logo" height="40" width="177"/>
       </a>
+
     </div>
   </div>
 </div>

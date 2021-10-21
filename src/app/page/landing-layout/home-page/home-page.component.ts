@@ -11,6 +11,7 @@ import { NpmProviderService } from 'src/app/service/provider/npm-provider.servic
 import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/constant';
+import { PRODUCT_LINES } from '../../../data/product/product.data';
 import { Partner } from '../../../model/partner/partner.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 
@@ -27,8 +28,9 @@ export class HomePageComponent implements AfterViewInit {
   brandLogoLoaded = false;
 
   URLS = URLS;
+  PRODUCT_LINES = PRODUCT_LINES;
   PARTNERS: Partner[] = PARTNERS;
-  TESTIMONIALS: Testimonial[] = TESTIMONIALS;
+  TESTIMONIALS: Testimonial[] = TESTIMONIALS.slice(0, TESTIMONIALS.length < 3 ? TESTIMONIALS.length : 3);
   FEATURES: Feature[] = FEATURES;
 
   KILO = 1000;
@@ -37,14 +39,24 @@ export class HomePageComponent implements AfterViewInit {
   environment = environment;
   environmentCommon = environmentCommon;
 
-  customerTestimonialsTitle = [
+  testimonialsTitle = [
     { text: $localize`Customer testimonials`, level: 1 },
     { text: $localize`What our customers are saying...` }
+  ];
+
+  customersTitle = [
+    { text: $localize`From startups to the enterprise companies`, level: 1 },
+    { text: $localize`Thousands of companies in over 50 countries use Open Template Hub to start, run, and scale their businesses.` }
   ];
 
   whyUsTitle = [
     { text: `Why Open Template Hub?`, level: 1 },
     { text: `Just focus on your business and leave us all others` }
+  ];
+
+  exploreTitle = [
+    { text: 'Explore our Products', level: 2 },
+    { text: `Explore our open source and premium products to get started today.` }
   ];
 
   constructor(

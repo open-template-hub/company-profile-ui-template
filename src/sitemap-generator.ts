@@ -7,6 +7,7 @@ const exposedRouteMap = [
       { path: '/about', children: null },
       { path: '/contact-us', children: null },
       { path: '/branding', children: null },
+      { path: '/customers', children: null },
       { path: '/terms', children: null },
       { path: '/sitemap', children: null },
       {

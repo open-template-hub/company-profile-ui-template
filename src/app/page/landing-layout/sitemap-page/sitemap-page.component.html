@@ -4,10 +4,14 @@
     <ng-template #bodyTemplate>
       <div class="body">
         <div class="column">
-          <p i18n>Products</p>
+          <div class="title">
+            <p i18n>Products</p>
+          </div>
           <div *ngFor="let productLine of PRODUCT_LINES" class="link-group">
-            <p *ngIf="productLine.name"
-               [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
+            <div class="title">
+              <p *ngIf="productLine.name"
+                 [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
+            </div>
             <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
                [class]="productLine.color ? productLine.color : ''"
                [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
@@ -19,8 +23,10 @@
         <div class="column">
           <div class="link-inner-column">
             <div *ngFor="let productLine of SERVICES" class="link-group">
-              <p *ngIf="productLine.name"
-                 [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
+              <div class="title">
+                <p *ngIf="productLine.name"
+                   [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
+              </div>
               <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
                  [class]="productLine.color ? productLine.color : ''"
                  [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
@@ -29,15 +35,14 @@
               </a>
             </div>
             <div class="link-group">
-              <p i18n>Company</p>
+              <div class="title">
+                <p i18n>Company</p>
+              </div>
               <a [routerLink]="URLS.about" class="link-item" i18n>
                 About
               </a>
-              <a [routerLink]="URLS.maintenance" class="link-item" i18n>
+              <a [routerLink]="URLS.customers" class="link-item" i18n>
                 Customers
-              </a>
-              <a [routerLink]="URLS.maintenance" class="link-item" i18n>
-                Enterprise
               </a>
               <a [routerLink]="URLS.maintenance" class="link-item" i18n>
                 Partners
@@ -46,16 +51,15 @@
                 Branding
               </a>
               <a [routerLink]="URLS.maintenance" class="link-item" i18n>
-                Jobs
-              </a>
-              <a [routerLink]="URLS.maintenance" class="link-item" i18n>
                 Blog
               </a>
             </div>
           </div>
           <div class="link-inner-column">
             <div class="link-group">
-              <p i18n>Developers</p>
+              <div class="title">
+                <p i18n>Developers</p>
+              </div>
               <a [routerLink]="URLS.maintenance" class="link-item" i18n>
                 Docs
               </a>
@@ -67,7 +71,9 @@
               </a>
             </div>
             <div class="link-group">
-              <p i18n>Resources</p>
+              <div class="title">
+                <p i18n>Resources</p>
+              </div>
               <a [routerLink]="URLS.maintenance" class="link-item" i18n>
                 Support
               </a>

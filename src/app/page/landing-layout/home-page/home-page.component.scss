@@ -1,6 +1,7 @@
 @use '../../../../styles/page/page';
 @use '../../../../styles/util/util';
 @use '../landing-layout.component';
+@use '../../../component/card/card.component';
 
 .hero {
   @include util.flex-layout-row;
@@ -58,26 +59,6 @@
       padding-bottom: 12px;
       border-bottom: 2px solid var(--theme-color-darker-1);
     }
-  }
-}
-
-.cards-wrapper {
-  @include util.flex-layout-row;
-
-  align-items: center;
-  justify-content: space-evenly;
-
-  box-sizing: border-box;
-
-  flex-wrap: wrap;
-
-  width: 100%;
-
-  padding-bottom: 120px;
-
-  & > * {
-    width: 300px;
-    margin-top: 50px;
   }
 }
 
@@ -175,14 +156,6 @@
     }
   }
 
-  .cards-wrapper {
-    font-size: 18px;
-
-    & > * {
-      width: 94vw;
-    }
-  }
-
   .features-section-wrapper {
     & .section-content {
       @include util.flex-layout-column;
@@ -242,22 +215,6 @@
 
       & .description {
         font-size: 21px;
-      }
-    }
-  }
-
-  .cards-wrapper {
-    @include util.margin-x-auto;
-
-    font-size: 18px;
-    padding-top: 20px;
-
-    width: 1000px;
-
-    & > * {
-      margin: {
-        left: 10px;
-        right: 10px;
       }
     }
   }

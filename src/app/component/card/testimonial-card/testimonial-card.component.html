@@ -23,7 +23,8 @@
                 transform="translate(100 100)"></path>
         </svg>
         <img [src]="testimonial.reviewer.photoUri"
-             alt="logo" class="profile-image" height="100" width="100"/>
+             alt="logo" class="profile-image" height="100" width="100"
+             onerror="this.src='./assets/common/profile-img.png'"/>
         <div class="social">
           <app-ext-link [href]="testimonial.reviewer.social.twitter">
             <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'"

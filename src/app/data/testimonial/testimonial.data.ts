@@ -42,5 +42,56 @@ export const TESTIMONIALS: Testimonial[] = [
       },
     },
     theme: ThemeColorSettings.blue,
+  },
+  {
+    review: DEFAULT_REVIEW,
+    reviewer: {
+      name: 'Claudia Goodwin',
+      title: 'CFO @ BrightCode.nl',
+      photoUri: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/common/businesswoman-3.png',
+      social: {
+        linkedIn: '',
+        twitter: '',
+      },
+    },
+    theme: ThemeColorSettings.orange,
+  },
+  {
+    review: DEFAULT_REVIEW,
+    reviewer: {
+      name: 'Lee Rees',
+      title: 'CEO @ LeeSoft.au',
+      photoUri: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/common/businessman-4.png',
+      social: {
+        linkedIn: '',
+        twitter: '',
+      },
+    },
+    theme: ThemeColorSettings.pink,
+  },
+  {
+    review: DEFAULT_REVIEW,
+    reviewer: {
+      name: 'Casey Carlson',
+      title: 'Co-Founder @ Carlson&Carlson',
+      photoUri: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/common/businessman-3.png',
+      social: {
+        linkedIn: '',
+        twitter: '',
+      },
+    },
+    theme: ThemeColorSettings.purple,
+  },
+  {
+    review: 'Would you like to tell us how was your Open Template Hub experience?',
+    reviewer: {
+      name: '???',
+      title: 'CEO @ Your Company',
+      photoUri: '',
+      social: {
+        linkedIn: 'https://www.linkedin.com/company/open-template-hub',
+        twitter: 'https://twitter.com/opentemplatehub',
+      },
+    }
   }
 ];

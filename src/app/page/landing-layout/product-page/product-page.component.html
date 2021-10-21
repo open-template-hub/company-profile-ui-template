@@ -51,11 +51,7 @@
   <div *ngIf="product.counters" class="counters">
     <a
         *ngFor="let counter of product.counters"
-        [href]="
-        environmentCommon.website.github.url +
-        '/' +
-        environmentCommon.oth.social.github
-      "
+        [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
         class="counter-wrapper"
         rel="noopener"
         target="_blank">
@@ -70,16 +66,7 @@
 
   <ng-container [ngSwitch]="productLineKey">
     <ng-container *ngSwitchCase="'services'" [ngSwitch]="product.key">
-      <div class="testimonials-header">
-        <h2 i18n>Customer Testimonials</h2>
-        <h4 i18n>What our customers are saying...</h4>
-      </div>
-      <div class="testimonials-wrapper">
-        <app-testimonial-card
-            *ngFor="let testimonial of TESTIMONIALS"
-            [testimonial]="testimonial">
-        </app-testimonial-card>
-      </div>
+      <!-- Todo: Show something related with services instead of price plan -->
     </ng-container>
     <ng-container *ngSwitchDefault [ngSwitch]="product.key">
       <div class="pricing-plan-wrapper">
@@ -97,29 +84,16 @@
       <!-- Related Products -->
       <app-hero
           [contents]="[{ text: 'Related Products', level: 2 }]"></app-hero>
-      <div class="related-products-wrapper">
+      <div class="flexible-cards-wrapper">
         <ng-container *ngFor="let productLine of PRODUCT_LINES">
           <ng-container
-              *ngIf="
-              productLineKey === 'premium'
-                ? productLine.key === 'servers'
-                : productLine.key === productLineKey ||
-                  productLine.key === 'premium'
-            ">
+              *ngIf="productLineKey === 'premium' ? productLine.key === 'servers' : productLine.key === productLineKey || productLine.key === 'premium'">
             <ng-container *ngFor="let relatedProduct of productLine.products">
               <app-presentation-card
                   *ngIf="product.key !== relatedProduct.key"
                   [class]="relatedProduct.color ? relatedProduct.color : ''"
-                  [footerText]="
-                  relatedProduct.openSource ? '#opensource' : '#premium'
-                "
-                  [href]="
-                  URLS.product +
-                  '/' +
-                  productLine.key +
-                  '/' +
-                  relatedProduct.key
-                "
+                  [footerText]="relatedProduct.openSource ? '#opensource' : '#premium'"
+                  [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
                   [imgHeight]="150"
                   [presentationItemClass]="'product-item'"
                   [secondaryText]="relatedProduct.description"

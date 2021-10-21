@@ -4,11 +4,16 @@
   <!-- Header -->
   <ng-template #headerTemplate>
     <div class="header">
-      <h4>{{ pricingOption.title }}</h4>
+      <h4>{{ pricingOption.title | uppercase }}</h4>
       <div class="price-area">
-        <p class="currency">{{ pricingOption.price.currency }}</p>
-        <p class="price-value">{{ pricingOption.price.value }}</p>
-        <p class="subscription-time">{{ pricingOption.price.subscriptionTime }}</p>
+        <ng-container *ngIf="!pricingOption.contactRequired">
+          <p class="currency">{{ pricingOption.price.currency }}</p>
+          <p class="price-value">{{ pricingOption.price.value }}</p>
+          <p class="subscription-time">{{ pricingOption.price.subscriptionTime }}</p>
+        </ng-container>
+        <ng-container *ngIf="pricingOption.contactRequired">
+          <p class="contact-required">Let's Talk</p>
+        </ng-container>
       </div>
       <hr>
     </div>
@@ -31,8 +36,15 @@
   <!-- Footer -->
   <ng-template #footerTemplate>
     <div class="footer">
-      <app-button *ngIf="pricingOption.price.value === '0'" [icon]="'check'" [text]="'Start Now'"></app-button>
-      <app-button *ngIf="pricingOption.price.value !== '0'" [icon]="'shopping-cart'" [text]="'Buy Now'"></app-button>
+      <ng-container *ngIf="pricingOption.contactRequired">
+        <app-button (click)="callToAction(URLS.contactUs)" [text]="'Contact Us'"></app-button>
+      </ng-container>
+      <ng-container *ngIf="!pricingOption.contactRequired">
+        <app-button (click)="callToAction(demoLink)" *ngIf="pricingOption.price.value === '0'"
+                    [text]="'Get Started'"></app-button>
+        <app-button (click)="callToAction()" *ngIf="pricingOption.price.value !== '0'" [icon]="'shopping-cart'"
+                    [text]="'Buy Now'"></app-button>
+      </ng-container>
     </div>
   </ng-template>
 </app-card>

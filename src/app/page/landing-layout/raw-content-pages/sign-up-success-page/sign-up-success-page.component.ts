@@ -23,7 +23,10 @@ export class SignUpSuccessPageComponent implements OnInit {
     this.route.queryParams.subscribe( params => {
       if ( params.email ) {
         this.email = params.email;
-        this.appHeroContents = [{text: $localize `Registration successful 🎉`, level: 2}, {text: $localize `Verification email sent to: ` + this.email}]
+        this.appHeroContents = [ {
+          text: $localize`Registration successful 🎉`,
+          level: 2
+        }, { text: $localize`Verification email sent to: ` + this.email } ];
       }
     } );
   }

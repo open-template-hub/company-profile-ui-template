@@ -61,8 +61,8 @@ export class EditThemePageComponent {
   }
 
   restoreDefaultSettings() {
-    this.setDarkLightSetting(DarkLightSettings.auto);
-    this.setThemeColorSetting(DEFAULT_THEME);
-    this.setThemeDesignSetting(DEFAULT_THEME);
+    this.setDarkLightSetting( DarkLightSettings.auto );
+    this.setThemeColorSetting( DEFAULT_THEME );
+    this.setThemeDesignSetting( DEFAULT_THEME );
   }
 }

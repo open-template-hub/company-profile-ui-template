@@ -39,7 +39,7 @@ const exposedRouteMap = [
           },
           {
             path: '/premium',
-            children: [{ path: '/orchestration-server', children: null }],
+            children: [ { path: '/orchestration-server', children: null } ],
           },
           {
             path: '/services',
@@ -55,25 +55,25 @@ const exposedRouteMap = [
   },
 ];
 
-const today = new Date().toISOString().split('T')[0];
+const today = new Date().toISOString().split( 'T' )[ 0 ];
 
-function getSitemap(path, routes) {
+function getSitemap( path, routes ) {
   let sitemapStr = '';
-  routes.forEach((r) => {
+  routes.forEach( ( r ) => {
     const nUrl = path + r.path;
     sitemapStr +=
-      '<url><loc>' + nUrl + '</loc><lastmod>' + today + '</lastmod></url>';
-    if (r.children && r.children.length > 0) {
-      sitemapStr += getSitemap(nUrl, r.children);
+        '<url><loc>' + nUrl + '</loc><lastmod>' + today + '</lastmod></url>';
+    if ( r.children && r.children.length > 0 ) {
+      sitemapStr += getSitemap( nUrl, r.children );
     }
-  });
+  } );
   return sitemapStr;
 }
 
 let sitemap =
-  '<?xml version="1.0" encoding="UTF-8"?>' +
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-sitemap += getSitemap(url, exposedRouteMap);
+    '<?xml version="1.0" encoding="UTF-8"?>' +
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+sitemap += getSitemap( url, exposedRouteMap );
 sitemap += '</urlset>';
 
-console.log(sitemap);
+console.log( sitemap );

@@ -11,7 +11,7 @@ export interface Product {
   name: string;
   description: string;
   color?: string;
-  href: string;
+  url: string;
   logo: string;
   heroImage?: string;
   openSource?: boolean;

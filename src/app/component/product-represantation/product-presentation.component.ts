@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
 import { BRAND } from '../../data/brand/brand.data';
+import { PRODUCT_LINES } from '../../data/product/product.data';
 import { Partner } from '../../model/partner/partner.model';
 import { Product } from '../../model/product/product.model';
 
@@ -20,6 +21,7 @@ export class ProductPresentationComponent {
   PAYMENT_PARTNERS: Partner[] = [];
   FILE_STORAGE_PARTNERS: Partner[] = [];
   MAIL_PARTNERS: Partner[] = [];
+  OTH_SERVER_PARTNERS: Partner[] = [];
   BRAND = BRAND;
 
   presentationText: string;
@@ -70,6 +72,18 @@ export class ProductPresentationComponent {
         } );
       }
     }
+
+    for ( const productLine of PRODUCT_LINES ) {
+      if (productLine.key === 'servers') {
+        for ( const product of productLine.products ) {
+          this.OTH_SERVER_PARTNERS.push( {
+            name: product.name,
+            logo: product.logo,
+            url: product.url
+          } );
+        }
+      }
+    }
   }
 
   setPresentation() {
@@ -94,9 +108,18 @@ export class ProductPresentationComponent {
         this.presentationPartners = this.MAIL_PARTNERS;
         return this.MAIL_PARTNERS.map( partner => partner.logo );
       }
+      case 'orchestration-server-template': {
+        this.presentationText = 'Orchestrate all of your servers from one place.';
+        this.presentationPartners = this.OTH_SERVER_PARTNERS;
+        return this.OTH_SERVER_PARTNERS.map( partner => partner.logo );
+      }
       default: {
         return [];
       }
     }
+  }
+
+  partnerNameFormat( name: string, isLast: boolean ) {
+    return name.split( /(?=[A-Z])/ ).join( ' ' ) + ( isLast ? '*' : ',' );
   }
 }

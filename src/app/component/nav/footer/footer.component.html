@@ -102,7 +102,7 @@
   </div>
   <div class="footer-brand-row">
     <a class="brand" routerLink="{{URLS.root}}">
-      <img [src]="BRAND.logo.main" alt="logo" class="brand-logo" width="40" height="40"/>
+      <img [src]="BRAND.logo.main" alt="logo" class="brand-logo" height="40" width="40"/>
       <h2>Open Template Hub <span class="copyright">&#169; 2021</span></h2>
     </a>
     <div class="footer-social">
@@ -131,6 +131,7 @@
     <div class="footer-right-element">
       <div class="footer-language">
         <a href="/{{ environmentCommon.languages.english }}{{ getCurrentRoute() }}">🇺🇸</a>
+        /
         <a href="/{{ environmentCommon.languages.french }}{{ getCurrentRoute() }}">🇫🇷</a>
       </div>
       {{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '' )}}
@@ -138,7 +139,10 @@
   </div>
   <div class="footer-brand-row">
     <div class="footer-right-element">
-      <img [src]="BRAND.badges[0]" alt="powered-by" class="brand-logo" width="177" height="40"/>
+      <!-- Do not remove this -->
+      <a href="https://opentemplatehub.com">
+        <img [src]="poweredBy" alt="powered-by" class="brand-logo" height="40" width="177"/>
+      </a>
     </div>
   </div>
 </div>

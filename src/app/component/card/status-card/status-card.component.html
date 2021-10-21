@@ -13,21 +13,21 @@
           </div>
         </div>
         <div *ngFor="let status of systemStatus.statuses; index as i" class="status-section">
-          <div class="status-column" *ngIf="i % 2 == 0">
+          <div *ngIf="i % 2 == 0" class="status-column">
             <app-led
                 [informationType]="setStatusLed(status.alive)"></app-led>
             <h4>{{ status.name | titlecase}}
             </h4>
-            <i aria-hidden="true" class="fas fa-external-link-alt fa-lg fa-fw"
-               (click)="navigate( systemStatus.name, status.name )"></i>
+            <i (click)="navigate( systemStatus.name, status.name )" aria-hidden="true"
+               class="fas fa-external-link-alt fa-lg fa-fw"></i>
           </div>
-          <div class="status-column second" *ngIf="i % 2 != 0">
+          <div *ngIf="i % 2 != 0" class="status-column second">
             <app-led
                 [informationType]="setStatusLed(status.alive)"></app-led>
             <h4>{{ status.name | titlecase}}
             </h4>
-            <i aria-hidden="true" class="fas fa-external-link-alt fa-lg fa-fw"
-               (click)="navigate( systemStatus.name, status.name )"></i>
+            <i (click)="navigate( systemStatus.name, status.name )" aria-hidden="true"
+               class="fas fa-external-link-alt fa-lg fa-fw"></i>
           </div>
         </div>
       </ng-container>

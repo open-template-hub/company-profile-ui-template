@@ -3,11 +3,11 @@ import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
 import { Employee } from '../../../model/employee/employee.model';
 
-@Component({
+@Component( {
   selector: 'app-employee-card',
   templateUrl: './employee-card.component.html',
-  styleUrls: ['./employee-card.component.scss'],
-})
+  styleUrls: [ './employee-card.component.scss' ],
+} )
 export class EmployeeCardComponent {
   environment = environment;
   environmentCommon = environmentCommon;
@@ -27,11 +27,11 @@ export class EmployeeCardComponent {
     },
   };
 
-  setEmployeePhotoLoaded = () => {
-    this.employeePhotoLoaded = true;
-  };
-
   constructor() {
     // Intentionally blank
   }
+
+  setEmployeePhotoLoaded = () => {
+    this.employeePhotoLoaded = true;
+  };
 }

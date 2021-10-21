@@ -17,7 +17,8 @@
         <form (ngSubmit)="onSubmit()" [formGroup]="form">
           <div class="section">
             <div [class.error-input]="submitted && form.controls.username.invalid" class="input-with-icon">
-              <input formControlName="username" i18n-placeholder placeholder="Username or Email..." required type="text">
+              <input formControlName="username" i18n-placeholder placeholder="Username or Email..." required
+                     type="text">
               <i aria-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
             </div>
             <div [class.error-input]="submitted && form.controls.password.invalid" class="input-with-icon">
@@ -36,12 +37,12 @@
             <app-button i18n-text text="LOG IN"></app-button>
             <p>
               <ng-container i18n>Don't have an account?</ng-container>
-              <a i18n [routerLink]="URLS.signup" class="theme-color-link">
+              <a [routerLink]="URLS.signup" class="theme-color-link" i18n>
                 Sign Up
               </a>
             </p>
             <p>
-              <a i18n [routerLink]="URLS.forgetPassword" class="theme-color-link">
+              <a [routerLink]="URLS.forgetPassword" class="theme-color-link" i18n>
                 Forget password?
               </a>
             </p>

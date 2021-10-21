@@ -24,7 +24,7 @@ export class ResetPasswordPageComponent implements OnInit, OnDestroy {
 
   URLS = URLS;
 
-  appHeroContents = [{text: $localize `Reset password`, level: 1}]
+  appHeroContents = [ { text: $localize`Reset password`, level: 1 } ];
 
   constructor(
       private formBuilder: FormBuilder,
@@ -68,8 +68,8 @@ export class ResetPasswordPageComponent implements OnInit, OnDestroy {
     this.submitted = true;
 
     const errorMessages = {
-      password: $localize `Please provide a valid password (min length 6)`,
-      confirmPassword: $localize `Please provide the same value for confirm password`
+      password: $localize`Please provide a valid password (min length 6)`,
+      confirmPassword: $localize`Please provide the same value for confirm password`
     };
 
     if ( this.form.invalid ) {

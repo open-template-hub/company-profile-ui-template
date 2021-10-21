@@ -110,12 +110,12 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   }
 
   redirect() {
-    window.open( this.product.href, '_blank' );
+    window.open( this.product.url, '_blank' );
   }
 
-  getContactUsButtonText(productLineKey) {
+  getContactUsButtonText( productLineKey ) {
     return productLineKey === 'services'
-      ? $localize `Contact Us`
-      : $localize `Request for Demo`
+        ? $localize`Contact Us`
+        : $localize`Request for Demo`;
   }
 }

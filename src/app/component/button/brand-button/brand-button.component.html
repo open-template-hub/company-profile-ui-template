@@ -1,4 +1,5 @@
-<app-button [buttonClasses]="['brand-button', icon, text ? '' : 'just-icon']" [iconTemplate]="iconTemplate" [text]="text"
+<app-button [buttonClasses]="['brand-button', icon, text ? '' : 'just-icon']" [iconTemplate]="iconTemplate"
+            [text]="text"
             class="brand-button">
   <ng-template #iconTemplate>
     <i *ngIf="icon" [class]="'fab fa-' + icon + ' fa-lg fa-fw '" aria-hidden="true" class="icon"></i>

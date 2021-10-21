@@ -32,7 +32,7 @@ export class LoginPageComponent implements OnInit, OnDestroy {
 
   URLS = URLS;
 
-  appHeroContents = [ {text: $localize `Welcome`, level: 1} ]
+  appHeroContents = [ { text: $localize`Welcome`, level: 1 } ];
 
   constructor(
       private formBuilder: FormBuilder,
@@ -75,8 +75,8 @@ export class LoginPageComponent implements OnInit, OnDestroy {
     this.submitted = true;
 
     const errorMessages = {
-      username: $localize `Please provide a valid username`,
-      password: $localize `Please provide a valid password`,
+      username: $localize`Please provide a valid username`,
+      password: $localize`Please provide a valid password`,
     };
 
     if ( this.form.invalid ) {

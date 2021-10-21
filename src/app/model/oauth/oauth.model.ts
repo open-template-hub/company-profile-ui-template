@@ -1,3 +1,3 @@
 export interface OauthModel {
-  tag: string
+  tag: string;
 }

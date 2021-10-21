@@ -4,66 +4,66 @@
   </div>
 
   <div
-    #dropdownContent
-    *ngIf="isDropdownOpen"
-    [class.dropdown-opened]="isDropdownOpen && closeDropdownInternalClicked"
-    class="dropdown-content">
+      #dropdownContent
+      *ngIf="isDropdownOpen"
+      [class.dropdown-opened]="isDropdownOpen && closeDropdownInternalClicked"
+      class="dropdown-content">
     <i
-      aria-hidden="true"
-      class="dropdown-caret fas fa-caret-up fa-lg fa-fw"></i>
+        aria-hidden="true"
+        class="dropdown-caret fas fa-caret-up fa-lg fa-fw"></i>
     <div (click)="closeDropDownInternal()" class="dropdown-top-menu">
       <i aria-hidden="true" class="fas fa-times fa-lg fa-fw"></i>
     </div>
 
     <div
-      [style]="'min-width: ' + 330 * calculatedColumns + 'px;'"
-      class="section-column-wrapper">
+        [style]="'min-width: ' + 330 * calculatedColumns + 'px;'"
+        class="section-column-wrapper">
       <div
-        *ngFor="
+          *ngFor="
           let productLine of productLines;
           last as isLastColumn;
           index as i
         "
-        [class.section-column-right-border]="
+          [class.section-column-right-border]="
           !(i == calculatedColumns - 1 || isLastColumn)
         "
-        [class]="productLine.color ? productLine.color : ''"
-        [style]="'max-height: ' + (60 + 150 * calculatedRows + 1) + 'px;'"
-        class="section-column">
+          [class]="productLine.color ? productLine.color : ''"
+          [style]="'max-height: ' + (60 + 150 * calculatedRows + 1) + 'px;'"
+          class="section-column">
         <div *ngIf="productLine.name" class="section-header">
           <h4>
             {{ productLine.name }}
           </h4>
           <p>
             {{
-              productLine.description.length < 80
+            productLine.description.length < 80
                 ? productLine.description
-                : productLine.description.substring(0, 80) + '..'
+                : productLine.description.substring( 0, 80 ) + '..'
             }}
           </p>
-          <hr />
+          <hr/>
         </div>
 
         <a
-          (click)="closeDropDownInternal()"
-          *ngFor="
+            (click)="closeDropDownInternal()"
+            *ngFor="
             let product of productLine.products;
             last as isLast;
             first as isFirst
           "
-          [class]="product.color ? product.color : ''"
-          [routerLink]="
+            [class]="product.color ? product.color : ''"
+            [routerLink]="
             URLS.product + '/' + productLine.key + '/' + product.key
           "
-          class="dropdown-item">
+            class="dropdown-item">
           <app-image-content-loader
-            *ngIf="!product.imageLoaded" [imageContentLoaderClass]="'dropdown-item'"></app-image-content-loader>
+              *ngIf="!product.imageLoaded" [imageContentLoaderClass]="'dropdown-item'"></app-image-content-loader>
           <img
-            [src]="product.logo"
-            alt="logo"
-            class="dropdown-item-logo"
-            height="55"
-            (load)="setImageLoaded(product)" />
+              (load)="setImageLoaded(product)"
+              [src]="product.logo"
+              alt="logo"
+              class="dropdown-item-logo"
+              height="55"/>
 
           <div class="dropdown-item-content">
             <h6>
@@ -71,9 +71,9 @@
             </h6>
             <p>
               {{
-                product.description.length < 200
+              product.description.length < 200
                   ? product.description
-                  : product.description.substring(0, 200) + '..'
+                  : product.description.substring( 0, 200 ) + '..'
               }}
             </p>
           </div>

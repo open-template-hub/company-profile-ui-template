@@ -1,8 +1,8 @@
 @use '../../util/util';
 
 :root {
-  --border-radius-counter-borders: 0 6px 0 12px;
-  --border-radius-image-counter-borders: 0 6px 0 12px;
+  --border-radius-counter-borders: 0 8px 0 8px;
+  --border-radius-image-counter-borders: 0 8px 0 8px;
   --border-radius-product-line-counter-borders: var(--border-radius-counter-borders);
   --height-bottom-line-counter-borders: 0;
   --padding-line-counter-borders: 1.2em;

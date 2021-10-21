@@ -10,61 +10,52 @@
 
   <div class="hero-right">
     <app-image-content-loader
-      *ngIf="!brandLogoLoaded"
-      [imageContentLoaderClass]="'brand-logo-main'"></app-image-content-loader>
+        *ngIf="!brandLogoLoaded"
+        [imageContentLoaderClass]="'brand-logo-main'"></app-image-content-loader>
     <img
-      [src]="
-        'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/oth-packages.min.png'
-      "
-      alt="oth-packages"
-      width="800"
-      height="450"
-      [style]="'display:' + (!brandLogoLoaded ? 'none;' : 'block;')"
-      (load)="setBrandLogoLoaded()" />
+        (load)="setBrandLogoLoaded()"
+        [src]="'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/oth-packages.min.png'"
+        [style]="'display:' + (!brandLogoLoaded ? 'none;' : 'block;')"
+        alt="oth-packages"
+        height="450"
+        width="800"/>
   </div>
 </div>
 <div class="counters">
-  <a
-    [href]="
-      environmentCommon.website.github.url +
-      '/' +
-      environmentCommon.oth.social.github
-    "
-    class="counter-wrapper"
-    rel="noopener"
-    target="_blank">
+  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
+     class="counter-wrapper"
+     rel="noopener"
+     target="_blank">
     <app-text-content-loader
-      [size]="30"
-      *ngIf="npmCounterLoading"
-      class="loader"></app-text-content-loader>
+        *ngIf="npmCounterLoading"
+        [size]="30"
+        class="loader"></app-text-content-loader>
     <p class="counter" id="npmDownloadCounterElement"></p>
-    <p i18n class="description">Npm Downloads</p>
+    <p class="description" i18n>Npm Downloads</p>
   </a>
   <a
-    [href]="'https://github.com/open-template-hub/server-generator'"
-    class="counter-wrapper counter-alter"
-    rel="noopener"
-    target="_blank">
+      [href]="'https://github.com/open-template-hub/server-generator'"
+      class="counter-wrapper counter-alter"
+      rel="noopener"
+      target="_blank">
     <p class="counter" id="serverTypesCounterElement">0</p>
-    <p i18n class="description">Server Types</p>
+    <p class="description" i18n>Server Types</p>
   </a>
-  <a
-    [href]="'https://github.com/open-template-hub/app-generator'"
-    class="counter-wrapper"
-    rel="noopener"
-    target="_blank">
+  <a [href]="'https://github.com/open-template-hub/app-generator'"
+     class="counter-wrapper"
+     rel="noopener"
+     target="_blank">
     <p class="counter" id="uiTypesCounterElement">0</p>
-    <p i18n class="description">UI Types</p>
+    <p class="description" i18n>UI Types</p>
   </a>
 </div>
 
 <!-- Customer testimonials -->
-<app-hero
-  [contents]="appHeroContents"></app-hero>
-<div class="testimonials-wrapper">
+<app-hero [contents]="customerTestimonialsTitle"></app-hero>
+<div class="cards-wrapper">
   <app-testimonial-card
-    *ngFor="let testimonial of TESTIMONIALS"
-    [testimonial]="testimonial">
+      *ngFor="let testimonial of TESTIMONIALS"
+      [testimonial]="testimonial">
   </app-testimonial-card>
 </div>
 
@@ -75,15 +66,11 @@
   <app-cookies></app-cookies>
 </div>
 
-<div class="features-section-wrapper">
-  <h1 class="section-header">Why Open Template Hub?</h1>
-  <p class="section-description">
-    Just focus on your business and leave us all others
-  </p>
-  <div class="section-content">
-    <app-feature-card
+<!-- Why Us -->
+<app-hero [contents]="whyUsTitle"></app-hero>
+<div class="cards-wrapper">
+  <app-feature-card
       *ngFor="let feature of FEATURES"
       [feature]="feature">
-    </app-feature-card>
-  </div>
+  </app-feature-card>
 </div>

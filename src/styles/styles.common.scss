@@ -80,6 +80,30 @@ hr {
   }
 }
 
+.markdown {
+  p, a, h1, h2, h3, h4, h5, h6, label, ul, li {
+    margin: 20px 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  a {
+    color: var(--theme-color-lighter-3);
+
+    &:hover {
+      color: var(--theme-color)
+    }
+  }
+
+  img {
+    @include util.margin-x-auto;
+    display: block;
+  }
+}
+
 a {
   cursor: pointer;
 

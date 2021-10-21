@@ -1,6 +1,6 @@
 import { LayoutModule } from '@angular/cdk/layout';
 
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +15,7 @@ import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { DpDatePickerModule } from 'ng2-date-picker';
 import { TooltipModule } from 'ng2-tooltip-directive';
 import { ImageCropperModule } from 'ngx-image-cropper';
+import { MarkdownModule } from 'ngx-markdown';
 import { ToastrModule } from 'ngx-toastr';
 import { SwiperModule } from 'swiper/angular';
 import { environment } from '../environments/environment';
@@ -222,6 +223,7 @@ FullCalendarModule.registerPlugins( [
     FullCalendarModule,
     SwiperModule,
     ToastrModule.forRoot( { preventDuplicates: true } ),
+    MarkdownModule.forRoot( { loader: HttpClient }),
     GoogleTagManagerModule.forRoot( { id: environment.analytics.google.tag } ),
     ServiceWorkerModule.register( 'ngsw-worker.js', {
       enabled: [ 'production', 'staging' ].includes( environment.identity ),

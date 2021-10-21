@@ -9,10 +9,9 @@ import { BRAND } from 'src/app/data/brand/brand.data';
 export class BlogCardComponent {
 
   @Input() blogHeader: TemplateRef<any>;
-  @Input() blogBody: TemplateRef<any>;
+  @Input() src: string;
 
   @Input() defaultHeaderContent: string;
-  @Input() defaultBodyContent: string;
 
   BRAND = BRAND;
 

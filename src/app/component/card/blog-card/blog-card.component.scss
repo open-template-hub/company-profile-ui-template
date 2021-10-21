@@ -1,10 +1,6 @@
 @use '../../../../styles/util/util';
 @use '../../card/card.component';
 
-.blog-content a {
-  color: var(--theme-color);
-}
-
 .blog-card {
 
   & .footer {
@@ -38,10 +34,6 @@
       padding: 15px 20px;
     }
   }
-
-  .blog-content h5, .blog-content p {
-    padding-bottom: 12px;
-  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -56,9 +48,5 @@
     & .footer {
       padding: 20px 30px;
     }
-  }
-
-  .blog-content h5, .blog-content p {
-    padding-bottom: 20px;
   }
 }

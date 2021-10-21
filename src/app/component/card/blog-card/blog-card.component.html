@@ -15,14 +15,8 @@
   <!-- Body -->
   <ng-template #bodyTemplate>
     <div class="body">
-      <ng-container *ngTemplateOutlet="blogBody || defaultblogBody">
-        <!-- Body of the card -->
-      </ng-container>
-      <ng-template #defaultblogBody>
-        <div *ngIf="defaultBodyContent" class="body">
-          {{ defaultBodyContent }}
-        </div>
-      </ng-template>
+      <!-- Body of the card -->
+      <markdown class="markdown" [src]="src"></markdown>
     </div>
   </ng-template>
 

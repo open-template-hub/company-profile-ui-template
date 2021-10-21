@@ -116,12 +116,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'payment-server-template',
         name: 'Payment Server',
         description: $localize`Payment Server Template is a generic open source payment server that has simple yet powerful design to connect your business with third party payment solution provider companies (like Stripe or Coinbase).`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github +
-            '/' +
-            'payment-server-template',
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'payment-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/payment-server-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,

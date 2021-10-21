@@ -27,6 +27,9 @@
 
       overflow: hidden;
       margin-bottom: 20px;
+
+      height: 150px;
+      box-shadow: none;
     }
 
     & p, & a {
@@ -58,11 +61,6 @@
 
     & > * {
       margin-bottom: 12px;
-    }
-
-    & .presentation-item-content {
-      height: 150px;
-      box-shadow: none;
     }
   }
 }

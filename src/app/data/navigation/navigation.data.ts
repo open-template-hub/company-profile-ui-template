@@ -87,6 +87,12 @@ export const NAVIGATIONS = {
     description: BRAND.name + ': Branding',
     keywords: [ BRAND.name, 'oth', 'Branding' ],
   },
+  blog: {
+    url: 'blog',
+    title: 'Blog - ' + BRAND.name,
+    description: BRAND.name + ': Blog',
+    keywords: [ BRAND.name, 'oth', 'Blog' ],
+  },
   customers: {
     url: 'customers',
     title: 'Customers - ' + BRAND.name,

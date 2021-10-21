@@ -14,6 +14,7 @@ import { LearnPageComponent } from './page/dashboard-layout/learn-page/learn-pag
 import { MyProfilePageComponent } from './page/dashboard-layout/my-profile-page/my-profile-page.component';
 import { PublicProfilePageComponent } from './page/dashboard-layout/public-profile-page/public-profile-page.component';
 import { AboutUsPageComponent } from './page/landing-layout/about-us-page/about-us-page.component';
+import { BlogPageComponent } from './page/landing-layout/blog-page/blog-page.component';
 import { BrandingPageComponent } from './page/landing-layout/branding-page/branding-page.component';
 import { ContactUsPageComponent } from './page/landing-layout/contact-us-page/contact-us-page.component';
 import { CustomersPageComponent } from './page/landing-layout/customers-page/customers-page.component';
@@ -103,6 +104,11 @@ const routes: Routes = [
       {
         path: NAVIGATIONS.branding.url,
         component: BrandingPageComponent,
+        canActivate: [ NavigationInterceptor ],
+      },
+      {
+        path: NAVIGATIONS.blog.url,
+        component: BlogPageComponent,
         canActivate: [ NavigationInterceptor ],
       },
       {

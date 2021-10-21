@@ -7,5 +7,10 @@ import { URLS } from '../../../../data/constant';
   styleUrls: [ './privacy-policy-page.component.scss' ]
 } )
 export class PrivacyPolicyPageComponent {
+
   URLS = URLS;
+
+  constructor() {
+    // Intentionally Blank
+  }
 }

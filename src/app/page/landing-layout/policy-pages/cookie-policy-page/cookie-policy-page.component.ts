@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: [ './cookie-policy-page.component.scss' ]
 } )
 export class CookiePolicyPageComponent {
+
+  constructor() {
+    // Intentionally Blank
+  }
 }

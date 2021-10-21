@@ -107,6 +107,8 @@ import { ExternalRedirectPageComponent } from './page/splash-layout/external-red
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 import { CustomersPageComponent } from './page/landing-layout/customers-page/customers-page.component';
 import { AssetCardComponent } from './component/card/asset-card/asset-card.component';
+import { BlogPageComponent } from './page/landing-layout/blog-page/blog-page.component';
+import { BlogCardComponent } from './component/card/blog-card/blog-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -201,6 +203,8 @@ FullCalendarModule.registerPlugins( [
     LeafTopSvgComponent,
     CustomersPageComponent,
     AssetCardComponent,
+    BlogPageComponent,
+    BlogCardComponent,
   ],
   imports: [
     BrowserModule,

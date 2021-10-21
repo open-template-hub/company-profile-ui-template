@@ -58,7 +58,9 @@
       *ngFor="let testimonial of TESTIMONIALS"
       [testimonial]="testimonial">
   </app-testimonial-card>
-  <a class="link" [routerLink]="URLS.customers">read more stories</a>
+  <app-button [text]="'Read More'" [routerLink]="URLS.customers"
+              [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']">
+  </app-button>
 </div>
 
 <!-- Customers -->

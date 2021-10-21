@@ -13,6 +13,7 @@ export interface Product {
   color?: string;
   url: string;
   logo: string;
+  demonstrationImg?: string;
   heroImage?: string;
   openSource?: boolean;
   counters?: ProductCounter[];

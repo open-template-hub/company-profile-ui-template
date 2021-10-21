@@ -89,22 +89,22 @@ export class ProductPresentationComponent {
   setPresentation() {
     switch ( this.product.key ) {
       case 'auth-server-template': {
-        this.presentationText = 'Integrate your servers with social login providers in minutes';
+        this.presentationText = 'Integrate your servers with social login providers in minutes.';
         this.presentationPartners = this.SOCIAL_LOGIN_PARTNERS;
         return this.SOCIAL_LOGIN_PARTNERS.map( partner => partner.logo );
       }
       case 'payment-server-template': {
-        this.presentationText = 'Integrate your servers with payment solution providers in minutes';
+        this.presentationText = 'Integrate your servers with payment solution providers in minutes.';
         this.presentationPartners = this.PAYMENT_PARTNERS;
         return this.PAYMENT_PARTNERS.map( partner => partner.logo );
       }
       case 'file-storage-server-template': {
-        this.presentationText = 'Integrate your servers with file storage solution providers in minutes';
+        this.presentationText = 'Integrate your servers with file storage solution providers in minutes.';
         this.presentationPartners = this.FILE_STORAGE_PARTNERS;
         return this.FILE_STORAGE_PARTNERS.map( partner => partner.logo );
       }
       case 'mail-server-template': {
-        this.presentationText = 'Integrate your servers with email service providers in minutes';
+        this.presentationText = 'Integrate your servers with email service providers in minutes.';
         this.presentationPartners = this.MAIL_PARTNERS;
         return this.MAIL_PARTNERS.map( partner => partner.logo );
       }
@@ -114,6 +114,8 @@ export class ProductPresentationComponent {
         return this.OTH_SERVER_PARTNERS.map( partner => partner.logo );
       }
       default: {
+        this.presentationText = '';
+        this.presentationPartners = [];
         return [];
       }
     }

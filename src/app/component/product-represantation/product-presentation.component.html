@@ -1,35 +1,17 @@
 <ng-container *ngIf="product">
   <div class="product-presentation">
     <ng-container [ngSwitch]="productLineKey">
-      <ng-container *ngSwitchCase="'services'" [ngSwitch]="product.key">
-        <app-card
-            [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
-          <ng-template #bodyTemplate>
-            <div class="body">
-              <p class="title">Why Open Template Hub?</p>
-              <ng-container *ngFor="let feature of product.features">
-                <p class="feature-title">{{ feature.name }}</p>
-
-                <div *ngFor="let detail of feature.details">
-                  <h6>{{ detail.name + ': ' + detail.description}}</h6>
-                </div>
-              </ng-container>
-            </div>
-          </ng-template>
-        </app-card>
-      </ng-container>
-      <ng-container *ngSwitchDefault [ngSwitch]="product.key">
-        <app-card
-            *ngSwitchCase="['auth-server-template', 'payment-server-template', 'file-storage-server-template', 'mail-server-template', 'orchestration-server-template'].includes(product.key) ? product.key : ''"
-            [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" [footerTemplate]="footerTemplate"
-            class="presentation-card">
+      <ng-container *ngSwitchCase="['servers', 'premium'].includes(productLineKey) ? productLineKey : ''">
+        <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" [footerTemplate]="footerTemplate"
+                  class="presentation-card">
           <ng-template #bodyTemplate>
             <div class="body">
               <div class="social-login-wrapper">
                 <img [src]="product.logo" alt="logo" class="brand-logo" width="90"/>
                 <i aria-hidden="true" class="fa fa-check-circle"></i>
-                <app-presentation-swiper
-                    [items]="setPresentation()" [height]="product.key === 'orchestration-server-template' ? 90 : 75"></app-presentation-swiper>
+                <app-presentation-swiper [items]="setPresentation()"
+                                         [height]="product.key === 'orchestration-server-template' ? 90 : 75">
+                </app-presentation-swiper>
               </div>
               <p class="feature-title">{{ presentationText }}</p>
             </div>
@@ -46,12 +28,15 @@
             </div>
           </ng-template>
         </app-card>
-        <app-animated-code-editor
-            *ngSwitchCase="['server-generator', 'app-generator'].includes(product.key) ? product.key : ''"
-            [commandLines]="product.commandLines">
-        </app-animated-code-editor>
-        <app-card *ngSwitchDefault
-                  [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
+      </ng-container>
+      <ng-container *ngSwitchCase="'user-interfaces'">
+        <img [src]="product.demonstrationImg" alt="demonstration"/>
+      </ng-container>
+      <ng-container *ngSwitchCase="'cli-generators'">
+        <app-animated-code-editor [commandLines]="product.commandLines"></app-animated-code-editor>
+      </ng-container>
+      <ng-container *ngSwitchDefault [ngSwitch]="product.key">
+        <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
           <ng-template #bodyTemplate>
             <div class="body">
               <p class="title">Why Open Template Hub?</p>
@@ -65,7 +50,6 @@
             </div>
           </ng-template>
         </app-card>
-
       </ng-container>
     </ng-container>
   </div>

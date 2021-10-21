@@ -22,15 +22,15 @@ import { AuthenticationService } from '../../../service/auth/authentication.serv
 } )
 export class HomePageComponent implements AfterViewInit {
   npmDownloadCounter = { count: 0, id: 'npmDownloadCounterElement' };
-  serverTypesCounter = { count: 7, id: 'serverTypesCounterElement' };
-  uiTypesCounter = { count: 3, id: 'uiTypesCounterElement' };
+  serverTypesCounter = { count: 0, id: 'serverTypesCounterElement' };
+  uiTypesCounter = { count: 0, id: 'uiTypesCounterElement' };
   npmCounterLoading = true;
   brandLogoLoaded = false;
 
   URLS = URLS;
   PRODUCT_LINES = PRODUCT_LINES;
   PARTNERS: Partner[] = PARTNERS;
-  TESTIMONIALS: Testimonial[] = TESTIMONIALS.slice(0, TESTIMONIALS.length < 3 ? TESTIMONIALS.length : 3);
+  TESTIMONIALS: Testimonial[] = TESTIMONIALS.slice( 0, TESTIMONIALS.length < 3 ? TESTIMONIALS.length : 3 );
   FEATURES: Feature[] = FEATURES;
 
   KILO = 1000;
@@ -104,7 +104,11 @@ export class HomePageComponent implements AfterViewInit {
       this.startCounter( options, this.npmDownloadCounter );
     } );
 
+    this.serverTypesCounter.count = PRODUCT_LINES.find( productLine => productLine.key === 'servers' ).products.length;
+
     this.startCounter( options, this.serverTypesCounter );
+
+    this.uiTypesCounter.count = PRODUCT_LINES.find( productLine => productLine.key === 'user-interfaces' ).products.length;
 
     this.startCounter( options, this.uiTypesCounter );
   }

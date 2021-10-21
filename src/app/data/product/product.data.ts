@@ -126,12 +126,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'file-storage-server-template',
         name: 'File Storage Server',
         description: $localize`File Storage Server Template is a generic open source file storage server that has simple yet powerful design to connect your business with third party file storage provider companies (like AWS S3).`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github +
-            '/' +
-            'file-storage-server-template',
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'file-storage-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/file-storage-server-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
@@ -141,12 +136,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'mail-server-template',
         name: 'Mail Server',
         description: $localize`Mail Server Template is a generic open source mail server that has simple yet powerful design to connect your business with third party email service providers (like Gmail, Yahoo or Outlook).`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github +
-            '/' +
-            'mail-server-template',
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'mail-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/mail-server-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
@@ -156,12 +146,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'analytics-server-template',
         name: 'Analytics Server',
         description: $localize`Analytics Server Template for generic usage in Node.js`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github +
-            '/' +
-            'analytics-server-template',
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'analytics-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/analytics-server-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
@@ -171,12 +156,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'business-logic-server-template',
         name: 'Business Logic Server',
         description: $localize`Business Logic Server Template for generic usage in Node.js`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github +
-            '/' +
-            'business-logic-server-template',
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'business-logic-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/business-logic-server-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
@@ -193,13 +173,9 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'company-profile-ui-template',
         name: 'Company Profile UI',
         description: $localize`Company Profile UI Template for generic usage in Angular`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github +
-            '/' +
-            'company-profile-ui-template',
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'company-profile-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
+        demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-light.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
@@ -208,13 +184,9 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'web-ui-template',
         name: 'Web UI',
         description: $localize`Web UI Template for generic usage in Angular`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github +
-            '/' +
-            'web-ui-template',
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'web-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
+        demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
@@ -223,13 +195,9 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'mobile-ui-template',
         name: 'Mobile UI',
         description: $localize`Mobile UI Template for generic usage in React Native`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github +
-            '/' +
-            'mobile-ui-template',
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'mobile-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/mobile-ui-logo.min.png',
+        demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-light.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
@@ -245,12 +213,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'server-generator',
         name: 'Server Generator',
         description: $localize`Command line interface generator of the servers at Open Template Hub`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github +
-            '/' +
-            'server-generator',
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'server-generator',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
@@ -294,12 +257,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'UI Generator',
         description:
             $localize`Command line interface generator of the user interfaces at Open Template Hub`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github +
-            '/' +
-            'app-generator',
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'app-generator',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
@@ -350,10 +308,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'orchestration-server-template',
         name: 'Orchestration Server',
         description: $localize`Orchestrate all of your servers from one place.`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/orchestration-server-logo.min.png',
         color: ThemeColorSettings.yellow,
         features: [
@@ -419,10 +374,7 @@ export const SERVICES: ProductLine[] = [
         key: 'software-consultancy',
         name: 'Software Consultancy',
         description: $localize`Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
       },
@@ -430,10 +382,7 @@ export const SERVICES: ProductLine[] = [
         key: 'software-integration',
         name: 'Software Integration',
         description: $localize`Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-pieces.min.png',
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
       },
@@ -441,10 +390,7 @@ export const SERVICES: ProductLine[] = [
         key: 'quality-assurance',
         name: 'Quality Assurance',
         description: $localize`Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
-        url:
-            environmentCommon.website.github.url +
-            '/' +
-            environmentCommon.oth.social.github,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-shine.min.png',
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
       },

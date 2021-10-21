@@ -3,15 +3,18 @@
 
 .presentation-card {
 
-  & .presentation-item {
-    @include util.flex-layout-column;
-    @include util.default-border-radius;
-    @include util.default-shadow;
+  & .header {
+    margin-top: -41px;
+  }
 
-    background-color: var(--card);
+  & .body {
+    @include card.default-body;
+    @include util.flex-layout-column;
 
     align-items: center;
     justify-content: flex-start;
+
+    height: 260px;
 
     box-sizing: border-box;
     padding: 15px 15px 12px;
@@ -24,6 +27,9 @@
 
       overflow: hidden;
       margin-bottom: 20px;
+
+      height: 150px;
+      box-shadow: none;
     }
 
     & p, & a {
@@ -56,105 +62,17 @@
     & > * {
       margin-bottom: 12px;
     }
-
-    &.color-item {
-
-      & .presentation-item-content {
-        background-color: var(--theme-color);
-      }
-
-      &.secondary {
-        & .presentation-item-content {
-          background-color: var(--theme-color-secondary);
-        }
-      }
-
-      &.tertiary {
-        & .presentation-item-content {
-          background-color: var(--theme-color-tertiary);
-        }
-      }
-    }
-
-    &.logo-item {
-
-      & .presentation-item-content {
-        height: 220px;
-        box-shadow: none;
-      }
-    }
-
-    &.product-item {
-
-      & .presentation-item-content {
-        height: 150px;
-        box-shadow: none;
-      }
-    }
-
-    &.wallpaper-item {
-      height: 450px;
-
-      & .presentation-item-content {
-        height: 400px;
-      }
-    }
   }
 }
 
 @media only screen and (max-width: 999px) {
   .presentation-card {
-    & .presentation-item {
+    & .body {
       width: 94vw;
       height: 55vw;
 
       & .presentation-item-content {
         width: 100%;
-      }
-
-      &.color-item {
-        & .presentation-item-content {
-          height: calc(55vw - 100px);
-        }
-      }
-
-      &.logo-item {
-        height: 280px;
-      }
-
-      &.product-item {
-        height: 450px;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  .presentation-card {
-    & .presentation-item {
-      &.color-item {
-        height: 200px;
-
-        & .presentation-item-content {
-          height: 100px;
-          width: 200px;
-        }
-      }
-
-      &.logo-item, &.product-item {
-        & .presentation-item-content {
-          width: 200px;
-        }
-      }
-
-      &.product-item {
-        height: 450px;
-      }
-
-      &.wallpaper-item {
-        & .presentation-item-content {
-          max-width: 750px;
-        }
       }
     }
   }

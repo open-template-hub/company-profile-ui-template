@@ -30,11 +30,8 @@
           <a [routerLink]="URLS.about" class="footer-link-item">
             About
           </a>
-          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+          <a [routerLink]="URLS.customers" class="footer-link-item">
             Customers
-          </a>
-          <a [routerLink]="URLS.maintenance" class="footer-link-item">
-            Enterprise
           </a>
           <a [routerLink]="URLS.maintenance" class="footer-link-item">
             Partners
@@ -42,9 +39,13 @@
           <a [routerLink]="URLS.branding" class="footer-link-item">
             Branding
           </a>
-          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+          <app-ext-link
+              [href]="environmentCommon.website.linkedin.companyUrl + '/' + environmentCommon.oth.social.linkedin + '/jobs'"
+              [linkClass]="'align-flex-start link'">
+          <span body>
             Jobs
-          </a>
+          </span>
+          </app-ext-link>
           <a [routerLink]="URLS.maintenance" class="footer-link-item">
             Blog
           </a>
@@ -75,7 +76,7 @@
         </div>
         <div class="footer-link-group">
           <p>Resources</p>
-          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+          <a [routerLink]="URLS.contactUs" class="footer-link-item">
             Support
           </a>
           <a [routerLink]="URLS.contactUs" class="footer-link-item">
@@ -134,15 +135,14 @@
         /
         <a href="/{{ environmentCommon.languages.french }}{{ getCurrentRoute() }}">🇫🇷</a>
       </div>
-      {{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '' )}}
-    </div>
-  </div>
-  <div class="footer-brand-row">
-    <div class="footer-right-element">
+      <p>
+        {{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '' )}}
+      </p>
       <!-- Do not remove this -->
       <a href="https://opentemplatehub.com">
         <img [src]="poweredBy" alt="powered-by" class="brand-logo" height="40" width="177"/>
       </a>
+
     </div>
   </div>
 </div>

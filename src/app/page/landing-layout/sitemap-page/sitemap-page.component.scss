@@ -11,13 +11,22 @@
     padding: 50px 0;
 
     & .column {
-      & p {
-        color: var(--theme-color);
-        font-weight: 400;
+      & .title {
+
+        & p {
+          box-sizing: border-box;
+          color: var(--darker);
+          font-weight: bold;
+          border-bottom: 1px solid var(--theme-color);
+        }
       }
 
       & .link-group {
         @include util.flex-layout-column;
+
+        & .link-item {
+          padding-bottom: 1px;
+        }
       }
     }
   }
@@ -35,17 +44,21 @@
       & .column {
         @include util.flex-center-center;
 
-        & p {
-          text-align: center;
-          text-decoration: underline;
-          min-height: 48px;
+        & .title {
+          width: 100%;
+
+          & p {
+            text-align: center;
+          }
+
+          height: 48px;
         }
 
         & .link-group {
           @include util.flex-center-center;
 
           & .link-item {
-            min-height: 48px;
+            height: 48px;
           }
         }
       }
@@ -66,12 +79,8 @@
         max-width: 250px;
         margin: 0 20px;
 
-        & p, & .link-item {
+        & .title, & .link-item {
           margin: 0 0 20px;
-        }
-
-        & p {
-          border-bottom: 1px solid var(--theme-color);
         }
       }
     }

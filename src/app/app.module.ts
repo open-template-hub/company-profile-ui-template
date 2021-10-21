@@ -105,6 +105,8 @@ import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.
 import { CallbackPageComponent } from './page/splash-layout/callback-page/callback-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
+import { CustomersPageComponent } from './page/landing-layout/customers-page/customers-page.component';
+import { AssetCardComponent } from './component/card/asset-card/asset-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -197,6 +199,8 @@ FullCalendarModule.registerPlugins( [
     CounterBordersTopSvgComponent,
     TopSvgComponent,
     LeafTopSvgComponent,
+    CustomersPageComponent,
+    AssetCardComponent,
   ],
   imports: [
     BrowserModule,

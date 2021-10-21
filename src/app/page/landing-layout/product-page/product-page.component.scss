@@ -1,6 +1,6 @@
 @use '../../../../styles/util/util';
-@use '../../../component/card/card.component';
 @use '../../../component/content-loader/box-content-loader/box-content-loader.component';
+@use '../../../component/card/card.component';
 
 .product-page-content {
   @include util.flex-layout-column;
@@ -117,8 +117,7 @@ app-swiper-wrapper {
 }
 
 .pricing-plan-wrapper,
-.activity-history-wrapper,
-.related-products-wrapper {
+.activity-history-wrapper {
   padding-bottom: 50px;
 }
 
@@ -138,31 +137,6 @@ app-swiper-wrapper {
   @include util.flex-center-center;
 
   margin-top: 80px;
-}
-
-.cards-wrapper {
-  @include util.flex-layout-row;
-
-  align-items: center;
-  justify-content: space-evenly;
-
-  box-sizing: border-box;
-
-  flex-wrap: wrap;
-
-  width: 100%;
-
-  padding-bottom: 120px;
-
-  & > * {
-    width: 300px;
-    margin-top: 50px;
-  }
-}
-
-.related-products-wrapper {
-  @include util.flex-layout-column;
-  @include util.flex-center-center;
 }
 
 @media only screen and (max-width: 999px) {
@@ -217,24 +191,6 @@ app-swiper-wrapper {
 
     & > * {
       width: 94vw;
-    }
-  }
-
-  .cards-wrapper {
-    font-size: 18px;
-
-    & > * {
-      width: 94vw;
-    }
-  }
-
-  .related-products-wrapper {
-    @include util.flex-layout-column;
-
-    padding-bottom: 50px;
-
-    & > * {
-      margin: 15px 0;
     }
   }
 }
@@ -294,33 +250,6 @@ app-swiper-wrapper {
   .pricing-plan-wrapper {
     & > * {
       width: 90%;
-    }
-  }
-
-  .cards-wrapper {
-    font-size: 18px;
-    padding-top: 20px;
-
-    & > * {
-      margin: {
-        left: 10px;
-        right: 10px;
-      }
-    }
-  }
-
-  .related-products-wrapper {
-    @include util.flex-layout-row;
-
-    justify-content: center;
-
-    width: 85vw;
-
-    flex-wrap: wrap;
-
-    & > * {
-      margin: 15px;
-      width: 300px;
     }
   }
 }

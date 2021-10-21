@@ -21,6 +21,7 @@
         width="800"/>
   </div>
 </div>
+
 <div class="counters">
   <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
      class="counter-wrapper"
@@ -28,7 +29,7 @@
      target="_blank">
     <app-text-content-loader
         *ngIf="npmCounterLoading"
-        [size]="30"
+        [size]="'30'"
         class="loader"></app-text-content-loader>
     <p class="counter" id="npmDownloadCounterElement"></p>
     <p class="description" i18n>Npm Downloads</p>
@@ -50,16 +51,18 @@
   </a>
 </div>
 
-<!-- Customer testimonials -->
-<app-hero [contents]="customerTestimonialsTitle"></app-hero>
+<!-- Testimonials -->
+<app-hero [contents]="testimonialsTitle"></app-hero>
 <div class="cards-wrapper">
   <app-testimonial-card
       *ngFor="let testimonial of TESTIMONIALS"
       [testimonial]="testimonial">
   </app-testimonial-card>
+  <a class="link" [routerLink]="URLS.customers">read more stories</a>
 </div>
 
-<!-- Business partners -->
+<!-- Customers -->
+<app-hero [contents]="customersTitle"></app-hero>
 <div class="business-partners-wrapper">
   <app-business-partner-swiper [partners]="PARTNERS">
   </app-business-partner-swiper>
@@ -74,3 +77,23 @@
       [feature]="feature">
   </app-feature-card>
 </div>
+
+<!-- Explore -->
+<app-hero [contents]="exploreTitle"></app-hero>
+<ng-container *ngFor="let productLine of PRODUCT_LINES">
+  <app-hero [contents]="[{ text: productLine.name, level: 3 }]" [heroClass]="'no-padding'"></app-hero>
+  <div class="cards-wrapper">
+    <ng-container *ngFor="let relatedProduct of productLine.products">
+      <app-presentation-card
+          [class]="relatedProduct.color ? relatedProduct.color : ''"
+          [footerText]="relatedProduct.openSource ? '#opensource' : '#premium'"
+          [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
+          [imgHeight]="150"
+          [secondaryText]="relatedProduct.description"
+          [src]="relatedProduct.logo"
+          [title]="relatedProduct.name"
+          class="related-product">
+      </app-presentation-card>
+    </ng-container>
+  </div>
+</ng-container>

@@ -84,8 +84,14 @@ export const NAVIGATIONS = {
   branding: {
     url: 'branding',
     title: 'Branding - ' + BRAND.name,
-    description: BRAND.name + ': Login',
-    keywords: [ BRAND.name, 'oth', 'Login' ],
+    description: BRAND.name + ': Branding',
+    keywords: [ BRAND.name, 'oth', 'Branding' ],
+  },
+  customers: {
+    url: 'customers',
+    title: 'Customers - ' + BRAND.name,
+    description: BRAND.name + ': Customers',
+    keywords: [ BRAND.name, 'oth', 'Customers' ],
   },
   forgetPassword: {
     url: 'forget-password',

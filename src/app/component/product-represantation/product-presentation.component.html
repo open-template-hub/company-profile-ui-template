@@ -30,7 +30,7 @@
         </app-card>
       </ng-container>
       <ng-container *ngSwitchCase="'user-interfaces'">
-        <img [src]="product.demonstrationImg" alt="demonstration"/>
+        <img [src]="getDemonstrationImg(product)" alt="demonstration"/>
       </ng-container>
       <ng-container *ngSwitchCase="'cli-generators'">
         <app-animated-code-editor [commandLines]="product.commandLines"></app-animated-code-editor>

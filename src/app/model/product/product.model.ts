@@ -14,6 +14,7 @@ export interface Product {
   url: string;
   logo: string;
   demonstrationImg?: string;
+  demonstrationAlter?: string;
   heroImage?: string;
   openSource?: boolean;
   counters?: ProductCounter[];

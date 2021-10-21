@@ -1,18 +1,20 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
 import { BRAND } from '../../data/brand/brand.data';
+import { DarkLightSettings } from '../../data/constant';
 import { PRODUCT_LINES } from '../../data/product/product.data';
 import { Partner } from '../../model/partner/partner.model';
 import { Product } from '../../model/product/product.model';
+import { ThemeService } from '../../service/theme/theme.service';
 
 @Component( {
   selector: 'app-product-presentation',
   templateUrl: './product-presentation.component.html',
   styleUrls: [ './product-presentation.component.scss' ]
 } )
-export class ProductPresentationComponent {
+export class ProductPresentationComponent implements OnInit {
 
   @Input() product: Product;
   @Input() productLineKey: string;
@@ -27,8 +29,13 @@ export class ProductPresentationComponent {
   presentationText: string;
   presentationPartners: Partner[] = [];
 
-  constructor( public router: Router ) {
+  darkLightSetting;
 
+  constructor( public router: Router, private themeService: ThemeService ) {
+    // Intentionally Blank
+  }
+
+  ngOnInit(): void {
     for ( const website in environment.oauth ) {
       // filter only oauth configured websites
       if ( environmentCommon.website[ website ].logo ) {
@@ -74,7 +81,7 @@ export class ProductPresentationComponent {
     }
 
     for ( const productLine of PRODUCT_LINES ) {
-      if (productLine.key === 'servers') {
+      if ( productLine.key === 'servers' ) {
         for ( const product of productLine.products ) {
           this.OTH_SERVER_PARTNERS.push( {
             name: product.name,
@@ -84,6 +91,8 @@ export class ProductPresentationComponent {
         }
       }
     }
+
+    this.themeService.darkLightSetting.subscribe( darkLightSetting => this.darkLightSetting = darkLightSetting );
   }
 
   setPresentation() {
@@ -91,37 +100,53 @@ export class ProductPresentationComponent {
       case 'auth-server-template': {
         this.presentationText = 'Integrate your servers with social login providers in minutes.';
         this.presentationPartners = this.SOCIAL_LOGIN_PARTNERS;
-        return this.SOCIAL_LOGIN_PARTNERS.map( partner => partner.logo );
+        break;
       }
       case 'payment-server-template': {
         this.presentationText = 'Integrate your servers with payment solution providers in minutes.';
         this.presentationPartners = this.PAYMENT_PARTNERS;
-        return this.PAYMENT_PARTNERS.map( partner => partner.logo );
+        break;
       }
       case 'file-storage-server-template': {
         this.presentationText = 'Integrate your servers with file storage solution providers in minutes.';
         this.presentationPartners = this.FILE_STORAGE_PARTNERS;
-        return this.FILE_STORAGE_PARTNERS.map( partner => partner.logo );
+        break;
       }
       case 'mail-server-template': {
         this.presentationText = 'Integrate your servers with email service providers in minutes.';
         this.presentationPartners = this.MAIL_PARTNERS;
-        return this.MAIL_PARTNERS.map( partner => partner.logo );
+        break;
       }
       case 'orchestration-server-template': {
         this.presentationText = 'Orchestrate all of your servers from one place.';
         this.presentationPartners = this.OTH_SERVER_PARTNERS;
-        return this.OTH_SERVER_PARTNERS.map( partner => partner.logo );
+        break;
       }
       default: {
         this.presentationText = '';
         this.presentationPartners = [];
-        return [];
+        break;
       }
     }
+
+    return this.presentationPartners.map( partner => partner.logo );
   }
 
   partnerNameFormat( name: string, isLast: boolean ) {
     return name.split( /(?=[A-Z])/ ).join( ' ' ) + ( isLast ? '*' : ',' );
+  }
+
+  getDemonstrationImg( product: Product ) {
+    const light = product.demonstrationImg;
+    const dark = product.demonstrationAlter ? product.demonstrationAlter : product.demonstrationImg;
+    switch ( this.darkLightSetting ) {
+      case DarkLightSettings.light:
+        return light;
+      case DarkLightSettings.dark:
+        return dark;
+      case DarkLightSettings.auto:
+      default:
+        return this.themeService.selectDarkLightByCSS( light, dark );
+    }
   }
 }

@@ -114,6 +114,10 @@ export class ThemeService {
 
   }
 
+  selectDarkLightByCSS( light: string, dark: string ) {
+    return window.matchMedia && window.matchMedia( '(prefers-color-scheme: dark)' ).matches ? dark : light;
+  }
+
   logout() {
     if ( localStorage.getItem( 'currentUser' ) ) {
       localStorage.removeItem( 'darkLightSetting' );

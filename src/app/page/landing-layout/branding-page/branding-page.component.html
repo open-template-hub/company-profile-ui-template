@@ -51,36 +51,36 @@
   <!-- Color Palette -->
   <app-hero [contents]="[{text: 'Color Palette', level: 2}]"></app-hero>
   <div class="branding-resources-wrapper">
-    <app-presentation-card
+    <app-asset-card
         [href]="colorPalette.brandColor ? externalColorInfoUrl + colorPalette.brandColor.substring(1, colorPalette.brandColor.length) : ''"
-        [presentationItemClass]="'color-item'"
+        [assetItemClass]="'color-item'"
         [secondaryText]="colorPalette.brandColor | uppercase"
         [title]="'Brand Color'">
-    </app-presentation-card>
-    <app-presentation-card
+    </app-asset-card>
+    <app-asset-card
         [href]="colorPalette.secondaryColor ? externalColorInfoUrl + colorPalette.secondaryColor.substring(1, colorPalette.secondaryColor.length) : ''"
-        [presentationItemClass]="'color-item secondary'"
+        [assetItemClass]="'color-item secondary'"
         [secondaryText]="colorPalette.secondaryColor | uppercase"
         [title]="'Secondary Color'">
-    </app-presentation-card>
-    <app-presentation-card
+    </app-asset-card>
+    <app-asset-card
         [href]="colorPalette.tertiaryColor ? externalColorInfoUrl + colorPalette.tertiaryColor.substring(1, colorPalette.tertiaryColor.length) : ''"
-        [presentationItemClass]="'color-item tertiary'"
+        [assetItemClass]="'color-item tertiary'"
         [secondaryText]="colorPalette.tertiaryColor | uppercase"
         [title]="'Tertiary Color'">
-    </app-presentation-card>
+    </app-asset-card>
   </div>
 
   <!-- Logos -->
   <app-hero [contents]="[{text: 'Logos', level: 2}]"></app-hero>
   <div class="branding-resources-wrapper">
-    <app-presentation-card [href]="BRAND.logo.main.replace('min/', '').replace('.min', '')"
-                           [presentationItemClass]="'logo-item'"
+    <app-asset-card [href]="BRAND.logo.main.replace('min/', '').replace('.min', '')"
+                    [assetItemClass]="'logo-item'"
                            [secondaryText]="'PNG'"
                            [src]="BRAND.logo.main"
                            [title]="BRAND.logo.main.substring( BRAND.logo.main.lastIndexOf( '/' ) + 1, BRAND.logo.main.lastIndexOf( '.min.png' ) )"
                            imgHeight="175">
-    </app-presentation-card>
+    </app-asset-card>
   </div>
 
   <!-- Other Assets -->
@@ -89,11 +89,11 @@
   <!-- Badges -->
   <div class="branding-resources-wrapper">
     <ng-container *ngFor="let badge of BRAND.badges; index as i">
-      <app-presentation-card [href]="badge.replace('min/', '').replace('.min', '')" [imgHeight]="40"
-                             [presentationItemClass]="'logo-item'"
+      <app-asset-card [href]="badge.replace('min/', '').replace('.min', '')" [imgHeight]="40"
+                      [assetItemClass]="'logo-item'"
                              [secondaryText]="'PNG'" [src]="badge"
                              [title]="badge.substring( badge.lastIndexOf( '/' ) + 1, badge.lastIndexOf( '.min.png' ) )">
-      </app-presentation-card>
+      </app-asset-card>
     </ng-container>
   </div>
 
@@ -101,11 +101,11 @@
   <app-hero [contents]="[{text: 'Wallpapers', level: 2}]"></app-hero>
   <div class="branding-resources-wrapper">
     <ng-container *ngFor="let wallpaper of BRAND.wallpapers; index as i">
-      <app-presentation-card [href]="wallpaper.replace('min/', '').replace('.min', '')" [imgHeight]="400"
-                             [presentationItemClass]="'wallpaper-item'"
+      <app-asset-card [href]="wallpaper.replace('min/', '').replace('.min', '')" [imgHeight]="400"
+                      [assetItemClass]="'wallpaper-item'"
                              [secondaryText]="'PNG'" [src]="wallpaper"
                              [title]="wallpaper.substring( wallpaper.lastIndexOf( '/' ) + 1, wallpaper.lastIndexOf( '.min.png' ) )">
-      </app-presentation-card>
+      </app-asset-card>
     </ng-container>
   </div>
 </div>

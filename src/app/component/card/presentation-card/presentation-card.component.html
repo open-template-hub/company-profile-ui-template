@@ -1,11 +1,17 @@
-<app-card [bodyTemplate]="bodyTemplate" [bottomWrapperTemplate]="bottomWrapperTemplate"
-          [cardClass]="'transparent-card'" class="presentation-card">
-  <!-- Body -->
-  <ng-template #bodyTemplate>
-    <div [class]="presentationItemClass" class="presentation-item">
+<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [bottomWrapperTemplate]="bottomWrapperTemplate" class="presentation-card">
+  <!-- Header -->
+  <ng-template #headerTemplate>
+    <div class="header">
       <a (click)="redirect()" class="presentation-item-content">
         <img *ngIf="src" [height]="imgHeight" [src]="src" alt="wallpaper">
       </a>
+    </div>
+
+  </ng-template>
+
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div class="body">
 
       <p>{{ title }}</p>
 

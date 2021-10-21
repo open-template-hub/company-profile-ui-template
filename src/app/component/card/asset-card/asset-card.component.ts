@@ -2,17 +2,18 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component( {
-  selector: 'app-presentation-card',
-  templateUrl: './presentation-card.component.html',
-  styleUrls: [ './presentation-card.component.scss' ]
+  selector: 'app-asset-card',
+  templateUrl: './asset-card.component.html',
+  styleUrls: [ './asset-card.component.scss' ]
 } )
-export class PresentationCardComponent {
+export class AssetCardComponent {
 
   @Input() href: string = undefined;
   @Input() src: string;
   @Input() title: string;
   @Input() secondaryText: string;
   @Input() footerText: string;
+  @Input() assetItemClass: string;
   @Input() imgHeight: number;
 
   constructor( private router: Router ) {

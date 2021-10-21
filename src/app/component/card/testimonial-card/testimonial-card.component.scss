@@ -60,7 +60,7 @@
       }
 
       & img {
-        @include util.circle;
+        @include util.default-border-radius;
 
         box-shadow: 0 3px 15px -5px var(--theme-color);
 

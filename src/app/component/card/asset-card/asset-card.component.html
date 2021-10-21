@@ -1,0 +1,20 @@
+<app-card [bodyTemplate]="bodyTemplate" [bottomWrapperTemplate]="bottomWrapperTemplate"
+          [cardClass]="'transparent-card'" class="asset-card">
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div [class]="assetItemClass" class="asset-item">
+      <a (click)="redirect()" class="asset-item-content">
+        <img *ngIf="src" [height]="imgHeight" [src]="src" alt="wallpaper">
+      </a>
+
+      <p>{{ title }}</p>
+
+      <a (click)="redirect()" *ngIf="!href.startsWith('/') && secondaryText" class="asset-link theme-color-link">
+        {{ secondaryText }}
+      </a>
+      <p *ngIf="href.startsWith('/') && secondaryText" class="asset-description">{{ secondaryText }}</p>
+      <p *ngIf="footerText" class="asset-footer">{{ footerText }}</p>
+    </div>
+  </ng-template>
+  <ng-template #bottomWrapperTemplate></ng-template>
+</app-card>

@@ -25,6 +25,7 @@ import { ResetPasswordPageComponent } from './page/landing-layout/form-pages/res
 import { SignUpPageComponent } from './page/landing-layout/form-pages/sign-up-page/sign-up-page.component';
 import { HomePageComponent } from './page/landing-layout/home-page/home-page.component';
 import { LandingLayoutComponent } from './page/landing-layout/landing-layout.component';
+import { PartnersPageComponent } from './page/landing-layout/partners-page/partners-page.component';
 import { CookiePolicyPageComponent } from './page/landing-layout/policy-pages/cookie-policy-page/cookie-policy-page.component';
 import { PrivacyPolicyPageComponent } from './page/landing-layout/policy-pages/privacy-policy-page/privacy-policy-page.component';
 import { TermsPageComponent } from './page/landing-layout/policy-pages/terms-page/terms-page.component';
@@ -115,6 +116,11 @@ const routes: Routes = [
       {
         path: NAVIGATIONS.docs.url,
         component: DocsPageComponent,
+        canActivate: [ NavigationInterceptor ],
+      },
+      {
+        path: NAVIGATIONS.partners.url,
+        component: PartnersPageComponent,
         canActivate: [ NavigationInterceptor ],
       },
       {

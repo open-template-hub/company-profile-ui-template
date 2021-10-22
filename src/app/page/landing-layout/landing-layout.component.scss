@@ -75,6 +75,12 @@
     min-height: 50vh;
   }
 
+  .raw-content-page-layout {
+    & app-information-button {
+      margin-top: 30px;
+    }
+  }
+
   .form-page-layout {
     & .body {
       width: 400px;

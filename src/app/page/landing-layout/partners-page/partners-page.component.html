@@ -1,0 +1,13 @@
+<!-- Employees -->
+<app-hero [contents]="partnersTitle"></app-hero>
+<div class="business-partners-wrapper">
+  <app-business-partner-swiper [partners]="PARTNERS">
+  </app-business-partner-swiper>
+  <app-cookies></app-cookies>
+</div>
+
+<div class="cards-wrapper">
+  <app-button [text]="'Join our partner program'" [routerLink]="URLS.contactUs"
+              [buttonClasses]="['theme-color-border-color', 'theme-color-font-color', 'transparent-button']">
+  </app-button>
+</div>

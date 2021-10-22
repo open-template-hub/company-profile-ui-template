@@ -1,0 +1,16 @@
+@use '../../../../styles/util/util';
+@use '../../../component/card/card.component';
+
+.business-partners-wrapper {
+  @include util.flex-layout-column;
+  @include util.flex-center-center;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding-left: 3vw;
+  padding-right: 3vw;
+
+  padding-bottom: 100px;
+}

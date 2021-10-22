@@ -20,11 +20,15 @@ export class StatusPageComponent {
         return;
       } else if ( systemStatuses instanceof HttpErrorResponse && systemStatuses.statusText === 'Unknown Error' ) {
         this.overallSystemStatus = DEFAULT_SYSTEM_STATUS;
+        this.overallSystemStatus.checkDate = new Date();
         this.overallSystemStatus.overall = 'WARN';
-        this.overallSystemStatus.systemStatuses.map( systemStatus => {
+
+        for ( const systemStatus of this.overallSystemStatus.systemStatuses ) {
           systemStatus.overall = 'WARN';
-          systemStatus.statuses.map( status => status.alive = 'WARN');
-        } );
+          for ( const status of systemStatus.statuses ) {
+            status.alive = 'WARN';
+          }
+        }
         return;
       }
 

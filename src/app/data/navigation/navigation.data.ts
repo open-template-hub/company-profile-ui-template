@@ -99,6 +99,12 @@ export const NAVIGATIONS = {
     description: BRAND.name + ': Docs',
     keywords: [ BRAND.name, 'oth', 'Docs' ],
   },
+  partners: {
+    url: 'partners',
+    title: 'Partners - ' + BRAND.name,
+    description: BRAND.name + ': Partners',
+    keywords: [ BRAND.name, 'oth', 'Partners' ],
+  },
   customers: {
     url: 'customers',
     title: 'Customers - ' + BRAND.name,

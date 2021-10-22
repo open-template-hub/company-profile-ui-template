@@ -112,6 +112,7 @@ import { BlogPageComponent } from './page/landing-layout/blog-page/blog-page.com
 import { BlogCardComponent } from './component/card/blog-card/blog-card.component';
 import { DocsPageComponent } from './page/landing-layout/docs-page/docs-page.component';
 import { DocCardComponent } from './component/card/doc-card/doc-card.component';
+import { PartnersPageComponent } from './page/landing-layout/partners-page/partners-page.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -210,6 +211,7 @@ FullCalendarModule.registerPlugins( [
     BlogCardComponent,
     DocsPageComponent,
     DocCardComponent,
+    PartnersPageComponent,
   ],
   imports: [
     BrowserModule,

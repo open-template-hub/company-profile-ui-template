@@ -29,7 +29,10 @@ export class HomePageComponent implements AfterViewInit {
 
   URLS = URLS;
   PRODUCT_LINES = PRODUCT_LINES;
+
+  // Todo: Change this with customers
   PARTNERS: Partner[] = PARTNERS;
+
   TESTIMONIALS: Testimonial[] = TESTIMONIALS.slice( 0, TESTIMONIALS.length < 3 ? TESTIMONIALS.length : 3 );
   FEATURES: Feature[] = FEATURES;
 

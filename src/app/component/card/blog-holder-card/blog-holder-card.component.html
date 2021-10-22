@@ -1,10 +1,27 @@
-<app-card [bodyTemplate]="bodyTemplate" class="blog-holder-card">
+<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
+          class="blog-holder-card">
+  <!-- Header -->
+  <ng-template #headerTemplate>
+    <div class="header">
+      <img [src]="blog.author.profile.photoUri" height="80" width="80">
+      <p class="title">{{ blog.title }}</p>
+    </div>
+  </ng-template>
+
   <!-- Body -->
   <ng-template #bodyTemplate>
     <div class="body">
-      <!-- Body of the card -->
-      <p class="title">{{ blog.title }}</p>
-      <i aria-hidden="true" class="arrow fas fa-arrow-right"></i>
+      <p class="except">{{ blog.excerpt }}</p>
+    </div>
+  </ng-template>
+
+  <!-- Footer -->
+  <ng-template #footerTemplate>
+    <div class="footer">
+      <div class="footer-left">
+        <p class="date"> Read more</p>
+        <i aria-hidden="true" class="arrow fas fa-chevron-right"></i>
+      </div>
       <p class="date">{{ blog.date }}</p>
     </div>
   </ng-template>

@@ -22,6 +22,8 @@
   @include util.default-shadow;
   @include util.default-border-radius;
 
+  box-sizing: border-box;
+
   // Position
   z-index: 10;
 

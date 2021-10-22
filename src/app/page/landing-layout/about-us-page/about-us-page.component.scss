@@ -1,16 +1,5 @@
 @use '../../../../styles/util/util';
-
-.employees-wrapper {
-  & > * {
-    margin-top: 100px;
-  }
-
-  & hr {
-    margin: 0;
-    flex-basis: 100%;
-    visibility: hidden;
-  }
-}
+@use '../../../component/card/employee-card/employee-card.component';
 
 .timeline-wrapper, .websites-wrapper {
   @include util.flex-center-center;
@@ -26,21 +15,6 @@
 }
 
 @media only screen and (max-width: 999px) {
-  .employees-wrapper {
-    @include util.flex-layout-column;
-    @include util.flex-center-center;
-
-    justify-content: space-evenly;
-
-    width: 100vw;
-
-    margin-bottom: 20px;
-
-    & > * {
-      width: 94vw;
-    }
-  }
-
   .timeline-wrapper, .websites-wrapper {
     @include util.flex-layout-column;
     padding: 0 3vw;
@@ -61,25 +35,6 @@
 }
 
 @media only screen and (min-width: 1000px) {
-
-  .employees-wrapper {
-    @include util.flex-layout-row;
-
-    justify-content: center;
-    flex-wrap: wrap;
-
-    width: 100%;
-
-    margin-bottom: 50px;
-
-    & > * {
-      width: 300px;
-      margin: {
-        left: 40px;
-        right: 40px;
-      }
-    }
-  }
 
   .timeline-wrapper, .websites-wrapper {
     @include util.flex-layout-row;

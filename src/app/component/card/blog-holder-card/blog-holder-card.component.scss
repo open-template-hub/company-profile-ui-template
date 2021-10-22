@@ -1,34 +1,83 @@
 @use '../../../../styles/util/util';
+@use '../../card/card.component';
 
 .blog-holder-card {
-  & .body {
-    @include util.default-padding-line;
 
-    padding: 20px;
+  & .header {
+    @include card.default-header;
+    @include util.flex-layout-row;
+
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border-bottom: 1px solid;
+    border-color: var(--theme-color);
+    box-shadow: none;
+
+    & img {
+      @include util.default-border-radius-image;
+
+      // Color
+      background-color: var(--card);
+
+      // Design
+      border: 2px solid var(--shadow-lighter);
+      box-shadow: 0 -6px 15px -7px var(--shadow);
+    }
 
     & .title {
       font-weight: 600;
-      color: var(--lighter);
-      border-bottom: 1px solid;
-      padding-bottom: 5px;
-      border-color: var(--theme-color);
-      font-size: 15px;
+      margin-left: 18px;
+      color: var(--color);
+      font-size: 18px;
     }
+  }
 
-    & .arrow {
-      padding-top: 10px;
-      padding-left: 5px;
-      float: left;
+  & .body {
+    @include util.default-padding-line;
+    @include card.default-body;
+
+    align-items: flex-start;
+
+    height: 180px;
+
+    & .except {
+      font-weight: 400;
+      color: var(--lighter);
       font-size: 16px;
-      color: var(--theme-color);
+    }
+  }
+
+  & .footer {
+    @include card.default-footer;
+    @include util.flex-layout-row;
+
+    justify-content: space-between;
+
+    & .footer-left {
+      @include util.flex-layout-row;
+      @include util.flex-center-center;
+
+      & .arrow {
+        margin-left: 10px;
+        float: left;
+        font-size: 16px;
+        color: var(--theme-color);
+      }
     }
 
     & .date {
       font-weight: 600;
-      color: var(--theme-color);
+      color: var(--lighter);
       text-align: right;
-      padding-top: 10px;
       font-size: 12px;
+    }
+
+    & > * {
+      margin-left: 30px;
+      margin-right: 30px;
     }
   }
 }

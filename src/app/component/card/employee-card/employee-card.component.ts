@@ -17,6 +17,7 @@ export class EmployeeCardComponent {
     profile: {
       name: '',
       title: '',
+      bio: '',
       photoUri: '',
       social: {
         linkedIn: '',

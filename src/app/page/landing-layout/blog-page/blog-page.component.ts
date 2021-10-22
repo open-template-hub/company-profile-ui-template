@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NAVIGATIONS } from 'src/app/data/navigation/navigation.data';
-import { BLOG } from '../../../data/blog/brand.data';
+import { BLOG } from '../../../data/blog/blog.data';
 
 @Component({
   selector: 'app-blog-page',

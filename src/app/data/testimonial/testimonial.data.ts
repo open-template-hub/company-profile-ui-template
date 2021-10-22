@@ -83,7 +83,7 @@ export const TESTIMONIALS: Testimonial[] = [
     theme: ThemeColorSettings.purple,
   },
   {
-    review: 'Would you like to tell us how was your Open Template Hub experience or are you planning to use our products but need some professional help? Please feel free to reach us from info@opentemplatehub.com.',
+    review: 'Would you like to tell us how was your Open Template Hub experience or are you planning to use our products but need some professional help? Please feel free to reach us from info@opentemplatehub.com or from contact us page.',
     reviewer: {
       name: '???',
       title: 'CEO @ Your Company',

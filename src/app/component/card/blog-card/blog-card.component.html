@@ -2,10 +2,10 @@
           class="blog-card">
   <!-- Header -->
   <ng-template #headerTemplate>
-    <ng-container *ngTemplateOutlet="blogHeader || defaultblogHeader">
+    <ng-container *ngTemplateOutlet="blogHeader || defaultBlogHeader">
       <!-- Header of the card -->
     </ng-container>
-    <ng-template #defaultblogHeader>
+    <ng-template #defaultBlogHeader>
       <div *ngIf="defaultHeaderContent" class="header">
         {{ defaultHeaderContent }}
       </div>
@@ -16,7 +16,8 @@
   <ng-template #bodyTemplate>
     <div class="body">
       <!-- Body of the card -->
-      <markdown class="markdown" [src]="src"></markdown>
+      <markdown class="oth-blog-markdown" [src]="src"></markdown>
+      <p>{{ date }}</p>
     </div>
   </ng-template>
 

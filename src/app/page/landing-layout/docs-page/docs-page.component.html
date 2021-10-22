@@ -1,0 +1,8 @@
+<div class="raw-content-page-layout">
+  <app-hero [contents]="[{text: 'Docs', level: 1}]"></app-hero>
+  <div class="docs-wrapper">
+    <ng-container *ngFor="let doc of DOCS">
+      <app-doc-card [src]="'./assets/docs/' + doc.url"></app-doc-card>
+    </ng-container>
+  </div>
+</div>

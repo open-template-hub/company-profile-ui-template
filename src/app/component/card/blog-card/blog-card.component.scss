@@ -3,6 +3,12 @@
 
 .blog-card {
 
+  & .body {
+    & p:last-child {
+      text-align: right;
+    }
+  }
+
   & .footer {
     @include card.default-footer;
     @include card.default-footer-border-color;

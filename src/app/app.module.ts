@@ -110,6 +110,8 @@ import { CustomersPageComponent } from './page/landing-layout/customers-page/cus
 import { AssetCardComponent } from './component/card/asset-card/asset-card.component';
 import { BlogPageComponent } from './page/landing-layout/blog-page/blog-page.component';
 import { BlogCardComponent } from './component/card/blog-card/blog-card.component';
+import { DocsPageComponent } from './page/landing-layout/docs-page/docs-page.component';
+import { DocCardComponent } from './component/card/doc-card/doc-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -206,6 +208,8 @@ FullCalendarModule.registerPlugins( [
     AssetCardComponent,
     BlogPageComponent,
     BlogCardComponent,
+    DocsPageComponent,
+    DocCardComponent,
   ],
   imports: [
     BrowserModule,

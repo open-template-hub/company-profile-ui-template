@@ -104,11 +104,11 @@ export class HomePageComponent implements AfterViewInit {
       this.startCounter( options, this.npmDownloadCounter );
     } );
 
-    this.serverTypesCounter.count = PRODUCT_LINES.find( productLine => productLine.key === 'servers' ).products.length;
+    this.serverTypesCounter.count = PRODUCT_LINES.find( productLine => productLine.key === 'server' ).products.length;
 
     this.startCounter( options, this.serverTypesCounter );
 
-    this.uiTypesCounter.count = PRODUCT_LINES.find( productLine => productLine.key === 'user-interfaces' ).products.length;
+    this.uiTypesCounter.count = PRODUCT_LINES.find( productLine => productLine.key === 'user-interface' ).products.length;
 
     this.startCounter( options, this.uiTypesCounter );
   }

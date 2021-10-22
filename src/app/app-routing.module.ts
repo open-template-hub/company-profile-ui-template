@@ -18,6 +18,7 @@ import { BlogPageComponent } from './page/landing-layout/blog-page/blog-page.com
 import { BrandingPageComponent } from './page/landing-layout/branding-page/branding-page.component';
 import { ContactUsPageComponent } from './page/landing-layout/contact-us-page/contact-us-page.component';
 import { CustomersPageComponent } from './page/landing-layout/customers-page/customers-page.component';
+import { DocsPageComponent } from './page/landing-layout/docs-page/docs-page.component';
 import { ForgetPasswordPageComponent } from './page/landing-layout/form-pages/forget-password-page/forget-password-page.component';
 import { LoginPageComponent } from './page/landing-layout/form-pages/login-page/login-page.component';
 import { ResetPasswordPageComponent } from './page/landing-layout/form-pages/reset-password-page/reset-password-page.component';
@@ -109,6 +110,11 @@ const routes: Routes = [
       {
         path: NAVIGATIONS.blog.url,
         component: BlogPageComponent,
+        canActivate: [ NavigationInterceptor ],
+      },
+      {
+        path: NAVIGATIONS.docs.url,
+        component: DocsPageComponent,
         canActivate: [ NavigationInterceptor ],
       },
       {

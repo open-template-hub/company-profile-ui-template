@@ -98,7 +98,7 @@ const DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS = [
 
 export const PRODUCT_LINES: ProductLine[] = [
   {
-    key: 'servers',
+    key: 'server',
     name: 'Servers',
     description: $localize`Micro server solutions for your needs`,
     products: [
@@ -165,7 +165,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     ],
   },
   {
-    key: 'user-interfaces',
+    key: 'user-interface',
     name: 'User Interfaces',
     description: 'User interface solutions for your needs',
     products: [
@@ -208,7 +208,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     ],
   },
   {
-    key: 'cli-generators',
+    key: 'generator',
     name: 'CLI Generators',
     description: $localize`Command line interface generators`,
     products: [

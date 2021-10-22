@@ -10,6 +10,7 @@ export class BlogCardComponent {
 
   @Input() blogHeader: TemplateRef<any>;
   @Input() src: string;
+  @Input() date: string;
 
   @Input() defaultHeaderContent: string;
 

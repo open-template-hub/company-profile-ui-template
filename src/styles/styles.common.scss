@@ -80,14 +80,13 @@ hr {
   }
 }
 
-.markdown {
+.oth-blog-markdown, .oth-docs-markdown {
   p, a, h1, h2, h3, h4, h5, h6, label, ul, li {
     margin: 20px 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
-    text-align: center;
   }
 
   a {
@@ -96,6 +95,17 @@ hr {
     &:hover {
       color: var(--theme-color)
     }
+  }
+
+  & pre code {
+    white-space: break-spaces;
+  }
+}
+
+.oth-blog-markdown {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    text-align: center;
   }
 
   img {

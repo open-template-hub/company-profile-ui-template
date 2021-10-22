@@ -1,4 +1,8 @@
 <div class="raw-content-page-layout">
   <app-hero [contents]="[{text: 'Blog', level: 1}]"></app-hero>
-  <app-blog-card [src]="'./assets/blog/blog-1.md'"></app-blog-card>
+  <div class="blog-wrapper">
+    <ng-container *ngFor="let blog of BLOG">
+      <app-blog-card [date]="blog.date" [src]="'./assets/blog/' + blog.url"></app-blog-card>
+    </ng-container>
+  </div>
 </div>

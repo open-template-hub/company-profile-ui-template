@@ -81,7 +81,7 @@ export class ProductPresentationComponent implements OnInit {
     }
 
     for ( const productLine of PRODUCT_LINES ) {
-      if ( productLine.key === 'servers' ) {
+      if ( productLine.key === 'server' ) {
         for ( const product of productLine.products ) {
           this.OTH_SERVER_PARTNERS.push( {
             name: product.name,

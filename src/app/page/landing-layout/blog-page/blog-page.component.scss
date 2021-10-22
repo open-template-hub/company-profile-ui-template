@@ -1,1 +1,8 @@
 @use '../landing-layout.component';
+
+.blog-wrapper {
+
+  & > * {
+    margin: 50px;
+  }
+}

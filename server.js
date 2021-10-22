@@ -31,13 +31,13 @@ app.get( "*", function ( req, res, next ) {
 
 // redirect all requests to index.html
 app.get( "/*", function ( req, res ) {
-  let selectedLanguage = 'en-US';
+  let selectedLanguage = "en-US";
 
-  if( req.acceptsLanguages( 'fr' ) || req.url.startsWith( '/fr/' ) ) {
-    selectedLanguage = 'fr';
+  if ( req.acceptsLanguages( "fr" ) || req.url.startsWith( "/fr/" ) ) {
+    selectedLanguage = "fr";
   }
 
-  res.sendFile( path.join( __dirname + "/dist/company-profile-ui-template/"+ selectedLanguage + "/index.html" ) );
+  res.sendFile( path.join( __dirname + "/dist/company-profile-ui-template/" + selectedLanguage + "/index.html" ) );
 } );
 
 // listen port

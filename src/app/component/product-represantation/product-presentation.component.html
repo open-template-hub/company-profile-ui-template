@@ -1,7 +1,7 @@
 <ng-container *ngIf="product">
   <div class="product-presentation">
     <ng-container [ngSwitch]="productLineKey">
-      <ng-container *ngSwitchCase="['servers', 'premium'].includes(productLineKey) ? productLineKey : ''">
+      <ng-container *ngSwitchCase="['server', 'premium'].includes(productLineKey) ? productLineKey : ''">
         <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" [footerTemplate]="footerTemplate"
                   class="presentation-card">
           <ng-template #bodyTemplate>
@@ -29,10 +29,10 @@
           </ng-template>
         </app-card>
       </ng-container>
-      <ng-container *ngSwitchCase="'user-interfaces'">
+      <ng-container *ngSwitchCase="'user-interface'">
         <img [src]="getDemonstrationImg(product)" alt="demonstration"/>
       </ng-container>
-      <ng-container *ngSwitchCase="'cli-generators'">
+      <ng-container *ngSwitchCase="'generator'">
         <app-animated-code-editor [commandLines]="product.commandLines"></app-animated-code-editor>
       </ng-container>
       <ng-container *ngSwitchDefault [ngSwitch]="product.key">

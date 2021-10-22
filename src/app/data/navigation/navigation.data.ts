@@ -93,6 +93,12 @@ export const NAVIGATIONS = {
     description: BRAND.name + ': Blog',
     keywords: [ BRAND.name, 'oth', 'Blog' ],
   },
+  docs: {
+    url: 'docs',
+    title: 'Docs - ' + BRAND.name,
+    description: BRAND.name + ': Docs',
+    keywords: [ BRAND.name, 'oth', 'Docs' ],
+  },
   customers: {
     url: 'customers',
     title: 'Customers - ' + BRAND.name,

@@ -1,7 +1,7 @@
 export const DEFAULT_SYSTEM_STATUS = {
   systemStatuses: [
     {
-      name: 'servers',
+      name: 'server',
       overall: '',
       statuses: [
         { name: 'Auth Server', alive: '' },

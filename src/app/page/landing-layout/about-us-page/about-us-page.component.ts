@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EMPLOYEES } from 'src/app/data/employees/employees.data';
+import { EMPLOYEES } from 'src/app/data/employee/employee.data';
 import { OTH_TIME_LINE } from 'src/app/data/timeline/timeline.data';
 import { environmentCommon } from '../../../../environments/environment-common';
 

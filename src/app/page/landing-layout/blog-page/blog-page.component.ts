@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BLOG } from '../../../data/blog/brand.data';
 
 @Component( {
   selector: 'app-blog-page',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: [ './blog-page.component.scss' ]
 } )
 export class BlogPageComponent {
+
+  BLOG = BLOG;
 
   constructor() {
     // Intentionally Blank

@@ -87,7 +87,7 @@
       <div class="flexible-cards-wrapper">
         <ng-container *ngFor="let productLine of PRODUCT_LINES">
           <ng-container
-              *ngIf="productLineKey === 'premium' ? productLine.key === 'servers' : productLine.key === productLineKey || productLine.key === 'premium'">
+              *ngIf="productLineKey === 'premium' ? productLine.key === 'server' : productLine.key === productLineKey || productLine.key === 'premium'">
             <ng-container *ngFor="let relatedProduct of productLine.products">
               <app-presentation-card
                   *ngIf="product.key !== relatedProduct.key"

@@ -383,7 +383,24 @@ export const SERVICES: ProductLine[] = [
         description: `We perform world-class custom software development services from startups to enterprise businesses. Our highly experienced software developers have a deep understanding of how to leverage top programming languages, frameworks, and other software development tools to create the ideal solution for your business.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
-        features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
+        features: [{
+          name: 'Features',
+          details: [
+            {
+              name: 'Custom Application Development',
+              description: 'We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.'
+            },
+            {
+              name: 'Application Maintenance',
+              description: 'Our app maintenance & modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.'
+            },
+            {
+              name: 'Implementation & Deployment',
+              description: 'We devise an in-depth, comprehensive software implementation & deployment plan, assessing your needs to deliver enhanced technologies to end-users.'
+            },
+          ],
+        }
+        ],
       },
       {
         key: 'software-integration',
@@ -391,7 +408,24 @@ export const SERVICES: ProductLine[] = [
         description: `When a company adopts a new technology or business process, they face many challenges between their current applications and systems and the complicated software implementation process. Our industry-specific software engineers handle all of your challenging integration & implementation obstacles, including architectural design, testing, debugging, and execution.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-pieces.min.png',
-        features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
+        features: [ {
+          name: 'Features',
+          details: [
+            {
+              name: 'Custom Application Development',
+              description: 'We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.'
+            },
+            {
+              name: 'Application Maintenance',
+              description: 'Our app maintenance & modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.'
+            },
+            {
+              name: 'Implementation & Deployment',
+              description: 'We devise an in-depth, comprehensive software implementation & deployment plan, assessing your needs to deliver enhanced technologies to end-users.'
+            },
+          ],
+        }
+        ],
       },
       {
         key: 'quality-assurance',
@@ -399,7 +433,24 @@ export const SERVICES: ProductLine[] = [
         description: `We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-shine.min.png',
-        features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
+        features: [ {
+          name: 'Features',
+          details: [
+            {
+              name: 'Custom Application Development',
+              description: 'We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.'
+            },
+            {
+              name: 'Application Maintenance',
+              description: 'Our app maintenance & modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.'
+            },
+            {
+              name: 'Implementation & Deployment',
+              description: 'We devise an in-depth, comprehensive software implementation & deployment plan, assessing your needs to deliver enhanced technologies to end-users.'
+            },
+          ],
+        }
+        ],
       },
     ],
   },

@@ -39,12 +39,12 @@
         <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
           <ng-template #bodyTemplate>
             <div class="body">
-              <p class="title">Why Open Template Hub?</p>
               <ng-container *ngFor="let feature of product.features">
                 <p class="feature-title">{{ feature.name }}</p>
 
-                <div *ngFor="let detail of feature.details">
-                  <h6>{{ detail.name + ': ' + detail.description}}</h6>
+                <div *ngFor="let detail of feature.details" class="details">
+                  <p>{{ detail.name + ':' }}</p>
+                  <p>{{ detail.description}}</p>
                 </div>
               </ng-container>
             </div>

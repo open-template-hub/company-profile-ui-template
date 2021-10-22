@@ -29,19 +29,31 @@
     background-color: var(--shadow-lighter);
 
     & .title, & .feature-title {
-      font-size: 19px;
       margin: 15px 0;
+    }
+
+    & .title, & .feature-title {
+      font-size: 19px;
     }
   }
 
   & .features-card {
     text-align: left;
 
-    & .title, & .feature-title {
+    & .feature-title {
+      font-size: 26px;
       font-weight: 500;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
 
-      &:first-child {
-        margin-top: 10px;
+    & .details {
+      font-size: 18px;
+      margin-top: 19px;
+
+      & p:first-child {
+        font-weight: 500;
+        margin-bottom: 8px;
       }
     }
   }

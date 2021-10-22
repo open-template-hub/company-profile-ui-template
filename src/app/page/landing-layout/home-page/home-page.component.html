@@ -23,31 +23,21 @@
 </div>
 
 <div class="counters">
-  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
-     class="counter-wrapper"
-     rel="noopener"
-     target="_blank">
-    <app-text-content-loader
-        *ngIf="npmCounterLoading"
-        [size]="'30'"
-        class="loader"></app-text-content-loader>
+  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github" class="counter-wrapper" rel="noopener" target="_blank">
+    <app-text-content-loader *ngIf="npmCounterLoading" [size]="'30'" class="loader"></app-text-content-loader>
     <p class="counter" id="npmDownloadCounterElement"></p>
     <p class="description" i18n>Npm Downloads</p>
   </a>
-  <a
-      [href]="'https://github.com/open-template-hub/server-generator'"
-      class="counter-wrapper counter-alter"
-      rel="noopener"
-      target="_blank">
-    <p class="counter" id="serverTypesCounterElement">0</p>
-    <p class="description" i18n>Server Types</p>
+  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github" class="counter-wrapper counter-alter" rel="noopener" target="_blank">
+    <p class="counter" id="productTypesCounterElement">0</p>
+    <p class="description" i18n>Product Types</p>
   </a>
-  <a [href]="'https://github.com/open-template-hub/app-generator'"
-     class="counter-wrapper"
-     rel="noopener"
-     target="_blank">
-    <p class="counter" id="uiTypesCounterElement">0</p>
-    <p class="description" i18n>UI Types</p>
+  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github" class="counter-wrapper" rel="noopener" target="_blank">
+    <div class="ratio">
+      <p class="counter" id="openSourceRatioCounterElement">0</p>
+      <span class="counter">%</span>
+    </div>
+    <p class="description" i18n>Open Source Ratio</p>
   </a>
 </div>
 

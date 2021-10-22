@@ -22,8 +22,8 @@ import { AuthenticationService } from '../../../service/auth/authentication.serv
 } )
 export class HomePageComponent implements AfterViewInit {
   npmDownloadCounter = { count: 0, id: 'npmDownloadCounterElement' };
-  serverTypesCounter = { count: 0, id: 'serverTypesCounterElement' };
-  uiTypesCounter = { count: 0, id: 'uiTypesCounterElement' };
+  productTypesCounter = { count: 0, id: 'productTypesCounterElement' };
+  openSourceRatioCounter = { count: 0, id: 'openSourceRatioCounterElement' };
   npmCounterLoading = true;
   brandLogoLoaded = false;
 
@@ -99,6 +99,7 @@ export class HomePageComponent implements AfterViewInit {
       useGrouping: false,
       duration: undefined,
       formattingFn: undefined,
+      decimalPlaces: 0
     };
 
     this.npmProviderService.getNpmPackagesDownloadCount().then( ( count ) => {
@@ -107,19 +108,27 @@ export class HomePageComponent implements AfterViewInit {
       this.startCounter( options, this.npmDownloadCounter );
     } );
 
-    this.serverTypesCounter.count = PRODUCT_LINES.find( productLine => productLine.key === 'server' ).products.length;
+    this.productTypesCounter.count = 0;
+    this.openSourceRatioCounter.count = 0;
+    for ( const productLine of PRODUCT_LINES ) {
+      if ( productLine.key === 'generator' ) {
+        continue;
+      }
+      this.productTypesCounter.count += productLine.products.length;
 
-    this.startCounter( options, this.serverTypesCounter );
+      for ( const product of productLine.products ) {
+        if ( product.openSource ) {
+          this.openSourceRatioCounter.count++;
+        }
+      }
+    }
+    this.openSourceRatioCounter.count = ( this.openSourceRatioCounter.count / this.productTypesCounter.count ) * 100;
 
-    this.uiTypesCounter.count = PRODUCT_LINES.find( productLine => productLine.key === 'user-interface' ).products.length;
-
-    this.startCounter( options, this.uiTypesCounter );
+    this.startCounter( options, this.productTypesCounter );
+    this.startCounter( options, this.openSourceRatioCounter );
   }
 
-  private startCounter(
-      options: { duration: number; useGrouping: boolean; formattingFn },
-      counter
-  ) {
+  private startCounter( options: { duration: number; useGrouping: boolean; formattingFn, decimalPlaces: number }, counter ) {
     options.formattingFn = ( n: number ) => {
       return this.countUpFormatter( n );
     };

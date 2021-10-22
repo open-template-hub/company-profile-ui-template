@@ -16,10 +16,10 @@
     @include card.default-body;
 
     align-items: flex-end;
-    justify-content: flex-start;
+    justify-content: flex-end;
 
     // Design
-    min-height: 250px;
+    height: 500px;
     padding: 25px;
     text-align: center;
 
@@ -27,6 +27,7 @@
       @include util.flex-layout-column;
 
       justify-content: flex-start;
+      margin-bottom: auto;
 
       & p {
         color: var(--lighter);
@@ -50,7 +51,7 @@
 
       & svg {
         position: absolute;
-        top: 50px;
+        top: 25px;
         left: -60px;
         z-index: 1;
 
@@ -67,7 +68,7 @@
         background-color: var(--card);
 
         height: 100px;
-        margin-top: 50px;
+        margin-top: 30px;
         border-bottom: 2px solid var(--theme-color);
         z-index: 2;
       }
@@ -94,9 +95,9 @@
 
       z-index: 2;
 
-      padding-top: 50px;
+      padding-top: 35px;
 
-      max-width: 70%;
+      max-width: 80%;
 
       text-align: left;
 

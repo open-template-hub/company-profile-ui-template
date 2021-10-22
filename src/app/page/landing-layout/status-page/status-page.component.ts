@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { DEFAULT_SYSTEM_STATUS } from '../../../data/status/status.data';
 import { MonitoringService } from '../../../service/monitoring/monitoring.service';
@@ -16,6 +17,14 @@ export class StatusPageComponent {
 
     this.monitoringService.systemStatuses.subscribe( systemStatuses => {
       if ( !systemStatuses ) {
+        return;
+      } else if ( systemStatuses instanceof HttpErrorResponse && systemStatuses.statusText === 'Unknown Error' ) {
+        this.overallSystemStatus = DEFAULT_SYSTEM_STATUS;
+        this.overallSystemStatus.overall = 'WARN';
+        this.overallSystemStatus.systemStatuses.map( systemStatus => {
+          systemStatus.overall = 'WARN';
+          systemStatus.statuses.map( status => status.alive = 'WARN');
+        } );
         return;
       }
 

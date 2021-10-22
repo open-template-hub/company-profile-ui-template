@@ -17,8 +17,12 @@ export class MonitoringService {
   }
 
   alive() {
-    return this.http.get<any>( `${ environment.serverUrl }/monitor/alive` ).subscribe( response => {
-      this.systemStatusesSubject.next( response );
-    } );
+
+    const observer = {
+      next: response => this.systemStatusesSubject.next( response ),
+      error: error => this.systemStatusesSubject.next( error )
+    };
+
+    return this.http.get<any>( `${ environment.serverUrl }/monitor/alive` ).subscribe( observer );
   }
 }

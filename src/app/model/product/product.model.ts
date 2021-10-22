@@ -12,6 +12,7 @@ export interface Product {
   description: string;
   color?: string;
   url: string;
+  urlAlter?: string;
   logo: string;
   demonstrationImg?: string;
   demonstrationAlter?: string;

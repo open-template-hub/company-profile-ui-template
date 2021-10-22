@@ -6,7 +6,8 @@ export const environmentCommon = {
       twitter: 'opentemplatehub',
       linkedin: 'open-template-hub',
       github: 'open-template-hub',
-      productHunt: '@open_template_hub'
+      productHunt: '@open_template_hub',
+      npm: '@open-template-hub'
     },
     email: 'info@opentemplatehub.com'
   },
@@ -149,6 +150,8 @@ export const environmentCommon = {
       cssClass: 'google-calendar'
     },
     npm: {
+      cssClass: 'npm',
+      url: 'https://www.npmjs.com',
       api: {
         download: 'https://api.npmjs.org/downloads/point'
       }

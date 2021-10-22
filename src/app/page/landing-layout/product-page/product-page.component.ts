@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
 import { GithubProviderService } from 'src/app/service/provider/github-provider.service';
@@ -8,6 +7,7 @@ import { URLS } from '../../../data/constant';
 import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
 import { Activity } from '../../../model/activity/activity.model';
 import { Product, ProductLine } from '../../../model/product/product.model';
+import { Testimonial } from '../../../model/testimonial/testimonial.model';
 import { ProductService } from '../../../service/product/product.service';
 
 @Component( {
@@ -17,7 +17,7 @@ import { ProductService } from '../../../service/product/product.service';
 } )
 export class ProductPageComponent implements OnInit, OnDestroy {
   URLS = URLS;
-  TESTIMONIALS = TESTIMONIALS;
+  TESTIMONIALS: Testimonial[] = TESTIMONIALS.slice( 0, TESTIMONIALS.length < 3 ? TESTIMONIALS.length : 3 );
 
   environmentCommon = environmentCommon;
   commitActivities: Activity[] = [];
@@ -28,7 +28,10 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   productLineKey: string;
   isOpenSource = false;
 
-  emailControl = new FormControl( '' );
+  testimonialsTitle = [
+    { text: $localize`Customer testimonials`, level: 1 },
+    { text: $localize`What our customers are saying...` }
+  ];
 
   constructor(
       private route: ActivatedRoute,
@@ -109,8 +112,8 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     this.product = undefined;
   }
 
-  redirect() {
-    window.open( this.product.url, '_blank' );
+  redirect(url: string) {
+    window.open( url, '_blank' );
   }
 
   getContactUsButtonText( productLineKey ) {

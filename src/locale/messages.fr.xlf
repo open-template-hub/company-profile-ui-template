@@ -1966,14 +1966,6 @@
           <context context-type="linenumber">325</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2871005488634941906" datatype="html">
-        <source>One server to orchestrate them all!</source>
-        <target>Un serveur pour les orchestrer tous !</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">381</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="6427664868798078162" datatype="html">
         <source>Services that we provide</source>
         <target>Services que nous fournissons</target>

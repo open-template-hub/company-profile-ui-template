@@ -217,10 +217,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Server Generator',
         description: $localize`Command line interface generator of the servers at Open Template Hub`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'server-generator',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'server-generator',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
-        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
         commandLines: [
           {
             command: 'open-template-hub-server-generator',
@@ -261,10 +261,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         description:
             $localize`Command line interface generator of the user interfaces at Open Template Hub`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'app-generator',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'app-generator',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
-        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
         commandLines: [
           {
             command: 'open-template-hub-app-generator',
@@ -310,7 +310,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'orchestration-server-template',
         name: 'Orchestration Server',
-        description: $localize`Orchestrate all of your servers from one place.`,
+        description: `Orchestration Server Template is a middleware server that has simple yet powerful design to connect your business with all Open Template Hub servers (like Auth Server, Payment Server, File Storage Server or Mail Server). It also has generic design to integrate any other servers.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/orchestration-server-logo.min.png',
         color: ThemeColorSettings.yellow,
@@ -318,6 +318,10 @@ export const PRODUCT_LINES: ProductLine[] = [
           {
             name: $localize`Core Features`,
             details: [
+              {
+                name: `Integrated with OTH Servers`,
+                description: `Works seamlessly with Open Template Hub Servers.`,
+              },
               PROFESSIONAL_HELP_FEATURE,
               CUSTOMISED_SOLUTIONS_FEATURE,
             ],
@@ -353,13 +357,13 @@ export const PRODUCT_LINES: ProductLine[] = [
             description: 'For Startups',
             ribbon: PRICING_RIBBONS.get( 'deal' ),
             contactRequired: true,
-            features: [ [ 'true', '' ], [ 'true', '' ], [ $localize`Up to 10 users`, '' ] ]
+            features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`Up to 10 users`, '' ] ]
           },
           {
             title: `Enterprise`,
             description: 'For Enterprises',
             contactRequired: true,
-            features: [ [ 'true', 'true' ], [ 'true', 'true' ], [ $localize`Unlimited users`, 'true' ] ]
+            features: [ [ 'true', 'true', 'true' ], [ 'true', 'true' ], [ $localize`Unlimited users`, 'true' ] ]
           },
         ],
       },
@@ -376,7 +380,7 @@ export const SERVICES: ProductLine[] = [
       {
         key: 'software-consultancy',
         name: 'Software Consultancy',
-        description: $localize`Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
+        description: `We perform world-class custom software development services from startups to enterprise businesses. Our highly experienced software developers have a deep understanding of how to leverage top programming languages, frameworks, and other software development tools to create the ideal solution for your business.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
@@ -384,7 +388,7 @@ export const SERVICES: ProductLine[] = [
       {
         key: 'software-integration',
         name: 'Software Integration',
-        description: $localize`Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
+        description: `When a company adopts a new technology or business process, they face many challenges between their current applications and systems and the complicated software implementation process. Our industry-specific software engineers handle all of your challenging integration & implementation obstacles, including architectural design, testing, debugging, and execution.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-pieces.min.png',
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
@@ -392,7 +396,7 @@ export const SERVICES: ProductLine[] = [
       {
         key: 'quality-assurance',
         name: 'Quality Assurance',
-        description: $localize`Open Template Hub is an organization that develops open source micro servers as templates including authentication server, payment server and more..`,
+        description: `We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-shine.min.png',
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,

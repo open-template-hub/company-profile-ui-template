@@ -1,0 +1,29 @@
+.blog-holder-card {
+  & .body {
+    padding: 20px;
+
+    & .title {
+      font-weight: 600;
+      color: var(--lighter);
+      border-bottom: 1px solid;
+      padding-bottom: 5px;
+      border-color: var(--theme-color);
+      font-size: 15px;
+    }
+
+    & .arrow {
+      padding-top: 10px;
+      float: left;
+      font-size: 16px;
+      color: var(--theme-color);
+    }
+
+    & .date {
+      font-weight: 600;
+      color: var(--theme-color);
+      text-align: right;
+      padding-top: 10px;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<app-card [bodyTemplate]="bodyTemplate" class="blog-holder-card">
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div class="body">
+      <!-- Body of the card -->
+      <p class="title">{{ blog.title }}</p>
+      <i class="arrow fas fa-arrow-right"></i>
+      <p class="date">{{ blog.date }}</p>
+    </div>
+  </ng-template>
+</app-card>

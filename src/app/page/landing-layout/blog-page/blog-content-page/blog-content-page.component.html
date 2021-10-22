@@ -1,0 +1,8 @@
+<div class="raw-content-page-layout">
+  <app-hero [contents]="[{ text: 'Blog', level: 1 }]"></app-hero>
+  <div class="blog-content-wrapper">
+    <app-blog-card
+      [date]="blog.date"
+      [src]="'./assets/blog/' + blog.url"></app-blog-card>
+  </div>
+</div>

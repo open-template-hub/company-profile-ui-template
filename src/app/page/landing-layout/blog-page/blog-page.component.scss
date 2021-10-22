@@ -1,8 +1,30 @@
 @use '../landing-layout.component';
 
 .blog-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-  & > * {
-    margin: 50px;
+  & .blog {
+    flex-grow: 1;
+    max-width: 30%;
+    width: 30%;
+    margin: 1vw;
+    height: 100px;
+
+    &:hover {
+      transform: scale(1.02);
+      transition: transform .5s;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .blog-wrapper {
+    & .blog {
+      max-width: 94vw;
+      width: 94vw;
+    }
   }
 }

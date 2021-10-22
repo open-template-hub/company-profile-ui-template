@@ -21,7 +21,8 @@
     "start": "node server.js --configuration=production",
     "outdated": "node src/dependency-checker.ts > docs/OUTDATED.md",
     "test": "ng test",
-    "updateMessages": "node src/messages-generator.ts"
+    "updateMessages": "node src/messages-generator.ts",
+    "serve:local": "ng serve -c=local"
   },
   "dependencies": {
     "@angular/animations": "^12.2.5",

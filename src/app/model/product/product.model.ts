@@ -1,4 +1,5 @@
 import { CommandType } from 'src/app/data/command-type/command-type.enum';
+import { Image } from '../image/image.model';
 import { PricingOption } from '../pricing/pricing.model';
 
 export interface PricingFeature {
@@ -16,6 +17,7 @@ export interface Product {
   logo: string;
   demonstrationImg?: string;
   demonstrationAlter?: string;
+  screenshots?: Image[];
   heroImage?: string;
   openSource?: boolean;
   counters?: ProductCounter[];

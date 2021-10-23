@@ -16,6 +16,7 @@ import { ProductService } from '../../../service/product/product.service';
   styleUrls: [ './product-page.component.scss' ],
 } )
 export class ProductPageComponent implements OnInit, OnDestroy {
+
   URLS = URLS;
   TESTIMONIALS: Testimonial[] = TESTIMONIALS.slice( 0, TESTIMONIALS.length < 3 ? TESTIMONIALS.length : 3 );
 
@@ -112,7 +113,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     this.product = undefined;
   }
 
-  redirect(url: string) {
+  redirect( url: string ) {
     window.open( url, '_blank' );
   }
 

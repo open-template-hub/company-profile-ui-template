@@ -7,8 +7,11 @@
     [pagination]="isPaginationEnabled ? { clickable: true } : undefined"
     [slidesPerView]="1"
     [spaceBetween]="10">
-  <ng-template *ngFor="let partner of partners" swiperSlide>
-    <img [class.grayscale]="isGrayscale" [height]="height" [src]="partner.logo" alt="logo" class="brand-logo"
-         width="auto"/>
+  <ng-template *ngFor="let screenshot of screenshots" swiperSlide>
+    <div class="content" (click)="openScreenshot(screenshot.url)">
+      <img height="auto" [src]="screenshot.url" alt="logo" class="brand-logo"
+           width="auto"/>
+      <p>{{ screenshot.description }}</p>
+    </div>
   </ng-template>
 </swiper>

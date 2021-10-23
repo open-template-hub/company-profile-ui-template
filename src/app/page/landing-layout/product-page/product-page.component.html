@@ -16,12 +16,15 @@
           <div class="body">
             <p>{{ product.description }}</p>
             <div *ngIf="product.openSource" class="button-wrapper">
-              <app-brand-button (click)="redirect( this.product.url )" [icon]="environmentCommon.website.github.cssClass" i18n-text text="Open Source">
+              <app-brand-button (click)="redirect( this.product.url )"
+                                [icon]="environmentCommon.website.github.cssClass" i18n-text text="Open Source">
               </app-brand-button>
 
-              <app-button *ngIf="productLineKey !== 'generator'" (click)="router.navigate([URLS.contactUs])" i18n-text text="Professional Help">
+              <app-button *ngIf="productLineKey !== 'generator'" (click)="router.navigate([URLS.contactUs])" i18n-text
+                          text="Professional Help">
               </app-button>
-              <app-brand-button *ngIf="productLineKey === 'generator'" (click)="redirect( this.product.urlAlter )" [icon]="environmentCommon.website.npm.cssClass" i18n-text text="Download Package">
+              <app-brand-button *ngIf="productLineKey === 'generator'" (click)="redirect( this.product.urlAlter )"
+                                [icon]="environmentCommon.website.npm.cssClass" i18n-text text="Download Package">
               </app-brand-button>
             </div>
             <div *ngIf="!product.openSource" class="button-wrapper">
@@ -39,6 +42,10 @@
           [productLineKey]="productLineKey"
           [product]="product"></app-product-presentation>
     </div>
+  </div>
+
+  <div class="screenshots-wrapper" *ngIf="product.screenshots">
+    <app-screenshot-swiper [screenshots]="product.screenshots"></app-screenshot-swiper>
   </div>
 
   <div *ngIf="isOpenSource && !product.counters" class="counters">

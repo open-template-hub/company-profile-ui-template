@@ -1,15 +1,17 @@
+@use '../../../../styles/util/util';
 @use '../landing-layout.component';
 
 .blog-wrapper {
-  display: flex;
-  flex-direction: row;
+  @include util.margin-x-auto;
+  @include util.flex-layout-row;
+
+  justify-content: center;
+
   flex-wrap: wrap;
 
   & .blog {
     flex-grow: 1;
-    max-width: 30%;
-    width: 30%;
-    margin: 1vw;
+    margin: 15px;
 
     &:hover {
       transform: scale(1.02);
@@ -22,8 +24,17 @@
 @media only screen and (max-width: 999px) {
   .blog-wrapper {
     & .blog {
-      max-width: 94vw;
+      margin: 15px 0;
       width: 94vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .blog-wrapper {
+    & .blog {
+      margin: 12px 15px;
+      width: 31%;
     }
   }
 }

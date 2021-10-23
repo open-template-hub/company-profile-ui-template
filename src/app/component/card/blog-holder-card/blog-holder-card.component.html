@@ -3,7 +3,7 @@
   <!-- Header -->
   <ng-template #headerTemplate>
     <div class="header">
-      <img [src]="blog.author.profile.photoUri" height="80" width="80">
+      <img [src]="blog.author.profile.photoUri" height="80" width="80" alt="author">
       <p class="title">{{ blog.title }}</p>
     </div>
   </ng-template>
@@ -19,10 +19,10 @@
   <ng-template #footerTemplate>
     <div class="footer">
       <div class="footer-left">
-        <p class="date"> Read more</p>
+        <p class="footer-text"> Read more</p>
         <i aria-hidden="true" class="arrow fas fa-chevron-right"></i>
       </div>
-      <p class="date">{{ blog.date }}</p>
+      <p class="footer-text">{{ blog.date }}</p>
     </div>
   </ng-template>
 </app-card>

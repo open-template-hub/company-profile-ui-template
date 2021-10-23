@@ -1,9 +1,11 @@
-<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [bottomWrapperTemplate]="bottomWrapperTemplate" class="presentation-card">
+<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
+          [bottomWrapperTemplate]="bottomWrapperTemplate" class="presentation-card">
   <!-- Header -->
   <ng-template #headerTemplate>
     <div class="header">
       <a (click)="redirect()" class="presentation-item-content">
         <img *ngIf="src" [height]="imgHeight" [src]="src" alt="wallpaper">
+        <p>{{ title }}</p>
       </a>
     </div>
 
@@ -12,14 +14,17 @@
   <!-- Body -->
   <ng-template #bodyTemplate>
     <div class="body">
+      <p class="presentation-description">{{ secondaryText }}</p>
+      <app-button class="button" [text]="'Read more'" [routerLink]="href"
+                  [buttonClasses]="['theme-color-border-color', 'theme-color-font-color', 'transparent-button']">
+      </app-button>
+    </div>
+  </ng-template>
 
-      <p>{{ title }}</p>
-
-      <a (click)="redirect()" *ngIf="!href.startsWith('/') && secondaryText" class="presentation-link theme-color-link">
-        {{ secondaryText }}
-      </a>
-      <p *ngIf="href.startsWith('/') && secondaryText" class="presentation-description">{{ secondaryText }}</p>
-      <p *ngIf="footerText" class="presentation-footer">{{ footerText }}</p>
+  <!-- Body -->
+  <ng-template #footerTemplate>
+    <div class="footer">
+      <p *ngIf="footerText">{{ footerText }}</p>
     </div>
   </ng-template>
   <ng-template #bottomWrapperTemplate></ng-template>

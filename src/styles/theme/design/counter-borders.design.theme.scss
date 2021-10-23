@@ -1,11 +1,11 @@
 @use '../../util/util';
 
 :root {
-  --border-radius-counter-borders: 0 8px 0 8px;
-  --border-radius-image-counter-borders: 0 8px 0 8px;
+  --border-radius-counter-borders: 0 1em 0 1em;
+  --border-radius-image-counter-borders: 0 1em 0 1em;
   --border-radius-product-line-counter-borders: var(--border-radius-counter-borders);
   --height-bottom-line-counter-borders: 0;
-  --padding-line-counter-borders: 1.2em;
+  --padding-line-counter-borders: 1.1em;
 }
 
 .counter-borders-theme {

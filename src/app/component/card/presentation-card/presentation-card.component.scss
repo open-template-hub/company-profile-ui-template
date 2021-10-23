@@ -5,16 +5,20 @@
 
   & .header {
     margin-top: -41px;
+    padding-bottom: 10px;
   }
 
   & .body {
     @include card.default-body;
     @include util.flex-layout-column;
 
+    overflow: hidden;
+    position: relative;
+
     align-items: center;
     justify-content: flex-start;
 
-    height: 260px;
+    height: 200px;
 
     box-sizing: border-box;
     padding: 15px 15px 12px;
@@ -40,27 +44,39 @@
       }
     }
 
-    & .presentation-link {
-      font-weight: 500;
+    & .button {
+      position: absolute;
+      top: 300px;
+      visibility: hidden;
+      transition: all 1s cubic-bezier(.31, 1.21, .64, 1.02);
     }
 
-    & .presentation-description, & .presentation-footer {
+    & .presentation-description {
       font-size: 15px;
       color: var(--lighter-contrast);
       font-weight: lighter;
       padding: 0 10px;
     }
 
-    & .presentation-footer {
-
-      margin-left: auto;
-      margin-top: auto;
-
-      color: var(--theme-color-lighter-4);
-    }
-
     & > * {
+      transform: translateY(0);
+      transition: transform 1s cubic-bezier(.31, 1.21, .64, 1.02);
       margin-bottom: 12px;
+    }
+  }
+
+  & .footer {
+    @include card.default-footer;
+
+    border-top: none;
+
+    & p {
+      margin-top: auto;
+      margin-left: auto;
+      font-size: 14px;
+      font-weight: lighter;
+      padding: 0 20px 15px;
+      color: var(--theme-color-lighter-4);
     }
   }
 }
@@ -77,3 +93,20 @@
   }
 }
 
+@media (hover: hover) {
+
+  .presentation-card {
+    & .body {
+      &:hover {
+        & .presentation-description {
+          transform: translateY(-250px);
+        }
+
+        & .button {
+          top: 80px;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

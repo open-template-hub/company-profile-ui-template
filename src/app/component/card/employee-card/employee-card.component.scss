@@ -36,7 +36,7 @@
     & .name {
       // Design
       font: {
-        size: 20px;
+        size: 21px;
         weight: 500;
       }
     }
@@ -46,7 +46,7 @@
       color: var(--lighter-contrast);
 
       // Design
-      font-size: 17px;
+      font-size: 18px;
     }
 
     & .bio {
@@ -69,8 +69,8 @@
       color: var(--theme-color-lighter-6);
 
       // Design
-      margin: 0;
-      font-size: 24px;
+      margin: 0 3px;
+      font-size: 27px;
 
       &:hover {
         // Color

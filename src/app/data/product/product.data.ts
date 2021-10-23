@@ -111,6 +111,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: []
       },
       {
         key: 'payment-server-template',
@@ -121,6 +122,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: []
       },
       {
         key: 'file-storage-server-template',
@@ -131,6 +133,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: []
       },
       {
         key: 'mail-server-template',
@@ -141,6 +144,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: []
       },
       {
         key: 'analytics-server-template',
@@ -151,6 +155,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: []
       },
       {
         key: 'business-logic-server-template',
@@ -161,6 +166,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: []
       },
     ],
   },
@@ -194,6 +200,32 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: [
+          {
+            url: 'https://avatars.githubusercontent.com/u/139426?s=200&v=4',
+            description: 'Angular'
+          },
+          {
+            url: 'https://avatars.githubusercontent.com/u/9950313?s=200&v=4',
+            description: 'NodeJs'
+          },
+          {
+            url: 'https://avatars.githubusercontent.com/u/1505683?s=200&v=4',
+            description: 'Font Awesome'
+          },
+          {
+            url: 'https://avatars.githubusercontent.com/u/23211?s=200&v=4',
+            description: 'Heroku'
+          },
+          {
+            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png',
+            description: 'Sass'
+          },
+          {
+            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png',
+            description: 'Markdown'
+          }
+        ],
       },
       {
         key: 'web-ui-template',
@@ -220,6 +252,32 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: [
+          {
+            url: 'https://avatars.githubusercontent.com/u/139426?s=200&v=4',
+            description: 'Angular'
+          },
+          {
+            url: 'https://avatars.githubusercontent.com/u/9950313?s=200&v=4',
+            description: 'NodeJs'
+          },
+          {
+            url: 'https://avatars.githubusercontent.com/u/1505683?s=200&v=4',
+            description: 'Font Awesome'
+          },
+          {
+            url: 'https://avatars.githubusercontent.com/u/23211?s=200&v=4',
+            description: 'Heroku'
+          },
+          {
+            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png',
+            description: 'Sass'
+          },
+          {
+            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png',
+            description: 'Markdown'
+          }
+        ]
       },
       {
         key: 'mobile-ui-template',
@@ -246,6 +304,32 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: [
+          {
+            url: 'https://avatars.githubusercontent.com/u/139426?s=200&v=4',
+            description: 'Angular'
+          },
+          {
+            url: 'https://avatars.githubusercontent.com/u/9950313?s=200&v=4',
+            description: 'NodeJs'
+          },
+          {
+            url: 'https://avatars.githubusercontent.com/u/1505683?s=200&v=4',
+            description: 'Font Awesome'
+          },
+          {
+            url: 'https://avatars.githubusercontent.com/u/23211?s=200&v=4',
+            description: 'Heroku'
+          },
+          {
+            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png',
+            description: 'Sass'
+          },
+          {
+            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png',
+            description: 'Markdown'
+          }
+        ]
       },
     ],
   },
@@ -263,6 +347,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
+        techStack: [],
         commandLines: [
           {
             command: 'open-template-hub-server-generator',
@@ -307,6 +392,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
+        techStack: [],
         commandLines: [
           {
             command: 'open-template-hub-app-generator',
@@ -408,6 +494,7 @@ export const PRODUCT_LINES: ProductLine[] = [
             features: [ [ 'true', 'true', 'true' ], [ 'true', 'true' ], [ $localize`Unlimited users`, 'true' ] ]
           },
         ],
+        techStack: [],
       },
     ],
   },
@@ -443,6 +530,7 @@ export const SERVICES: ProductLine[] = [
           ],
         }
         ],
+        techStack: [],
       },
       {
         key: 'software-integration',
@@ -468,6 +556,7 @@ export const SERVICES: ProductLine[] = [
           ],
         }
         ],
+        techStack: [],
       },
       {
         key: 'quality-assurance',
@@ -493,6 +582,7 @@ export const SERVICES: ProductLine[] = [
           ],
         }
         ],
+        techStack: []
       },
     ],
   },

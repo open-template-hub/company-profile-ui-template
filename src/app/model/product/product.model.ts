@@ -25,6 +25,7 @@ export interface Product {
   pricingOptions?: PricingOption[];
   commandLines?: CommandLine[];
   imageLoaded?: boolean;
+  techStack: Image[];
 }
 
 export interface ProductLine {

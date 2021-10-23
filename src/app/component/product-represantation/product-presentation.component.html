@@ -30,7 +30,21 @@
         </app-card>
       </ng-container>
       <ng-container *ngSwitchCase="'user-interface'">
-        <img [src]="getDemonstrationImg(product)" alt="demonstration"/>
+        <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="tech-stack-card">
+          <ng-template #bodyTemplate>
+            <div class="body">
+              <p class="feature-title">Tech Stack</p>
+              <div class="social-login-wrapper">
+                <app-presentation-swiper [items]="product.techStack"></app-presentation-swiper>
+              </div>
+              <div class="details">
+                <span *ngFor="let tech of product.techStack; last as isLast">
+                  {{ tech.description + (isLast ? '' : ', ') }}
+                </span>
+              </div>
+            </div>
+          </ng-template>
+        </app-card>
       </ng-container>
       <ng-container *ngSwitchCase="'generator'">
         <app-animated-code-editor [commandLines]="product.commandLines"></app-animated-code-editor>

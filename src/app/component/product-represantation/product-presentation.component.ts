@@ -5,6 +5,7 @@ import { environmentCommon } from '../../../environments/environment-common';
 import { BRAND } from '../../data/brand/brand.data';
 import { DarkLightSettings } from '../../data/constant';
 import { PRODUCT_LINES } from '../../data/product/product.data';
+import { Image } from '../../model/image/image.model';
 import { Partner } from '../../model/partner/partner.model';
 import { Product } from '../../model/product/product.model';
 import { ThemeService } from '../../service/theme/theme.service';
@@ -129,7 +130,13 @@ export class ProductPresentationComponent implements OnInit {
       }
     }
 
-    return this.presentationPartners.map( partner => partner.logo );
+    return this.presentationPartners.map( ( partner ) => {
+      const image: Image = {
+        url: partner.logo,
+        description: partner.name
+      };
+      return image;
+    } );
   }
 
   partnerNameFormat( name: string, isLast: boolean ) {

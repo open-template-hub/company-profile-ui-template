@@ -20,7 +20,7 @@ export class DropdownMenuComponent {
   @Input() isDropdownOpen = false;
   @Input() minimumColumns = 1;
   @Input() minimumRows = 6;
-  @Input() dropdownParent: ElementRef;
+  @Input() dropdownParent: ElementRef = null;
 
   calculatedColumns;
   calculatedRows;
@@ -78,12 +78,12 @@ export class DropdownMenuComponent {
   @HostListener('document:mouseover', ['$event'])
   onHover(event) {
     if (
-      this.dropdownParent.nativeElement === undefined &&
+      this.dropdownParent?.nativeElement === undefined &&
       !(
-        this.toggleButton.nativeElement.contains(event.target) ||
-        this.dropdownContent.nativeElement.contains(event.target) ||
-        event.target.contains(this.toggleButton.nativeElement) ||
-        event.target.contains(this.dropdownContent.nativeElement)
+        this.toggleButton?.nativeElement?.contains(event.target) ||
+        this.dropdownContent?.nativeElement?.contains(event.target) ||
+        event.target.contains(this.toggleButton?.nativeElement) ||
+        event.target.contains(this.dropdownContent?.nativeElement)
       )
     ) {
       this.closeDropdown();
@@ -91,8 +91,10 @@ export class DropdownMenuComponent {
   }
 
   @HostListener('document:click', ['$event'])
-  onClick() {
-    this.closeDropdown();
+  onClick(event) {
+    if (this.dropdownContent?.nativeElement?.contains(event.target)) {
+      this.closeDropdown();
+    }
   }
 
   closeDropdown() {

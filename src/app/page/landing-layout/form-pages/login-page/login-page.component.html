@@ -12,36 +12,36 @@
                             [icon]="environmentCommon.website.google.cssClass"></app-brand-button>
         </div>
         <div class="flex-layout-column flex-center-center" style="margin-bottom: 1.5rem; margin-top: 0.5rem;">
-          <p i18n>or</p>
+          <p i18n="@@loginPage.or.separator">or</p>
         </div>
         <form (ngSubmit)="onSubmit()" [formGroup]="form">
           <div class="section">
             <div [class.error-input]="submitted && form.controls.username.invalid" class="input-with-icon">
-              <input formControlName="username" i18n-placeholder placeholder="Username or Email..." required type="text">
+              <input formControlName="username" i18n-placeholder="@@loginPage.usernameOrEmail.placeholder" placeholder="Username or Email..." required type="text">
               <i aria-hidden="true" class="fas fa-user fa-lg fa-fw"></i>
             </div>
             <div [class.error-input]="submitted && form.controls.password.invalid" class="input-with-icon">
-              <input formControlName="password" i18n-placeholder placeholder="Password..." required type="password">
+              <input formControlName="password" i18n-placeholder="@@loginPage.password.placeholder" placeholder="Password..." required type="password">
               <i aria-hidden="true" class="fas fa-lock fa-lg fa-fw"></i>
             </div>
             <div class="input-checkbox">
               <label class="input-checkbox-label">
                 <input formControlName="rememberMe" type="checkbox">
                 <span></span>
-                <p i18n>Remember Me</p>
+                <p i18n="@@loginPage.rememberMe">Remember Me</p>
               </label>
             </div>
           </div>
           <div class="section-submit">
-            <app-button i18n-text text="LOG IN"></app-button>
+            <app-button i18n-text="@@loginPage.loginButton" text="LOG IN"></app-button>
             <p>
-              <ng-container i18n>Don't have an account?</ng-container>
-              <a i18n [routerLink]="URLS.signup" class="theme-color-link">
+              <ng-container i18n="@@loginPage.dontHaveAccount">Don't have an account?</ng-container>
+              <a i18n="@@loginPage.signUp" [routerLink]="URLS.signup" class="theme-color-link">
                 Sign Up
               </a>
             </p>
             <p>
-              <a i18n [routerLink]="URLS.forgetPassword" class="theme-color-link">
+              <a i18n="@@loginPage.forgetPassword" [routerLink]="URLS.forgetPassword" class="theme-color-link">
                 Forget password?
               </a>
             </p>

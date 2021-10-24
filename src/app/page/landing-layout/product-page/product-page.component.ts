@@ -30,6 +30,10 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   emailControl = new FormControl( '' );
 
+  relatedProductAppHero = [
+    { text: $localize `:@@productPage.relatedProductAppHero:Related Products`, level: 2 }
+  ]
+
   constructor(
       private route: ActivatedRoute,
       public router: Router,
@@ -115,7 +119,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   getContactUsButtonText(productLineKey) {
     return productLineKey === 'services'
-      ? $localize `Contact Us`
-      : $localize `Request for Demo`
+      ? $localize `:@@productPage.contactUs.button:Contact Us`
+      : $localize `:@@productPage.requestForDemo.button:Request for Demo`
   }
 }

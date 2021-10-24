@@ -62,6 +62,7 @@ export class ExternalRedirectPageComponent {
   }
 
   getRedirectText(error: boolean): string {
-    return !error ? $localize `Will be redirected to: ` :  $localize `Looks like the link is broken: `
+    return !error ? $localize `:@@externalRedirect.redirected:Will be redirected to: `
+      :  $localize `:@@externalRedirect.linkBroken:Looks like the link is broken: `
   }
 }

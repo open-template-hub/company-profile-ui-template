@@ -53,13 +53,13 @@ export class CallbackPageComponent implements OnInit {
   private paymentCallback( paymentConfig: string, status: string, eventId: string, transactionId: string ) {
     if ( status === 'success' ) {
       this.paymentService.verify( paymentConfig, transactionId, eventId ).subscribe( response => {
-        this.informationService.setInformation( `Payment succeeded`, 'success' );
+        this.informationService.setInformation( $localize `:@@callback.information.success:Payment succeeded`, 'success' );
         this.router.navigate( [ URLS.dashboard.event ], { queryParams: { event_id: eventId } } );
       }, error => {
         this.router.navigate( [ URLS.dashboard.learn ] );
       } );
     } else {
-      this.informationService.setInformation( `Payment canceled`, 'error' );
+      this.informationService.setInformation( `:@@callback.information.canceled:Payment canceled`, 'error' );
       this.router.navigate( [ URLS.dashboard.event ], { queryParams: { event_id: eventId } } );
     }
   }

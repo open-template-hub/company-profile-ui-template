@@ -16,15 +16,15 @@ export class AboutUsPageComponent {
   websites = [];
 
   employeeAppHeroContents = [
-    {text: $localize `Team Behind the Open Template Hub`, level: 1}
+    {text: $localize `:@@aboutUs.employeeAppHero.text:Team Behind the Open Template Hub`, level: 1}
   ]
   followUsAppHeroContents = [
-    {text: $localize `Follow us on social media`, level: 2},
-    {text: $localize `Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates` }
+    {text: $localize `:@@aboutUs.followUsAppHero.followText:Follow us on social media`, level: 2},
+    {text: $localize `:@@aboutUs.followUsAppHero.descriptionText:Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates` }
   ]
-  historyOfUsAppHerContents = [
-    {text: $localize `History of the Open Template Hub`, level: 2},
-    {text: $localize `Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates`}
+  historyOfUsAppHeroContents = [
+    {text: $localize `:@@aboutUs.historyOfUsAppHero.othText:History of the Open Template Hub`, level: 2},
+    {text: $localize `:@@aboutUs.historyOfUsAppHero.othDescription:Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates`}
   ]
 
   constructor() {

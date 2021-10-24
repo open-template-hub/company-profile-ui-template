@@ -4,7 +4,7 @@
     <ng-template #bodyTemplate>
       <div class="body">
         <div class="column">
-          <p i18n>Products</p>
+          <p i18n="@@sitemap.products">Products</p>
           <div *ngFor="let productLine of PRODUCT_LINES" class="link-group">
             <p *ngIf="productLine.name"
                [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
@@ -29,60 +29,30 @@
               </a>
             </div>
             <div class="link-group">
-              <p i18n>Company</p>
-              <a i18n [routerLink]="URLS.about" class="link-item">
-                About
-              </a>
-              <a i18n [routerLink]="URLS.maintenance" class="link-item">
-                Customers
-              </a>
-              <a i18n [routerLink]="URLS.maintenance" class="link-item">
-                Enterprise
-              </a>
-              <a i18n [routerLink]="URLS.maintenance" class="link-item">
-                Partners
-              </a>
-              <a i18n [routerLink]="URLS.branding" class="link-item">
-                Branding
-              </a>
-              <a i18n [routerLink]="URLS.maintenance" class="link-item">
-                Jobs
-              </a>
-              <a i18n [routerLink]="URLS.maintenance" class="link-item">
-                Blog
-              </a>
+              <p i18n="@@sitemap.company">Company</p>
+              <a i18n="@@sitemap.about" [routerLink]="URLS.about" class="link-item">About</a>
+              <a i18n="@@sitemap.customers" [routerLink]="URLS.maintenance" class="link-item">Customers</a>
+              <a i18n="@@sitemap.enterprise" [routerLink]="URLS.maintenance" class="link-item">Enterprise</a>
+              <a i18n="@@sitemap.partners" [routerLink]="URLS.maintenance" class="link-item">Partners</a>
+              <a i18n="@@sitemap.branding" [routerLink]="URLS.branding" class="link-item">Branding</a>
+              <a i18n="@@sitemap.jobs" [routerLink]="URLS.maintenance" class="link-item">Jobs</a>
+              <a i18n="@@sitemap.blog" [routerLink]="URLS.maintenance" class="link-item">Blog</a>
             </div>
           </div>
           <div class="link-inner-column">
             <div class="link-group">
-              <p i18n>Developers</p>
-              <a i18n [routerLink]="URLS.maintenance" class="link-item">
-                Docs
-              </a>
-              <a i18n [routerLink]="URLS.maintenance" class="link-item">
-                API
-              </a>
-              <a i18n [routerLink]="URLS.status" class="link-item">
-                Status
-              </a>
+              <p i18n="@@sitemap.developers">Developers</p>
+              <a i18n="@@sitemap.docs" [routerLink]="URLS.maintenance" class="link-item">Docs</a>
+              <a i18n="@@sitemap.api" [routerLink]="URLS.maintenance" class="link-item">API</a>
+              <a i18n="@@sitemap.status" [routerLink]="URLS.status" class="link-item">Status</a>
             </div>
             <div class="link-group">
-              <p i18n>Resources</p>
-              <a i18n [routerLink]="URLS.maintenance" class="link-item">
-                Support
-              </a>
-              <a i18n [routerLink]="URLS.contactUs" class="link-item">
-                Contact
-              </a>
-              <a i18n [routerLink]="URLS.terms" class="link-item">
-                Terms & Conditions
-              </a>
-              <a i18n [routerLink]="URLS.privacyPolicy" class="link-item">
-                Privacy
-              </a>
-              <a i18n [routerLink]="URLS.cookiePolicy" class="link-item">
-                Cookies
-              </a>
+              <p i18n="@@sitemap.resources">Resources</p>
+              <a i18n="@@sitemap.support" [routerLink]="URLS.maintenance" class="link-item">Support</a>
+              <a i18n="@@sitemap.contactUs" [routerLink]="URLS.contactUs" class="link-item">Contact</a>
+              <a i18n="@@sitemap.termsAndConditions" [routerLink]="URLS.terms" class="link-item">Terms & Conditions</a>
+              <a i18n="@@sitemap.privacy" [routerLink]="URLS.privacyPolicy" class="link-item">Privacy</a>
+              <a i18n="@@sitemap.cookies" [routerLink]="URLS.cookiePolicy" class="link-item">Cookies</a>
             </div>
           </div>
         </div>

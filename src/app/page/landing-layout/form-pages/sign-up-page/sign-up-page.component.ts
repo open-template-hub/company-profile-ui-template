@@ -29,7 +29,7 @@ export class SignUpPageComponent implements OnInit, OnDestroy {
 
   URLS = URLS;
 
-  appHeroContents = [{text: $localize `Register`, level: 1}]
+  appHeroContents = [{text: $localize `:@@signUp.appHero:Register`, level: 1}]
 
   constructor(
       private formBuilder: FormBuilder,
@@ -72,10 +72,10 @@ export class SignUpPageComponent implements OnInit, OnDestroy {
     this.submitted = true;
 
     const errorMessages = {
-      username: $localize `Please provide a valid username`,
-      email: $localize `Please provide a valid email address`,
-      password: $localize `Please provide a valid password (min length 6)`,
-      confirmPassword: $localize `Please provide the same value for confirm password`
+      username: $localize `:@@signUp.error.username:Please provide a valid username`,
+      email: $localize `:@@signUp.error.email:Please provide a valid email address`,
+      password: $localize `:@@signUp.error.password:Please provide a valid password (min length 6)`,
+      confirmPassword: $localize `:@@signUp.error.confirmPassword:Please provide the same value for confirm password`
     };
 
     if ( this.form.invalid ) {

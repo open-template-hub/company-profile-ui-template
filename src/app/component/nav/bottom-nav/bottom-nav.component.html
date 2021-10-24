@@ -5,7 +5,7 @@
 <nav class="bottom-nav">
   <a (click)="closeSettings()" *ngIf="openSettings" href="javascript:void(0)">
     <i aria-hidden="true" class="material-icons">arrow_back_ios</i>
-    <span> Back </span>
+    <span i18n="@@bottomNav.back">Back</span>
   </a>
   <a
       (click)="
@@ -13,7 +13,7 @@
       *ngIf="!openSettings"
       [routerLink]="URLS.root">
     <i [class]="'fas fa-home fa-fw'" aria-hidden="true"></i>
-    <span> Home </span>
+    <span i18n="@@bottomNav.home">Home</span>
   </a>
   <a
       (click)="
@@ -21,7 +21,7 @@
       dropdownMenuServices.closeDropdown()"
       *ngIf="!openSettings">
     <i [class]="'fas fa-server fa-fw'" aria-hidden="true"></i>
-    <span> Products </span>
+    <span i18n="@@bottomNav.products">Products</span>
   </a>
   <a
       (click)="
@@ -29,20 +29,20 @@
       dropdownMenuProducts.closeDropdown()"
       *ngIf="!openSettings">
     <i [class]="'fas fa-handshake fa-fw'" aria-hidden="true"></i>
-    <span> Services </span>
+    <span i18n="@@bottomNav.services">Services</span>
   </a>
   <a
       (click)="openSettings = !openSettings"
       *ngIf="!openSettings"
       href="javascript:void(0)">
     <i aria-hidden="true" class="material-icons">arrow_forward_ios</i>
-    <span> More </span>
+    <span i18n="@@bottomNav.more">More</span>
   </a>
   <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
      *ngIf="openSettings && !openOtherSettings"
      [routerLink]="URLS.about">
     <i [class]="'fas fa-address-card fa-fw'" aria-hidden="true"></i>
-    <span> About </span>
+    <span i18n="@@bottomNav.about">About</span>
   </a>
   <a
       (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
@@ -50,7 +50,7 @@
       [routerLink]="URLS.contactUs"
       class="contact">
     <i [class]="'fas fa-envelope fa-fw'" aria-hidden="true"></i>
-    <span> Contact Us </span>
+    <span i18n="@@bottomNav.contactUs">Contact Us</span>
   </a>
   <a
       *ngIf="openSettings && !openOtherSettings"

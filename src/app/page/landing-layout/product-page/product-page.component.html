@@ -19,11 +19,11 @@
               <app-brand-button
                 (click)="redirect()"
                 [icon]="environmentCommon.website.github.cssClass"
-                i18n-text text="Open Source"></app-brand-button>
+                i18n-text="@@productPage.openSource.button" text="Open Source"></app-brand-button>
 
               <app-button
                 (click)="router.navigate([URLS.contactUs])"
-                i18n-text text="Professional Help"></app-button>
+                i18n-text="@@productPage.professional.button" text="Professional Help"></app-button>
             </div>
             <div *ngIf="!product.openSource" class="button-wrapper">
               <app-button
@@ -71,8 +71,8 @@
   <ng-container [ngSwitch]="productLineKey">
     <ng-container *ngSwitchCase="'services'" [ngSwitch]="product.key">
       <div class="testimonials-header">
-        <h2 i18n>Customer Testimonials</h2>
-        <h4 i18n>What our customers are saying...</h4>
+        <h2 i18n="@@productPage.testimonials.header">Customer Testimonials</h2>
+        <h4 i18n="@@productPage.testimonials.description">What our customers are saying...</h4>
       </div>
       <div class="testimonials-wrapper">
         <app-testimonial-card
@@ -89,14 +89,13 @@
       <div class="activity-history-wrapper" *ngIf="commitActivities.length > 0">
         <app-activity-history-card
           *ngIf="product.openSource"
-          i18n-title title="Activity history"
+          i18n-title="@@productPage.activityHistory.title" title="Activity history"
           [activities]="commitActivities">
         </app-activity-history-card>
       </div>
 
       <!-- Related Products -->
-      <app-hero
-        [contents]="[{ text: 'Related Products', level: 2 }]"></app-hero>
+      <app-hero [contents]="relatedProductAppHero"></app-hero>
       <div class="related-products-wrapper">
         <ng-container *ngFor="let productLine of PRODUCT_LINES">
           <ng-container

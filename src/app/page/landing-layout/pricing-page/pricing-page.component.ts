@@ -53,7 +53,10 @@ export class PricingPageComponent {
       }
 
       this.product = product;
-      this.appHeroContents = [{text: product.name + $localize ` Pricing Plan`, level: 1}, {text: $localize `No hidden fees. Cancel at any time.`}]
+      this.appHeroContents = [
+        {text: product.name + $localize `:@@pricingPage.appHero.1: Pricing Plan`, level: 1},
+        {text: $localize `:@@pricingPage.appHero.2:No hidden fees. Cancel at any time.`}
+      ]
       this.productService.setSelectedProduct( this.product );
     } );
   }

@@ -6,7 +6,7 @@
             [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
           <ng-template #bodyTemplate>
             <div class="body">
-              <p class="title">Why Open Template Hub?</p>
+              <p i18n="@@productPresentation.header" class="title">Why Open Template Hub?</p>
               <ng-container *ngFor="let feature of product.features">
                 <p class="feature-title">{{ feature.name }}</p>
 
@@ -31,17 +31,17 @@
                 <app-presentation-swiper
                     [items]="getPresentationSwiper()"></app-presentation-swiper>
               </div>
-              <p class="feature-title" *ngIf="product.key === 'auth-server-template'">Auth server supports social login functionality for
+              <p i18n="@@productPresentation.authServer.description" class="feature-title" *ngIf="product.key === 'auth-server-template'">Auth server supports social login functionality for
                 OAuth1
                 and OAuth2</p>
-              <p class="feature-title" *ngIf="product.key === 'payment-server-template'">Integrate your servers with payment solution
+              <p i18n="@@productPresentation.paymentServer.description" class="feature-title" *ngIf="product.key === 'payment-server-template'">Integrate your servers with payment solution
                 providers
                 in minutes</p>
             </div>
           </ng-template>
           <ng-template #footerTemplate>
             <div class="footer theme-color-lighter-3-border">
-              <p>Some of the preconfigured systems:</p>
+              <p i18n="@@productPresentation.footer">Some of the preconfigured systems:</p>
               <p>
         <span
             *ngFor="let partner of (product.key === 'auth-server-template' ? SOCIAL_LOGIN_PARTNERS : PAYMENT_PARTNERS); last as isLast">{{ partner.name + ( !isLast ? ',' : '' ) + ' ' | titlecase }}</span>
@@ -57,7 +57,7 @@
                   [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
           <ng-template #bodyTemplate>
             <div class="body">
-              <p class="title">Why Open Template Hub?</p>
+              <p i18n="@@productPresentation.header" class="title">Why Open Template Hub?</p>
               <ng-container *ngFor="let feature of product.features">
                 <p class="feature-title">{{ feature.name }}</p>
 

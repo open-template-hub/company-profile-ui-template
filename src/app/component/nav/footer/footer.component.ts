@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, LOCALE_ID } from '@angular/core';
 import { Router } from '@angular/router';
 import { PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
 import { environment } from 'src/environments/environment';
@@ -30,14 +30,23 @@ export class FooterComponent {
   environment = environment;
   environmentCommon = environmentCommon;
 
+  currentLanguage = 'English';
+
   constructor(
     private router: Router,
     private themeService: ThemeService
   ) {
     this.appVersion = themeService.appVersion;
+
   }
 
-  getCurrentRoute() {
-    return this.router.url
+  changeCurrentLanguage( option: any ) {
+    for( const language of environmentCommon.languages ) {
+      if( language.name === option ) {
+        this.currentLanguage = language.name
+        window.open( '/' + language.code + '/' + this.router.url, '_self' );
+        return
+      }
+    }
   }
 }

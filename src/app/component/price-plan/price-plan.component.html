@@ -6,22 +6,22 @@
       <div class="available-plans-empty-view column-header-feature"></div>
       <div class="feature-by-price-plan-wrapper available-plans-wrapper">
         <div class="available-plans-column-area column-feature">
-          <p>Essentials</p>
-          <p>Individual Needs</p>
+          <p i18n="@@pricePlan.essentials">Essentials</p>
+          <p i18n="@@pricePlan.individualNeeds">Individual Needs</p>
           <app-button [routerLink]="URLS.pricing + '/' + productLineKey + '/' + product.key"
-                      [text]="'View Pricing'"></app-button>
+                      i18n-text="@@pricePlan.viewPricing.button" text="View Pricing"></app-button>
         </div>
         <div class="available-plans-column-area column-feature">
-          <p>Standard</p>
-          <p>Team Needs</p>
+          <p i18n="@@pricePlan.standard">Standard</p>
+          <p i18n="@@pricePlan.teamNeeds">Team Needs</p>
           <app-button [routerLink]="URLS.pricing + '/' + productLineKey + '/' + product.key"
-                      [text]="'View Pricing'"></app-button>
+                      i18n-text="@@pricePlan.viewPricing.button" text="View Pricing"></app-button>
         </div>
         <div class="available-plans-column-area column-feature">
-          <p>Premium</p>
-          <p>Advanced Team Needs</p>
+          <p i18n="@@pricePlan.premium">Premium</p>
+          <p i18n="@@pricePlan.advancedTeam.description">Advanced Team Needs</p>
           <app-button [routerLink]="URLS.pricing + '/' + productLineKey + '/' + product.key"
-                      [text]="'View Pricing'"></app-button>
+                      i18n-text="@@pricePlan.viewPricing.button" text="View Pricing"></app-button>
         </div>
       </div>
     </div>

@@ -34,8 +34,8 @@ export class HomePageComponent implements AfterViewInit {
   environmentCommon = environmentCommon;
 
   appHeroContents = [
-    { text: $localize `Customer testimonials`, level: 1 },
-    { text: $localize `What our customers are saying...` }
+    { text: $localize `:@@homePage.appHero.1:Customer testimonials`, level: 1 },
+    { text: $localize `:@@homePage.appHero.2:What our customers are saying...` }
   ]
 
   constructor(

@@ -13,12 +13,12 @@
             [contents]="accountVerificationFailedAppHeroContents"
             [heroClass]="'no-padding-top'"></app-hero>
   <app-information-button (click)="router.navigate([URLS.root])" *ngIf="!loading && error"
-                          [informationType]="INFORMATION_TYPES.error" i18n-text text="HOME"></app-information-button>
+                          [informationType]="INFORMATION_TYPES.error" i18n-text="@@verifyAccount.home.button" text="HOME"></app-information-button>
 
   <!-- Account verified -->
   <app-hero *ngIf="!loading && !error"
             [contents]="accountVerifiedAppHeroContents"
             [heroClass]="'no-padding-top'"></app-hero>
   <app-information-button (click)="router.navigate([URLS.login])" *ngIf="!loading && !error"
-                          [informationType]="INFORMATION_TYPES.success" i18n-text text="LOG IN"></app-information-button>
+                          [informationType]="INFORMATION_TYPES.success" i18n-text="@@verifyAccount.logIn.button" text="LOG IN"></app-information-button>
 </div>

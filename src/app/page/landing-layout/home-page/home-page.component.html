@@ -1,7 +1,7 @@
 <div class="hero">
   <div class="hero-left">
     <h1>Open Template Hub</h1>
-    <p i18n>
+    <p i18n="@@homePage.oth.description">
       Minimizes your effort while building a new software business with our open
       source GitHub micro server templates and responsive web UI + mobile UI
       templates
@@ -34,7 +34,7 @@
     target="_blank">
     <app-text-content-loader [size]="30" *ngIf="npmCounterLoading" class="loader"></app-text-content-loader>
     <p class="counter" id="npmDownloadCounterElement"></p>
-    <p i18n class="description">Npm Downloads</p>
+    <p i18n="@@homePage.npmDownloads" class="description">Npm Downloads</p>
   </a>
   <a
     [href]="'https://github.com/open-template-hub/server-generator'"
@@ -42,7 +42,7 @@
     rel="noopener"
     target="_blank">
     <p class="counter" id="serverTypesCounterElement">0</p>
-    <p i18n class="description">Server Types</p>
+    <p i18n="@@homePage.serverTypes" class="description">Server Types</p>
   </a>
   <a
     [href]="'https://github.com/open-template-hub/app-generator'"
@@ -50,7 +50,7 @@
     rel="noopener"
     target="_blank">
     <p class="counter" id="uiTypesCounterElement">0</p>
-    <p i18n class="description">UI Types</p>
+    <p i18n="@@homePage.uiTypes" class="description">UI Types</p>
   </a>
 </div>
 

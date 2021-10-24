@@ -73,9 +73,7 @@
           </div>
           <div [class.error-input]="submitted && form.controls.country.invalid" class="input-with-label">
             <select (change)="changeCountry($event)" formControlName="country">
-              <option i18n="@@contactUs.selectCountry" class="default-option" disabled value="">
-                Select a country
-              </option>
+              <option i18n="@@contactUs.selectCountry" class="default-option" disabled value="">Select a country</option>
               <option *ngFor="let country of countries" [ngValue]="country">
                 {{ country }}
               </option>

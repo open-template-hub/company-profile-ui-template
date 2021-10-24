@@ -18,7 +18,7 @@ export const EMPLOYEES: Employee[] = [
   {
     profile: {
       name: 'Fatih Turker',
-      title: ':@@employeesData.coFounder:Co-Founder',
+      title: $localize `:@@employeesData.coFounder:Co-Founder`,
       photoUri:
           'https://avatars1.githubusercontent.com/u/2202179?s=460&u=261b1129e7106c067783cb022ab9999aad833bdc&v=4',
       social: {
@@ -32,7 +32,7 @@ export const EMPLOYEES: Employee[] = [
   {
     profile: {
       name: 'Mert Sarac',
-      title: ':@@employeesData.fullStackDeveloper:Full-Stack Developer',
+      title: $localize `:@@employeesData.fullStackDeveloper:Full-Stack Developer`,
       photoUri:
           'https://avatars1.githubusercontent.com/u/38442589?s=400&u=aa3cda11724fc297a0bfa6beb35c9be81687cf3c&v=4',
       social: {

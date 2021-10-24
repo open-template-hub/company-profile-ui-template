@@ -116,8 +116,8 @@ export const environmentCommon = {
     }
   },
 
-  languages: {
-    english: 'en-US',
-    french: 'fr'
-  }
+  languages: [
+    { name: 'English', code: 'en-US' },
+    { name: 'French', code: 'fr' },
+  ]
 };

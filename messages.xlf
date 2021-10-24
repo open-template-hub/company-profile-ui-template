@@ -247,6 +247,13 @@
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="pricePlan.pageHeader" datatype="html">
+        <source>Available Plans</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/price-plan/price-plan.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="pricePlan.essentials" datatype="html">
         <source>Essentials</source>
         <context-group purpose="location">
@@ -1826,6 +1833,17 @@
           <context context-type="sourcefile">src/app/data/employees/employees.data.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/employees/employees.data.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="employeesData.fullStackDeveloper" datatype="html">
+        <source>Full-Stack Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/employees/employees.data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="employeesData.joinOurTeam" datatype="html">
         <source>Join our team</source>
@@ -2549,66 +2567,66 @@
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.selectCountry" datatype="html">
-        <source> Select a country </source>
+        <source>Select a country</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
-          <context context-type="linenumber">77,78</context>
+          <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.country" datatype="html">
         <source>Country</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
-          <context context-type="linenumber">83</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.yourMessage.placeholder" datatype="html">
         <source>Tell us more about your project, needs, and timeline....</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
-          <context context-type="linenumber">92</context>
+          <context context-type="linenumber">90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.yourMessage" datatype="html">
         <source>Your Message</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
-          <context context-type="linenumber">95</context>
+          <context context-type="linenumber">93</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.contactUsButton" datatype="html">
         <source>CONTACT US</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
-          <context context-type="linenumber">98</context>
+          <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.generalCommunication.header" datatype="html">
         <source>General Communication</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
-          <context context-type="linenumber">117</context>
+          <context context-type="linenumber">115</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.generalCommunication.description" datatype="html">
         <source>For general queries, including partnership opportunities, please email <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [href]=&quot;&apos;mailto: &apos; + environmentCommon.oth.email&quot; class=&quot;theme-color-link&quot;&gt;"/> <x id="INTERPOLATION" equiv-text="{{ environmentCommon.oth.email }}"/> <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
-          <context context-type="linenumber">118,121</context>
+          <context context-type="linenumber">116,119</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.technicalSupport.header" datatype="html">
         <source>Technical or account support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
-          <context context-type="linenumber">128</context>
+          <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.technicalSupport.description" datatype="html">
         <source>We&apos;re here to help! If you have technical issues, <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [href]=&quot;URLS.maintenance&quot; class=&quot;theme-color-link&quot;&gt;"/> contact support <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
-          <context context-type="linenumber">129,132</context>
+          <context context-type="linenumber">127,130</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.appHero" datatype="html">

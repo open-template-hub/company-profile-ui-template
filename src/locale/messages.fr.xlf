@@ -82,8 +82,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="countries.antigua" datatype="html">
-        <source>Antigua &amp;amp; Barbuda</source>
-        <target>Antigua &amp;amp; Barbuda</target>
+        <source>Antigua &amp; Barbuda</source>
+        <target>Antigua &amp; Barbuda</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/countries.ts</context>
           <context context-type="linenumber">8</context>
@@ -2475,14 +2475,6 @@
           <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="contactUs.selectCountry" datatype="html">
-        <source>Select a country</source>
-        <target>Choisissez un pays</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
-          <context context-type="linenumber">77,78</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="contactUs.country" datatype="html">
         <source>Country</source>
         <target>Pays</target>
@@ -3772,6 +3764,27 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.ts</context>
           <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit><trans-unit id="employeesData.fullStackDeveloper" datatype="html">
+        <source>Full-Stack Developer</source>
+        <target/>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/employees/employees.data.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit><trans-unit id="contactUs.selectCountry" datatype="html">
+        <source>Select a country</source>
+        <target>Choisissez un pays</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit><trans-unit id="pricePlan.pageHeader" datatype="html">
+        <source>Available Plans</source>
+        <target>Forfaits disponibles</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/price-plan/price-plan.component.html</context>
+          <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit></body>
   </file>

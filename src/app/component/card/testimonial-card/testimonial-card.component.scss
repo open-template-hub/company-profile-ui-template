@@ -31,6 +31,9 @@
 
       & p {
         color: var(--lighter);
+        height: 200px;
+        text-overflow: ellipsis;
+        overflow: auto;
       }
     }
 

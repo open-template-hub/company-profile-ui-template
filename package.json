@@ -22,7 +22,8 @@
     "outdated": "node src/dependency-checker.ts > docs/OUTDATED.md",
     "test": "ng test",
     "updateMessages": "ng extract-i18n && node ./src/messages-generator.js",
-    "serve:local": "ng serve -c=local"
+    "serve:local": "ng serve -c=local",
+    "serve:fr": "ng serve -c=fr"
   },
   "dependencies": {
     "@angular/animations": "^12.2.5",

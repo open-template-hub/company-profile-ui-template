@@ -22,6 +22,7 @@ export class LandingLayoutTopNavComponent {
 
   @ViewChild( 'dropdownMenuProducts' ) dropdownMenuProducts: ElementRef;
   @ViewChild( 'dropdownMenuServices' ) dropdownMenuServices: ElementRef;
+  @ViewChild( 'dropdownMenuParent' ) dropdownMenuParent: ElementRef;
 
   constructor( private router: Router, private loadingService: LoadingService ) {
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );

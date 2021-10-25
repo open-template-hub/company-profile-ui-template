@@ -1,4 +1,4 @@
-<nav class="top-nav">
+<nav class="top-nav" #dropdownMenuParent>
   <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
      [routerLink]="URLS.root"
      class="brand">
@@ -6,19 +6,20 @@
     <h2>Open Template Hub</h2>
   </a>
   <div class="left-item-wrapper">
-    <a (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
+    <a (mouseenter)="dropdownMenuProducts.openDropdown(); dropdownMenuServices.closeDropdown()">
       <app-dropdown-menu
           #dropdownMenuProducts
           [minimumColumns]="4"
-          [productLines]="PRODUCT_LINES">
+          [productLines]="PRODUCT_LINES"
+          [dropdownParent]="dropdownMenuParent">
         <span i18n="@@landingLayoutTopNav.products">Products</span>
         <i aria-hidden="true" class="material-icons">{{
           dropdownMenuProducts.isDropdownOpen ? "expand_less" : "expand_more"
           }}</i>
       </app-dropdown-menu>
     </a>
-    <a (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()">
-      <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES">
+    <a (mouseenter)="dropdownMenuServices.openDropdown(); dropdownMenuProducts.closeDropdown()">
+      <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES" [dropdownParent]="dropdownMenuParent">
         <span i18n="@@landingLayoutTopNav.services">Services</span>
         <i aria-hidden="true" class="material-icons">
           {{ dropdownMenuServices.isDropdownOpen ? "expand_less" : "expand_more" }}

@@ -182,7 +182,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/company-profile-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.companyProfileUITemplate.description:Company Profile UI Template for generic usage in Angular`,
+          description: $localize`:@@userInterfaces.companyProfileUITemplate.video.description:Modern, responsive, customisable company profile ui template written with Angular`,
         },
         demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-light.min.png',
         demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-dark.min.png',
@@ -248,7 +248,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-dark.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/web-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.webUITemplate.description:Web UI Template for generic usage in Angular`,
+          description: $localize`:@@userInterfaces.webUITemplate.video.description:Modern, responsive, customisable web ui template written with Angular`,
         },
         screenshots: [
           {
@@ -312,7 +312,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-dark.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/mobile-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.mobileUITemplate.description:Mobile UI Template for generic usage in React Native`,
+          description: $localize`:@@userInterfaces.mobileUITemplate.video.description:Modern, responsive, customisable mobile ui template written with React Native`,
         },
         screenshots: [
           {

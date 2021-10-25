@@ -37,15 +37,6 @@
   & .features-card {
     text-align: left;
 
-    & .feature-title {
-      font-size: 26px;
-      font-weight: 500;
-      margin-bottom: 10px;
-      margin-top: 0;
-    }
-  }
-
-  & .features-card {
     & .details {
       font-size: 18px;
       margin-top: 19px;
@@ -54,6 +45,13 @@
         font-weight: 500;
         margin-bottom: 8px;
       }
+    }
+
+    & .feature-title {
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      margin-top: 0;
     }
   }
 

@@ -19,7 +19,6 @@
     justify-content: flex-end;
 
     // Design
-    height: 500px;
     padding: 25px;
     text-align: center;
 
@@ -31,7 +30,6 @@
 
       & p {
         color: var(--lighter);
-        height: 210px;
         text-overflow: ellipsis;
         overflow: auto;
       }
@@ -114,6 +112,19 @@
 
       & > * {
         color: var(--lighter);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .testimonial-card {
+    & .body {
+      height: 500px;
+
+      & p {
+        height: 210px;
       }
     }
   }

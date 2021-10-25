@@ -56,7 +56,6 @@
       // Design
       font-size: 17px;
       margin-top: 10px;
-      height: 160px;
       text-overflow: ellipsis;
       overflow: auto;
     }
@@ -128,6 +127,14 @@
       margin: {
         left: 15px;
         right: 15px;
+      }
+    }
+  }
+
+  .employee-card {
+    & .body {
+      & .bio {
+        height: 160px;
       }
     }
   }

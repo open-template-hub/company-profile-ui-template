@@ -4,6 +4,7 @@ import { environmentCommon } from '../../../environments/environment-common';
 import { ProductLine } from '../../model/product/product.model';
 import { ThemeColorSettings } from '../constant';
 import { PRICING_RIBBONS } from '../ribbon/ribbon.data';
+import { TECH_STACK } from '../tech-stack/tech-stack.data';
 
 const OPEN_SOURCE_FEATURE = {
   name: $localize`:@@productData.openSource.name:Open Source`,
@@ -112,7 +113,14 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        integrations: environment.oauth
+        integrations: environment.oauth,
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.node,
+          TECH_STACK.express,
+          TECH_STACK.postgreSql,
+          TECH_STACK.heroku
+        ]
       },
       {
         key: 'payment-server-template',
@@ -123,7 +131,15 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        integrations: environment.payment
+        integrations: environment.payment,
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.node,
+          TECH_STACK.express,
+          TECH_STACK.postgreSql,
+          TECH_STACK.mongoDb,
+          TECH_STACK.heroku,
+        ]
       },
       {
         key: 'file-storage-server-template',
@@ -134,7 +150,15 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        integrations: environment.fileStorage
+        integrations: environment.fileStorage,
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.node,
+          TECH_STACK.express,
+          TECH_STACK.postgreSql,
+          TECH_STACK.mongoDb,
+          TECH_STACK.heroku,
+        ]
       },
       {
         key: 'mail-server-template',
@@ -145,7 +169,13 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        integrations: environment.mail
+        integrations: environment.mail,
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.node,
+          TECH_STACK.express,
+          TECH_STACK.heroku,
+        ]
       },
       {
         key: 'analytics-server-template',
@@ -155,7 +185,14 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/analytics-server-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
-        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS
+        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.node,
+          TECH_STACK.express,
+          TECH_STACK.mongoDb,
+          TECH_STACK.heroku,
+        ]
       },
       {
         key: 'business-logic-server-template',
@@ -165,7 +202,14 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/business-logic-server-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
-        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS
+        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.node,
+          TECH_STACK.express,
+          TECH_STACK.mongoDb,
+          TECH_STACK.heroku,
+        ]
       },
     ],
   },
@@ -212,30 +256,12 @@ export const PRODUCT_LINES: ProductLine[] = [
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
         techStack: [
-          {
-            src: 'https://avatars.githubusercontent.com/u/139426?s=200&v=4',
-            description: 'Angular'
-          },
-          {
-            src: 'https://avatars.githubusercontent.com/u/9950313?s=200&v=4',
-            description: 'NodeJs'
-          },
-          {
-            src: 'https://avatars.githubusercontent.com/u/1505683?s=200&v=4',
-            description: 'Font Awesome'
-          },
-          {
-            src: 'https://avatars.githubusercontent.com/u/23211?s=200&v=4',
-            description: 'Heroku'
-          },
-          {
-            src: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png',
-            description: 'Sass'
-          },
-          {
-            src: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png',
-            description: 'Markdown'
-          }
+          TECH_STACK.typeScript,
+          TECH_STACK.angular,
+          TECH_STACK.fontAwesome,
+          TECH_STACK.heroku,
+          TECH_STACK.sass,
+          TECH_STACK.markdown
         ],
       },
       {
@@ -276,30 +302,12 @@ export const PRODUCT_LINES: ProductLine[] = [
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
         techStack: [
-          {
-            src: 'https://avatars.githubusercontent.com/u/139426?s=200&v=4',
-            description: 'Angular'
-          },
-          {
-            src: 'https://avatars.githubusercontent.com/u/9950313?s=200&v=4',
-            description: 'NodeJs'
-          },
-          {
-            src: 'https://avatars.githubusercontent.com/u/1505683?s=200&v=4',
-            description: 'Font Awesome'
-          },
-          {
-            src: 'https://avatars.githubusercontent.com/u/23211?s=200&v=4',
-            description: 'Heroku'
-          },
-          {
-            src: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png',
-            description: 'Sass'
-          },
-          {
-            src: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png',
-            description: 'Markdown'
-          }
+          TECH_STACK.typeScript,
+          TECH_STACK.angular,
+          TECH_STACK.fontAwesome,
+          TECH_STACK.heroku,
+          TECH_STACK.sass,
+          TECH_STACK.markdown
         ]
       },
       {
@@ -331,6 +339,11 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.reactNative,
+          TECH_STACK.fontAwesome
+        ]
       },
     ],
   },
@@ -493,6 +506,12 @@ export const PRODUCT_LINES: ProductLine[] = [
             features: [ [ 'true', 'true', 'true' ], [ 'true', 'true' ], [ $localize`:@@premium.orchestrationServer.enterprise.feature.1:Unlimited users`, 'true' ] ]
           },
         ],
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.node,
+          TECH_STACK.express,
+          TECH_STACK.heroku,
+        ]
       },
     ],
   },

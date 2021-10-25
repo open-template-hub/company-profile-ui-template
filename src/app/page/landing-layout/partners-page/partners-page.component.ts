@@ -14,8 +14,8 @@ export class PartnersPageComponent {
   URLS = URLS;
 
   partnersTitle = [
-    { text: $localize`Business Partners`, level: 1 },
-    { text: `Create and run your online business with Open Template Hub and our partners.` }
+    { text: $localize`:@@partnersPage.partnersTitle.1:Business Partners`, level: 1 },
+    { text: $localize`:@@partnersPage.partnersTitle.2:Create and run your online business with Open Template Hub and our partners.` }
   ];
 
   constructor() {

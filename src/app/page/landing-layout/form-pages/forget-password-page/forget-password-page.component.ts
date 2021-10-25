@@ -22,7 +22,7 @@ export class ForgetPasswordPageComponent implements OnInit, OnDestroy {
 
   URLS = URLS;
 
-  appHeroContents = [ { text: $localize`Forget password`, level: 1 } ];
+  appHeroContents = [{text: $localize `:@@forgetPassword.appHero:Forget password`, level: 1}]
 
   constructor(
       private formBuilder: FormBuilder,

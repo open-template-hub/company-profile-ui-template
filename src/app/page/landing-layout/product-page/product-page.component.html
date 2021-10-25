@@ -17,14 +17,14 @@
             <p>{{ product.description }}</p>
             <div *ngIf="product.openSource" class="button-wrapper">
               <app-brand-button (click)="redirect( this.product.url )"
-                                [icon]="environmentCommon.website.github.cssClass" i18n-text text="Open Source">
+                                [icon]="environmentCommon.website.github.cssClass" i18n-text="@@productPage.openSource.button" text="Open Source">
               </app-brand-button>
 
-              <app-button *ngIf="productLineKey !== 'generator'" (click)="router.navigate([URLS.contactUs])" i18n-text
+              <app-button *ngIf="productLineKey !== 'generator'" (click)="router.navigate([URLS.contactUs])" i18n-text="@@productPage.professional.button"
                           text="Professional Help">
               </app-button>
               <app-brand-button *ngIf="productLineKey === 'generator'" (click)="redirect( this.product.urlAlter )"
-                                [icon]="environmentCommon.website.npm.cssClass" i18n-text text="Download Package">
+                                [icon]="environmentCommon.website.npm.cssClass" i18n-text="@@productPage.downloadPackage.button" text="Download Package">
               </app-brand-button>
             </div>
             <div *ngIf="!product.openSource" class="button-wrapper">
@@ -80,7 +80,7 @@
             *ngFor="let testimonial of TESTIMONIALS"
             [testimonial]="testimonial">
         </app-testimonial-card>
-        <app-button [text]="'Read More Stories'" [routerLink]="URLS.customers"
+        <app-button i18n-text="@@productPage.readMoreStories" text="Read More Stories" [routerLink]="URLS.customers"
                     [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']">
         </app-button>
       </div>
@@ -100,7 +100,7 @@
               <app-presentation-card
                   *ngIf="product.key !== relatedProduct.key"
                   [class]="relatedProduct.color ? relatedProduct.color : ''"
-                  [footerText]="relatedProduct.openSource ? '#opensource' : '#premium'"
+                  [footerText]=getPresentationCardFooter(relatedProduct.openSource)
                   [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
                   [imgHeight]="150"
                   [secondaryText]="relatedProduct.description"
@@ -119,16 +119,15 @@
       </div>
       <div *ngIf="commitActivities.length > 0" class="activity-history-wrapper">
         <app-activity-history-card
-            *ngIf="product.openSource"
-            [activities]="commitActivities" i18n-title
-            title="Activity history">
+          *ngIf="product.openSource"
+          i18n-title="@@productPage.activityHistory.title" title="Activity history"
+          [activities]="commitActivities">
         </app-activity-history-card>
       </div>
 
       <!-- Related Products -->
-      <app-hero
-          [contents]="[{ text: 'Related Products', level: 2 }]"></app-hero>
-      <div class="flexible-cards-wrapper">
+      <app-hero [contents]="relatedProductAppHero"></app-hero>
+      <div class="related-products-wrapper">
         <ng-container *ngFor="let productLine of PRODUCT_LINES">
           <ng-container
               *ngIf="productLineKey === 'premium' ? productLine.key === 'server' : productLine.key === productLineKey || productLine.key === 'premium'">

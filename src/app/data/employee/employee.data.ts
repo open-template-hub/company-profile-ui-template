@@ -20,7 +20,7 @@ export const EMPLOYEES: Employee[] = [
     profile: {
       name: 'Fatih Turker',
       title: $localize `:@@employeesData.coFounder:Co-Founder`,
-      bio: $localize`:@@employees.fatih.bio:TODO: write your bio here`,
+      bio: $localize`:@@employees.fatih.bio:Fatih is a young professional with wide-ranging experience in software design and technology. He worked several years on Finance and Telecom business areas. He is now a Founder and CEO at Remoklify. He also co-founded Open Template Hub.`,
       photoUri:
           'https://avatars1.githubusercontent.com/u/2202179?s=460&u=261b1129e7106c067783cb022ab9999aad833bdc&v=4',
       social: {

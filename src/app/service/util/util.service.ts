@@ -8,6 +8,16 @@ export class UtilService {
     // Intentionally blank
   }
 
+  isTouchDevice() {
+    return ( ( 'ontouchstart' in window ) ||
+        ( navigator.maxTouchPoints > 0 ) ||
+        ( navigator.msMaxTouchPoints > 0 ) );
+  }
+
+  isSmallScreen() {
+    return window.matchMedia && window.matchMedia( '(max-width: 999px)' ).matches;
+  }
+
   delay( ms: number ) {
     return new Promise( ( resolve ) => setTimeout( resolve, ms ) );
   }

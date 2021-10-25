@@ -1,6 +1,7 @@
 import { CommandType } from 'src/app/data/command-type/command-type.enum';
 import { Image } from '../image/image.model';
 import { PricingOption } from '../pricing/pricing.model';
+import { Video } from '../video/image.model';
 
 export interface PricingFeature {
   name: string,
@@ -15,6 +16,7 @@ export interface Product {
   url: string;
   urlAlter?: string;
   logo: string;
+  video?: Video;
   demonstrationImg?: string;
   demonstrationAlter?: string;
   screenshots?: Image[];

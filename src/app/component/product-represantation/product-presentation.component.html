@@ -30,9 +30,21 @@
         </app-card>
       </ng-container>
       <ng-container *ngSwitchCase="'user-interface'">
-        <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="tech-stack-card">
+        <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="video-card"
+                  *ngIf="product.video">
           <ng-template #bodyTemplate>
-            <div class="body">
+            <div class=" body">
+              <video [src]="product.video.url" autoplay loop muted controls *ngIf="product.video">
+                <track label="English" kind="captions" srclang="en" src="" default>
+                Your browser does not support HTML5 video.
+              </video>
+              <p class="feature-title">{{ product.video.description }}</p>
+            </div>
+          </ng-template>
+        </app-card>
+        <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="tech-stack-card" *ngIf="!product.video">
+          <ng-template #bodyTemplate>
+            <div class=" body">
               <p i18n="@@productPresentation.techStack" class="feature-title">Tech Stack</p>
               <div class="social-login-wrapper">
                 <app-presentation-swiper [items]="product.techStack"></app-presentation-swiper>

@@ -204,6 +204,14 @@ export const PRODUCT_LINES: ProductLine[] = [
           {
             url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-1.min.png',
             description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.3:Reusable components`
+          },
+          {
+            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-2.min.png',
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.4:Customisable theme colors`
+          },
+          {
+            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-3.min.png',
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.5:Customisable theme design`
           }
         ],
         openSource: true,
@@ -259,7 +267,15 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-1.min.png',
-            description: ':@@userInterfaces.webUITemplate.screenshot.3:Dark Mode SupportReusable components'
+            description: $localize`:@@userInterfaces.webUITemplate.screenshot.3:Reusable components`
+          },
+          {
+            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-2.min.png',
+            description: $localize`:@@userInterfaces.webUITemplate.screenshot.4:Customisable theme colors`
+          },
+          {
+            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-3.min.png',
+            description: $localize`:@@userInterfaces.webUITemplate.screenshot.5:Customisable theme design`
           }
         ],
         openSource: true,
@@ -529,7 +545,7 @@ export const SERVICES: ProductLine[] = [
         description: $localize`:@@servicesData.softwareConsultancy.description:We perform world-class custom software development services from startups to enterprise businesses. Our highly experienced software developers have a deep understanding of how to leverage top programming languages, frameworks, and other software development tools to create the ideal solution for your business.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
-        features: [{
+        features: [ {
           name: $localize`:@@servicesData.softwareConsultancy.features.name:Features`,
           details: [
             {

@@ -9,6 +9,8 @@ app-screenshot-swiper {
     @include util.flex-layout-column;
     @include util.flex-center-center;
 
+    justify-content: space-between;
+
     cursor: pointer;
 
     & p {
@@ -44,6 +46,7 @@ app-screenshot-swiper {
       & img {
         display: block;
         object-fit: cover;
+        max-height: 300px;
 
         &.grayscale {
           filter: contrast(0);
@@ -95,6 +98,8 @@ app-screenshot-swiper {
     width: 100%;
 
     & .content {
+      height: 330px;
+
       & img {
         max-width: 25vw;
       }

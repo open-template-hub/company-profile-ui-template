@@ -34,9 +34,11 @@
                   *ngIf="product.video">
           <ng-template #bodyTemplate>
             <div class=" body">
-              <video [src]="product.video" autoplay loop muted controls *ngIf="product.video">
+              <video [src]="product.video.url" autoplay loop muted controls *ngIf="product.video">
+                <track label="English" kind="captions" srclang="en" src="" default>
                 Your browser does not support HTML5 video.
               </video>
+              <p class="feature-title">{{ product.video.description }}</p>
             </div>
           </ng-template>
         </app-card>

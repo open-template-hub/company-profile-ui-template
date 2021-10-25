@@ -181,7 +181,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         description: $localize`Company Profile UI Template for generic usage in Angular`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'company-profile-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
-        video: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/company-profile-ui-video-1.mp4',
+        video: {
+          url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/company-profile-ui-video-1.mp4',
+          description: 'Company Profile UI Template for generic usage in Angular'
+        },
         demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-light.min.png',
         demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-dark.min.png',
         screenshots: [
@@ -513,7 +516,7 @@ export const SERVICES: ProductLine[] = [
         description: `We perform world-class custom software development services from startups to enterprise businesses. Our highly experienced software developers have a deep understanding of how to leverage top programming languages, frameworks, and other software development tools to create the ideal solution for your business.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
-        features: [{
+        features: [ {
           name: 'Features',
           details: [
             {

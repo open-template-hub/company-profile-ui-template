@@ -181,6 +181,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         description: $localize`Company Profile UI Template for generic usage in Angular`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'company-profile-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
+        video: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/company-profile-ui-video-1.mp4',
         demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-light.min.png',
         demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-dark.min.png',
         screenshots: [

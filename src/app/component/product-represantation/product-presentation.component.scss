@@ -22,7 +22,7 @@
     width: 100%;
   }
 
-  & .presentation-card, & .features-card, & .tech-stack-card {
+  & .presentation-card, & .features-card, & .tech-stack-card, & .video-card {
     @include util.default-shadow;
     @include util.default-border-radius;
 
@@ -34,7 +34,7 @@
     }
   }
 
-  & .features-card, & .tech-stack-card {
+  & .features-card, & .tech-stack-card, & .video-card {
     text-align: left;
 
     & .feature-title {
@@ -64,6 +64,15 @@
         font-weight: lighter;
         font-size: 16px;
         color: var(--theme-color);
+      }
+    }
+  }
+
+  & .video-card {
+    & .body {
+      & video {
+        @include util.default-border-radius-image;
+        max-width: 100%;
       }
     }
   }

@@ -15,6 +15,7 @@ export interface Product {
   url: string;
   urlAlter?: string;
   logo: string;
+  video?: string;
   demonstrationImg?: string;
   demonstrationAlter?: string;
   screenshots?: Image[];

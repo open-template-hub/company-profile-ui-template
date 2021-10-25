@@ -300,6 +300,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/mobile-ui-logo.min.png',
         demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-light.min.png',
         demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-dark.min.png',
+        video: {
+          url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/mobile-ui-video-1.mp4',
+          description: $localize`:@@userInterfaces.mobileUITemplate.description:Mobile UI Template for generic usage in React Native`,
+        },
         screenshots: [
           {
             url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-light.min.png',

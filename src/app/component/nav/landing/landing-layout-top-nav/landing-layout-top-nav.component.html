@@ -6,7 +6,8 @@
     <h2>Open Template Hub</h2>
   </a>
   <div class="left-item-wrapper">
-    <a (mouseenter)="dropdownMenuProducts.openDropdown(); dropdownMenuServices.closeDropdown()">
+    <a (mouseenter)="dropdownMenuProducts.openDropdown(); dropdownMenuServices.closeDropdown()"
+       (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
       <app-dropdown-menu
           #dropdownMenuProducts
           [minimumColumns]="4"
@@ -18,7 +19,8 @@
           }}</i>
       </app-dropdown-menu>
     </a>
-    <a (mouseenter)="dropdownMenuServices.openDropdown(); dropdownMenuProducts.closeDropdown()">
+    <a (mouseenter)="dropdownMenuServices.openDropdown(); dropdownMenuProducts.closeDropdown()"
+       (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()">
       <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES" [dropdownParent]="dropdownMenuParent">
         <span i18n="@@landingLayoutTopNav.services">Services</span>
         <i aria-hidden="true" class="material-icons">

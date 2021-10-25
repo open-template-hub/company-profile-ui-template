@@ -1,4 +1,5 @@
 import { CommandType } from 'src/app/data/command-type/command-type.enum';
+import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
 import { ProductLine } from '../../model/product/product.model';
 import { ThemeColorSettings } from '../constant';
@@ -111,7 +112,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        techStack: []
+        techStack: [],
+        integrations: environment.oauth
       },
       {
         key: 'payment-server-template',
@@ -122,7 +124,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        techStack: []
+        techStack: [],
+        integrations: environment.payment
       },
       {
         key: 'file-storage-server-template',
@@ -133,7 +136,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        techStack: []
+        techStack: [],
+        integrations: environment.fileStorage
       },
       {
         key: 'mail-server-template',
@@ -144,7 +148,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        techStack: []
+        techStack: [],
+        integrations: environment.mail
       },
       {
         key: 'analytics-server-template',

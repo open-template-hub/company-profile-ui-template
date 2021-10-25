@@ -28,6 +28,7 @@ export interface Product {
   commandLines?: CommandLine[];
   imageLoaded?: boolean;
   techStack: Image[];
+  integrations?: any;
 }
 
 export interface ProductLine {

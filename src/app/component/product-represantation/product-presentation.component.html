@@ -1,82 +1,66 @@
 <ng-container *ngIf="product">
-  <div class="product-presentation">
-    <ng-container [ngSwitch]="productLineKey">
-      <ng-container *ngSwitchCase="['server', 'premium'].includes(productLineKey) ? productLineKey : ''">
-        <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" [footerTemplate]="footerTemplate"
-                  class="presentation-card">
-          <ng-template #bodyTemplate>
-            <div class="body">
-              <div class="social-login-wrapper">
-                <img [src]="product.logo" alt="logo" class="brand-logo" width="90"/>
-                <i aria-hidden="true" class="fa fa-check-circle"></i>
-                <app-presentation-swiper [items]="setPresentation()"
-                                         [height]="product.key === 'orchestration-server-template' ? 90 : 75">
-                </app-presentation-swiper>
-              </div>
-              <p class="feature-title">{{ presentationText }}</p>
-            </div>
-          </ng-template>
-          <ng-template #footerTemplate>
-            <div class="footer theme-color-lighter-3-border">
-              <p i18n="@@productPresentation.footer">Some of the preconfigured systems:</p>
-              <p>
+  <div class="product-presentation" [ngSwitch]="getPresentationModel()">
+    <!-- Command Line Presentation -->
+    <app-animated-code-editor *ngSwitchCase="'command-line'"
+                              [commandLines]="product.commandLines"></app-animated-code-editor>
+
+    <!-- Video Presentation -->
+    <app-card *ngSwitchCase="'video'" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="video-card">
+      <ng-template #bodyTemplate>
+        <div class=" body">
+          <video [src]="product.video.url" autoplay loop muted controls>
+            <track label="English" kind="captions" srclang="en" src="" default>
+            Your browser does not support HTML5 video.
+          </video>
+          <p class="feature-title">{{ product.video.description }}</p>
+        </div>
+      </ng-template>
+    </app-card>
+
+    <!-- Integration Swiper Presentation -->
+    <app-card *ngSwitchCase="'integrations'" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'"
+              [footerTemplate]="footerTemplate"
+              class="presentation-card">
+      <ng-template #bodyTemplate>
+        <div class="body">
+          <div class="social-login-wrapper">
+            <img [src]="product.logo" alt="logo" class="brand-logo" width="90"/>
+            <i aria-hidden="true" class="fa fa-check-circle"></i>
+            <app-presentation-swiper [items]="getPresentationSwiperItems()"
+                                     [height]="product.key === 'orchestration-server-template' ? 90 : 75">
+            </app-presentation-swiper>
+          </div>
+          <p class="feature-title">{{ presentationText }}</p>
+        </div>
+      </ng-template>
+      <ng-template #footerTemplate>
+        <div class="footer theme-color-lighter-3-border">
+          <p i18n="@@productPresentation.footer">Some of the preconfigured systems:</p>
+          <p>
                 <span *ngFor="let partner of presentationPartners; last as isLast">
                   {{ partnerNameFormat( partner.name, isLast ) | titlecase }}
                 </span>
-              </p>
-              <small i18n="@@productPresentation.description">*configuration still requires some level of developer experience</small>
-            </div>
-          </ng-template>
-        </app-card>
-      </ng-container>
-      <ng-container *ngSwitchCase="'user-interface'">
-        <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="video-card"
-                  *ngIf="product.video">
-          <ng-template #bodyTemplate>
-            <div class=" body">
-              <video [src]="product.video.url" autoplay loop muted controls *ngIf="product.video">
-                <track label="English" kind="captions" srclang="en" src="" default>
-                Your browser does not support HTML5 video.
-              </video>
-              <p class="feature-title">{{ product.video.description }}</p>
-            </div>
-          </ng-template>
-        </app-card>
-        <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="tech-stack-card" *ngIf="!product.video">
-          <ng-template #bodyTemplate>
-            <div class=" body">
-              <p i18n="@@productPresentation.techStack" class="feature-title">Tech Stack</p>
-              <div class="social-login-wrapper">
-                <app-presentation-swiper [items]="product.techStack"></app-presentation-swiper>
-              </div>
-              <div class="details">
-                <span *ngFor="let tech of product.techStack; last as isLast">
-                  {{ tech.description + (isLast ? '' : ', ') }}
-                </span>
-              </div>
-            </div>
-          </ng-template>
-        </app-card>
-      </ng-container>
-      <ng-container *ngSwitchCase="'generator'">
-        <app-animated-code-editor [commandLines]="product.commandLines"></app-animated-code-editor>
-      </ng-container>
-      <ng-container *ngSwitchDefault [ngSwitch]="product.key">
-        <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
-          <ng-template #bodyTemplate>
-            <div class="body">
-              <ng-container *ngFor="let feature of product.features">
-                <p class="feature-title">{{ feature.name }}</p>
+          </p>
+          <small i18n="@@productPresentation.description">*configuration still requires some level of developer
+            experience</small>
+        </div>
+      </ng-template>
+    </app-card>
 
-                <div *ngFor="let detail of feature.details" class="details">
-                  <p>{{ detail.name + ':' }}</p>
-                  <p>{{ detail.description}}</p>
-                </div>
-              </ng-container>
+    <!-- Features Presentation -->
+    <app-card *ngSwitchDefault [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
+      <ng-template #bodyTemplate>
+        <div class="body">
+          <ng-container *ngFor="let feature of product.features">
+            <p class="feature-title">{{ feature.name }}</p>
+
+            <div *ngFor="let detail of feature.details" class="details">
+              <p>{{ detail.name + ':' }}</p>
+              <p>{{ detail.description}}</p>
             </div>
-          </ng-template>
-        </app-card>
-      </ng-container>
-    </ng-container>
+          </ng-container>
+        </div>
+      </ng-template>
+    </app-card>
   </div>
 </ng-container>

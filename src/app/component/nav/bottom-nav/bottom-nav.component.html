@@ -15,19 +15,11 @@
     <i [class]="'fas fa-home fa-fw'" aria-hidden="true"></i>
     <span> Home </span>
   </a>
-  <a
-      (click)="
-      dropdownMenuProducts.toggleDropdown();
-      dropdownMenuServices.closeDropdown()"
-      *ngIf="!openSettings">
+  <a (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()" *ngIf="!openSettings">
     <i [class]="'fas fa-server fa-fw'" aria-hidden="true"></i>
     <span> Products </span>
   </a>
-  <a
-      (click)="
-      dropdownMenuServices.toggleDropdown();
-      dropdownMenuProducts.closeDropdown()"
-      *ngIf="!openSettings">
+  <a (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()" *ngIf="!openSettings">
     <i [class]="'fas fa-handshake fa-fw'" aria-hidden="true"></i>
     <span> Services </span>
   </a>

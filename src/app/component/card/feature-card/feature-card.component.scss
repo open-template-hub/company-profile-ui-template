@@ -33,6 +33,9 @@
       font-weight: 300;
       padding-bottom: 5px;
       text-align: center;
+      height: 350px;
+      text-overflow: ellipsis;
+      overflow: auto;
     }
   }
 }

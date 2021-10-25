@@ -56,6 +56,9 @@
       // Design
       font-size: 17px;
       margin-top: 10px;
+      height: 150px;
+      text-overflow: ellipsis;
+      overflow: auto;
     }
   }
 

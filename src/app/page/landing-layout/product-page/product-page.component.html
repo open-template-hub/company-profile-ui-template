@@ -110,6 +110,12 @@
     </ng-container>
   </ng-container>
 
+  <!-- Tech Stack -->
+  <ng-container *ngIf="product.techStack">
+    <app-hero [contents]="[{ text: 'Tech Stack', level: 2 }]"></app-hero>
+    <app-tech-stack-card [techStack]="product.techStack"></app-tech-stack-card>
+  </ng-container>
+
   <!-- Related Products -->
   <ng-container *ngIf="productLineKey !== 'services'">
     <app-hero

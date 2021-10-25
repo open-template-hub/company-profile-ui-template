@@ -112,7 +112,6 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        techStack: [],
         integrations: environment.oauth
       },
       {
@@ -124,7 +123,6 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        techStack: [],
         integrations: environment.payment
       },
       {
@@ -136,7 +134,6 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        techStack: [],
         integrations: environment.fileStorage
       },
       {
@@ -148,7 +145,6 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        techStack: [],
         integrations: environment.mail
       },
       {
@@ -159,8 +155,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/analytics-server-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
-        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        techStack: []
+        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS
       },
       {
         key: 'business-logic-server-template',
@@ -170,8 +165,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/business-logic-server-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
-        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        techStack: []
+        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS
       },
     ],
   },
@@ -194,23 +188,23 @@ export const PRODUCT_LINES: ProductLine[] = [
         demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-dark.min.png',
         screenshots: [
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
             description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.1:Responsive Design`
           },
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-dark.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-dark.min.png',
             description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.2:Dark Mode Support`
           },
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-1.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-1.min.png',
             description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.3:Reusable components`
           },
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-2.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-2.min.png',
             description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.4:Customisable theme colors`
           },
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-3.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-3.min.png',
             description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.5:Customisable theme design`
           }
         ],
@@ -219,27 +213,27 @@ export const PRODUCT_LINES: ProductLine[] = [
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
         techStack: [
           {
-            url: 'https://avatars.githubusercontent.com/u/139426?s=200&v=4',
+            src: 'https://avatars.githubusercontent.com/u/139426?s=200&v=4',
             description: 'Angular'
           },
           {
-            url: 'https://avatars.githubusercontent.com/u/9950313?s=200&v=4',
+            src: 'https://avatars.githubusercontent.com/u/9950313?s=200&v=4',
             description: 'NodeJs'
           },
           {
-            url: 'https://avatars.githubusercontent.com/u/1505683?s=200&v=4',
+            src: 'https://avatars.githubusercontent.com/u/1505683?s=200&v=4',
             description: 'Font Awesome'
           },
           {
-            url: 'https://avatars.githubusercontent.com/u/23211?s=200&v=4',
+            src: 'https://avatars.githubusercontent.com/u/23211?s=200&v=4',
             description: 'Heroku'
           },
           {
-            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png',
+            src: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png',
             description: 'Sass'
           },
           {
-            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png',
+            src: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png',
             description: 'Markdown'
           }
         ],
@@ -258,23 +252,23 @@ export const PRODUCT_LINES: ProductLine[] = [
         },
         screenshots: [
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
             description: $localize`:@@userInterfaces.webUITemplate.screenshot.1:Responsive Design`
           },
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-dark.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-dark.min.png',
             description: $localize`:@@userInterfaces.webUITemplate.screenshot.2:Dark Mode Support`
           },
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-1.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-1.min.png',
             description: $localize`:@@userInterfaces.webUITemplate.screenshot.3:Reusable components`
           },
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-2.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-2.min.png',
             description: $localize`:@@userInterfaces.webUITemplate.screenshot.4:Customisable theme colors`
           },
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-3.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-3.min.png',
             description: $localize`:@@userInterfaces.webUITemplate.screenshot.5:Customisable theme design`
           }
         ],
@@ -283,27 +277,27 @@ export const PRODUCT_LINES: ProductLine[] = [
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
         techStack: [
           {
-            url: 'https://avatars.githubusercontent.com/u/139426?s=200&v=4',
+            src: 'https://avatars.githubusercontent.com/u/139426?s=200&v=4',
             description: 'Angular'
           },
           {
-            url: 'https://avatars.githubusercontent.com/u/9950313?s=200&v=4',
+            src: 'https://avatars.githubusercontent.com/u/9950313?s=200&v=4',
             description: 'NodeJs'
           },
           {
-            url: 'https://avatars.githubusercontent.com/u/1505683?s=200&v=4',
+            src: 'https://avatars.githubusercontent.com/u/1505683?s=200&v=4',
             description: 'Font Awesome'
           },
           {
-            url: 'https://avatars.githubusercontent.com/u/23211?s=200&v=4',
+            src: 'https://avatars.githubusercontent.com/u/23211?s=200&v=4',
             description: 'Heroku'
           },
           {
-            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png',
+            src: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png',
             description: 'Sass'
           },
           {
-            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png',
+            src: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png',
             description: 'Markdown'
           }
         ]
@@ -322,47 +316,21 @@ export const PRODUCT_LINES: ProductLine[] = [
         },
         screenshots: [
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-light.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-light.min.png',
             description: $localize`:@@userInterfaces.mobileUITemplate.screenshot.1:iOS and Android Support`
           },
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-dark.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-dark.min.png',
             description: $localize`:@@userInterfaces.mobileUITemplate.screenshot.2:Dark Mode Support`
           },
           {
-            url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-light.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-light.min.png',
             description: $localize`:@@userInterfaces.mobileUITemplate.screenshot.3:TODO: add another screenshot`
           }
         ],
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        techStack: [
-          {
-            url: 'https://avatars.githubusercontent.com/u/139426?s=200&v=4',
-            description: 'Angular'
-          },
-          {
-            url: 'https://avatars.githubusercontent.com/u/9950313?s=200&v=4',
-            description: 'NodeJs'
-          },
-          {
-            url: 'https://avatars.githubusercontent.com/u/1505683?s=200&v=4',
-            description: 'Font Awesome'
-          },
-          {
-            url: 'https://avatars.githubusercontent.com/u/23211?s=200&v=4',
-            description: 'Heroku'
-          },
-          {
-            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/sass/sass.png',
-            description: 'Sass'
-          },
-          {
-            url: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/markdown/markdown.png',
-            description: 'Markdown'
-          }
-        ]
       },
     ],
   },
@@ -380,7 +348,6 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
-        techStack: [],
         commandLines: [
           {
             command: 'open-template-hub-server-generator',
@@ -425,7 +392,6 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
-        techStack: [],
         commandLines: [
           {
             command: 'open-template-hub-app-generator',
@@ -527,7 +493,6 @@ export const PRODUCT_LINES: ProductLine[] = [
             features: [ [ 'true', 'true', 'true' ], [ 'true', 'true' ], [ $localize`:@@premium.orchestrationServer.enterprise.feature.1:Unlimited users`, 'true' ] ]
           },
         ],
-        techStack: [],
       },
     ],
   },
@@ -563,7 +528,6 @@ export const SERVICES: ProductLine[] = [
           ],
         }
         ],
-        techStack: [],
       },
       {
         key: 'software-integration',
@@ -589,7 +553,6 @@ export const SERVICES: ProductLine[] = [
           ],
         }
         ],
-        techStack: [],
       },
       {
         key: 'quality-assurance',
@@ -614,8 +577,7 @@ export const SERVICES: ProductLine[] = [
             },
           ],
         }
-        ],
-        techStack: []
+        ]
       },
     ],
   },

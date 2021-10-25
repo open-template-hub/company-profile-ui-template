@@ -53,8 +53,8 @@ export class ProductPresentationComponent implements OnInit {
         if ( environmentCommon.website[ website ].logo ) {
           this.presentationPartners.push( {
             name: website,
-            logo: environmentCommon.website[ website ].logo,
-            url: environmentCommon.website[ website ].url
+            src: environmentCommon.website[ website ].logo,
+            website: environmentCommon.website[ website ].url
           } );
         }
       }
@@ -85,7 +85,7 @@ export class ProductPresentationComponent implements OnInit {
 
     return this.presentationPartners.map( ( partner ) => {
       const image: Image = {
-        url: partner.logo,
+        src: partner.src,
         description: partner.name
       };
       return image;

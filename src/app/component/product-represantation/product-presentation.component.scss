@@ -61,6 +61,12 @@
         @include util.default-border-radius-image;
         max-width: 100%;
       }
+
+      & hr {
+        margin:  20px 0 0;
+        width: 100%;
+        border-color: var(--theme-color-lighter-4);
+      }
     }
   }
 

@@ -116,6 +116,7 @@ import { PartnersPageComponent } from './page/landing-layout/partners-page/partn
 import { BlogHolderCardComponent } from './component/card/blog-holder-card/blog-holder-card.component';
 import { BlogContentPageComponent } from './page/landing-layout/blog-page/blog-content-page/blog-content-page.component';
 import { ScreenshotSwiperComponent } from './component/swiper/screenshot-swiper/screenshot-swiper.component';
+import { TechStackCardComponent } from './component/card/tech-stack-card/tech-stack-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -218,6 +219,7 @@ FullCalendarModule.registerPlugins( [
     BlogHolderCardComponent,
     BlogContentPageComponent,
     ScreenshotSwiperComponent,
+    TechStackCardComponent,
   ],
   imports: [
     BrowserModule,

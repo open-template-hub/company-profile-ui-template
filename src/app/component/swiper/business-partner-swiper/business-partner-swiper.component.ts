@@ -11,10 +11,12 @@ SwiperCore.use( [ Pagination, Navigation, Autoplay ] );
   encapsulation: ViewEncapsulation.None
 } )
 export class BusinessPartnerSwiperComponent {
+
   @Input() partners: Partner[] = [];
+  @Input() isGrayscale = true;
+
   isNavigationEnabled = true;
   isPaginationEnabled = true;
-  isGrayscale = true;
   height = 100;
   breakpoints = {
     640: {

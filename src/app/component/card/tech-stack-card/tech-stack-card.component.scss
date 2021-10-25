@@ -1,0 +1,54 @@
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
+
+.tech-stack-card {
+  & .body {
+    @include card.default-body;
+    @include util.flex-layout-row;
+
+    flex-wrap: wrap;
+
+    padding: 20px 30px;
+
+    font-size: 19px;
+
+    & .row {
+      @include util.flex-center-center;
+
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .tech-stack-card {
+    & .body {
+      width: 94vw;
+
+      & .row {
+        @include util.flex-layout-column;
+        width: 100%;
+
+        & img {
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .tech-stack-card {
+    & .body {
+      & .row {
+        @include util.flex-layout-row;
+        width: 33%;
+
+        & img {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+

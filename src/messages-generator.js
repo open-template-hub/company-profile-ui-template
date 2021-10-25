@@ -30,13 +30,13 @@ try {
 const parser = new DOMParser()
 const sourceLocaleXml = parser.parseFromString( sourceLocaleFile, 'text/xml' )
 
-for( let i = 0; i < filePaths.localizedFiles.length; i++ ) {
+for( const localized of filePaths.localizedFiles ) {
   console.log()
-  console.log( 'For ' + filePaths.localizedFiles[i].languageCode )
+  console.log( 'For ' + localized.languageCode )
   console.log( '----------' )
 
   let localizedFile
-  const localizedFilePath = filePaths.localizedFiles[i].path
+  const localizedFilePath = localized.path
   try {
     localizedFile = fs.readFileSync(localizedFilePath, 'utf8')
   } catch ( err ) {
@@ -53,8 +53,8 @@ for( let i = 0; i < filePaths.localizedFiles.length; i++ ) {
   console.log( 'Added Words By IDs' )
   console.log( '----------' )
 
-  for( let i = 0; i < sourceLocaleTransUnits.length; i++ ) {
-    const transUnit = sourceLocaleTransUnits[i].cloneNode( true )
+  for( const sourceLocaleTransUnit of sourceLocaleTransUnits ) {
+    const transUnit = sourceLocaleTransUnit.cloneNode( true )
 
     if ( !localizedXml.getElementById( transUnit.id ) ) {
       console.log( transUnit.id )
@@ -65,8 +65,8 @@ for( let i = 0; i < filePaths.localizedFiles.length; i++ ) {
 
   localizedTransUnits = localizedXml.getElementsByTagName( 'trans-unit' )
   let unnecessaryLocalizedMessages = []
-  for( let i = 0; i < localizedTransUnits.length; i++) {
-    const transUnit = localizedTransUnits[i]
+  for( const localizedTransUnit of localizedTransUnits ) {
+    const transUnit = localizedTransUnit
 
     if ( !sourceLocaleXml.getElementById( transUnit.id ) ) {
       unnecessaryLocalizedMessages.push( transUnit.id )
@@ -76,9 +76,9 @@ for( let i = 0; i < filePaths.localizedFiles.length; i++ ) {
   console.log()
   console.log( 'Removed Words By IDs' )
   console.log( '----------' )
-  for( let i = 0; i < unnecessaryLocalizedMessages.length; i++ ) {
-    console.log( unnecessaryLocalizedMessages[i] )
-    localizedXml.getElementById( unnecessaryLocalizedMessages[i] ).remove()
+  for( const unnecessaryLocalizedMessage of unnecessaryLocalizedMessages ) {
+    console.log( unnecessaryLocalizedMessage )
+    localizedXml.getElementById( unnecessaryLocalizedMessage ).remove()
   }
 
   // save updated local file
@@ -92,10 +92,9 @@ for( let i = 0; i < filePaths.localizedFiles.length; i++ ) {
   console.log()
   console.log( 'Untranslated Words' )
   console.log( '----------' )
-  // print untranslated words
-  for( let i = 0; i < localizedTransUnits.length; i++ ) {
-    if( localizedTransUnits[i].getElementsByTagName('target').length === 0 ) {
-      console.log( localizedTransUnits[i].id )
+  for( const localizedTransUnit of localizedTransUnits ) {
+    if( localizedTransUnit.getElementsByTagName('target').length === 0 ) {
+      console.log( localizedTransUnit.id )
     }
   }
 }

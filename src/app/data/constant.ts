@@ -44,10 +44,10 @@ export const OthGithubName = 'open-template-hub';
 export const Authors = 'Fatih Turker, Furkan Yavuz, Mert Sarac';
 
 export const GithubCounters = {
-  Stars: 'Stars',
-  Forks: 'Forks',
-  Subscribers: 'Subscribers',
-  ReleaseVersion: 'Release Version',
+  Stars: $localize `:@@githubCounters.stars:Stars`,
+  Forks: $localize `:@@githubCounters.forks:Forks`,
+  Subscribers: $localize `:@@githubCounters.subscribers:Subscribers`,
+  ReleaseVersion: $localize `:@@githubCounters.releaseVersion:Release Version`
 };
 
 export const PROFILE_IMG = './assets/common/profile-img.png';

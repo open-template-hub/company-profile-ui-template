@@ -1,7 +1,7 @@
 <div class="hero">
   <div class="hero-left">
     <h1>Open Template Hub</h1>
-    <p i18n>
+    <p i18n="@@homePage.oth.description">
       Minimizes your effort while building a new software business with our open
       source GitHub micro server templates and responsive web UI + mobile UI
       templates
@@ -26,18 +26,18 @@
   <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github" class="counter-wrapper" rel="noopener" target="_blank">
     <app-text-content-loader *ngIf="npmCounterLoading" [size]="'30'" class="loader"></app-text-content-loader>
     <p class="counter" id="npmDownloadCounterElement"></p>
-    <p class="description" i18n>Npm Downloads</p>
+    <p i18n="@@homePage.npmDownloads" class="description">Npm Downloads</p>
   </a>
   <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github" class="counter-wrapper counter-alter" rel="noopener" target="_blank">
     <p class="counter" id="productTypesCounterElement">0</p>
-    <p class="description" i18n>Product Types</p>
+    <p class="description" i18n="@@homePage.productTypes">Product Types</p>
   </a>
   <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github" class="counter-wrapper" rel="noopener" target="_blank">
     <div class="ratio">
       <p class="counter" id="openSourceRatioCounterElement">0</p>
       <span class="counter">%</span>
     </div>
-    <p class="description" i18n>Open Source Ratio</p>
+    <p class="description" i18n="@@homePage.openSourceRatio">Open Source Ratio</p>
   </a>
 </div>
 
@@ -48,7 +48,7 @@
       *ngFor="let testimonial of TESTIMONIALS"
       [testimonial]="testimonial">
   </app-testimonial-card>
-  <app-button [text]="'Read More Stories'" [routerLink]="URLS.customers"
+  <app-button i18n-text="@@productPage.readMoreStories" text="Read More Stories" [routerLink]="URLS.customers"
               [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']">
   </app-button>
 </div>
@@ -77,7 +77,7 @@
     <ng-container *ngFor="let relatedProduct of productLine.products">
       <app-presentation-card
           [class]="relatedProduct.color ? relatedProduct.color : ''"
-          [footerText]="relatedProduct.openSource ? '#opensource' : '#premium'"
+          [footerText]=getPresentationCardFooter(relatedProduct.openSource)
           [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
           [imgHeight]="150"
           [secondaryText]="relatedProduct.description"

@@ -30,9 +30,13 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   isOpenSource = false;
 
   testimonialsTitle = [
-    { text: $localize`Customer testimonials`, level: 1 },
-    { text: $localize`What our customers are saying...` }
+    { text: $localize`:@@productPage.testimonialsTitle.1:Customer testimonials`, level: 1 },
+    { text: $localize`:@@productPage.testimonialsTitle.2:What our customers are saying...` }
   ];
+
+  relatedProductAppHero = [
+    { text: $localize `:@@productPage.relatedProductAppHero:Related Products`, level: 2 }
+  ]
 
   constructor(
       private route: ActivatedRoute,
@@ -119,7 +123,11 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   getContactUsButtonText( productLineKey ) {
     return productLineKey === 'services'
-        ? $localize`Contact Us`
-        : $localize`Request for Demo`;
+      ? $localize `:@@productPage.contactUs.button:Contact Us`
+      : $localize `:@@productPage.requestForDemo.button:Request for Demo`
+  }
+
+  getPresentationCardFooter(isOpenSource: boolean): string {
+    return isOpenSource ? $localize`:@@productTypeTag.openSource:#opensource` : $localize`:@@productTypeTag.premium:#premium`
   }
 }

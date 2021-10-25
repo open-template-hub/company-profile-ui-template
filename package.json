@@ -21,7 +21,7 @@
     "start": "node server.js --configuration=production",
     "outdated": "node src/dependency-checker.ts > docs/OUTDATED.md",
     "test": "ng test",
-    "updateMessages": "node src/messages-generator.ts",
+    "updateMessages": "ng extract-i18n && node ./src/messages-generator.js",
     "serve:local": "ng serve -c=local"
   },
   "dependencies": {
@@ -64,6 +64,7 @@
     "simple-icons": "^5.13.0",
     "swiper": "^7.0.4",
     "tslib": "^2.3.0",
+    "xmlserializer": "^0.6.1",
     "zone.js": "^0.11.4"
   },
   "devDependencies": {

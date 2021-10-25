@@ -43,23 +43,23 @@ export class HomePageComponent implements AfterViewInit {
   environmentCommon = environmentCommon;
 
   testimonialsTitle = [
-    { text: $localize`Customer testimonials`, level: 1 },
-    { text: $localize`What our customers are saying...` }
+    { text: $localize `:@@homePage.testimonialsTitle.1:Customer testimonials`, level: 1 },
+    { text: $localize `:@@homePage.testimonialsTitle.2:What our customers are saying...` }
   ];
 
   customersTitle = [
-    { text: $localize`From startups to the enterprise companies`, level: 1 },
-    { text: $localize`Thousands of companies in over 50 countries use Open Template Hub to start, run, and scale their businesses.` }
+    { text: $localize`:@@homePage.customersTitle.1:From startups to the enterprise companies`, level: 1 },
+    { text: $localize`:@@homePage.customersTitle.2:Thousands of companies in over 50 countries use Open Template Hub to start, run, and scale their businesses.` }
   ];
 
   whyUsTitle = [
-    { text: `Why Open Template Hub?`, level: 1 },
-    { text: `Just focus on your business and leave us all others` }
+    { text: $localize`:@@homePage.whyUsTitle.1:Why Open Template Hub?`, level: 1 },
+    { text: $localize`:@@homePage.whyUsTitle.2:Just focus on your business and leave us all others` }
   ];
 
   exploreTitle = [
-    { text: 'Explore our Products', level: 2 },
-    { text: `Explore our open source and premium products to get started today.` }
+    { text: $localize`:@@homePage.exploreTitle.1:Explore our Products`, level: 2 },
+    { text: $localize`:@@homePage.exploreTitle.2:Explore our open source and premium products to get started today.` }
   ];
 
   constructor(
@@ -147,5 +147,9 @@ export class HomePageComponent implements AfterViewInit {
     } else {
       console.error( eventCountUp.error );
     }
+  }
+
+  getPresentationCardFooter(isOpenSource: boolean): string {
+    return isOpenSource ? $localize`:@@productTypeTag.openSource:#opensource` : $localize`:@@productTypeTag.premium:#premium`
   }
 }

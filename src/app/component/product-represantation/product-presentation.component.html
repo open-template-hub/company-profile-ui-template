@@ -18,13 +18,13 @@
           </ng-template>
           <ng-template #footerTemplate>
             <div class="footer theme-color-lighter-3-border">
-              <p>Some of the preconfigured systems:</p>
+              <p i18n="@@productPresentation.footer">Some of the preconfigured systems:</p>
               <p>
                 <span *ngFor="let partner of presentationPartners; last as isLast">
                   {{ partnerNameFormat( partner.name, isLast ) | titlecase }}
                 </span>
               </p>
-              <small>*configuration still requires some level of developer experience</small>
+              <small i18n="@@productPresentation.description">*configuration still requires some level of developer experience</small>
             </div>
           </ng-template>
         </app-card>
@@ -33,7 +33,7 @@
         <app-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="tech-stack-card">
           <ng-template #bodyTemplate>
             <div class="body">
-              <p class="feature-title">Tech Stack</p>
+              <p i18n="@@productPresentation.techStack" class="feature-title">Tech Stack</p>
               <div class="social-login-wrapper">
                 <app-presentation-swiper [items]="product.techStack"></app-presentation-swiper>
               </div>

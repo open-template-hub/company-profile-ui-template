@@ -1,7 +1,7 @@
 <div [class.footer-hide-shadow]="hideShadow" [class.footer-popup-padding]="popupPadding" class="footer">
   <div class="footer-links-wrapper">
     <div class="footer-link-column">
-      <p>Products</p>
+      <p i18n="@@footer.products">Products</p>
       <div *ngFor="let productLine of PRODUCT_LINES" class="footer-link-group">
         <p *ngIf="productLine.name"
            [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
@@ -26,72 +26,72 @@
           </a>
         </div>
         <div class="footer-link-group">
-          <p>Company</p>
-          <a [routerLink]="URLS.about" class="footer-link-item">
+          <p i18n="@@footer.company">Company</p>
+          <a i18n="@@footer.about" [routerLink]="URLS.about" class="footer-link-item">
             About
           </a>
-          <a [routerLink]="URLS.customers" class="footer-link-item">
+          <a i18n="@@footer.customers" [routerLink]="URLS.customers" class="footer-link-item">
             Customers
           </a>
-          <a [routerLink]="URLS.partners" class="footer-link-item">
+          <a i18n="@@footer.partners" [routerLink]="URLS.partners" class="footer-link-item">
             Partners
           </a>
-          <a [routerLink]="URLS.branding" class="footer-link-item">
+          <a i18n="@@footer.branding" [routerLink]="URLS.branding" class="footer-link-item">
             Branding
           </a>
           <app-ext-link
               [href]="environmentCommon.website.linkedin.companyUrl + '/' + environmentCommon.oth.social.linkedin + '/jobs'"
               [linkClass]="'align-flex-start link'">
-          <span body>
+          <span i18n="@@footer.jobs" body>
             Jobs
           </span>
           </app-ext-link>
-          <a [routerLink]="URLS.blog" class="footer-link-item">
+          <a i18n="@@footer.blog" [routerLink]="URLS.blog" class="footer-link-item">
             Blog
           </a>
         </div>
       </div>
       <div class="footer-link-inner-column">
         <div class="footer-link-group">
-          <p>Developers</p>
+          <p i18n="@@footer.developers">Developers</p>
           <app-ext-link [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
                         [linkClass]="'align-flex-start link'">
-          <span body>
+          <span i18n="@@footer.openSource" body>
             Open Source
           </span>
           </app-ext-link>
-          <a [routerLink]="URLS.docs" class="footer-link-item">
+          <a i18n="@@footer.docs" [routerLink]="URLS.docs" class="footer-link-item">
             Docs
           </a>
-          <a [routerLink]="URLS.maintenance" class="footer-link-item">
+          <a i18n="@@footer.api" [routerLink]="URLS.maintenance" class="footer-link-item">
             API
           </a>
-          <a [routerLink]="URLS.status" class="footer-link-item">
+          <a i18n="@@footer.status" [routerLink]="URLS.status" class="footer-link-item">
             Status
           </a>
           <!-- TODO: Remove this after development is done -->
-          <a [routerLink]="URLS.settings.editTheme" class="footer-link-item">
+          <a i18n="@@footer.theme" [routerLink]="URLS.settings.editTheme" class="footer-link-item">
             Theme
           </a>
         </div>
         <div class="footer-link-group">
-          <p>Resources</p>
-          <a [routerLink]="URLS.contactUs" class="footer-link-item">
+          <p i18n="@@footer.resources">Resources</p>
+          <a i18n="@@footer.support" [routerLink]="URLS.contactUs" class="footer-link-item">
             Support
           </a>
-          <a [routerLink]="URLS.contactUs" class="footer-link-item">
+          <a i18n="@@footer.contact" [routerLink]="URLS.contactUs" class="footer-link-item">
             Contact
           </a>
-          <a [routerLink]="URLS.terms" class="footer-link-item">
+          <a i18n="@@footer.termsAndConditions" [routerLink]="URLS.terms" class="footer-link-item">
             Terms & Conditions
           </a>
-          <a [routerLink]="URLS.privacyPolicy" class="footer-link-item">
+          <a i18n="@@footer.privacy" [routerLink]="URLS.privacyPolicy" class="footer-link-item">
             Privacy
           </a>
-          <a [routerLink]="URLS.cookiePolicy" class="footer-link-item">
+          <a i18n="@@footer.cookies" [routerLink]="URLS.cookiePolicy" class="footer-link-item">
             Cookies
           </a>
-          <a [routerLink]="URLS.sitemap" class="footer-link-item">
+          <a i18n="@@footer.sitemap" [routerLink]="URLS.sitemap" class="footer-link-item">
             Sitemap
           </a>
         </div>
@@ -131,9 +131,9 @@
     </div>
     <div class="footer-right-element">
       <div class="footer-language">
-        <a href="/{{ environmentCommon.languages.english }}{{ getCurrentRoute() }}">🇺🇸</a>
+        <a href="/{{ environmentCommon.languages[0].code }}{{ getCurrentRoute() }}">🇺🇸</a>
         /
-        <a href="/{{ environmentCommon.languages.french }}{{ getCurrentRoute() }}">🇫🇷</a>
+        <a href="/{{ environmentCommon.languages[1].code }}{{ getCurrentRoute() }}">🇫🇷</a>
       </div>
       <p>
         {{' v-' + appVersion + ( environment.identity !== 'production' ? '-' + environment.identity : '' )}}

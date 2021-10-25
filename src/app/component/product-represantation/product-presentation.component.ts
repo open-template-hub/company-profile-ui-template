@@ -99,27 +99,27 @@ export class ProductPresentationComponent implements OnInit {
   setPresentation() {
     switch ( this.product.key ) {
       case 'auth-server-template': {
-        this.presentationText = 'Integrate your servers with social login providers in minutes.';
+        this.presentationText = $localize`:@@productPresentation.authServer.text:Integrate your servers with social login providers in minutes.`;
         this.presentationPartners = this.SOCIAL_LOGIN_PARTNERS;
         break;
       }
       case 'payment-server-template': {
-        this.presentationText = 'Integrate your servers with payment solution providers in minutes.';
+        this.presentationText = $localize`:@@productPresentation.paymentServer.text:Integrate your servers with payment solution providers in minutes.`;
         this.presentationPartners = this.PAYMENT_PARTNERS;
         break;
       }
       case 'file-storage-server-template': {
-        this.presentationText = 'Integrate your servers with file storage solution providers in minutes.';
+        this.presentationText = $localize`:@@productPresentation.fileStorageServer.text:Integrate your servers with file storage solution providers in minutes.`;
         this.presentationPartners = this.FILE_STORAGE_PARTNERS;
         break;
       }
       case 'mail-server-template': {
-        this.presentationText = 'Integrate your servers with email service providers in minutes.';
+        this.presentationText = $localize`:@@productPresentation.mailServer.text:Integrate your servers with email service providers in minutes.`;
         this.presentationPartners = this.MAIL_PARTNERS;
         break;
       }
       case 'orchestration-server-template': {
-        this.presentationText = 'Orchestrate all of your servers from one place.';
+        this.presentationText = $localize`:@@productPresentation.orchestrationServer.text:Orchestrate all of your servers from one place.`;
         this.presentationPartners = this.OTH_SERVER_PARTNERS;
         break;
       }

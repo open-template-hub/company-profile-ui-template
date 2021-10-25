@@ -61,7 +61,8 @@ export class ExternalRedirectPageComponent {
     window.location.href = this.href;
   }
 
-  getRedirectText( error: boolean ): string {
-    return !error ? $localize`Will be redirected to: ` : $localize`Looks like the link is broken: `;
+  getRedirectText(error: boolean): string {
+    return !error ? $localize `:@@externalRedirect.redirected:Will be redirected to: `
+      :  $localize `:@@externalRedirect.linkBroken:Looks like the link is broken: `
   }
 }

@@ -65,7 +65,7 @@ These are the application types you are able to generate for now:
 
 ### Company Profile UI
 
-Company Profile UI Template for generic usage in Angular
+Company Profile UI Template is modern, responsive and customisable company profile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.
 
 <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png" alt="web-ui-template" width="80"/>
 

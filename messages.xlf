@@ -2346,7 +2346,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.companyProfileUITemplate.description" datatype="html">
-        <source>Company Profile UI Template for generic usage in Angular</source>
+        <source>Company Profile UI Template is modern, responsive and customisable company profile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">186</context>

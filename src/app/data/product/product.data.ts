@@ -222,12 +222,12 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'company-profile-ui-template',
         name: 'Company Profile UI',
-        description: $localize`:@@userInterfaces.companyProfileUITemplate.description:Company Profile UI Template for generic usage in Angular`,
+        description: $localize`:@@userInterfaces.companyProfileUITemplate.description:Company Profile UI Template is modern, responsive and customisable company profile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'company-profile-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/company-profile-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.companyProfileUITemplate.video.description:Modern, responsive, customisable company profile ui template written with Angular`,
+          description: $localize`:@@userInterfaces.companyProfileUITemplate.video.description:Modern, responsive and customisable company profile ui template written with Angular`,
         },
         demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-light.min.png',
         demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-dark.min.png',

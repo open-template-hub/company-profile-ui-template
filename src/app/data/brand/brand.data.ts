@@ -1,5 +1,6 @@
 export const BRAND = {
   name: 'Open Template Hub',
+  bio: $localize`:@@homePage.oth.description:Open Source first organization that helps you to minimize the effort while building a new software business with our server and UI templates`,
   logo: {
     main: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
     error: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo-broken.min.png',

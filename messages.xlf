@@ -8,6 +8,9 @@
           <context context-type="sourcefile">src/app/component/card/blog-holder-card/blog-holder-card.component.html</context>
           <context context-type="linenumber">22</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="learnMore.button" datatype="html">
+        <source>Learn more</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/card/presentation-card/presentation-card.component.html</context>
           <context context-type="linenumber">18</context>
@@ -3255,7 +3258,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.oth.description" datatype="html">
-        <source> Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates </source>
+        <source>Open Source first organization that helps you to minimize the effort while building a new software business with our server and UI templates</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.html</context>
           <context context-type="linenumber">4,8</context>

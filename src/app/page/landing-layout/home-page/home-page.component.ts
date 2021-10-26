@@ -10,6 +10,7 @@ import { Testimonial } from 'src/app/model/testimonial/testimonial.model';
 import { NpmProviderService } from 'src/app/service/provider/npm-provider.service';
 import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
+import { BRAND } from '../../../data/brand/brand.data';
 import { URLS } from '../../../data/constant';
 import { PRODUCT_LINES } from '../../../data/product/product.data';
 import { Partner } from '../../../model/partner/partner.model';
@@ -27,6 +28,7 @@ export class HomePageComponent implements AfterViewInit {
   npmCounterLoading = true;
   brandLogoLoaded = false;
 
+  BRAND = BRAND;
   URLS = URLS;
   PRODUCT_LINES = PRODUCT_LINES;
 
@@ -43,8 +45,8 @@ export class HomePageComponent implements AfterViewInit {
   environmentCommon = environmentCommon;
 
   testimonialsTitle = [
-    { text: $localize `:@@homePage.testimonialsTitle.1:Customer testimonials`, level: 1 },
-    { text: $localize `:@@homePage.testimonialsTitle.2:What our customers are saying...` }
+    { text: $localize`:@@homePage.testimonialsTitle.1:Customer testimonials`, level: 1 },
+    { text: $localize`:@@homePage.testimonialsTitle.2:What our customers are saying...` }
   ];
 
   customersTitle = [
@@ -149,7 +151,7 @@ export class HomePageComponent implements AfterViewInit {
     }
   }
 
-  getPresentationCardFooter(isOpenSource: boolean): string {
-    return isOpenSource ? $localize`:@@productTypeTag.openSource:opensource` : $localize`:@@productTypeTag.premium:premium`
+  getPresentationCardFooter( isOpenSource: boolean ): string {
+    return isOpenSource ? $localize`:@@productTypeTag.openSource:opensource` : $localize`:@@productTypeTag.premium:premium`;
   }
 }

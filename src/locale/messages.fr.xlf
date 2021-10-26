@@ -2575,8 +2575,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.oth.description" datatype="html">
-        <source>Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates</source>
-        <target>Minimise vos efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de micro-serveur GitHub open source et nos modèles d'interface utilisateur Web réactive + d'interface utilisateur mobile</target>
+        <source>Open Source first organization that helps you to minimize the effort while building a new software business with our server and UI templates</source>
+        <target>Première organisation Open Source qui vous aide à minimiser les efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de serveur et d'interface utilisateur</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.html</context>
           <context context-type="linenumber">5,8</context>
@@ -4191,10 +4191,14 @@
           <context context-type="sourcefile">src/app/component/card/blog-holder-card/blog-holder-card.component.html</context>
           <context context-type="linenumber">22</context>
         </context-group>
+      </trans-unit></body>
+      <trans-unit id="learnMore.button" datatype="html">
+        <source>Learn more</source>
+        <target>En savoir plus</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/card/presentation-card/presentation-card.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
-      </trans-unit></body>
+      </trans-unit>
   </file>
 </xliff>

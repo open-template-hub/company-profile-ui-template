@@ -1,11 +1,11 @@
 <!-- Contact Us -->
-<app-hero [contents]="[{text: 'Contact Us', level: 1}]"></app-hero>
+<app-hero [contents]="appHeroContent"></app-hero>
 <div class="contact-us-page-content">
   <app-card [bodyTemplate]="bodyTemplate">
     <ng-template #bodyTemplate>
       <div class="body">
         <div *ngIf="emailSent">
-          <label i18n>Thank you for reaching us. Our team will contact with you soon.</label>
+          <label i18n="@@contactUs.completed">Thank you for reaching us. Our team will contact with you soon.</label>
         </div>
         <form (ngSubmit)="onSubmit()" *ngIf="!emailSent" [formGroup]="form">
           <div
@@ -17,7 +17,7 @@
                 required
                 type="text"
             />
-            <h4 i18n>First Name</h4>
+            <h4 i18n="@@contactUs.firstName">First Name</h4>
           </div>
           <div
               [class.error-input]="submitted && form.controls.secondName.invalid"
@@ -27,7 +27,7 @@
                 placeholder="Doe"
                 required
                 type="text"/>
-            <h4 i18n>Last Name</h4>
+            <h4 i18n="@@contactUs.lastLane">Last Name</h4>
           </div>
           <div
               [class.error-input]="submitted && form.controls.workEmail.invalid"
@@ -38,7 +38,7 @@
                 required
                 type="text"
             />
-            <h4 i18n>Email</h4>
+            <h4 i18n="@@contactUs.email">Email</h4>
           </div>
           <div
               [class.error-input]="submitted && form.controls.workPhone.invalid"
@@ -48,7 +48,7 @@
                 placeholder="+5 (555) 555-5555"
                 type="text"
             />
-            <h4 i18n>Phone Number</h4>
+            <h4 i18n="@@contactUs.phoneNumber">Phone Number</h4>
           </div>
           <div
               [class.error-input]="submitted && form.controls.companyWebsite.invalid"
@@ -58,29 +58,27 @@
                 placeholder="example.com"
                 type="text"
             />
-            <h4 i18n>Website</h4>
+            <h4 i18n="@@contactUs.website">Website</h4>
           </div>
           <div [class.error-input]="submitted && form.controls.companySize.invalid" class="input-with-label">
             <select (change)="changeCompanySize($event)" formControlName="companySize">
-              <option class="default-option" disabled i18n value="">
+              <option i18n="@@contactUs.rangeOfEmployees" class="default-option" disabled value="">
                 Select range of employees
               </option>
               <option *ngFor="let option of sizeOptions" [ngValue]="option">
                 {{ option }}
               </option>
             </select>
-            <h4 i18n>Company Size</h4>
+            <h4 i18n="@@contactUs.companySize">Company Size</h4>
           </div>
           <div [class.error-input]="submitted && form.controls.country.invalid" class="input-with-label">
             <select (change)="changeCountry($event)" formControlName="country">
-              <option class="default-option" disabled i18n value="">
-                Select a country
-              </option>
+              <option i18n="@@contactUs.selectCountry" class="default-option" disabled value="">Select a country</option>
               <option *ngFor="let country of countries" [ngValue]="country">
                 {{ country }}
               </option>
             </select>
-            <h4>Country</h4>
+            <h4 i18n="@@contactUs.country">Country</h4>
           </div>
           <div
               [class.error-input]="submitted && form.controls.anythingElse.invalid"
@@ -88,14 +86,14 @@
           >
           <textarea
               formControlName="anythingElse"
-              i18n-placeholder
-              maxlength="500" placeholder="Tell us more about your project, needs, and timeline...."
+              maxlength="500"
+              i18n-placeholder="@@contactUs.yourMessage.placeholder" placeholder="Tell us more about your project, needs, and timeline...."
               rows="5"
           ></textarea>
-            <h4>Your Message</h4>
+            <h4 i18n="@@contactUs.yourMessage">Your Message</h4>
           </div>
           <div class="button-area">
-            <app-button [icon]="'envelope'" [text]="'CONTACT US'">
+            <app-button [icon]="'envelope'" i18n-text="@@contactUs.contactUsButton" text="CONTACT US">
             </app-button>
           </div>
         </form>
@@ -114,9 +112,8 @@
   <div class="footer-card-wrapper">
     <i aria-hidden="true" class="fa fa-comments fa-fw"></i>
     <div class="footer-card-right-column">
-      <h4 i18n>General Communication</h4>
-      <h4>
-        <ng-container i18n>For general queries, including partnership opportunities, please email</ng-container>
+      <h4 i18n="@@contactUs.generalCommunication.header">General Communication</h4>
+      <h4 i18n="@@contactUs.generalCommunication.description">For general queries, including partnership opportunities, please email
         <a [href]="'mailto: ' + environmentCommon.oth.email" class="theme-color-link">
           {{ environmentCommon.oth.email }}
         </a>
@@ -126,10 +123,9 @@
   <div class="footer-card-wrapper">
     <i aria-hidden="true" class="fa fa-life-ring fa-fw"></i>
     <div class="footer-card-right-column">
-      <h4 i18n>Technical or account support</h4>
-      <h4>
-        <ng-container i18n>We're here to help! If you have any technical issues,</ng-container>
-        <a [routerLink]="URLS.contactUs" class="theme-color-link" i18n>
+      <h4 i18n="@@contactUs.technicalSupport.header">Technical or account support</h4>
+      <h4 i18n="@@contactUs.technicalSupport.description">We're here to help! If you have technical issues,
+        <a [href]="URLS.maintenance" class="theme-color-link">
           contact support
         </a>
       </h4>

@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PROFILE_IMG, URLS } from '../../../data/constant';
-import { EventTypes } from '../../../data/event/events.data';
+import { EventTypes } from '../../../data/deprecated/event/events.data';
 import { BusinessLogicService } from '../../../service/business-logic/business-logic.service';
 import { EventService } from '../../../service/event/event.service';
 import { FileStorageService } from '../../../service/file-storage/file-storage.service';

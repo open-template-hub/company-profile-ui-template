@@ -16,14 +16,19 @@
           <div class="body">
             <p>{{ product.description }}</p>
             <div *ngIf="product.openSource" class="button-wrapper">
-              <app-brand-button
-                  (click)="redirect()"
-                  [icon]="environmentCommon.website.github.cssClass"
-                  i18n-text text="Open Source"></app-brand-button>
+              <app-brand-button (click)="redirect( this.product.url )"
+                                [icon]="environmentCommon.website.github.cssClass"
+                                i18n-text="@@productPage.openSource.button" text="Open Source">
+              </app-brand-button>
 
-              <app-button
-                  (click)="router.navigate([URLS.contactUs])"
-                  i18n-text text="Professional Help"></app-button>
+              <app-button *ngIf="productLineKey !== 'generator'" (click)="router.navigate([URLS.contactUs])"
+                          i18n-text="@@productPage.professional.button"
+                          text="Professional Help">
+              </app-button>
+              <app-brand-button *ngIf="productLineKey === 'generator'" (click)="redirect( this.product.urlAlter )"
+                                [icon]="environmentCommon.website.npm.cssClass"
+                                i18n-text="@@productPage.downloadPackage.button" text="Download Package">
+              </app-brand-button>
             </div>
             <div *ngIf="!product.openSource" class="button-wrapper">
               <app-button
@@ -40,6 +45,10 @@
           [productLineKey]="productLineKey"
           [product]="product"></app-product-presentation>
     </div>
+  </div>
+
+  <div class="screenshots-wrapper" *ngIf="product.screenshots">
+    <app-screenshot-swiper [screenshots]="product.screenshots"></app-screenshot-swiper>
   </div>
 
   <div *ngIf="isOpenSource && !product.counters" class="counters">
@@ -67,7 +76,25 @@
   <ng-container [ngSwitch]="productLineKey">
     <ng-container *ngSwitchCase="'services'" [ngSwitch]="product.key">
       <!-- Todo: Show something related with services instead of price plan -->
+
+      <!-- Testimonials -->
+      <app-hero [contents]="testimonialsTitle"></app-hero>
+      <div class="cards-wrapper">
+        <app-testimonial-card
+            *ngFor="let testimonial of TESTIMONIALS"
+            [testimonial]="testimonial">
+        </app-testimonial-card>
+        <app-button i18n-text="@@productPage.readMoreStories" text="Read More Stories" [routerLink]="URLS.customers"
+                    [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']">
+        </app-button>
+      </div>
+
     </ng-container>
+
+    <ng-container *ngSwitchCase="'generator'" [ngSwitch]="product.key">
+      <!-- Todo: Show something related with generators instead of price plan -->
+    </ng-container>
+
     <ng-container *ngSwitchDefault [ngSwitch]="product.key">
       <div class="pricing-plan-wrapper">
         <app-price-plan [productLineKey]="productLineKey" [product]="product">
@@ -76,33 +103,41 @@
       <div *ngIf="commitActivities.length > 0" class="activity-history-wrapper">
         <app-activity-history-card
             *ngIf="product.openSource"
-            [activities]="commitActivities" i18n-title
-            title="Activity history">
+            i18n-title="@@productPage.activityHistory.title" title="Activity history"
+            [activities]="commitActivities">
         </app-activity-history-card>
       </div>
+    </ng-container>
+  </ng-container>
 
-      <!-- Related Products -->
-      <app-hero
-          [contents]="[{ text: 'Related Products', level: 2 }]"></app-hero>
-      <div class="flexible-cards-wrapper">
-        <ng-container *ngFor="let productLine of PRODUCT_LINES">
-          <ng-container
-              *ngIf="productLineKey === 'premium' ? productLine.key === 'servers' : productLine.key === productLineKey || productLine.key === 'premium'">
-            <ng-container *ngFor="let relatedProduct of productLine.products">
-              <app-presentation-card
-                  *ngIf="product.key !== relatedProduct.key"
-                  [class]="relatedProduct.color ? relatedProduct.color : ''"
-                  [footerText]="relatedProduct.openSource ? '#opensource' : '#premium'"
-                  [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
-                  [imgHeight]="150"
-                  [secondaryText]="relatedProduct.description"
-                  [src]="relatedProduct.logo"
-                  [title]="relatedProduct.name"
-                  class="related-product"></app-presentation-card>
-            </ng-container>
+  <!-- Tech Stack -->
+  <ng-container *ngIf="product.techStack">
+    <app-hero [contents]="[{ text: 'Tech Stack', level: 2 }]"></app-hero>
+    <app-tech-stack-card [techStack]="product.techStack"></app-tech-stack-card>
+  </ng-container>
+
+  <!-- Related Products -->
+  <ng-container *ngIf="productLineKey !== 'services'">
+    <app-hero
+        [contents]="[{ text: 'Related Products', level: 2 }]"></app-hero>
+    <div class="flexible-cards-wrapper">
+      <ng-container *ngFor="let productLine of PRODUCT_LINES">
+        <ng-container
+            *ngIf="productLineKey === 'premium' ? productLine.key === 'server' : productLine.key === productLineKey || productLine.key === 'premium'">
+          <ng-container *ngFor="let relatedProduct of productLine.products">
+            <app-presentation-card
+                *ngIf="product.key !== relatedProduct.key"
+                [class]="relatedProduct.color ? relatedProduct.color : ''"
+                [footerText]=getPresentationCardFooter(relatedProduct.openSource)
+                [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
+                [imgHeight]="150"
+                [secondaryText]="relatedProduct.description"
+                [src]="relatedProduct.logo"
+                [title]="relatedProduct.name"
+                class="related-product"></app-presentation-card>
           </ng-container>
         </ng-container>
-      </div>
-    </ng-container>
+      </ng-container>
+    </div>
   </ng-container>
 </div>

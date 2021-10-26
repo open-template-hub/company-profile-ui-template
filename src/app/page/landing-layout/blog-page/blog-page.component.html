@@ -1,0 +1,8 @@
+<div class="raw-content-page-layout">
+  <app-hero [contents]="[{ text: 'Blog', level: 1 }]"></app-hero>
+  <div class="flexible-cards-wrapper">
+    <ng-container *ngFor="let blog of BLOG">
+      <app-blog-holder-card [blog]="blog" class="blog-holder-card" (click)="openBlog(blog.tag, blog.key)"></app-blog-holder-card>
+    </ng-container>
+  </div>
+</div>

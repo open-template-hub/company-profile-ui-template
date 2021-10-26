@@ -1,0 +1,17 @@
+<div class="raw-content-page-layout">
+  <app-hero [contents]="[{ text: blog.title, level: 1 }]"></app-hero>
+  <div class="blog-content-wrapper">
+    <app-blog-card
+        [date]="blog.date"
+        [src]="'./assets/blog/' + blog.url"></app-blog-card>
+  </div>
+
+  <app-button [text]="'Back'" [routerLink]="URLS.blog" [icon]="'chevron-left'"
+              [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']">
+  </app-button>
+
+  <app-hero [contents]="[{ text: 'About the Author', level: 2 }]"></app-hero>
+  <div class="employees-wrapper">
+    <app-employee-card [employee]="blog.author"></app-employee-card>
+  </div>
+</div>

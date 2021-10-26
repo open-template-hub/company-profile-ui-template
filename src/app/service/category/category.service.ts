@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
-import { CATEGORIES, CATEGORIES_MAP } from '../../data/category/category.data';
+import { CATEGORIES, CATEGORIES_MAP } from '../../data/deprecated/category/category.data';
 
 @Injectable( {
   providedIn: 'root'

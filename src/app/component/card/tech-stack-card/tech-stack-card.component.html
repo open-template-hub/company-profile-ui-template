@@ -1,0 +1,12 @@
+<app-card *ngIf="techStack" [bodyTemplate]="bodyTemplate" class="tech-stack-card">
+
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div class="body">
+      <div class="row" *ngFor="let tech of techStack">
+        <img [src]="tech.src" height="35" [alt]="tech.description"/>
+        <p>{{ tech.description }}</p>
+      </div>
+    </div>
+  </ng-template>
+</app-card>

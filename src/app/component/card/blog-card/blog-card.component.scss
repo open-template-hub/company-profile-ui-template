@@ -1,0 +1,58 @@
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
+
+.blog-card {
+
+  & .body {
+    & p:last-child {
+      text-align: right;
+    }
+  }
+
+  & .footer {
+    @include card.default-footer;
+    @include card.default-footer-border-color;
+    @include util.flex-layout-row;
+
+    justify-content: flex-end;
+
+    & img {
+      height: 35px;
+      margin-right: 10px;
+    }
+
+    & small {
+      color: var(--lighter-contrast);
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+
+  .blog-card {
+
+    & .body {
+      padding: 30px 20px 20px;
+      font-size: 16px;
+    }
+
+    & .footer {
+      padding: 15px 20px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+
+  .blog-card {
+
+    & .body {
+      padding: 50px 50px 20px;
+      font-size: 18px;
+    }
+
+    & .footer {
+      padding: 20px 30px;
+    }
+  }
+}

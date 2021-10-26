@@ -7,5 +7,5 @@
   <app-hero [contents]="appHeroContents"
             [heroClass]="'no-padding'"></app-hero>
   <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.error"
-                          i18n-text text="HOME"></app-information-button>
+                          i18n-text="@@notFound.home.button" text="HOME"></app-information-button>
 </div>

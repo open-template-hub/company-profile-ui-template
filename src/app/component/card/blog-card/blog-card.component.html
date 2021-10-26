@@ -1,0 +1,31 @@
+<app-card [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate" [headerTemplate]="headerTemplate"
+          class="blog-card">
+  <!-- Header -->
+  <ng-template #headerTemplate>
+    <ng-container *ngTemplateOutlet="blogHeader || defaultBlogHeader">
+      <!-- Header of the card -->
+    </ng-container>
+    <ng-template #defaultBlogHeader>
+      <div *ngIf="defaultHeaderContent" class="header">
+        {{ defaultHeaderContent }}
+      </div>
+    </ng-template>
+  </ng-template>
+
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div class="body">
+      <!-- Body of the card -->
+      <markdown class="oth-blog-markdown" [src]="src"></markdown>
+      <p>{{ date }}</p>
+    </div>
+  </ng-template>
+
+  <!-- Footer -->
+  <ng-template #footerTemplate>
+    <div class="footer">
+      <img [src]="BRAND.logo.main" alt="logo" class="brand-logo">
+      <small>Open Template Hub <span class="copyright">© 2021</span></small>
+    </div>
+  </ng-template>
+</app-card>

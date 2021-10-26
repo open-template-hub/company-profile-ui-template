@@ -1,0 +1,17 @@
+<swiper
+    [autoplay]="{ delay: 2500, disableOnInteraction: false }"
+    [breakpoints]="breakpoints"
+    [loopFillGroupWithBlank]="true"
+    [loop]="true"
+    [navigation]="isNavigationEnabled"
+    [pagination]="isPaginationEnabled ? { clickable: true } : undefined"
+    [slidesPerView]="1"
+    [spaceBetween]="10">
+  <ng-template *ngFor="let screenshot of screenshots" swiperSlide>
+    <div class="content" (click)="openScreenshot(screenshot.src)">
+      <img height="auto" [src]="screenshot.src" alt="logo" class="brand-logo"
+           width="auto"/>
+      <p>{{ screenshot.description }}</p>
+    </div>
+  </ng-template>
+</swiper>

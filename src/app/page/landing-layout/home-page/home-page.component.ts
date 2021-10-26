@@ -22,15 +22,18 @@ import { AuthenticationService } from '../../../service/auth/authentication.serv
 } )
 export class HomePageComponent implements AfterViewInit {
   npmDownloadCounter = { count: 0, id: 'npmDownloadCounterElement' };
-  serverTypesCounter = { count: 7, id: 'serverTypesCounterElement' };
-  uiTypesCounter = { count: 3, id: 'uiTypesCounterElement' };
+  productTypesCounter = { count: 0, id: 'productTypesCounterElement' };
+  openSourceRatioCounter = { count: 0, id: 'openSourceRatioCounterElement' };
   npmCounterLoading = true;
   brandLogoLoaded = false;
 
   URLS = URLS;
   PRODUCT_LINES = PRODUCT_LINES;
+
+  // Todo: Change this with customers
   PARTNERS: Partner[] = PARTNERS;
-  TESTIMONIALS: Testimonial[] = TESTIMONIALS.slice(0, TESTIMONIALS.length < 3 ? TESTIMONIALS.length : 3);
+
+  TESTIMONIALS: Testimonial[] = TESTIMONIALS.slice( 0, TESTIMONIALS.length < 3 ? TESTIMONIALS.length : 3 );
   FEATURES: Feature[] = FEATURES;
 
   KILO = 1000;
@@ -40,23 +43,23 @@ export class HomePageComponent implements AfterViewInit {
   environmentCommon = environmentCommon;
 
   testimonialsTitle = [
-    { text: $localize`Customer testimonials`, level: 1 },
-    { text: $localize`What our customers are saying...` }
+    { text: $localize `:@@homePage.testimonialsTitle.1:Customer testimonials`, level: 1 },
+    { text: $localize `:@@homePage.testimonialsTitle.2:What our customers are saying...` }
   ];
 
   customersTitle = [
-    { text: $localize`From startups to the enterprise companies`, level: 1 },
-    { text: $localize`Thousands of companies in over 50 countries use Open Template Hub to start, run, and scale their businesses.` }
+    { text: $localize`:@@homePage.customersTitle.1:From startups to the enterprise companies`, level: 1 },
+    { text: $localize`:@@homePage.customersTitle.2:Thousands of companies in over 50 countries use Open Template Hub to start, run, and scale their businesses.` }
   ];
 
   whyUsTitle = [
-    { text: `Why Open Template Hub?`, level: 1 },
-    { text: `Just focus on your business and leave us all others` }
+    { text: $localize`:@@homePage.whyUsTitle.1:Why Open Template Hub?`, level: 1 },
+    { text: $localize`:@@homePage.whyUsTitle.2:Just focus on your business and leave us all others` }
   ];
 
   exploreTitle = [
-    { text: 'Explore our Products', level: 2 },
-    { text: `Explore our open source and premium products to get started today.` }
+    { text: $localize`:@@homePage.exploreTitle.1:Explore our Products`, level: 2 },
+    { text: $localize`:@@homePage.exploreTitle.2:Explore our open source and premium products to get started today.` }
   ];
 
   constructor(
@@ -96,6 +99,7 @@ export class HomePageComponent implements AfterViewInit {
       useGrouping: false,
       duration: undefined,
       formattingFn: undefined,
+      decimalPlaces: 0
     };
 
     this.npmProviderService.getNpmPackagesDownloadCount().then( ( count ) => {
@@ -104,15 +108,27 @@ export class HomePageComponent implements AfterViewInit {
       this.startCounter( options, this.npmDownloadCounter );
     } );
 
-    this.startCounter( options, this.serverTypesCounter );
+    this.productTypesCounter.count = 0;
+    this.openSourceRatioCounter.count = 0;
+    for ( const productLine of PRODUCT_LINES ) {
+      if ( productLine.key === 'generator' ) {
+        continue;
+      }
+      this.productTypesCounter.count += productLine.products.length;
 
-    this.startCounter( options, this.uiTypesCounter );
+      for ( const product of productLine.products ) {
+        if ( product.openSource ) {
+          this.openSourceRatioCounter.count++;
+        }
+      }
+    }
+    this.openSourceRatioCounter.count = ( this.openSourceRatioCounter.count / this.productTypesCounter.count ) * 100;
+
+    this.startCounter( options, this.productTypesCounter );
+    this.startCounter( options, this.openSourceRatioCounter );
   }
 
-  private startCounter(
-      options: { duration: number; useGrouping: boolean; formattingFn },
-      counter
-  ) {
+  private startCounter( options: { duration: number; useGrouping: boolean; formattingFn, decimalPlaces: number }, counter ) {
     options.formattingFn = ( n: number ) => {
       return this.countUpFormatter( n );
     };
@@ -131,5 +147,9 @@ export class HomePageComponent implements AfterViewInit {
     } else {
       console.error( eventCountUp.error );
     }
+  }
+
+  getPresentationCardFooter(isOpenSource: boolean): string {
+    return isOpenSource ? $localize`:@@productTypeTag.openSource:#opensource` : $localize`:@@productTypeTag.premium:#premium`
   }
 }

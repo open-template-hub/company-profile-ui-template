@@ -1,6 +1,6 @@
 import { LayoutModule } from '@angular/cdk/layout';
 
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +15,7 @@ import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { DpDatePickerModule } from 'ng2-date-picker';
 import { TooltipModule } from 'ng2-tooltip-directive';
 import { ImageCropperModule } from 'ngx-image-cropper';
+import { MarkdownModule } from 'ngx-markdown';
 import { ToastrModule } from 'ngx-toastr';
 import { SwiperModule } from 'swiper/angular';
 import { environment } from '../environments/environment';
@@ -107,6 +108,15 @@ import { ExternalRedirectPageComponent } from './page/splash-layout/external-red
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 import { CustomersPageComponent } from './page/landing-layout/customers-page/customers-page.component';
 import { AssetCardComponent } from './component/card/asset-card/asset-card.component';
+import { BlogPageComponent } from './page/landing-layout/blog-page/blog-page.component';
+import { BlogCardComponent } from './component/card/blog-card/blog-card.component';
+import { DocsPageComponent } from './page/landing-layout/docs-page/docs-page.component';
+import { DocCardComponent } from './component/card/doc-card/doc-card.component';
+import { PartnersPageComponent } from './page/landing-layout/partners-page/partners-page.component';
+import { BlogHolderCardComponent } from './component/card/blog-holder-card/blog-holder-card.component';
+import { BlogContentPageComponent } from './page/landing-layout/blog-page/blog-content-page/blog-content-page.component';
+import { ScreenshotSwiperComponent } from './component/swiper/screenshot-swiper/screenshot-swiper.component';
+import { TechStackCardComponent } from './component/card/tech-stack-card/tech-stack-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -201,6 +211,15 @@ FullCalendarModule.registerPlugins( [
     LeafTopSvgComponent,
     CustomersPageComponent,
     AssetCardComponent,
+    BlogPageComponent,
+    BlogCardComponent,
+    DocsPageComponent,
+    DocCardComponent,
+    PartnersPageComponent,
+    BlogHolderCardComponent,
+    BlogContentPageComponent,
+    ScreenshotSwiperComponent,
+    TechStackCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -218,7 +237,8 @@ FullCalendarModule.registerPlugins( [
     FullCalendarModule,
     SwiperModule,
     ToastrModule.forRoot( { preventDuplicates: true } ),
-    GoogleTagManagerModule.forRoot( { id: environment.analytics.google.tag } ),
+    MarkdownModule.forRoot( { loader: HttpClient }),
+    GoogleTagManagerModule.forRoot( { id: environment.analytics.googleAnalytics.tag } ),
     ServiceWorkerModule.register( 'ngsw-worker.js', {
       enabled: [ 'production', 'staging' ].includes( environment.identity ),
       // Register the ServiceWorker as soon as the app is stable

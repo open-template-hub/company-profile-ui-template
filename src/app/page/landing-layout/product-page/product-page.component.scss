@@ -83,6 +83,7 @@
       @include util.default-border-radius-product-line;
 
       margin-top: -10px;
+      justify-content: space-between;
 
       background-color: var(--shadow-lighter);
 
@@ -112,8 +113,40 @@
   }
 }
 
-app-swiper-wrapper {
-  height: 200px;
+.screenshots-wrapper {
+  @include util.flex-layout-column;
+  @include util.flex-center-center;
+
+  box-sizing: border-box;
+
+  width: 90%;
+
+  padding-left: 3vw;
+  padding-right: 3vw;
+
+  padding-bottom: 100px;
+
+  text-align: center;
+
+  .product-card {
+    & .header {
+      text-align: left;
+      font-size: 20px;
+    }
+
+    & .body {
+      justify-content: flex-start;
+      background-color: transparent;
+      box-shadow: none;
+
+      & app-screenshot-swiper {
+        margin-top: 50px;
+      }
+
+      height: 350px;
+      width: 84vw;
+    }
+  }
 }
 
 .pricing-plan-wrapper,
@@ -204,6 +237,7 @@ app-swiper-wrapper {
 
     & .body {
       padding: 60px 60px 40px;
+      min-height: 280px;
 
       & .button-wrapper {
         padding: 50px 50px 0;
@@ -217,6 +251,7 @@ app-swiper-wrapper {
 
     & .right {
       width: 40%;
+      height: 500px;
     }
   }
 

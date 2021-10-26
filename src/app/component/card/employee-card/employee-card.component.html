@@ -25,6 +25,7 @@
     <div class="body">
       <p class="name">{{ employee.profile.name }}</p>
       <p class="title">{{ employee.profile.title }}</p>
+      <p class="bio">{{ employee.profile.bio }}</p>
     </div>
   </ng-template>
 
@@ -34,23 +35,17 @@
       <app-ext-link
           *ngIf="employee.profile.social.linkedIn"
           [href]="employee.profile.social.linkedIn">
-        <i
-            [class]="
-            'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-fw'
-          "
-            aria-hidden="true"
-            body>
+        <i [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-fw'"
+           aria-hidden="true"
+           body>
         </i>
       </app-ext-link>
       <app-ext-link
           *ngIf="employee.profile.social.github"
           [href]="employee.profile.social.github">
-        <i
-            [class]="
-            'fab fa-' + environmentCommon.website.github.cssClass + ' fa-fw'
-          "
-            aria-hidden="true"
-            body>
+        <i [class]="'fab fa-' + environmentCommon.website.github.cssClass + ' fa-fw'"
+           aria-hidden="true"
+           body>
         </i>
       </app-ext-link>
     </div>

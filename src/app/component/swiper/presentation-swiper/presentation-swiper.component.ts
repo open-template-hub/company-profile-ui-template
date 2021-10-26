@@ -1,5 +1,6 @@
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+import { Image } from '../../../model/image/image.model';
 
 SwiperCore.use( [ Pagination, Navigation, Autoplay ] );
 
@@ -11,7 +12,7 @@ SwiperCore.use( [ Pagination, Navigation, Autoplay ] );
 } )
 export class PresentationSwiperComponent {
 
-  @Input() items: string[] = [];
+  @Input() items: Image[] = [];
   @Input() height = 75;
 
   isNavigationEnabled = false;

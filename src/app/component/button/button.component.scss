@@ -80,6 +80,7 @@
 
   // Borders
   $border-colors: (
+      "theme-color": var(--theme-color),
       "lighter-contrast": var(--lighter-contrast)
   );
   @each $border-color-name, $border-color in $border-colors {
@@ -90,6 +91,7 @@
 
   // Font Colors
   $font-colors: (
+      "theme-color": var(--theme-color),
       "lighter-contrast": var(--lighter-contrast),
       "whitesmoke": whitesmoke
   );

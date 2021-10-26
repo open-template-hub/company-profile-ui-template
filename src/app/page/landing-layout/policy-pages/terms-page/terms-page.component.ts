@@ -7,5 +7,10 @@ import { URLS } from '../../../../data/constant';
   styleUrls: [ './terms-page.component.scss' ]
 } )
 export class TermsPageComponent {
+
   URLS = URLS;
+
+  constructor() {
+    // Intentionally Blank
+  }
 }

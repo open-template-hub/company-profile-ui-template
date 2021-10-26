@@ -1,0 +1,35 @@
+@use '../../../../styles/util/util';
+@use '../landing-layout.component';
+@use '../../../component/card/card.component';
+
+@media only screen and (max-width: 999px) {
+  .flexible-cards-wrapper {
+    & > * {
+      margin: 15px 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .flexible-cards-wrapper {
+
+    & > * {
+      box-sizing: border-box;
+      width: 500px;
+      margin: 12px 15px;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .flexible-cards-wrapper {
+
+    & > * {
+      &:hover {
+        transform: scale(1.02);
+        transition: transform .5s;
+        cursor: pointer;
+      }
+    }
+  }
+}

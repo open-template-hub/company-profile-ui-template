@@ -7,6 +7,9 @@ const exposedRouteMap = [
       { path: '/about', children: null },
       { path: '/contact-us', children: null },
       { path: '/branding', children: null },
+      { path: '/blog', children: null },
+      { path: '/docs', children: null },
+      { path: '/partners', children: null },
       { path: '/customers', children: null },
       { path: '/terms', children: null },
       { path: '/sitemap', children: null },
@@ -24,7 +27,7 @@ const exposedRouteMap = [
             ],
           },
           {
-            path: '/user-interfaces',
+            path: '/user-interface',
             children: [
               { path: '/company-profile-ui-template', children: null },
               { path: '/web-ui-template', children: null },
@@ -32,7 +35,7 @@ const exposedRouteMap = [
             ],
           },
           {
-            path: '/cli-generators',
+            path: '/generator',
             children: [
               { path: '/server-generator', children: null },
               { path: '/app-generator', children: null },

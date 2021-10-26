@@ -4,7 +4,7 @@
 .employee-card {
   & .header {
     // Design
-    margin-top: -60px;
+    margin-top: -50px;
     text-align: center;
     align-self: center;
 
@@ -19,6 +19,7 @@
       border: 2px solid var(--shadow-lighter);
       box-shadow: 0 -6px 15px -7px var(--shadow);
       width: 120px;
+      height: 120px;
       padding: 5px;
     }
   }
@@ -26,13 +27,16 @@
   & .body {
     @include card.default-body;
 
+    justify-content: flex-start;
+
     // Design
-    min-height: 120px;
+    min-height: 265px;
+    padding: 10px 20px 20px;
 
     & .name {
       // Design
       font: {
-        size: 20px;
+        size: 21px;
         weight: 500;
       }
     }
@@ -42,7 +46,18 @@
       color: var(--lighter-contrast);
 
       // Design
+      font-size: 18px;
+    }
+
+    & .bio {
+      // Color
+      color: var(--lighter);
+
+      // Design
       font-size: 17px;
+      margin-top: 10px;
+      text-overflow: ellipsis;
+      overflow: auto;
     }
   }
 
@@ -56,12 +71,70 @@
       color: var(--theme-color-lighter-6);
 
       // Design
-      margin: 0;
-      font-size: 24px;
+      margin: 0 3px;
+      font-size: 27px;
 
       &:hover {
         // Color
         color: var(--theme-color);
+      }
+    }
+  }
+}
+
+.employees-wrapper {
+  & > * {
+    margin-top: 100px;
+  }
+
+  & hr {
+    margin: 0;
+    flex-basis: 100%;
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .employees-wrapper {
+    @include util.flex-layout-column;
+    @include util.flex-center-center;
+
+    justify-content: space-evenly;
+
+    width: 100vw;
+
+    margin-bottom: 20px;
+
+    & > * {
+      width: 94vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .employees-wrapper {
+    @include util.flex-layout-row;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    margin-bottom: 50px;
+
+    & > * {
+      width: 400px;
+      margin: {
+        left: 15px;
+        right: 15px;
+      }
+    }
+  }
+
+  .employee-card {
+    & .body {
+      & .bio {
+        height: 160px;
       }
     }
   }

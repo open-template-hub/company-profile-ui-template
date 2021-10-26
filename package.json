@@ -21,7 +21,9 @@
     "start": "node server.js --configuration=production",
     "outdated": "node src/dependency-checker.ts > docs/OUTDATED.md",
     "test": "ng test",
-    "updateMessages": "node src/messages-generator.ts"
+    "updateMessages": "ng extract-i18n && node ./src/messages-generator.js",
+    "serve:local:en": "ng serve -c=local",
+    "serve:local:fr": "ng serve -c=fr"
   },
   "dependencies": {
     "@angular/animations": "^12.2.5",
@@ -56,12 +58,14 @@
     "ng2-date-picker": "^12.0.3",
     "ng2-tooltip-directive": "^2.10.1",
     "ngx-image-cropper": "^4.0.1",
+    "ngx-markdown": "^12.0.1",
     "ngx-toastr": "^14.1.3",
     "path": "^0.12.7",
     "rxjs": "^7.3.0",
     "simple-icons": "^5.13.0",
     "swiper": "^7.0.4",
     "tslib": "^2.3.0",
+    "xmlserializer": "^0.6.1",
     "zone.js": "^0.11.4"
   },
   "devDependencies": {

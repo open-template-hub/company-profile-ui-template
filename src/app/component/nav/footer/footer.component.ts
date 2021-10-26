@@ -25,6 +25,9 @@ export class FooterComponent {
   BRAND = BRAND;
   URLS = URLS;
 
+  POWERED_BY_LIGHT = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-light-mode.min.png';
+  POWERED_BY_DARK = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-dark-mode.min.png';
+
   appVersion = '1.0.0';
   poweredBy: string;
 
@@ -37,23 +40,7 @@ export class FooterComponent {
   ) {
     this.appVersion = themeService.appVersion;
     this.themeService.darkLightSetting.subscribe( darkLightSetting => {
-      switch ( darkLightSetting ) {
-        case DarkLightSettings.dark: {
-          this.poweredBy = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-dark-mode.min.png';
-          break;
-        }
-        case DarkLightSettings.light: {
-          this.poweredBy = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-light-mode.min.png';
-          break;
-        }
-        case DarkLightSettings.auto:
-        default: {
-          this.updatePoweredByWithDarkLightMode();
-          window.matchMedia( '(prefers-color-scheme: dark)' ).addEventListener( 'change', () => {
-            this.updatePoweredByWithDarkLightMode();
-          } );
-        }
-      }
+      this.poweredBy = this.getSrcWithDarkLightSetting( darkLightSetting, this.POWERED_BY_LIGHT, this.POWERED_BY_DARK );
     } );
   }
 
@@ -61,11 +48,17 @@ export class FooterComponent {
     return this.router.url;
   }
 
-  private updatePoweredByWithDarkLightMode() {
-    if ( window.matchMedia && window.matchMedia( '(prefers-color-scheme: dark)' ).matches ) {
-      this.poweredBy = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-dark-mode.min.png';
-    } else {
-      this.poweredBy = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-light-mode.min.png';
+  getSrcWithDarkLightSetting( darkLightSetting: string, light: string, dark: string ) {
+    switch ( darkLightSetting ) {
+      case DarkLightSettings.light: { return light; }
+      case DarkLightSettings.dark: { return dark; }
+      case DarkLightSettings.auto:
+      default: {
+        window.matchMedia( '(prefers-color-scheme: dark)' ).addEventListener( 'change', () => {
+          this.poweredBy = this.themeService.selectDarkLightByCSS( light, dark );
+        } );
+        return this.themeService.selectDarkLightByCSS( light, dark );
+      }
     }
   }
 }

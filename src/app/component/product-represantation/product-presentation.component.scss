@@ -22,26 +22,50 @@
     width: 100%;
   }
 
-  & .presentation-card, & .features-card {
+  & .presentation-card, & .features-card, & .video-card {
     @include util.default-shadow;
     @include util.default-border-radius;
 
     background-color: var(--shadow-lighter);
 
     & .title, & .feature-title {
-      font-size: 19px;
       margin: 15px 0;
+      font-size: 19px;
     }
   }
 
   & .features-card {
     text-align: left;
 
-    & .title, & .feature-title {
-      font-weight: 500;
+    & .details {
+      font-size: 18px;
+      margin-top: 19px;
 
-      &:first-child {
-        margin-top: 10px;
+      & p:first-child {
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+    }
+
+    & .feature-title {
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+  }
+
+  & .video-card {
+    & .body {
+      & video {
+        @include util.default-border-radius-image;
+        max-width: 100%;
+      }
+
+      & hr {
+        margin:  20px 0 0;
+        width: 100%;
+        border-color: var(--theme-color-lighter-4);
       }
     }
   }

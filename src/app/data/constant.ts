@@ -44,10 +44,10 @@ export const OthGithubName = 'open-template-hub';
 export const Authors = 'Fatih Turker, Furkan Yavuz, Mert Sarac';
 
 export const GithubCounters = {
-  Stars: 'Stars',
-  Forks: 'Forks',
-  Subscribers: 'Subscribers',
-  ReleaseVersion: 'Release Version',
+  Stars: $localize `:@@githubCounters.stars:Stars`,
+  Forks: $localize `:@@githubCounters.forks:Forks`,
+  Subscribers: $localize `:@@githubCounters.subscribers:Subscribers`,
+  ReleaseVersion: $localize `:@@githubCounters.releaseVersion:Release Version`
 };
 
 export const PROFILE_IMG = './assets/common/profile-img.png';
@@ -93,6 +93,9 @@ export const URLS_RAW = {
   signup: 'signup',
   login: 'login',
   branding: 'branding',
+  blog: 'blog',
+  docs: 'docs',
+  partners: 'partners',
   customers: 'customers',
   forgetPassword: 'forget-password',
   resetPassword: 'reset-password',
@@ -152,6 +155,9 @@ export const URLS = {
   signup: '/' + URLS_RAW.signup,
   login: '/' + URLS_RAW.login,
   branding: '/' + URLS_RAW.branding,
+  blog: '/' + URLS_RAW.blog,
+  docs: '/' + URLS_RAW.docs,
+  partners: '/' + URLS_RAW.partners,
   customers: '/' + URLS_RAW.customers,
   forgetPassword: '/' + URLS_RAW.forgetPassword,
   resetPassword: '/' + URLS_RAW.resetPassword,

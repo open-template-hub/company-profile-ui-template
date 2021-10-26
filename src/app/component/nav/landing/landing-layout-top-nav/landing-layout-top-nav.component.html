@@ -1,4 +1,4 @@
-<nav class="top-nav">
+<nav class="top-nav" #dropdownMenuParent>
   <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
      [routerLink]="URLS.root"
      class="brand">
@@ -6,20 +6,23 @@
     <h2>Open Template Hub</h2>
   </a>
   <div class="left-item-wrapper">
-    <a (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
+    <a (mouseenter)="dropdownMenuProducts.openDropdown(); dropdownMenuServices.closeDropdown()"
+       (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()">
       <app-dropdown-menu
           #dropdownMenuProducts
           [minimumColumns]="4"
-          [productLines]="PRODUCT_LINES">
-        <span>Products</span>
+          [productLines]="PRODUCT_LINES"
+          [dropdownParent]="dropdownMenuParent">
+        <span i18n="@@landingLayoutTopNav.products">Products</span>
         <i aria-hidden="true" class="material-icons">{{
           dropdownMenuProducts.isDropdownOpen ? "expand_less" : "expand_more"
           }}</i>
       </app-dropdown-menu>
     </a>
-    <a (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()">
-      <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES">
-        <span>Services</span>
+    <a (mouseenter)="dropdownMenuServices.openDropdown(); dropdownMenuProducts.closeDropdown()"
+       (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()">
+      <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES" [dropdownParent]="dropdownMenuParent">
+        <span i18n="@@landingLayoutTopNav.services">Services</span>
         <i aria-hidden="true" class="material-icons">
           {{ dropdownMenuServices.isDropdownOpen ? "expand_less" : "expand_more" }}
         </i>
@@ -27,16 +30,14 @@
     </a>
     <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
        [routerLink]="URLS.about">
-      <span>
-        About
-      </span>
+      <span i18n="@@landingLayoutTopNav.about">About</span>
     </a>
   </div>
   <div class="right-item-wrapper">
     <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
        [routerLink]="URLS.contactUs"
        class="contact">
-      <span> Contact Us </span>
+      <span i18n="@@landingLayoutTopNav.contactUs">Contact Us</span>
     </a>
   </div>
 </nav>

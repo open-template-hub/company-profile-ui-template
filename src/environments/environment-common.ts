@@ -6,7 +6,8 @@ export const environmentCommon = {
       twitter: 'opentemplatehub',
       linkedin: 'open-template-hub',
       github: 'open-template-hub',
-      productHunt: '@open_template_hub'
+      productHunt: '@open_template_hub',
+      npm: '@open-template-hub'
     },
     email: 'info@opentemplatehub.com'
   },
@@ -127,6 +128,20 @@ export const environmentCommon = {
       tag: environment.mail.outlook.tag,
     },
 
+    // analytics
+    googleAnalytics: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/google-analytics.png',
+      cssClass: 'google',
+      url: 'https://analytics.google.com',
+      tag: environment.analytics.googleAnalytics.tag,
+    },
+    matomo: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/matomo.png',
+      cssClass: 'matomo',
+      url: 'https://matomo.org',
+      tag: environment.analytics.matomo.tag,
+    },
+
     // other
     instagram: {
       cssClass: 'instagram',
@@ -149,14 +164,16 @@ export const environmentCommon = {
       cssClass: 'google-calendar'
     },
     npm: {
+      cssClass: 'npm',
+      url: 'https://www.npmjs.com',
       api: {
         download: 'https://api.npmjs.org/downloads/point'
       }
     }
   },
 
-  languages: {
-    english: 'en-US',
-    french: 'fr'
-  }
+  languages: [
+    { name: 'English', code: 'en-US', emoji: '🇺🇸' },
+    { name: 'French', code: 'fr', emoji: '🇫🇷' }
+  ]
 };

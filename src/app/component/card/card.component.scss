@@ -22,6 +22,8 @@
   @include util.default-shadow;
   @include util.default-border-radius;
 
+  box-sizing: border-box;
+
   // Position
   z-index: 10;
 
@@ -50,7 +52,7 @@
   // Design
   box-sizing: border-box;
   width: 100%;
-  min-height: 50px;
+  min-height: 70px;
   border-top: {
     width: 2px;
     style: solid;
@@ -128,14 +130,7 @@
 }
 
 .cards-wrapper {
-  @include util.flex-layout-row;
-
-  flex-wrap: wrap;
   width: 100%;
-
-  & > * {
-    width: 300px;
-  }
 }
 
 @media only screen and (max-width: 999px) {
@@ -159,7 +154,15 @@
 
 @media only screen and (min-width: 1000px) {
   .cards-wrapper, .flexible-cards-wrapper {
+    @include util.flex-layout-row;
+
+    flex-wrap: wrap;
+    font-size: 18px;
+    padding-top: 20px;
+
     & > * {
+      width: 300px;
+
       margin: {
         left: 15px;
         right: 15px;
@@ -168,11 +171,6 @@
   }
 
   .cards-wrapper {
-    @include util.margin-x-auto;
-
-    font-size: 18px;
-    padding-top: 20px;
-
     width: 1000px;
   }
 
@@ -182,11 +180,5 @@
     justify-content: center;
 
     width: 85vw;
-
-    flex-wrap: wrap;
-
-    & > * {
-      width: 300px;
-    }
   }
 }

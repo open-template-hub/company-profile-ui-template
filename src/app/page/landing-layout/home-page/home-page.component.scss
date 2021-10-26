@@ -37,6 +37,12 @@
   @include util.flex-center-center;
   @include util.margin-x-auto;
 
+  & .ratio {
+    @include util.flex-layout-row;
+    @include util.flex-center-center;
+    @include util.margin-x-auto;
+  }
+
   & .counter-wrapper {
     @include util.flex-layout-column;
     @include util.flex-center-center;
@@ -62,7 +68,7 @@
   }
 }
 
-.business-partners-wrapper {
+.customers-wrapper {
   @include util.flex-layout-column;
   @include util.flex-center-center;
 

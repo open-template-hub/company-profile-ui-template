@@ -4,16 +4,18 @@
   <!-- Header -->
   <ng-template #headerTemplate>
     <div [class.left]="arrow === 'left'" [class.right]="arrow === 'right'" class="header">
-      <h4>{{ timelineItem.title }}</h4>
-      <h5>{{ timelineItem.date }}</h5>
+      <p>{{ timelineItem.title }}</p>
+      <p>{{ timelineItem.date }}</p>
     </div>
   </ng-template>
 
   <!-- Body -->
   <ng-template #bodyTemplate>
     <div class="body">
-      <img *ngIf="timelineItem.img" [src]="timelineItem.img" alt="img">
-      <h3>{{ timelineItem.paragraph }}</h3>
+      <div class="img-wrapper">
+        <img *ngIf="timelineItem.img" [src]="timelineItem.img" alt="img">
+      </div>
+      <p>{{ timelineItem.paragraph }}</p>
     </div>
   </ng-template>
 

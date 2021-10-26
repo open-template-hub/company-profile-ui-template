@@ -1,8 +1,12 @@
 <ng-container *ngIf="product">
   <div class="product-presentation" [ngSwitch]="getPresentationModel()">
     <!-- Command Line Presentation -->
-    <app-animated-code-editor *ngSwitchCase="'command-line'"
-                              [commandLines]="product.commandLines"></app-animated-code-editor>
+    <ng-container *ngSwitchCase="'command-line'">
+      <app-animated-code-editor
+          [commandLines]="product.commandLines"></app-animated-code-editor>
+      <hr class="command-line-hr"/>
+      <p class="command-line-title">Generate your project in couple of seconds.</p>
+    </ng-container>
 
     <!-- Video Presentation -->
     <app-card *ngSwitchCase="'video'" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="video-card">

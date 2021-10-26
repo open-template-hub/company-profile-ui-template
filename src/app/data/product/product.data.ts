@@ -119,7 +119,8 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.node,
           TECH_STACK.express,
           TECH_STACK.postgreSql,
-          TECH_STACK.heroku
+          TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
       {
@@ -139,6 +140,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.postgreSql,
           TECH_STACK.mongoDb,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
       {
@@ -158,6 +160,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.postgreSql,
           TECH_STACK.mongoDb,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
       {
@@ -175,6 +178,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.node,
           TECH_STACK.express,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
       {
@@ -193,6 +197,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.express,
           TECH_STACK.mongoDb,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
       {
@@ -210,6 +215,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.express,
           TECH_STACK.mongoDb,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
     ],
@@ -262,7 +268,8 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.fontAwesome,
           TECH_STACK.heroku,
           TECH_STACK.sass,
-          TECH_STACK.markdown
+          TECH_STACK.markdown,
+          TECH_STACK.npm
         ],
       },
       {
@@ -275,7 +282,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-dark.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/web-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.webUITemplate.video.description:Modern, responsive, customisable web ui template written with Angular`,
+          description: $localize`:@@userInterfaces.webUITemplate.video.description:Modern, responsive and customisable company profile ui template written with Angular`,
         },
         screenshots: [
           {
@@ -308,7 +315,8 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.fontAwesome,
           TECH_STACK.heroku,
           TECH_STACK.sass,
-          TECH_STACK.markdown
+          TECH_STACK.markdown,
+          TECH_STACK.npm
         ]
       },
       {
@@ -321,7 +329,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-dark.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/mobile-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.mobileUITemplate.video.description:Modern, responsive, customisable mobile ui template written with React Native`,
+          description: $localize`:@@userInterfaces.mobileUITemplate.video.description:Modern, responsive and customisable company profile ui template written with React Native`,
         },
         screenshots: [
           {
@@ -343,7 +351,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         techStack: [
           TECH_STACK.typeScript,
           TECH_STACK.reactNative,
-          TECH_STACK.fontAwesome
+          TECH_STACK.fontAwesome,
+          TECH_STACK.npm
         ]
       },
     ],
@@ -512,6 +521,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.node,
           TECH_STACK.express,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
     ],

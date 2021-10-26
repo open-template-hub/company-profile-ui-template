@@ -12,7 +12,7 @@
 
     padding: 20px 30px;
 
-    font-size: 19px;
+    font-size: 17px;
 
     & .row {
       @include util.flex-center-center;
@@ -23,8 +23,6 @@
       background-color: var(--theme-color-lighter-9);
       border: 1px solid var(--theme-color-lighter-7);
       box-shadow: 0 3px 12px -4px var(--hover);
-
-      padding: 9px;
       margin: 5px;
 
       justify-content: flex-start;
@@ -43,7 +41,9 @@
 
       & .row {
         @include util.flex-layout-column;
+
         width: 100%;
+        padding: 20px;
 
         & img {
           margin: 20px 0;
@@ -60,7 +60,9 @@
 
       & .row {
         @include util.flex-layout-row;
+
         width: 32%;
+        padding: 9px;
 
         & img {
           margin-left: 45px;

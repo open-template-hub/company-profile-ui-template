@@ -76,8 +76,11 @@ export const environment: EnvironmentModel = {
   },
 
   analytics: {
-    google: {
+    googleAnalytics: {
       tag: 'GTM-P4FHG76'
+    },
+    matomo: {
+      tag: ''
     }
   }
 };

@@ -5,7 +5,7 @@ import { environment } from '../../../../environments/environment';
 import { CalendarEvent } from '../../../component/calendar/calendar.component';
 import { Rate } from '../../../component/rate-bar/rate-bar.component';
 import { PROFILE_IMG, URLS } from '../../../data/constant';
-import { EventTypes } from '../../../data/event/events.data';
+import { EventTypes } from '../../../data/deprecated/event/events.data';
 import { AuthToken } from '../../../model/auth/auth-token.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { BusinessLogicService } from '../../../service/business-logic/business-logic.service';

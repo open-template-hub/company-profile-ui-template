@@ -1,4 +1,4 @@
-import { Event } from '../../model/event/event.model';
+import { Event } from '../../../model/event/event.model';
 
 export const enum EventTypes {
   Recommended,

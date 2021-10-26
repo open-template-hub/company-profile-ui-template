@@ -180,12 +180,13 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'analytics-server-template',
         name: 'Analytics Server',
-        description: $localize`:@@productLinesData.analyticsServerTemplate.description:Analytics Server Template for generic usage in Node.js`,
+        description: $localize`:@@productLinesData.analyticsServerTemplate.description:Analytics Server Template is a generic open source analytics server that has simple yet powerful design to connect your business with third party analytics service providers (like Google Analytics or Matomo).`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'analytics-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/analytics-server-logo.min.png',
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        integrations: environment.analytics,
         techStack: [
           TECH_STACK.typeScript,
           TECH_STACK.node,
@@ -241,15 +242,15 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
           {
             src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-1.min.png',
-            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.3:Reusable components`
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.3:Reusable Components`
           },
           {
             src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-2.min.png',
-            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.4:Customisable theme colors`
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.4:Customisable Theme Colors`
           },
           {
             src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-3.min.png',
-            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.5:Customisable theme design`
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.5:Customisable Theme Design`
           }
         ],
         openSource: true,
@@ -279,23 +280,23 @@ export const PRODUCT_LINES: ProductLine[] = [
         screenshots: [
           {
             src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
-            description: $localize`:@@userInterfaces.webUITemplate.screenshot.1:Responsive Design`
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.1:Responsive Design`
           },
           {
             src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-dark.min.png',
-            description: $localize`:@@userInterfaces.webUITemplate.screenshot.2:Dark Mode Support`
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.2:Dark Mode Support`
           },
           {
             src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-1.min.png',
-            description: $localize`:@@userInterfaces.webUITemplate.screenshot.3:Reusable components`
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.3:Reusable Components`
           },
           {
             src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-2.min.png',
-            description: $localize`:@@userInterfaces.webUITemplate.screenshot.4:Customisable theme colors`
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.4:Customisable Theme Colors`
           },
           {
             src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/company-profile-ui-screenshot-3.min.png',
-            description: $localize`:@@userInterfaces.webUITemplate.screenshot.5:Customisable theme design`
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.5:Customisable Theme Design`
           }
         ],
         openSource: true,

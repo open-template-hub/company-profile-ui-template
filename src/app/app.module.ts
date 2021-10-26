@@ -238,7 +238,7 @@ FullCalendarModule.registerPlugins( [
     SwiperModule,
     ToastrModule.forRoot( { preventDuplicates: true } ),
     MarkdownModule.forRoot( { loader: HttpClient }),
-    GoogleTagManagerModule.forRoot( { id: environment.analytics.google.tag } ),
+    GoogleTagManagerModule.forRoot( { id: environment.analytics.googleAnalytics.tag } ),
     ServiceWorkerModule.register( 'ngsw-worker.js', {
       enabled: [ 'production', 'staging' ].includes( environment.identity ),
       // Register the ServiceWorker as soon as the app is stable

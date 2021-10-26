@@ -128,6 +128,20 @@ export const environmentCommon = {
       tag: environment.mail.outlook.tag,
     },
 
+    // analytics
+    googleAnalytics: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/google-analytics.png',
+      cssClass: 'google',
+      url: 'https://analytics.google.com',
+      tag: environment.analytics.googleAnalytics.tag,
+    },
+    matomo: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/matomo.png',
+      cssClass: 'matomo',
+      url: 'https://matomo.org',
+      tag: environment.analytics.matomo.tag,
+    },
+
     // other
     instagram: {
       cssClass: 'instagram',

@@ -2,6 +2,7 @@ import { Ribbon } from '../../model/ribbon/ribbon.model';
 
 export const DEFAULT_RIBBON = { theme: '', text: '' };
 
+// TODO: DEPRECATED
 export const EVENT_RIBBONS = new Map<string, Ribbon>( [
   [ 'new', { theme: 'blue', text: $localize `:@@ribbonData.new:New 🎉` } ],
   [ 'featured', { theme: 'yellow', text: $localize `:@@ribbonData.featured:Featured 🚀` } ],

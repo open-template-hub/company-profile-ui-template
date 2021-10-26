@@ -40,6 +40,7 @@ export interface EnvironmentModel {
   };
 
   analytics: {
-    google: AnalyticsModel
+    googleAnalytics: AnalyticsModel,
+    matomo: AnalyticsModel
   };
 }

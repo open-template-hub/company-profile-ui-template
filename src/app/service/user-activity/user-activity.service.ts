@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
-import { unratedCompletedEventsData } from '../../data/event/events.data';
+import { unratedCompletedEventsData } from '../../data/deprecated/event/events.data';
 import { CategoryService } from '../category/category.service';
 
 @Injectable( {

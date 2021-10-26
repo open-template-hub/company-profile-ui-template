@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { IDayCalendarConfig } from 'ng2-date-picker';
 import { ToastrService } from 'ngx-toastr';
 import { URLS } from 'src/app/data/constant';
-import { EventTypes } from '../../../data/event/events.data';
+import { EventTypes } from '../../../data/deprecated/event/events.data';
 import { BusinessLogicService } from '../../../service/business-logic/business-logic.service';
 import { CategoryService } from '../../../service/category/category.service';
 import { EventService } from '../../../service/event/event.service';

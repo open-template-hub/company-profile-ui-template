@@ -45,7 +45,7 @@ Mail Server Template is a generic open source mail server that has simple yet po
 
 ### Analytics Server
 
-Analytics Server Template for generic usage in Node.js
+Analytics Server Template is a generic open source analytics server that has simple yet powerful design to connect your business with third party analytics service providers (like Google Analytics or Matomo).
 
 <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/business-logic-server-logo.min.png" alt="business-logic-server-template" width="80"/>
 

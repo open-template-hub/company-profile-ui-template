@@ -2453,7 +2453,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.screenshot.1" datatype="html">
-        <source>iOS and Android Support</source>
+        <source>iOS Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">337</context>
@@ -2467,7 +2467,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.screenshot.3" datatype="html">
-        <source>TODO: add another screenshot</source>
+        <source>Android Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">345</context>

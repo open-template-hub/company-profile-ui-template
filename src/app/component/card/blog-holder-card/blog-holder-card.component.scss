@@ -40,9 +40,11 @@
     @include util.default-padding-line;
     @include card.default-body;
 
+    text-align: left;
+
     & .except {
       color: var(--color);
-      font-size: 17px;
+      font-size: 18px;
     }
   }
 
@@ -82,7 +84,7 @@
 @media only screen and (min-width: 1000px) {
   .blog-holder-card {
     & .body {
-      height: 190px;
+      height: 180px;
     }
   }
 }

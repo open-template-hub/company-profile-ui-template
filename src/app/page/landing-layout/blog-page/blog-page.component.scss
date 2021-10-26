@@ -1,40 +1,35 @@
 @use '../../../../styles/util/util';
 @use '../landing-layout.component';
-
-.blog-wrapper {
-  @include util.margin-x-auto;
-  @include util.flex-layout-row;
-
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  & .blog {
-    flex-grow: 1;
-    margin: 15px;
-
-    &:hover {
-      transform: scale(1.02);
-      transition: transform .5s;
-      cursor: pointer;
-    }
-  }
-}
+@use '../../../component/card/card.component';
 
 @media only screen and (max-width: 999px) {
-  .blog-wrapper {
-    & .blog {
+  .flexible-cards-wrapper {
+    & > * {
       margin: 15px 0;
-      width: 94vw;
     }
   }
 }
 
 @media only screen and (min-width: 1000px) {
-  .blog-wrapper {
-    & .blog {
+  .flexible-cards-wrapper {
+
+    & > * {
+      box-sizing: border-box;
+      width: 500px;
       margin: 12px 15px;
-      width: 31%;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .flexible-cards-wrapper {
+
+    & > * {
+      &:hover {
+        transform: scale(1.02);
+        transition: transform .5s;
+        cursor: pointer;
+      }
     }
   }
 }

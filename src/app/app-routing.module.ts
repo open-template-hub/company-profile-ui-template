@@ -19,6 +19,7 @@ import { BlogPageComponent } from './page/landing-layout/blog-page/blog-page.com
 import { BrandingPageComponent } from './page/landing-layout/branding-page/branding-page.component';
 import { ContactUsPageComponent } from './page/landing-layout/contact-us-page/contact-us-page.component';
 import { CustomersPageComponent } from './page/landing-layout/customers-page/customers-page.component';
+import { DocsContentPageComponent } from './page/landing-layout/docs-page/docs-content-page/docs-content-page.component';
 import { DocsPageComponent } from './page/landing-layout/docs-page/docs-page.component';
 import { ForgetPasswordPageComponent } from './page/landing-layout/form-pages/forget-password-page/forget-password-page.component';
 import { LoginPageComponent } from './page/landing-layout/form-pages/login-page/login-page.component';
@@ -173,6 +174,11 @@ const routes: Routes = [
       {
         path: NAVIGATIONS.blog.url + '/:blogTag' + '/' + ':blogKey',
         component: BlogContentPageComponent,
+        canActivate: [NavigationInterceptor],
+      },
+      {
+        path: NAVIGATIONS.docs.url + '/:docTag' + '/' + ':docKey',
+        component: DocsContentPageComponent,
         canActivate: [NavigationInterceptor],
       },
     ],

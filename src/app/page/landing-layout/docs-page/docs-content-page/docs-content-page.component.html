@@ -1,0 +1,19 @@
+<div class="raw-content-page-layout">
+  <app-hero [contents]="[{ text: doc.title, level: 1 }]"></app-hero>
+  <div class="doc-content-wrapper">
+    <app-doc-card
+      [date]="doc.date"
+      [src]="'./assets/docs/' + doc.url"></app-doc-card>
+  </div>
+
+  <app-button
+    [text]="'Back'"
+    [routerLink]="URLS.docs"
+    [icon]="'chevron-left'"
+    [buttonClasses]="[
+      'lighter-contrast-border-color',
+      'lighter-contrast-font-color',
+      'transparent-button'
+    ]">
+  </app-button>
+</div>

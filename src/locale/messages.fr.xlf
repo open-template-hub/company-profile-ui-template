@@ -3463,8 +3463,8 @@
           <context context-type="linenumber">193</context>
         </context-group>
       </trans-unit><trans-unit id="userInterfaces.webUITemplate.description" datatype="html">
-        <source>Web UI Template for generic usage in Angular</source>
-        <target>Modèle d'interface utilisateur Web pour une utilisation générique dans Angular</target>
+        <source>Web UI Template is modern, responsive and customisable web ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
+        <target>Le modèle d'interface utilisateur Web est un modèle d'interface utilisateur Web moderne, réactif et personnalisable pour votre entreprise. Il contient des composants réutilisables, une prise en charge de la couleur et de la conception du thème ainsi qu'une prise en charge du thème sombre.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">233</context>
@@ -3484,8 +3484,8 @@
           <context context-type="linenumber">245</context>
         </context-group>
       </trans-unit><trans-unit id="userInterfaces.mobileUITemplate.description" datatype="html">
-        <source>Mobile UI Template for generic usage in React Native</source>
-        <target>Modèle d'interface utilisateur mobile pour une utilisation générique dans React Native</target>
+        <source>Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
+        <target>Le modèle d'interface utilisateur mobile est un modèle d'interface utilisateur mobile moderne, réactif et personnalisable pour votre entreprise. Il contient des composants réutilisables, une prise en charge de la couleur et de la conception du thème ainsi qu'une prise en charge du thème sombre.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">285</context>

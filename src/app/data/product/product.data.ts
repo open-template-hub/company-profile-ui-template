@@ -268,7 +268,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'web-ui-template',
         name: 'Web UI',
-        description: $localize`:@@userInterfaces.webUITemplate.description:Web UI Template for generic usage in Angular`,
+        description: $localize`:@@userInterfaces.webUITemplate.description:Web UI Template is modern, responsive and customisable web ui template for your business. It contains reusable components, theme color and design support along with dark theme support.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'web-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
         demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
@@ -314,7 +314,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'mobile-ui-template',
         name: 'Mobile UI',
-        description: $localize`:@@userInterfaces.mobileUITemplate.description:Mobile UI Template for generic usage in React Native`,
+        description: $localize`:@@userInterfaces.mobileUITemplate.description:Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'mobile-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/mobile-ui-logo.min.png',
         demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-light.min.png',

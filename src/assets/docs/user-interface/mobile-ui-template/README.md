@@ -16,7 +16,7 @@ Open Template Hub - Mobile UI Template v3
 [![SonarCloud](https://img.shields.io/sonar/quality_gate/open-template-hub_mobile-ui-template?server=https%3A%2F%2Fsonarcloud.io&label=Sonar%20Cloud&style=for-the-badge&logo=sonarcloud)](https://sonarcloud.io/dashboard?id=open-template-hub_mobile-ui-template)
 [![BTC](https://img.shields.io/badge/Donate-BTC-ORANGE?color=F5922F&style=for-the-badge&logo=bitcoin)](https://commerce.coinbase.com/checkout/8313af5f-de48-498d-b2cb-d98819ca7d5e)
 
-Mobile UI Template for generic usage in React Native
+Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.
 
 <p align="center">
   <a href="https://opentemplatehub.com">

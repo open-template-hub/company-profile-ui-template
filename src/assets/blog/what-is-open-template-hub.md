@@ -71,13 +71,13 @@ Company Profile UI Template is modern, responsive and customisable company profi
 
 ### Web UI
 
-Web UI Template for generic usage in Angular
+Web UI Template is modern, responsive and customisable web ui template for your business. It contains reusable components, theme color and design support along with dark theme support.
 
 <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/mobile-ui-logo.min.png" alt="mobile-ui-template" width="80"/>
 
 ### Mobile UI
 
-Mobile UI Template for generic usage in React Native
+Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.
 
 You will have lots of components, screens and API calls are covered for authentication, payment, file storage, analytics, basic user profiles and controllers integrated with services endpoints.
 

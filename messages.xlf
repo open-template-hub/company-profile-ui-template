@@ -2378,7 +2378,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.webUITemplate.description" datatype="html">
-        <source>Web UI Template for generic usage in Angular</source>
+        <source>Web UI Template is modern, responsive and customisable web ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">242</context>
@@ -2403,7 +2403,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.description" datatype="html">
-        <source>Mobile UI Template for generic usage in React Native</source>
+        <source>Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">298</context>

@@ -150,6 +150,6 @@ export class HomePageComponent implements AfterViewInit {
   }
 
   getPresentationCardFooter(isOpenSource: boolean): string {
-    return isOpenSource ? $localize`:@@productTypeTag.openSource:#opensource` : $localize`:@@productTypeTag.premium:#premium`
+    return isOpenSource ? $localize`:@@productTypeTag.openSource:opensource` : $localize`:@@productTypeTag.premium:premium`
   }
 }

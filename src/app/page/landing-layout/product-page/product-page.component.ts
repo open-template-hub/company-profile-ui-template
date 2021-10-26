@@ -128,6 +128,6 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   }
 
   getPresentationCardFooter(isOpenSource: boolean): string {
-    return isOpenSource ? $localize`:@@productTypeTag.openSource:#opensource` : $localize`:@@productTypeTag.premium:#premium`
+    return isOpenSource ? $localize`:@@productTypeTag.openSource:opensource` : $localize`:@@productTypeTag.premium:premium`
   }
 }

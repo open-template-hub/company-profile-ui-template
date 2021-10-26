@@ -34,7 +34,7 @@
 
     // Color
     background-color: var(--theme-color);
-    border-bottom: 1px solid var(--theme-color-darker-5);
+    border-bottom: 1px solid var(--theme-color-darker-2);
 
     & p {
       font-size: 19px;
@@ -56,7 +56,7 @@
     justify-content: flex-start;
 
     // Design
-    height: 340px;
+    height: 350px;
 
     & .img-wrapper {
       @include util.flex-layout-column;
@@ -120,7 +120,7 @@
       }
 
       &.left::before {
-        left: calc(100% + 35px);
+        left: calc(100% + 44px);
       }
 
       &.right::before {

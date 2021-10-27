@@ -493,7 +493,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           {
             title: $localize`:@@premium.orchestrationServer.basic.title:Basic`,
             description: $localize`:@@premium.orchestrationServer.basic.description:For Individuals`,
-            features: [ [ 'true', '' ], [ '', '' ], [ '', '' ] ],
+            features: [ [ 'true', '', '' ], [ '', '' ], [ '', '' ] ],
             price: {
               currency: '$',
               value: '99',

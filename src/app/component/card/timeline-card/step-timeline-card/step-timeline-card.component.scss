@@ -1,12 +1,12 @@
 @use '../../../../../styles/util/util';
 
-@mixin marker {
+@mixin marker($size) {
   @include util.default-border-radius;
 
   position: absolute;
   content: '';
-  width: 13px;
-  height: 13px;
+  width: $size;
+  height: $size;
   background-color: var(--theme-color);
   margin-top: 4px;
 }
@@ -65,9 +65,14 @@
       text-align: left;
       margin-left: 343px;
 
-      ::before {
-        @include marker;
+      & .level1::before {
+        @include marker(13px);
         margin-left: -33px;
+      }
+
+      & .level2::before {
+        @include marker(11px);
+        margin-left: -32px;
       }
     }
 
@@ -76,9 +81,14 @@
       text-align: right;
       margin-right: 300px;
 
-      ::after {
-        @include marker;
+      & .level1::after {
+        @include marker(13px);
         margin-left: 20px;
+      }
+
+      & .level2::after {
+        @include marker(11px);
+        margin-left: 21px;
       }
     }
   }

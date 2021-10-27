@@ -57,7 +57,8 @@
               class="demonstration-image-card">
       <ng-template #bodyTemplate>
         <div class=" body">
-          <a [href]="product.demonstrationImg.src.replace('min/', '').replace('.min', '')" target="_blank">
+          <a [href]="product.demonstrationImg.src.replace('min/', '').replace('.min', '')" target="_blank"
+             rel="noopener">
             <img [src]="product.demonstrationImg.src" [alt]="product.demonstrationImg.description"/>
           </a>
           <hr/>

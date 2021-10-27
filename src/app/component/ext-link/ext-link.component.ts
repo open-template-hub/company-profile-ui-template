@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '../../../environments/environment';
-import { URLS } from '../../data/constant';
+import { URLS } from '../../data/navigation/navigation.data';
 
 @Component( {
   selector: 'app-ext-link',

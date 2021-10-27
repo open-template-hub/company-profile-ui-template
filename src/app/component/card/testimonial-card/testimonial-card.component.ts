@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
-import { DEFAULT_THEME, URLS } from '../../../data/constant';
+import { URLS } from '../../../data/navigation/navigation.data';
+import { DEFAULT_THEME } from '../../../data/theme/theme.data';
 import { Testimonial } from '../../../model/testimonial/testimonial.model';
 
 @Component( {

@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { environmentCommon } from 'src/environments/environment-common';
 import { environment } from '../../../../../environments/environment';
-import { URLS } from '../../../../data/constant';
+import { URLS } from '../../../../data/navigation/navigation.data';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { BusinessLogicService } from '../../../../service/business-logic/business-logic.service';
 import { EventService } from '../../../../service/event/event.service';

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ThemeDesignSettings } from 'src/app/data/constant';
+import { ThemeDesignSettings } from '../../../data/theme/theme.data';
 import { ThemeService } from '../../../service/theme/theme.service';
 
 @Component( {

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { URLS } from 'src/app/data/constant';
 import { PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
 import { environmentCommon } from 'src/environments/environment-common';
+import { URLS } from '../../../data/navigation/navigation.data';
 import { ProductLine } from '../../../model/product/product.model';
 
 @Component( {

@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environmentCommon } from '../../../environments/environment-common';
 import { BRAND } from '../../data/brand/brand.data';
-import { DarkLightSettings } from '../../data/constant';
+import { DarkLightSettings } from '../../data/theme/theme.data';
 import { Image } from '../../model/image/image.model';
 import { Partner } from '../../model/partner/partner.model';
 import { Product } from '../../model/product/product.model';

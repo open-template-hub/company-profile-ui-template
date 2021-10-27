@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { URLS } from '../../../data/constant';
+import { URLS } from '../../../data/navigation/navigation.data';
 
 @Component( {
   selector: 'app-cookies',

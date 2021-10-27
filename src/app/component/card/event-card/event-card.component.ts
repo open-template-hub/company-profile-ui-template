@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { DEFAULT_RIBBON, EVENT_RIBBONS } from 'src/app/data/ribbon/ribbon.data';
-import { URLS } from '../../../data/constant';
+import { URLS } from '../../../data/navigation/navigation.data';
 import { BusinessLogicService } from '../../../service/business-logic/business-logic.service';
 
 @Component( {

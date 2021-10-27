@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { createEvent, DateArray, EventAttributes } from 'ics';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from '../../../../../environments/environment-common';
-import { URLS } from '../../../../data/constant';
+import { URLS } from '../../../../data/navigation/navigation.data';
 import { EventService } from '../../../../service/event/event.service';
 import { InformationService } from '../../../../service/information/information.service';
 import { LoadingService } from '../../../../service/loading/loading.service';

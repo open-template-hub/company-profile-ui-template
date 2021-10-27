@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { version } from '../../../environments/version';
-import { DarkLightSettings, DEFAULT_THEME } from '../../data/constant';
+import { DarkLightSettings, DEFAULT_THEME } from '../../data/theme/theme.data';
 
 @Injectable( {
   providedIn: 'root'

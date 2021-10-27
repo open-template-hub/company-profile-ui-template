@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
-import { DarkLightSettings, DEFAULT_THEME } from '../../data/constant';
+import { DarkLightSettings, DEFAULT_THEME } from '../../data/theme/theme.data';
 import { AuthToken } from '../../model/auth/auth-token.model';
 import { BusinessLogicService } from '../business-logic/business-logic.service';
 import { EventService } from '../event/event.service';

@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, Input, ViewChild, } from '@angular/core';
-import { URLS } from '../../data/constant';
+import { URLS } from '../../data/navigation/navigation.data';
 import { Product, ProductLine } from '../../model/product/product.model';
 import { UtilService } from '../../service/util/util.service';
 

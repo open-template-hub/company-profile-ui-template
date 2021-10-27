@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { URLS } from '../../data/constant';
+import { URLS } from '../../data/navigation/navigation.data';
 import { Product } from '../../model/product/product.model';
 
 @Component( {

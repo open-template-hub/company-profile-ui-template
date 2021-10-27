@@ -11,7 +11,7 @@ import { NpmProviderService } from 'src/app/service/provider/npm-provider.servic
 import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { BRAND } from '../../../data/brand/brand.data';
-import { URLS } from '../../../data/constant';
+import { URLS } from '../../../data/navigation/navigation.data';
 import { PRODUCT_LINES } from '../../../data/product/product.data';
 import { Partner } from '../../../model/partner/partner.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';

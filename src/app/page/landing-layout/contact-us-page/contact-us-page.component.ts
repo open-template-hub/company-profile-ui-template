@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MailService } from 'src/app/service/mail/mail.service';
 import { environmentCommon } from 'src/environments/environment-common';
-import { URLS } from '../../../data/constant';
 import { CONTACT_US_FEATURES, SIZE_OPTIONS, } from '../../../data/contact-us/contact-us.data';
-import { COUNTRIES } from '../../../data/countries';
+import { COUNTRIES } from '../../../data/country/country.data';
+import { URLS } from '../../../data/navigation/navigation.data';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { ToastService } from '../../../service/toast/toast.service';
 

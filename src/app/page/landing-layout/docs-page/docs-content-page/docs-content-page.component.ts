@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { URLS } from 'src/app/data/constant';
 import { DOCS } from 'src/app/data/doc/doc.data';
 import { Doc } from 'src/app/model/doc/doc.model';
+import { URLS } from '../../../../data/navigation/navigation.data';
 
 @Component({
   selector: 'app-docs-content-page',

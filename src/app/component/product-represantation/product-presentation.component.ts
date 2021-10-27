@@ -40,6 +40,8 @@ export class ProductPresentationComponent implements OnInit {
       return 'video';
     } else if ( this.product.integrations ) {
       return 'integrations';
+    } else if ( this.product.demonstrationImg ) {
+      return 'demonstration-image';
     } else {
       return '';
     }
@@ -97,8 +99,8 @@ export class ProductPresentationComponent implements OnInit {
   }
 
   getDemonstrationImg( product: Product ) {
-    const light = product.demonstrationImg;
-    const dark = product.demonstrationAlter ? product.demonstrationAlter : product.demonstrationImg;
+    const light = product.demonstrationImg.src;
+    const dark = product.demonstrationAlter?.src ? product.demonstrationAlter.src : product.demonstrationImg.src;
     switch ( this.darkLightSetting ) {
       case DarkLightSettings.light:
         return light;

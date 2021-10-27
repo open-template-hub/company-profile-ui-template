@@ -33,7 +33,7 @@
     width: 100%;
   }
 
-  & .presentation-card, & .features-card, & .video-card {
+  & .presentation-card, & .features-card, & .video-card, & .demonstration-image-card {
     @include util.default-shadow;
     @include util.default-border-radius;
 
@@ -66,6 +66,16 @@
     }
   }
 
+  & .video-card, & .demonstration-image-card {
+    & .body {
+      & hr {
+        margin: 20px 0 0;
+        width: 100%;
+        border-color: var(--theme-color-lighter-4);
+      }
+    }
+  }
+
   & .video-card {
     & .body {
       & video {
@@ -73,12 +83,6 @@
         @include util.default-shadow;
 
         max-width: 100%;
-      }
-
-      & hr {
-        margin:  20px 0 0;
-        width: 100%;
-        border-color: var(--theme-color-lighter-4);
       }
     }
   }

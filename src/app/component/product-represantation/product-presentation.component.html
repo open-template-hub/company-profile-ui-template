@@ -52,6 +52,18 @@
       </ng-template>
     </app-card>
 
+    <!-- Demonstration Image Presentation -->
+    <app-card *ngSwitchCase="'demonstration-image'" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'"
+              class="demonstration-image-card">
+      <ng-template #bodyTemplate>
+        <div class=" body">
+          <img [src]="product.demonstrationImg.src" [alt]="product.demonstrationImg.description"/>
+          <hr/>
+          <p class="feature-title">{{ product.demonstrationImg.description }}</p>
+        </div>
+      </ng-template>
+    </app-card>
+
     <!-- Features Presentation -->
     <app-card *ngSwitchDefault [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
       <ng-template #bodyTemplate>

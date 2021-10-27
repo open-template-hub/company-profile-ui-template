@@ -17,8 +17,8 @@ export interface Product {
   urlAlter?: string;
   logo: string;
   video?: Video;
-  demonstrationImg?: string;
-  demonstrationAlter?: string;
+  demonstrationImg?: Image;
+  demonstrationAlter?: Image;
   screenshots?: Image[];
   heroImage?: string;
   openSource?: boolean;

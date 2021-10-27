@@ -398,6 +398,17 @@ export const PRODUCT_LINES: ProductLine[] = [
             timeout: 30,
           },
         ],
+        steps: [
+          { text: 'Package Installation', level: 1},
+          { text: 'Open terminal and type:\n npm install -g @open-template-hub/server-generator', level: 2},
+          { text: 'Package Usage', level: 1},
+          {
+            text: 'Go to the directory on terminal where you want to generate the project and type:\n$ cd PATH', level: 2
+          },
+          {
+            text: 'and run the generator command:\nopen-template-hub-server-generator', level: 2
+          },
+        ],
       },
       {
         key: 'app-generator',

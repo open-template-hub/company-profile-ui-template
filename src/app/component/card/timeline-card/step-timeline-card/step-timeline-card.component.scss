@@ -1,0 +1,85 @@
+@use '../../../../../styles/util/util';
+
+@mixin marker {
+  @include util.default-border-radius;
+
+  position: absolute;
+  content: '';
+  width: 13px;
+  height: 13px;
+  background-color: var(--theme-color);
+  margin-top: 4px;
+}
+
+@mixin link {
+  @include util.default-border-radius;
+  position: absolute;
+  content: '';
+  width: 1px;
+  background-color: var(--theme-color);
+}
+
+.step-timeline-card {
+  & .link {
+    width: 300px;
+    height: 20px;
+
+    & .divider {
+      height: 100%;
+      &.right {
+        @include link;
+
+        margin-top: 10px;
+        margin-left: 321px;
+      }
+
+      &.left {
+        @include link;
+
+        margin-top: 10px;
+        margin-left: 321px;
+      }
+    }
+  }
+
+  & .body {
+    width: 300px;
+
+    & p {
+      padding: 5px;
+      color: var(--color);
+      white-space: pre-line;
+
+      &.level1 {
+        font-size: 19px;
+        font-weight: 600;
+      }
+
+      &.level2 {
+        font-size: 17px;
+        font-weight: 300;
+      }
+    }
+
+    &.right {
+      text-align: left;
+      margin-left: 343px;
+
+      ::before {
+        @include marker;
+        margin-left: -33px;
+      }
+    }
+
+    &.left {
+      width: 300px;
+      text-align: right;
+      margin-right: 300px;
+
+      ::after {
+        @include marker;
+        margin-left: 20px;
+      }
+    }
+  }
+}

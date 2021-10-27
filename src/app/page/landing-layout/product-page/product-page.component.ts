@@ -38,6 +38,10 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     { text: $localize `:@@productPage.relatedProductAppHero:Related Products`, level: 2 }
   ]
 
+  npmPackageInstallationAndUsage = [
+    { text: $localize `:@@productPage.npmPackageInstallationAndUsage:Package Installation & Usage`, level: 2 }
+  ]
+
   constructor(
       private route: ActivatedRoute,
       public router: Router,

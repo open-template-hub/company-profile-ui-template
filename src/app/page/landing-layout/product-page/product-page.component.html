@@ -2,11 +2,11 @@
   <div class="intro">
     <div class="left">
       <app-card
-          [bodyTemplate]="bodyTemplate"
-          [bottomWrapperTemplate]="bottomWrapperTemplate"
-          [cardClass]="'transparent-card'"
-          [headerTemplate]="headerTemplate"
-          class="product-card">
+        [bodyTemplate]="bodyTemplate"
+        [bottomWrapperTemplate]="bottomWrapperTemplate"
+        [cardClass]="'transparent-card'"
+        [headerTemplate]="headerTemplate"
+        class="product-card">
         <ng-template #headerTemplate>
           <div class="header">
             <h3>{{ product.name }}</h3>
@@ -16,24 +16,31 @@
           <div class="body">
             <p>{{ product.description }}</p>
             <div *ngIf="product.openSource" class="button-wrapper">
-              <app-brand-button (click)="redirect( this.product.url )"
-                                [icon]="environmentCommon.website.github.cssClass"
-                                i18n-text="@@productPage.openSource.button" text="Open Source">
+              <app-brand-button
+                (click)="redirect(this.product.url)"
+                [icon]="environmentCommon.website.github.cssClass"
+                i18n-text="@@productPage.openSource.button"
+                text="Open Source">
               </app-brand-button>
 
-              <app-button *ngIf="productLineKey !== 'generator'" (click)="router.navigate([URLS.contactUs])"
-                          i18n-text="@@productPage.professional.button"
-                          text="Professional Help">
+              <app-button
+                *ngIf="productLineKey !== 'generator'"
+                (click)="router.navigate([URLS.contactUs])"
+                i18n-text="@@productPage.professional.button"
+                text="Professional Help">
               </app-button>
-              <app-brand-button *ngIf="productLineKey === 'generator'" (click)="redirect( this.product.urlAlter )"
-                                [icon]="environmentCommon.website.npm.cssClass"
-                                i18n-text="@@productPage.downloadPackage.button" text="Download Package">
+              <app-brand-button
+                *ngIf="productLineKey === 'generator'"
+                (click)="redirect(this.product.urlAlter)"
+                [icon]="environmentCommon.website.npm.cssClass"
+                i18n-text="@@productPage.downloadPackage.button"
+                text="Download Package">
               </app-brand-button>
             </div>
             <div *ngIf="!product.openSource" class="button-wrapper">
               <app-button
-                  (click)="router.navigate([URLS.contactUs])"
-                  [text]="getContactUsButtonText(productLineKey)"></app-button>
+                (click)="router.navigate([URLS.contactUs])"
+                [text]="getContactUsButtonText(productLineKey)"></app-button>
             </div>
           </div>
         </ng-template>
@@ -42,28 +49,43 @@
     </div>
     <div class="right">
       <app-product-presentation
-          [productLineKey]="productLineKey"
-          [product]="product"></app-product-presentation>
+        [productLineKey]="productLineKey"
+        [product]="product"></app-product-presentation>
     </div>
   </div>
 
   <div class="screenshots-wrapper" *ngIf="product.screenshots">
-    <app-screenshot-swiper [screenshots]="product.screenshots"></app-screenshot-swiper>
+    <app-screenshot-swiper
+      [screenshots]="product.screenshots"></app-screenshot-swiper>
   </div>
 
   <div *ngIf="isOpenSource && !product.counters" class="counters">
-    <app-box-content-loader [boxContentLoaderClass]="'product-counter'"></app-box-content-loader>
-    <app-box-content-loader [boxContentLoaderClass]="'product-counter margined'"></app-box-content-loader>
-    <app-box-content-loader [boxContentLoaderClass]="'product-counter margined'"></app-box-content-loader>
-    <app-box-content-loader [boxContentLoaderClass]="'product-counter margined'"></app-box-content-loader>
+    <app-box-content-loader
+      [boxContentLoaderClass]="'product-counter'"></app-box-content-loader>
+    <app-box-content-loader
+      [boxContentLoaderClass]="
+        'product-counter margined'
+      "></app-box-content-loader>
+    <app-box-content-loader
+      [boxContentLoaderClass]="
+        'product-counter margined'
+      "></app-box-content-loader>
+    <app-box-content-loader
+      [boxContentLoaderClass]="
+        'product-counter margined'
+      "></app-box-content-loader>
   </div>
   <div *ngIf="product.counters" class="counters">
     <a
-        *ngFor="let counter of product.counters"
-        [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
-        class="counter-wrapper"
-        rel="noopener"
-        target="_blank">
+      *ngFor="let counter of product.counters"
+      [href]="
+        environmentCommon.website.github.url +
+        '/' +
+        environmentCommon.oth.social.github
+      "
+      class="counter-wrapper"
+      rel="noopener"
+      target="_blank">
       <h2 *ngIf="counter.value" class="counter" id="npmCounterElement">
         {{ counter.value }}
       </h2>
@@ -81,14 +103,20 @@
       <app-hero [contents]="testimonialsTitle"></app-hero>
       <div class="cards-wrapper">
         <app-testimonial-card
-            *ngFor="let testimonial of TESTIMONIALS"
-            [testimonial]="testimonial">
+          *ngFor="let testimonial of TESTIMONIALS"
+          [testimonial]="testimonial">
         </app-testimonial-card>
-        <app-button i18n-text="@@productPage.readMoreStories" text="Read More Stories" [routerLink]="URLS.customers"
-                    [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']">
+        <app-button
+          i18n-text="@@productPage.readMoreStories"
+          text="Read More Stories"
+          [routerLink]="URLS.customers"
+          [buttonClasses]="[
+            'lighter-contrast-border-color',
+            'lighter-contrast-font-color',
+            'transparent-button'
+          ]">
         </app-button>
       </div>
-
     </ng-container>
 
     <ng-container *ngSwitchCase="'generator'" [ngSwitch]="product.key">
@@ -102,9 +130,10 @@
       </div>
       <div *ngIf="commitActivities.length > 0" class="activity-history-wrapper">
         <app-activity-history-card
-            *ngIf="product.openSource"
-            i18n-title="@@productPage.activityHistory.title" title="Activity history"
-            [activities]="commitActivities">
+          *ngIf="product.openSource"
+          i18n-title="@@productPage.activityHistory.title"
+          title="Activity history"
+          [activities]="commitActivities">
         </app-activity-history-card>
       </div>
     </ng-container>
@@ -116,25 +145,47 @@
     <app-tech-stack-card [techStack]="product.techStack"></app-tech-stack-card>
   </ng-container>
 
+  <!-- Step Timeline -->
+  <ng-container *ngIf="product.steps">
+    <app-hero [contents]="npmPackageInstallationAndUsage"> </app-hero>
+    <div class="timeline-wrapper">
+      <ng-container *ngFor="let step of product.steps; index as i">
+        <app-step-timeline-card
+          [step]="step"
+          [class]="i % 2 === 0 ? 'left' : 'right'"
+          [rotation]="i % 2 === 0 ? 'left' : 'right'">
+        </app-step-timeline-card>
+      </ng-container>
+    </div>
+  </ng-container>
+
   <!-- Related Products -->
   <ng-container *ngIf="productLineKey !== 'services'">
-    <app-hero
-        [contents]="[{ text: 'Related Products', level: 2 }]"></app-hero>
+    <app-hero [contents]="[{ text: 'Related Products', level: 2 }]"></app-hero>
     <div class="flexible-cards-wrapper">
       <ng-container *ngFor="let productLine of PRODUCT_LINES">
         <ng-container
-            *ngIf="productLineKey === 'premium' ? productLine.key === 'server' : productLine.key === productLineKey || productLine.key === 'premium'">
+          *ngIf="
+            productLineKey === 'premium'
+              ? productLine.key === 'server'
+              : productLine.key === productLineKey ||
+                productLine.key === 'premium'
+          ">
           <ng-container *ngFor="let relatedProduct of productLine.products">
             <app-presentation-card
-                *ngIf="product.key !== relatedProduct.key"
-                [class]="relatedProduct.color ? relatedProduct.color : ''"
-                [footerText]=getPresentationCardFooter(relatedProduct.openSource)
-                [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
-                [imgHeight]="150"
-                [secondaryText]="relatedProduct.description"
-                [src]="relatedProduct.logo"
-                [title]="relatedProduct.name"
-                class="related-product"></app-presentation-card>
+              *ngIf="product.key !== relatedProduct.key"
+              [class]="relatedProduct.color ? relatedProduct.color : ''"
+              [footerText]="
+                getPresentationCardFooter(relatedProduct.openSource)
+              "
+              [href]="
+                URLS.product + '/' + productLine.key + '/' + relatedProduct.key
+              "
+              [imgHeight]="150"
+              [secondaryText]="relatedProduct.description"
+              [src]="relatedProduct.logo"
+              [title]="relatedProduct.name"
+              class="related-product"></app-presentation-card>
           </ng-container>
         </ng-container>
       </ng-container>

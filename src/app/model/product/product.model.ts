@@ -1,6 +1,7 @@
 import { CommandType } from 'src/app/data/command-type/command-type.enum';
 import { Image } from '../image/image.model';
 import { PricingOption } from '../pricing/pricing.model';
+import { StepTimeLineItem } from '../timeline/step-timeline.model';
 import { Video } from '../video/image.model';
 
 export interface PricingFeature {
@@ -26,6 +27,7 @@ export interface Product {
   features?: PricingFeature[];
   pricingOptions?: PricingOption[];
   commandLines?: CommandLine[];
+  steps?: StepTimeLineItem[];
   imageLoaded?: boolean;
   techStack?: Image[];
   integrations?: any;

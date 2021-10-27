@@ -51,7 +51,7 @@ Analytics Server Template is a generic open source analytics server that has sim
 
 ### Business Logic Server
 
-Business Logic Server Template for generic usage in Node.js
+Business Logic Server Template is a generic open source server that encodes the real-world business rules that determine how data can be created, stored, and changed. It saves you from rewriting boilerplate code. It works best with other Open Template Hub products.
 
 You can easily generate these servers, and deploy wherever you want; Heroku, GCP, Azure, AWS and so on. If you prefer our paid plans you can also have prepared GitHub Actions for many CI/CD ops once you deploy your repository to GitHub, Postman test suites and attached to automated runs on GitHub Actions as well, stress tests and a lot of DevOps stuff are covered in these templates.
 

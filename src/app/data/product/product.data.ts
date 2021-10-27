@@ -203,7 +203,7 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'business-logic-server-template',
         name: 'Business Logic Server',
-        description: $localize`:@@productLinesData.businessLogicServerTemplate.description:Business Logic Server Template for generic usage in Node.js`,
+        description: $localize`:@@productLinesData.businessLogicServerTemplate.description:Business Logic Server Template is a generic open source server that encodes the real-world business rules that determine how data can be created, stored, and changed. It saves you from rewriting boilerplate code. It works best with other Open Template Hub products.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'business-logic-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/business-logic-server-logo.min.png',
         openSource: true,

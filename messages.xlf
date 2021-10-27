@@ -2407,7 +2407,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.businessLogicServerTemplate.description" datatype="html">
-        <source>Business Logic Server Template for generic usage in Node.js</source>
+        <source>Business Logic Server Template is a generic open source server that encodes the real-world business rules that determine how data can be created, stored, and changed. It saves you from rewriting boilerplate code. It works best with other Open Template Hub products.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">206</context>

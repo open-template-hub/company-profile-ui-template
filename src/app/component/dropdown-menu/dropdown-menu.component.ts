@@ -101,4 +101,12 @@ export class DropdownMenuComponent {
       this.closeDropdown();
     } );
   }
+
+  getMaxHeight() {
+    if (this.utilService.isSmallScreen()) {
+      return '';
+    }
+
+    return 'max-height: ' + ( 60 + 150 * this.calculatedRows + 1 ) + 'px;';
+  }
 }

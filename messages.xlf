@@ -2556,273 +2556,273 @@
         <source>Command line interface generator of the user interfaces at Open Template Hub</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">406</context>
+          <context context-type="linenumber">417</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.premium.description" datatype="html">
         <source>Get more things done with our premium solutions</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">451</context>
+          <context context-type="linenumber">462</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.description" datatype="html">
         <source>Orchestration Server Template is a middleware server that has simple yet powerful design to connect your business with all Open Template Hub servers (like Auth Server, Payment Server, File Storage Server or Mail Server). It also has generic design to integrate any other servers.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">457</context>
+          <context context-type="linenumber">468</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.feature.1" datatype="html">
         <source>Core Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">467</context>
+          <context context-type="linenumber">478</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.feature.1.detail.1" datatype="html">
         <source>Integrated with OTH Servers</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">470</context>
+          <context context-type="linenumber">481</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.feature.1.detail.2" datatype="html">
         <source>Works seamlessly with Open Template Hub Servers.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">471</context>
+          <context context-type="linenumber">482</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.basic.title" datatype="html">
         <source>Basic</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">494</context>
+          <context context-type="linenumber">505</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.basic.description" datatype="html">
         <source>For Individuals</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">495</context>
+          <context context-type="linenumber">506</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.standard.title" datatype="html">
         <source>Standard</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">504</context>
+          <context context-type="linenumber">515</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.standard.description" datatype="html">
         <source>For Startups</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">505</context>
+          <context context-type="linenumber">516</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.standard.feature.1" datatype="html">
         <source>Up to 10 users</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">508</context>
+          <context context-type="linenumber">519</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.enterprise.title" datatype="html">
         <source>Enterprise</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">511</context>
+          <context context-type="linenumber">522</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.enterprise.description" datatype="html">
         <source>For Enterprises</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">512</context>
+          <context context-type="linenumber">523</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.enterprise.feature.1" datatype="html">
         <source>Unlimited users</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">514</context>
+          <context context-type="linenumber">525</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.description" datatype="html">
         <source>Services that we provide</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">533</context>
+          <context context-type="linenumber">544</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.description" datatype="html">
         <source>We perform world-class custom software development services from startups to enterprise businesses. Our highly experienced software developers have a deep understanding of how to leverage top programming languages, frameworks, and other software development tools to create the ideal solution for your business.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">538</context>
+          <context context-type="linenumber">549</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.name" datatype="html">
         <source>Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">542</context>
+          <context context-type="linenumber">553</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.1.name" datatype="html">
         <source>Custom Application Development</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">545</context>
+          <context context-type="linenumber">556</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.1.description" datatype="html">
         <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">546</context>
+          <context context-type="linenumber">557</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.2.name" datatype="html">
         <source>Application Maintenance</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">549</context>
+          <context context-type="linenumber">560</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.2.description" datatype="html">
         <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">550</context>
+          <context context-type="linenumber">561</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.3.name" datatype="html">
         <source>Implementation &amp; Deployment</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">553</context>
+          <context context-type="linenumber">564</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.3.description" datatype="html">
         <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">554</context>
+          <context context-type="linenumber">565</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.description" datatype="html">
         <source>When a company adopts a new technology or business process, they face many challenges between their current applications and systems and the complicated software implementation process. Our industry-specific software engineers handle all of your challenging integration &amp; implementation obstacles, including architectural design, testing, debugging, and execution.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">563</context>
+          <context context-type="linenumber">574</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.name" datatype="html">
         <source>Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">567</context>
+          <context context-type="linenumber">578</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.1.name" datatype="html">
         <source>Data Integration Services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">570</context>
+          <context context-type="linenumber">581</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.1.description" datatype="html">
         <source>We perform data integration services, including merging data, consolidating business processes, and creating Database Management Systems to ensure complete data integrity during the transfer process.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">571</context>
+          <context context-type="linenumber">582</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.2.name" datatype="html">
         <source>API Integration Services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">574</context>
+          <context context-type="linenumber">585</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.2.description" datatype="html">
         <source>We provide integrating custom-built and third-party APIs service. We, integrate, and customize add web service functionality to mobile and web applications, and seamlessly synchronize data formats across these applications.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">575</context>
+          <context context-type="linenumber">586</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.3.name" datatype="html">
         <source>Enterprise Application Integrations</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">578</context>
+          <context context-type="linenumber">589</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.3.description" datatype="html">
         <source>We provide Enterprise Application Integration solutions, facilitating seamless communications between business platforms. We are providing integrations for content management, accounting, customer relationship management, analytics, and marketing.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">579</context>
+          <context context-type="linenumber">590</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.description" datatype="html">
         <source>We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">588</context>
+          <context context-type="linenumber">599</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.name" datatype="html">
         <source>Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">592</context>
+          <context context-type="linenumber">603</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.1.name" datatype="html">
         <source>Software QA Automation Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">595</context>
+          <context context-type="linenumber">606</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.1.description" datatype="html">
         <source>We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">596</context>
+          <context context-type="linenumber">607</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.2.name" datatype="html">
         <source>Software QA Manual Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">599</context>
+          <context context-type="linenumber">610</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.2.description" datatype="html">
         <source>Our dedicated QA team will test your mobile, web, or desktop application manually to identify &amp; fix bugs, detect &amp; eradicate errors, and confirm its compliance with regulatory standards, providing you with the highest quality result possible.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">600</context>
+          <context context-type="linenumber">611</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.3.name" datatype="html">
         <source>Software QA Usability Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">603</context>
+          <context context-type="linenumber">614</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.3.description" datatype="html">
         <source>We design QA usability testing platforms that incorporate specific usability testing tools and UX research methods selected based on the client, focused on measuring how user-friendly and flexible your application or website is.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">604</context>
+          <context context-type="linenumber">615</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ribbonData.new" datatype="html">
@@ -3408,7 +3408,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
-          <context context-type="linenumber">87</context>
+          <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.testimonialsTitle.1" datatype="html">
@@ -3475,7 +3475,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
-          <context context-type="linenumber">131</context>
+          <context context-type="linenumber">135</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productTypeTag.premium" datatype="html">
@@ -3486,7 +3486,7 @@
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
-          <context context-type="linenumber">131</context>
+          <context context-type="linenumber">135</context>
         </context-group>
       </trans-unit>
       <trans-unit id="partnersPage.partnersTitle.1" datatype="html">
@@ -3521,28 +3521,28 @@
         <source>Open Source</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPage.professional.button" datatype="html">
         <source>Professional Help</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPage.downloadPackage.button" datatype="html">
         <source>Download Package</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPage.activityHistory.title" datatype="html">
         <source>Activity history</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
-          <context context-type="linenumber">106</context>
+          <context context-type="linenumber">135</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPage.testimonialsTitle.1" datatype="html">
@@ -3566,18 +3566,25 @@
           <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="productPage.npmPackageInstallationAndUsage" datatype="html">
+        <source>Package Installation &amp; Usage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="productPage.contactUs.button" datatype="html">
         <source>Contact Us</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
-          <context context-type="linenumber">126</context>
+          <context context-type="linenumber">130</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPage.requestForDemo.button" datatype="html">
         <source>Request for Demo</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
-          <context context-type="linenumber">127</context>
+          <context context-type="linenumber">131</context>
         </context-group>
       </trans-unit>
       <trans-unit id="maintenance.home.button" datatype="html">

@@ -1,12 +1,12 @@
 <app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
-          [bottomWrapperTemplate]="bottomWrapperTemplate" class="presentation-card">
+          [bottomWrapperTemplate]="bottomWrapperTemplate" class="presentation-card" (click)="redirect()">
   <!-- Header -->
   <ng-template #headerTemplate>
     <div class="header">
-      <a (click)="redirect()" class="presentation-item-content">
+      <div class="presentation-item-content">
         <img *ngIf="src" [height]="imgHeight" [src]="src" alt="wallpaper">
         <p>{{ title }}</p>
-      </a>
+      </div>
     </div>
 
   </ng-template>

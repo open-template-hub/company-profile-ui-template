@@ -2,6 +2,7 @@
 @use '../card.component';
 
 .presentation-card {
+  cursor: pointer;
 
   & .header {
     margin-top: -41px;
@@ -16,9 +17,6 @@
     position: relative;
 
     align-items: center;
-    justify-content: flex-start;
-
-    height: 180px;
 
     box-sizing: border-box;
     padding: 15px 15px 12px;
@@ -42,13 +40,6 @@
       &:last-child {
         margin-bottom: 0;
       }
-    }
-
-    & .button {
-      position: absolute;
-      top: 300px;
-      visibility: hidden;
-      transition: all 1s cubic-bezier(.31, 1.21, .64, 1.02);
     }
 
     & .presentation-description {
@@ -86,6 +77,13 @@
     & .body {
       width: 94vw;
 
+      justify-content: space-between;
+
+      & .button {
+        position: relative;
+        visibility: visible;
+      }
+
       & .presentation-item-content {
         width: 100%;
       }
@@ -93,11 +91,22 @@
   }
 }
 
-@media (hover: hover) {
-
+@media only screen and (min-width: 1000px) {
   .presentation-card {
     & .body {
-      &:hover {
+      height: 180px;
+      justify-content: flex-start;
+
+      & .button {
+        position: absolute;
+        top: 300px;
+        visibility: hidden;
+        transition: all 1s cubic-bezier(.31, 1.21, .64, 1.02);
+      }
+    }
+
+    &:hover {
+      & .body {
         & .presentation-description {
           transform: translateY(-250px);
         }

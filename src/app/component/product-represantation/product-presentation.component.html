@@ -12,7 +12,7 @@
     <app-card *ngSwitchCase="'video'" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="video-card">
       <ng-template #bodyTemplate>
         <div class=" body">
-          <video [src]="product.video.url" autoplay loop muted controls>
+          <video [src]="product.video.url" autoplay loop muted>
             <track label="English" kind="captions" srclang="en" src="" default>
             Your browser does not support HTML5 video.
           </video>

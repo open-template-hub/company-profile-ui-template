@@ -543,15 +543,15 @@ export const SERVICES: ProductLine[] = [
           details: [
             {
               name: $localize`:@@servicesData.softwareConsultancy.features.details.1.name:Custom Application Development`,
-              description: 'We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.'
+              description: $localize`:@@servicesData.softwareConsultancy.features.details.1.description:We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.`
             },
             {
               name: $localize`:@@servicesData.softwareConsultancy.features.details.2.name:Application Maintenance`,
-              description: 'Our app maintenance & modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.'
+              description: $localize`:@@servicesData.softwareConsultancy.features.details.2.description:Our app maintenance & modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.`
             },
             {
               name: $localize`:@@servicesData.softwareConsultancy.features.details.3.name:Implementation & Deployment`,
-              description: 'We devise an in-depth, comprehensive software implementation & deployment plan, assessing your needs to deliver enhanced technologies to end-users.'
+              description: $localize`:@@servicesData.softwareConsultancy.features.details.3.description:We devise an in-depth, comprehensive software implementation & deployment plan, assessing your needs to deliver enhanced technologies to end-users.`
             },
           ],
         }
@@ -567,16 +567,16 @@ export const SERVICES: ProductLine[] = [
           name: $localize`:@@servicesData.softwareIntegration.features.name:Features`,
           details: [
             {
-              name: $localize`:@@servicesData.softwareIntegration.features.details.1.name:Custom Application Development`,
-              description: $localize`:@@servicesData.softwareIntegration.features.details.1.description:We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.`
+              name: $localize`:@@servicesData.softwareIntegration.features.details.1.name:Data Integration Services`,
+              description: $localize`:@@servicesData.softwareIntegration.features.details.1.description:We perform data integration services, including merging data, consolidating business processes, and creating Database Management Systems to ensure complete data integrity during the transfer process.`
             },
             {
-              name: $localize`:@@servicesData.softwareIntegration.features.details.2.name:Application Maintenance`,
-              description: $localize`:@@servicesData.softwareIntegration.features.details.2.description:Our app maintenance & modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.`
+              name: $localize`:@@servicesData.softwareIntegration.features.details.2.name:API Integration Services`,
+              description: $localize`:@@servicesData.softwareIntegration.features.details.2.description:We provide integrating custom-built and third-party APIs service. We, integrate, and customize add web service functionality to mobile and web applications, and seamlessly synchronize data formats across these applications.`
             },
             {
-              name: $localize`:@@servicesData.softwareIntegration.features.details.3.name:Implementation & Deployment`,
-              description: $localize`:@@servicesData.softwareIntegration.features.details.3.description:We devise an in-depth, comprehensive software implementation & deployment plan, assessing your needs to deliver enhanced technologies to end-users.`
+              name: $localize`:@@servicesData.softwareIntegration.features.details.3.name:Enterprise Application Integrations`,
+              description: $localize`:@@servicesData.softwareIntegration.features.details.3.description:We provide Enterprise Application Integration solutions, facilitating seamless communications between business platforms. We are providing integrations for content management, accounting, customer relationship management, analytics, and marketing.`
             },
           ],
         }
@@ -592,16 +592,16 @@ export const SERVICES: ProductLine[] = [
           name: $localize`:@@servicesData.qualityAssurance.features.name:Features`,
           details: [
             {
-              name: $localize`:@@servicesData.qualityAssurance.features.details.1.name:Custom Application Development`,
-              description: $localize`:@@servicesData.qualityAssurance.features.details.1.description:We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.`
+              name: $localize`:@@servicesData.qualityAssurance.features.details.1.name:Software QA Automation Testing`,
+              description: $localize`:@@servicesData.qualityAssurance.features.details.1.description:We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.`
             },
             {
-              name: $localize`:@@servicesData.qualityAssurance.features.details.2.name:Application Maintenance`,
-              description: $localize`:@@servicesData.qualityAssurance.features.details.2.description:Our app maintenance & modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.`
+              name: $localize`:@@servicesData.qualityAssurance.features.details.2.name:Software QA Manual Testing`,
+              description: $localize`:@@servicesData.qualityAssurance.features.details.2.description:Our dedicated QA team will test your mobile, web, or desktop application manually to identify & fix bugs, detect & eradicate errors, and confirm its compliance with regulatory standards, providing you with the highest quality result possible.`
             },
             {
-              name: $localize`:@@servicesData.qualityAssurance.features.details.3.name:Implementation & Deployment`,
-              description: $localize`:@@servicesData.qualityAssurance.features.details.3.description:We devise an in-depth, comprehensive software implementation & deployment plan, assessing your needs to deliver enhanced technologies to end-users.`
+              name: $localize`:@@servicesData.qualityAssurance.features.details.3.name:Software QA Usability Testing`,
+              description: $localize`:@@servicesData.qualityAssurance.features.details.3.description:We design QA usability testing platforms that incorporate specific usability testing tools and UX research methods selected based on the client, focused on measuring how user-friendly and flexible your application or website is.`
             },
           ],
         }

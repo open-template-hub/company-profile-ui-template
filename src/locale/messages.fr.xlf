@@ -4213,6 +4213,27 @@
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">345</context>
         </context-group>
+      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.1.description" datatype="html">
+        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
+        <target>Nous nous appuyons sur notre expérience technologique spécifique à l'industrie pour fournir des applications Web, mobiles, de bureau et hybrides hautement évolutives, flexibles et interopérables.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">546</context>
+        </context-group>
+      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.2.description" datatype="html">
+        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
+        <target>Nos services de maintenance et de modernisation des applications sont conçus pour garantir l'évolutivité, les performances et la durabilité de l'ensemble de votre infrastructure logicielle.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">550</context>
+        </context-group>
+      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.3.description" datatype="html">
+        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
+        <target>Nous concevons un plan de mise en œuvre et de déploiement de logiciels approfondi et complet, évaluant vos besoins pour fournir des technologies améliorées aux utilisateurs finaux.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">554</context>
+        </context-group>
       </trans-unit></body>
       <trans-unit id="learnMore.button" datatype="html">
         <source>Learn more</source>

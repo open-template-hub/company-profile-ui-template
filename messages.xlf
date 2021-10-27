@@ -2678,6 +2678,13 @@
           <context context-type="linenumber">545</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.1.description" datatype="html">
+        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">546</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.2.name" datatype="html">
         <source>Application Maintenance</source>
         <context-group purpose="location">
@@ -2685,11 +2692,25 @@
           <context context-type="linenumber">549</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.2.description" datatype="html">
+        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">550</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.3.name" datatype="html">
         <source>Implementation &amp; Deployment</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">553</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.3.description" datatype="html">
+        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">554</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.description" datatype="html">
@@ -2707,42 +2728,42 @@
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.1.name" datatype="html">
-        <source>Custom Application Development</source>
+        <source>Data Integration Services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">570</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.1.description" datatype="html">
-        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
+        <source>We perform data integration services, including merging data, consolidating business processes, and creating Database Management Systems to ensure complete data integrity during the transfer process.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">571</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.2.name" datatype="html">
-        <source>Application Maintenance</source>
+        <source>API Integration Services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">574</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.2.description" datatype="html">
-        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
+        <source>We provide integrating custom-built and third-party APIs service. We, integrate, and customize add web service functionality to mobile and web applications, and seamlessly synchronize data formats across these applications.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">575</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.3.name" datatype="html">
-        <source>Implementation &amp; Deployment</source>
+        <source>Enterprise Application Integrations</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">578</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.3.description" datatype="html">
-        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
+        <source>We provide Enterprise Application Integration solutions, facilitating seamless communications between business platforms. We are providing integrations for content management, accounting, customer relationship management, analytics, and marketing.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">579</context>
@@ -2763,42 +2784,42 @@
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.1.name" datatype="html">
-        <source>Custom Application Development</source>
+        <source>Software QA Automation Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">595</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.1.description" datatype="html">
-        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
+        <source>We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">596</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.2.name" datatype="html">
-        <source>Application Maintenance</source>
+        <source>Software QA Manual Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">599</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.2.description" datatype="html">
-        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
+        <source>Our dedicated QA team will test your mobile, web, or desktop application manually to identify &amp; fix bugs, detect &amp; eradicate errors, and confirm its compliance with regulatory standards, providing you with the highest quality result possible.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">600</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.3.name" datatype="html">
-        <source>Implementation &amp; Deployment</source>
+        <source>Software QA Usability Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">603</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.3.description" datatype="html">
-        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
+        <source>We design QA usability testing platforms that incorporate specific usability testing tools and UX research methods selected based on the client, focused on measuring how user-friendly and flexible your application or website is.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">604</context>

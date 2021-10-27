@@ -20,13 +20,13 @@
   --lighter-contrast-light-mode: #b4b4b4;
 
   // background
-  --background-color-light-mode: white;
+  --background-color-light-mode: #fefefe;
   --background-color-alpha-light-mode: rgba(255, 255, 255, 0.93);
-  --card-light-mode: #fefefe;
+  --card-light-mode: #ffffff;
 
   --shadow-light-mode: rgba(155, 155, 155, 0.5);
 
-  --shadow-lighter-light-mode: rgba(235, 235, 235, 0.5);
+  --shadow-lighter-light-mode: rgba(235, 235, 235, 0.55);
   --shadow-darker-light-mode: rgba(100, 100, 100, 0.5);
 
   --cropper-overlay-color-light-mode: var(--card-light-mode);
@@ -47,7 +47,7 @@
   // background
   --background-color-dark-mode: #353535;
   --background-color-alpha-dark-mode: rgba(53, 53, 53, 0.93);
-  --card-dark-mode: #353535;
+  --card-dark-mode: #343434;
 
   --shadow-dark-mode: rgba(15, 15, 15, 0.5);
   --shadow-lighter-dark-mode: rgba(25, 25, 25, 0.5);

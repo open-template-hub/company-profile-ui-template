@@ -87,6 +87,18 @@
     }
   }
 
+  & .demonstration-image-card {
+    & .body {
+      & img {
+        @include util.default-border-radius-image;
+        @include util.default-shadow;
+        background-color: var(--card);
+
+        max-width: 100%;
+      }
+    }
+  }
+
   & .footer {
     @include card.default-footer;
     @include util.flex-layout-column;

@@ -459,8 +459,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/orchestration-server-logo.min.png',
         color: ThemeColorSettings.yellow,
         demonstrationImg: {
-          src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/orchestration-server-logo.min.png',
-          description: 'Orchestration Server architectural design'
+          src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/server/orchestration-server-demo.min.png',
+          description: 'Orchestration Server Architectural Design'
         },
         features: [
           {

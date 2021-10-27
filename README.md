@@ -149,6 +149,12 @@ To be able to generate cookie policy, use **[cookiepolicygenerator](https://www.
 
 <br/>
 
+## Localization
+
+To be able to generate or update localization, use [updateMessages.run.xml](.run/updateMessages.run.xml).
+
+<br/>
+
 ## Outdated
 
 Refer to **[OUTDATED.md](docs/OUTDATED.md)** to see outdated npm packages and update them with your own risk.

@@ -155,6 +155,12 @@ Refer to **[OUTDATED.md](docs/OUTDATED.md)** to see outdated npm packages and up
 
 <br/>
 
+## Localization
+
+To be able to generate or update localization, use [updateMessages.run.xml](.run/updateMessages.run.xml).
+
+<br/>
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->

@@ -45,13 +45,13 @@ Mail Server Template is a generic open source mail server that has simple yet po
 
 ### Analytics Server
 
-Analytics Server Template for generic usage in Node.js
+Analytics Server Template is a generic open source analytics server that has simple yet powerful design to connect your business with third party analytics service providers (like Google Analytics or Matomo).
 
 <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/business-logic-server-logo.min.png" alt="business-logic-server-template" width="80"/>
 
 ### Business Logic Server
 
-Business Logic Server Template for generic usage in Node.js
+Business Logic Server Template is a generic open source server that encodes the real-world business rules that determine how data can be created, stored, and changed. It saves you from rewriting boilerplate code. It works best with other Open Template Hub products.
 
 You can easily generate these servers, and deploy wherever you want; Heroku, GCP, Azure, AWS and so on. If you prefer our paid plans you can also have prepared GitHub Actions for many CI/CD ops once you deploy your repository to GitHub, Postman test suites and attached to automated runs on GitHub Actions as well, stress tests and a lot of DevOps stuff are covered in these templates.
 
@@ -65,19 +65,19 @@ These are the application types you are able to generate for now:
 
 ### Company Profile UI
 
-Company Profile UI Template for generic usage in Angular
+Company Profile UI Template is modern, responsive and customisable company profile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.
 
 <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png" alt="web-ui-template" width="80"/>
 
 ### Web UI
 
-Web UI Template for generic usage in Angular
+Web UI Template is modern, responsive and customisable web ui template for your business. It contains reusable components, theme color and design support along with dark theme support.
 
 <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/mobile-ui-logo.min.png" alt="mobile-ui-template" width="80"/>
 
 ### Mobile UI
 
-Mobile UI Template for generic usage in React Native
+Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.
 
 You will have lots of components, screens and API calls are covered for authentication, payment, file storage, analytics, basic user profiles and controllers integrated with services endpoints.
 

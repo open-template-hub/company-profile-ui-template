@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environmentCommon } from '../../../environments/environment-common';
 import { BRAND } from '../../data/brand/brand.data';
-import { DarkLightSettings } from '../../data/constant';
+import { DarkLightSettings } from '../../data/theme/theme.data';
 import { Image } from '../../model/image/image.model';
 import { Partner } from '../../model/partner/partner.model';
 import { Product } from '../../model/product/product.model';
@@ -40,6 +40,8 @@ export class ProductPresentationComponent implements OnInit {
       return 'video';
     } else if ( this.product.integrations ) {
       return 'integrations';
+    } else if ( this.product.demonstrationImg ) {
+      return 'demonstration-image';
     } else {
       return '';
     }
@@ -97,8 +99,8 @@ export class ProductPresentationComponent implements OnInit {
   }
 
   getDemonstrationImg( product: Product ) {
-    const light = product.demonstrationImg;
-    const dark = product.demonstrationAlter ? product.demonstrationAlter : product.demonstrationImg;
+    const light = product.demonstrationImg.src;
+    const dark = product.demonstrationAlter?.src ? product.demonstrationAlter.src : product.demonstrationImg.src;
     switch ( this.darkLightSetting ) {
       case DarkLightSettings.light:
         return light;

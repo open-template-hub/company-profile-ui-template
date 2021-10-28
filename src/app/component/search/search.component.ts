@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { URLS } from '../../data/constant';
+import { URLS } from '../../data/navigation/navigation.data';
 import { BusinessLogicService } from '../../service/business-logic/business-logic.service';
 import { CategoryService } from '../../service/category/category.service';
 import { EventService } from '../../service/event/event.service';

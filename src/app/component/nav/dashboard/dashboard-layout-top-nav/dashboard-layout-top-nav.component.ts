@@ -1,6 +1,7 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { BRAND } from '../../../../data/brand/brand.data';
-import { PROFILE_IMG, URLS } from '../../../../data/constant';
+import { URLS } from '../../../../data/navigation/navigation.data';
+import { PROFILE_IMG } from '../../../../data/profile/profile.data';
 import { BusinessLogicService } from '../../../../service/business-logic/business-logic.service';
 import { CategoryService } from '../../../../service/category/category.service';
 import { FileStorageService } from '../../../../service/file-storage/file-storage.service';

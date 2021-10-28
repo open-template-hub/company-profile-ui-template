@@ -8,6 +8,8 @@
 }
 
 .timeline-wrapper {
+  justify-content: flex-start;
+
   & .timeline-hr {
     border-left: 1px solid var(--contrast);
     border-right: none;
@@ -44,7 +46,6 @@
 
     & > * {
       width: 40%;
-      margin: 10px 41px;
     }
 
     & .right {
@@ -52,7 +53,19 @@
     }
   }
 
+  .websites-wrapper {
+    & > * {
+      margin: 10px 50px;
+    }
+  }
+
   .timeline-wrapper {
+    padding: 0 40px;
+
+    & > * {
+      margin: 0 50px;
+    }
+
     & .timeline-hr {
       height: 700px;
       width: 0;

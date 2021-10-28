@@ -84,6 +84,7 @@
 
       margin-top: -10px;
       justify-content: space-between;
+      position: relative;
 
       background-color: var(--shadow-lighter);
 
@@ -110,6 +111,20 @@
   & .right {
     align-items: center;
     justify-content: center;
+  }
+}
+
+.timeline-wrapper {
+  @include util.flex-center-center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  & .left {
+    text-align: left;
+  }
+
+  & .right {
+    text-align: right;
   }
 }
 
@@ -219,7 +234,8 @@
   }
 
   .pricing-plan-wrapper,
-  .activity-history-wrapper {
+  .activity-history-wrapper,
+  .timeline-wrapper {
     width: 94vw;
 
     & > * {

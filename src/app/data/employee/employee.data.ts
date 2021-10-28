@@ -35,7 +35,7 @@ export const EMPLOYEES: Employee[] = [
     profile: {
       name: 'Mert Sarac',
       title: $localize `:@@employeesData.fullStackDeveloper:Full-Stack Developer`,
-      bio: $localize`:@@employees.mert.bio:TODO: write your bio here`,
+      bio: $localize`:@@employees.mert.bio:Mert is a new grad software engineer who has been experienced various technologies in his bachelor years. He worked on e-commercial and banking areas. Now, he is a full-stack developer at Open Template Hub and also working on native iOS applications.`,
       photoUri:
           'https://avatars1.githubusercontent.com/u/38442589?s=400&u=aa3cda11724fc297a0bfa6beb35c9be81687cf3c&v=4',
       social: {

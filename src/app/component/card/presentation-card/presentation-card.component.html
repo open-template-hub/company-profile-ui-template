@@ -1,12 +1,12 @@
 <app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
-          [bottomWrapperTemplate]="bottomWrapperTemplate" class="presentation-card">
+          [bottomWrapperTemplate]="bottomWrapperTemplate" class="presentation-card" (click)="redirect()">
   <!-- Header -->
   <ng-template #headerTemplate>
     <div class="header">
-      <a (click)="redirect()" class="presentation-item-content">
-        <img *ngIf="src" [height]="imgHeight" [src]="src" alt="wallpaper">
+      <div class="presentation-item-content">
+        <img *ngIf="src" [height]="imgHeight" [src]="src" alt="logo">
         <p>{{ title }}</p>
-      </a>
+      </div>
     </div>
 
   </ng-template>
@@ -15,7 +15,7 @@
   <ng-template #bodyTemplate>
     <div class="body">
       <p class="presentation-description">{{ secondaryText }}</p>
-      <app-button class="button" i18n-text="@@readMore.button" text="Read more" [routerLink]="href"
+      <app-button class="button" i18n-text="@@learnMore.button" text="Learn more" [routerLink]="href"
                   [buttonClasses]="['theme-color-border-color', 'theme-color-font-color', 'transparent-button']">
       </app-button>
     </div>

@@ -3,7 +3,7 @@
           [contents]="appHeroContents"></app-hero>
 <div *ngIf="product?.pricingOptions" class="pricing-wrapper">
   <ng-container *ngFor="let pricing of product.pricingOptions">
-    <app-pricing-card [class.bigger-card]="pricing.ribbon === PRICING_RIBBONS.get('deal')"
+    <app-pricing-card [class.bigger-card]="pricing.ribbon === PRODUCT_RIBBONS.get('deal')"
                       [demoLink]="product.url" [pricingFeatures]="product?.features"
                       [pricingOption]="pricing"></app-pricing-card>
   </ng-container>

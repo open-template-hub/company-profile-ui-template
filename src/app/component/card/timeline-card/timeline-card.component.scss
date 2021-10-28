@@ -17,7 +17,7 @@
   content: "";
   width: 13px;
   height: 13px;
-  background-color: var(--theme-color-lighter-2);
+  background-color: var(--theme-color);
 }
 
 .timeline-card {
@@ -26,16 +26,24 @@
     @include util.flex-layout-column;
     @include util.flex-center-center;
 
+    z-index: 2;
+
     // Design
     height: 80px;
     font-size: 22px;
 
     // Color
-    background-color: var(--theme-color-lighter-2);
-    color: var(--color);
+    background-color: var(--theme-color);
+    border-bottom: 1px solid var(--theme-color-darker-2);
 
-    & h4 {
-      font-weight: 400;
+    & p {
+      font-size: 19px;
+      color: var(--darker-contrast);
+
+      &:first-child {
+        font-size: 21px;
+        font-weight: 400;
+      }
     }
   }
 
@@ -43,22 +51,25 @@
     @include card.default-body;
     @include util.default-padding-line;
 
-    justify-content: space-between;
+    padding: 0;
 
-    // Design
-    height: 380px;
+    justify-content: flex-start;
 
-    h3 {
-      font-size: 18px;
+    & .img-wrapper {
+      display: block;
+
+      width: 100%;
+    }
+
+    & p {
+      padding: 20px;
+      font-size: 17px;
       color: var(--color);
     }
 
     & > * {
       max-width: 100%;
-      max-height: 200px;
-      margin: 10px 0 0;
     }
-
   }
 
   & .footer {
@@ -67,11 +78,6 @@
     @include util.flex-layout-row;
 
     justify-content: flex-end;
-
-    & img {
-      height: 35px;
-      margin-right: 10px;
-    }
 
     & small {
       font-size: 17px;
@@ -86,6 +92,14 @@
 
     & .body {
       font-size: 16px;
+
+      & .img-wrapper {
+        width: 100%;
+
+        & > * {
+          width: 100%;
+        }
+      }
     }
 
     & .footer {
@@ -104,7 +118,7 @@
       }
 
       &.left::before {
-        left: calc(100% + 35px);
+        left: calc(100% + 44px);
       }
 
       &.right::before {
@@ -113,7 +127,7 @@
 
       &::after {
         @include arrow;
-        color: var(--theme-color-lighter-2);
+        color: var(--theme-color);
         top: 25px;
       }
 
@@ -138,6 +152,19 @@
 
     & .body {
       font-size: 18px;
+
+      & > * {
+        max-height: 250px;
+      }
+
+      & .img-wrapper {
+        & > * {
+          max-width: 100%;
+        }
+      }
+
+      // Design
+      height: 350px;
     }
 
     & .footer {

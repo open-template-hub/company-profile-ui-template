@@ -4,7 +4,8 @@ import { PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
 import { BRAND } from '../../../data/brand/brand.data';
-import { DarkLightSettings, URLS } from '../../../data/constant';
+import { URLS } from '../../../data/navigation/navigation.data';
+import { DarkLightSettings } from '../../../data/theme/theme.data';
 import { ProductLine } from '../../../model/product/product.model';
 import { ThemeService } from '../../../service/theme/theme.service';
 

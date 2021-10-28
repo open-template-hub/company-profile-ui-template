@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { environmentCommon } from '../environments/environment-common';
-import { URLS_RAW } from './data/constant';
 import { NAVIGATIONS } from './data/navigation/navigation.data';
 import { AuthGuard } from './guard/auth/auth.guard';
 import { PublicProfileGuard } from './guard/public-profile/public-profile.guard';
@@ -19,6 +18,7 @@ import { BlogPageComponent } from './page/landing-layout/blog-page/blog-page.com
 import { BrandingPageComponent } from './page/landing-layout/branding-page/branding-page.component';
 import { ContactUsPageComponent } from './page/landing-layout/contact-us-page/contact-us-page.component';
 import { CustomersPageComponent } from './page/landing-layout/customers-page/customers-page.component';
+import { DocsContentPageComponent } from './page/landing-layout/docs-page/docs-content-page/docs-content-page.component';
 import { DocsPageComponent } from './page/landing-layout/docs-page/docs-page.component';
 import { ForgetPasswordPageComponent } from './page/landing-layout/form-pages/forget-password-page/forget-password-page.component';
 import { LoginPageComponent } from './page/landing-layout/form-pages/login-page/login-page.component';
@@ -52,239 +52,243 @@ const routes: Routes = [
       {
         path: '',
         component: HomePageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.notFound.url,
         component: NotFoundPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.maintenance.url,
         component: MaintenancePageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.signupSuccess.url,
         component: SignUpSuccessPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.verifyAccount.url,
         component: VerifyAccountPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.cookiePolicy.url,
         component: CookiePolicyPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.privacyPolicy.url,
         component: PrivacyPolicyPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.terms.url,
         component: TermsPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.about.url,
         component: AboutUsPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.signup.url,
         component: SignUpPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.login.url,
         component: LoginPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.branding.url,
         component: BrandingPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.blog.url,
         component: BlogPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.docs.url,
         component: DocsPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.partners.url,
         component: PartnersPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.customers.url,
         component: CustomersPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.forgetPassword.url,
         component: ForgetPasswordPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.resetPassword.url,
         component: ResetPasswordPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.contactUs.url,
         component: ContactUsPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.status.url,
         component: StatusPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.sitemap.url,
         component: SitemapPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.u.url + '/' + ':username',
         component: PublicProfilePageComponent,
         data: { isPublic: true },
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.pricing.url + '/' + ':productLine' + '/' + ':product',
         component: PricingPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.product.url + '/' + ':productLine' + '/' + ':product',
         component: ProductPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
       },
       {
         path: NAVIGATIONS.blog.url + '/:blogTag' + '/' + ':blogKey',
         component: BlogContentPageComponent,
-        canActivate: [NavigationInterceptor],
+        canActivate: [ NavigationInterceptor ],
+      },
+      {
+        path: NAVIGATIONS.docs.url + '/:docTag' + '/' + ':docKey',
+        component: DocsContentPageComponent,
+        canActivate: [ NavigationInterceptor ],
       },
     ],
   },
   {
-    path: URLS_RAW.callback.root,
+    path: NAVIGATIONS.callback.url,
     component: SplashLayoutComponent,
     children: [
       {
-        path: URLS_RAW.callback.dribbble,
+        path: NAVIGATIONS.dribbble.url,
         component: CallbackPageComponent,
         data: { oauth: environmentCommon.website.dribbble },
       },
       {
-        path: URLS_RAW.callback.facebook,
+        path: NAVIGATIONS.facebook.url,
         component: CallbackPageComponent,
         data: { oauth: environmentCommon.website.facebook },
       },
       {
-        path: URLS_RAW.callback.github,
+        path: NAVIGATIONS.github.url,
         component: CallbackPageComponent,
         data: { oauth: environmentCommon.website.github },
       },
       {
-        path: URLS_RAW.callback.google,
+        path: NAVIGATIONS.google.url,
         component: CallbackPageComponent,
         data: { oauth: environmentCommon.website.google },
       },
       {
-        path: URLS_RAW.callback.linkedin,
+        path: NAVIGATIONS.linkedin.url,
         component: CallbackPageComponent,
         data: { oauth: environmentCommon.website.linkedin },
       },
       {
-        path: URLS_RAW.callback.reddit,
+        path: NAVIGATIONS.reddit.url,
         component: CallbackPageComponent,
         data: { oauth: environmentCommon.website.reddit },
       },
       {
-        path: URLS_RAW.callback.twitch,
+        path: NAVIGATIONS.twitch.url,
         component: CallbackPageComponent,
         data: { oauth: environmentCommon.website.twitch },
       },
       {
-        path: URLS_RAW.callback.twitter,
+        path: NAVIGATIONS.twitter.url,
         component: CallbackPageComponent,
         data: { oauth: environmentCommon.website.twitter },
       },
       {
-        path: URLS_RAW.callback.stripe,
+        path: NAVIGATIONS.stripe.url,
         component: CallbackPageComponent,
         data: { payment: environmentCommon.website.stripe },
       },
     ],
   },
   {
-    path: URLS_RAW.external,
+    path: NAVIGATIONS.external.url,
     component: SplashLayoutComponent,
-    children: [{ path: '', component: ExternalRedirectPageComponent }],
+    children: [ { path: '', component: ExternalRedirectPageComponent } ],
   },
   {
-    path: URLS_RAW.dashboard.root,
+    path: NAVIGATIONS.dashboard.url,
     component: DashboardLayoutComponent,
     children: [
-      { path: '', component: DashboardPageComponent, canActivate: [AuthGuard] },
+      { path: '', component: DashboardPageComponent, canActivate: [ AuthGuard ] },
       {
-        path: URLS_RAW.dashboard.myProfile,
+        path: NAVIGATIONS.myProfile.url,
         component: MyProfilePageComponent,
-        canActivate: [AuthGuard],
+        canActivate: [ AuthGuard ],
       },
       {
-        path: URLS_RAW.dashboard.createEvent,
+        path: NAVIGATIONS.createEvent.url,
         component: CreateEventPageComponent,
-        canActivate: [AuthGuard],
+        canActivate: [ AuthGuard ],
       },
       {
-        path: URLS_RAW.dashboard.learn,
+        path: NAVIGATIONS.learn.url,
         component: LearnPageComponent,
-        canActivate: [AuthGuard],
+        canActivate: [ AuthGuard ],
       },
       {
-        path: URLS_RAW.dashboard.event,
+        path: NAVIGATIONS.event.url,
         component: EventPageComponent,
-        canActivate: [AuthGuard],
+        canActivate: [ AuthGuard ],
       },
       {
-        path: URLS_RAW.dashboard.privacy,
+        path: NAVIGATIONS.privacy.url,
         component: MaintenancePageComponent,
-        canActivate: [AuthGuard],
+        canActivate: [ AuthGuard ],
       },
     ],
   },
   {
-    path: URLS_RAW.user,
+    path: NAVIGATIONS.user.url,
     component: DashboardLayoutComponent,
     children: [
       {
         path: ':username',
         component: PublicProfilePageComponent,
-        canActivate: [PublicProfileGuard],
+        canActivate: [ PublicProfileGuard ],
       },
     ],
   },
   {
-    path: URLS_RAW.settings.root,
+    path: NAVIGATIONS.settings.url,
     component: SettingsLayoutComponent,
     children: [
       {
-        path: URLS_RAW.settings.editTheme,
+        path: NAVIGATIONS.editTheme.url,
         component: EditThemePageComponent,
-        /* Todo: add auth guard when needed
-         canActivate: [AuthGuard], */
+        canActivate: [ AuthGuard ]
       },
     ],
   },
@@ -292,13 +296,14 @@ const routes: Routes = [
   { path: '**', redirectTo: NAVIGATIONS.notFound.url },
 ];
 
-@NgModule({
+@NgModule( {
   imports: [
-    RouterModule.forRoot(routes, {
+    RouterModule.forRoot( routes, {
       scrollPositionRestoration: 'enabled',
       onSameUrlNavigation: 'reload',
-    }),
+    } ),
   ],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}
+  exports: [ RouterModule ],
+} )
+export class AppRoutingModule {
+}

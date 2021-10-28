@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DatePickerComponent, IDayCalendarConfig } from 'ng2-date-picker';
 import { environment } from '../../../../environments/environment';
-import { URLS } from '../../../data/constant';
+import { URLS } from '../../../data/navigation/navigation.data';
 import { BusinessLogicService } from '../../../service/business-logic/business-logic.service';
 import { CategoryService } from '../../../service/category/category.service';
 import { EventService } from '../../../service/event/event.service';

@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { BRAND } from '../../../data/brand/brand.data';
-import { ThemeColorSettings, URLS } from '../../../data/constant';
+import { URLS } from '../../../data/navigation/navigation.data';
+import { ThemeColorSettings } from '../../../data/theme/theme.data';
 
 @Component( {
   selector: 'app-external-redirect-page',

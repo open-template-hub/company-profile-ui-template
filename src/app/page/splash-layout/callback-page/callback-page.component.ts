@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { BRAND } from '../../../data/brand/brand.data';
-import { URLS } from '../../../data/constant';
+import { URLS } from '../../../data/navigation/navigation.data';
 import { AuthenticationService } from '../../../service/auth/authentication.service';
 import { InformationService } from '../../../service/information/information.service';
 import { PaymentService } from '../../../service/payment/payment.service';

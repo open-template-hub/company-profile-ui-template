@@ -1,10 +1,8 @@
 <div class="hero">
   <div class="hero-left">
     <h1>Open Template Hub</h1>
-    <p i18n="@@homePage.oth.description">
-      Minimizes your effort while building a new software business with our open
-      source GitHub micro server templates and responsive web UI + mobile UI
-      templates
+    <p>
+      {{ BRAND.bio }}
     </p>
   </div>
 
@@ -14,9 +12,9 @@
         [imageContentLoaderClass]="'brand-logo-main'"></app-image-content-loader>
     <img
         (load)="setBrandLogoLoaded()"
-        [src]="'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/oth-packages.min.png'"
+        [src]="BRAND.heroImage.src"
         [style]="'display:' + (!brandLogoLoaded ? 'none;' : 'block;')"
-        alt="oth-packages"
+        [alt]="BRAND.heroImage.description"
         height="450"
         width="800"/>
   </div>
@@ -74,15 +72,15 @@
 <ng-container *ngFor="let productLine of PRODUCT_LINES">
   <app-hero [contents]="[{ text: productLine.name, level: 3 }]" [heroClass]="'no-padding'"></app-hero>
   <div class="cards-wrapper">
-    <ng-container *ngFor="let relatedProduct of productLine.products">
+    <ng-container *ngFor="let product of productLine.products">
       <app-presentation-card
-          [class]="relatedProduct.color ? relatedProduct.color : ''"
-          [footerText]=getPresentationCardFooter(relatedProduct.openSource)
-          [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
+          [class]="product.color ? product.color : ''"
+          [footerText]=getPresentationCardFooter(product.openSource)
+          [href]="URLS.product + '/' + productLine.key + '/' + product.key"
           [imgHeight]="150"
-          [secondaryText]="relatedProduct.description"
-          [src]="relatedProduct.logo"
-          [title]="relatedProduct.name"
+          [secondaryText]="product.description"
+          [src]="product.logo"
+          [title]="product.name"
           class="related-product">
       </app-presentation-card>
     </ng-container>

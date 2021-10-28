@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
 import { GithubProviderService } from 'src/app/service/provider/github-provider.service';
 import { environmentCommon } from '../../../../environments/environment-common';
-import { URLS } from '../../../data/constant';
+import { URLS } from '../../../data/navigation/navigation.data';
 import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
 import { Activity } from '../../../model/activity/activity.model';
 import { Product, ProductLine } from '../../../model/product/product.model';
@@ -36,6 +36,10 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   relatedProductAppHero = [
     { text: $localize `:@@productPage.relatedProductAppHero:Related Products`, level: 2 }
+  ]
+
+  npmPackageInstallationAndUsage = [
+    { text: $localize `:@@productPage.npmPackageInstallationAndUsage:Package Installation & Usage`, level: 2 }
   ]
 
   constructor(
@@ -88,6 +92,12 @@ export class ProductPageComponent implements OnInit, OnDestroy {
         return;
       }
 
+      if (product.url === URLS.maintenance) {
+        this.productService.setSelectedProduct( undefined );
+        this.router.navigate( [ URLS.maintenance ] );
+        return;
+      }
+
       if ( !isService ) {
         this.isOpenSource = true;
         this.githubService.getGithubCounters( product.key )
@@ -128,6 +138,6 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   }
 
   getPresentationCardFooter(isOpenSource: boolean): string {
-    return isOpenSource ? $localize`:@@productTypeTag.openSource:#opensource` : $localize`:@@productTypeTag.premium:#premium`
+    return isOpenSource ? $localize`:@@productTypeTag.openSource:opensource` : $localize`:@@productTypeTag.premium:premium`
   }
 }

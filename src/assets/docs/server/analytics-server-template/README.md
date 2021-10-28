@@ -16,7 +16,7 @@ Open Template Hub - Analytics Server Template v3
 [![SonarCloud](https://img.shields.io/sonar/quality_gate/open-template-hub_analytics-server-template?server=https%3A%2F%2Fsonarcloud.io&label=Sonar%20Cloud&style=for-the-badge&logo=sonarcloud)](https://sonarcloud.io/dashboard?id=open-template-hub_analytics-server-template)
 [![BTC](https://img.shields.io/badge/Donate-BTC-ORANGE?color=F5922F&style=for-the-badge&logo=bitcoin)](https://commerce.coinbase.com/checkout/8313af5f-de48-498d-b2cb-d98819ca7d5e)
 
-Analytics Server Template for generic usage in Node.js
+Analytics Server Template is a generic open source analytics server that has simple yet powerful design to connect your business with third party analytics service providers (like Google Analytics or Matomo).
 
 ## Ways to Begin
 

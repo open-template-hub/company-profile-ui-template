@@ -1,0 +1,7 @@
+@use '../../landing-layout.component';
+
+.doc-content-wrapper {
+  & > * {
+    margin: 50px;
+  }
+}

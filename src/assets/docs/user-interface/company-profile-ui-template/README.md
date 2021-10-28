@@ -17,7 +17,7 @@ Open Template Hub - Company Profile UI Template v3
 [![SonarCloud](https://img.shields.io/sonar/quality_gate/open-template-hub_company-profile-ui-template?server=https%3A%2F%2Fsonarcloud.io&label=Sonar%20Cloud&style=for-the-badge&logo=sonarcloud)](https://sonarcloud.io/dashboard?id=open-template-hub_company-profile-ui-template)
 [![BTC](https://img.shields.io/badge/Donate-BTC-ORANGE?color=F5922F&style=for-the-badge&logo=bitcoin)](https://commerce.coinbase.com/checkout/8313af5f-de48-498d-b2cb-d98819ca7d5e)
 
-Company Profile UI Template for generic usage in Angular (generated from [Web UI Template](https://github.com/open-template-hub/web-ui-template))
+Company Profile UI Template is modern, responsive and customisable company profile ui template for your business. It contains reusable components, theme color and design support along with dark theme support. (generated from [Web UI Template](https://github.com/open-template-hub/web-ui-template))
 
 <h3 align="center">
   For demo click the image below ⬇️
@@ -152,6 +152,12 @@ To be able to generate cookie policy, use **[cookiepolicygenerator](https://www.
 ## Outdated
 
 Refer to **[OUTDATED.md](docs/OUTDATED.md)** to see outdated npm packages and update them with your own risk.
+
+<br/>
+
+## Localization
+
+To be able to generate or update localization, use [updateMessages.run.xml](.run/updateMessages.run.xml).
 
 <br/>
 

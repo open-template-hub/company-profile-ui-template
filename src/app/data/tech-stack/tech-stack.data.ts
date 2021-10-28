@@ -7,6 +7,10 @@ export const TECH_STACK = {
     src: 'https://avatars.githubusercontent.com/u/9950313?s=200&v=4',
     description: 'NodeJs'
   },
+  npm: {
+    src: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/npm/npm.png',
+    description: 'Npm'
+  },
   express: {
     src: 'https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png',
     description: 'ExpressJs'

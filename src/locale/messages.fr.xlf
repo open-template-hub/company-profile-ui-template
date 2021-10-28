@@ -37,7 +37,7 @@
         <source>Afghanistan</source>
         <target>Afghanistan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
@@ -45,7 +45,7 @@
         <source>Albania</source>
         <target>Albanie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
@@ -53,7 +53,7 @@
         <source>Algeria</source>
         <target>Algérie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
@@ -61,7 +61,7 @@
         <source>Andorra</source>
         <target>Andorre</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
@@ -69,7 +69,7 @@
         <source>Angola</source>
         <target>Angola</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
@@ -77,7 +77,7 @@
         <source>Anguilla</source>
         <target>Anguilla</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -85,7 +85,7 @@
         <source>Antigua &amp; Barbuda</source>
         <target>Antigua &amp; Barbuda</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -93,7 +93,7 @@
         <source>Argentina</source>
         <target>Argentine</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
@@ -101,7 +101,7 @@
         <source>Armenia</source>
         <target>Arménie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
@@ -109,7 +109,7 @@
         <source>Aruba</source>
         <target>Aruba</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
@@ -117,7 +117,7 @@
         <source>Australia</source>
         <target>Australie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
@@ -125,7 +125,7 @@
         <source>Austria</source>
         <target>L'Autriche</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
@@ -133,7 +133,7 @@
         <source>Azerbaijan</source>
         <target>Azerbaïdjan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
@@ -141,7 +141,7 @@
         <source>Bahamas</source>
         <target>Bahamas</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
@@ -149,7 +149,7 @@
         <source>Bahrain</source>
         <target>Bahreïn</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
@@ -157,7 +157,7 @@
         <source>Bangladesh</source>
         <target>Bangladesh</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
@@ -165,7 +165,7 @@
         <source>Barbados</source>
         <target>Barbade</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
@@ -173,7 +173,7 @@
         <source>Belarus</source>
         <target>Biélorussie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
@@ -181,7 +181,7 @@
         <source>Belgium</source>
         <target>la Belgique</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
@@ -189,7 +189,7 @@
         <source>Belize</source>
         <target>Belize</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
@@ -197,7 +197,7 @@
         <source>Benin</source>
         <target>Benin</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
@@ -205,7 +205,7 @@
         <source>Bermuda</source>
         <target>Bermudes</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
@@ -213,7 +213,7 @@
         <source>Bhutan</source>
         <target>Bhoutan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
@@ -221,7 +221,7 @@
         <source>Bolivia</source>
         <target>Bolivie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
@@ -229,7 +229,7 @@
         <source>Bosnia &amp;amp; Herzegovina</source>
         <target>Bosnie &amp;amp; Herzégovine</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
@@ -237,7 +237,7 @@
         <source>Botswana</source>
         <target>Botswana</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
@@ -245,7 +245,7 @@
         <source>Brazil</source>
         <target>Brésil</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
@@ -253,7 +253,7 @@
         <source>British Virgin Islands</source>
         <target>Îles Vierges britanniques</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
@@ -261,7 +261,7 @@
         <source>Brunei</source>
         <target>Brunéi</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
@@ -269,7 +269,7 @@
         <source>Bulgaria</source>
         <target>Bulgarie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
@@ -277,7 +277,7 @@
         <source>Burkina Faso</source>
         <target>Burkina Faso</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
@@ -285,7 +285,7 @@
         <source>Burundi</source>
         <target>Burundi</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
@@ -293,7 +293,7 @@
         <source>Cambodia</source>
         <target>Cambodge</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
@@ -301,7 +301,7 @@
         <source>Cameroon</source>
         <target>Cameroun</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
@@ -309,7 +309,7 @@
         <source>Cape Verde</source>
         <target>Cap-Vert</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
@@ -317,7 +317,7 @@
         <source>Cayman Islands</source>
         <target>Îles Caïmans</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
@@ -325,7 +325,7 @@
         <source>Chad</source>
         <target>Chad</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
@@ -333,7 +333,7 @@
         <source>Chile</source>
         <target>Chili</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
@@ -341,7 +341,7 @@
         <source>China</source>
         <target>China</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
@@ -349,7 +349,7 @@
         <source>Colombia</source>
         <target>Colombie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
@@ -357,7 +357,7 @@
         <source>Congo</source>
         <target>Congolais</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
@@ -365,7 +365,7 @@
         <source>Cook Islands</source>
         <target>Cook Islands</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
@@ -373,7 +373,7 @@
         <source>Costa Rica</source>
         <target>Costa Rica</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
@@ -381,7 +381,7 @@
         <source>Cote D Ivoire</source>
         <target>Cote D Ivoire</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
@@ -389,7 +389,7 @@
         <source>Croatia</source>
         <target>Croatie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
@@ -397,7 +397,7 @@
         <source>Cruise Ship</source>
         <target>Cruise Ship</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
@@ -405,7 +405,7 @@
         <source>Cuba</source>
         <target>Cuba</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
@@ -413,7 +413,7 @@
         <source>Cyprus</source>
         <target>Chypre</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
@@ -421,7 +421,7 @@
         <source>Czech Republic</source>
         <target>République Tchèque</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">50</context>
         </context-group>
       </trans-unit>
@@ -429,7 +429,7 @@
         <source>Denmark</source>
         <target>Danemark</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
@@ -437,7 +437,7 @@
         <source>Djibouti</source>
         <target>Djibouti</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
@@ -445,7 +445,7 @@
         <source>Dominica</source>
         <target>Dominique</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
@@ -453,7 +453,7 @@
         <source>Dominican Republic</source>
         <target>République dominicaine</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
@@ -461,7 +461,7 @@
         <source>Ecuador</source>
         <target>Équateur</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
@@ -469,7 +469,7 @@
         <source>Egypt</source>
         <target>Egypte</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
@@ -477,7 +477,7 @@
         <source>El Salvador</source>
         <target>Le Salvador</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
@@ -485,7 +485,7 @@
         <source>Equatorial Guinea</source>
         <target>Guinée Équatoriale</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
@@ -493,7 +493,7 @@
         <source>Estonia</source>
         <target>Estonie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
@@ -501,7 +501,7 @@
         <source>Ethiopia</source>
         <target>Ethiopie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
@@ -509,7 +509,7 @@
         <source>Falkland Islands</source>
         <target>les îles Falkland</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">61</context>
         </context-group>
       </trans-unit>
@@ -517,7 +517,7 @@
         <source>Faroe Islands</source>
         <target>Îles Féroé</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
@@ -525,7 +525,7 @@
         <source>Fiji</source>
         <target>Fidji</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
@@ -533,7 +533,7 @@
         <source>Finland</source>
         <target>Finlande</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
@@ -541,7 +541,7 @@
         <source>France</source>
         <target>La France</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">65</context>
         </context-group>
       </trans-unit>
@@ -549,7 +549,7 @@
         <source>French Polynesia</source>
         <target>Polynésie française</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
@@ -557,7 +557,7 @@
         <source>French West Indies</source>
         <target>Antilles françaises</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
@@ -565,7 +565,7 @@
         <source>Gabon</source>
         <target>Gabon</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
@@ -573,7 +573,7 @@
         <source>Gambia</source>
         <target>Gambie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
@@ -581,7 +581,7 @@
         <source>Georgia</source>
         <target>Géorgie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
@@ -589,7 +589,7 @@
         <source>Germany</source>
         <target>Allemagne</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
@@ -597,7 +597,7 @@
         <source>Ghana</source>
         <target>Ghana</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
@@ -605,7 +605,7 @@
         <source>Gibraltar</source>
         <target>Gibraltar</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
@@ -613,7 +613,7 @@
         <source>Greece</source>
         <target>Grèce</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
@@ -621,7 +621,7 @@
         <source>Greenland</source>
         <target>Groenland</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">75</context>
         </context-group>
       </trans-unit>
@@ -629,7 +629,7 @@
         <source>Grenada</source>
         <target>Grenada</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
@@ -637,7 +637,7 @@
         <source>Guam</source>
         <target>Guam</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
@@ -645,7 +645,7 @@
         <source>Guatemala</source>
         <target>Guatemala</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
@@ -653,7 +653,7 @@
         <source>Guernsey</source>
         <target>Guernsey</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
@@ -661,7 +661,7 @@
         <source>Guinea</source>
         <target>Guinée</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
@@ -669,7 +669,7 @@
         <source>Guinea Bissau</source>
         <target>Guinée Bissau</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
@@ -677,7 +677,7 @@
         <source>Guyana</source>
         <target>Guyane</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
@@ -685,7 +685,7 @@
         <source>Haiti</source>
         <target/>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
@@ -693,7 +693,7 @@
         <source>Honduras</source>
         <target>Haïti</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">84</context>
         </context-group>
       </trans-unit>
@@ -701,7 +701,7 @@
         <source>Hong Kong</source>
         <target>Hong Kong</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">85</context>
         </context-group>
       </trans-unit>
@@ -709,7 +709,7 @@
         <source>Hungary</source>
         <target>Hongrie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">86</context>
         </context-group>
       </trans-unit>
@@ -717,7 +717,7 @@
         <source>Iceland</source>
         <target>Islande</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">87</context>
         </context-group>
       </trans-unit>
@@ -725,7 +725,7 @@
         <source>India</source>
         <target>Inde</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">88</context>
         </context-group>
       </trans-unit>
@@ -733,7 +733,7 @@
         <source>Indonesia</source>
         <target>Indonésie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">89</context>
         </context-group>
       </trans-unit>
@@ -741,7 +741,7 @@
         <source>Iran</source>
         <target>L'Iran</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">90</context>
         </context-group>
       </trans-unit>
@@ -749,7 +749,7 @@
         <source>Iraq</source>
         <target>Irak</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">91</context>
         </context-group>
       </trans-unit>
@@ -757,7 +757,7 @@
         <source>Ireland</source>
         <target>Irlande</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">92</context>
         </context-group>
       </trans-unit>
@@ -765,7 +765,7 @@
         <source>Isle of Man</source>
         <target>Isle of Man</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">93</context>
         </context-group>
       </trans-unit>
@@ -773,7 +773,7 @@
         <source>Israel</source>
         <target>Israël</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">94</context>
         </context-group>
       </trans-unit>
@@ -781,7 +781,7 @@
         <source>Italy</source>
         <target>Italie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">95</context>
         </context-group>
       </trans-unit>
@@ -789,7 +789,7 @@
         <source>Jamaica</source>
         <target>Jamaïque</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
@@ -797,7 +797,7 @@
         <source>Japan</source>
         <target>Japon</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
@@ -805,7 +805,7 @@
         <source>Jersey</source>
         <target>Jersey</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">98</context>
         </context-group>
       </trans-unit>
@@ -813,7 +813,7 @@
         <source>Jordan</source>
         <target>Jordan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">99</context>
         </context-group>
       </trans-unit>
@@ -821,7 +821,7 @@
         <source>Kazakhstan</source>
         <target>Kazakhstan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">100</context>
         </context-group>
       </trans-unit>
@@ -829,7 +829,7 @@
         <source>Kenya</source>
         <target>Kenya</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">101</context>
         </context-group>
       </trans-unit>
@@ -837,7 +837,7 @@
         <source>Kuwait</source>
         <target>Koweit</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">102</context>
         </context-group>
       </trans-unit>
@@ -845,7 +845,7 @@
         <source>Kyrgyz Republic</source>
         <target>République du Kirghizistan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">103</context>
         </context-group>
       </trans-unit>
@@ -853,7 +853,7 @@
         <source>Laos</source>
         <target>Laos</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">104</context>
         </context-group>
       </trans-unit>
@@ -861,7 +861,7 @@
         <source>Latvia</source>
         <target>Lettonie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">105</context>
         </context-group>
       </trans-unit>
@@ -869,7 +869,7 @@
         <source>Lebanon</source>
         <target>Liban</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">106</context>
         </context-group>
       </trans-unit>
@@ -877,7 +877,7 @@
         <source>Lesotho</source>
         <target>Lesotho</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">107</context>
         </context-group>
       </trans-unit>
@@ -885,7 +885,7 @@
         <source>Liberia</source>
         <target>Libéria</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
@@ -893,7 +893,7 @@
         <source>Libya</source>
         <target>Libye</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">109</context>
         </context-group>
       </trans-unit>
@@ -901,7 +901,7 @@
         <source>Liechtenstein</source>
         <target>Liechtenstein</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
@@ -909,7 +909,7 @@
         <source>Lithuania</source>
         <target>Lituanie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
@@ -917,7 +917,7 @@
         <source>Luxembourg</source>
         <target>Luxembourg</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">112</context>
         </context-group>
       </trans-unit>
@@ -925,7 +925,7 @@
         <source>Macau</source>
         <target>Macao</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">113</context>
         </context-group>
       </trans-unit>
@@ -933,7 +933,7 @@
         <source>Macedonia</source>
         <target>Macédoine</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">114</context>
         </context-group>
       </trans-unit>
@@ -941,7 +941,7 @@
         <source>Madagascar</source>
         <target>Madagascar</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">115</context>
         </context-group>
       </trans-unit>
@@ -949,7 +949,7 @@
         <source>Malawi</source>
         <target>Malawi</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">116</context>
         </context-group>
       </trans-unit>
@@ -957,7 +957,7 @@
         <source>Malaysia</source>
         <target>Malaisie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">117</context>
         </context-group>
       </trans-unit>
@@ -965,7 +965,7 @@
         <source>Maldives</source>
         <target>Maldives</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">118</context>
         </context-group>
       </trans-unit>
@@ -973,7 +973,7 @@
         <source>Mali</source>
         <target>Mali</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">119</context>
         </context-group>
       </trans-unit>
@@ -981,7 +981,7 @@
         <source>Malta</source>
         <target>Malte</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">120</context>
         </context-group>
       </trans-unit>
@@ -989,7 +989,7 @@
         <source>Mauritania</source>
         <target>Mauritanie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">121</context>
         </context-group>
       </trans-unit>
@@ -997,7 +997,7 @@
         <source>Mauritius</source>
         <target>Maurice</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">122</context>
         </context-group>
       </trans-unit>
@@ -1005,7 +1005,7 @@
         <source>Mexico</source>
         <target>Mexique</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">123</context>
         </context-group>
       </trans-unit>
@@ -1013,7 +1013,7 @@
         <source>Moldova</source>
         <target>Moldavie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">124</context>
         </context-group>
       </trans-unit>
@@ -1021,7 +1021,7 @@
         <source>Monaco</source>
         <target>Monaco</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">125</context>
         </context-group>
       </trans-unit>
@@ -1029,7 +1029,7 @@
         <source>Mongolia</source>
         <target>Mongolie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
@@ -1037,7 +1037,7 @@
         <source>Montenegro</source>
         <target>Monténégro</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">127</context>
         </context-group>
       </trans-unit>
@@ -1045,7 +1045,7 @@
         <source>Montserrat</source>
         <target>Montserrat</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">128</context>
         </context-group>
       </trans-unit>
@@ -1053,7 +1053,7 @@
         <source>Morocco</source>
         <target>Morocco</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">129</context>
         </context-group>
       </trans-unit>
@@ -1061,7 +1061,7 @@
         <source>Mozambique</source>
         <target>Mozambique</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">130</context>
         </context-group>
       </trans-unit>
@@ -1069,7 +1069,7 @@
         <source>Namibia</source>
         <target>Namibie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">131</context>
         </context-group>
       </trans-unit>
@@ -1077,7 +1077,7 @@
         <source>Nepal</source>
         <target>Népal</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">132</context>
         </context-group>
       </trans-unit>
@@ -1085,7 +1085,7 @@
         <source>Netherlands</source>
         <target>Hollande</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">133</context>
         </context-group>
       </trans-unit>
@@ -1093,7 +1093,7 @@
         <source>Netherlands Antilles</source>
         <target>Antilles néerlandaises</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">134</context>
         </context-group>
       </trans-unit>
@@ -1101,7 +1101,7 @@
         <source>New Caledonia</source>
         <target>Nouvelle Calédonie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">135</context>
         </context-group>
       </trans-unit>
@@ -1109,7 +1109,7 @@
         <source>New Zealand</source>
         <target>Nouvelle-Zélande</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">136</context>
         </context-group>
       </trans-unit>
@@ -1117,7 +1117,7 @@
         <source>Nicaragua</source>
         <target>Nicaragua</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">137</context>
         </context-group>
       </trans-unit>
@@ -1125,7 +1125,7 @@
         <source>Niger</source>
         <target>Niger</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">138</context>
         </context-group>
       </trans-unit>
@@ -1133,7 +1133,7 @@
         <source>Nigeria</source>
         <target>Nigeria</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">139</context>
         </context-group>
       </trans-unit>
@@ -1141,7 +1141,7 @@
         <source>Norway</source>
         <target>Norvège</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">140</context>
         </context-group>
       </trans-unit>
@@ -1149,7 +1149,7 @@
         <source>Oman</source>
         <target>Oman</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">141</context>
         </context-group>
       </trans-unit>
@@ -1157,7 +1157,7 @@
         <source>Pakistan</source>
         <target>Pakistan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">142</context>
         </context-group>
       </trans-unit>
@@ -1165,7 +1165,7 @@
         <source>Palestine</source>
         <target>Palestine</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">143</context>
         </context-group>
       </trans-unit>
@@ -1173,7 +1173,7 @@
         <source>Panama</source>
         <target>Panama</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">144</context>
         </context-group>
       </trans-unit>
@@ -1181,7 +1181,7 @@
         <source>Papua New Guinea</source>
         <target>Papouasie Nouvelle Guinée</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">145</context>
         </context-group>
       </trans-unit>
@@ -1189,7 +1189,7 @@
         <source>Paraguay</source>
         <target>Paraguay</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">146</context>
         </context-group>
       </trans-unit>
@@ -1197,7 +1197,7 @@
         <source>Peru</source>
         <target>Pérou</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">147</context>
         </context-group>
       </trans-unit>
@@ -1205,7 +1205,7 @@
         <source>Philippines</source>
         <target>Philippines</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">148</context>
         </context-group>
       </trans-unit>
@@ -1213,7 +1213,7 @@
         <source>Poland</source>
         <target>Pologne</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">149</context>
         </context-group>
       </trans-unit>
@@ -1221,7 +1221,7 @@
         <source>Portugal</source>
         <target>le Portugal</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">150</context>
         </context-group>
       </trans-unit>
@@ -1229,7 +1229,7 @@
         <source>Puerto Rico</source>
         <target>Porto Rico</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">151</context>
         </context-group>
       </trans-unit>
@@ -1237,7 +1237,7 @@
         <source>Qatar</source>
         <target>Qatar</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">152</context>
         </context-group>
       </trans-unit>
@@ -1245,7 +1245,7 @@
         <source>Reunion</source>
         <target>Réunion</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">153</context>
         </context-group>
       </trans-unit>
@@ -1253,7 +1253,7 @@
         <source>Romania</source>
         <target>Roumanie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">154</context>
         </context-group>
       </trans-unit>
@@ -1261,7 +1261,7 @@
         <source>Russia</source>
         <target>Russie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">155</context>
         </context-group>
       </trans-unit>
@@ -1269,7 +1269,7 @@
         <source>Rwanda</source>
         <target>Rwanda</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">156</context>
         </context-group>
       </trans-unit>
@@ -1277,7 +1277,7 @@
         <source>Saint Pierre &amp;amp; Miquelon</source>
         <target>Saint Pierre &amp; Miquelon</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">157</context>
         </context-group>
       </trans-unit>
@@ -1285,7 +1285,7 @@
         <source>Samoa</source>
         <target>Samoa</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">158</context>
         </context-group>
       </trans-unit>
@@ -1293,7 +1293,7 @@
         <source>San Marino</source>
         <target>Saint Marin</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">159</context>
         </context-group>
       </trans-unit>
@@ -1301,7 +1301,7 @@
         <source>Satellite</source>
         <target>Satellite</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">160</context>
         </context-group>
       </trans-unit>
@@ -1309,7 +1309,7 @@
         <source>Saudi Arabia</source>
         <target>Arabie Saoudite</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">161</context>
         </context-group>
       </trans-unit>
@@ -1317,7 +1317,7 @@
         <source>Senegal</source>
         <target>Sénégal</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">162</context>
         </context-group>
       </trans-unit>
@@ -1325,7 +1325,7 @@
         <source>Serbia</source>
         <target>Serbie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">163</context>
         </context-group>
       </trans-unit>
@@ -1333,7 +1333,7 @@
         <source>Seychelles</source>
         <target>les Seychelles</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">164</context>
         </context-group>
       </trans-unit>
@@ -1341,7 +1341,7 @@
         <source>Sierra Leone</source>
         <target>Sierra Leone</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">165</context>
         </context-group>
       </trans-unit>
@@ -1349,7 +1349,7 @@
         <source>Singapore</source>
         <target>Singapour</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">166</context>
         </context-group>
       </trans-unit>
@@ -1357,7 +1357,7 @@
         <source>Slovakia</source>
         <target>Slovaquie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">167</context>
         </context-group>
       </trans-unit>
@@ -1365,7 +1365,7 @@
         <source>Slovenia</source>
         <target>Slovénie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">168</context>
         </context-group>
       </trans-unit>
@@ -1373,7 +1373,7 @@
         <source>South Africa</source>
         <target>Afrique du Sud</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">169</context>
         </context-group>
       </trans-unit>
@@ -1381,7 +1381,7 @@
         <source>South Korea</source>
         <target>Corée du Sud</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
@@ -1389,7 +1389,7 @@
         <source>Spain</source>
         <target>Espagne</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">171</context>
         </context-group>
       </trans-unit>
@@ -1397,7 +1397,7 @@
         <source>Sri Lanka</source>
         <target>Sri Lanka</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">172</context>
         </context-group>
       </trans-unit>
@@ -1405,7 +1405,7 @@
         <source>St Kitts &amp;amp; Nevis</source>
         <target>Saint-Kitts &amp;amp; Nevis</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
@@ -1413,7 +1413,7 @@
         <source>St. Lucia</source>
         <target>Sainte Lucie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">174</context>
         </context-group>
       </trans-unit>
@@ -1421,7 +1421,7 @@
         <source>St Vincent</source>
         <target>Saint-Vincent</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">175</context>
         </context-group>
       </trans-unit>
@@ -1429,7 +1429,7 @@
         <source>Sudan</source>
         <target>Soudan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">176</context>
         </context-group>
       </trans-unit>
@@ -1437,7 +1437,7 @@
         <source>Suriname</source>
         <target>Suriname</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">177</context>
         </context-group>
       </trans-unit>
@@ -1445,7 +1445,7 @@
         <source>Swaziland</source>
         <target>Swaziland</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">178</context>
         </context-group>
       </trans-unit>
@@ -1453,7 +1453,7 @@
         <source>Sweden</source>
         <target>Suède</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">179</context>
         </context-group>
       </trans-unit>
@@ -1461,7 +1461,7 @@
         <source>Switzerland</source>
         <target>la Suisse</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">180</context>
         </context-group>
       </trans-unit>
@@ -1469,7 +1469,7 @@
         <source>Syria</source>
         <target>Syrie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">181</context>
         </context-group>
       </trans-unit>
@@ -1477,7 +1477,7 @@
         <source>Taiwan</source>
         <target>Taïwan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">182</context>
         </context-group>
       </trans-unit>
@@ -1485,7 +1485,7 @@
         <source>Tajikistan</source>
         <target>Tadjikistan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">183</context>
         </context-group>
       </trans-unit>
@@ -1493,7 +1493,7 @@
         <source>Tanzania</source>
         <target>Tanzanie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">184</context>
         </context-group>
       </trans-unit>
@@ -1501,7 +1501,7 @@
         <source>Thailand</source>
         <target>Thaïlande</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">185</context>
         </context-group>
       </trans-unit>
@@ -1509,7 +1509,7 @@
         <source>Timor L'Este</source>
         <target>Timor L'Este</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">186</context>
         </context-group>
       </trans-unit>
@@ -1517,7 +1517,7 @@
         <source>Togo</source>
         <target>Togo</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">187</context>
         </context-group>
       </trans-unit>
@@ -1525,7 +1525,7 @@
         <source>Tonga</source>
         <target>Tonga</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">188</context>
         </context-group>
       </trans-unit>
@@ -1533,7 +1533,7 @@
         <source>Trinidad &amp;amp; Tobago</source>
         <target>Trinidad &amp;amp; Tobago</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">189</context>
         </context-group>
       </trans-unit>
@@ -1541,7 +1541,7 @@
         <source>Tunisia</source>
         <target>Tunisie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">190</context>
         </context-group>
       </trans-unit>
@@ -1549,7 +1549,7 @@
         <source>Turkey</source>
         <target>Turquie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">191</context>
         </context-group>
       </trans-unit>
@@ -1557,7 +1557,7 @@
         <source>Turkmenistan</source>
         <target>Turkménistan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">192</context>
         </context-group>
       </trans-unit>
@@ -1565,7 +1565,7 @@
         <source>Turks &amp;amp; Caicos</source>
         <target>Turks &amp;amp; Caicos</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">193</context>
         </context-group>
       </trans-unit>
@@ -1573,7 +1573,7 @@
         <source>Uganda</source>
         <target>Ouganda</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">194</context>
         </context-group>
       </trans-unit>
@@ -1581,7 +1581,7 @@
         <source>Ukraine</source>
         <target>Ukraine</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">195</context>
         </context-group>
       </trans-unit>
@@ -1589,7 +1589,7 @@
         <source>United Arab Emirates</source>
         <target>Emirats Arabes Unis</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">196</context>
         </context-group>
       </trans-unit>
@@ -1597,7 +1597,7 @@
         <source>United Kingdom</source>
         <target>Royaume-Uni</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">197</context>
         </context-group>
       </trans-unit>
@@ -1605,7 +1605,7 @@
         <source>Uruguay</source>
         <target>Uruguay</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">198</context>
         </context-group>
       </trans-unit>
@@ -1613,7 +1613,7 @@
         <source>Uzbekistan</source>
         <target>Ouzbékistan</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">199</context>
         </context-group>
       </trans-unit>
@@ -1621,7 +1621,7 @@
         <source>Venezuela</source>
         <target>Venezuela</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">200</context>
         </context-group>
       </trans-unit>
@@ -1629,7 +1629,7 @@
         <source>Vietnam</source>
         <target>Viêt Nam</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">201</context>
         </context-group>
       </trans-unit>
@@ -1637,7 +1637,7 @@
         <source>Virgin Islands (US)</source>
         <target>Virgin Islands (US)</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">202</context>
         </context-group>
       </trans-unit>
@@ -1645,7 +1645,7 @@
         <source>Yemen</source>
         <target>Yémen</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">203</context>
         </context-group>
       </trans-unit>
@@ -1653,7 +1653,7 @@
         <source>Zambia</source>
         <target>Zambie</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">204</context>
         </context-group>
       </trans-unit>
@@ -1661,7 +1661,7 @@
         <source>Zimbabwe</source>
         <target>Zimbabwe</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country.data.ts</context>
           <context context-type="linenumber">205</context>
         </context-group>
       </trans-unit>
@@ -2017,8 +2017,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.analyticsServerTemplate.description" datatype="html">
-        <source>Analytics Server Template for generic usage in Node.js</source>
-        <target>Modèle de serveur d'analyse pour une utilisation générique dans Node.js</target>
+        <source>Analytics Server Template is a generic open source analytics server that has simple yet powerful design to connect your business with third party analytics service providers (like Google Analytics or Matomo).</source>
+        <target>Le modèle de serveur d'analyse est un serveur d'analyse open source générique qui a une conception simple mais puissante pour connecter votre entreprise à des fournisseurs de services d'analyse tiers (comme Google Analytics ou Matomo).</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">186</context>
@@ -2575,8 +2575,8 @@
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.oth.description" datatype="html">
-        <source>Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates</source>
-        <target>Minimise vos efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de micro-serveur GitHub open source et nos modèles d'interface utilisateur Web réactive + d'interface utilisateur mobile</target>
+        <source>Open Source first organization that helps you to minimize the effort while building a new software business with our server and UI templates</source>
+        <target>Première organisation Open Source qui vous aide à minimiser les efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de serveur et d'interface utilisateur</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.html</context>
           <context context-type="linenumber">5,8</context>
@@ -3159,13 +3159,6 @@
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">48</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.theme" datatype="html">
-        <source>Theme</source>
-        <target>Thème</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">50</context>
-        </context-group>
       </trans-unit><trans-unit id="footer.resources" datatype="html">
         <source>Resources</source>
         <target>Ressources</target>
@@ -3435,15 +3428,15 @@
           <context context-type="linenumber">130</context>
         </context-group>
       </trans-unit><trans-unit id="productLinesData.businessLogicServerTemplate.description" datatype="html">
-        <source>Business Logic Server Template for generic usage in Node.js</source>
-        <target>Modèle de serveur de logique métier pour une utilisation générique dans Node.js</target>
+        <source>Business Logic Server Template is a generic open source server that encodes the real-world business rules that determine how data can be created, stored, and changed. It saves you from rewriting boilerplate code. It works best with other Open Template Hub products.</source>
+        <target>Le modèle de serveur de logique métier est un serveur open source générique qui code les règles métier du monde réel qui déterminent comment les données peuvent être créées, stockées et modifiées. Cela vous évite de réécrire du code passe-partout. Cela fonctionne mieux avec d'autres produits Open Template Hub.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">163</context>
         </context-group>
       </trans-unit><trans-unit id="userInterfaces.companyProfileUITemplate.description" datatype="html">
-        <source>Company Profile UI Template for generic usage in Angular</source>
-        <target>Modèle d'interface utilisateur de profil d'entreprise pour une utilisation générique dans Angular</target>
+        <source>Company Profile UI Template is modern, responsive and customisable company profile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
+        <target>Le modèle d'interface utilisateur de profil d'entreprise est un modèle d'interface utilisateur de profil d'entreprise moderne, réactif et personnalisable pour votre entreprise. Il contient des composants réutilisables, une prise en charge de la couleur et de la conception du thème ainsi qu'une prise en charge du thème sombre.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">181</context>
@@ -3463,36 +3456,22 @@
           <context context-type="linenumber">193</context>
         </context-group>
       </trans-unit><trans-unit id="userInterfaces.webUITemplate.description" datatype="html">
-        <source>Web UI Template for generic usage in Angular</source>
-        <target>Modèle d'interface utilisateur Web pour une utilisation générique dans Angular</target>
+        <source>Web UI Template is modern, responsive and customisable web ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
+        <target>Le modèle d'interface utilisateur Web est un modèle d'interface utilisateur Web moderne, réactif et personnalisable pour votre entreprise. Il contient des composants réutilisables, une prise en charge de la couleur et de la conception du thème ainsi qu'une prise en charge du thème sombre.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">233</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.webUITemplate.screenshot.1" datatype="html">
-        <source>Responsive Design</source>
-        <target>Conception réactive</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">241</context>
-        </context-group>
-      </trans-unit><trans-unit id="userInterfaces.webUITemplate.screenshot.2" datatype="html">
-        <source>Dark Mode Support</source>
-        <target>Prise en charge du mode sombre</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">245</context>
-        </context-group>
       </trans-unit><trans-unit id="userInterfaces.mobileUITemplate.description" datatype="html">
-        <source>Mobile UI Template for generic usage in React Native</source>
-        <target>Modèle d'interface utilisateur mobile pour une utilisation générique dans React Native</target>
+        <source>Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
+        <target>Le modèle d'interface utilisateur mobile est un modèle d'interface utilisateur mobile moderne, réactif et personnalisable pour votre entreprise. Il contient des composants réutilisables, une prise en charge de la couleur et de la conception du thème ainsi qu'une prise en charge du thème sombre.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">285</context>
         </context-group>
       </trans-unit><trans-unit id="userInterfaces.mobileUITemplate.screenshot.1" datatype="html">
-        <source>iOS and Android Support</source>
-        <target>Prise en charge iOS et Android</target>
+        <source>iOS Support</source>
+        <target>Prise en charge iOS</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">293</context>
@@ -3503,13 +3482,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">297</context>
-        </context-group>
-      </trans-unit><trans-unit id="userInterfaces.mobileUITemplate.screenshot.3" datatype="html">
-        <source>TODO: add another screenshot</source>
-        <target>TODO: add another screenshot</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">301</context>
         </context-group>
       </trans-unit><trans-unit id="generators.serverGenerator.description" datatype="html">
         <source>Command line interface generator of the servers at Open Template Hub</source>
@@ -4089,13 +4061,6 @@
           <context context-type="sourcefile">src/app/data/employee/employee.data.ts</context>
           <context context-type="linenumber">23</context>
         </context-group>
-      </trans-unit><trans-unit id="employees.mert.bio" datatype="html">
-        <source>TODO: write your bio here</source>
-        <target>TODO: write your bio here</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/employee/employee.data.ts</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
       </trans-unit><trans-unit id="employees.???.bio" datatype="html">
         <source>Would you like to join our team? Please feel free to reach us from info@opentemplatehub.com or from jobs page.</source>
         <target>Vous souhaitez rejoindre notre équipe ? N'hésitez pas à nous contacter depuis info@opentemplatehub.com ou depuis la page des emplois.</target>
@@ -4191,10 +4156,106 @@
           <context context-type="sourcefile">src/app/component/card/blog-holder-card/blog-holder-card.component.html</context>
           <context context-type="linenumber">22</context>
         </context-group>
+      </trans-unit><trans-unit id="userInterfaces.companyProfileUITemplate.video.description" datatype="html">
+        <source>Modern, responsive and customisable company profile ui template written with Angular</source>
+        <target>Modèle d'interface utilisateur de profil d'entreprise moderne, réactif et personnalisable écrit avec Angular</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">236</context>
+        </context-group>
+      </trans-unit><trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.4" datatype="html">
+        <source>Customisable Theme Colors</source>
+        <target>Couleurs de thème personnalisables</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">255</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">302</context>
+        </context-group>
+      </trans-unit><trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.5" datatype="html">
+        <source>Customisable Theme Design</source>
+        <target>Conception de thème personnalisable</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">259</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">306</context>
+        </context-group>
+      </trans-unit><trans-unit id="userInterfaces.webUITemplate.video.description" datatype="html">
+        <source>Modern, responsive and customisable company profile ui template written with Angular</source>
+        <target>Modèle d'interface utilisateur de profil d'entreprise moderne, réactif et personnalisable écrit avec Angular</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">285</context>
+        </context-group>
+      </trans-unit><trans-unit id="userInterfaces.mobileUITemplate.video.description" datatype="html">
+        <source>Modern, responsive and customisable company profile ui template written with React Native</source>
+        <target>Modèle d'interface utilisateur de profil d'entreprise moderne, réactif et personnalisable écrit avec React Native</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">332</context>
+        </context-group>
+      </trans-unit><trans-unit id="employees.mert.bio" datatype="html">
+        <source>Mert is a new grad software engineer who has been experienced various technologies in his bachelor years. He worked on e-commercial and banking areas. Now, he is a full-stack developer at Open Template Hub and also working on native iOS applications.</source>
+        <target>Mert est un nouvel ingénieur logiciel diplômé qui a expérimenté diverses technologies au cours de ses années de licence. Il a travaillé sur les domaines du commerce électronique et de la banque. Aujourd'hui, il est développeur full-stack chez Open Template Hub et travaille également sur des applications iOS natives.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/employee/employee.data.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit><trans-unit id="userInterfaces.mobileUITemplate.screenshot.3" datatype="html">
+        <source>Android Support</source>
+        <target>Prise en charge d'Android</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">345</context>
+        </context-group>
+      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.1.description" datatype="html">
+        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
+        <target>Nous nous appuyons sur notre expérience technologique spécifique à l'industrie pour fournir des applications Web, mobiles, de bureau et hybrides hautement évolutives, flexibles et interopérables.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">546</context>
+        </context-group>
+      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.2.description" datatype="html">
+        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
+        <target>Nos services de maintenance et de modernisation des applications sont conçus pour garantir l'évolutivité, les performances et la durabilité de l'ensemble de votre infrastructure logicielle.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">550</context>
+        </context-group>
+      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.3.description" datatype="html">
+        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
+        <target>Nous concevons un plan de mise en œuvre et de déploiement de logiciels approfondi et complet, évaluant vos besoins pour fournir des technologies améliorées aux utilisateurs finaux.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">554</context>
+        </context-group>
+      </trans-unit><trans-unit id="productPage.npmPackageInstallationAndUsage" datatype="html">
+        <source>Package Installation &amp; Usage</source>
+        <target>Installation et utilisation du paquet</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit><trans-unit id="productLinesData.smsServerTemplate.description" datatype="html">
+        <source>Coming soon..</source>
+        <target>Bientôt disponible..</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+      </trans-unit></body>
+      <trans-unit id="learnMore.button" datatype="html">
+        <source>Learn more</source>
+        <target>En savoir plus</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/card/presentation-card/presentation-card.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
-      </trans-unit></body>
+      </trans-unit>
   </file>
 </xliff>

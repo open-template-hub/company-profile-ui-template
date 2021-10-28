@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BLOG } from 'src/app/data/blog/blog.data';
-import { URLS } from 'src/app/data/constant';
 import { Blog } from 'src/app/model/blog/blog.model';
+import { URLS } from '../../../../data/navigation/navigation.data';
 
 @Component( {
   selector: 'app-blog-content-page',

@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
-import { URLS } from '../../../data/constant';
+import { URLS } from '../../../data/navigation/navigation.data';
 import { AuthToken } from '../../../model/auth/auth-token.model';
 import { ProductLine } from '../../../model/product/product.model';
 import { AuthenticationService } from '../../../service/auth/authentication.service';

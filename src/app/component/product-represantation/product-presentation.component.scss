@@ -2,7 +2,7 @@
 @use '../../component/card/card.component';
 
 .product-presentation {
-  @include util.flex-layout-row;
+  @include util.flex-layout-column;
   @include util.flex-center-center;
 
   width: 100%;
@@ -10,6 +10,17 @@
 
   & > * {
     max-width: 94%;
+  }
+
+  & .command-line-hr {
+    margin: 20px 0 0;
+    width: 100%;
+    border-color: var(--theme-color-lighter-4);
+  }
+
+  & .command-line-title {
+    font-size: 20px;
+    margin-top: 15px;
   }
 
   & .body {
@@ -22,7 +33,7 @@
     width: 100%;
   }
 
-  & .presentation-card, & .features-card, & .video-card {
+  & .presentation-card, & .features-card, & .video-card, & .demonstration-image-card {
     @include util.default-shadow;
     @include util.default-border-radius;
 
@@ -55,17 +66,35 @@
     }
   }
 
+  & .video-card, & .demonstration-image-card {
+    & .body {
+      & hr {
+        margin: 20px 0 0;
+        width: 100%;
+        border-color: var(--theme-color-lighter-4);
+      }
+    }
+  }
+
   & .video-card {
     & .body {
       & video {
         @include util.default-border-radius-image;
+        @include util.default-shadow;
+
         max-width: 100%;
       }
+    }
+  }
 
-      & hr {
-        margin:  20px 0 0;
-        width: 100%;
-        border-color: var(--theme-color-lighter-4);
+  & .demonstration-image-card {
+    & .body {
+      & img {
+        @include util.default-border-radius-image;
+        @include util.default-shadow;
+        background-color: var(--card);
+
+        max-width: 100%;
       }
     }
   }

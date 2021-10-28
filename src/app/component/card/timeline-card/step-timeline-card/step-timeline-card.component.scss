@@ -1,0 +1,134 @@
+@use '../../../../../styles/util/util';
+
+@mixin marker($size) {
+  @include util.default-border-radius;
+
+  position: absolute;
+  content: '';
+  width: $size;
+  height: $size;
+  background-color: var(--theme-color);
+  margin-top: 4px;
+}
+
+@mixin link {
+  @include util.default-border-radius;
+  position: absolute;
+  content: '';
+  width: 1px;
+  background-color: var(--theme-color);
+}
+
+.step-timeline-card {
+  & .link {
+    width: 300px;
+    height: 20px;
+
+    & .divider {
+      height: 100%;
+      &.right {
+        @include link;
+
+        margin-top: 10px;
+        margin-left: 321px;
+      }
+
+      &.left {
+        @include link;
+
+        margin-top: 10px;
+        margin-left: 321px;
+      }
+    }
+
+    & .step {
+      @include util.flex-layout-row;
+      @include util.flex-center-center;
+      @include marker(24px);
+
+      box-shadow: 0 0 3px 2px var(--theme-color-darker-1) inset;
+
+      margin-top: 26px;
+      margin-left: 309px;
+
+      & p {
+        text-align: center;
+        font-size: 13px;
+        color: var(--darker-contrast);
+        font-weight: 600;
+      }
+    }
+  }
+
+  & .body {
+    width: 300px;
+
+    & p {
+      padding: 5px;
+      color: var(--color);
+      white-space: pre-line;
+      word-wrap: break-word;
+
+      &.level1 {
+        font-size: 19px;
+        font-weight: 600;
+      }
+
+      &.level2 {
+        font-size: 17px;
+        font-weight: 300;
+      }
+    }
+
+    &.right {
+      text-align: left;
+      margin-left: 343px;
+    }
+
+    &.left {
+      width: 300px;
+      text-align: right;
+      margin-right: 300px;
+    }
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .step-timeline-card {
+
+    & .link {
+      @include util.margin-x-auto;
+
+      width: 94%;
+
+      & .divider {
+        &.right, &.left {
+          margin-left: 10%;
+        }
+      }
+
+      & .step {
+        &.right, &.left {
+          margin-left: calc(10% - 12px);
+        }
+      }
+    }
+
+    & .body {
+      width: 98%;
+
+      &.right, &.left {
+        width: 70%;
+        margin-left: 19%;
+        margin-right: 8%;
+        margin-top: 1.5px;
+        text-align: left;
+      }
+
+      & p {
+        word-break: break-word;
+        text-decoration: none;
+      }
+    }
+  }
+}

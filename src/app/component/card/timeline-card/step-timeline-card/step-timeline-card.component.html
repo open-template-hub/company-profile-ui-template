@@ -1,0 +1,24 @@
+<app-card
+  *ngIf="step"
+  [bodyTemplate]="bodyTemplate"
+  [class]="step.theme ? step.theme : ''"
+  [cardClass]="'transparent-card'"
+  [bottomWrapperTemplate]="bottomTemplate"
+  class="step-timeline-card">
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div class="link">
+      <div class="divider" [class]="rotation"></div>
+      <div class="step" [class]="rotation">
+        <p>{{ num }}</p>
+      </div>
+    </div>
+    <div class="body" [class]="rotation">
+      <p [class]="step.level === 1 ? 'level1' : 'level2'">{{ step.text }}</p>
+    </div>
+  </ng-template>
+
+  <ng-template #bottomTemplate>
+    <div></div>
+  </ng-template>
+</app-card>

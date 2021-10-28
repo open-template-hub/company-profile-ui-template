@@ -1,0 +1,28 @@
+<app-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
+          class="doc-holder-card">
+  <!-- Header -->
+  <ng-template #headerTemplate>
+    <div class="header">
+      <img [src]="doc.imgUri" height="80" width="80" alt="doc">
+      <p class="title">{{ doc.title }}</p>
+    </div>
+  </ng-template>
+
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div class="body">
+      <p class="except">{{ doc.excerpt }}</p>
+    </div>
+  </ng-template>
+
+  <!-- Footer -->
+  <ng-template #footerTemplate>
+    <div class="footer">
+      <div class="footer-left">
+        <p i18n="@@readMore.button" class="footer-text">Read more</p>
+        <i aria-hidden="true" class="arrow fas fa-chevron-right"></i>
+      </div>
+      <p class="footer-text">{{ doc.date }}</p>
+    </div>
+  </ng-template>
+</app-card>

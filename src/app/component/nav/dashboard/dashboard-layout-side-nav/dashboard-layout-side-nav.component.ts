@@ -1,7 +1,8 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { BRAND } from '../../../../data/brand/brand.data';
-import { PROFILE_IMG, URLS } from '../../../../data/constant';
+import { URLS } from '../../../../data/navigation/navigation.data';
+import { PROFILE_IMG } from '../../../../data/profile/profile.data';
 import { AuthToken } from '../../../../model/auth/auth-token.model';
 import { AuthenticationService } from '../../../../service/auth/authentication.service';
 import { BusinessLogicService } from '../../../../service/business-logic/business-logic.service';

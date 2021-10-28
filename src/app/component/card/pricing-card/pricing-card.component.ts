@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { URLS } from '../../../data/constant';
+import { URLS } from '../../../data/navigation/navigation.data';
 import { PricingOption } from '../../../model/pricing/pricing.model';
 import { PricingFeature } from '../../../model/product/product.model';
 

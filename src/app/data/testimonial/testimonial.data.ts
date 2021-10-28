@@ -1,5 +1,5 @@
 import { Testimonial } from '../../model/testimonial/testimonial.model';
-import { ThemeColorSettings } from '../constant';
+import { ThemeColorSettings } from '../theme/theme.data';
 
 const DEFAULT_REVIEW = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in elit blandit, tempus risus vitae, elementum eros. Suspendisse nec orci at neque molestie dignissim.';
 

@@ -12,12 +12,25 @@
 
     padding: 20px 30px;
 
-    font-size: 19px;
+    font-size: 17px;
 
     & .row {
       @include util.flex-center-center;
+      @include util.default-border-radius-image;
+
+      box-sizing: border-box;
+
+      background-color: var(--theme-color-lighter-9);
+      border: 1px solid var(--theme-color-lighter-7);
+      box-shadow: 0 3px 12px -4px var(--hover);
+      margin: 5px;
 
       justify-content: flex-start;
+
+      & p {
+        width: 100%;
+        color: var(--theme-color-darker-3);
+      }
     }
   }
 }
@@ -29,10 +42,12 @@
 
       & .row {
         @include util.flex-layout-column;
+
         width: 100%;
+        padding: 20px;
 
         & img {
-          margin: 20px 0;
+          margin: 5px 0 15px;
         }
       }
     }
@@ -46,10 +61,13 @@
 
       & .row {
         @include util.flex-layout-row;
-        width: 33%;
+
+        width: 32%;
+        padding: 9px;
 
         & img {
-          margin: 0 20px;
+          margin-left: 45px;
+          margin-right: 15px;
         }
       }
     }

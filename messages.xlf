@@ -9,6 +9,13 @@
           <context context-type="linenumber">22</context>
         </context-group>
         <context-group purpose="location">
+          <context context-type="sourcefile">src/app/component/card/doc-holder-card/doc-holder-card.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="learnMore.button" datatype="html">
+        <source>Learn more</source>
+        <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/card/presentation-card/presentation-card.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
@@ -104,60 +111,53 @@
           <context context-type="linenumber">69,71</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="footer.theme" datatype="html">
-        <source> Theme </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">73,75</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="footer.resources" datatype="html">
         <source>Resources</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">78</context>
+          <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.support" datatype="html">
         <source> Support </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">79,81</context>
+          <context context-type="linenumber">75,77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.contact" datatype="html">
         <source> Contact </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">82,84</context>
+          <context context-type="linenumber">78,80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.termsAndConditions" datatype="html">
         <source> Terms &amp; Conditions </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">85,87</context>
+          <context context-type="linenumber">81,83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.privacy" datatype="html">
         <source> Privacy </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">88,90</context>
+          <context context-type="linenumber">84,86</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.cookies" datatype="html">
         <source> Cookies </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">91,93</context>
+          <context context-type="linenumber">87,89</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.sitemap" datatype="html">
         <source> Sitemap </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">94,96</context>
+          <context context-type="linenumber">90,92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="landingLayoutTopNav.products" datatype="html">
@@ -220,70 +220,49 @@
         <source>Some of the preconfigured systems:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.html</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPresentation.description" datatype="html">
         <source>*configuration still requires some level of developer experience</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.html</context>
-          <context context-type="linenumber">44,45</context>
+          <context context-type="linenumber">49,50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPresentation.authServer.text" datatype="html">
         <source>Integrate your servers with social login providers in minutes.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.ts</context>
-          <context context-type="linenumber">64</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPresentation.paymentServer.text" datatype="html">
         <source>Integrate your servers with payment solution providers in minutes.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.ts</context>
-          <context context-type="linenumber">68</context>
+          <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPresentation.fileStorageServer.text" datatype="html">
         <source>Integrate your servers with file storage solution providers in minutes.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.ts</context>
-          <context context-type="linenumber">72</context>
+          <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPresentation.mailServer.text" datatype="html">
         <source>Integrate your servers with email service providers in minutes.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.ts</context>
-          <context context-type="linenumber">76</context>
+          <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="githubCounters.stars" datatype="html">
-        <source>Stars</source>
+      <trans-unit id="homePage.oth.description" datatype="html">
+        <source>Open Source first organization that helps you to minimize the effort while building a new software business with our server and UI templates</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/constant.ts</context>
-          <context context-type="linenumber">47</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="githubCounters.forks" datatype="html">
-        <source>Forks</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/constant.ts</context>
-          <context context-type="linenumber">48</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="githubCounters.subscribers" datatype="html">
-        <source>Subscribers</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/constant.ts</context>
-          <context context-type="linenumber">49</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="githubCounters.releaseVersion" datatype="html">
-        <source>Release Version</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/constant.ts</context>
-          <context context-type="linenumber">50</context>
+          <context context-type="sourcefile">src/app/data/brand/brand.data.ts</context>
+          <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUsData.title" datatype="html">
@@ -317,1428 +296,1428 @@
       <trans-unit id="countries.afghanistan" datatype="html">
         <source>Afghanistan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">2</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.albania" datatype="html">
         <source>Albania</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.algeria" datatype="html">
         <source>Algeria</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.andorra" datatype="html">
         <source>Andorra</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.angola" datatype="html">
         <source>Angola</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.anguilla" datatype="html">
         <source>Anguilla</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.antigua" datatype="html">
         <source>Antigua &amp;amp; Barbuda</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.argentina" datatype="html">
         <source>Argentina</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.armenia" datatype="html">
         <source>Armenia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.aruba" datatype="html">
         <source>Aruba</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.australia" datatype="html">
         <source>Australia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.austria" datatype="html">
         <source>Austria</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.azerbaijan" datatype="html">
         <source>Azerbaijan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.bahamas" datatype="html">
         <source>Bahamas</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.bahrain" datatype="html">
         <source>Bahrain</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.bangladesh" datatype="html">
         <source>Bangladesh</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.barbados" datatype="html">
         <source>Barbados</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.belarus" datatype="html">
         <source>Belarus</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.belgium" datatype="html">
         <source>Belgium</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.belize" datatype="html">
         <source>Belize</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.benin" datatype="html">
         <source>Benin</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.bermuda" datatype="html">
         <source>Bermuda</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.bhutan" datatype="html">
         <source>Bhutan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.bolivia" datatype="html">
         <source>Bolivia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.bosnia" datatype="html">
         <source>Bosnia &amp;amp; Herzegovina</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.botswana" datatype="html">
         <source>Botswana</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.brazil" datatype="html">
         <source>Brazil</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.britishVirginIslands" datatype="html">
         <source>British Virgin Islands</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.brunei" datatype="html">
         <source>Brunei</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.bulgaria" datatype="html">
         <source>Bulgaria</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.burkinaFaso" datatype="html">
         <source>Burkina Faso</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.burundi" datatype="html">
         <source>Burundi</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.cambodia" datatype="html">
         <source>Cambodia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.cameroon" datatype="html">
         <source>Cameroon</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.capeVerde" datatype="html">
         <source>Cape Verde</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.caymanIslands" datatype="html">
         <source>Cayman Islands</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.chad" datatype="html">
         <source>Chad</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.chile" datatype="html">
         <source>Chile</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.china" datatype="html">
         <source>China</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.colombia" datatype="html">
         <source>Colombia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.congo" datatype="html">
         <source>Congo</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.cookIslands" datatype="html">
         <source>Cook Islands</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.costaRica" datatype="html">
         <source>Costa Rica</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.coteDIvoire" datatype="html">
         <source>Cote D Ivoire</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.croatia" datatype="html">
         <source>Croatia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.cruiseShip" datatype="html">
         <source>Cruise Ship</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.cuba" datatype="html">
         <source>Cuba</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.cyprus" datatype="html">
         <source>Cyprus</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.czechRepublic" datatype="html">
         <source>Czech Republic</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">50</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.denmark" datatype="html">
         <source>Denmark</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.djibouti" datatype="html">
         <source>Djibouti</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.dominica" datatype="html">
         <source>Dominica</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.dominicanRepublic" datatype="html">
         <source>Dominican Republic</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.ecuador" datatype="html">
         <source>Ecuador</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.egypt" datatype="html">
         <source>Egypt</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.elSalvador" datatype="html">
         <source>El Salvador</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.equatorialGuinea" datatype="html">
         <source>Equatorial Guinea</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.estonia" datatype="html">
         <source>Estonia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.ethiopia" datatype="html">
         <source>Ethiopia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.falklandIslands" datatype="html">
         <source>Falkland Islands</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">61</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.faroeIslands" datatype="html">
         <source>Faroe Islands</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.fiji" datatype="html">
         <source>Fiji</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.finland" datatype="html">
         <source>Finland</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.france" datatype="html">
         <source>France</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">65</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.frenchPolynesia" datatype="html">
         <source>French Polynesia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.frenchWestIndies" datatype="html">
         <source>French West Indies</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.gabon" datatype="html">
         <source>Gabon</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.gambia" datatype="html">
         <source>Gambia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">69</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.georgia" datatype="html">
         <source>Georgia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.germany" datatype="html">
         <source>Germany</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.ghana" datatype="html">
         <source>Ghana</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.gibraltar" datatype="html">
         <source>Gibraltar</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.greece" datatype="html">
         <source>Greece</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.greenland" datatype="html">
         <source>Greenland</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.grenada" datatype="html">
         <source>Grenada</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.guam" datatype="html">
         <source>Guam</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.guatemala" datatype="html">
         <source>Guatemala</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.guernsey" datatype="html">
         <source>Guernsey</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">79</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.guinea" datatype="html">
         <source>Guinea</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.guineaBissau" datatype="html">
         <source>Guinea Bissau</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.guyana" datatype="html">
         <source>Guyana</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.haiti" datatype="html">
         <source>Haiti</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.honduras" datatype="html">
         <source>Honduras</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">84</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.hongKong" datatype="html">
         <source>Hong Kong</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">85</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.hungary" datatype="html">
         <source>Hungary</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">86</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.iceland" datatype="html">
         <source>Iceland</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">87</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.india" datatype="html">
         <source>India</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">88</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.indonesia" datatype="html">
         <source>Indonesia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">89</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.iran" datatype="html">
         <source>Iran</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.iraq" datatype="html">
         <source>Iraq</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">91</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.ireland" datatype="html">
         <source>Ireland</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">92</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.isleOfMan" datatype="html">
         <source>Isle of Man</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">93</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.israel" datatype="html">
         <source>Israel</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">94</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.italy" datatype="html">
         <source>Italy</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">95</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.jamaica" datatype="html">
         <source>Jamaica</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.japan" datatype="html">
         <source>Japan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">97</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.jersey" datatype="html">
         <source>Jersey</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">98</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.jordan" datatype="html">
         <source>Jordan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">99</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.kazakhstan" datatype="html">
         <source>Kazakhstan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">100</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.kenya" datatype="html">
         <source>Kenya</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">101</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.kuwait" datatype="html">
         <source>Kuwait</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">102</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.kyrgyzRepublic" datatype="html">
         <source>Kyrgyz Republic</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">103</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.laous" datatype="html">
         <source>Laos</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">104</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.latvia" datatype="html">
         <source>Latvia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">105</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.lebanon" datatype="html">
         <source>Lebanon</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">106</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.lesotho" datatype="html">
         <source>Lesotho</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">107</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.liberia" datatype="html">
         <source>Liberia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">108</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.libya" datatype="html">
         <source>Libya</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">109</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.liechtenstein" datatype="html">
         <source>Liechtenstein</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">110</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.lithunia" datatype="html">
         <source>Lithuania</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.luxemburg" datatype="html">
         <source>Luxembourg</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">112</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.macau" datatype="html">
         <source>Macau</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">113</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.macedonia" datatype="html">
         <source>Macedonia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">114</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.madagascar" datatype="html">
         <source>Madagascar</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">115</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.malawi" datatype="html">
         <source>Malawi</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">116</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.malaysia" datatype="html">
         <source>Malaysia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">117</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.maldives" datatype="html">
         <source>Maldives</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">118</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.mali" datatype="html">
         <source>Mali</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">119</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.malta" datatype="html">
         <source>Malta</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">120</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.mauritania" datatype="html">
         <source>Mauritania</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">121</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.mauritius" datatype="html">
         <source>Mauritius</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">122</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.mexico" datatype="html">
         <source>Mexico</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">123</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.moldova" datatype="html">
         <source>Moldova</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">124</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.monaco" datatype="html">
         <source>Monaco</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">125</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.mongolia" datatype="html">
         <source>Mongolia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">126</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.montenagro" datatype="html">
         <source>Montenegro</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">127</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.montserrat" datatype="html">
         <source>Montserrat</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">128</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.morocco" datatype="html">
         <source>Morocco</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">129</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.mozambique" datatype="html">
         <source>Mozambique</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">130</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.namibia" datatype="html">
         <source>Namibia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">131</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.nepal" datatype="html">
         <source>Nepal</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">132</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.netherlands" datatype="html">
         <source>Netherlands</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">133</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.netherlandsAntilles" datatype="html">
         <source>Netherlands Antilles</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">134</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.newCaledonia" datatype="html">
         <source>New Caledonia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">135</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.newZeeland" datatype="html">
         <source>New Zealand</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">136</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.nicaragua" datatype="html">
         <source>Nicaragua</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">137</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.niger" datatype="html">
         <source>Niger</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">138</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.nigeria" datatype="html">
         <source>Nigeria</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">139</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.norway" datatype="html">
         <source>Norway</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">140</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.oman" datatype="html">
         <source>Oman</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">141</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.pakistan" datatype="html">
         <source>Pakistan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">142</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.palestine" datatype="html">
         <source>Palestine</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">143</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.panama" datatype="html">
         <source>Panama</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">144</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.papuaNewGuinea" datatype="html">
         <source>Papua New Guinea</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">145</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.paraguay" datatype="html">
         <source>Paraguay</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">146</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.peru" datatype="html">
         <source>Peru</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">147</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.philippines" datatype="html">
         <source>Philippines</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">148</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.poland" datatype="html">
         <source>Poland</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">149</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.portugal" datatype="html">
         <source>Portugal</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">150</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.puertoRico" datatype="html">
         <source>Puerto Rico</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">151</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.qatar" datatype="html">
         <source>Qatar</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">152</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.reunion" datatype="html">
         <source>Reunion</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">153</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.romania" datatype="html">
         <source>Romania</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">154</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.russia" datatype="html">
         <source>Russia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">155</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.rwanda" datatype="html">
         <source>Rwanda</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">156</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.saintPierre" datatype="html">
         <source>Saint Pierre &amp;amp; Miquelon</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">157</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.samoa" datatype="html">
         <source>Samoa</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">158</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.sanMorina" datatype="html">
         <source>San Marino</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">159</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.satellite" datatype="html">
         <source>Satellite</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">160</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.saudiArabia" datatype="html">
         <source>Saudi Arabia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">161</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.senegal" datatype="html">
         <source>Senegal</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">162</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.serbia" datatype="html">
         <source>Serbia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">163</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.seychelles" datatype="html">
         <source>Seychelles</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">164</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.sierraLeone" datatype="html">
         <source>Sierra Leone</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">165</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.singapore" datatype="html">
         <source>Singapore</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">166</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.slovakia" datatype="html">
         <source>Slovakia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">167</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.slovenia" datatype="html">
         <source>Slovenia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">168</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.southAfrica" datatype="html">
         <source>South Africa</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">169</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.southKorea" datatype="html">
         <source>South Korea</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.spain" datatype="html">
         <source>Spain</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">171</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.sriLanka" datatype="html">
         <source>Sri Lanka</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">172</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.stKitts" datatype="html">
         <source>St Kitts &amp;amp; Nevis</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">173</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.stLucia" datatype="html">
         <source>St. Lucia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">174</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.stVincent" datatype="html">
         <source>St Vincent</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">175</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.sudan" datatype="html">
         <source>Sudan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">176</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.suriname" datatype="html">
         <source>Suriname</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">177</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.swaziland" datatype="html">
         <source>Swaziland</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">178</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.sweden" datatype="html">
         <source>Sweden</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">179</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.switzerland" datatype="html">
         <source>Switzerland</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">180</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.syria" datatype="html">
         <source>Syria</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">181</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.taiwan" datatype="html">
         <source>Taiwan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">182</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.tajikistan" datatype="html">
         <source>Tajikistan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">183</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.tanzania" datatype="html">
         <source>Tanzania</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">184</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.thailand" datatype="html">
         <source>Thailand</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">185</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.timor" datatype="html">
         <source>Timor L&apos;Este</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">186</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.togo" datatype="html">
         <source>Togo</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">187</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.tonga" datatype="html">
         <source>Tonga</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">188</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.trinidad" datatype="html">
         <source>Trinidad &amp;amp; Tobago</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">189</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.tunisia" datatype="html">
         <source>Tunisia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">190</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.turkey" datatype="html">
         <source>Turkey</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">191</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.turkmenistan" datatype="html">
         <source>Turkmenistan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">192</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.turks" datatype="html">
         <source>Turks &amp;amp; Caicos</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">193</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.uganda" datatype="html">
         <source>Uganda</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">194</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.ukraine" datatype="html">
         <source>Ukraine</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">195</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.unitedArabEmirates" datatype="html">
         <source>United Arab Emirates</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">196</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.unitedKingdom" datatype="html">
         <source>United Kingdom</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">197</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.uruguay" datatype="html">
         <source>Uruguay</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">198</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.uzbekistan" datatype="html">
         <source>Uzbekistan</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">199</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.venezuela" datatype="html">
         <source>Venezuela</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">200</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.vietnam" datatype="html">
         <source>Vietnam</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">201</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.virginIslands" datatype="html">
         <source>Virgin Islands (US)</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">202</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.yemen" datatype="html">
         <source>Yemen</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">203</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.zambia" datatype="html">
         <source>Zambia</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">204</context>
         </context-group>
       </trans-unit>
       <trans-unit id="countries.zimbabwe" datatype="html">
         <source>Zimbabwe</source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/countries.ts</context>
+          <context context-type="sourcefile">src/app/data/country/country.data.ts</context>
           <context context-type="linenumber">205</context>
         </context-group>
       </trans-unit>
@@ -1775,7 +1754,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="employees.mert.bio" datatype="html">
-        <source>TODO: write your bio here</source>
+        <source>Mert is a new grad software engineer who has been experienced various technologies in his bachelor years. He worked on e-commercial and banking areas. Now, he is a full-stack developer at Open Template Hub and also working on native iOS applications.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/employee/employee.data.ts</context>
           <context context-type="linenumber">38</context>
@@ -1842,6 +1821,102 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
           <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">245</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">251</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">257</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">263</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">269</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">275</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">281</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">287</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">293</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">299</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">305</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">311</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">317</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">325</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">331</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">337</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">343</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">349</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">355</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">361</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">369</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">375</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">383</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
+          <context context-type="linenumber">389</context>
         </context-group>
       </trans-unit>
       <trans-unit id="navigationData.notFound.description" datatype="html">
@@ -2114,618 +2189,675 @@
         <source>Open Source</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">9</context>
+          <context context-type="linenumber">11</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.openSource.description" datatype="html">
         <source>No need to pay a price to get started. Get the latest updates from community driven open source project.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">12</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">15</context>
+          <context context-type="linenumber">17</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.professionalHelp.name" datatype="html">
         <source>Professional Help</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.customisedSolutions.name" datatype="html">
         <source>Customised Solutions</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.customisedSolutions.description" datatype="html">
         <source>Fully customised functional solutions for your needs.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.ciCdAutomation.name" datatype="html">
         <source>CI/CD Automation</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.ciCdAutomation.description" datatype="html">
         <source>Get a CI/CD integration with automated API tests.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">25</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.customisedAutomations.name" datatype="html">
         <source>Customised Automations</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.customisedAutomations.description" datatype="html">
         <source>Fully customised automation solutions for your needs.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.customisedAutomationsSecurity.name" datatype="html">
         <source>Reports</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.customisedAutomationsSecurity.description" datatype="html">
         <source>Get a security report at the end of each month.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.customSecurityCompliance.name" datatype="html">
         <source>Custom Security Compliance</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.customSecurityCompliance.description" datatype="html">
         <source>Fully customised security compliance solutions for your needs.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.defaultOpenSourceServerFeatures.1" datatype="html">
         <source>Core Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">45</context>
+          <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.defaultOpenSourceServerFeatures.2" datatype="html">
         <source>Quality and DX</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">55</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.defaultOpenSourceServerFeatures.3" datatype="html">
         <source>Security</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.freePricingOption.title" datatype="html">
         <source>Free</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">69</context>
+          <context context-type="linenumber">71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.freePricingOption.description" datatype="html">
         <source>For Individuals</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">70</context>
+          <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.freePricingOption.price.subscriptionTime" datatype="html">
         <source>mo.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">76</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.standardPricingOption.title" datatype="html">
         <source>Standard</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">80</context>
+          <context context-type="linenumber">82</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.standardPricingOption.description" datatype="html">
         <source>For Startups</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">81</context>
+          <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.standardPricingOption.features.1" datatype="html">
         <source>Up to 10 users</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">84</context>
+          <context context-type="linenumber">86</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.enterprisePricingOption.title" datatype="html">
         <source>Enterprise</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">88</context>
+          <context context-type="linenumber">90</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.enterprisePricingOption.description" datatype="html">
         <source>For Enterprises</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">89</context>
+          <context context-type="linenumber">91</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productData.enterprisePricingOption.features.1" datatype="html">
         <source>Unlimited users</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">91</context>
+          <context context-type="linenumber">93</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.servers.description" datatype="html">
         <source>Micro server solutions for your needs</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">104</context>
+          <context context-type="linenumber">106</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.authServerTemplate.description" datatype="html">
         <source>Auth Server Template is a generic open source authentication server that has simple yet powerful design to connect your business with all OAuth 2.0 and OAuth supporting third party companies (like Google, Facebook, Twitter or LinkedIn). It also supports basic username password authentication system.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">109</context>
+          <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.paymentServerTemplate.description" datatype="html">
         <source>Payment Server Template is a generic open source payment server that has simple yet powerful design to connect your business with third party payment solution provider companies (like Stripe or Coinbase).</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">121</context>
+          <context context-type="linenumber">130</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.fileStorageTemplate.description" datatype="html">
         <source>File Storage Server Template is a generic open source file storage server that has simple yet powerful design to connect your business with third party file storage provider companies (like AWS S3).</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">133</context>
+          <context context-type="linenumber">150</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.mailServerTemplate.description" datatype="html">
         <source>Mail Server Template is a generic open source mail server that has simple yet powerful design to connect your business with third party email service providers (like Gmail, Yahoo or Outlook).</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">145</context>
+          <context context-type="linenumber">170</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.analyticsServerTemplate.description" datatype="html">
-        <source>Analytics Server Template for generic usage in Node.js</source>
+        <source>Analytics Server Template is a generic open source analytics server that has simple yet powerful design to connect your business with third party analytics service providers (like Google Analytics or Matomo).</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">157</context>
+          <context context-type="linenumber">188</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.businessLogicServerTemplate.description" datatype="html">
-        <source>Business Logic Server Template for generic usage in Node.js</source>
+        <source>Business Logic Server Template is a generic open source server that encodes the real-world business rules that determine how data can be created, stored, and changed. It saves you from rewriting boilerplate code. It works best with other Open Template Hub products.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">168</context>
+          <context context-type="linenumber">207</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="productLinesData.smsServerTemplate.description" datatype="html">
+        <source>Coming soon..</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">226</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.userInterface.description" datatype="html">
         <source>User interface solutions for your needs</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">181</context>
+          <context context-type="linenumber">236</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.companyProfileUITemplate.description" datatype="html">
-        <source>Company Profile UI Template for generic usage in Angular</source>
+        <source>Company Profile UI Template is modern, responsive and customisable company profile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">186</context>
+          <context context-type="linenumber">241</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.video.description" datatype="html">
+        <source>Modern, responsive and customisable company profile ui template written with Angular</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">191</context>
+          <context context-type="linenumber">246</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.1" datatype="html">
         <source>Responsive Design</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">198</context>
+          <context context-type="linenumber">251</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">296</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.2" datatype="html">
         <source>Dark Mode Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">202</context>
+          <context context-type="linenumber">255</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">300</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.3" datatype="html">
-        <source>Reusable components</source>
+        <source>Reusable Components</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">206</context>
+          <context context-type="linenumber">259</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">304</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.4" datatype="html">
+        <source>Customisable Theme Colors</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">263</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">308</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.5" datatype="html">
+        <source>Customisable Theme Design</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">267</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">312</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.webUITemplate.description" datatype="html">
-        <source>Web UI Template for generic usage in Angular</source>
+        <source>Web UI Template is modern, responsive and customisable web ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">242</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">249</context>
+          <context context-type="linenumber">286</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="userInterfaces.webUITemplate.screenshot.1" datatype="html">
-        <source>Responsive Design</source>
+      <trans-unit id="userInterfaces.webUITemplate.video.description" datatype="html">
+        <source>Modern, responsive and customisable company profile ui template written with Angular</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">254</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="userInterfaces.webUITemplate.screenshot.2" datatype="html">
-        <source>Dark Mode Support</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">258</context>
+          <context context-type="linenumber">291</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.description" datatype="html">
-        <source>Mobile UI Template for generic usage in React Native</source>
+        <source>Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">298</context>
+          <context context-type="linenumber">331</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="userInterfaces.mobileUITemplate.video.description" datatype="html">
+        <source>Modern, responsive and customisable company profile ui template written with React Native</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">305</context>
+          <context context-type="linenumber">336</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.screenshot.1" datatype="html">
-        <source>iOS and Android Support</source>
+        <source>iOS Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">310</context>
+          <context context-type="linenumber">341</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.screenshot.2" datatype="html">
         <source>Dark Mode Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">314</context>
+          <context context-type="linenumber">345</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.screenshot.3" datatype="html">
-        <source>TODO: add another screenshot</source>
+        <source>Android Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">318</context>
+          <context context-type="linenumber">349</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.generator.description" datatype="html">
         <source>Command line interface generators</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">356</context>
+          <context context-type="linenumber">367</context>
         </context-group>
       </trans-unit>
       <trans-unit id="generators.serverGenerator.description" datatype="html">
         <source>Command line interface generator of the servers at Open Template Hub</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">361</context>
+          <context context-type="linenumber">372</context>
         </context-group>
       </trans-unit>
       <trans-unit id="generators.appGenerator.description" datatype="html">
         <source>Command line interface generator of the user interfaces at Open Template Hub</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">406</context>
+          <context context-type="linenumber">427</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.premium.description" datatype="html">
         <source>Get more things done with our premium solutions</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">452</context>
+          <context context-type="linenumber">483</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.description" datatype="html">
         <source>Orchestration Server Template is a middleware server that has simple yet powerful design to connect your business with all Open Template Hub servers (like Auth Server, Payment Server, File Storage Server or Mail Server). It also has generic design to integrate any other servers.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">458</context>
+          <context context-type="linenumber">489</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.feature.1" datatype="html">
         <source>Core Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">464</context>
+          <context context-type="linenumber">499</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.feature.1.detail.1" datatype="html">
         <source>Integrated with OTH Servers</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">467</context>
+          <context context-type="linenumber">502</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.feature.1.detail.2" datatype="html">
         <source>Works seamlessly with Open Template Hub Servers.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">468</context>
+          <context context-type="linenumber">503</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.basic.title" datatype="html">
         <source>Basic</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">491</context>
+          <context context-type="linenumber">526</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.basic.description" datatype="html">
         <source>For Individuals</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">492</context>
+          <context context-type="linenumber">527</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.standard.title" datatype="html">
         <source>Standard</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">501</context>
+          <context context-type="linenumber">536</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.standard.description" datatype="html">
         <source>For Startups</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">502</context>
+          <context context-type="linenumber">537</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.standard.feature.1" datatype="html">
         <source>Up to 10 users</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">505</context>
+          <context context-type="linenumber">540</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.enterprise.title" datatype="html">
         <source>Enterprise</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">508</context>
+          <context context-type="linenumber">543</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.enterprise.description" datatype="html">
         <source>For Enterprises</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">509</context>
+          <context context-type="linenumber">544</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.enterprise.feature.1" datatype="html">
         <source>Unlimited users</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">511</context>
+          <context context-type="linenumber">546</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.description" datatype="html">
         <source>Services that we provide</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">524</context>
+          <context context-type="linenumber">565</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.description" datatype="html">
         <source>We perform world-class custom software development services from startups to enterprise businesses. Our highly experienced software developers have a deep understanding of how to leverage top programming languages, frameworks, and other software development tools to create the ideal solution for your business.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">529</context>
+          <context context-type="linenumber">570</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.name" datatype="html">
         <source>Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">533</context>
+          <context context-type="linenumber">574</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.1.name" datatype="html">
         <source>Custom Application Development</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">536</context>
+          <context context-type="linenumber">577</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.1.description" datatype="html">
+        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">578</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.2.name" datatype="html">
         <source>Application Maintenance</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">540</context>
+          <context context-type="linenumber">581</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.2.description" datatype="html">
+        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">582</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.3.name" datatype="html">
         <source>Implementation &amp; Deployment</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">544</context>
+          <context context-type="linenumber">585</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.3.description" datatype="html">
+        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">586</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.description" datatype="html">
         <source>When a company adopts a new technology or business process, they face many challenges between their current applications and systems and the complicated software implementation process. Our industry-specific software engineers handle all of your challenging integration &amp; implementation obstacles, including architectural design, testing, debugging, and execution.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">555</context>
+          <context context-type="linenumber">595</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.name" datatype="html">
         <source>Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">559</context>
+          <context context-type="linenumber">599</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.1.name" datatype="html">
-        <source>Custom Application Development</source>
+        <source>Data Integration Services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">562</context>
+          <context context-type="linenumber">602</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.1.description" datatype="html">
-        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
+        <source>We perform data integration services, including merging data, consolidating business processes, and creating Database Management Systems to ensure complete data integrity during the transfer process.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">563</context>
+          <context context-type="linenumber">603</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.2.name" datatype="html">
-        <source>Application Maintenance</source>
+        <source>API Integration Services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">566</context>
+          <context context-type="linenumber">606</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.2.description" datatype="html">
-        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
+        <source>We provide integrating custom-built and third-party APIs service. We, integrate, and customize add web service functionality to mobile and web applications, and seamlessly synchronize data formats across these applications.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">567</context>
+          <context context-type="linenumber">607</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.3.name" datatype="html">
-        <source>Implementation &amp; Deployment</source>
+        <source>Enterprise Application Integrations</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">570</context>
+          <context context-type="linenumber">610</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.3.description" datatype="html">
-        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
+        <source>We provide Enterprise Application Integration solutions, facilitating seamless communications between business platforms. We are providing integrations for content management, accounting, customer relationship management, analytics, and marketing.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">571</context>
+          <context context-type="linenumber">611</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.description" datatype="html">
         <source>We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">581</context>
+          <context context-type="linenumber">620</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.name" datatype="html">
         <source>Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">585</context>
+          <context context-type="linenumber">624</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.1.name" datatype="html">
-        <source>Custom Application Development</source>
+        <source>Software QA Automation Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">588</context>
+          <context context-type="linenumber">627</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.1.description" datatype="html">
-        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
+        <source>We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">589</context>
+          <context context-type="linenumber">628</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.2.name" datatype="html">
-        <source>Application Maintenance</source>
+        <source>Software QA Manual Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">592</context>
+          <context context-type="linenumber">631</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.2.description" datatype="html">
-        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
+        <source>Our dedicated QA team will test your mobile, web, or desktop application manually to identify &amp; fix bugs, detect &amp; eradicate errors, and confirm its compliance with regulatory standards, providing you with the highest quality result possible.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">593</context>
+          <context context-type="linenumber">632</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.3.name" datatype="html">
-        <source>Implementation &amp; Deployment</source>
+        <source>Software QA Usability Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">596</context>
+          <context context-type="linenumber">635</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.3.description" datatype="html">
-        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
+        <source>We design QA usability testing platforms that incorporate specific usability testing tools and UX research methods selected based on the client, focused on measuring how user-friendly and flexible your application or website is.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">597</context>
+          <context context-type="linenumber">636</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ribbonData.new" datatype="html">
         <source>New 🎉</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/ribbon/ribbon.data.ts</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ribbonData.featured" datatype="html">
         <source>Featured 🚀</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/ribbon/ribbon.data.ts</context>
-          <context context-type="linenumber">7</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ribbonData.premium" datatype="html">
         <source>Premium ⭐</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/ribbon/ribbon.data.ts</context>
-          <context context-type="linenumber">8</context>
+          <context context-type="linenumber">9</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ribbonData.deal" datatype="html">
         <source>Deal</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/ribbon/ribbon.data.ts</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
       <trans-unit id="statusData.servers" datatype="html">
@@ -3254,121 +3386,114 @@
           <context context-type="linenumber">78</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="homePage.oth.description" datatype="html">
-        <source> Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.html</context>
-          <context context-type="linenumber">4,8</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="homePage.npmDownloads" datatype="html">
         <source>Npm Downloads</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.html</context>
-          <context context-type="linenumber">29</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.productTypes" datatype="html">
         <source>Product Types</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.openSourceRatio" datatype="html">
         <source>Open Source Ratio</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.html</context>
-          <context context-type="linenumber">40</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPage.readMoreStories" datatype="html">
         <source>Read More Stories</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.html</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">49</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
-          <context context-type="linenumber">83</context>
+          <context context-type="linenumber">111</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.testimonialsTitle.1" datatype="html">
         <source>Customer testimonials</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">46</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.testimonialsTitle.2" datatype="html">
         <source>What our customers are saying...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">47</context>
+          <context context-type="linenumber">49</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.customersTitle.1" datatype="html">
         <source>From startups to the enterprise companies</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">51</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.customersTitle.2" datatype="html">
         <source>Thousands of companies in over 50 countries use Open Template Hub to start, run, and scale their businesses.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">52</context>
+          <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.whyUsTitle.1" datatype="html">
         <source>Why Open Template Hub?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">56</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.whyUsTitle.2" datatype="html">
         <source>Just focus on your business and leave us all others</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">57</context>
+          <context context-type="linenumber">59</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.exploreTitle.1" datatype="html">
         <source>Explore our Products</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">61</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.exploreTitle.2" datatype="html">
         <source>Explore our open source and premium products to get started today.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">62</context>
+          <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productTypeTag.openSource" datatype="html">
-        <source>#opensource</source>
+        <source>opensource</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">153</context>
+          <context context-type="linenumber">155</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
-          <context context-type="linenumber">131</context>
+          <context context-type="linenumber">141</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productTypeTag.premium" datatype="html">
-        <source>#premium</source>
+        <source>premium</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">153</context>
+          <context context-type="linenumber">155</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
-          <context context-type="linenumber">131</context>
+          <context context-type="linenumber">141</context>
         </context-group>
       </trans-unit>
       <trans-unit id="partnersPage.partnersTitle.1" datatype="html">
@@ -3403,28 +3528,28 @@
         <source>Open Source</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPage.professional.button" datatype="html">
         <source>Professional Help</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPage.downloadPackage.button" datatype="html">
         <source>Download Package</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPage.activityHistory.title" datatype="html">
         <source>Activity history</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
-          <context context-type="linenumber">123</context>
+          <context context-type="linenumber">148</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPage.testimonialsTitle.1" datatype="html">
@@ -3448,18 +3573,25 @@
           <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="productPage.npmPackageInstallationAndUsage" datatype="html">
+        <source>Package Installation &amp; Usage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="productPage.contactUs.button" datatype="html">
         <source>Contact Us</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
-          <context context-type="linenumber">126</context>
+          <context context-type="linenumber">136</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productPage.requestForDemo.button" datatype="html">
         <source>Request for Demo</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
-          <context context-type="linenumber">127</context>
+          <context context-type="linenumber">137</context>
         </context-group>
       </trans-unit>
       <trans-unit id="maintenance.home.button" datatype="html">
@@ -3473,14 +3605,14 @@
         <source>Under maintenance</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="maintenance.appHero.2" datatype="html">
         <source>Please check again later</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="notFound.home.button" datatype="html">
@@ -3494,14 +3626,14 @@
         <source>404 Page not found</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/not-found-page/not-found-page.component.ts</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="notFound.appHero.2" datatype="html">
         <source>Something went wrong!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/not-found-page/not-found-page.component.ts</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="signUpSuccess.appHero.1" datatype="html">
@@ -3536,35 +3668,35 @@
         <source>Verifying account...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">27</context>
+          <context context-type="linenumber">28</context>
         </context-group>
       </trans-unit>
       <trans-unit id="verifyAccount.accountVerificationFailedAppHero.1" datatype="html">
         <source>Account verification failed</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">30</context>
+          <context context-type="linenumber">31</context>
         </context-group>
       </trans-unit>
       <trans-unit id="verifyAccount.accountVerificationFailedAppHero.2" datatype="html">
         <source>Something went wrong!</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="verifyAccount.verifiedAppHero.1" datatype="html">
         <source>Account verified 🎉</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">34</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="verifyAccount.verifiedAppHero.2" datatype="html">
         <source>Please proceed with login</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">35</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="sitemap.products" datatype="html">
@@ -3781,14 +3913,42 @@
         <source>Will be redirected to: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/splash-layout/external-redirect-page/external-redirect-page.component.ts</context>
-          <context context-type="linenumber">65</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="externalRedirect.linkBroken" datatype="html">
         <source>Looks like the link is broken: </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/splash-layout/external-redirect-page/external-redirect-page.component.ts</context>
-          <context context-type="linenumber">66</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="githubCounters.stars" datatype="html">
+        <source>Stars</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/service/provider/github-provider.service.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="githubCounters.forks" datatype="html">
+        <source>Forks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/service/provider/github-provider.service.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="githubCounters.subscribers" datatype="html">
+        <source>Subscribers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/service/provider/github-provider.service.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="githubCounters.releaseVersion" datatype="html">
+        <source>Release Version</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/service/provider/github-provider.service.ts</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
     </body>

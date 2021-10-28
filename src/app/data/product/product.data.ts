@@ -2,9 +2,10 @@ import { CommandType } from 'src/app/data/command-type/command-type.enum';
 import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
 import { ProductLine } from '../../model/product/product.model';
-import { ThemeColorSettings } from '../constant';
-import { PRICING_RIBBONS } from '../ribbon/ribbon.data';
+import { URLS } from '../navigation/navigation.data';
+import { PRODUCT_RIBBONS } from '../ribbon/ribbon.data';
 import { TECH_STACK } from '../tech-stack/tech-stack.data';
+import { ThemeColorSettings } from '../theme/theme.data';
 
 const OPEN_SOURCE_FEATURE = {
   name: $localize`:@@productData.openSource.name:Open Source`,
@@ -80,7 +81,7 @@ const FREE_PRICING_OPTION = {
 const STANDARD_PRICING_OPTION = {
   title: $localize`:@@productData.standardPricingOption.title:Standard`,
   description: $localize`:@@productData.standardPricingOption.description:For Startups`,
-  ribbon: PRICING_RIBBONS.get( 'deal' ),
+  ribbon: PRODUCT_RIBBONS.get( 'deal' ),
   contactRequired: true,
   features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`:@@productData.standardPricingOption.features.1:Up to 10 users`, '' ] ]
 };
@@ -119,7 +120,8 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.node,
           TECH_STACK.express,
           TECH_STACK.postgreSql,
-          TECH_STACK.heroku
+          TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
       {
@@ -139,6 +141,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.postgreSql,
           TECH_STACK.mongoDb,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
       {
@@ -158,6 +161,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.postgreSql,
           TECH_STACK.mongoDb,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
       {
@@ -175,6 +179,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.node,
           TECH_STACK.express,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
       {
@@ -193,14 +198,19 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.express,
           TECH_STACK.mongoDb,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
       {
         key: 'business-logic-server-template',
         name: 'Business Logic Server',
-        description: $localize`:@@productLinesData.businessLogicServerTemplate.description:Business Logic Server Template for generic usage in Node.js`,
+        description: $localize`:@@productLinesData.businessLogicServerTemplate.description:Business Logic Server Template is a generic open source server that encodes the real-world business rules that determine how data can be created, stored, and changed. It saves you from rewriting boilerplate code. It works best with other Open Template Hub products.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'business-logic-server-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/business-logic-server-logo.min.png',
+        demonstrationImg: {
+          src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/server/business-logic-server-demo.min.png',
+          description: 'Server That Manages Your Core Business Functionalities'
+        },
         openSource: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
@@ -210,8 +220,18 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.express,
           TECH_STACK.mongoDb,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
+      {
+        key: 'sms-server-template',
+        name: 'Sms Server',
+        color: ThemeColorSettings.gray,
+        description: $localize`:@@productLinesData.smsServerTemplate.description:Coming soon..`,
+        url: URLS.maintenance,
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/product-logo-question.min.png',
+        openSource: true
+      }
     ],
   },
   {
@@ -222,15 +242,13 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'company-profile-ui-template',
         name: 'Company Profile UI',
-        description: $localize`:@@userInterfaces.companyProfileUITemplate.description:Company Profile UI Template for generic usage in Angular`,
+        description: $localize`:@@userInterfaces.companyProfileUITemplate.description:Company Profile UI Template is modern, responsive and customisable company profile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'company-profile-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/company-profile-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.companyProfileUITemplate.video.description:Modern, responsive, customisable company profile ui template written with Angular`,
+          description: $localize`:@@userInterfaces.companyProfileUITemplate.video.description:Modern, responsive and customisable company profile ui template written with Angular`,
         },
-        demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-light.min.png',
-        demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-dark.min.png',
         screenshots: [
           {
             src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
@@ -262,20 +280,19 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.fontAwesome,
           TECH_STACK.heroku,
           TECH_STACK.sass,
-          TECH_STACK.markdown
+          TECH_STACK.markdown,
+          TECH_STACK.npm
         ],
       },
       {
         key: 'web-ui-template',
         name: 'Web UI',
-        description: $localize`:@@userInterfaces.webUITemplate.description:Web UI Template for generic usage in Angular`,
+        description: $localize`:@@userInterfaces.webUITemplate.description:Web UI Template is modern, responsive and customisable web ui template for your business. It contains reusable components, theme color and design support along with dark theme support.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'web-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
-        demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
-        demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-dark.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/web-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.webUITemplate.video.description:Modern, responsive, customisable web ui template written with Angular`,
+          description: $localize`:@@userInterfaces.webUITemplate.video.description:Modern, responsive and customisable company profile ui template written with Angular`,
         },
         screenshots: [
           {
@@ -308,33 +325,32 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.fontAwesome,
           TECH_STACK.heroku,
           TECH_STACK.sass,
-          TECH_STACK.markdown
+          TECH_STACK.markdown,
+          TECH_STACK.npm
         ]
       },
       {
         key: 'mobile-ui-template',
         name: 'Mobile UI',
-        description: $localize`:@@userInterfaces.mobileUITemplate.description:Mobile UI Template for generic usage in React Native`,
+        description: $localize`:@@userInterfaces.mobileUITemplate.description:Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'mobile-ui-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/mobile-ui-logo.min.png',
-        demonstrationImg: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-light.min.png',
-        demonstrationAlter: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-dark.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/mobile-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.mobileUITemplate.video.description:Modern, responsive, customisable mobile ui template written with React Native`,
+          description: $localize`:@@userInterfaces.mobileUITemplate.video.description:Modern, responsive and customisable company profile ui template written with React Native`,
         },
         screenshots: [
           {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-light.min.png',
-            description: $localize`:@@userInterfaces.mobileUITemplate.screenshot.1:iOS and Android Support`
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-ios-demo-light.min.png',
+            description: $localize`:@@userInterfaces.mobileUITemplate.screenshot.1:iOS Support`
           },
           {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-dark.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-ios-demo-dark.min.png',
             description: $localize`:@@userInterfaces.mobileUITemplate.screenshot.2:Dark Mode Support`
           },
           {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-demo-light.min.png',
-            description: $localize`:@@userInterfaces.mobileUITemplate.screenshot.3:TODO: add another screenshot`
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/mobile-ui-android-demo-light.min.png',
+            description: $localize`:@@userInterfaces.mobileUITemplate.screenshot.3:Android Support`
           }
         ],
         openSource: true,
@@ -343,7 +359,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         techStack: [
           TECH_STACK.typeScript,
           TECH_STACK.reactNative,
-          TECH_STACK.fontAwesome
+          TECH_STACK.fontAwesome,
+          TECH_STACK.npm
         ]
       },
     ],
@@ -395,6 +412,17 @@ export const PRODUCT_LINES: ProductLine[] = [
             timeout: 30,
           },
         ],
+        steps: [
+          { text: 'Package Installation', level: 1},
+          { text: 'Open the terminal and type:\nnpm install -g @open-template-hub/server-generator', level: 2},
+          { text: 'Package Usage', level: 1},
+          {
+            text: 'Go to the directory on terminal where you want to generate the project and type:\n$ cd PATH', level: 2
+          },
+          {
+            text: 'Run the generator command:\nopen-template-hub-server-generator', level: 2
+          },
+        ],
       },
       {
         key: 'app-generator',
@@ -439,6 +467,17 @@ export const PRODUCT_LINES: ProductLine[] = [
             timeout: 30,
           },
         ],
+        steps: [
+          { text: 'Package Installation', level: 1},
+          { text: 'Open the terminal and type:\nnpm install -g @open-template-hub/app-generator', level: 2},
+          { text: 'Package Usage', level: 1},
+          {
+            text: 'Go to the directory on terminal where you want to generate the project and type:\n$ cd PATH', level: 2
+          },
+          {
+            text: 'Run the generator command:\nopen-template-hub-app-generator', level: 2
+          },
+        ],
       },
     ],
   },
@@ -455,6 +494,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/orchestration-server-logo.min.png',
         color: ThemeColorSettings.yellow,
+        demonstrationImg: {
+          src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/server/orchestration-server-demo.min.png',
+          description: 'Orchestration Server Architectural Design'
+        },
         features: [
           {
             name: $localize`:@@premium.orchestrationServerTemplate.feature.1:Core Features`,
@@ -486,7 +529,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           {
             title: $localize`:@@premium.orchestrationServer.basic.title:Basic`,
             description: $localize`:@@premium.orchestrationServer.basic.description:For Individuals`,
-            features: [ [ 'true', '' ], [ '', '' ], [ '', '' ] ],
+            features: [ [ 'true', '', '' ], [ '', '' ], [ '', '' ] ],
             price: {
               currency: '$',
               value: '99',
@@ -496,7 +539,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           {
             title: $localize`:@@premium.orchestrationServer.standard.title:Standard`,
             description: $localize`:@@premium.orchestrationServer.standard.description:For Startups`,
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
+            ribbon: PRODUCT_RIBBONS.get( 'deal' ),
             contactRequired: true,
             features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`:@@premium.orchestrationServer.standard.feature.1:Up to 10 users`, '' ] ]
           },
@@ -512,6 +555,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.node,
           TECH_STACK.express,
           TECH_STACK.heroku,
+          TECH_STACK.npm
         ]
       },
     ],
@@ -535,15 +579,15 @@ export const SERVICES: ProductLine[] = [
           details: [
             {
               name: $localize`:@@servicesData.softwareConsultancy.features.details.1.name:Custom Application Development`,
-              description: 'We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.'
+              description: $localize`:@@servicesData.softwareConsultancy.features.details.1.description:We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.`
             },
             {
               name: $localize`:@@servicesData.softwareConsultancy.features.details.2.name:Application Maintenance`,
-              description: 'Our app maintenance & modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.'
+              description: $localize`:@@servicesData.softwareConsultancy.features.details.2.description:Our app maintenance & modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.`
             },
             {
               name: $localize`:@@servicesData.softwareConsultancy.features.details.3.name:Implementation & Deployment`,
-              description: 'We devise an in-depth, comprehensive software implementation & deployment plan, assessing your needs to deliver enhanced technologies to end-users.'
+              description: $localize`:@@servicesData.softwareConsultancy.features.details.3.description:We devise an in-depth, comprehensive software implementation & deployment plan, assessing your needs to deliver enhanced technologies to end-users.`
             },
           ],
         }
@@ -559,16 +603,16 @@ export const SERVICES: ProductLine[] = [
           name: $localize`:@@servicesData.softwareIntegration.features.name:Features`,
           details: [
             {
-              name: $localize`:@@servicesData.softwareIntegration.features.details.1.name:Custom Application Development`,
-              description: $localize`:@@servicesData.softwareIntegration.features.details.1.description:We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.`
+              name: $localize`:@@servicesData.softwareIntegration.features.details.1.name:Data Integration Services`,
+              description: $localize`:@@servicesData.softwareIntegration.features.details.1.description:We perform data integration services, including merging data, consolidating business processes, and creating Database Management Systems to ensure complete data integrity during the transfer process.`
             },
             {
-              name: $localize`:@@servicesData.softwareIntegration.features.details.2.name:Application Maintenance`,
-              description: $localize`:@@servicesData.softwareIntegration.features.details.2.description:Our app maintenance & modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.`
+              name: $localize`:@@servicesData.softwareIntegration.features.details.2.name:API Integration Services`,
+              description: $localize`:@@servicesData.softwareIntegration.features.details.2.description:We provide integrating custom-built and third-party APIs service. We, integrate, and customize add web service functionality to mobile and web applications, and seamlessly synchronize data formats across these applications.`
             },
             {
-              name: $localize`:@@servicesData.softwareIntegration.features.details.3.name:Implementation & Deployment`,
-              description: $localize`:@@servicesData.softwareIntegration.features.details.3.description:We devise an in-depth, comprehensive software implementation & deployment plan, assessing your needs to deliver enhanced technologies to end-users.`
+              name: $localize`:@@servicesData.softwareIntegration.features.details.3.name:Enterprise Application Integrations`,
+              description: $localize`:@@servicesData.softwareIntegration.features.details.3.description:We provide Enterprise Application Integration solutions, facilitating seamless communications between business platforms. We are providing integrations for content management, accounting, customer relationship management, analytics, and marketing.`
             },
           ],
         }
@@ -584,16 +628,16 @@ export const SERVICES: ProductLine[] = [
           name: $localize`:@@servicesData.qualityAssurance.features.name:Features`,
           details: [
             {
-              name: $localize`:@@servicesData.qualityAssurance.features.details.1.name:Custom Application Development`,
-              description: $localize`:@@servicesData.qualityAssurance.features.details.1.description:We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.`
+              name: $localize`:@@servicesData.qualityAssurance.features.details.1.name:Software QA Automation Testing`,
+              description: $localize`:@@servicesData.qualityAssurance.features.details.1.description:We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.`
             },
             {
-              name: $localize`:@@servicesData.qualityAssurance.features.details.2.name:Application Maintenance`,
-              description: $localize`:@@servicesData.qualityAssurance.features.details.2.description:Our app maintenance & modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.`
+              name: $localize`:@@servicesData.qualityAssurance.features.details.2.name:Software QA Manual Testing`,
+              description: $localize`:@@servicesData.qualityAssurance.features.details.2.description:Our dedicated QA team will test your mobile, web, or desktop application manually to identify & fix bugs, detect & eradicate errors, and confirm its compliance with regulatory standards, providing you with the highest quality result possible.`
             },
             {
-              name: $localize`:@@servicesData.qualityAssurance.features.details.3.name:Implementation & Deployment`,
-              description: $localize`:@@servicesData.qualityAssurance.features.details.3.description:We devise an in-depth, comprehensive software implementation & deployment plan, assessing your needs to deliver enhanced technologies to end-users.`
+              name: $localize`:@@servicesData.qualityAssurance.features.details.3.name:Software QA Usability Testing`,
+              description: $localize`:@@servicesData.qualityAssurance.features.details.3.description:We design QA usability testing platforms that incorporate specific usability testing tools and UX research methods selected based on the client, focused on measuring how user-friendly and flexible your application or website is.`
             },
           ],
         }

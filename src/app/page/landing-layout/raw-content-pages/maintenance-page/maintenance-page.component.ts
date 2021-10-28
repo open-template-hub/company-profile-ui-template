@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { BRAND } from '../../../../data/brand/brand.data';
-import { INFORMATION_TYPES, URLS } from '../../../../data/constant';
+import { INFORMATION_TYPES } from '../../../../data/information/information.data';
+import { URLS } from '../../../../data/navigation/navigation.data';
 
 @Component( {
   selector: 'app-maintenance-page',

@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, Input, ViewChild, } from '@angular/core';
-import { URLS } from '../../data/constant';
+import { URLS } from '../../data/navigation/navigation.data';
 import { Product, ProductLine } from '../../model/product/product.model';
 import { UtilService } from '../../service/util/util.service';
 
@@ -100,5 +100,13 @@ export class DropdownMenuComponent {
     this.utilService.delay( 500 ).then( () => {
       this.closeDropdown();
     } );
+  }
+
+  getProductLineMaxHeight() {
+    if (this.utilService.isSmallScreen() || this.calculatedRows >= this.minimumRows) {
+      return '';
+    }
+
+    return 'max-height: ' + ( 60 + 150 * this.calculatedRows + 1 ) + 'px;';
   }
 }

@@ -111,7 +111,7 @@
     display: block;
     position: fixed;
     bottom: calc(55px + env(safe-area-inset-bottom));
-    height: 75%;
+    height: calc(80vh - 55px);
     box-shadow: 0 0 4px 4px var(--shadow);
     z-index: 11;
     padding: 0;
@@ -216,8 +216,6 @@
     min-width: 330px;
     width: 330px;
     max-width: 330px;
-
-    max-height: 831px;
 
     overflow-y: auto;
     position: relative;

@@ -2,7 +2,8 @@ import { CommandType } from 'src/app/data/command-type/command-type.enum';
 import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
 import { ProductLine } from '../../model/product/product.model';
-import { PRICING_RIBBONS } from '../ribbon/ribbon.data';
+import { URLS } from '../navigation/navigation.data';
+import { PRODUCT_RIBBONS } from '../ribbon/ribbon.data';
 import { TECH_STACK } from '../tech-stack/tech-stack.data';
 import { ThemeColorSettings } from '../theme/theme.data';
 
@@ -80,7 +81,7 @@ const FREE_PRICING_OPTION = {
 const STANDARD_PRICING_OPTION = {
   title: $localize`:@@productData.standardPricingOption.title:Standard`,
   description: $localize`:@@productData.standardPricingOption.description:For Startups`,
-  ribbon: PRICING_RIBBONS.get( 'deal' ),
+  ribbon: PRODUCT_RIBBONS.get( 'deal' ),
   contactRequired: true,
   features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`:@@productData.standardPricingOption.features.1:Up to 10 users`, '' ] ]
 };
@@ -218,6 +219,15 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.npm
         ]
       },
+      {
+        key: 'sms-server-template',
+        name: 'Sms Server',
+        color: ThemeColorSettings.gray,
+        description: $localize`:@@productLinesData.smsServerTemplate.description:Coming soon.`,
+        url: URLS.maintenance,
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/product-logo-question.min.png',
+        openSource: true
+      }
     ],
   },
   {
@@ -525,7 +535,7 @@ export const PRODUCT_LINES: ProductLine[] = [
           {
             title: $localize`:@@premium.orchestrationServer.standard.title:Standard`,
             description: $localize`:@@premium.orchestrationServer.standard.description:For Startups`,
-            ribbon: PRICING_RIBBONS.get( 'deal' ),
+            ribbon: PRODUCT_RIBBONS.get( 'deal' ),
             contactRequired: true,
             features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`:@@premium.orchestrationServer.standard.feature.1:Up to 10 users`, '' ] ]
           },

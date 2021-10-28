@@ -20,12 +20,17 @@ export class ProductService {
   }
 
   setSelectedProduct( product: Product ) {
-    if ( localStorage.getItem( 'currentUser' ) ) {
-      sessionStorage.removeItem( 'product' );
-      localStorage.setItem( 'product', JSON.stringify( product ) );
+    if (product) {
+      if ( localStorage.getItem( 'currentUser' ) ) {
+        sessionStorage.removeItem( 'product' );
+        localStorage.setItem( 'product', JSON.stringify( product ) );
+      } else {
+        sessionStorage.setItem( 'product', JSON.stringify( product ) );
+      }
+      this.productSubject.next( product );
     } else {
-      sessionStorage.setItem( 'product', JSON.stringify( product ) );
+      localStorage.removeItem( 'product' );
+      sessionStorage.removeItem( 'product' );
     }
-    this.productSubject.next( product );
   }
 }

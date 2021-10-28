@@ -72,15 +72,15 @@
 <ng-container *ngFor="let productLine of PRODUCT_LINES">
   <app-hero [contents]="[{ text: productLine.name, level: 3 }]" [heroClass]="'no-padding'"></app-hero>
   <div class="cards-wrapper">
-    <ng-container *ngFor="let relatedProduct of productLine.products">
+    <ng-container *ngFor="let product of productLine.products">
       <app-presentation-card
-          [class]="relatedProduct.color ? relatedProduct.color : ''"
-          [footerText]=getPresentationCardFooter(relatedProduct.openSource)
-          [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
+          [class]="product.color ? product.color : ''"
+          [footerText]=getPresentationCardFooter(product.openSource)
+          [href]="URLS.product + '/' + productLine.key + '/' + product.key"
           [imgHeight]="150"
-          [secondaryText]="relatedProduct.description"
-          [src]="relatedProduct.logo"
-          [title]="relatedProduct.name"
+          [secondaryText]="product.description"
+          [src]="product.logo"
+          [title]="product.name"
           class="related-product">
       </app-presentation-card>
     </ng-container>

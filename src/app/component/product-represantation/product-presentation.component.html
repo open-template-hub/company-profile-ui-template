@@ -68,19 +68,21 @@
     </app-card>
 
     <!-- Features Presentation -->
-    <app-card *ngSwitchDefault [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
-      <ng-template #bodyTemplate>
-        <div class="body">
-          <ng-container *ngFor="let feature of product.features">
-            <p class="feature-title">{{ feature.name }}</p>
+    <ng-container *ngSwitchDefault>
+      <app-card *ngIf="product.features" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
+        <ng-template #bodyTemplate>
+          <div class="body">
+            <ng-container *ngFor="let feature of product.features">
+              <p class="feature-title">{{ feature.name }}</p>
 
-            <div *ngFor="let detail of feature.details" class="details">
-              <p>{{ detail.name + ':' }}</p>
-              <p>{{ detail.description}}</p>
-            </div>
-          </ng-container>
-        </div>
-      </ng-template>
-    </app-card>
+              <div *ngFor="let detail of feature.details" class="details">
+                <p>{{ detail.name + ':' }}</p>
+                <p>{{ detail.description}}</p>
+              </div>
+            </ng-container>
+          </div>
+        </ng-template>
+      </app-card>
+    </ng-container>
   </div>
 </ng-container>

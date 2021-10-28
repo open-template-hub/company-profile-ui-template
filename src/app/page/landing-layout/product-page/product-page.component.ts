@@ -92,6 +92,12 @@ export class ProductPageComponent implements OnInit, OnDestroy {
         return;
       }
 
+      if (product.url === URLS.maintenance) {
+        this.productService.setSelectedProduct( undefined );
+        this.router.navigate( [ URLS.maintenance ] );
+        return;
+      }
+
       if ( !isService ) {
         this.isOpenSource = true;
         this.githubService.getGithubCounters( product.key )

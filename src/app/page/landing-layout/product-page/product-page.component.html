@@ -120,7 +120,20 @@
     </ng-container>
 
     <ng-container *ngSwitchCase="'generator'" [ngSwitch]="product.key">
-      <!-- Todo: Show something related with generators instead of price plan -->
+      <!-- Step Timeline -->
+      <ng-container *ngIf="product.steps">
+        <app-hero [contents]="npmPackageInstallationAndUsage"></app-hero>
+        <div class="timeline-wrapper">
+          <ng-container *ngFor="let step of product.steps; index as i">
+            <app-step-timeline-card
+                [step]="step"
+                [num]="i + 1"
+                [class]="i % 2 === 0 ? 'left' : 'right'"
+                [rotation]="i % 2 === 0 ? 'left' : 'right'">
+            </app-step-timeline-card>
+          </ng-container>
+        </div>
+      </ng-container>
     </ng-container>
 
     <ng-container *ngSwitchDefault [ngSwitch]="product.key">
@@ -143,21 +156,6 @@
   <ng-container *ngIf="product.techStack">
     <app-hero [contents]="[{ text: 'Tech Stack', level: 2 }]"></app-hero>
     <app-tech-stack-card [techStack]="product.techStack"></app-tech-stack-card>
-  </ng-container>
-
-  <!-- Step Timeline -->
-  <ng-container *ngIf="product.steps">
-    <app-hero [contents]="npmPackageInstallationAndUsage"> </app-hero>
-    <div class="timeline-wrapper">
-      <ng-container *ngFor="let step of product.steps; index as i">
-        <app-step-timeline-card
-          [step]="step"
-          [num]="i + 1"
-          [class]="i % 2 === 0 ? 'left' : 'right'"
-          [rotation]="i % 2 === 0 ? 'left' : 'right'">
-        </app-step-timeline-card>
-      </ng-container>
-    </div>
   </ng-container>
 
   <!-- Related Products -->

@@ -42,25 +42,19 @@
     }
 
     & .step {
-      &.right {
-        @include marker(24px);
+      @include util.flex-layout-row;
+      @include util.flex-center-center;
+      @include marker(24px);
 
-        margin-top: 26px;
-        margin-left: 309px;
-      }
+      box-shadow: 0 0 3px 2px var(--theme-color-darker-1) inset;
 
-      &.left {
-        @include marker(24px);
-
-        margin-top: 26px;
-        margin-left: 309px;
-      }
+      margin-top: 26px;
+      margin-left: 309px;
 
       & p {
         text-align: center;
         font-size: 13px;
-        color: var(--color);
-        padding-top: 4px;
+        color: var(--darker-contrast);
         font-weight: 600;
       }
     }
@@ -101,28 +95,21 @@
 
 @media only screen and (max-width: 999px) {
   .step-timeline-card {
-    width: 98%;
 
     & .link {
-      width: 98%;
+      @include util.margin-x-auto;
+
+      width: 94%;
 
       & .divider {
-        &.right {
-          margin-left: 22%;
-        }
-
-        &.left {
-          margin-left: 22%;
+        &.right, &.left {
+          margin-left: 10%;
         }
       }
 
       & .step {
-        &.right {
-          margin-left: 22%;
-        }
-
-        &.left {
-          margin-left: 22%;
+        &.right, &.left {
+          margin-left: calc(10% - 12px);
         }
       }
     }
@@ -130,22 +117,15 @@
     & .body {
       width: 98%;
 
-      &.right {
+      &.right, &.left {
         width: 70%;
-        margin-left: 31%;
-        margin-top: 1.5px;
-        text-align: left;
-      }
-
-      &.left {
-        width: 70%;
-        margin-left: 31%;
+        margin-left: 19%;
+        margin-right: 8%;
         margin-top: 1.5px;
         text-align: left;
       }
 
       & p {
-        width: 70%;
         word-break: break-word;
         text-decoration: none;
       }

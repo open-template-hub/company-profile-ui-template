@@ -22,7 +22,7 @@
           *ngFor="let productLine of productLines; last as isLastColumn; index as i"
           [class.section-column-right-border]="!(i == calculatedColumns - 1 || isLastColumn)"
           [class]="productLine.color ? productLine.color : ''"
-          [style]="getMaxHeight()"
+          [style]="getProductLineMaxHeight()"
           class="section-column">
         <div *ngIf="productLine.name" class="section-header">
           <h4>

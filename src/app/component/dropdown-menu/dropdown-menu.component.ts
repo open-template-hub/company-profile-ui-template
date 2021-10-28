@@ -102,8 +102,8 @@ export class DropdownMenuComponent {
     } );
   }
 
-  getMaxHeight() {
-    if (this.utilService.isSmallScreen()) {
+  getProductLineMaxHeight() {
+    if (this.utilService.isSmallScreen() || this.calculatedRows >= this.minimumRows) {
       return '';
     }
 

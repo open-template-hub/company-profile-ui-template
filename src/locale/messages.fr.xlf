@@ -4241,6 +4241,13 @@
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
           <context context-type="linenumber">42</context>
         </context-group>
+      </trans-unit><trans-unit id="productLinesData.smsServerTemplate.description" datatype="html">
+        <source>Coming soon..</source>
+        <target>Bientôt disponible..</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
       </trans-unit></body>
       <trans-unit id="learnMore.button" datatype="html">
         <source>Learn more</source>

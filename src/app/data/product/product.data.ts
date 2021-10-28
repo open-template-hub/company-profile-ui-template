@@ -223,7 +223,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'sms-server-template',
         name: 'Sms Server',
         color: ThemeColorSettings.gray,
-        description: $localize`:@@productLinesData.smsServerTemplate.description:Coming soon.`,
+        description: $localize`:@@productLinesData.smsServerTemplate.description:Coming soon..`,
         url: URLS.maintenance,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/product-logo-question.min.png',
         openSource: true

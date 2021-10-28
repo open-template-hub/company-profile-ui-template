@@ -168,18 +168,13 @@
             productLineKey === 'premium'
               ? productLine.key === 'server'
               : productLine.key === productLineKey ||
-                productLine.key === 'premium'
-          ">
+                productLine.key === 'premium'">
           <ng-container *ngFor="let relatedProduct of productLine.products">
             <app-presentation-card
               *ngIf="product.key !== relatedProduct.key"
               [class]="relatedProduct.color ? relatedProduct.color : ''"
-              [footerText]="
-                getPresentationCardFooter(relatedProduct.openSource)
-              "
-              [href]="
-                URLS.product + '/' + productLine.key + '/' + relatedProduct.key
-              "
+              [footerText]="getPresentationCardFooter(relatedProduct.openSource)"
+              [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
               [imgHeight]="150"
               [secondaryText]="relatedProduct.description"
               [src]="relatedProduct.logo"

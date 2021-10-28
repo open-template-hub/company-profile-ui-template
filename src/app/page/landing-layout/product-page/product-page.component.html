@@ -152,6 +152,7 @@
       <ng-container *ngFor="let step of product.steps; index as i">
         <app-step-timeline-card
           [step]="step"
+          [num]="i + 1"
           [class]="i % 2 === 0 ? 'left' : 'right'"
           [rotation]="i % 2 === 0 ? 'left' : 'right'">
         </app-step-timeline-card>

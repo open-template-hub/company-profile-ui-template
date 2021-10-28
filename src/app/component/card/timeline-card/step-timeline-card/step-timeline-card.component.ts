@@ -9,6 +9,7 @@ import { StepTimeLineItem } from 'src/app/model/timeline/step-timeline.model';
 export class StepTimelineCardComponent implements OnInit {
   @Input() step: StepTimeLineItem;
   @Input() rotation: string;
+  @Input() num: number;
   
   constructor() {}
 

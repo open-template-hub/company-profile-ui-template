@@ -40,6 +40,30 @@
         margin-left: 321px;
       }
     }
+
+    & .step {
+      &.right {
+        @include marker(24px);
+
+        margin-top: 26px;
+        margin-left: 309px;
+      }
+
+      &.left {
+        @include marker(24px);
+
+        margin-top: 26px;
+        margin-left: 309px;
+      }
+
+      & p {
+        text-align: center;
+        font-size: 16px;
+        color: var(--color);
+        padding-top: 2px;
+        font-weight: 600;
+      }
+    }
   }
 
   & .body {
@@ -49,6 +73,7 @@
       padding: 5px;
       color: var(--color);
       white-space: pre-line;
+      word-wrap: break-word;
 
       &.level1 {
         font-size: 19px;
@@ -64,31 +89,65 @@
     &.right {
       text-align: left;
       margin-left: 343px;
-
-      & .level1::before {
-        @include marker(13px);
-        margin-left: -33px;
-      }
-
-      & .level2::before {
-        @include marker(11px);
-        margin-left: -32px;
-      }
     }
 
     &.left {
       width: 300px;
       text-align: right;
       margin-right: 300px;
+    }
+  }
+}
 
-      & .level1::after {
-        @include marker(13px);
-        margin-left: 20px;
+@media only screen and (max-width: 999px) {
+  .step-timeline-card {
+    width: 98%;
+
+    & .link {
+      width: 98%;
+
+      & .divider {
+        &.right {
+          margin-left: 22%;
+        }
+
+        &.left {
+          margin-left: 22%;
+        }
       }
 
-      & .level2::after {
-        @include marker(11px);
-        margin-left: 21px;
+      & .step {
+        &.right {
+          margin-left: 22%;
+        }
+
+        &.left {
+          margin-left: 22%;
+        }
+      }
+    }
+
+    & .body {
+      width: 98%;
+
+      &.right {
+        width: 70%;
+        margin-left: 31%;
+        margin-top: 1.5px;
+        text-align: left;
+      }
+
+      &.left {
+        width: 70%;
+        margin-left: 31%;
+        margin-top: 1.5px;
+        text-align: left;
+      }
+
+      & p {
+        width: 70%;
+        word-break: break-word;
+        text-decoration: none;
       }
     }
   }

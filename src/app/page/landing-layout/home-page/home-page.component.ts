@@ -14,7 +14,6 @@ import { BRAND } from '../../../data/brand/brand.data';
 import { URLS } from '../../../data/navigation/navigation.data';
 import { PRODUCT_LINES } from '../../../data/product/product.data';
 import { Partner } from '../../../model/partner/partner.model';
-import { AuthenticationService } from '../../../service/auth/authentication.service';
 
 @Component( {
   selector: 'app-home-page',
@@ -67,13 +66,8 @@ export class HomePageComponent implements AfterViewInit {
   constructor(
       private formBuilder: FormBuilder,
       public router: Router,
-      private authenticationService: AuthenticationService,
       private npmProviderService: NpmProviderService
   ) {
-    // redirect to home if already logged in
-    if ( this.authenticationService.currentUserValue ) {
-      this.router.navigate( [ URLS.dashboard.root ] );
-    }
   }
 
   ngAfterViewInit() {

@@ -21,7 +21,6 @@ import { ProductPageComponent } from './page/landing-layout/product-page/product
 import { MaintenancePageComponent } from './page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component';
 import { NotFoundPageComponent } from './page/landing-layout/raw-content-pages/not-found-page/not-found-page.component';
 import { SitemapPageComponent } from './page/landing-layout/sitemap-page/sitemap-page.component';
-import { StatusPageComponent } from './page/landing-layout/status-page/status-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 
@@ -93,11 +92,6 @@ const routes: Routes = [
       {
         path: NAVIGATIONS.contactUs.url,
         component: ContactUsPageComponent,
-        canActivate: [ NavigationInterceptor ],
-      },
-      {
-        path: NAVIGATIONS.status.url,
-        component: StatusPageComponent,
         canActivate: [ NavigationInterceptor ],
       },
       {

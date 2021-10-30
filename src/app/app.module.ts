@@ -33,7 +33,6 @@ import { FeatureCardComponent } from './component/card/feature-card/feature-card
 import { PolicyCardComponent } from './component/card/policy-card/policy-card.component';
 import { PresentationCardComponent } from './component/card/presentation-card/presentation-card.component';
 import { PricingCardComponent } from './component/card/pricing-card/pricing-card.component';
-import { StatusCardComponent } from './component/card/status-card/status-card.component';
 import { TestimonialCardComponent } from './component/card/testimonial-card/testimonial-card.component';
 import { TimelineCardComponent } from './component/card/timeline-card/timeline-card.component';
 import { ColorChartComponent } from './component/color-chart/color-chart.component';
@@ -75,9 +74,6 @@ import { ProductPageComponent } from './page/landing-layout/product-page/product
 import { MaintenancePageComponent } from './page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component';
 import { NotFoundPageComponent } from './page/landing-layout/raw-content-pages/not-found-page/not-found-page.component';
 import { SitemapPageComponent } from './page/landing-layout/sitemap-page/sitemap-page.component';
-import { StatusPageComponent } from './page/landing-layout/status-page/status-page.component';
-import { EditThemePageComponent } from './page/settings-layout/edit-theme-page/edit-theme-page.component';
-import { SettingsLayoutComponent } from './page/settings-layout/settings-layout.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 import { CustomersPageComponent } from './page/landing-layout/customers-page/customers-page.component';
@@ -115,13 +111,10 @@ FullCalendarModule.registerPlugins( [
     CookiePolicyPageComponent,
     PrivacyPolicyPageComponent,
     TermsPageComponent,
-    SettingsLayoutComponent,
-    EditThemePageComponent,
     PricingPageComponent,
     PricingCardComponent,
     TestimonialCardComponent,
     DropdownMenuComponent,
-    EditThemePageComponent,
     ColorChartComponent,
     ProductPageComponent,
     ExtLinkComponent,
@@ -131,12 +124,10 @@ FullCalendarModule.registerPlugins( [
     ContactUsPageComponent,
     AnimatedCodeEditorComponent,
     CommandLineComponent,
-    StatusPageComponent,
     ProductPresentationComponent,
     CardComponent,
     EmployeeCardComponent,
     ProductPresentationComponent,
-    StatusCardComponent,
     PolicyCardComponent,
     TimelineCardComponent,
     ButtonComponent,

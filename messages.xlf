@@ -38,42 +38,42 @@
         <source> About </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">30,32</context>
+          <context context-type="linenumber">31,32</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.customers" datatype="html">
         <source> Customers </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">33,35</context>
+          <context context-type="linenumber">34,35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.partners" datatype="html">
         <source> Partners </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">36,38</context>
+          <context context-type="linenumber">37,38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.branding" datatype="html">
         <source> Branding </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">39,41</context>
+          <context context-type="linenumber">40,41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.jobs" datatype="html">
         <source> Jobs </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">45,47</context>
+          <context context-type="linenumber">46,47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.blog" datatype="html">
         <source> Blog </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">49,51</context>
+          <context context-type="linenumber">50,51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.developers" datatype="html">
@@ -87,77 +87,63 @@
         <source> Open Source </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">59,61</context>
+          <context context-type="linenumber">60,61</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.docs" datatype="html">
         <source> Docs </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">63,65</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="footer.api" datatype="html">
-        <source> API </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">66,68</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="footer.status" datatype="html">
-        <source> Status </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">69,71</context>
+          <context context-type="linenumber">64,65</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.resources" datatype="html">
         <source>Resources</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">74</context>
+          <context context-type="linenumber">68</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.support" datatype="html">
         <source> Support </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">75,77</context>
+          <context context-type="linenumber">70,71</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.contact" datatype="html">
         <source> Contact </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">78,80</context>
+          <context context-type="linenumber">73,74</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.termsAndConditions" datatype="html">
         <source> Terms &amp; Conditions </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">81,83</context>
+          <context context-type="linenumber">76,77</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.privacy" datatype="html">
         <source> Privacy </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">84,86</context>
+          <context context-type="linenumber">79,80</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.cookies" datatype="html">
         <source> Cookies </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">87,89</context>
+          <context context-type="linenumber">82,83</context>
         </context-group>
       </trans-unit>
       <trans-unit id="footer.sitemap" datatype="html">
         <source> Sitemap </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">90,92</context>
+          <context context-type="linenumber">85,86</context>
         </context-group>
       </trans-unit>
       <trans-unit id="landingLayoutTopNav.products" datatype="html">
@@ -2417,43 +2403,32 @@
         <source>Coming soon..</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">226</context>
+          <context context-type="linenumber">230</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.userInterface.description" datatype="html">
         <source>User interface solutions for your needs</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">236</context>
+          <context context-type="linenumber">240</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.companyProfileUITemplate.description" datatype="html">
         <source>Company Profile UI Template is modern, responsive and customisable company profile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">241</context>
+          <context context-type="linenumber">245</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.companyProfileUITemplate.video.description" datatype="html">
         <source>Modern, responsive and customisable company profile ui template written with Angular</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">246</context>
+          <context context-type="linenumber">250</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.1" datatype="html">
         <source>Responsive Design</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">251</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">296</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.2" datatype="html">
-        <source>Dark Mode Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">255</context>
@@ -2463,8 +2438,8 @@
           <context context-type="linenumber">300</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.3" datatype="html">
-        <source>Reusable Components</source>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.2" datatype="html">
+        <source>Dark Mode Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">259</context>
@@ -2474,8 +2449,8 @@
           <context context-type="linenumber">304</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.4" datatype="html">
-        <source>Customisable Theme Colors</source>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.3" datatype="html">
+        <source>Reusable Components</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">263</context>
@@ -2485,8 +2460,8 @@
           <context context-type="linenumber">308</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.5" datatype="html">
-        <source>Customisable Theme Design</source>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.4" datatype="html">
+        <source>Customisable Theme Colors</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">267</context>
@@ -2496,340 +2471,351 @@
           <context context-type="linenumber">312</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.5" datatype="html">
+        <source>Customisable Theme Design</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">271</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
+          <context context-type="linenumber">316</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="userInterfaces.webUITemplate.description" datatype="html">
         <source>Web UI Template is modern, responsive and customisable web ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">286</context>
+          <context context-type="linenumber">290</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.webUITemplate.video.description" datatype="html">
         <source>Modern, responsive and customisable company profile ui template written with Angular</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">291</context>
+          <context context-type="linenumber">295</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.description" datatype="html">
         <source>Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">331</context>
+          <context context-type="linenumber">335</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.video.description" datatype="html">
         <source>Modern, responsive and customisable company profile ui template written with React Native</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">336</context>
+          <context context-type="linenumber">340</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.screenshot.1" datatype="html">
         <source>iOS Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">341</context>
+          <context context-type="linenumber">345</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.screenshot.2" datatype="html">
         <source>Dark Mode Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">345</context>
+          <context context-type="linenumber">349</context>
         </context-group>
       </trans-unit>
       <trans-unit id="userInterfaces.mobileUITemplate.screenshot.3" datatype="html">
         <source>Android Support</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">349</context>
+          <context context-type="linenumber">353</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.generator.description" datatype="html">
         <source>Command line interface generators</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">367</context>
+          <context context-type="linenumber">371</context>
         </context-group>
       </trans-unit>
       <trans-unit id="generators.serverGenerator.description" datatype="html">
         <source>Command line interface generator of the servers at Open Template Hub</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">372</context>
+          <context context-type="linenumber">376</context>
         </context-group>
       </trans-unit>
       <trans-unit id="generators.appGenerator.description" datatype="html">
         <source>Command line interface generator of the user interfaces at Open Template Hub</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">427</context>
+          <context context-type="linenumber">431</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.premium.description" datatype="html">
         <source>Get more things done with our premium solutions</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">483</context>
+          <context context-type="linenumber">487</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.description" datatype="html">
         <source>Orchestration Server Template is a middleware server that has simple yet powerful design to connect your business with all Open Template Hub servers (like Auth Server, Payment Server, File Storage Server or Mail Server). It also has generic design to integrate any other servers.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">489</context>
+          <context context-type="linenumber">493</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.feature.1" datatype="html">
         <source>Core Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">499</context>
+          <context context-type="linenumber">503</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.feature.1.detail.1" datatype="html">
         <source>Integrated with OTH Servers</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">502</context>
+          <context context-type="linenumber">506</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServerTemplate.feature.1.detail.2" datatype="html">
         <source>Works seamlessly with Open Template Hub Servers.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">503</context>
+          <context context-type="linenumber">507</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.basic.title" datatype="html">
         <source>Basic</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">526</context>
+          <context context-type="linenumber">530</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.basic.description" datatype="html">
         <source>For Individuals</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">527</context>
+          <context context-type="linenumber">531</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.standard.title" datatype="html">
         <source>Standard</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">536</context>
+          <context context-type="linenumber">540</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.standard.description" datatype="html">
         <source>For Startups</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">537</context>
+          <context context-type="linenumber">541</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.standard.feature.1" datatype="html">
         <source>Up to 10 users</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">540</context>
+          <context context-type="linenumber">544</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.enterprise.title" datatype="html">
         <source>Enterprise</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">543</context>
+          <context context-type="linenumber">547</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.enterprise.description" datatype="html">
         <source>For Enterprises</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">544</context>
+          <context context-type="linenumber">548</context>
         </context-group>
       </trans-unit>
       <trans-unit id="premium.orchestrationServer.enterprise.feature.1" datatype="html">
         <source>Unlimited users</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">546</context>
+          <context context-type="linenumber">550</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.description" datatype="html">
         <source>Services that we provide</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">565</context>
+          <context context-type="linenumber">569</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.description" datatype="html">
         <source>We perform world-class custom software development services from startups to enterprise businesses. Our highly experienced software developers have a deep understanding of how to leverage top programming languages, frameworks, and other software development tools to create the ideal solution for your business.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">570</context>
+          <context context-type="linenumber">574</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.name" datatype="html">
         <source>Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">574</context>
+          <context context-type="linenumber">578</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.1.name" datatype="html">
         <source>Custom Application Development</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">577</context>
+          <context context-type="linenumber">581</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.1.description" datatype="html">
         <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">578</context>
+          <context context-type="linenumber">582</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.2.name" datatype="html">
         <source>Application Maintenance</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">581</context>
+          <context context-type="linenumber">585</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.2.description" datatype="html">
         <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">582</context>
+          <context context-type="linenumber">586</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.3.name" datatype="html">
         <source>Implementation &amp; Deployment</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">585</context>
+          <context context-type="linenumber">589</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareConsultancy.features.details.3.description" datatype="html">
         <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">586</context>
+          <context context-type="linenumber">590</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.description" datatype="html">
         <source>When a company adopts a new technology or business process, they face many challenges between their current applications and systems and the complicated software implementation process. Our industry-specific software engineers handle all of your challenging integration &amp; implementation obstacles, including architectural design, testing, debugging, and execution.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">595</context>
+          <context context-type="linenumber">599</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.name" datatype="html">
         <source>Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">599</context>
+          <context context-type="linenumber">603</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.1.name" datatype="html">
         <source>Data Integration Services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">602</context>
+          <context context-type="linenumber">606</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.1.description" datatype="html">
         <source>We perform data integration services, including merging data, consolidating business processes, and creating Database Management Systems to ensure complete data integrity during the transfer process.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">603</context>
+          <context context-type="linenumber">607</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.2.name" datatype="html">
         <source>API Integration Services</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">606</context>
+          <context context-type="linenumber">610</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.2.description" datatype="html">
         <source>We provide integrating custom-built and third-party APIs service. We, integrate, and customize add web service functionality to mobile and web applications, and seamlessly synchronize data formats across these applications.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">607</context>
+          <context context-type="linenumber">611</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.3.name" datatype="html">
         <source>Enterprise Application Integrations</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">610</context>
+          <context context-type="linenumber">614</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.softwareIntegration.features.details.3.description" datatype="html">
         <source>We provide Enterprise Application Integration solutions, facilitating seamless communications between business platforms. We are providing integrations for content management, accounting, customer relationship management, analytics, and marketing.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">611</context>
+          <context context-type="linenumber">615</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.description" datatype="html">
         <source>We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">620</context>
+          <context context-type="linenumber">624</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.name" datatype="html">
         <source>Features</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">624</context>
+          <context context-type="linenumber">628</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.1.name" datatype="html">
         <source>Software QA Automation Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">627</context>
+          <context context-type="linenumber">631</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.1.description" datatype="html">
         <source>We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">628</context>
+          <context context-type="linenumber">632</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.2.name" datatype="html">
         <source>Software QA Manual Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">631</context>
+          <context context-type="linenumber">635</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.2.description" datatype="html">
         <source>Our dedicated QA team will test your mobile, web, or desktop application manually to identify &amp; fix bugs, detect &amp; eradicate errors, and confirm its compliance with regulatory standards, providing you with the highest quality result possible.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">632</context>
+          <context context-type="linenumber">636</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.3.name" datatype="html">
         <source>Software QA Usability Testing</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">635</context>
+          <context context-type="linenumber">639</context>
         </context-group>
       </trans-unit>
       <trans-unit id="servicesData.qualityAssurance.features.details.3.description" datatype="html">
         <source>We design QA usability testing platforms that incorporate specific usability testing tools and UX research methods selected based on the client, focused on measuring how user-friendly and flexible your application or website is.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
-          <context context-type="linenumber">636</context>
+          <context context-type="linenumber">640</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ribbonData.new" datatype="html">
@@ -2858,13 +2844,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/ribbon/ribbon.data.ts</context>
           <context context-type="linenumber">13</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="statusData.servers" datatype="html">
-        <source>servers</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/status/status.data.ts</context>
-          <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="testimonials.review.adamNolan" datatype="html">
@@ -3012,7 +2991,7 @@
         <source> Select range of employees </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
-          <context context-type="linenumber">65,67</context>
+          <context context-type="linenumber">66,67</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.companySize" datatype="html">
@@ -3113,279 +3092,6 @@
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="forgetPasswordForm.username.placeholder" datatype="html">
-        <source>Username...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgetPasswordForm.send" datatype="html">
-        <source>SEND</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgetPasswordForm.success.1" datatype="html">
-        <source>&apos;Reset email sent!&apos;</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgetPasswordForm.success.2" datatype="html">
-        <source>&apos;Please check you inbox&apos;</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.html</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgetPasswordForm.logIn.button" datatype="html">
-        <source>LOG IN</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.html</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgetPassword.appHero" datatype="html">
-        <source>Forget password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.ts</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4756994323727611073" datatype="html">
-        <source>Please provide a valid username.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.ts</context>
-          <context context-type="linenumber">62</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.or.separator" datatype="html">
-        <source>or</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.usernameOrEmail.placeholder" datatype="html">
-        <source>Username or Email...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">20</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.password.placeholder" datatype="html">
-        <source>Password...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.rememberMe" datatype="html">
-        <source>Remember Me</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.loginButton" datatype="html">
-        <source>LOG IN</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.dontHaveAccount" datatype="html">
-        <source>Don&apos;t have an account?</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.signUp" datatype="html">
-        <source> Sign Up </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">39,41</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.forgetPassword" datatype="html">
-        <source> Forget password? </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">44,46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.appHero" datatype="html">
-        <source>Welcome</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.ts</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.error.username" datatype="html">
-        <source>Please provide a valid username</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.ts</context>
-          <context context-type="linenumber">78</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.error.password" datatype="html">
-        <source>Please provide a valid password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.ts</context>
-          <context context-type="linenumber">79</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.password.placeholder" datatype="html">
-        <source>Password...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.confirmPassword.placeholder" datatype="html">
-        <source>Confirm Password...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.html</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.done.button" datatype="html">
-        <source>DONE</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.html</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.success.description" datatype="html">
-        <source>Please proceed with login</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.html</context>
-          <context context-type="linenumber">26</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.login.button" datatype="html">
-        <source>&apos;LOG IN&apos;</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.html</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.appHero" datatype="html">
-        <source>Reset password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.ts</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.error.password" datatype="html">
-        <source>Please provide a valid password (min length 6)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.ts</context>
-          <context context-type="linenumber">71</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.confirmPassword" datatype="html">
-        <source>Please provide the same value for confirm password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.ts</context>
-          <context context-type="linenumber">72</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.or.separator" datatype="html">
-        <source>or</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.username.placeholder" datatype="html">
-        <source>Username...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.email.placeholder" datatype="html">
-        <source>Email...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.password.placeholder" datatype="html">
-        <source>Password...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.confirmPassword.placeholder" datatype="html">
-        <source>Confirm Password...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">33</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.continue.button" datatype="html">
-        <source>CONTINUE</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.terms" datatype="html">
-        <source>By signing up, you agree <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS.terms}}&quot; target=&quot;_blank&quot;&gt;"/>Terms of Use<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_1" equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS.privacyPolicy}}&quot; target=&quot;_blank&quot;&gt;"/>Privacy Policy<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> and <x id="START_LINK_2" equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS.cookiePolicy}}&quot; target=&quot;_blank&quot;&gt;"/>Cookie Policy<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">40,46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.alreadyHaveAccount" datatype="html">
-        <source> Already have an account? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;URLS.login&quot; class=&quot;theme-color-link&quot;&gt;"/> Login <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">50,54</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.appHero" datatype="html">
-        <source>Register</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.ts</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.error.username" datatype="html">
-        <source>Please provide a valid username</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.ts</context>
-          <context context-type="linenumber">75</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.error.email" datatype="html">
-        <source>Please provide a valid email address</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.ts</context>
-          <context context-type="linenumber">76</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.error.password" datatype="html">
-        <source>Please provide a valid password (min length 6)</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.ts</context>
-          <context context-type="linenumber">77</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.error.confirmPassword" datatype="html">
-        <source>Please provide the same value for confirm password</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.ts</context>
-          <context context-type="linenumber">78</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="homePage.npmDownloads" datatype="html">
         <source>Npm Downloads</source>
         <context-group purpose="location">
@@ -3422,63 +3128,63 @@
         <source>Customer testimonials</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.testimonialsTitle.2" datatype="html">
         <source>What our customers are saying...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">49</context>
+          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.customersTitle.1" datatype="html">
         <source>From startups to the enterprise companies</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">53</context>
+          <context context-type="linenumber">52</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.customersTitle.2" datatype="html">
         <source>Thousands of companies in over 50 countries use Open Template Hub to start, run, and scale their businesses.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">54</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.whyUsTitle.1" datatype="html">
         <source>Why Open Template Hub?</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">58</context>
+          <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.whyUsTitle.2" datatype="html">
         <source>Just focus on your business and leave us all others</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">59</context>
+          <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.exploreTitle.1" datatype="html">
         <source>Explore our Products</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">63</context>
+          <context context-type="linenumber">62</context>
         </context-group>
       </trans-unit>
       <trans-unit id="homePage.exploreTitle.2" datatype="html">
         <source>Explore our open source and premium products to get started today.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">64</context>
+          <context context-type="linenumber">63</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productTypeTag.openSource" datatype="html">
         <source>opensource</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">155</context>
+          <context context-type="linenumber">149</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
@@ -3489,7 +3195,7 @@
         <source>premium</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
-          <context context-type="linenumber">155</context>
+          <context context-type="linenumber">149</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
@@ -3636,69 +3342,6 @@
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="signUpSuccess.appHero.1" datatype="html">
-        <source>Registration successful 🎉</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/sign-up-success-page/sign-up-success-page.component.ts</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUpSuccess.appHero.2" datatype="html">
-        <source>Verification email sent to: </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/sign-up-success-page/sign-up-success-page.component.ts</context>
-          <context context-type="linenumber">28</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.home.button" datatype="html">
-        <source>HOME</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.html</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.logIn.button" datatype="html">
-        <source>LOG IN</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.verifyAccountAppHero" datatype="html">
-        <source>Verifying account...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">28</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.accountVerificationFailedAppHero.1" datatype="html">
-        <source>Account verification failed</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.accountVerificationFailedAppHero.2" datatype="html">
-        <source>Something went wrong!</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.verifiedAppHero.1" datatype="html">
-        <source>Account verified 🎉</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.verifiedAppHero.2" datatype="html">
-        <source>Please proceed with login</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="sitemap.products" datatype="html">
         <source>Products</source>
         <context-group purpose="location">
@@ -3830,69 +3473,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
           <context context-type="linenumber">67</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="status.appHero" datatype="html">
-        <source>System Status</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/status-page/status-page.component.ts</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="editTheme.darkLightMode" datatype="html">
-        <source>Dark/Light Mode</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="d772b874823773fce02478ca7b022b44b96bcedb" datatype="html">
-        <source>Light theme</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7bfa30b6cd6b020c84efa4c554890bf49932de18" datatype="html">
-        <source>Dark theme</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5fb13fb4a8447e59cdf05dc196ade39c02a6f8aa" datatype="html">
-        <source>Auto</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="editTheme.header.color" datatype="html">
-        <source>Color</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">20</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="editTheme.header.design" datatype="html">
-        <source>Design</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">30</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="editTheme.header.default" datatype="html">
-        <source>Default</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">40</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="callback.information.success" datatype="html">
-        <source>Payment succeeded</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/splash-layout/callback-page/callback-page.component.ts</context>
-          <context context-type="linenumber">56</context>
         </context-group>
       </trans-unit>
       <trans-unit id="externalRedirect.home.button" datatype="html">

@@ -2070,14 +2070,7 @@
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="statusData.servers" datatype="html">
-        <source>servers</source>
-        <target>les serveurs</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/data/status/status.data.ts</context>
-          <context context-type="linenumber">4</context>
-        </context-group>
-      </trans-unit>
+      
       <trans-unit id="aboutUs.employeeAppHero.text" datatype="html">
         <source>Team Behind the Open Template Hub</source>
         <target>L'équipe derrière l'Open Template Hub</target>
@@ -2262,318 +2255,45 @@
           <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="forgetPasswordForm.username.placeholder" datatype="html">
-        <source>Username...</source>
-        <target>Nom d'utilisateur...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgetPasswordForm.send" datatype="html">
-        <source>SEND</source>
-        <target>ENVOYER</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.html</context>
-          <context context-type="linenumber">17</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgetPasswordForm.success.1" datatype="html">
-        <source>'Reset email sent!'</source>
-        <target>'Réinitialiser l'e-mail envoyé !'</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgetPasswordForm.success.2" datatype="html">
-        <source>'Please check you inbox'</source>
-        <target>'Veuillez vérifier votre boîte de réception '</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.html</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgetPasswordForm.logIn.button" datatype="html">
-        <source>LOG IN</source>
-        <target>CONNEXION</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.html</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="forgetPassword.appHero" datatype="html">
-        <source>Forget password</source>
-        <target>Mot de passe oublié</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.ts</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4756994323727611073" datatype="html">
-        <source>Please provide a valid username.</source>
-        <target>Veuillez fournir un nom d'utilisateur valide.</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/forget-password-page/forget-password-page.component.ts</context>
-          <context context-type="linenumber">62</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.or.separator" datatype="html">
-        <source>or</source>
-        <target>ou</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.usernameOrEmail.placeholder" datatype="html">
-        <source>Username or Email...</source>
-        <target>Nom d'utilisateur ou email...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">20</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.password.placeholder" datatype="html">
-        <source>Password...</source>
-        <target>Mot de passe...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.rememberMe" datatype="html">
-        <source>Remember Me</source>
-        <target>Souviens-toi de moi</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.loginButton" datatype="html">
-        <source>LOG IN</source>
-        <target>CONNEXION</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">36</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.dontHaveAccount" datatype="html">
-        <source>Don't have an account?</source>
-        <target>Vous n'avez pas de compte ?</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.signUp" datatype="html">
-        <source>Sign Up</source>
-        <target>S'inscrire</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">40,41</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.forgetPassword" datatype="html">
-        <source>Forget password?</source>
-        <target>Mot de passe oublié?</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.html</context>
-          <context context-type="linenumber">45,46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.appHero" datatype="html">
-        <source>Welcome</source>
-        <target>Bienvenu</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.ts</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.error.username" datatype="html">
-        <source>Please provide a valid username</source>
-        <target>Veuillez fournir un nom d'utilisateur valide</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.ts</context>
-          <context context-type="linenumber">78</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="loginPage.error.password" datatype="html">
-        <source>Please provide a valid password</source>
-        <target>Veuillez fournir un mot de passe valide</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/login-page/login-page.component.ts</context>
-          <context context-type="linenumber">79</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.password.placeholder" datatype="html">
-        <source>Password...</source>
-        <target>Mot de passe...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.html</context>
-          <context context-type="linenumber">12</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.confirmPassword.placeholder" datatype="html">
-        <source>Confirm Password...</source>
-        <target>Confirmez le mot de passe...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.html</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.done.button" datatype="html">
-        <source>DONE</source>
-        <target>TERMINÉ</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.html</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.success.description" datatype="html">
-        <source>Please proceed with login</source>
-        <target>Veuillez procéder à la connexion</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.html</context>
-          <context context-type="linenumber">26</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.login.button" datatype="html">
-        <source>'LOG IN'</source>
-        <target>'CONNEXION '</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.html</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.appHero" datatype="html">
-        <source>Reset password</source>
-        <target>Réinitialiser le mot de passe</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.ts</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.error.password" datatype="html">
-        <source>Please provide a valid password (min length 6)</source>
-        <target>Veuillez fournir un mot de passe valide (longueur min 6)</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.ts</context>
-          <context context-type="linenumber">71</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="resetPassword.confirmPassword" datatype="html">
-        <source>Please provide the same value for confirm password</source>
-        <target>Veuillez fournir la même valeur pour confirmer le mot de passe</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/reset-password-page/reset-password-page.component.ts</context>
-          <context context-type="linenumber">72</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.or.separator" datatype="html">
-        <source>or</source>
-        <target>ou</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.username.placeholder" datatype="html">
-        <source>Username...</source>
-        <target>Nom d'utilisateur...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.email.placeholder" datatype="html">
-        <source>Email...</source>
-        <target>Email...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.password.placeholder" datatype="html">
-        <source>Password...</source>
-        <target>Mot de passe...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.confirmPassword.placeholder" datatype="html">
-        <source>Confirm Password...</source>
-        <target>Confirmez le mot de passe...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">33</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.continue.button" datatype="html">
-        <source>CONTINUE</source>
-        <target>CONTINUEZ</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">38</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.terms" datatype="html">
-        <source>By signing up, you agree <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS.terms}}&quot; target=&quot;_blank&quot;&gt;"/>Terms of Use<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_1" equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS.privacyPolicy}}&quot; target=&quot;_blank&quot;&gt;"/>Privacy Policy<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> and <x id="START_LINK_2" equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS.cookiePolicy}}&quot; target=&quot;_blank&quot;&gt;"/>Cookie Policy<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <target>By signing up, you agree <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS.terms}}&quot; target=&quot;_blank&quot;&gt;"/>Terms of Use<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>, <x id="START_LINK_1" equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS.privacyPolicy}}&quot; target=&quot;_blank&quot;&gt;"/>Privacy Policy<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/> and <x id="START_LINK_2" equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS.cookiePolicy}}&quot; target=&quot;_blank&quot;&gt;"/>Cookie Policy<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">40,46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.alreadyHaveAccount" datatype="html">
-        <source>Already have an account? <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [routerLink]=&quot;URLS.login&quot; class=&quot;theme-color-link&quot;&gt;"/> Login <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <target>Vous avez déjà un compte? <x id="START_LINK" ctype="xa" equiv-text="&lt;a [routerLink]=&quot;URLS.login&quot; class=&quot;theme-color-link&quot;&gt;"/> Connexion <x id="CLOSE_LINK" ctype="xa" equiv-text="&lt;/a&gt;"/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.html</context>
-          <context context-type="linenumber">51,54</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.appHero" datatype="html">
-        <source>Register</source>
-        <target>S'inscrire</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.ts</context>
-          <context context-type="linenumber">32</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.error.username" datatype="html">
-        <source>Please provide a valid username</source>
-        <target>Veuillez fournir un nom d'utilisateur valide</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.ts</context>
-          <context context-type="linenumber">75</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.error.email" datatype="html">
-        <source>Please provide a valid email address</source>
-        <target>Veuillez fournir une adresse email valide</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.ts</context>
-          <context context-type="linenumber">76</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.error.password" datatype="html">
-        <source>Please provide a valid password (min length 6)</source>
-        <target>Veuillez fournir un mot de passe valide (longueur min 6)</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.ts</context>
-          <context context-type="linenumber">77</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUp.error.confirmPassword" datatype="html">
-        <source>Please provide the same value for confirm password</source>
-        <target>Veuillez fournir la même valeur pour confirmer le mot de passe</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/form-pages/sign-up-page/sign-up-page.component.ts</context>
-          <context context-type="linenumber">78</context>
-        </context-group>
-      </trans-unit>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <trans-unit id="homePage.oth.description" datatype="html">
         <source>Open Source first organization that helps you to minimize the effort while building a new software business with our server and UI templates</source>
         <target>Première organisation Open Source qui vous aide à minimiser les efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de serveur et d'interface utilisateur</target>
@@ -2711,78 +2431,15 @@
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="signUpSuccess.appHero.1" datatype="html">
-        <source>Registration successful 🎉</source>
-        <target>Inscription réussie 🎉</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/sign-up-success-page/sign-up-success-page.component.ts</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="signUpSuccess.appHero.2" datatype="html">
-        <source>Verification email sent to: </source>
-        <target>E-mail de vérification envoyé à : </target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/sign-up-success-page/sign-up-success-page.component.ts</context>
-          <context context-type="linenumber">28</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.home.button" datatype="html">
-        <source>HOME</source>
-        <target>DOMICILE</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.html</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.logIn.button" datatype="html">
-        <source>LOG IN</source>
-        <target>CONNEXION</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.verifyAccountAppHero" datatype="html">
-        <source>Verifying account...</source>
-        <target>Vérification du compte...</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">27</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.accountVerificationFailedAppHero.1" datatype="html">
-        <source>Account verification failed</source>
-        <target>Échec de la vérification du compte</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">30</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.accountVerificationFailedAppHero.2" datatype="html">
-        <source>Something went wrong!</source>
-        <target>Quelque chose s'est mal passé !</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">31</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.verifiedAppHero.1" datatype="html">
-        <source>Account verified 🎉</source>
-        <target>Compte vérifié 🎉</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">34</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="verifyAccount.verifiedAppHero.2" datatype="html">
-        <source>Please proceed with login</source>
-        <target>Veuillez procéder à la connexion</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/verify-account-page/verify-account-page.component.ts</context>
-          <context context-type="linenumber">35</context>
-        </context-group>
-      </trans-unit>
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <trans-unit id="sitemap.products" datatype="html">
         <source>Products</source>
         <target>Des produits</target>
@@ -2935,78 +2592,15 @@
           <context context-type="linenumber">84,85</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="status.appHero" datatype="html">
-        <source>System Status</source>
-        <target>État du système</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/status-page/status-page.component.ts</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="editTheme.darkLightMode" datatype="html">
-        <source>Dark/Light Mode</source>
-        <target>Mode sombre/clair</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">7</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="d772b874823773fce02478ca7b022b44b96bcedb" datatype="html">
-        <source>Light theme</source>
-        <target>Thème lumineux</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">11</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7bfa30b6cd6b020c84efa4c554890bf49932de18" datatype="html">
-        <source>Dark theme</source>
-        <target>Thème sombre</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5fb13fb4a8447e59cdf05dc196ade39c02a6f8aa" datatype="html">
-        <source>Auto</source>
-        <target>Auto</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="editTheme.header.color" datatype="html">
-        <source>Color</source>
-        <target>Couleur</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="editTheme.header.design" datatype="html">
-        <source>Design</source>
-        <target>Concevoir</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">29</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="editTheme.header.default" datatype="html">
-        <source>Default</source>
-        <target>Défaut</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/settings-layout/edit-theme-page/edit-theme-page.component.html</context>
-          <context context-type="linenumber">39</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="callback.information.success" datatype="html">
-        <source>Payment succeeded</source>
-        <target>Paiement réussi</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/splash-layout/callback-page/callback-page.component.ts</context>
-          <context context-type="linenumber">56</context>
-        </context-group>
-      </trans-unit>
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <trans-unit id="externalRedirect.home.button" datatype="html">
         <source>Home</source>
         <target>Accueil</target>
@@ -3144,20 +2738,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">46</context>
-        </context-group>
-      </trans-unit><trans-unit id="footer.api" datatype="html">
-        <source>API</source>
-        <target>API</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">47</context>
-        </context-group>
-      </trans-unit><trans-unit id="footer.status" datatype="html">
-        <source>Status</source>
-        <target>Statut</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
-          <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit><trans-unit id="footer.resources" datatype="html">
         <source>Resources</source>

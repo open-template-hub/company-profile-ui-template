@@ -15,6 +15,7 @@ Following packages are not updated in the develop branch yet. So, if you want to
 
 | Package             | Current   | Wanted   | Latest   | Location |
 | --- | --- | --- | --- | --- |
+| graphql             |  15.7.2   | 15.7.2   | 16.0.0   | company-profile-ui-template |
 | jsdom               |  17.0.0   | 17.0.0   | 18.0.0   | company-profile-ui-template |
 | ngx-image-cropper   |   4.0.1   |  4.0.1   |  5.0.1   | company-profile-ui-template |
 | typescript          |   4.3.5   |  4.3.5   |  4.4.4   | company-profile-ui-template |

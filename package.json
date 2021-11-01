@@ -46,7 +46,7 @@
     "countup.js": "^2.0.7",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "graphql": "^15.5.3",
+    "graphql": "^16.0.0",
     "graphql-tag": "^2.12.5",
     "helmet": "^4.6.0",
     "ics": "^2.29.0",

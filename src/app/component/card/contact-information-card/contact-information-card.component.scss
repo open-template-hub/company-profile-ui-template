@@ -1,0 +1,55 @@
+@use '../../../../styles/util/util';
+@use '../../card/card.component';
+
+.contact-information-card {
+  & .body {
+    @include util.default-padding-line;
+    @include card.default-body;
+
+    text-align: center;
+    width: 100%;
+
+    & .info-line {
+      @include util.flex-layout-row;
+      align-self: flex-start;
+      margin-top: 10px;
+
+      & .title {
+        font-weight: 500;
+        text-align: right;
+        min-width: 20px;
+      }
+
+      & .info {
+        text-align: left;
+      }
+    }
+
+    & p {
+      color: var(--color);
+      font-size: 18px;
+      margin-left: 15px;
+
+      & i {
+        color: var(--theme-color);
+        size: 16px;
+      }
+    }
+
+    & a {
+      font-size: 18px;
+      margin-left: 15px;
+      color: var(--theme-color);
+    }
+
+    & .map {
+      margin-top: 20px;
+      width: 90%;
+
+      & iframe {
+        @include util.default-border-radius;
+        @include util.default-shadow;
+      }
+    }
+  }
+}

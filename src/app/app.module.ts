@@ -90,6 +90,7 @@ import { TechStackCardComponent } from './component/card/tech-stack-card/tech-st
 import { DocHolderCardComponent } from './component/card/doc-holder-card/doc-holder-cardcomponent';
 import { DocsContentPageComponent } from './page/landing-layout/docs-page/docs-content-page/docs-content-page.component';
 import { StepTimelineCardComponent } from './component/card/timeline-card/step-timeline-card/step-timeline-card.component';
+import { ContactInformationCardComponent } from './component/card/contact-information-card/contact-information-card.component';
 
 FullCalendarModule.registerPlugins( [
   dayGridPlugin,
@@ -166,6 +167,7 @@ FullCalendarModule.registerPlugins( [
     DocHolderCardComponent,
     DocsContentPageComponent,
     StepTimelineCardComponent,
+    ContactInformationCardComponent,
   ],
   imports: [
     BrowserModule,

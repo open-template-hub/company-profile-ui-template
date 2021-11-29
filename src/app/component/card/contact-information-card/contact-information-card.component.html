@@ -1,0 +1,40 @@
+<app-card [bodyTemplate]="bodyTemplate" class="contact-information-card">
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div class="body">
+      <div class="info-line" *ngIf="CONTACT_INFO.phone">
+        <p class="title"><i class="fas fa-phone" aria-hidden="true"></i></p>
+        <a class="info" [href]="'tel:' + CONTACT_INFO.phone">{{
+          CONTACT_INFO.phone
+        }}</a>
+      </div>
+      <div class="info-line" *ngIf="CONTACT_INFO.email">
+        <p class="title"><i class="fas fa-envelope" aria-hidden="true"></i></p>
+        <a class="info" [href]="'mailto:' + CONTACT_INFO.email">{{
+          CONTACT_INFO.email
+        }}</a>
+      </div>
+      <div class="info-line" *ngIf="CONTACT_INFO.address">
+        <p class="title">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        </p>
+        <a
+          class="info"
+          [href]="CONTACT_INFO.map"
+          target="_blank"
+          >{{ CONTACT_INFO.address }}</a
+        >
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64951.63940434154!2d24.733136056753118!3d59.42075308169104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4692eb56f7499f61%3A0x9b763650c08a5bcd!2sSepapaja%206%2C%2011415%20Tallinn%2C%20Estonya!5e0!3m2!1str!2str!4v1638161808599!5m2!1str!2str"
+          title="Address Information"
+          width="100%"
+          height="150"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"></iframe>
+      </div>
+    </div>
+  </ng-template>
+</app-card>

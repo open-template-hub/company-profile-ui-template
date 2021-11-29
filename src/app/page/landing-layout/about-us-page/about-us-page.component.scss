@@ -1,7 +1,8 @@
 @use '../../../../styles/util/util';
 @use '../../../component/card/employee-card/employee-card.component';
 
-.timeline-wrapper, .websites-wrapper {
+.timeline-wrapper, .websites-wrapper,
+.contact-information-wrapper {
   @include util.flex-center-center;
 
   flex-wrap: wrap;
@@ -29,6 +30,15 @@
     }
   }
 
+  .contact-information-wrapper {
+    @include util.flex-layout-column;
+
+    & app-contact-information-card {
+      width: 94vw;
+      padding-bottom: 60px;
+    }
+  }
+
   .timeline-wrapper {
     & .timeline-hr {
       height: 120px;
@@ -50,6 +60,13 @@
 
     & .right {
       margin: 150px 41px 0;
+    }
+  }
+
+  .contact-information-wrapper {
+    @include util.flex-layout-column;
+    & app-contact-information-card {
+      width: 800px;
     }
   }
 

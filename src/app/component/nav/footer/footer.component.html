@@ -27,17 +27,8 @@
         </div>
         <div class="footer-link-group">
           <p i18n="@@footer.company">Company</p>
-          <a i18n="@@footer.about" [routerLink]="URLS.about" class="footer-link-item">
-            About
-          </a>
-          <a i18n="@@footer.customers" [routerLink]="URLS.customers" class="footer-link-item">
-            Customers
-          </a>
-          <a i18n="@@footer.partners" [routerLink]="URLS.partners" class="footer-link-item">
-            Partners
-          </a>
-          <a i18n="@@footer.branding" [routerLink]="URLS.branding" class="footer-link-item">
-            Branding
+          <a *ngFor="let companyPage of COMPANY_PAGES" [routerLink]="companyPage.url">
+            {{ companyPage.name }}
           </a>
           <app-ext-link
               [href]="environmentCommon.website.linkedin.companyUrl + '/' + environmentCommon.oth.social.linkedin + '/jobs'"

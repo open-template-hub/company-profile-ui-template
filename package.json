@@ -44,7 +44,7 @@
     "@stripe/stripe-js": "^1.21.1",
     "@types/simple-icons": "^5.21.1",
     "angular-google-tag-manager": "^1.4.4",
-    "angular-in-memory-web-api": "^0.11.0",
+    "angular-in-memory-web-api": "^0.13.0",
     "compression": "^1.7.4",
     "countup.js": "^2.0.7",
     "dotenv": "^10.0.0",

@@ -13,12 +13,10 @@ Open Template Hub - Company Profile UI Template v3
 
 Following packages are not updated in the develop branch yet. So, if you want to update outdated packages on your own risk, update the package.json and install dependencies.
 
-| Package                     | Current   | Wanted       | Latest   | Location |
+| Package           | Current   | Wanted       | Latest   | Location |
 | --- | --- | --- | --- | --- |
-| angular-in-memory-web-api   |  0.11.0   | 0.11.0       | 0.13.0   | company-profile-ui-template |
-| jsdom                       |  18.1.1   | 18.1.1       | 19.0.0   | company-profile-ui-template |
-| ng2-date-picker             |  12.0.4   | 12.0.4  13.0 | .0-rc1   | company-profile-ui-template |
-| typescript                  |   4.4.4   |  4.4.4       |  4.5.2   | company-profile-ui-template |
+| ng2-date-picker   |  12.0.4   | 12.0.4  13.0 | .0-rc1   | company-profile-ui-template |
+| typescript        |   4.4.4   |  4.4.4       |  4.5.2   | company-profile-ui-template |
 
 <table align="right"><tr><td><a href="https://opentemplatehub.com"><img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png" width="50px" alt="oth"/></a></td><td><b>Open Template Hub © 2021</b></td></tr></table>
 

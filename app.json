@@ -1,0 +1,16 @@
+{
+  "name": "company-profile-ui-template",
+  "description": "Company Profile UI Template is a modern, responsive, and customizable company profiles UI template for your business. It contains reusable components, theme color, and design support along with dark theme support.",
+  "website": "https://opentemplatehub.com/product/user-interface/company-profile-ui-template",
+  "repository": "https://github.com/open-template-hub/company-profile-ui-template",
+  "logo": "https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/ui/web-ui-logo.png",
+  "keywords": [
+    "angular",
+    "template",
+    "ui-components",
+    "angular-components",
+    "company-profile",
+    "company-ui",
+    "open-template-hub"
+  ]
+}

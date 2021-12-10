@@ -8,7 +8,7 @@ export const environmentCommon = {
       github: 'open-template-hub',
       productHunt: '@open_template_hub',
       npm: '@open-template-hub',
-      discord: 'NcZsA3k3xn'
+      discord: 'wa9hmmR'
     },
     email: 'info@opentemplatehub.com'
   },

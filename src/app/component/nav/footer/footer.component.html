@@ -27,54 +27,50 @@
         </div>
         <div class="footer-link-group">
           <p i18n="@@footer.company">Company</p>
-          <a *ngFor="let companyPage of COMPANY_PAGES" [routerLink]="companyPage.url">
-            {{ companyPage.name }}
-          </a>
-          <app-ext-link
-              [href]="environmentCommon.website.linkedin.companyUrl + '/' + environmentCommon.oth.social.linkedin + '/jobs'"
+          <ng-container *ngFor="let companyPage of COMPANY_PAGES">
+            <a *ngIf="!companyPage.isExternal" [routerLink]="companyPage.url">
+              {{ companyPage.name }}
+            </a>
+            <app-ext-link *ngIf="companyPage.isExternal"
+              [href]="companyPage.url"
               [linkClass]="'align-flex-start link'">
-          <span i18n="@@footer.jobs" body>
-            Jobs
-          </span>
-          </app-ext-link>
-          <a i18n="@@footer.blog" [routerLink]="URLS.blog" class="footer-link-item">
-            Blog
-          </a>
+              <span body>
+                {{ companyPage.name }}
+              </span>
+            </app-ext-link>
+          </ng-container>
         </div>
       </div>
       <div class="footer-link-inner-column">
         <div class="footer-link-group">
           <p i18n="@@footer.developers">Developers</p>
-          <app-ext-link [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github"
-                        [linkClass]="'align-flex-start link'">
-          <span i18n="@@footer.openSource" body>
-            Open Source
-          </span>
-          </app-ext-link>
-          <a i18n="@@footer.docs" [routerLink]="URLS.docs" class="footer-link-item">
-            Docs
-          </a>
+          <ng-container *ngFor="let developersPage of DEVELOPERS_PAGES">
+            <a *ngIf="!developersPage.isExternal" [routerLink]="developersPage.url">
+              {{ developersPage.name }}
+            </a>
+            <app-ext-link *ngIf="developersPage.isExternal"
+                          [href]="developersPage.url"
+                          [linkClass]="'align-flex-start link'">
+              <span body>
+                {{ developersPage.name }}
+              </span>
+            </app-ext-link>
+          </ng-container>
         </div>
         <div class="footer-link-group">
           <p i18n="@@footer.resources">Resources</p>
-          <a i18n="@@footer.support" [routerLink]="URLS.contactUs" class="footer-link-item">
-            Support
-          </a>
-          <a i18n="@@footer.contact" [routerLink]="URLS.contactUs" class="footer-link-item">
-            Contact
-          </a>
-          <a i18n="@@footer.termsAndConditions" [routerLink]="URLS.terms" class="footer-link-item">
-            Terms & Conditions
-          </a>
-          <a i18n="@@footer.privacy" [routerLink]="URLS.privacyPolicy" class="footer-link-item">
-            Privacy
-          </a>
-          <a i18n="@@footer.cookies" [routerLink]="URLS.cookiePolicy" class="footer-link-item">
-            Cookies
-          </a>
-          <a i18n="@@footer.sitemap" [routerLink]="URLS.sitemap" class="footer-link-item">
-            Sitemap
-          </a>
+          <ng-container *ngFor="let resourcesPage of RESOURCES_PAGES">
+            <a *ngIf="!resourcesPage.isExternal" [routerLink]="resourcesPage.url">
+              {{ resourcesPage.name }}
+            </a>
+            <app-ext-link *ngIf="resourcesPage.isExternal"
+                          [href]="resourcesPage.url"
+                          [linkClass]="'align-flex-start link'">
+              <span body>
+                {{ resourcesPage.name }}
+              </span>
+            </app-ext-link>
+          </ng-container>
         </div>
       </div>
     </div>
@@ -88,31 +84,8 @@
       <h2>Open Template Hub <span class="copyright">&#169; 2021</span></h2>
     </a>
     <div class="footer-social">
-      <app-ext-link
-          [href]="environmentCommon.website.twitter.url + '/' + environmentCommon.oth.social.twitter">
-        <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'" aria-hidden="true" body>
-        </i>
-      </app-ext-link>
-      <app-ext-link
-          [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github">
-        <i [class]="'fab fa-' + environmentCommon.website.github.cssClass + ' fa-2x fa-fw'" aria-hidden="true" body>
-        </i>
-      </app-ext-link>
-      <app-ext-link
-          [href]="environmentCommon.website.productHunt.url + '/' + environmentCommon.oth.social.productHunt">
-        <i [class]="'fab fa-' + environmentCommon.website.productHunt.cssClass + ' fa-2x fa-fw'" aria-hidden="true"
-           body>
-        </i>
-      </app-ext-link>
-      <app-ext-link
-          [href]="environmentCommon.website.linkedin.companyUrl + '/' + environmentCommon.oth.social.linkedin">
-        <i [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-2x fa-fw'" aria-hidden="true" body>
-        </i>
-      </app-ext-link>
-      <app-ext-link
-        [href]="environmentCommon.website.discord.companyUrl + '/' + environmentCommon.oth.social.discord">
-        <i [class]="'fab fa-' + environmentCommon.website.discord.cssClass + ' fa-2x fa-fw'" aria-hidden="true" body>
-        </i>
+      <app-ext-link *ngFor="let brandPage of BRAND_PAGES" [href]="brandPage.url">
+        <i [class]="'fab fa-' + brandPage.icon + ' fa-2x fa-fw'" aria-hidden="true" body></i>
       </app-ext-link>
     </div>
     <div class="footer-right-element">

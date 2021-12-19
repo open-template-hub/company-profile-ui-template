@@ -2,6 +2,9 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
 import { COMPANY_PAGES } from '../../../data/company/company.data';
+import { DEVELOPERS_PAGES } from '../../../data/developers/developers.data';
+import { RESOURCES_PAGES } from '../../../data/resources/resources.data';
+import { BRAND_PAGES } from '../../../data/brand-pages/brand-pages.data';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
 import { BRAND } from '../../../data/brand/brand.data';
@@ -27,6 +30,9 @@ export class FooterComponent {
   BRAND = BRAND;
   URLS = URLS;
   COMPANY_PAGES = COMPANY_PAGES
+  DEVELOPERS_PAGES = DEVELOPERS_PAGES
+  RESOURCES_PAGES = RESOURCES_PAGES
+  BRAND_PAGES = BRAND_PAGES
 
   POWERED_BY_LIGHT = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-light-mode.min.png';
   POWERED_BY_DARK = 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/badge/powered-by-dark-mode.min.png';

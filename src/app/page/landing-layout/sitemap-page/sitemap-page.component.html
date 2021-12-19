@@ -38,13 +38,17 @@
               <div class="title">
                 <p i18n="@@sitemap.company">Company</p>
               </div>
-              <a i18n="@@sitemap.about" [routerLink]="URLS.about" class="link-item">About</a>
-              <a i18n="@@sitemap.customers" [routerLink]="URLS.maintenance" class="link-item">Customers</a>
-              <a i18n="@@sitemap.enterprise" [routerLink]="URLS.maintenance" class="link-item">Enterprise</a>
-              <a i18n="@@sitemap.partners" [routerLink]="URLS.maintenance" class="link-item">Partners</a>
-              <a i18n="@@sitemap.branding" [routerLink]="URLS.branding" class="link-item">Branding</a>
-              <a i18n="@@sitemap.jobs" [routerLink]="URLS.maintenance" class="link-item">Jobs</a>
-              <a i18n="@@sitemap.blog" [routerLink]="URLS.maintenance" class="link-item">Blog</a>
+              <ng-container *ngFor="let companyPage of COMPANY_PAGES">
+                <a *ngIf="!companyPage.isExternal" [routerLink]="companyPage.url" class="link-item">
+                  {{ companyPage.name }}
+                </a>
+                <app-ext-link *ngIf="companyPage.isExternal" [href]="companyPage.url" class="link-item"
+                              [linkClass]="'align-flex-start link'">
+                <span body>
+                  {{ companyPage.name }}
+                </span>
+                </app-ext-link>
+              </ng-container>
             </div>
           </div>
           <div class="link-inner-column">
@@ -52,12 +56,33 @@
               <div class="title">
                 <p i18n="@@sitemap.developers">Developers</p>
               </div>
-              <a i18n="@@sitemap.docs" [routerLink]="URLS.maintenance" class="link-item">Docs</a>
+              <ng-container *ngFor="let developersPage of DEVELOPERS_PAGES">
+                <a *ngIf="!developersPage.isExternal" [routerLink]="developersPage.url" class="link-item">
+                  {{ developersPage.name }}
+                </a>
+                <app-ext-link *ngIf="developersPage.isExternal" [href]="developersPage.url" class="link-item"
+                              [linkClass]="'align-flex-start link'">
+                  <span body>
+                    {{ developersPage.name }}
+                  </span>
+                </app-ext-link>
+              </ng-container>
             </div>
             <div class="link-group">
               <div class="title">
                 <p i18n="@@sitemap.resources">Resources</p>
               </div>
+              <ng-container *ngFor="let resourcesPage of RESOURCES_PAGES">
+                <a *ngIf="!resourcesPage.isExternal" [routerLink]="resourcesPage.url" class="link-item">
+                  {{ resourcesPage.name }}
+                </a>
+                <app-ext-link *ngIf="resourcesPage.isExternal" [href]="resourcesPage.url" class="link-item"
+                              [linkClass]="'link'">
+                <span body>
+                  {{ resourcesPage.name }}
+                </span>
+                </app-ext-link>
+              </ng-container>
               <a i18n="@@sitemap.support" [routerLink]="URLS.maintenance" class="link-item">Support</a>
               <a i18n="@@sitemap.contactUs" [routerLink]="URLS.contactUs" class="link-item">Contact</a>
               <a i18n="@@sitemap.termsAndConditions" [routerLink]="URLS.terms" class="link-item">Terms & Conditions</a>

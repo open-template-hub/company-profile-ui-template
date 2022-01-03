@@ -15,8 +15,10 @@ Following packages are not updated in the develop branch yet. So, if you want to
 
 | Package | Current | Wanted | Latest | Location |
 | --- | --- | --- | --- | --- |
-| @types/node | 16.11.17 | 16.11.17 | 17.0.5 | company-profile-ui-template |
-| ng2-date-picker | 12.0.4 | 12.0.4 | 13.0.0 | company-profile-ui-template |
+| @types/node | 16.11.17 | 16.11.17 | 17.0.6 | company-profile-ui-template |
+| helmet | 4.6.0 | 4.6.0 | 5.0.0 | company-profile-ui-template |
+| jasmine-core | 3.99.0 | 3.99.0 | 4.0.0 | company-profile-ui-template |
+| ng2-date-picker | 12.0.4 | 12.0.4 | 13.1.0 | company-profile-ui-template |
 | typescript | 4.4.4 | 4.4.4 | 4.5.4 | company-profile-ui-template |
 
 <table align="right"><tr><td><a href="https://opentemplatehub.com"><img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png" width="50px" alt="oth"/></a></td><td><b>Open Template Hub © 2021</b></td></tr></table>

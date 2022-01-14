@@ -2,7 +2,6 @@ import { CommandType } from 'src/app/data/command-type/command-type.enum';
 import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
 import { ProductLine } from '../../model/product/product.model';
-import { URLS } from '../navigation/navigation.data';
 import { PRODUCT_RIBBONS } from '../ribbon/ribbon.data';
 import { TECH_STACK } from '../tech-stack/tech-stack.data';
 import { ThemeColorSettings } from '../theme/theme.data';
@@ -226,11 +225,20 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'sms-server-template',
         name: 'Sms Server',
-        color: ThemeColorSettings.gray,
-        description: $localize`:@@productLinesData.smsServerTemplate.description:Coming soon..`,
-        url: URLS.maintenance,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/product-logo-question.min.png',
-        openSource: true
+        description: $localize`:@@productLinesData.smsServerTemplate.description:SMS Server Template is a generic open source sms server that has simple yet powerful design to connect your business with third party sms service providers (like Twillio or AWS SNS).`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'sms-server-template',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/sms-server-logo.min.png',
+        openSource: true,
+        features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
+        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        integrations: environment.sms,
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.node,
+          TECH_STACK.express,
+          TECH_STACK.heroku,
+          TECH_STACK.npm
+        ]
       }
     ],
   },
@@ -413,9 +421,9 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
         ],
         steps: [
-          { text: 'Package Installation', level: 1},
-          { text: 'Open the terminal and type:\nnpm install -g @open-template-hub/server-generator', level: 2},
-          { text: 'Package Usage', level: 1},
+          { text: 'Package Installation', level: 1 },
+          { text: 'Open the terminal and type:\nnpm install -g @open-template-hub/server-generator', level: 2 },
+          { text: 'Package Usage', level: 1 },
           {
             text: 'Go to the directory on terminal where you want to generate the project and type:\n$ cd PATH', level: 2
           },
@@ -468,9 +476,9 @@ export const PRODUCT_LINES: ProductLine[] = [
           },
         ],
         steps: [
-          { text: 'Package Installation', level: 1},
-          { text: 'Open the terminal and type:\nnpm install -g @open-template-hub/app-generator', level: 2},
-          { text: 'Package Usage', level: 1},
+          { text: 'Package Installation', level: 1 },
+          { text: 'Open the terminal and type:\nnpm install -g @open-template-hub/app-generator', level: 2 },
+          { text: 'Package Usage', level: 1 },
           {
             text: 'Go to the directory on terminal where you want to generate the project and type:\n$ cd PATH', level: 2
           },

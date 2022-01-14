@@ -129,6 +129,20 @@ export const environmentCommon = {
       tag: environment.mail.outlook.tag,
     },
 
+    // sms
+    twillio: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/twillio.png',
+      cssClass: 'twillio',
+      url: 'https://www.twilio.com',
+      tag: environment.sms.twillio.tag,
+    },
+    awsSns: {
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/aws-sns.png',
+      cssClass: 'aws',
+      url: 'https://aws.amazon.com',
+      tag: environment.sms.awsSns.tag,
+    },
+
     // analytics
     googleAnalytics: {
       logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/google-analytics.png',

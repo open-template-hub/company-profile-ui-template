@@ -3,6 +3,7 @@ import { FileStorageModel } from '../file-storage/file-storage.model';
 import { MailModel } from '../mail/mail.model';
 import { OauthModel } from '../oauth/oauth.model';
 import { PaymentModel } from '../payment/payment.model';
+import { SmsModel } from '../sms/sms.model';
 
 export interface EnvironmentModel {
   identity: 'local' | 'staging' | 'production';
@@ -37,6 +38,11 @@ export interface EnvironmentModel {
     gmail: MailModel
     yahoo: MailModel
     outlook: MailModel
+  };
+
+  sms: {
+    twillio: SmsModel
+    awsSns: SmsModel
   };
 
   analytics: {

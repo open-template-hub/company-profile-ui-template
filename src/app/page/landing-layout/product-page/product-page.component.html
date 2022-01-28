@@ -17,11 +17,17 @@
             <p>{{ product.description }}</p>
             <div *ngIf="product.openSource" class="button-wrapper">
               <app-brand-button
-                (click)="redirect(this.product.url)"
+                (click)="redirect(product.url)"
                 [icon]="environmentCommon.website.github.cssClass"
                 i18n-text="@@productPage.openSource.button"
                 text="Open Source">
               </app-brand-button>
+
+              <app-button *ngIf="product.urlDemo"
+                  (click)="redirect(product.urlDemo)"
+                  i18n-text="@@productPage.demo.button"
+                  text="Demo">
+              </app-button>
 
               <app-button
                 *ngIf="productLineKey !== 'generator'"
@@ -31,7 +37,7 @@
               </app-button>
               <app-brand-button
                 *ngIf="productLineKey === 'generator'"
-                (click)="redirect(this.product.urlAlter)"
+                (click)="redirect(product.urlAlter)"
                 [icon]="environmentCommon.website.npm.cssClass"
                 i18n-text="@@productPage.downloadPackage.button"
                 text="Download Package">

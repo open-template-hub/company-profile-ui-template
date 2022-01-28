@@ -16,6 +16,7 @@ export interface Product {
   color?: string;
   url: string;
   urlAlter?: string;
+  urlDemo?: string;
   logo: string;
   video?: Video;
   demonstrationImg?: Image;

@@ -131,6 +131,10 @@ export class ProductPageComponent implements OnInit, OnDestroy {
     window.open( url, '_blank' );
   }
 
+  open ( url: string) {
+    window.location.href = url;
+  }
+
   getContactUsButtonText( productLineKey ) {
     return productLineKey === 'services'
       ? $localize `:@@productPage.contactUs.button:Contact Us`

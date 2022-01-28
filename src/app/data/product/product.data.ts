@@ -2,6 +2,7 @@ import { CommandType } from 'src/app/data/command-type/command-type.enum';
 import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
 import { ProductLine } from '../../model/product/product.model';
+import { URLS } from '../navigation/navigation.data';
 import { PRODUCT_RIBBONS } from '../ribbon/ribbon.data';
 import { TECH_STACK } from '../tech-stack/tech-stack.data';
 import { ThemeColorSettings } from '../theme/theme.data';
@@ -371,6 +372,15 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.npm
         ]
       },
+      {
+        key: 'admin-ui-template',
+        name: 'Admin UI',
+        color: ThemeColorSettings.gray,
+        description: $localize`:@@productLinesData.adminUITemplate.description:Coming soon..`,
+        url: URLS.maintenance,
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/product-logo-question.min.png',
+        openSource: true
+      }
     ],
   },
   {

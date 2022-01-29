@@ -51,6 +51,11 @@ app-dropdown-menu i {
 .top-nav a i {
   font-size: 24px;
   margin-left: 0.05em;
+
+  &.caret {
+    font-size: 18px;
+    margin-left: 0.25em;
+  }
 }
 
 @media only screen and (max-width: 999px) {

@@ -298,7 +298,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         name: 'Web UI',
         description: $localize`:@@userInterfaces.webUITemplate.description:Web UI Template is modern, responsive and customisable web ui template for your business. It contains reusable components, theme color and design support along with dark theme support.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'web-ui-template',
-        urlDemo: 'https:/web.opentemplatehub.com',
+        urlDemo: 'https://web.opentemplatehub.com',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/web-ui-video-1.mp4',

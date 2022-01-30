@@ -29,20 +29,15 @@
 }
 
 .button {
-  // Include
   @include default-button;
 
-  // Position
   position: relative;
 
-  // Design
   border: none;
   cursor: pointer;
 
-  // Aligning
   vertical-align: text-bottom;
 
-  // Font
   font-weight: 300;
   font-size: 14px;
 
@@ -78,7 +73,6 @@
     background-color: transparent;
   }
 
-  // Borders
   $border-colors: (
       "theme-color": var(--theme-color),
       "lighter-contrast": var(--lighter-contrast)
@@ -89,7 +83,6 @@
     }
   }
 
-  // Font Colors
   $font-colors: (
       "theme-color": var(--theme-color),
       "lighter-contrast": var(--lighter-contrast),
@@ -101,7 +94,6 @@
     }
   }
 
-  // Background Colors
   $background-colors: (
       "theme-color-lighter-4": var(--theme-color-lighter-4)
   );
@@ -111,7 +103,6 @@
     }
   }
 
-  // Shadows
   &.selected-button-shadow {
     @include selected-button-shadow;
   }
@@ -120,12 +111,10 @@
     box-shadow: initial;
   }
 
-  // Cursor
   &.cursor-not-allowed {
     cursor: not-allowed;
   }
 
-  // Dark Light Themes
   &.disable-dark-mode {
     color: var(--contrast-light-mode);
     background-color: var(--color-light-mode);

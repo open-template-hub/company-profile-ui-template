@@ -1,11 +1,8 @@
 @use 'color/color.theme';
 @use 'design/design.theme';
 
-// This is the class to change default theme
+/* This is the class to change default theme */
 .default-theme {
-  // color
   @extend .green-theme;
-
-  // design
   @extend .round-theme;
 }

@@ -104,10 +104,8 @@ hr {
   & td img {
     @include util.default-border-radius-image;
 
-    // Color
     background-color: var(--card);
 
-    // Design
     border: 2px solid var(--shadow-lighter);
     box-shadow: 0 -6px 15px -7px var(--shadow);
   }

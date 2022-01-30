@@ -4,7 +4,7 @@
 </app-dropdown-menu>
 <nav class="bottom-nav">
   <a (click)="closeSettings()" *ngIf="openSettings" href="javascript:void(0)">
-    <i aria-hidden="true" class="material-icons">arrow_back_ios</i>
+    <i [class]="'fas fa-chevron-left fa-fw'" aria-hidden="true"></i>
     <span> Back </span>
   </a>
   <a
@@ -27,7 +27,7 @@
       (click)="openSettings = !openSettings"
       *ngIf="!openSettings"
       href="javascript:void(0)">
-    <i aria-hidden="true" class="material-icons">arrow_forward_ios</i>
+    <i [class]="'fas fa-chevron-right fa-fw'" aria-hidden="true"></i>
     <span> More </span>
   </a>
   <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"

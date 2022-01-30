@@ -8,18 +8,18 @@
 @use 'gray.color.theme';
 
 :root {
-  // [LIGHT MODE DEFINITIONS BEGIN]
-  // color scale
+  /* [LIGHT MODE DEFINITIONS BEGIN] */
+  /* color scale */
   --lighter-light-mode: #757575;
   --color-light-mode: #545454;
   --darker-light-mode: #2b2b2b;
 
-  // contra color scale
+  /* contra color scale */
   --darker-contrast-light-mode: #efefef;
   --contrast-light-mode: #e0e0e0;
   --lighter-contrast-light-mode: #b4b4b4;
 
-  // background
+  /* background */
   --background-color-light-mode: #fefefe;
   --background-color-alpha-light-mode: rgba(255, 255, 255, 0.93);
   --card-light-mode: #ffffff;
@@ -31,20 +31,20 @@
 
   --cropper-overlay-color-light-mode: var(--card-light-mode);
   --cropper-outline-color-light-mode: rgba(254, 255, 254, 0.7);
-  // [LIGHT MODE END]
+  /* [LIGHT MODE END] */
 
-  // [DARK MODE DEFINITIONS BEGIN]
-  // color scale
+  /* [DARK MODE DEFINITIONS BEGIN] */
+  /* color scale */
   --lighter-dark-mode: #cfcfcf;
   --color-dark-mode: #e0e0e0;
   --darker-dark-mode: #f0f0f0;
 
-  // contra color scale
+  /* contra color scale */
   --darker-contrast-dark-mode: #2b2b2b;
   --contrast-dark-mode: #424242;
   --lighter-contrast-dark-mode: #797979;
 
-  // background
+  /* background */
   --background-color-dark-mode: #353535;
   --background-color-alpha-dark-mode: rgba(53, 53, 53, 0.93);
   --card-dark-mode: #343434;
@@ -55,21 +55,21 @@
 
   --cropper-overlay-color-dark-mode: var(--card-dark-mode);
   --cropper-outline-color-dark-mode: rgba(53, 55, 53, 0.5);
-  // [DARK MODE END]
+  /* [DARK MODE END] */
 }
 
 :root, :root .light-theme {
-  // color scale
+  /* color scale */
   --lighter: var(--lighter-light-mode);
   --color: var(--color-light-mode);
   --darker: var(--darker-light-mode);
 
-  // contra color scale
+  /* contra color scale */
   --darker-contrast: var(--darker-contrast-light-mode);
   --contrast: var(--contrast-light-mode);
   --lighter-contrast: var(--lighter-contrast-light-mode);
 
-  // background
+  /* background */
   --background-color: var(--background-color-light-mode);
   --background-color-alpha: var(--background-color-alpha-light-mode);
   --card: var(--card-light-mode);
@@ -86,17 +86,17 @@
 }
 
 @mixin theme-general-dark-mode {
-  // color scale
+  /* color scale */
   --lighter: var(--lighter-dark-mode);
   --color: var(--color-dark-mode);
   --darker: var(--darker-dark-mode);
 
-  // contra color scale
+  /* contra color scale */
   --darker-contrast: var(--darker-contrast-dark-mode);
   --contrast: var(--contrast-dark-mode);
   --lighter-contrast: var(--lighter-contrast-dark-mode);
 
-  // background
+  /* background */
   --background-color: var(--background-color-dark-mode);
   --background-color-alpha: var(--background-color-alpha-dark-mode);
   --card: var(--card-dark-mode);

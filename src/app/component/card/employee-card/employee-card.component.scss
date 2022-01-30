@@ -3,7 +3,6 @@
 
 .employee-card {
   & .header {
-    // Design
     margin-top: -50px;
     text-align: center;
     align-self: center;
@@ -12,10 +11,8 @@
       @include util.margin-x-auto;
       @include util.default-border-radius-image;
 
-      // Color
       background-color: var(--card);
 
-      // Design
       border: 2px solid var(--shadow-lighter);
       box-shadow: 0 -6px 15px -7px var(--shadow);
       width: 120px;
@@ -29,12 +26,10 @@
 
     justify-content: flex-start;
 
-    // Design
     min-height: 265px;
     padding: 10px 20px 20px;
 
     & .name {
-      // Design
       font: {
         size: 21px;
         weight: 500;
@@ -42,18 +37,14 @@
     }
 
     & .title {
-      // Color
       color: var(--lighter-contrast);
 
-      // Design
       font-size: 18px;
     }
 
     & .bio {
-      // Color
       color: var(--lighter);
 
-      // Design
       font-size: 17px;
       margin-top: 10px;
       text-overflow: ellipsis;
@@ -67,15 +58,12 @@
     @include util.flex-layout-row;
 
     & i {
-      // Color
       color: var(--theme-color-lighter-6);
 
-      // Design
       margin: 0 3px;
       font-size: 27px;
 
       &:hover {
-        // Color
         color: var(--theme-color);
       }
     }

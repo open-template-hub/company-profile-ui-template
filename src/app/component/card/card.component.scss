@@ -15,7 +15,6 @@
 }
 
 @mixin default-header {
-  // Include
   @include util.flex-center-center;
   @include util.flex-layout-column;
   @include util.margin-x-auto;
@@ -24,22 +23,18 @@
 
   box-sizing: border-box;
 
-  // Position
   z-index: 10;
 
-  // Design
   overflow: hidden;
   width: 100%;
   padding: 15px 0;
 }
 
 @mixin default-body {
-  // Include
   @include util.flex-center-center;
   @include util.flex-layout-column;
   @include util.margin-x-auto;
 
-  // Design
   box-sizing: border-box;
   min-height: 180px;
 }
@@ -49,7 +44,6 @@
   @include util.flex-layout-column;
   @include util.margin-x-auto;
 
-  // Design
   box-sizing: border-box;
   width: 100%;
   min-height: 70px;
@@ -67,30 +61,24 @@
   @include util.default-border-radius;
   @include util.default-height-bottom-line;
 
-  // Position
   position: absolute;
   z-index: 9;
   bottom: 0;
   right: 0;
 
-  // Color
   background-color: var(--darker-contrast);
 
-  // Design
   overflow: hidden;
   width: 100%;
 }
 
 .card {
-  // Include
   @include util.flex-layout-column;
   @include default-card;
   @include util.default-border-radius;
 
-  // Position
   position: relative;
 
-  // Color
   color: var(--contrast);
 
   & .header {

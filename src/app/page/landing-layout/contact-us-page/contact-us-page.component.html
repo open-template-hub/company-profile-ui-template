@@ -103,7 +103,7 @@
   <div *ngIf="features" class="features-area">
     <h3 class="header">{{ features.title }}</h3>
     <div *ngFor="let feature of features.features">
-      <i aria-hidden="true" class="material-icons">check</i>
+      <i [class]="'fas fa-check fa-fw'" aria-hidden="true"></i>
       <h4>{{ feature }}</h4>
     </div>
   </div>

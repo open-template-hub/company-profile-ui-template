@@ -6,13 +6,11 @@
   font-size: 0.85rem;
 
   & .header {
-    // Design
     padding-top: 35px;
 
     & h4 {
       letter-spacing: 0.6em;
 
-      // Design
       text-align: center;
     }
 
@@ -65,7 +63,6 @@
   & .body {
     @include card.default-body;
 
-    // Design
     min-height: 140px;
     margin-top: 20px;
     margin-bottom: 40px;

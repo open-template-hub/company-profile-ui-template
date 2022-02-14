@@ -202,6 +202,24 @@ export const PRODUCT_LINES: ProductLine[] = [
         ]
       },
       {
+        key: 'sms-server-template',
+        name: 'Sms Server',
+        description: $localize`:@@productLinesData.smsServerTemplate.description:SMS Server Template is a generic open source sms server that has simple yet powerful design to connect your business with third party sms service providers (like Twillio or AWS SNS).`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'sms-server-template',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/sms-server-logo.min.png',
+        openSource: true,
+        features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
+        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        integrations: environment.sms,
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.node,
+          TECH_STACK.express,
+          TECH_STACK.heroku,
+          TECH_STACK.npm
+        ]
+      },
+      {
         key: 'business-logic-server-template',
         name: 'Business Logic Server',
         description: $localize`:@@productLinesData.businessLogicServerTemplate.description:Business Logic Server Template is a generic open source server that encodes the real-world business rules that determine how data can be created, stored, and changed. It saves you from rewriting boilerplate code. It works best with other Open Template Hub products.`,
@@ -219,24 +237,6 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.node,
           TECH_STACK.express,
           TECH_STACK.mongoDb,
-          TECH_STACK.heroku,
-          TECH_STACK.npm
-        ]
-      },
-      {
-        key: 'sms-server-template',
-        name: 'Sms Server',
-        description: $localize`:@@productLinesData.smsServerTemplate.description:SMS Server Template is a generic open source sms server that has simple yet powerful design to connect your business with third party sms service providers (like Twillio or AWS SNS).`,
-        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'sms-server-template',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/sms-server-logo.min.png',
-        openSource: true,
-        features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
-        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
-        integrations: environment.sms,
-        techStack: [
-          TECH_STACK.typeScript,
-          TECH_STACK.node,
-          TECH_STACK.express,
           TECH_STACK.heroku,
           TECH_STACK.npm
         ]
@@ -374,10 +374,10 @@ export const PRODUCT_LINES: ProductLine[] = [
         ]
       },
       {
-        key: 'admin-ui-template',
-        name: 'Admin UI',
+        key: 'content-management-ui-template',
+        name: 'Content Management UI',
         color: ThemeColorSettings.gray,
-        description: $localize`:@@productLinesData.adminUITemplate.description:Coming soon..`,
+        description: $localize`:@@productLinesData.contentManagementUITemplate.description:Coming soon..`,
         url: URLS.maintenance,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/product-logo-question.min.png',
         openSource: true
@@ -546,8 +546,8 @@ export const PRODUCT_LINES: ProductLine[] = [
         ],
         pricingOptions: [
           {
-            title: $localize`:@@premium.orchestrationServer.basic.title:Basic`,
-            description: $localize`:@@premium.orchestrationServer.basic.description:For Individuals`,
+            title: $localize`:@@premium.orchestrationServerTemplate.basic.title:Basic`,
+            description: $localize`:@@premium.orchestrationServerTemplate.basic.description:For Individuals`,
             features: [ [ 'true', '', '' ], [ '', '' ], [ '', '' ] ],
             price: {
               currency: '$',
@@ -556,17 +556,17 @@ export const PRODUCT_LINES: ProductLine[] = [
             },
           },
           {
-            title: $localize`:@@premium.orchestrationServer.standard.title:Standard`,
-            description: $localize`:@@premium.orchestrationServer.standard.description:For Startups`,
+            title: $localize`:@@premium.orchestrationServerTemplate.standard.title:Standard`,
+            description: $localize`:@@premium.orchestrationServerTemplate.standard.description:For Startups`,
             ribbon: PRODUCT_RIBBONS.get( 'deal' ),
             contactRequired: true,
-            features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`:@@premium.orchestrationServer.standard.feature.1:Up to 10 users`, '' ] ]
+            features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`:@@premium.orchestrationServerTemplate.standard.feature.1:Up to 10 users`, '' ] ]
           },
           {
-            title: $localize`:@@premium.orchestrationServer.enterprise.title:Enterprise`,
-            description: $localize`:@@premium.orchestrationServer.enterprise.description:For Enterprises`,
+            title: $localize`:@@premium.orchestrationServerTemplate.enterprise.title:Enterprise`,
+            description: $localize`:@@premium.orchestrationServerTemplate.enterprise.description:For Enterprises`,
             contactRequired: true,
-            features: [ [ 'true', 'true', 'true' ], [ 'true', 'true' ], [ $localize`:@@premium.orchestrationServer.enterprise.feature.1:Unlimited users`, 'true' ] ]
+            features: [ [ 'true', 'true', 'true' ], [ 'true', 'true' ], [ $localize`:@@premium.orchestrationServerTemplate.enterprise.feature.1:Unlimited users`, 'true' ] ]
           },
         ],
         techStack: [
@@ -577,6 +577,15 @@ export const PRODUCT_LINES: ProductLine[] = [
           TECH_STACK.npm
         ]
       },
+      {
+        key: 'cloud-integration-server-template',
+        name: 'Cloud Integration Server',
+        color: ThemeColorSettings.gray,
+        description: $localize`:@@productLinesData.cloudIntegrationServerTemplate.description:Coming soon..`,
+        url: URLS.maintenance,
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/product-logo-question.min.png',
+        openSource: true
+      }
     ],
   },
 ];

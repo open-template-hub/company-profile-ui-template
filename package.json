@@ -40,7 +40,6 @@
     "@fullcalendar/angular": "^5.10.2",
     "@fullcalendar/daygrid": "^5.10.1",
     "@fullcalendar/interaction": "^5.10.1",
-    "@ng-toolkit/universal": "^8.1.0",
     "@stripe/stripe-js": "^1.22.0",
     "@types/simple-icons": "^5.21.1",
     "angular-google-tag-manager": "^1.5.0",

@@ -126,7 +126,7 @@ const routes: Routes = [
     component: SplashLayoutComponent,
     children: [ { path: '', component: ExternalRedirectPageComponent } ],
   },
-  // otherwise redirect to error
+  // otherwise, redirect to error
   { path: '**', redirectTo: NAVIGATIONS.notFound.url },
 ];
 

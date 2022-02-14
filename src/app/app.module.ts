@@ -11,7 +11,6 @@ import { FullCalendarModule } from '@fullcalendar/angular'; // must go before pl
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
-import { TooltipModule } from 'ng2-tooltip-directive';
 import { MarkdownModule } from 'ngx-markdown';
 import { ToastrModule } from 'ngx-toastr';
 import { SwiperModule } from 'swiper/angular';
@@ -173,7 +172,6 @@ FullCalendarModule.registerPlugins( [
     HttpClientModule,
     BrowserAnimationsModule,
     LayoutModule,
-    TooltipModule,
     FormsModule,
     BrowserModule,
     FullCalendarModule,

@@ -177,6 +177,12 @@ export const NAVIGATIONS = {
     description: BRAND.name + $localize`:@@navigationData.analyticsServerTemplate.description:: Analytics Server Template`,
     keywords: [ BRAND.name, 'oth', 'Analytics Server Template' ],
   },
+  smsServerTemplate: {
+    url: 'sms-server-template',
+    title: 'SMS Server Template - ' + BRAND.name,
+    description: BRAND.name + $localize`:@@navigationData.smsServerTemplate.description:: SMS Server Template`,
+    keywords: [ BRAND.name, 'oth', 'SMS Server Template' ],
+  },
   businessLogicServerTemplate: {
     url: 'business-logic-server-template',
     title: 'Business Logic Server Template - ' + BRAND.name,

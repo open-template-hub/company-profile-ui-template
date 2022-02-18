@@ -38,6 +38,7 @@ export interface EnvironmentModel {
     gmail: MailModel
     yahoo: MailModel
     outlook: MailModel
+    yandex: MailModel
   };
 
   sms: {

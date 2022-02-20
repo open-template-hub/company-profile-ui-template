@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
-          ref: develop
+          ref: master
 
       - name: Install Node
         uses: actions/setup-node@v1

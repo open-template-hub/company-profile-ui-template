@@ -42,8 +42,14 @@ jobs:
           token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
           ref: develop
 
+      - name: Install Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
       - name: Run version-generator.ts
         run: |
+          npm install
           node src/version-generator.ts > ./src/version.ts
 
       - name: Git Commit and Push

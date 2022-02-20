@@ -4,7 +4,7 @@ on:
   push:
     paths-ignore:
       - 'package.json'
-      - 'src/environments/version.ts'
+      - 'src/version.ts'
     branches:
       - 'master'
 

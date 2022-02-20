@@ -189,9 +189,9 @@ Refer to **[CODE_OF_CONDUCT.md](https://github.com/open-template-hub/.github/blo
 
 <br/>
 
+
 ## LICENSE
 
 The source code for this project is released under the [MIT License](LICENSE).
-
 
 <table align="right"><tr><td><a href="https://opentemplatehub.com"><img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png" width="50px" alt="oth"/></a></td><td><b>Open Template Hub © 2021</b></td></tr></table>

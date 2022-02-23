@@ -374,12 +374,12 @@ export const PRODUCT_LINES: ProductLine[] = [
         ]
       },
       {
-        key: 'content-management-ui-template',
-        name: 'Content Management UI',
+        key: 'admin-ui-template',
+        name: 'Admin UI',
         color: ThemeColorSettings.gray,
-        description: $localize`:@@productLinesData.contentManagementUITemplate.description:Coming soon..`,
+        description: $localize`:@@productLinesData.adminUITemplate.description:Coming soon..`,
         url: URLS.maintenance,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/product-logo-question.min.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/admin-ui-logo.min.png',
         openSource: true
       }
     ],
@@ -583,7 +583,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         color: ThemeColorSettings.gray,
         description: $localize`:@@productLinesData.cloudIntegrationServerTemplate.description:Coming soon..`,
         url: URLS.maintenance,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/product-logo-question.min.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/cloud-integration-server-logo.min.png',
         openSource: true
       }
     ],

@@ -81,6 +81,7 @@
           [secondaryText]="product.description"
           [src]="product.logo"
           [title]="product.name"
+          [maintenance]="product.url === URLS.maintenance"
           class="related-product">
       </app-presentation-card>
     </ng-container>

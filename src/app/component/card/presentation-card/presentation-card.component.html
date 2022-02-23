@@ -4,7 +4,9 @@
   <ng-template #headerTemplate>
     <div class="header">
       <div class="presentation-item-content">
-        <img *ngIf="src" [height]="imgHeight" [src]="src" alt="logo">
+        <img *ngIf="src" [height]="imgHeight" [src]="src"
+             [class.logo-under-maintenance]="maintenance"
+             alt="logo">
         <p>{{ title }}</p>
       </div>
     </div>

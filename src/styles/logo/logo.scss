@@ -11,6 +11,10 @@
   }
 }
 
+.logo-under-maintenance {
+  filter: grayscale(100%);
+}
+
 @media only screen and (max-width: 999px) {
   .logo-wrapper > * {
     margin: 0.2em;

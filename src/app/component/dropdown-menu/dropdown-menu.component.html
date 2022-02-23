@@ -46,6 +46,7 @@
               [src]="product.logo"
               alt="logo"
               class="dropdown-item-logo"
+              [class.logo-under-maintenance] = "product.url === URLS.maintenance"
               height="55"/>
 
           <div class="dropdown-item-content">

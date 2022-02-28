@@ -72,9 +72,6 @@ export const environment: EnvironmentModel = {
     },
     outlook: {
       tag: 'OUTLOOK_LOCAL'
-    },
-    yandex: {
-      tag: 'YANDEX_LOCAL'
     }
   },
 

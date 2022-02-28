@@ -162,14 +162,6 @@ export const environmentCommon: EnvironmentCommonModel = {
       tag: environment.mail.outlook.tag,
       websiteType: 'mail'
     },
-    yandex: {
-      name: 'Yandex',
-      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/yandex.png',
-      cssClass: 'yandex',
-      url: 'https://yandex.com',
-      tag: environment.mail.yandex.tag,
-      websiteType: 'mail'
-    },
 
     // sms
     twillio: {

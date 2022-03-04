@@ -260,11 +260,11 @@ export const PRODUCT_LINES: ProductLine[] = [
         },
         screenshots: [
           {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-light.min.png',
             description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.1:Responsive Design`
           },
           {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-dark.min.png',
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/company-profile-ui-demo-dark.min.png',
             description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.2:Dark Mode Support`
           },
           {

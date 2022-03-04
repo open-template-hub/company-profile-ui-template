@@ -35,12 +35,12 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   ];
 
   relatedProductAppHero = [
-    { text: $localize `:@@productPage.relatedProductAppHero:Related Products`, level: 2 }
-  ]
+    { text: $localize`:@@productPage.relatedProductAppHero:Related Products`, level: 2 }
+  ];
 
   npmPackageInstallationAndUsage = [
-    { text: $localize `:@@productPage.npmPackageInstallationAndUsage:Package Installation & Usage`, level: 2 }
-  ]
+    { text: $localize`:@@productPage.npmPackageInstallationAndUsage:Package Installation & Usage`, level: 2 }
+  ];
 
   constructor(
       private route: ActivatedRoute,
@@ -92,7 +92,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
         return;
       }
 
-      if (product.url === URLS.maintenance) {
+      if ( product.url === URLS.maintenance ) {
         this.productService.setSelectedProduct( undefined );
         this.router.navigate( [ URLS.maintenance ] );
         return;
@@ -108,15 +108,15 @@ export class ProductPageComponent implements OnInit, OnDestroy {
           this.isOpenSource = false;
           console.error( 'Error while getting Github Counters for product: ', product.key, error );
         } );
-      }
 
-      this.githubService.getCommitHistory( product.key )
-      .then( commitActivities => {
-        this.commitActivities = commitActivities;
-      } )
-      .catch( error => {
-        console.error( 'Error while getting Github CommitHistory for product: ', product.key, error );
-      } );
+        this.githubService.getCommitHistory( product.key )
+        .then( commitActivities => {
+          this.commitActivities = commitActivities;
+        } )
+        .catch( error => {
+          console.error( 'Error while getting Github CommitHistory for product: ', product.key, error );
+        } );
+      }
 
       this.product = product;
       this.productService.setSelectedProduct( this.product );
@@ -133,11 +133,11 @@ export class ProductPageComponent implements OnInit, OnDestroy {
 
   getContactUsButtonText( productLineKey ) {
     return productLineKey === 'services'
-      ? $localize `:@@productPage.contactUs.button:Contact Us`
-      : $localize `:@@productPage.requestForDemo.button:Request for Demo`
+        ? $localize`:@@productPage.contactUs.button:Contact Us`
+        : $localize`:@@productPage.requestForDemo.button:Request for Demo`;
   }
 
-  getPresentationCardFooter(isOpenSource: boolean): string {
-    return isOpenSource ? $localize`:@@productTypeTag.openSource:opensource` : $localize`:@@productTypeTag.premium:premium`
+  getPresentationCardFooter( isOpenSource: boolean ): string {
+    return isOpenSource ? $localize`:@@productTypeTag.openSource:opensource` : $localize`:@@productTypeTag.premium:premium`;
   }
 }

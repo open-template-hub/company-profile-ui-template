@@ -10,6 +10,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction';
+import { HeroModule } from '@open-template-hub/hero';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { MarkdownModule } from 'ngx-markdown';
 import { ToastrModule } from 'ngx-toastr';
@@ -52,7 +53,6 @@ import { SharpTopSvgComponent } from './component/design/top-svg/sharp-top-svg/s
 import { TopSvgComponent } from './component/design/top-svg/top-svg.component';
 import { DropdownMenuComponent } from './component/dropdown-menu/dropdown-menu.component';
 import { ExtLinkComponent } from './component/ext-link/ext-link.component';
-import { HeroComponent } from './component/hero/hero.component';
 import { LedComponent } from './component/led/led.component';
 import { BottomNavComponent } from './component/nav/bottom-nav/bottom-nav.component';
 import { FooterComponent } from './component/nav/footer/footer.component';
@@ -132,7 +132,6 @@ FullCalendarModule.registerPlugins( [
     InformationButtonComponent,
     BrandingPageComponent,
     PresentationCardComponent,
-    HeroComponent,
     EventButtonComponent,
     ActivityHistoryCardComponent,
     ContentLoaderComponent,
@@ -176,6 +175,7 @@ FullCalendarModule.registerPlugins( [
     BrowserModule,
     FullCalendarModule,
     SwiperModule,
+    HeroModule,
     ToastrModule.forRoot( { preventDuplicates: true } ),
     MarkdownModule.forRoot( { loader: HttpClient } ),
     GoogleTagManagerModule.forRoot( { id: environment.analytics.googleAnalytics.tag } ),

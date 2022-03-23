@@ -3,6 +3,8 @@ import { environment } from './environment';
 
 export const environmentCommon: EnvironmentCommonModel = {
   oth: {
+    website: 'https://opentemplatehub.com',
+    email: 'info@opentemplatehub.com',
     social: {
       twitter: 'opentemplatehub',
       linkedin: 'open-template-hub',
@@ -10,8 +12,7 @@ export const environmentCommon: EnvironmentCommonModel = {
       productHunt: '@open_template_hub',
       npm: '@open-template-hub',
       discord: 'wa9hmmR'
-    },
-    email: 'info@opentemplatehub.com'
+    }
   },
 
   website: {

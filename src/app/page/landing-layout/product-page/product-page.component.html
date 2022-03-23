@@ -106,7 +106,7 @@
       <!-- Todo: Show something related with services instead of price plan -->
 
       <!-- Testimonials -->
-      <app-hero [contents]="testimonialsTitle"></app-hero>
+      <oth-hero [contents]="testimonialsTitle"></oth-hero>
       <div class="cards-wrapper">
         <app-testimonial-card
           *ngFor="let testimonial of TESTIMONIALS"
@@ -128,7 +128,7 @@
     <ng-container *ngSwitchCase="'generator'" [ngSwitch]="product.key">
       <!-- Step Timeline -->
       <ng-container *ngIf="product.steps">
-        <app-hero [contents]="npmPackageInstallationAndUsage"></app-hero>
+        <oth-hero [contents]="npmPackageInstallationAndUsage"></oth-hero>
         <div class="timeline-wrapper">
           <ng-container *ngFor="let step of product.steps; index as i">
             <app-step-timeline-card
@@ -160,13 +160,13 @@
 
   <!-- Tech Stack -->
   <ng-container *ngIf="product.techStack">
-    <app-hero [contents]="[{ text: 'Tech Stack', level: 2 }]"></app-hero>
+    <oth-hero [contents]="[{ text: 'Tech Stack', level: 2 }]"></oth-hero>
     <app-tech-stack-card [techStack]="product.techStack"></app-tech-stack-card>
   </ng-container>
 
   <!-- Related Products -->
   <ng-container *ngIf="productLineKey !== 'services'">
-    <app-hero [contents]="[{ text: 'Related Products', level: 2 }]"></app-hero>
+    <oth-hero [contents]="[{ text: 'Related Products', level: 2 }]"></oth-hero>
     <div class="flexible-cards-wrapper">
       <ng-container *ngFor="let productLine of PRODUCT_LINES">
         <ng-container

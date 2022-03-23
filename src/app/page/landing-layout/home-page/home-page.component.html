@@ -40,7 +40,7 @@
 </div>
 
 <!-- Testimonials -->
-<app-hero [contents]="testimonialsTitle"></app-hero>
+<oth-hero [contents]="testimonialsTitle"></oth-hero>
 <div class="cards-wrapper">
   <app-testimonial-card
       *ngFor="let testimonial of TESTIMONIALS"
@@ -52,14 +52,14 @@
 </div>
 
 <!-- Customers -->
-<app-hero [contents]="customersTitle"></app-hero>
+<oth-hero [contents]="customersTitle"></oth-hero>
 <div class="customers-wrapper">
   <app-business-partner-swiper [partners]="PARTNERS">
   </app-business-partner-swiper>
 </div>
 
 <!-- Why Us -->
-<app-hero [contents]="whyUsTitle"></app-hero>
+<oth-hero [contents]="whyUsTitle"></oth-hero>
 <div class="cards-wrapper">
   <app-feature-card
       *ngFor="let feature of FEATURES"
@@ -68,15 +68,36 @@
 </div>
 
 <!-- Explore -->
-<app-hero [contents]="exploreTitle"></app-hero>
+<oth-hero [contents]="exploreTitle"></oth-hero>
 <ng-container *ngFor="let productLine of PRODUCT_LINES">
-  <app-hero [contents]="[{ text: productLine.name, level: 3 }]" [heroClass]="'no-padding'"></app-hero>
+  <oth-hero [contents]="[{ text: productLine.name, level: 3 }]" [heroClass]="'no-padding'"></oth-hero>
   <div class="cards-wrapper">
     <ng-container *ngFor="let product of productLine.products">
       <app-presentation-card
           [class]="product.color ? product.color : ''"
           [footerText]=getPresentationCardFooter(product.openSource)
           [href]="URLS.product + '/' + productLine.key + '/' + product.key"
+          [imgHeight]="150"
+          [secondaryText]="product.description"
+          [src]="product.logo"
+          [title]="product.name"
+          [maintenance]="product.url === URLS.maintenance"
+          class="related-product">
+      </app-presentation-card>
+    </ng-container>
+  </div>
+</ng-container>
+
+<!-- And More -->
+<oth-hero [contents]="andMoreTitle"></oth-hero>
+<ng-container *ngFor="let productLine of LIBRARIES">
+  <oth-hero [contents]="[{ text: productLine.name, level: 3 }]" [heroClass]="'no-padding'"></oth-hero>
+  <div class="cards-wrapper">
+    <ng-container *ngFor="let product of productLine.products">
+      <app-presentation-card
+          [class]="product.color ? product.color : ''"
+          [footerText]=getPresentationCardFooter(product.openSource)
+          [href]="product.url"
           [imgHeight]="150"
           [secondaryText]="product.description"
           [src]="product.logo"

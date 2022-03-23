@@ -1,5 +1,5 @@
 <!-- Employees -->
-<app-hero [contents]="employeeAppHeroContents"></app-hero>
+<oth-hero [contents]="employeeAppHeroContents"></oth-hero>
 <div class="employees-wrapper">
   <ng-container *ngFor="let employee of EMPLOYEES; last as isLast">
     <hr *ngIf="isLast"/>
@@ -8,8 +8,8 @@
 </div>
 
 <!-- Follow Us -->
-<app-hero [contents]="followUsAppHeroContents">
-</app-hero>
+<oth-hero [contents]="followUsAppHeroContents">
+</oth-hero>
 <div class="websites-wrapper">
   <ng-container *ngFor="let website of websites">
     <app-brand-button (click)="redirect(website.url + '/' + website.handle)" [icon]="website.cssClass"
@@ -19,15 +19,15 @@
 </div>
 
 <!-- Contact Information -->
-<app-hero [contents]="contactInformationAppHeroContents">
-</app-hero>
+<oth-hero [contents]="contactInformationAppHeroContents">
+</oth-hero>
 <div class="contact-information-wrapper">
     <app-contact-information-card></app-contact-information-card>
 </div>
 
 <!-- History of Us -->
-<app-hero [contents]="historyOfUsAppHeroContents">
-</app-hero>
+<oth-hero [contents]="historyOfUsAppHeroContents">
+</oth-hero>
 <div class="timeline-wrapper">
   <ng-container *ngFor="let timelineItem of OTH_TIME_LINE; index as i">
     <app-timeline-card [arrow]="i % 2 === 0 ? 'left' : 'right'" [class.left]="i % 2 === 0"

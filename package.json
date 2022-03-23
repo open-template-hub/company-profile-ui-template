@@ -1,7 +1,7 @@
 {
   "name": "company-profile-ui-template",
   "description": "Company Profile UI Template is a modern, responsive, and customizable company profiles UI template for your business. It contains reusable components, theme color, and design support along with dark theme support.",
-  "version": "3.3.25",
+  "version": "3.3.26",
   "license": "MIT",
   "scripts": {
     "buildLocal": "ng build --configuration=local --localize",
@@ -26,6 +26,7 @@
     "serve:local:fr": "ng serve -c=fr"
   },
   "dependencies": {
+    "@open-template-hub/hero": "0.0.5",
     "@angular/animations": "^13.2.6",
     "@angular/cdk": "^13.2.6",
     "@angular/common": "^13.2.6",

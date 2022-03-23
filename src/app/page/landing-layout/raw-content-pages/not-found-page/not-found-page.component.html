@@ -4,8 +4,7 @@
   </div>
 
   <!-- 404 Page not found -->
-  <app-hero [contents]="appHeroContents"
-            [heroClass]="'no-padding'"></app-hero>
+  <oth-hero [contents]="appHeroContents" [heroClass]="'no-padding'"></oth-hero>
   <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.error"
                           i18n-text="@@notFound.home.button" text="HOME"></app-information-button>
 </div>

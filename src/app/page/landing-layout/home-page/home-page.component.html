@@ -40,7 +40,7 @@
 </div>
 
 <!-- Testimonials -->
-<app-hero [contents]="testimonialsTitle"></app-hero>
+<oth-hero [contents]="testimonialsTitle"></oth-hero>
 <div class="cards-wrapper">
   <app-testimonial-card
       *ngFor="let testimonial of TESTIMONIALS"
@@ -52,14 +52,14 @@
 </div>
 
 <!-- Customers -->
-<app-hero [contents]="customersTitle"></app-hero>
+<oth-hero [contents]="customersTitle"></oth-hero>
 <div class="customers-wrapper">
   <app-business-partner-swiper [partners]="PARTNERS">
   </app-business-partner-swiper>
 </div>
 
 <!-- Why Us -->
-<app-hero [contents]="whyUsTitle"></app-hero>
+<oth-hero [contents]="whyUsTitle"></oth-hero>
 <div class="cards-wrapper">
   <app-feature-card
       *ngFor="let feature of FEATURES"
@@ -68,9 +68,9 @@
 </div>
 
 <!-- Explore -->
-<app-hero [contents]="exploreTitle"></app-hero>
+<oth-hero [contents]="exploreTitle"></oth-hero>
 <ng-container *ngFor="let productLine of PRODUCT_LINES">
-  <app-hero [contents]="[{ text: productLine.name, level: 3 }]" [heroClass]="'no-padding'"></app-hero>
+  <oth-hero [contents]="[{ text: productLine.name, level: 3 }]" [heroClass]="'no-padding'"></oth-hero>
   <div class="cards-wrapper">
     <ng-container *ngFor="let product of productLine.products">
       <app-presentation-card

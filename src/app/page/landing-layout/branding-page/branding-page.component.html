@@ -1,6 +1,6 @@
 <div class="raw-content-page-layout">
   <!-- Brand Resources -->
-  <app-hero [contents]="[{text: 'Brand Resources', level: 1}]"></app-hero>
+  <oth-hero [contents]="[{text: 'Brand Resources', level: 1}]"></oth-hero>
   <app-policy-card [policyBody]="body">
     <!-- Body -->
     <ng-template #body>
@@ -49,7 +49,7 @@
   </app-policy-card>
 
   <!-- Color Palette -->
-  <app-hero [contents]="[{text: 'Color Palette', level: 2}]"></app-hero>
+  <oth-hero [contents]="[{text: 'Color Palette', level: 2}]"></oth-hero>
   <div class="branding-resources-wrapper">
     <app-asset-card
         [href]="colorPalette.brandColor ? externalColorInfoUrl + colorPalette.brandColor.substring(1, colorPalette.brandColor.length) : ''"
@@ -72,7 +72,7 @@
   </div>
 
   <!-- Logos -->
-  <app-hero [contents]="[{text: 'Logos', level: 2}]"></app-hero>
+  <oth-hero [contents]="[{text: 'Logos', level: 2}]"></oth-hero>
   <div class="branding-resources-wrapper">
     <app-asset-card [href]="BRAND.logo.main.replace('min/', '').replace('.min', '')"
                     [assetItemClass]="'logo-item'"
@@ -84,7 +84,7 @@
   </div>
 
   <!-- Other Assets -->
-  <app-hero [contents]="[{text: 'Other Assets', level: 2},{text: 'Badges', level: 2}]"></app-hero>
+  <oth-hero [contents]="[{text: 'Other Assets', level: 2},{text: 'Badges', level: 2}]"></oth-hero>
 
   <!-- Badges -->
   <div class="branding-resources-wrapper">
@@ -98,7 +98,7 @@
   </div>
 
   <!-- Wallpapers -->
-  <app-hero [contents]="[{text: 'Wallpapers', level: 2}]"></app-hero>
+  <oth-hero [contents]="[{text: 'Wallpapers', level: 2}]"></oth-hero>
   <div class="branding-resources-wrapper">
     <ng-container *ngFor="let wallpaper of BRAND.wallpapers; index as i">
       <app-asset-card [href]="wallpaper.replace('min/', '').replace('.min', '')" [imgHeight]="400"

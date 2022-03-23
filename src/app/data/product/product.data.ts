@@ -603,7 +603,8 @@ export const LIBRARIES: ProductLine[] = [
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'common',
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'common',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
-        openSource: true
+        openSource: true,
+        redirectToUrl: true
       },
     ],
   },
@@ -619,7 +620,8 @@ export const LIBRARIES: ProductLine[] = [
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'hero',
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'hero',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
-        openSource: true
+        openSource: true,
+        redirectToUrl: true
       },
     ],
   },

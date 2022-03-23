@@ -1,6 +1,6 @@
 <div class="dropdown">
   <div #toggleButton class="ng-content-area">
-    <ng-content (click)="toggleDropdown()"></ng-content>
+    <ng-content></ng-content>
   </div>
 
   <div
@@ -34,18 +34,18 @@
           <hr/>
         </div>
 
-        <a (click)="closeDropDownInternal()"
+        <a (click)="closeDropDownInternal(product, productLine)"
            *ngFor="let product of productLine.products; last as isLast; first as isFirst"
            [class]="product.color ? product.color : ''"
-           [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
            class="dropdown-item">
-          <app-image-content-loader *ngIf="!product.imageLoaded" [imageContentLoaderClass]="'dropdown-item'"></app-image-content-loader>
+          <app-image-content-loader *ngIf="!product.imageLoaded"
+                                    [imageContentLoaderClass]="'dropdown-item'"></app-image-content-loader>
           <img
               (load)="setImageLoaded(product)"
               [src]="product.logo"
               alt="logo"
               class="dropdown-item-logo"
-              [class.logo-under-maintenance] = "product.url === URLS.maintenance"
+              [class.logo-under-maintenance]="product.url === URLS.maintenance"
               height="55"/>
 
           <div class="dropdown-item-content">

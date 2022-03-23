@@ -32,6 +32,7 @@ export interface Product {
   imageLoaded?: boolean;
   techStack?: Image[];
   integrations?: any;
+  redirectToUrl?: boolean;
 }
 
 export interface ProductLine {

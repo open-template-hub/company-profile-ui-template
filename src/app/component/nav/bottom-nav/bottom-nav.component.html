@@ -1,51 +1,56 @@
 <app-dropdown-menu #dropdownMenuProducts [productLines]="PRODUCT_LINES">
 </app-dropdown-menu>
+<app-dropdown-menu #dropdownMenuLibraries [productLines]="LIBRARIES">
+</app-dropdown-menu>
 <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES">
 </app-dropdown-menu>
 <nav class="bottom-nav">
-  <a (click)="closeSettings()" *ngIf="openSettings" href="javascript:void(0)">
+  <a (click)="pageTwoOpened = false;" *ngIf="pageTwoOpened" href="javascript:void(0)">
     <i [class]="'fas fa-chevron-left fa-fw'" aria-hidden="true"></i>
     <span> Back </span>
   </a>
   <a
       (click)="
-      dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
-      *ngIf="!openSettings"
+      dropdownMenuProducts.closeDropdown(); closeDropdowns([dropdownMenuProducts, dropdownMenuLibraries, dropdownMenuServices])"
+      *ngIf="!pageTwoOpened"
       [routerLink]="URLS.root">
     <i [class]="'fas fa-home fa-fw'" aria-hidden="true"></i>
     <span> Home </span>
   </a>
-  <a (click)="dropdownMenuProducts.toggleDropdown(); dropdownMenuServices.closeDropdown()" *ngIf="!openSettings">
+  <a (click)="dropdownMenuProducts.toggleDropdown(); closeDropdowns([dropdownMenuLibraries, dropdownMenuServices])"
+     *ngIf="!pageTwoOpened">
     <i [class]="'fas fa-server fa-fw'" aria-hidden="true"></i>
     <span> Products </span>
   </a>
-  <a (click)="dropdownMenuServices.toggleDropdown(); dropdownMenuProducts.closeDropdown()" *ngIf="!openSettings">
+  <a (click)="dropdownMenuLibraries.toggleDropdown(); closeDropdowns([dropdownMenuProducts, dropdownMenuServices])"
+     *ngIf="!pageTwoOpened">
+    <i [class]="'fas fa-folder-open fa-fw'" aria-hidden="true"></i>
+    <span> Libraries </span>
+  </a>
+  <a (click)="dropdownMenuServices.toggleDropdown(); closeDropdowns([dropdownMenuProducts, dropdownMenuLibraries])"
+     *ngIf="pageTwoOpened">
     <i [class]="'fas fa-handshake fa-fw'" aria-hidden="true"></i>
     <span> Services </span>
   </a>
   <a
-      (click)="openSettings = !openSettings"
-      *ngIf="!openSettings"
+      (click)="pageTwoOpened = !pageTwoOpened"
+      *ngIf="!pageTwoOpened"
       href="javascript:void(0)">
     <i [class]="'fas fa-chevron-right fa-fw'" aria-hidden="true"></i>
     <span> More </span>
   </a>
-  <a (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
-     *ngIf="openSettings && !openOtherSettings"
+  <a (click)="closeDropdowns([dropdownMenuProducts, dropdownMenuLibraries, dropdownMenuServices])"
+     *ngIf="pageTwoOpened"
      [routerLink]="URLS.about">
     <i [class]="'fas fa-address-card fa-fw'" aria-hidden="true"></i>
     <span> About </span>
   </a>
   <a
-      (click)="dropdownMenuProducts.closeDropdown(); dropdownMenuServices.closeDropdown()"
-      *ngIf="openSettings && !openOtherSettings"
+      (click)="closeDropdowns([dropdownMenuProducts, dropdownMenuLibraries, dropdownMenuServices])"
+      *ngIf="pageTwoOpened"
       [routerLink]="URLS.contactUs"
       class="contact">
     <i [class]="'fas fa-envelope fa-fw'" aria-hidden="true"></i>
     <span> Contact Us </span>
-  </a>
-  <a
-      *ngIf="openSettings && !openOtherSettings"
-      class="non-clickable">
   </a>
 </nav>

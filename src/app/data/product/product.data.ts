@@ -587,6 +587,41 @@ export const PRODUCT_LINES: ProductLine[] = [
         openSource: true
       }
     ],
+  }
+];
+
+export const LIBRARIES: ProductLine[] = [
+  {
+    key: 'backend',
+    name: 'Backend Libraries',
+    description: `Libraries for Server Templates on Open Template Hub`,
+    products: [
+      {
+        key: 'common',
+        name: 'Common',
+        description: `This library contains common functionalities for Server Templates on Open Template Hub`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'common',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'common',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        openSource: true
+      },
+    ],
+  },
+  {
+    key: 'frontend',
+    name: 'User Interface Libraries',
+    description: `Libraries for UI Templates on Open Template Hub`,
+    products: [
+      {
+        key: 'hero',
+        name: 'Hero',
+        description: `This library contains hero ui component for UI Templates on Open Template Hub`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'hero',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'hero',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        openSource: true
+      },
+    ],
   },
 ];
 

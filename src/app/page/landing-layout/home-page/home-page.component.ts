@@ -12,7 +12,7 @@ import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { BRAND } from '../../../data/brand/brand.data';
 import { URLS } from '../../../data/navigation/navigation.data';
-import { PRODUCT_LINES } from '../../../data/product/product.data';
+import { LIBRARIES, PRODUCT_LINES } from '../../../data/product/product.data';
 import { Partner } from '../../../model/partner/partner.model';
 
 @Component( {
@@ -30,6 +30,7 @@ export class HomePageComponent implements AfterViewInit {
   BRAND = BRAND;
   URLS = URLS;
   PRODUCT_LINES = PRODUCT_LINES;
+  LIBRARIES = LIBRARIES;
 
   // Todo: Change this with customers
   PARTNERS: Partner[] = PARTNERS;
@@ -61,6 +62,11 @@ export class HomePageComponent implements AfterViewInit {
   exploreTitle = [
     { text: $localize`:@@homePage.exploreTitle.1:Explore our Products`, level: 2 },
     { text: $localize`:@@homePage.exploreTitle.2:Explore our open source and premium products to get started today.` }
+  ];
+
+  andMoreTitle = [
+    { text: `And more..`, level: 2 },
+    { text: `Start using our open source libraries today.` }
   ];
 
   constructor(

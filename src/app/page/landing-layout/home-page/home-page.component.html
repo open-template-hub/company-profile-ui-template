@@ -88,4 +88,25 @@
   </div>
 </ng-container>
 
+<!-- And More -->
+<oth-hero [contents]="andMoreTitle"></oth-hero>
+<ng-container *ngFor="let productLine of LIBRARIES">
+  <oth-hero [contents]="[{ text: productLine.name, level: 3 }]" [heroClass]="'no-padding'"></oth-hero>
+  <div class="cards-wrapper">
+    <ng-container *ngFor="let product of productLine.products">
+      <app-presentation-card
+          [class]="product.color ? product.color : ''"
+          [footerText]=getPresentationCardFooter(product.openSource)
+          [href]="product.url"
+          [imgHeight]="150"
+          [secondaryText]="product.description"
+          [src]="product.logo"
+          [title]="product.name"
+          [maintenance]="product.url === URLS.maintenance"
+          class="related-product">
+      </app-presentation-card>
+    </ng-container>
+  </div>
+</ng-container>
+
 <app-cookies></app-cookies>

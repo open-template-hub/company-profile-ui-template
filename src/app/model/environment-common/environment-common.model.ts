@@ -2,6 +2,8 @@ import { WebsiteModel } from '../website/website.model';
 
 export interface EnvironmentCommonModel {
   oth: {
+    website: string,
+    email: string,
     social: {
       twitter: string,
       linkedin: string,
@@ -9,8 +11,7 @@ export interface EnvironmentCommonModel {
       productHunt: string,
       npm: string,
       discord: string
-    },
-    email: string
+    }
   },
 
   website: {

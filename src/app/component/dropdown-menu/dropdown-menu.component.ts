@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, Input, ViewChild, } from '@angular/core';
+import { Router } from '@angular/router';
 import { URLS } from '../../data/navigation/navigation.data';
 import { Product, ProductLine } from '../../model/product/product.model';
 import { UtilService } from '../../service/util/util.service';
@@ -14,7 +15,7 @@ export class DropdownMenuComponent {
   @Input() isDropdownOpen = false;
   @Input() minimumColumns = 1;
   @Input() minimumRows = 6;
-  @Input() dropdownParent: ElementRef = null;
+  @Input() dropdownParent: HTMLElement = null;
 
   calculatedColumns;
   calculatedRows;
@@ -26,7 +27,7 @@ export class DropdownMenuComponent {
   @ViewChild( 'toggleButton' ) toggleButton: ElementRef;
   @ViewChild( 'dropdownContent' ) dropdownContent: ElementRef;
 
-  constructor( private utilService: UtilService ) {
+  constructor( private utilService: UtilService, private router: Router ) {
     this.calculatedColumns = this.minimumColumns;
     this.calculatedRows = this.minimumRows;
   }
@@ -71,7 +72,7 @@ export class DropdownMenuComponent {
 
   @HostListener( 'document:mouseover', [ '$event' ] )
   onHover( event ) {
-    if ( this.dropdownParent?.nativeElement === undefined &&
+    if ( this.dropdownParent !== undefined &&
         !this.utilService.isSmallScreen() &&
         !(
             this.toggleButton?.nativeElement?.contains( event.target ) ||
@@ -95,18 +96,31 @@ export class DropdownMenuComponent {
     this.closeDropdownInternalClicked = false;
   }
 
-  closeDropDownInternal() {
+  closeDropDownInternal( product?: Product, productLine?: ProductLine ) {
     this.closeDropdownInternalClicked = true;
+    if ( product && productLine ) {
+      this.redirect( product, productLine );
+    }
     this.utilService.delay( 500 ).then( () => {
       this.closeDropdown();
     } );
   }
 
   getProductLineMaxHeight() {
-    if (this.utilService.isSmallScreen() || this.calculatedRows >= this.minimumRows) {
+    if ( this.utilService.isSmallScreen() || this.calculatedRows >= this.minimumRows ) {
       return '';
     }
 
     return 'max-height: ' + ( 60 + 150 * this.calculatedRows + 1 ) + 'px;';
+  }
+
+  redirect( product: Product, productLine: ProductLine ) {
+    if ( !product.redirectToUrl ) {
+      this.router.navigate( [ URLS.product + '/' + productLine.key + '/' + product.key ] ).then( () => {
+        return true;
+      } );
+    } else {
+      window.open( product.url, '_blank' );
+    }
   }
 }

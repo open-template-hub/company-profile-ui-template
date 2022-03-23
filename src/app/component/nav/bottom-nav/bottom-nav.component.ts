@@ -1,9 +1,10 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
+import { LIBRARIES, PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
 import { URLS } from '../../../data/navigation/navigation.data';
 import { ProductLine } from '../../../model/product/product.model';
 import { LoadingService } from '../../../service/loading/loading.service';
+import { DropdownMenuComponent } from '../../dropdown-menu/dropdown-menu.component';
 
 @Component( {
   selector: 'app-bottom-nav',
@@ -12,13 +13,13 @@ import { LoadingService } from '../../../service/loading/loading.service';
 } )
 export class BottomNavComponent {
   loading = false;
-  openSettings = false;
-  openOtherSettings = false;
+  pageTwoOpened = false;
 
   URLS = URLS;
 
   PRODUCT_LINES: ProductLine[] = PRODUCT_LINES;
   SERVICES: ProductLine[] = SERVICES;
+  LIBRARIES: ProductLine[] = LIBRARIES;
 
   @ViewChild( 'dropdownMenuProducts' ) dropdownMenuProducts: ElementRef;
   @ViewChild( 'dropdownMenuServices' ) dropdownMenuServices: ElementRef;
@@ -30,11 +31,7 @@ export class BottomNavComponent {
     this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
   }
 
-  closeSettings() {
-    if ( this.openOtherSettings ) {
-      this.openOtherSettings = false;
-    } else {
-      this.openSettings = false;
-    }
+  closeDropdowns( dropdownMenus: DropdownMenuComponent[] ) {
+    dropdownMenus.forEach( dropdownMenu => dropdownMenu.closeDropdown() );
   }
 }

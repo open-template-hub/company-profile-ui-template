@@ -26,9 +26,18 @@ jobs:
       - name: Build
         run: npm run buildProd
 
-      - name: Git Commit and Push
+      - name: Check for Changes
         run: |
-          git config --global user.email "furknyavuz@gmail.com"
-          git config --global user.name "Furkan Yavuz"
+          if git diff --exit-code; then
+            echo "changes_exist=false" >> $GITHUB_ENV
+          else
+            echo "changes_exist=true" >> $GITHUB_ENV
+          fi
+
+      - name: Git Commit and Push
+        if: ${{ env.changes_exist == 'true' }}
+        run: |
+          git config --global user.email "98660390+oth-service-user@users.noreply.github.com"
+          git config --global user.name "OTH Service User"
           git commit -am "Workflow/dependency check"
           git push

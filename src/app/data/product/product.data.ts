@@ -583,8 +583,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         color: ThemeColorSettings.gray,
         description: $localize`:@@productLinesData.cloudIntegrationServerTemplate.description:Coming soon..`,
         url: URLS.maintenance,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/cloud-integration-server-logo.min.png',
-        openSource: true
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/cloud-integration-server-logo.min.png'
       }
     ],
   }

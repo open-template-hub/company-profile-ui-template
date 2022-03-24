@@ -19,6 +19,18 @@ export class GithubProviderService {
     // Intentionally blank
   }
 
+  getGithubStars = async ( productKey: string ) => {
+    const uri = `${ environmentCommon.website.github.api.repo }/${ environmentCommon.oth.social.github }/${ productKey }`;
+
+    const response = await this.util.corsRequest( uri );
+    if ( response != null ) {
+      const json = JSON.parse( response as string );
+      return { productKey, count: json.stargazers_count ? json.stargazers_count : 0 };
+    } else {
+      return { productKey, count: 0 };
+    }
+  };
+
   getGithubCounters = async ( productKey: string ) => {
     const uri = `${ environmentCommon.website.github.api.repo }/${ environmentCommon.oth.social.github }/${ productKey }`;
 

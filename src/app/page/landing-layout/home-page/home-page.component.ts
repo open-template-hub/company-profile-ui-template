@@ -2,6 +2,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CountUp } from 'countup.js';
+import { forkJoin } from 'rxjs';
 import { FEATURES } from 'src/app/data/feature/feature.data';
 import { PARTNERS } from 'src/app/data/partner/partner.data';
 import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
@@ -14,6 +15,7 @@ import { BRAND } from '../../../data/brand/brand.data';
 import { URLS } from '../../../data/navigation/navigation.data';
 import { LIBRARIES, PRODUCT_LINES } from '../../../data/product/product.data';
 import { Partner } from '../../../model/partner/partner.model';
+import { GithubProviderService } from '../../../service/provider/github-provider.service';
 
 @Component( {
   selector: 'app-home-page',
@@ -22,7 +24,7 @@ import { Partner } from '../../../model/partner/partner.model';
 } )
 export class HomePageComponent implements AfterViewInit {
   npmDownloadCounter = { count: 0, id: 'npmDownloadCounterElement' };
-  productTypesCounter = { count: 0, id: 'productTypesCounterElement' };
+  totalStarsCounter = { count: 0, id: 'totalStarsCounterElement' };
   openSourceRatioCounter = { count: 0, id: 'openSourceRatioCounterElement' };
   npmCounterLoading = true;
   brandLogoLoaded = false;
@@ -72,7 +74,8 @@ export class HomePageComponent implements AfterViewInit {
   constructor(
       private formBuilder: FormBuilder,
       public router: Router,
-      private npmProviderService: NpmProviderService
+      private npmProviderService: NpmProviderService,
+      private githubService: GithubProviderService
   ) {
   }
 
@@ -110,23 +113,40 @@ export class HomePageComponent implements AfterViewInit {
       this.startCounter( options, this.npmDownloadCounter );
     } );
 
-    this.productTypesCounter.count = 0;
-    this.openSourceRatioCounter.count = 0;
-    for ( const productLine of PRODUCT_LINES ) {
-      if ( productLine.key === 'generator' ) {
-        continue;
-      }
-      this.productTypesCounter.count += productLine.products.length;
+    this.totalStarsCounter.count = 0;
 
-      for ( const product of productLine.products ) {
-        if ( product.openSource ) {
-          this.openSourceRatioCounter.count++;
+    let totalProducts = 0;
+
+    this.openSourceRatioCounter.count = 0;
+
+    const promises: Promise<any>[] = [];
+    for ( const system of [ PRODUCT_LINES, LIBRARIES ] ) {
+
+      for ( const productLine of system ) {
+
+        totalProducts += productLine.products.length;
+
+        for ( const product of productLine.products ) {
+          if ( product.url !== URLS.maintenance && product.openSource ) {
+            promises.push( this.githubService.getGithubStars( product.key ) );
+          }
+
+          if ( product.openSource ) {
+            this.openSourceRatioCounter.count++;
+          }
         }
       }
     }
-    this.openSourceRatioCounter.count = ( this.openSourceRatioCounter.count / this.productTypesCounter.count ) * 100;
 
-    this.startCounter( options, this.productTypesCounter );
+    forkJoin( promises ).subscribe( results => {
+      results.forEach( result => {
+        this.totalStarsCounter.count += result.count;
+      } );
+      this.startCounter( options, this.totalStarsCounter );
+    } );
+
+    this.openSourceRatioCounter.count = ( this.openSourceRatioCounter.count / totalProducts ) * 100;
+
     this.startCounter( options, this.openSourceRatioCounter );
   }
 

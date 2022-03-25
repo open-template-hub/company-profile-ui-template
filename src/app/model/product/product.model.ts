@@ -1,8 +1,8 @@
-import { CommandType } from 'src/app/data/command-type/command-type.enum';
 import { Image } from '../image/image.model';
 import { PricingOption } from '../pricing/pricing.model';
 import { StepTimeLineItem } from '../timeline/step-timeline.model';
 import { Video } from '../video/image.model';
+import { CommandType } from '@open-template-hub/animated-code-editor';
 
 export interface PricingFeature {
   name: string,

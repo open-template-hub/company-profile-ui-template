@@ -10,6 +10,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction';
+
+import { AnimatedCodeEditorModule } from '@open-template-hub/animated-code-editor';
 import { HeroModule } from '@open-template-hub/hero';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { MarkdownModule } from 'ngx-markdown';
@@ -18,7 +20,6 @@ import { SwiperModule } from 'swiper/angular';
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AnimatedCodeEditorComponent } from './component/animated-code-editor/animated-code-editor.component';
 import { BrandButtonComponent } from './component/button/brand-button/brand-button.component';
 import { ButtonComponent } from './component/button/button.component';
 import { EventButtonComponent } from './component/button/event-button/event-button.component';
@@ -41,7 +42,6 @@ import { TestimonialCardComponent } from './component/card/testimonial-card/test
 import { StepTimelineCardComponent } from './component/card/timeline-card/step-timeline-card/step-timeline-card.component';
 import { TimelineCardComponent } from './component/card/timeline-card/timeline-card.component';
 import { ColorChartComponent } from './component/color-chart/color-chart.component';
-import { CommandLineComponent } from './component/command-line/command-line.component';
 import { BoxContentLoaderComponent } from './component/content-loader/box-content-loader/box-content-loader.component';
 import { ContentLoaderComponent } from './component/content-loader/content-loader.component';
 import { ImageContentLoaderComponent } from './component/content-loader/image-content-loader/image-content-loader.component';
@@ -119,8 +119,6 @@ FullCalendarModule.registerPlugins( [
     AboutUsPageComponent,
     PricePlanComponent,
     ContactUsPageComponent,
-    AnimatedCodeEditorComponent,
-    CommandLineComponent,
     ProductPresentationComponent,
     CardComponent,
     EmployeeCardComponent,
@@ -175,6 +173,7 @@ FullCalendarModule.registerPlugins( [
     BrowserModule,
     FullCalendarModule,
     SwiperModule,
+    AnimatedCodeEditorModule,
     HeroModule,
     ToastrModule.forRoot( { preventDuplicates: true } ),
     MarkdownModule.forRoot( { loader: HttpClient } ),

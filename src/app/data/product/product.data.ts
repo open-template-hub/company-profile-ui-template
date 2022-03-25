@@ -1,4 +1,4 @@
-import { CommandType } from 'src/app/data/command-type/command-type.enum';
+import { CommandType } from '@open-template-hub/animated-code-editor';
 import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
 import { ProductLine } from '../../model/product/product.model';
@@ -591,8 +591,35 @@ export const PRODUCT_LINES: ProductLine[] = [
 
 export const LIBRARIES: ProductLine[] = [
   {
-    key: 'backend',
-    name: 'Backend Libraries',
+    key: 'frontend',
+    name: 'User Interface Libraries',
+    description: `Libraries for UI Templates on Open Template Hub`,
+    products: [
+      {
+        key: 'animated-code-editor',
+        name: 'Animated Code Editor',
+        description: `This library contains animated code editor ui component for UI Templates on Open Template Hub`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'animated-code-editor',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'animated-code-editor',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        openSource: true,
+        redirectToUrl: true
+      },
+      {
+        key: 'hero',
+        name: 'Hero',
+        description: `This library contains hero ui component for UI Templates on Open Template Hub`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'hero',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'hero',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        openSource: true,
+        redirectToUrl: true
+      },
+    ],
+  },
+  {
+    key: 'other',
+    name: 'Other Libraries',
     description: `Libraries for Server Templates on Open Template Hub`,
     products: [
       {
@@ -601,23 +628,6 @@ export const LIBRARIES: ProductLine[] = [
         description: `This library contains common functionalities for Server Templates on Open Template Hub`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'common',
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'common',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
-        openSource: true,
-        redirectToUrl: true
-      },
-    ],
-  },
-  {
-    key: 'frontend',
-    name: 'User Interface Libraries',
-    description: `Libraries for UI Templates on Open Template Hub`,
-    products: [
-      {
-        key: 'hero',
-        name: 'Hero',
-        description: `This library contains hero ui component for UI Templates on Open Template Hub`,
-        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'hero',
-        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'hero',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
         openSource: true,
         redirectToUrl: true

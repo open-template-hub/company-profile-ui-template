@@ -26,6 +26,7 @@
     "serve:local:fr": "ng serve -c=fr"
   },
   "dependencies": {
+    "@open-template-hub/animated-code-editor": "0.0.1",
     "@open-template-hub/hero": "0.0.5",
     "@angular/animations": "^13.2.6",
     "@angular/cdk": "^13.2.6",

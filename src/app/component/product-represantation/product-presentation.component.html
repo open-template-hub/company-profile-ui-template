@@ -2,8 +2,9 @@
   <div class="product-presentation" [ngSwitch]="getPresentationModel()">
     <!-- Command Line Presentation -->
     <ng-container *ngSwitchCase="'command-line'">
-      <app-animated-code-editor
-          [commandLines]="product.commandLines"></app-animated-code-editor>
+
+      <oth-animated-code-editor [commandLines]="product.commandLines">
+      </oth-animated-code-editor>
       <hr class="command-line-hr"/>
       <p class="command-line-title">Generate your project in couple of seconds.</p>
     </ng-container>

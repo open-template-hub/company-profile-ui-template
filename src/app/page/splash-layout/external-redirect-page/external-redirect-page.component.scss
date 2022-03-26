@@ -1,8 +1,9 @@
 @use '../splash-layout.component';
 
 .external-component-button-wrapper {
-  & app-brand-button {
+  & app-button {
     margin-right: 10px;
+    margin-left: 10px;
   }
 }
 

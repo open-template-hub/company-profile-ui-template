@@ -11,6 +11,7 @@ export class NpmProviderService {
   NPM_PACKAGES_LIST = [
     'server-generator',
     'app-generator',
+    'animated-code-editor',
     'common',
     'hero'
   ];

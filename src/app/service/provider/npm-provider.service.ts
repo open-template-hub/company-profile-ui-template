@@ -12,8 +12,9 @@ export class NpmProviderService {
     'server-generator',
     'app-generator',
     'animated-code-editor',
+    'led',
+    'hero',
     'common',
-    'hero'
   ];
 
   constructor( private util: UtilService ) {

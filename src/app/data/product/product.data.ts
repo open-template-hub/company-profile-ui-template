@@ -610,6 +610,16 @@ export const LIBRARIES: ProductLine[] = [
         redirectToUrl: true
       },
       {
+        key: 'led',
+        name: 'Led',
+        description: `This library contains led ui component for UI Templates on Open Template Hub`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'led',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'led',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        openSource: true,
+        redirectToUrl: true
+      },
+      {
         key: 'hero',
         name: 'Hero',
         description: `This library contains hero ui component for UI Templates on Open Template Hub`,

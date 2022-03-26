@@ -203,7 +203,7 @@
                 *ngIf="product.key !== relatedProduct.key"
                 [class]="relatedProduct.color ? relatedProduct.color : ''"
                 [footerText]="getPresentationCardFooter(relatedProduct.openSource)"
-                [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
+                [href]="relatedProduct.url"
                 [imgHeight]="150"
                 [secondaryText]="relatedProduct.description"
                 [src]="relatedProduct.logo"

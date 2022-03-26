@@ -27,6 +27,7 @@ export class HomePageComponent implements AfterViewInit {
   totalStarsCounter = { count: 0, id: 'totalStarsCounterElement' };
   openSourceRatioCounter = { count: 0, id: 'openSourceRatioCounterElement' };
   npmCounterLoading = true;
+  githubCounterLoading = true;
   brandLogoLoaded = false;
 
   BRAND = BRAND;
@@ -108,8 +109,8 @@ export class HomePageComponent implements AfterViewInit {
     };
 
     this.npmProviderService.getNpmPackagesDownloadCount().then( ( count ) => {
-      this.npmDownloadCounter.count = count;
       this.npmCounterLoading = false;
+      this.npmDownloadCounter.count = count;
       this.startCounter( options, this.npmDownloadCounter );
     } );
 
@@ -140,6 +141,7 @@ export class HomePageComponent implements AfterViewInit {
 
     forkJoin( promises ).subscribe( results => {
       results.forEach( result => {
+        this.githubCounterLoading = false;
         this.totalStarsCounter.count += result.count;
       } );
       this.startCounter( options, this.totalStarsCounter );

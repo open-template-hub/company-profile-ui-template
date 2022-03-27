@@ -397,6 +397,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'server-generator',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
+        hasNpmPackage: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         commandLines: [
           {
@@ -452,6 +453,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'app-generator',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
+        hasNpmPackage: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         commandLines: [
           {
@@ -591,7 +593,7 @@ export const PRODUCT_LINES: ProductLine[] = [
 
 export const LIBRARIES: ProductLine[] = [
   {
-    key: 'frontend',
+    key: 'user-interface',
     name: 'User Interface Libraries',
     description: `Libraries for UI Templates on Open Template Hub`,
     products: [
@@ -602,7 +604,23 @@ export const LIBRARIES: ProductLine[] = [
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'animated-code-editor',
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'animated-code-editor',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        video: {
+          url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/library/videos/animated-code-editor-video-1.mov',
+          description: `Animated Code Editor demo`,
+        },
         openSource: true,
+        hasNpmPackage: true,
+        redirectToUrl: true
+      },
+      {
+        key: 'led',
+        name: 'Led',
+        description: `This library contains led ui component for UI Templates on Open Template Hub`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'led',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'led',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        openSource: true,
+        hasNpmPackage: true,
         redirectToUrl: true
       },
       {
@@ -613,12 +631,13 @@ export const LIBRARIES: ProductLine[] = [
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'hero',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
         openSource: true,
+        hasNpmPackage: true,
         redirectToUrl: true
       },
     ],
   },
   {
-    key: 'other',
+    key: 'server',
     name: 'Other Libraries',
     description: `Libraries for Server Templates on Open Template Hub`,
     products: [
@@ -630,6 +649,7 @@ export const LIBRARIES: ProductLine[] = [
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'common',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
         openSource: true,
+        hasNpmPackage: true,
         redirectToUrl: true
       },
     ],

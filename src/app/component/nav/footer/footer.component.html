@@ -7,24 +7,37 @@
            [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
         <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
            [class]="productLine.color ? productLine.color : ''"
-           [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
+           (click)="redirectToProductUrl(product, productLine)"
            class="footer-link-item">
           {{ product.name }}
         </a>
       </div>
     </div>
     <div class="footer-link-column double">
-      <div class="footer-link-inner-column">
+      <div class="footer-link-column">
+        <p i18n="@@footer.products">Libraries</p>
+        <div *ngFor="let productLine of LIBRARIES" class="footer-link-group">
+          <p *ngIf="productLine.name"
+             [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
+          <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+             [class]="productLine.color ? productLine.color : ''"
+             (click)="redirectToProductUrl(product, productLine)"
+             class="footer-link-item">
+            {{ product.name }}
+          </a>
+        </div>
         <div *ngFor="let productLine of SERVICES" class="footer-link-group">
           <p *ngIf="productLine.name"
              [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
           <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
              [class]="productLine.color ? productLine.color : ''"
-             [routerLink]="URLS.product + '/' + productLine.key + '/' + product.key"
+             (click)="redirectToProductUrl(product, productLine)"
              class="footer-link-item">
             {{ product.name }}
           </a>
         </div>
+      </div>
+      <div class="footer-link-inner-column">
         <div class="footer-link-group">
           <p i18n="@@footer.company">Company</p>
           <ng-container *ngFor="let companyPage of COMPANY_PAGES">
@@ -32,16 +45,14 @@
               {{ companyPage.name }}
             </a>
             <app-ext-link *ngIf="companyPage.isExternal"
-              [href]="companyPage.url"
-              [linkClass]="'align-flex-start link'">
+                          [href]="companyPage.url"
+                          [linkClass]="'align-flex-start link'">
               <span body>
                 {{ companyPage.name }}
               </span>
             </app-ext-link>
           </ng-container>
         </div>
-      </div>
-      <div class="footer-link-inner-column">
         <div class="footer-link-group">
           <p i18n="@@footer.developers">Developers</p>
           <ng-container *ngFor="let developersPage of DEVELOPERS_PAGES">

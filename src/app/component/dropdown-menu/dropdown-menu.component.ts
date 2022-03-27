@@ -2,6 +2,7 @@ import { Component, ElementRef, HostListener, Input, ViewChild, } from '@angular
 import { Router } from '@angular/router';
 import { URLS } from '../../data/navigation/navigation.data';
 import { Product, ProductLine } from '../../model/product/product.model';
+import { ProductService } from '../../service/product/product.service';
 import { UtilService } from '../../service/util/util.service';
 
 @Component( {
@@ -27,7 +28,10 @@ export class DropdownMenuComponent {
   @ViewChild( 'toggleButton' ) toggleButton: ElementRef;
   @ViewChild( 'dropdownContent' ) dropdownContent: ElementRef;
 
-  constructor( private utilService: UtilService, private router: Router ) {
+  constructor(
+      private utilService: UtilService,
+      private router: Router,
+      private productService: ProductService ) {
     this.calculatedColumns = this.minimumColumns;
     this.calculatedRows = this.minimumRows;
   }
@@ -99,7 +103,7 @@ export class DropdownMenuComponent {
   closeDropDownInternal( product?: Product, productLine?: ProductLine ) {
     this.closeDropdownInternalClicked = true;
     if ( product && productLine ) {
-      this.redirect( product, productLine );
+      this.redirectToProductUrl( product, productLine );
     }
     this.utilService.delay( 500 ).then( () => {
       this.closeDropdown();
@@ -114,13 +118,7 @@ export class DropdownMenuComponent {
     return 'max-height: ' + ( 60 + 150 * this.calculatedRows + 1 ) + 'px;';
   }
 
-  redirect( product: Product, productLine: ProductLine ) {
-    if ( !product.redirectToUrl ) {
-      this.router.navigate( [ URLS.product + '/' + productLine.key + '/' + product.key ] ).then( () => {
-        return true;
-      } );
-    } else {
-      window.open( product.url, '_blank' );
-    }
+  redirectToProductUrl( product: Product, productLine: ProductLine ) {
+    this.productService.redirectToProductUrl( product, productLine );
   }
 }

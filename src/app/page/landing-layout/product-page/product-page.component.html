@@ -36,7 +36,7 @@
                   text="Professional Help">
               </app-button>
               <app-brand-button
-                  *ngIf="productLineKey === 'generator'"
+                  *ngIf="product.hasNpmPackage"
                   (click)="redirect(product.urlAlter)"
                   [icon]="environmentCommon.website.npm.cssClass"
                   i18n-text="@@productPage.downloadPackage.button"

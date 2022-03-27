@@ -397,6 +397,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'server-generator',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
+        hasNpmPackage: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         commandLines: [
           {
@@ -452,6 +453,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'app-generator',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         openSource: true,
+        hasNpmPackage: true,
         features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
         commandLines: [
           {
@@ -607,6 +609,7 @@ export const LIBRARIES: ProductLine[] = [
           description: `Animated Code Editor demo`,
         },
         openSource: true,
+        hasNpmPackage: true,
         redirectToUrl: true
       },
       {
@@ -617,6 +620,7 @@ export const LIBRARIES: ProductLine[] = [
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'led',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
         openSource: true,
+        hasNpmPackage: true,
         redirectToUrl: true
       },
       {
@@ -627,6 +631,7 @@ export const LIBRARIES: ProductLine[] = [
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'hero',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
         openSource: true,
+        hasNpmPackage: true,
         redirectToUrl: true
       },
     ],
@@ -644,6 +649,7 @@ export const LIBRARIES: ProductLine[] = [
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'common',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
         openSource: true,
+        hasNpmPackage: true,
         redirectToUrl: true
       },
     ],

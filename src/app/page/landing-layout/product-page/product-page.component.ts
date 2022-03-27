@@ -4,7 +4,7 @@ import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
 import { GithubProviderService } from 'src/app/service/provider/github-provider.service';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { URLS } from '../../../data/navigation/navigation.data';
-import { PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
+import { LIBRARIES, PRODUCT_LINES, SERVICES } from '../../../data/product/product.data';
 import { Activity } from '../../../model/activity/activity.model';
 import { Product, ProductLine } from '../../../model/product/product.model';
 import { Testimonial } from '../../../model/testimonial/testimonial.model';
@@ -24,6 +24,7 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   commitActivities: Activity[] = [];
 
   PRODUCT_LINES = PRODUCT_LINES;
+  LIBRARIES = LIBRARIES;
 
   product: Product;
   productLineKey: string;
@@ -32,10 +33,6 @@ export class ProductPageComponent implements OnInit, OnDestroy {
   testimonialsTitle = [
     { text: $localize`:@@productPage.testimonialsTitle.1:Customer testimonials`, level: 1 },
     { text: $localize`:@@productPage.testimonialsTitle.2:What our customers are saying...` }
-  ];
-
-  relatedProductAppHero = [
-    { text: $localize`:@@productPage.relatedProductAppHero:Related Products`, level: 2 }
   ];
 
   npmPackageInstallationAndUsage = [

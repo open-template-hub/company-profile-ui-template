@@ -53,7 +53,6 @@ import { SharpTopSvgComponent } from './component/design/top-svg/sharp-top-svg/s
 import { TopSvgComponent } from './component/design/top-svg/top-svg.component';
 import { DropdownMenuComponent } from './component/dropdown-menu/dropdown-menu.component';
 import { ExtLinkComponent } from './component/ext-link/ext-link.component';
-import { LedComponent } from './component/led/led.component';
 import { BottomNavComponent } from './component/nav/bottom-nav/bottom-nav.component';
 import { FooterComponent } from './component/nav/footer/footer.component';
 import { LandingLayoutTopNavComponent } from './component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component';
@@ -136,7 +135,6 @@ FullCalendarModule.registerPlugins( [
     ImageContentLoaderComponent,
     TextContentLoaderComponent,
     BoxContentLoaderComponent,
-    LedComponent,
     BusinessPartnerSwiperComponent,
     PresentationSwiperComponent,
     SitemapPageComponent,

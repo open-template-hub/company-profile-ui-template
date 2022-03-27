@@ -23,11 +23,12 @@
 <div class="counters">
   <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github" class="counter-wrapper" rel="noopener" target="_blank">
     <app-text-content-loader *ngIf="npmCounterLoading" [size]="'30'" class="loader"></app-text-content-loader>
-    <p class="counter" id="npmDownloadCounterElement"></p>
+    <p [hidden]="npmCounterLoading" class="counter" id="npmDownloadCounterElement"></p>
     <p i18n="@@homePage.npmDownloads" class="description">Npm Downloads</p>
   </a>
   <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github" class="counter-wrapper counter-alter" rel="noopener" target="_blank">
-    <p class="counter" id="totalStarsCounterElement">0</p>
+    <app-text-content-loader *ngIf="githubCounterLoading" [size]="'30'" class="loader"></app-text-content-loader>
+    <p [hidden]="githubCounterLoading" class="counter" id="totalStarsCounterElement">0</p>
     <p class="description" i18n="@@homePage.totalStars">Total GitHub Stars</p>
   </a>
   <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github" class="counter-wrapper" rel="noopener" target="_blank">

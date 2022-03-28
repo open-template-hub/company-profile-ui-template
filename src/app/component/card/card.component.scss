@@ -18,8 +18,6 @@
   @include util.flex-center-center;
   @include util.flex-layout-column;
   @include util.margin-x-auto;
-  @include util.default-shadow;
-  @include util.default-border-radius;
 
   box-sizing: border-box;
 
@@ -83,6 +81,23 @@
 
   & .header {
     @include default-header;
+
+    &.underline {
+
+      padding-left: 1em;
+      padding-right: 1em;
+
+      & h1 {
+        color: var(--lighter);
+        font-weight: 600;
+        font-size: 19px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid var(--theme-color-lighter-4);
+        text-align: center;
+        width: 100%;
+      }
+    }
   }
 
   & .body {

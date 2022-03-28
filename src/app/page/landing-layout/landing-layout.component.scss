@@ -51,12 +51,22 @@
   }
 
   .raw-content-page-layout, .form-page-layout {
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding: 3vh 3vw;
     min-height: 80vh;
   }
 
+  .raw-content-page-layout {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
+
   .form-page-layout {
+
+    & > * {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
     & .body {
       width: 94vw;
     }
@@ -70,8 +80,7 @@
   }
 
   .raw-content-page-layout, .form-page-layout {
-    padding-left: 90px;
-    padding-right: 90px;
+    padding: 90px;
     min-height: 50vh;
   }
 
@@ -82,6 +91,7 @@
   }
 
   .form-page-layout {
+
     & .body {
       width: 400px;
     }

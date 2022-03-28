@@ -13,6 +13,7 @@ export class CardComponent {
   @Input() bottomWrapperTemplate: TemplateRef<any>;
 
   @Input() cardClass: string;
+  @Input() defaultHeaderClass: string;
 
   @Input() header: string;
   @Input() body: string;

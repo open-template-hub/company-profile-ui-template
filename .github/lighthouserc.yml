@@ -1,6 +1,6 @@
 ci:
   collect:
     settings:
-      emulatedFormFactor: desktop
+      preset: "desktop"
   upload:
     reportFilenamePattern: "report.%%EXTENSION%%"

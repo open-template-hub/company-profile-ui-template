@@ -1,3 +1,0 @@
-ci:
-  upload:
-    outputDir: "docs/lighthouse"

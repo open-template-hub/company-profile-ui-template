@@ -30,9 +30,9 @@ jobs:
           cp -a .lighthouseci/*.html docs/lighthouse
 
           if git status --porcelain; then
-            echo "changes_exist=false" >> $GITHUB_ENV
-          else
             echo "changes_exist=true" >> $GITHUB_ENV
+          else
+            echo "changes_exist=false" >> $GITHUB_ENV
           fi
 
       - name: Git Commit and Push

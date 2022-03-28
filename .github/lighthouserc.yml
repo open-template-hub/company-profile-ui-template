@@ -3,6 +3,7 @@ ci:
     settings:
       preset: "desktop"
   upload:
-    target: "filesystem"
-    outputDir: "./docs/lighthouse"
-    reportFilenamePattern: "report.%%EXTENSION%%"
+    settings:
+      target: "filesystem"
+      outputDir: "./docs/lighthouse"
+      reportFilenamePattern: "report.%%EXTENSION%%"

@@ -2,8 +2,8 @@
   {
     "url": "https://opentemplatehub.com/",
     "isRepresentativeRun": true,
-    "htmlPath": "/home/runner/work/company-profile-ui-template/company-profile-ui-template/.lighthouseci/opentemplatehub_com-_-2022_03_28_19_19_13.report.html",
-    "jsonPath": "/home/runner/work/company-profile-ui-template/company-profile-ui-template/.lighthouseci/opentemplatehub_com-_-2022_03_28_19_19_13.report.json",
+    "htmlPath": "/home/runner/work/company-profile-ui-template/company-profile-ui-template/.lighthouseci/opentemplatehub_com-_-2022_03_28_19_21_43.report.html",
+    "jsonPath": "/home/runner/work/company-profile-ui-template/company-profile-ui-template/.lighthouseci/opentemplatehub_com-_-2022_03_28_19_21_43.report.json",
     "summary": {
       "performance": 0.92,
       "accessibility": 0.95,

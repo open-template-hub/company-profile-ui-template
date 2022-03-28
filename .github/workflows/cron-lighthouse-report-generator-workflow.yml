@@ -21,11 +21,12 @@ jobs:
         with:
           urls: |
             https://opentemplatehub.com
+          uploadArtifacts: true
           configPath: .github/lighthouserc.yml
 
       - name: Check for Changes
         run: |
-          ls .lighthouseci
+          mv .lighthouseci/* docs/lighthouse
           if git diff --exit-code; then
             echo "changes_exist=false" >> $GITHUB_ENV
           else

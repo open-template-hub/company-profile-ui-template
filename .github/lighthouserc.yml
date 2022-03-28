@@ -2,8 +2,3 @@ ci:
   collect:
     settings:
       preset: "desktop"
-  upload:
-    settings:
-      target: "filesystem"
-      outputDir: "./docs/lighthouse"
-      reportFilenamePattern: "report.%%EXTENSION%%"

@@ -1,0 +1,3 @@
+ci:
+  upload:
+    reportFilenamePattern: report

@@ -21,7 +21,6 @@ jobs:
         with:
           urls: |
             https://opentemplatehub.com
-          uploadArtifacts: true
           configPath: .github/lighthouserc.yml
 
       - name: Check for Changes

@@ -1,22 +1,9 @@
 <div [class.footer-hide-shadow]="hideShadow" [class.footer-popup-padding]="popupPadding" class="footer">
   <div class="footer-links-wrapper">
     <div class="footer-link-column">
-      <p i18n="@@footer.products">Products</p>
-      <div *ngFor="let productLine of PRODUCT_LINES" class="footer-link-group">
-        <p *ngIf="productLine.name"
-           [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
-        <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
-           [class]="productLine.color ? productLine.color : ''"
-           (click)="redirectToProductUrl(product, productLine)"
-           class="footer-link-item">
-          {{ product.name }}
-        </a>
-      </div>
-    </div>
-    <div class="footer-link-column double">
-      <div class="footer-link-column">
-        <p i18n="@@footer.products">Libraries</p>
-        <div *ngFor="let productLine of LIBRARIES" class="footer-link-group">
+      <div class="footer-link-group">
+        <p i18n="@@footer.products">Products</p>
+        <ng-container *ngFor="let productLine of PRODUCT_LINES">
           <p *ngIf="productLine.name"
              [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
           <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
@@ -25,6 +12,23 @@
              class="footer-link-item">
             {{ product.name }}
           </a>
+        </ng-container>
+      </div>
+    </div>
+    <div class="footer-link-column double">
+      <div class="footer-link-inner-column">
+        <div class="footer-link-group">
+          <p i18n="@@footer.products">Libraries</p>
+          <ng-container *ngFor="let productLine of LIBRARIES">
+            <p *ngIf="productLine.name"
+               [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
+            <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+               [class]="productLine.color ? productLine.color : ''"
+               (click)="redirectToProductUrl(product, productLine)"
+               class="footer-link-item">
+              {{ product.name }}
+            </a>
+          </ng-container>
         </div>
         <div *ngFor="let productLine of SERVICES" class="footer-link-group">
           <p *ngIf="productLine.name"

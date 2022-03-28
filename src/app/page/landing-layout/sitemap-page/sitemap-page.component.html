@@ -1,6 +1,5 @@
 <div class="form-page-layout">
-  <oth-hero [contents]="[{text: 'Sitemap', level: 1}]"></oth-hero>
-  <app-card [bodyTemplate]="bodyTemplate">
+  <app-card [header]="'Sitemap'" [defaultHeaderClass]="'underline'" [bodyTemplate]="bodyTemplate">
     <ng-template #bodyTemplate>
       <div class="body">
         <div class="column">

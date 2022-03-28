@@ -7,8 +7,8 @@
     <!-- Header of the card -->
   </ng-container>
   <ng-template #defaultHeaderTemplate>
-    <div *ngIf="header" class="header">
-      {{ header }}
+    <div *ngIf="header" [class]="defaultHeaderClass" class="header">
+      <h1>{{ header }}</h1>
     </div>
   </ng-template>
 

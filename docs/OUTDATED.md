@@ -15,8 +15,10 @@ Following packages are not updated in the develop branch yet. So, if you want to
 
 | Package | Current | Wanted | Latest | Location |
 | --- | --- | --- | --- | --- |
+| @open-template-hub/animated-code-editor | 0.0.1 | 0.0.1 | 0.0.3 | company-profile-ui-template |
+| @open-template-hub/hero | 0.0.5 | 0.0.5 | 0.0.6 | company-profile-ui-template |
 | @types/jasmine | 3.10.4 | 3.10.4 | 4.0.0 | company-profile-ui-template |
-| typescript | 4.5.5 | 4.5.5 | 4.6.2 | company-profile-ui-template |
+| typescript | 4.5.5 | 4.5.5 | 4.6.3 | company-profile-ui-template |
 
 <table align="right"><tr><td><a href="https://opentemplatehub.com"><img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png" width="50px" alt="oth"/></a></td><td><b>Open Template Hub © 2021</b></td></tr></table>
 

@@ -27,7 +27,7 @@ jobs:
       - name: Check for Changes
         run: |
           rm docs/lighthouse/*
-          cp -a .lighthouseci/*.html docs/lighthouse
+          cp .lighthouseci/lhr-*.html docs/lighthouse
 
           if git status --porcelain; then
             echo "changes_exist=true" >> $GITHUB_ENV

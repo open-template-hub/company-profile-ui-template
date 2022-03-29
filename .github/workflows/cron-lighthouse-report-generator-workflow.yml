@@ -1,8 +1,9 @@
 name: Cron Lighthouse Report Generator
 
 on:
-  schedule:
-    - cron: '0 4 * * 1'
+  push:
+    branches:
+      - 'develop'
 
 jobs:
   cron-lighthouse-report-generator:
@@ -25,7 +26,7 @@ jobs:
       - name: Check for Changes
         run: |
           rm docs/lighthouse/*
-          cp .lighthouseci/lhr-*.html docs/lighthouse
+          find .lighthouseci -name 'lhr-*.html' -exec sh -c 'x="{}"; cp "$x" "docs/lighthouse/lighthouse-report.html"' \;
           rm .lighthouseci/*
 
           if git status --porcelain; then

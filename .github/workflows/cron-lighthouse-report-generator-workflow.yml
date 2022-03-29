@@ -1,9 +1,8 @@
 name: Cron Lighthouse Report Generator
 
 on:
-  push:
-    branches:
-      - 'develop'
+  schedule:
+    - cron: '0 4 * * 1'
 
 jobs:
   cron-lighthouse-report-generator:

@@ -115,6 +115,12 @@
     cursor: not-allowed;
   }
 
+  &:disabled {
+    box-shadow: initial;
+    cursor: initial;
+    background-color: var(--lighter-contrast);
+  }
+
   &.disable-dark-mode {
     color: var(--contrast-light-mode);
     background-color: var(--color-light-mode);

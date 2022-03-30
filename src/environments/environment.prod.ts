@@ -19,7 +19,6 @@ export const environment: EnvironmentModel = {
       tag: 'GOOGLE'
     },
     facebook: {
-      // Facebook does not allow testing social login at localhost. This configuration will redirect you to development env.
       tag: 'FACEBOOK'
     },
     linkedin: {

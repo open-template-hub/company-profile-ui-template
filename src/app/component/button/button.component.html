@@ -1,4 +1,4 @@
-<button [classList]="buttonClasses ? buttonClasses.join( ' ' ) + ' button' : 'button'">
+<button [classList]="buttonClasses ? buttonClasses.join( ' ' ) + ' button' : 'button'" [disabled]="disabled">
   <span class="content">
     <ng-container *ngTemplateOutlet="iconTemplate || defaultIconTemplate">
       <!-- Icon of the button -->

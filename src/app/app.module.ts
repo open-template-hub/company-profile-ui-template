@@ -47,7 +47,7 @@ import { ContentLoaderComponent } from './component/content-loader/content-loade
 import { ImageContentLoaderComponent } from './component/content-loader/image-content-loader/image-content-loader.component';
 import { TextContentLoaderComponent } from './component/content-loader/text-content-loader/text-content-loader.component';
 import { CounterBordersTopSvgComponent } from './component/design/top-svg/counter-borders-top-svg/counter-borders-top-svg.component';
-import { DefaultTopSvgComponent } from './component/design/top-svg/default-top-svg/default-top-svg.component';
+import { RoundTopSvgComponent } from './component/design/top-svg/round-top-svg/round-top-svg.component';
 import { LeafTopSvgComponent } from './component/design/top-svg/leaf-top-svg/leaf-top-svg.component';
 import { SharpTopSvgComponent } from './component/design/top-svg/sharp-top-svg/sharp-top-svg.component';
 import { TopSvgComponent } from './component/design/top-svg/top-svg.component';
@@ -140,7 +140,7 @@ FullCalendarModule.registerPlugins( [
     SitemapPageComponent,
     FeatureCardComponent,
     SharpTopSvgComponent,
-    DefaultTopSvgComponent,
+    RoundTopSvgComponent,
     CounterBordersTopSvgComponent,
     TopSvgComponent,
     LeafTopSvgComponent,

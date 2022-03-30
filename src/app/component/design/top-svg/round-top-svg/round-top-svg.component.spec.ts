@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DefaultTopSvgComponent } from './default-top-svg.component';
+import { RoundTopSvgComponent } from './round-top-svg.component';
 
-describe( 'DefaultTopSvgComponent', () => {
-  let component: DefaultTopSvgComponent;
-  let fixture: ComponentFixture<DefaultTopSvgComponent>;
+describe( 'RoundTopSvgComponent', () => {
+  let component: RoundTopSvgComponent;
+  let fixture: ComponentFixture<RoundTopSvgComponent>;
 
   beforeEach( async () => {
     await TestBed.configureTestingModule( {
-      declarations: [ DefaultTopSvgComponent ]
+      declarations: [ RoundTopSvgComponent ]
     } )
     .compileComponents();
   } );
 
   beforeEach( () => {
-    fixture = TestBed.createComponent( DefaultTopSvgComponent );
+    fixture = TestBed.createComponent( RoundTopSvgComponent );
     component = fixture.componentInstance;
     fixture.detectChanges();
   } );

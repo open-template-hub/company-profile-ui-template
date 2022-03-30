@@ -1,9 +1,6 @@
 <div class="top-svg">
-  <ng-container [ngSwitch]="themeDesignSetting">
-    <app-round-top-svg *ngSwitchCase="ThemeDesignSettings.round"></app-round-top-svg>
-    <app-counter-borders-top-svg *ngSwitchCase="ThemeDesignSettings.counterBorders"></app-counter-borders-top-svg>
-    <app-sharp-top-svg *ngSwitchCase="ThemeDesignSettings.sharp"></app-sharp-top-svg>
-    <app-leaf-top-svg *ngSwitchCase="ThemeDesignSettings.leaf"></app-leaf-top-svg>
-    <app-round-top-svg *ngSwitchDefault></app-round-top-svg>
-  </ng-container>
+  <svg preserveAspectRatio="xMidYMax slice" viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 0,0 V 240 L 1000,120 V 0 Z"
+          fill="var(--theme-color-lighter-2)"/>
+  </svg>
 </div>

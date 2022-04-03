@@ -645,6 +645,17 @@ export const LIBRARIES: ProductLine[] = [
         hasNpmPackage: true,
         redirectToUrl: true
       },
+      {
+        key: 'ui-library-template',
+        name: 'UI Library Template',
+        description: `This library is a template to generate new angular component libraries.`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'ui-library-template',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'ui-library-template',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        openSource: true,
+        hasNpmPackage: true,
+        redirectToUrl: true
+      },
     ],
   },
   {

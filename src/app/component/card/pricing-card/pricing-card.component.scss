@@ -75,6 +75,10 @@
       align-items: center;
       height: 22px;
 
+      & i {
+        color: var(--theme-color);
+      }
+
       & span {
         padding-left: 1em;
       }

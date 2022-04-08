@@ -25,7 +25,7 @@
       <ng-container *ngFor="let features of pricingOption.features; index as i">
         <ng-container *ngFor="let feature of features; index as j">
           <p *ngIf="feature && feature === 'true'">
-            <i aria-hidden="true" class="fas fa-check success-text"></i>
+            <i aria-hidden="true" class="fas fa-check"></i>
             <span>{{ pricingFeatures[ i ].details[ j ].name }}</span>
           </p>
         </ng-container>

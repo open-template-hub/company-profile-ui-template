@@ -13,7 +13,7 @@ Open Template Hub - Company Profile UI Template v3
 [![PRCLosed](https://img.shields.io/github/issues-pr-closed-raw/open-template-hub/company-profile-ui-template?color=43b043&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/pulls?q=is%3Apr+is%3Aclosed)
 [![LastCommit](https://img.shields.io/github/last-commit/open-template-hub/company-profile-ui-template?color=43b043&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/commits/master)
 [![Release](https://img.shields.io/github/release/open-template-hub/company-profile-ui-template?include_prereleases&color=43b043&style=for-the-badge)](https://github.com/open-template-hub/company-profile-ui-template/releases)
-[![Lighthouse](https://img.shields.io/badge/LIGHTHOUSE-report-43b043.svg?style=for-the-badge&logo=lighthouse)](docs/lighthouse-report-desktop.html)
+[![Lighthouse](https://img.shields.io/badge/LIGHTHOUSE-report-43b043.svg?style=for-the-badge&logo=lighthouse)](docs/lighthouse)
 [![SonarCloud](https://img.shields.io/sonar/quality_gate/open-template-hub_company-profile-ui-template?server=https%3A%2F%2Fsonarcloud.io&label=Sonar%20Cloud&style=for-the-badge&logo=sonarcloud)](https://sonarcloud.io/dashboard?id=open-template-hub_company-profile-ui-template)
 
 Company Profile UI Template is a modern, responsive, and customizable company profiles UI template for your business. It contains reusable components, theme color, and design support along with dark theme support.

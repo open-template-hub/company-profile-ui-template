@@ -10,7 +10,7 @@ export interface PricingFeature {
 }
 
 export interface Product {
-  key?: string;
+  key: string;
   name: string;
   description: string;
   color?: string;

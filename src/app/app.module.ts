@@ -46,10 +46,6 @@ import { BoxContentLoaderComponent } from './component/content-loader/box-conten
 import { ContentLoaderComponent } from './component/content-loader/content-loader.component';
 import { ImageContentLoaderComponent } from './component/content-loader/image-content-loader/image-content-loader.component';
 import { TextContentLoaderComponent } from './component/content-loader/text-content-loader/text-content-loader.component';
-import { CounterBordersTopSvgComponent } from './component/design/top-svg/counter-borders-top-svg/counter-borders-top-svg.component';
-import { DefaultTopSvgComponent } from './component/design/top-svg/default-top-svg/default-top-svg.component';
-import { LeafTopSvgComponent } from './component/design/top-svg/leaf-top-svg/leaf-top-svg.component';
-import { SharpTopSvgComponent } from './component/design/top-svg/sharp-top-svg/sharp-top-svg.component';
 import { TopSvgComponent } from './component/design/top-svg/top-svg.component';
 import { DropdownMenuComponent } from './component/dropdown-menu/dropdown-menu.component';
 import { ExtLinkComponent } from './component/ext-link/ext-link.component';
@@ -139,11 +135,7 @@ FullCalendarModule.registerPlugins( [
     PresentationSwiperComponent,
     SitemapPageComponent,
     FeatureCardComponent,
-    SharpTopSvgComponent,
-    DefaultTopSvgComponent,
-    CounterBordersTopSvgComponent,
     TopSvgComponent,
-    LeafTopSvgComponent,
     CustomersPageComponent,
     AssetCardComponent,
     BlogPageComponent,

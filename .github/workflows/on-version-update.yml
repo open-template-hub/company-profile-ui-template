@@ -55,9 +55,9 @@ jobs:
 
       - name: Git Commit and Push
         run: |
-          git config --global user.email "furknyavuz@gmail.com"
-          git config --global user.name "Furkan Yavuz"
-          git commit -am "Workflow/version-update"
+          git config --global user.email "98660390+oth-service-user@users.noreply.github.com"
+          git config --global user.name "OTH Service User"
+          git commit -am "Workflow/version update"
           git push
 
   create-version-update-pr:

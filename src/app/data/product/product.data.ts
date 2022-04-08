@@ -613,17 +613,6 @@ export const LIBRARIES: ProductLine[] = [
         redirectToUrl: true
       },
       {
-        key: 'countdown',
-        name: 'Countdown',
-        description: `This library contains countdown ui component for UI Templates on Open Template Hub`,
-        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'countdown',
-        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'countdown',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
-        openSource: true,
-        hasNpmPackage: true,
-        redirectToUrl: true
-      },
-      {
         key: 'led',
         name: 'Led',
         description: `This library contains led ui component for UI Templates on Open Template Hub`,
@@ -640,6 +629,17 @@ export const LIBRARIES: ProductLine[] = [
         description: `This library contains hero ui component for UI Templates on Open Template Hub`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'hero',
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'hero',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        openSource: true,
+        hasNpmPackage: true,
+        redirectToUrl: true
+      },
+      {
+        key: 'ui-library-template',
+        name: 'UI Library Template',
+        description: `This library is a template to generate new angular component libraries.`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'ui-library-template',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'ui-library-template',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
         openSource: true,
         hasNpmPackage: true,

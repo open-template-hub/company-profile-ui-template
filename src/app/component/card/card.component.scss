@@ -26,6 +26,13 @@
   overflow: hidden;
   width: 100%;
   padding: 15px 0;
+
+  & h1 {
+    font-weight: 600;
+    font-size: 19px;
+
+    color: var(--lighter);
+  }
 }
 
 @mixin default-body {
@@ -88,9 +95,6 @@
       padding-right: 1em;
 
       & h1 {
-        color: var(--lighter);
-        font-weight: 600;
-        font-size: 19px;
         margin-top: 10px;
         padding-bottom: 10px;
         border-bottom: 2px solid var(--theme-color-lighter-4);

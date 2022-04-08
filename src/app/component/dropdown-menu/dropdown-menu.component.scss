@@ -115,8 +115,8 @@
 
     display: block;
     position: fixed;
-    top: calc(10vh + env(safe-area-inset-top));
-    height: calc(90vh + env(safe-area-inset-top) - 55px);
+    top: 10%;
+    height: 90%;
     box-shadow: 0 0 4px 4px var(--shadow);
     z-index: 11;
     padding: 0;
@@ -146,6 +146,8 @@
     overflow-y: auto;
     height: 100%;
     flex-direction: column;
+    box-sizing: border-box;
+    padding-bottom: calc(55px + env(safe-area-inset-bottom));
   }
 
   .section-column .section-header h4 {

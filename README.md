@@ -5,7 +5,7 @@
 </p>
 
 <h1 align="center">
-Open Template Hub - Company Profile UI Template v3
+Open Template Hub - Company Profile UI Template v4
 </h1>
 
 [![License](https://img.shields.io/github/license/open-template-hub/company-profile-ui-template?color=43b043&style=for-the-badge)](LICENSE)

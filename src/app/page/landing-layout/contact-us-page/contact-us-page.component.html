@@ -1,7 +1,7 @@
 <!-- Contact Us -->
 <oth-hero [contents]="appHeroContent"></oth-hero>
 <div class="contact-us-page-content">
-  <app-card [bodyTemplate]="bodyTemplate">
+  <oth-card [bodyTemplate]="bodyTemplate">
     <ng-template #bodyTemplate>
       <div class="body">
         <div *ngIf="emailSent">
@@ -99,7 +99,7 @@
         </form>
       </div>
     </ng-template>
-  </app-card>
+  </oth-card>
   <div *ngIf="features" class="features-area">
     <h3 class="header">{{ features.title }}</h3>
     <div *ngFor="let feature of features.features">

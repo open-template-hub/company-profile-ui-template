@@ -1,4 +1,4 @@
-import { Ribbon } from '../../model/ribbon/ribbon.model';
+import { Ribbon } from '@open-template-hub/card';
 
 export const DEFAULT_RIBBON = { theme: '', text: '' };
 

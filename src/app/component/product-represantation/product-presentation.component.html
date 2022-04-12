@@ -10,7 +10,7 @@
     </ng-container>
 
     <!-- Video Presentation -->
-    <app-card *ngSwitchCase="'video'" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="video-card">
+    <oth-card *ngSwitchCase="'video'" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="video-card">
       <ng-template #bodyTemplate>
         <div class=" body">
           <video [src]="product.video.url" autoplay loop muted>
@@ -21,10 +21,10 @@
           <p class="feature-title">{{ product.video.description }}</p>
         </div>
       </ng-template>
-    </app-card>
+    </oth-card>
 
     <!-- Integration Swiper Presentation -->
-    <app-card *ngSwitchCase="'integrations'" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'"
+    <oth-card *ngSwitchCase="'integrations'" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'"
               [footerTemplate]="footerTemplate"
               class="presentation-card">
       <ng-template #bodyTemplate>
@@ -51,10 +51,10 @@
             experience</small>
         </div>
       </ng-template>
-    </app-card>
+    </oth-card>
 
     <!-- Demonstration Image Presentation -->
-    <app-card *ngSwitchCase="'demonstration-image'" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'"
+    <oth-card *ngSwitchCase="'demonstration-image'" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'"
               class="demonstration-image-card">
       <ng-template #bodyTemplate>
         <div class=" body">
@@ -66,11 +66,11 @@
           <p class="feature-title">{{ product.demonstrationImg.description }}</p>
         </div>
       </ng-template>
-    </app-card>
+    </oth-card>
 
     <!-- Features Presentation -->
     <ng-container *ngSwitchDefault>
-      <app-card *ngIf="product.features" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
+      <oth-card *ngIf="product.features" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
         <ng-template #bodyTemplate>
           <div class="body">
             <ng-container *ngFor="let feature of product.features">
@@ -83,7 +83,7 @@
             </ng-container>
           </div>
         </ng-template>
-      </app-card>
+      </oth-card>
     </ng-container>
   </div>
 </ng-container>

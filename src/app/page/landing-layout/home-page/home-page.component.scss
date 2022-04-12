@@ -1,7 +1,8 @@
+@use 'node_modules/@open-template-hub/card/styles/card/card';
+
 @use '../../../../styles/page/page';
 @use '../../../../styles/util/util';
 @use '../landing-layout.component';
-@use '../../../component/card/card.component';
 
 .hero {
   @include util.flex-layout-row;

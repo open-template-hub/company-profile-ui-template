@@ -12,6 +12,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction';
 
 import { AnimatedCodeEditorModule } from '@open-template-hub/animated-code-editor';
+import { CardModule } from '@open-template-hub/card';
 import { HeroModule } from '@open-template-hub/hero';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { MarkdownModule } from 'ngx-markdown';
@@ -28,7 +29,6 @@ import { ActivityHistoryCardComponent } from './component/card/activity-history-
 import { AssetCardComponent } from './component/card/asset-card/asset-card.component';
 import { BlogCardComponent } from './component/card/blog-card/blog-card.component';
 import { BlogHolderCardComponent } from './component/card/blog-holder-card/blog-holder-card.component';
-import { CardComponent } from './component/card/card.component';
 import { ContactInformationCardComponent } from './component/card/contact-information-card/contact-information-card.component';
 import { DocCardComponent } from './component/card/doc-card/doc-card.component';
 import { DocHolderCardComponent } from './component/card/doc-holder-card/doc-holder-cardcomponent';
@@ -115,7 +115,6 @@ FullCalendarModule.registerPlugins( [
     PricePlanComponent,
     ContactUsPageComponent,
     ProductPresentationComponent,
-    CardComponent,
     EmployeeCardComponent,
     ProductPresentationComponent,
     PolicyCardComponent,
@@ -163,6 +162,7 @@ FullCalendarModule.registerPlugins( [
     BrowserModule,
     FullCalendarModule,
     SwiperModule,
+    CardModule,
     AnimatedCodeEditorModule,
     HeroModule,
     ToastrModule.forRoot( { preventDuplicates: true } ),

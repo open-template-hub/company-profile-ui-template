@@ -302,7 +302,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/web-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.webUITemplate.video.description:Modern, responsive and customisable company profile ui template written with Angular`,
+          description: $localize`:@@userInterfaces.webUITemplate.video.description:Modern, responsive and customisable web ui template written with Angular`,
         },
         screenshots: [
           {
@@ -347,7 +347,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/mobile-ui-logo.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/mobile-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.mobileUITemplate.video.description:Modern, responsive and customisable company profile ui template written with React Native`,
+          description: $localize`:@@userInterfaces.mobileUITemplate.video.description:Modern, responsive and customisable mobile ui template written with React Native`,
         },
         screenshots: [
           {
@@ -376,12 +376,49 @@ export const PRODUCT_LINES: ProductLine[] = [
       {
         key: 'admin-ui-template',
         name: 'Admin UI',
-        color: ThemeColorSettings.gray,
-        description: $localize`:@@productLinesData.adminUITemplate.description:Coming soon..`,
-        url: URLS.maintenance,
+        description: $localize`:@@userInterfaces.webUITemplate.description:Admin UI Template is modern, responsive and customisable admin ui template for your business. It contains reusable components, theme color and design support along with dark theme support.`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'admin-ui-template',
+        urlDemo: 'https://admin.opentemplatehub.com',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/admin-ui-logo.min.png',
-        openSource: true
-      }
+        video: {
+          url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/web-ui-video-1.mp4',
+          description: $localize`:@@userInterfaces.webUITemplate.video.description:Modern, responsive and customisable admin ui template written with Angular`,
+        },
+        screenshots: [
+          {
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
+            description: $localize`:@@userInterfaces.webUITemplate.screenshot.1:Responsive Design`
+          },
+          {
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-dark.min.png',
+            description: $localize`:@@userInterfaces.webUITemplate.screenshot.2:Dark Mode Support`
+          },
+          {
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/web-ui-screenshot-1.min.png',
+            description: $localize`:@@userInterfaces.webUITemplate.screenshot.3:Integrated With OTH Servers`
+          },
+          {
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/web-ui-screenshot-2.min.png',
+            description: $localize`:@@userInterfaces.webUITemplate.screenshot.4:Customisable Theme Colors`
+          },
+          {
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/web-ui-screenshot-3.min.png',
+            description: $localize`:@@userInterfaces.webUITemplate.screenshot.5:Customisable Theme Design`
+          }
+        ],
+        openSource: true,
+        features: DEFAULT_OPEN_SOURCE_SERVER_FEATURES,
+        pricingOptions: DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS,
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.angular,
+          TECH_STACK.fontAwesome,
+          TECH_STACK.heroku,
+          TECH_STACK.sass,
+          TECH_STACK.markdown,
+          TECH_STACK.npm
+        ]
+      },
     ],
   },
   {

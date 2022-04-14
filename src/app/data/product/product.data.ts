@@ -672,6 +672,17 @@ export const LIBRARIES: ProductLine[] = [
         redirectToUrl: true
       },
       {
+        key: 'button',
+        name: 'Button',
+        description: `This library contains button ui component for UI Templates on Open Template Hub`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'button',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.oth.social.npm + '/' + 'button',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        openSource: true,
+        hasNpmPackage: true,
+        redirectToUrl: true
+      },
+      {
         key: 'hero',
         name: 'Hero',
         description: `This library contains hero ui component for UI Templates on Open Template Hub`,

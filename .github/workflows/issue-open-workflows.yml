@@ -13,7 +13,7 @@ jobs:
       - name: Move Issue to In-Progress
         uses: alex-page/github-project-automation-plus@v0.3.0
         with:
-          project: Open Template Hub Servers
+          project: Open Template Hub User Interfaces
           column: To do
           repo-token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
 

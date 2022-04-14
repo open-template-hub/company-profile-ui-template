@@ -92,7 +92,7 @@
     border: 0;
     padding-bottom: 35px;
 
-    & app-brand-button {
+    & oth-brand-button {
       @include util.flex-layout-column;
       @include util.flex-center-center;
 

@@ -12,6 +12,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction';
 
 import { AnimatedCodeEditorModule } from '@open-template-hub/animated-code-editor';
+import { ButtonModule } from '@open-template-hub/button';
 import { CardModule } from '@open-template-hub/card';
 import { HeroModule } from '@open-template-hub/hero';
 import { GoogleTagManagerModule } from 'angular-google-tag-manager';
@@ -21,10 +22,6 @@ import { SwiperModule } from 'swiper/angular';
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
-import { BrandButtonComponent } from './component/button/brand-button/brand-button.component';
-import { ButtonComponent } from './component/button/button.component';
-import { EventButtonComponent } from './component/button/event-button/event-button.component';
-import { InformationButtonComponent } from './component/button/information-button/information-button.component';
 import { ActivityHistoryCardComponent } from './component/card/activity-history-card/activity-history-card.component';
 import { AssetCardComponent } from './component/card/asset-card/asset-card.component';
 import { BlogCardComponent } from './component/card/blog-card/blog-card.component';
@@ -119,12 +116,8 @@ FullCalendarModule.registerPlugins( [
     ProductPresentationComponent,
     PolicyCardComponent,
     TimelineCardComponent,
-    ButtonComponent,
-    BrandButtonComponent,
-    InformationButtonComponent,
     BrandingPageComponent,
     PresentationCardComponent,
-    EventButtonComponent,
     ActivityHistoryCardComponent,
     ContentLoaderComponent,
     ImageContentLoaderComponent,
@@ -163,6 +156,7 @@ FullCalendarModule.registerPlugins( [
     FullCalendarModule,
     SwiperModule,
     CardModule,
+    ButtonModule,
     AnimatedCodeEditorModule,
     HeroModule,
     ToastrModule.forRoot( { preventDuplicates: true } ),

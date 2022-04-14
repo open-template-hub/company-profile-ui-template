@@ -42,6 +42,7 @@
     "@fullcalendar/interaction": "^5.11.0",
     "@open-template-hub/animated-code-editor": "^4.0.2",
     "@open-template-hub/card": "^4.0.2",
+    "@open-template-hub/button": "^4.0.3",
     "@open-template-hub/hero": "^4.0.2",
     "@stripe/stripe-js": "^1.27.0",
     "@types/simple-icons": "^5.21.1",

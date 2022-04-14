@@ -10,12 +10,12 @@
   backdrop-filter: blur(10px);
 
   & a {
-    padding: 10px 17px;
+    padding: 10px 12px;
     display: inline-flex;
     align-items: center;
     font-size: 14px;
     font-weight: 500;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 }
 
@@ -35,17 +35,20 @@
 app-dropdown-menu i {
   font-size: 22px;
   margin: 0.2em 0.2em 0.2em 0;
-  color: var(--theme-color);
+  color: var(--theme-color-lighter-4);
 }
 
 .top-nav .left-item-wrapper {
+  @include util.flex-layout-row;
+  @include util.flex-center-center;
+
   margin-right: auto;
 }
 
 .top-nav .right-item-wrapper {
   margin-right: 1em;
   margin-left: auto;
-  margin-top: 0.5em;
+  margin-top: 0.15em;
 }
 
 .top-nav a i {
@@ -54,7 +57,6 @@ app-dropdown-menu i {
 
   &.caret {
     font-size: 18px;
-    margin-left: 0.25em;
   }
 }
 

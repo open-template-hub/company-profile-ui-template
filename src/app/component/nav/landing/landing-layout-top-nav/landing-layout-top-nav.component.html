@@ -1,13 +1,13 @@
 <nav class="top-nav" #dropdownMenuParent>
-  <a (click)="closeDropdowns([dropdownMenuProducts, dropdownMenuLibraries, dropdownMenuServices])"
+  <a (click)="closeAllDropDowns()"
      [routerLink]="URLS.root"
      class="brand">
     <img [src]="BRAND.logo.main" alt="logo" class="brand-logo" height="40" width="40"/>
     <h2>Open Template Hub</h2>
   </a>
   <div class="left-item-wrapper">
-    <a (mouseenter)="dropdownMenuProducts.openDropdown(); closeDropdowns([dropdownMenuLibraries, dropdownMenuServices])"
-       (click)="dropdownMenuProducts.toggleDropdown(); closeDropdowns([dropdownMenuLibraries, dropdownMenuServices])">
+    <a (mouseenter)="dropdownMenuProducts.openDropdown(); closeOtherDropDowns(dropdownMenuProducts)"
+       (click)="dropdownMenuProducts.toggleDropdown(); closeOtherDropDowns(dropdownMenuProducts)">
       <app-dropdown-menu
           #dropdownMenuProducts
           [minimumColumns]="4"
@@ -18,8 +18,8 @@
            aria-hidden="true"></i>
       </app-dropdown-menu>
     </a>
-    <a (mouseenter)="dropdownMenuLibraries.openDropdown(); closeDropdowns([dropdownMenuProducts, dropdownMenuServices])"
-       (click)="dropdownMenuLibraries.toggleDropdown(); closeDropdowns([dropdownMenuProducts, dropdownMenuServices])">
+    <a (mouseenter)="dropdownMenuLibraries.openDropdown(); closeOtherDropDowns(dropdownMenuLibraries)"
+       (click)="dropdownMenuLibraries.toggleDropdown(); closeOtherDropDowns(dropdownMenuLibraries)">
       <app-dropdown-menu
           #dropdownMenuLibraries
           [minimumColumns]="2"
@@ -30,8 +30,20 @@
            aria-hidden="true"></i>
       </app-dropdown-menu>
     </a>
-    <a (mouseenter)="dropdownMenuServices.openDropdown(); closeDropdowns([dropdownMenuProducts, dropdownMenuLibraries])"
-       (click)="dropdownMenuServices.toggleDropdown(); closeDropdowns([dropdownMenuProducts, dropdownMenuLibraries])">
+    <a (mouseenter)="dropdownMenuPlugins.openDropdown(); closeOtherDropDowns(dropdownMenuPlugins)"
+       (click)="dropdownMenuPlugins.toggleDropdown(); closeOtherDropDowns(dropdownMenuPlugins)">
+      <app-dropdown-menu
+          #dropdownMenuPlugins
+          [minimumColumns]="1"
+          [productLines]="PLUGINS"
+          [dropdownParent]="dropdownMenuParent">
+        <span i18n="@@landingLayoutTopNav.plugins">Plugins</span>
+        <i [class]="'caret fas fa-fw ' + (!dropdownMenuPlugins.isDropdownOpen ? 'fa-chevron-down' : 'fa-chevron-up')"
+           aria-hidden="true"></i>
+      </app-dropdown-menu>
+    </a>
+    <a (mouseenter)="dropdownMenuServices.openDropdown(); closeOtherDropDowns(dropdownMenuServices)"
+       (click)="dropdownMenuServices.toggleDropdown(); closeOtherDropDowns(dropdownMenuServices)">
       <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES" [dropdownParent]="dropdownMenuParent">
         <span i18n="@@landingLayoutTopNav.services">Services</span>
         <i [class]="'caret fas fa-fw ' + (!dropdownMenuServices.isDropdownOpen ? 'fa-chevron-down' : 'fa-chevron-up')"

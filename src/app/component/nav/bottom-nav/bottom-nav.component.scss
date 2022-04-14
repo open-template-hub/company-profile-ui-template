@@ -23,7 +23,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 25vw;
+  min-width: 20vw;
   overflow: hidden;
   white-space: nowrap;
   font-size: 13px;
@@ -45,10 +45,6 @@
   color: var(--theme-color);
   border-radius: 0;
   border-bottom: var(--theme-color) 1px solid;
-}
-
-.bottom-nav .contact span {
-  font-size: 0.8em;
 }
 
 .bottom-nav .contact:hover {

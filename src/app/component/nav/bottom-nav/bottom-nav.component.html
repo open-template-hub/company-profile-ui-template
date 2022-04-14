@@ -2,6 +2,8 @@
 </app-dropdown-menu>
 <app-dropdown-menu #dropdownMenuLibraries [productLines]="LIBRARIES">
 </app-dropdown-menu>
+<app-dropdown-menu #dropdownMenuPlugins [productLines]="PLUGINS">
+</app-dropdown-menu>
 <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES">
 </app-dropdown-menu>
 <nav class="bottom-nav">
@@ -9,25 +11,28 @@
     <i [class]="'fas fa-chevron-left fa-fw'" aria-hidden="true"></i>
     <span> Back </span>
   </a>
-  <a
-      (click)="
-      dropdownMenuProducts.closeDropdown(); closeDropdowns([dropdownMenuProducts, dropdownMenuLibraries, dropdownMenuServices])"
+  <a (click)="closeAllDropDowns()"
       *ngIf="!pageTwoOpened"
       [routerLink]="URLS.root">
     <i [class]="'fas fa-home fa-fw'" aria-hidden="true"></i>
     <span> Home </span>
   </a>
-  <a (click)="dropdownMenuProducts.toggleDropdown(); closeDropdowns([dropdownMenuLibraries, dropdownMenuServices])"
+  <a (click)="dropdownMenuProducts.toggleDropdown(); closeOtherDropDowns(dropdownMenuProducts)"
      *ngIf="!pageTwoOpened">
     <i [class]="'fas fa-server fa-fw'" aria-hidden="true"></i>
     <span> Products </span>
   </a>
-  <a (click)="dropdownMenuLibraries.toggleDropdown(); closeDropdowns([dropdownMenuProducts, dropdownMenuServices])"
+  <a (click)="dropdownMenuLibraries.toggleDropdown(); closeOtherDropDowns(dropdownMenuLibraries)"
      *ngIf="!pageTwoOpened">
     <i [class]="'fas fa-folder-open fa-fw'" aria-hidden="true"></i>
     <span> Libraries </span>
   </a>
-  <a (click)="dropdownMenuServices.toggleDropdown(); closeDropdowns([dropdownMenuProducts, dropdownMenuLibraries])"
+  <a (click)="dropdownMenuPlugins.toggleDropdown(); closeOtherDropDowns(dropdownMenuPlugins)"
+     *ngIf="!pageTwoOpened">
+    <i [class]="'fas fa-puzzle-piece fa-fw'" aria-hidden="true"></i>
+    <span> Plugins </span>
+  </a>
+  <a (click)="dropdownMenuServices.toggleDropdown(); closeOtherDropDowns(dropdownMenuServices)"
      *ngIf="pageTwoOpened">
     <i [class]="'fas fa-handshake fa-fw'" aria-hidden="true"></i>
     <span> Services </span>
@@ -39,18 +44,21 @@
     <i [class]="'fas fa-chevron-right fa-fw'" aria-hidden="true"></i>
     <span> More </span>
   </a>
-  <a (click)="closeDropdowns([dropdownMenuProducts, dropdownMenuLibraries, dropdownMenuServices])"
+  <a (click)="closeAllDropDowns()"
      *ngIf="pageTwoOpened"
      [routerLink]="URLS.about">
     <i [class]="'fas fa-address-card fa-fw'" aria-hidden="true"></i>
     <span> About </span>
   </a>
   <a
-      (click)="closeDropdowns([dropdownMenuProducts, dropdownMenuLibraries, dropdownMenuServices])"
+      (click)="closeAllDropDowns()"
       *ngIf="pageTwoOpened"
       [routerLink]="URLS.contactUs"
       class="contact">
     <i [class]="'fas fa-envelope fa-fw'" aria-hidden="true"></i>
     <span> Contact Us </span>
+  </a>
+  <a *ngIf="pageTwoOpened" class="disabled">
+    <span></span>
   </a>
 </nav>

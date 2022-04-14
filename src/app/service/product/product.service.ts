@@ -39,12 +39,14 @@ export class ProductService {
   }
 
   redirectToProductUrl( product: Product, productLine: ProductLine ) {
-    if ( !product.redirectToUrl ) {
+    if ( product.redirectToUrl ) {
+      window.open( product.url, '_blank' );
+    } else if ( product.redirectToUrlAlter ) {
+      window.open( product.urlAlter, '_blank' );
+    } else {
       this.router.navigate( [ URLS.product + '/' + productLine.key + '/' + product.key ] ).then( () => {
         return true;
       } );
-    } else {
-      window.open( product.url, '_blank' );
     }
   }
 }

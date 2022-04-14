@@ -33,6 +33,7 @@ export interface Product {
   techStack?: Image[];
   integrations?: any;
   redirectToUrl?: boolean;
+  redirectToUrlAlter?: boolean;
   hasNpmPackage?: boolean;
 }
 

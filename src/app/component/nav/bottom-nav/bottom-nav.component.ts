@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { LIBRARIES, PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
+import { LIBRARIES, PLUGINS, PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
 import { URLS } from '../../../data/navigation/navigation.data';
 import { ProductLine } from '../../../model/product/product.model';
 import { LoadingService } from '../../../service/loading/loading.service';
@@ -20,9 +20,12 @@ export class BottomNavComponent {
   PRODUCT_LINES: ProductLine[] = PRODUCT_LINES;
   SERVICES: ProductLine[] = SERVICES;
   LIBRARIES: ProductLine[] = LIBRARIES;
+  PLUGINS: ProductLine[] = PLUGINS;
 
-  @ViewChild( 'dropdownMenuProducts' ) dropdownMenuProducts: ElementRef;
-  @ViewChild( 'dropdownMenuServices' ) dropdownMenuServices: ElementRef;
+  @ViewChild( 'dropdownMenuProducts' ) dropdownMenuProducts: DropdownMenuComponent;
+  @ViewChild( 'dropdownMenuLibraries' ) dropdownMenuLibraries: DropdownMenuComponent;
+  @ViewChild( 'dropdownMenuPlugins' ) dropdownMenuPlugins: DropdownMenuComponent;
+  @ViewChild( 'dropdownMenuServices' ) dropdownMenuServices: DropdownMenuComponent;
 
   constructor(
       private router: Router,
@@ -33,5 +36,23 @@ export class BottomNavComponent {
 
   closeDropdowns( dropdownMenus: DropdownMenuComponent[] ) {
     dropdownMenus.forEach( dropdownMenu => dropdownMenu.closeDropdown() );
+  }
+
+  closeOtherDropDowns( dropDownMenu: DropdownMenuComponent ) {
+    const dropdownMenus = [];
+    dropdownMenus.push( this.dropdownMenuProducts, this.dropdownMenuLibraries, this.dropdownMenuPlugins, this.dropdownMenuServices );
+
+    dropdownMenus.forEach( menu => {
+      if ( menu !== dropDownMenu ) {
+        menu.closeDropdown();
+      }
+    } );
+  }
+
+  closeAllDropDowns() {
+    this.dropdownMenuProducts.closeDropdown();
+    this.dropdownMenuLibraries.closeDropdown();
+    this.dropdownMenuPlugins.closeDropdown();
+    this.dropdownMenuServices.closeDropdown();
   }
 }

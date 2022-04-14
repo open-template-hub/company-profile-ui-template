@@ -13,7 +13,7 @@ import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { BRAND } from '../../../data/brand/brand.data';
 import { URLS } from '../../../data/navigation/navigation.data';
-import { LIBRARIES, PRODUCT_LINES } from '../../../data/product/product.data';
+import { LIBRARIES, PLUGINS, PRODUCT_LINES } from '../../../data/product/product.data';
 import { Partner } from '../../../model/partner/partner.model';
 import { GithubProviderService } from '../../../service/provider/github-provider.service';
 
@@ -34,6 +34,7 @@ export class HomePageComponent implements AfterViewInit {
   URLS = URLS;
   PRODUCT_LINES = PRODUCT_LINES;
   LIBRARIES = LIBRARIES;
+  PLUGINS = PLUGINS;
 
   // Todo: Change this with customers
   PARTNERS: Partner[] = PARTNERS;
@@ -69,7 +70,7 @@ export class HomePageComponent implements AfterViewInit {
 
   andMoreTitle = [
     { text: `And more..`, level: 2 },
-    { text: `Start using our open source libraries today.` }
+    { text: `Open Source libraries and plugins..` }
   ];
 
   constructor(

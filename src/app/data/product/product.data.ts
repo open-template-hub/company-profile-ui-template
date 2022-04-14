@@ -726,6 +726,26 @@ export const LIBRARIES: ProductLine[] = [
   },
 ];
 
+export const PLUGINS: ProductLine[] = [
+  {
+    key: 'plugins',
+    name: 'Plugins',
+    description: `Plugins made by Open Template Hub`,
+    products: [
+      {
+        key: 'oth-intellij-platform-plugin-template',
+        name: 'OTH Theme',
+        description: `OTH themes for JetBrains. Dark and light themes using Open Template Hub's color palette.`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.oth.social.github + '/' + 'oth-intellij-platform-plugin-template',
+        urlAlter: 'https://plugins.jetbrains.com/plugin/18932-oth-theme',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        openSource: true,
+        redirectToUrlAlter: true
+      }
+    ],
+  }
+];
+
 export const SERVICES: ProductLine[] = [
   {
     key: 'services',

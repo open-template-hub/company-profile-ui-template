@@ -1,4 +1,4 @@
-import { Ribbon } from '../ribbon/ribbon.model';
+import { Ribbon } from '@open-template-hub/card';
 
 export interface PricingOption {
   title: string,

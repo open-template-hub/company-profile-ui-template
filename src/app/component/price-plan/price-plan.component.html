@@ -8,8 +8,8 @@
         <div *ngFor="let pricingOption of product.pricingOptions" class="available-plans-column-area column-feature">
           <p>{{ pricingOption.title }}</p>
           <p>{{ pricingOption.description }}</p>
-          <app-button [routerLink]="URLS.pricing + '/' + productLineKey + '/' + product.key"
-                      i18n-text="@@pricePlan.viewPricing.button" text="View Pricing"></app-button>
+          <oth-button [routerLink]="URLS.pricing + '/' + productLineKey + '/' + product.key"
+                      i18n-text="@@pricePlan.viewPricing.button" text="View Pricing"></oth-button>
         </div>
       </div>
     </div>

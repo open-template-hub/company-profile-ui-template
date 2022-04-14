@@ -1,4 +1,4 @@
-<app-card *ngIf="pricingOption" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
+<oth-card *ngIf="pricingOption" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
           [headerTemplate]="headerTemplate" [ribbon]="pricingOption.ribbon || undefined"
           class="pricing-card">
   <!-- Header -->
@@ -37,14 +37,14 @@
   <ng-template #footerTemplate>
     <div class="footer">
       <ng-container *ngIf="pricingOption.contactRequired">
-        <app-button (click)="callToAction(URLS.contactUs)" [text]="'Contact Us'"></app-button>
+        <oth-button (click)="callToAction(URLS.contactUs)" [text]="'Contact Us'"></oth-button>
       </ng-container>
       <ng-container *ngIf="!pricingOption.contactRequired">
-        <app-button (click)="callToAction(demoLink)" *ngIf="pricingOption.price.value === '0'"
-                    [text]="'Get Started'"></app-button>
-        <app-button (click)="callToAction()" *ngIf="pricingOption.price.value !== '0'" [icon]="'shopping-cart'"
-                    [text]="'Buy Now'"></app-button>
+        <oth-button (click)="callToAction(demoLink)" *ngIf="pricingOption.price.value === '0'"
+                    [text]="'Get Started'"></oth-button>
+        <oth-button (click)="callToAction()" *ngIf="pricingOption.price.value !== '0'" [icon]="'shopping-cart'"
+                    [text]="'Buy Now'"></oth-button>
       </ng-container>
     </div>
   </ng-template>
-</app-card>
+</oth-card>

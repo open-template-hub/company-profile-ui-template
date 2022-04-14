@@ -1,6 +1,7 @@
+@use 'node_modules/@open-template-hub/card/styles/card/card';
+
 @use '../../../../styles/util/util';
 @use '../landing-layout.component';
-@use '../../../component/card/card.component';
 
 @media only screen and (max-width: 999px) {
   .flexible-cards-wrapper {

@@ -1,7 +1,7 @@
 <!-- Contact Us -->
 <oth-hero [contents]="appHeroContent"></oth-hero>
 <div class="contact-us-page-content">
-  <app-card [bodyTemplate]="bodyTemplate">
+  <oth-card [bodyTemplate]="bodyTemplate">
     <ng-template #bodyTemplate>
       <div class="body">
         <div *ngIf="emailSent">
@@ -93,13 +93,13 @@
             <h4 i18n="@@contactUs.yourMessage">Your Message</h4>
           </div>
           <div class="button-area">
-            <app-button [icon]="'envelope'" i18n-text="@@contactUs.contactUsButton" text="CONTACT US">
-            </app-button>
+            <oth-button [icon]="'envelope'" i18n-text="@@contactUs.contactUsButton" text="CONTACT US">
+            </oth-button>
           </div>
         </form>
       </div>
     </ng-template>
-  </app-card>
+  </oth-card>
   <div *ngIf="features" class="features-area">
     <h3 class="header">{{ features.title }}</h3>
     <div *ngFor="let feature of features.features">

@@ -1,4 +1,4 @@
-<app-card *ngIf="timelineItem" [bodyTemplate]="bodyTemplate" [class]="timelineItem.theme ? timelineItem.theme : ''"
+<oth-card *ngIf="timelineItem" [bodyTemplate]="bodyTemplate" [class]="timelineItem.theme ? timelineItem.theme : ''"
           [footerTemplate]="footerTemplate" [headerTemplate]="headerTemplate"
           class="timeline-card">
   <!-- Header -->
@@ -25,4 +25,4 @@
       <small>{{ timelineItem.footerText }}</small>
     </div>
   </ng-template>
-</app-card>
+</oth-card>

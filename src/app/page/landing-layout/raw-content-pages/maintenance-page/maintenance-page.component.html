@@ -6,6 +6,6 @@
   <!-- Under maintenance -->
   <oth-hero [contents]="appHeroContents"
             [heroClass]="'no-padding'"></oth-hero>
-  <app-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.warning"
-                          i18n-text="@@maintenance.home.button" text="HOME"></app-information-button>
+  <oth-information-button (click)="router.navigate([URLS.root])" [informationType]="INFORMATION_TYPES.warning"
+                          i18n-text="@@maintenance.home.button" text="HOME"></oth-information-button>
 </div>

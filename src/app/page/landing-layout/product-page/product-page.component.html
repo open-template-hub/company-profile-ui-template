@@ -1,7 +1,7 @@
 <div class="product-page-content">
   <div class="intro">
     <div class="left">
-      <app-card
+      <oth-card
           [bodyTemplate]="bodyTemplate"
           [bottomWrapperTemplate]="bottomWrapperTemplate"
           [cardClass]="'transparent-card'"
@@ -16,42 +16,42 @@
           <div class="body">
             <p>{{ product.description }}</p>
             <div *ngIf="product.openSource" class="button-wrapper">
-              <app-brand-button
+              <oth-brand-button
                   (click)="redirect(product.url)"
                   [icon]="environmentCommon.website.github.cssClass"
                   i18n-text="@@productPage.openSource.button"
                   text="Open Source">
-              </app-brand-button>
+              </oth-brand-button>
 
-              <app-button *ngIf="product.urlDemo"
+              <oth-button *ngIf="product.urlDemo"
                           (click)="redirect(product.urlDemo)"
                           i18n-text="@@productPage.demo.button"
                           text="Demo">
-              </app-button>
+              </oth-button>
 
-              <app-button
+              <oth-button
                   *ngIf="productLineKey !== 'generator'"
                   (click)="router.navigate([URLS.contactUs])"
                   i18n-text="@@productPage.professional.button"
                   text="Professional Help">
-              </app-button>
-              <app-brand-button
+              </oth-button>
+              <oth-brand-button
                   *ngIf="product.hasNpmPackage"
                   (click)="redirect(product.urlAlter)"
                   [icon]="environmentCommon.website.npm.cssClass"
                   i18n-text="@@productPage.downloadPackage.button"
                   text="Download Package">
-              </app-brand-button>
+              </oth-brand-button>
             </div>
             <div *ngIf="!product.openSource" class="button-wrapper">
-              <app-button
+              <oth-button
                   (click)="router.navigate([URLS.contactUs])"
-                  [text]="getContactUsButtonText(productLineKey)"></app-button>
+                  [text]="getContactUsButtonText(productLineKey)"></oth-button>
             </div>
           </div>
         </ng-template>
         <ng-template #bottomWrapperTemplate></ng-template>
-      </app-card>
+      </oth-card>
     </div>
     <div class="right">
       <app-product-presentation
@@ -112,7 +112,7 @@
             *ngFor="let testimonial of TESTIMONIALS"
             [testimonial]="testimonial">
         </app-testimonial-card>
-        <app-button
+        <oth-button
             i18n-text="@@productPage.readMoreStories"
             text="Read More Stories"
             [routerLink]="URLS.customers"
@@ -121,7 +121,7 @@
             'lighter-contrast-font-color',
             'transparent-button'
           ]">
-        </app-button>
+        </oth-button>
       </div>
     </ng-container>
 

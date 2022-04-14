@@ -1,5 +1,7 @@
 @use 'styles.common';
 
+@use 'node_modules/@fortawesome/fontawesome-free/css/all';
+
 @use 'information/information';
 @use 'animation/animation';
 @use 'logo/logo';
@@ -11,6 +13,5 @@
 @use 'ribbon/ribbon';
 @use 'social/social';
 @use 'toastr/toastr';
-@use '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
 @use 'theme/theme';

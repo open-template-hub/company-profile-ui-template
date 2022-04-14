@@ -114,7 +114,7 @@ $information-colors-dark-mode: (
 
 @mixin define-information-color($type) {
   .#{$type}-background-color {
-    --info: var(--#{$type});
+    --information-color: var(--#{$type});
   }
 }
 

@@ -23,7 +23,7 @@ export class NpmProviderService {
       for ( const productLine of system ) {
         for ( const product of productLine.products ) {
           if ( product.hasNpmPackage ) {
-            const uri = `${ environmentCommon.website.npm.api.download }/${ BRAND.establishDate }:${ today }/${ environmentCommon.oth.social.npm }/${ product.key }`;
+            const uri = `${ environmentCommon.website.npm.api.download }/${ BRAND.establishDate }:${ today }/${ environmentCommon.company.social.npm }/${ product.key }`;
 
             // Using Xml Http Request because http.get cause CORS issue
             const response = await this.util.corsRequest( uri );

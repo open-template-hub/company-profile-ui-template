@@ -3,7 +3,7 @@
      [routerLink]="URLS.root"
      class="brand">
     <img [src]="BRAND.logo.main" alt="logo" class="brand-logo" height="40" width="40"/>
-    <h2>Open Template Hub</h2>
+    <h2>{{ BRAND.name }}</h2>
   </a>
   <div class="left-item-wrapper">
     <a (mouseenter)="dropdownMenuProducts.openDropdown(); closeOtherDropDowns(dropdownMenuProducts)"

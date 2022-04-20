@@ -7,7 +7,7 @@ export const COMPANY_PAGES: { name: string, url: string, isExternal?: boolean }[
   { name: $localize `:@@footer.partners:Partners`, url: URLS.partners },
   { name: $localize `:@@footer.branding:Branding`, url: URLS.branding },
   { name: $localize `:@@footer.jobs:Jobs`,
-    url: environmentCommon.website.linkedin.companyUrl + '/' + environmentCommon.oth.social.linkedin + '/jobs',
+    url: environmentCommon.website.linkedin.companyUrl + '/' + environmentCommon.company.social.linkedin + '/jobs',
     isExternal: true },
   { name: $localize `:@@footer.blog:Blog`, url: URLS.blog }
 ]

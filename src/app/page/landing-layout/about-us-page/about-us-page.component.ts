@@ -46,11 +46,11 @@ export class AboutUsPageComponent {
   ];
 
   constructor() {
-    for (const website in environmentCommon.oth.social) {
-      if (environmentCommon.oth.social[website] && website !== 'npm') {
+    for (const website in environmentCommon.company.social) {
+      if (environmentCommon.company.social[website] && website !== 'npm') {
         this.websites.push({
           name: website.split(/(?=[A-Z])/).join(' '),
-          handle: environmentCommon.oth.social[website],
+          handle: environmentCommon.company.social[website],
           cssClass: environmentCommon.website[website].cssClass,
           url: environmentCommon.website[website].companyUrl
             ? environmentCommon.website[website].companyUrl

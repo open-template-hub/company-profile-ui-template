@@ -2,7 +2,7 @@ import { EnvironmentCommonModel } from '../app/model/environment-common/environm
 import { environment } from './environment';
 
 export const environmentCommon: EnvironmentCommonModel = {
-  oth: {
+  company: {
     website: 'https://opentemplatehub.com',
     email: 'info@opentemplatehub.com',
     social: {

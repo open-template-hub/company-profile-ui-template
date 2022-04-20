@@ -10,7 +10,6 @@ export interface EnvironmentModel {
   production: boolean;
   serverUrl: string;
   clientUrl: string;
-  mockDataEnabled: boolean;
 
   oauth: {
     twitter: OauthModel

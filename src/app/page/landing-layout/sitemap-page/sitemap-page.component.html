@@ -36,6 +36,18 @@
         </div>
         <div class="column">
           <div class="link-inner-column">
+            <div *ngFor="let productLine of PLUGINS" class="link-group">
+              <div class="title">
+                <p *ngIf="productLine.name"
+                   [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
+              </div>
+              <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+                 [class]="productLine.color ? productLine.color : ''"
+                 (click)="redirectToProductUrl(product, productLine)"
+                 class="link-item">
+                {{ product.name }}
+              </a>
+            </div>
             <div *ngFor="let productLine of SERVICES" class="link-group">
               <div class="title">
                 <p *ngIf="productLine.name"

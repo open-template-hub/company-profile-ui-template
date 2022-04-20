@@ -30,6 +30,16 @@
             </a>
           </ng-container>
         </div>
+        <div *ngFor="let productLine of PLUGINS" class="footer-link-group">
+          <p *ngIf="productLine.name"
+             [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
+          <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+             [class]="productLine.color ? productLine.color : ''"
+             (click)="redirectToProductUrl(product, productLine)"
+             class="footer-link-item">
+            {{ product.name }}
+          </a>
+        </div>
         <div *ngFor="let productLine of SERVICES" class="footer-link-group">
           <p *ngIf="productLine.name"
              [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>

@@ -747,9 +747,10 @@ export const PLUGINS: ProductLine[] = [
         name: 'VSCode Theme',
         description: `OTH themes for VSCode. Dark and light themes using Open Template Hub's color palette.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.company.social.github + '/' + 'oth-vscode-theme-plugin',
+        urlAlter: 'https://marketplace.visualstudio.com/items?itemName=OpenTemplateHub.oth-theme',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/vscode.png',
         openSource: true,
-        redirectToUrl: true
+        redirectToUrlAlter: true
       }
     ],
   }

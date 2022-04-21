@@ -734,13 +734,22 @@ export const PLUGINS: ProductLine[] = [
     products: [
       {
         key: 'oth-intellij-theme-plugin',
-        name: 'OTH Theme',
+        name: 'IntelliJ Theme',
         description: `OTH themes for JetBrains. Dark and light themes using Open Template Hub's color palette.`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.company.social.github + '/' + 'oth-intellij-theme-plugin',
         urlAlter: 'https://plugins.jetbrains.com/plugin/18932-oth-theme',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/intellij.png',
         openSource: true,
         redirectToUrlAlter: true
+      },
+      {
+        key: 'oth-vscode-theme-plugin',
+        name: 'VSCode Theme',
+        description: `OTH themes for VSCode. Dark and light themes using Open Template Hub's color palette.`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.company.social.github + '/' + 'oth-vscode-theme-plugin',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/vscode.png',
+        openSource: true,
+        redirectToUrl: true
       }
     ],
   }

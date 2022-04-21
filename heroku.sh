@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Building OTH Web UI app for $NODE_ENV"
+echo "Building OTH Company UI app for $NODE_ENV"
 
 build_dev='ng build --configuration=staging --localize'
 if [ $NODE_ENV = "development" ]; then

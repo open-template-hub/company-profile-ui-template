@@ -3,11 +3,11 @@ import { EMPLOYEES } from 'src/app/data/employee/employee.data';
 import { OTH_TIME_LINE } from 'src/app/data/timeline/timeline.data';
 import { environmentCommon } from '../../../../environments/environment-common';
 
-@Component({
+@Component( {
   selector: 'app-about-us-page',
   templateUrl: './about-us-page.component.html',
-  styleUrls: ['./about-us-page.component.scss'],
-})
+  styleUrls: [ './about-us-page.component.scss' ],
+} )
 export class AboutUsPageComponent {
   OTH_TIME_LINE = OTH_TIME_LINE;
   EMPLOYEES = EMPLOYEES;
@@ -46,21 +46,23 @@ export class AboutUsPageComponent {
   ];
 
   constructor() {
-    for (const website in environmentCommon.company.social) {
-      if (environmentCommon.company.social[website] && website !== 'npm') {
-        this.websites.push({
-          name: website.split(/(?=[A-Z])/).join(' '),
-          handle: environmentCommon.company.social[website],
-          cssClass: environmentCommon.website[website].cssClass,
-          url: environmentCommon.website[website].companyUrl
-            ? environmentCommon.website[website].companyUrl
-            : environmentCommon.website[website].url,
-        });
+    for ( const website in environmentCommon.company.social ) {
+      if ( environmentCommon.company.social[ website ] && website !== 'npm' ) {
+        this.websites.push( {
+          name: environmentCommon.website[ website ].name,
+          handle: environmentCommon.company.social[ website ],
+          cssClass: environmentCommon.website[ website ].cssClass,
+          url: environmentCommon.website[ website ].companyUrl
+              ? environmentCommon.website[ website ].companyUrl
+              : ( environmentCommon.website[ website ].channelUrl
+                  ? environmentCommon.website[ website ].channelUrl
+                  : environmentCommon.website[ website ].url ),
+        } );
       }
     }
   }
 
-  redirect(href: string) {
+  redirect( href: string ) {
     window.location.href = href;
   }
 }

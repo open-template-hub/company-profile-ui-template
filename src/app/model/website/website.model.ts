@@ -4,6 +4,7 @@ export interface WebsiteModel {
   cssClass: string,
   url?: string,
   companyUrl?: string,
+  channelUrl?: string,
   shareUrl?: string,
   callbackParams?: string[]
   tag?: string

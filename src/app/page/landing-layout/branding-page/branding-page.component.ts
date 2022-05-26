@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environmentCommon } from '../../../../environments/environment-common';
 import { BRAND } from '../../../data/brand/brand.data';
 import { ThemeService } from '../../../service/theme/theme.service';
 
@@ -10,6 +11,8 @@ import { ThemeService } from '../../../service/theme/theme.service';
 export class BrandingPageComponent {
 
   BRAND = BRAND;
+
+  environmentCommon = environmentCommon;
 
   themeColorSetting: string;
 
@@ -25,9 +28,9 @@ export class BrandingPageComponent {
 
     this.themeService.themeColorSetting.subscribe( themeColorSetting => {
       this.themeColorSetting = themeColorSetting;
-      this.colorPalette.brandColor = getComputedStyle( document.getElementById( 'oth-component' ) ).getPropertyValue( '--theme-color' );
-      this.colorPalette.secondaryColor = getComputedStyle( document.getElementById( 'oth-component' ) ).getPropertyValue( '--theme-color-secondary' );
-      this.colorPalette.tertiaryColor = getComputedStyle( document.getElementById( 'oth-component' ) ).getPropertyValue( '--theme-color-tertiary' );
+      this.colorPalette.brandColor = getComputedStyle( document.getElementById( 'app-component' ) ).getPropertyValue( '--theme-color' );
+      this.colorPalette.secondaryColor = getComputedStyle( document.getElementById( 'app-component' ) ).getPropertyValue( '--theme-color-secondary' );
+      this.colorPalette.tertiaryColor = getComputedStyle( document.getElementById( 'app-component' ) ).getPropertyValue( '--theme-color-tertiary' );
     } );
   }
 }

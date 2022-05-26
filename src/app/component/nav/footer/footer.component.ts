@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { LIBRARIES, PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
+import { LIBRARIES, PLUGINS, PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
 import { environment } from 'src/environments/environment';
 import { environmentCommon } from 'src/environments/environment-common';
 import { BRAND_PAGES } from '../../../data/brand-pages/brand-pages.data';
@@ -28,6 +28,7 @@ export class FooterComponent {
 
   PRODUCT_LINES: ProductLine[] = PRODUCT_LINES;
   LIBRARIES: ProductLine[] = LIBRARIES;
+  PLUGINS: ProductLine[] = PLUGINS;
   SERVICES: ProductLine[] = SERVICES;
 
   BRAND = BRAND;

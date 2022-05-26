@@ -36,6 +36,18 @@
         </div>
         <div class="column">
           <div class="link-inner-column">
+            <div *ngFor="let productLine of PLUGINS" class="link-group">
+              <div class="title">
+                <p *ngIf="productLine.name"
+                   [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
+              </div>
+              <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+                 [class]="productLine.color ? productLine.color : ''"
+                 (click)="redirectToProductUrl(product, productLine)"
+                 class="link-item">
+                {{ product.name }}
+              </a>
+            </div>
             <div *ngFor="let productLine of SERVICES" class="link-group">
               <div class="title">
                 <p *ngIf="productLine.name"
@@ -97,11 +109,6 @@
                 </span>
                 </app-ext-link>
               </ng-container>
-              <a i18n="@@sitemap.support" [routerLink]="URLS.maintenance" class="link-item">Support</a>
-              <a i18n="@@sitemap.contactUs" [routerLink]="URLS.contactUs" class="link-item">Contact</a>
-              <a i18n="@@sitemap.termsAndConditions" [routerLink]="URLS.terms" class="link-item">Terms & Conditions</a>
-              <a i18n="@@sitemap.privacy" [routerLink]="URLS.privacyPolicy" class="link-item">Privacy</a>
-              <a i18n="@@sitemap.cookies" [routerLink]="URLS.cookiePolicy" class="link-item">Cookies</a>
             </div>
           </div>
         </div>

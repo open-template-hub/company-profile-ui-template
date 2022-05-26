@@ -1,7 +1,7 @@
 import { WebsiteModel } from '../website/website.model';
 
 export interface EnvironmentCommonModel {
-  oth: {
+  company: {
     website: string,
     email: string,
     social: {

@@ -9,9 +9,6 @@ export const environment: EnvironmentModel = {
 
   clientUrl: 'https://dev.opentemplatehub.com',
 
-  // FIXME: After switching to live, change this to false
-  mockDataEnabled: true,
-
   oauth: {
     twitter: {
       tag: 'TWITTER_DEVELOPMENT'

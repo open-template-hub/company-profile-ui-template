@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { COMPANY_PAGES } from 'src/app/data/company/company.data';
 import { DEVELOPERS_PAGES } from 'src/app/data/developers/developers.data';
-import { LIBRARIES, PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
+import { LIBRARIES, PLUGINS, PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
 import { RESOURCES_PAGES } from 'src/app/data/resources/resources.data';
 import { environmentCommon } from 'src/environments/environment-common';
 import { URLS } from '../../../data/navigation/navigation.data';
@@ -17,6 +17,7 @@ export class SitemapPageComponent {
 
   PRODUCT_LINES: ProductLine[] = PRODUCT_LINES;
   LIBRARIES: ProductLine[] = LIBRARIES;
+  PLUGINS: ProductLine[] = PLUGINS;
   SERVICES: ProductLine[] = SERVICES;
 
   COMPANY_PAGES = COMPANY_PAGES;

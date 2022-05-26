@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { environmentCommon } from '../../../../../environments/environment-common';
+import { BRAND } from '../../../../data/brand/brand.data';
 import { URLS } from '../../../../data/navigation/navigation.data';
 
 @Component( {
@@ -8,7 +10,11 @@ import { URLS } from '../../../../data/navigation/navigation.data';
 } )
 export class TermsPageComponent {
 
+  BRAND = BRAND;
+
   URLS = URLS;
+
+  environmentCommon = environmentCommon;
 
   constructor() {
     // Intentionally Blank

@@ -9,8 +9,6 @@ export const environment: EnvironmentModel = {
 
   clientUrl: 'https://opentemplatehub.com',
 
-  mockDataEnabled: false,
-
   oauth: {
     twitter: {
       tag: 'TWITTER'

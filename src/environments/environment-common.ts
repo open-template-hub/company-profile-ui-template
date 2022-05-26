@@ -2,7 +2,7 @@ import { EnvironmentCommonModel } from '../app/model/environment-common/environm
 import { environment } from './environment';
 
 export const environmentCommon: EnvironmentCommonModel = {
-  oth: {
+  company: {
     website: 'https://opentemplatehub.com',
     email: 'info@opentemplatehub.com',
     social: {
@@ -27,7 +27,7 @@ export const environmentCommon: EnvironmentCommonModel = {
       websiteType: 'oauth'
     },
     linkedin: {
-      name: 'Linkedin',
+      name: 'LinkedIn',
       logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/linkedin.png',
       cssClass: 'linkedin-in',
       url: 'https://www.linkedin.com',
@@ -38,7 +38,7 @@ export const environmentCommon: EnvironmentCommonModel = {
       websiteType: 'oauth'
     },
     github: {
-      name: 'Github',
+      name: 'GitHub',
       logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/github.png',
       cssClass: 'github',
       url: 'https://github.com',
@@ -110,7 +110,7 @@ export const environmentCommon: EnvironmentCommonModel = {
       websiteType: 'payment'
     },
     paypal: {
-      name: 'Paypal',
+      name: 'PayPal',
       logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/paypal.png',
       cssClass: 'paypal',
       version: '5.0.128',
@@ -208,9 +208,10 @@ export const environmentCommon: EnvironmentCommonModel = {
       websiteType: 'other'
     },
     youtube: {
-      name: 'Youtube',
+      name: 'YouTube',
       cssClass: 'youtube',
       url: 'https://youtube.com',
+      channelUrl: 'https://youtube.com/channel',
       websiteType: 'other'
     },
     productHunt: {

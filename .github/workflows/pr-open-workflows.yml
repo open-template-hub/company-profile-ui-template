@@ -24,7 +24,7 @@ jobs:
       - name: Move PR to In-Progress
         uses: alex-page/github-project-automation-plus@v0.3.0
         with:
-          project: Open Template Hub Servers
+          project: Open Template Hub User Interfaces
           column: In progress
           repo-token: ${{ secrets.MASTER_BRANCH_ACCESS_TOKEN }}
 

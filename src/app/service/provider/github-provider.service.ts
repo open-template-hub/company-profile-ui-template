@@ -20,7 +20,7 @@ export class GithubProviderService {
   }
 
   getGithubStars = async ( productKey: string ) => {
-    const uri = `${ environmentCommon.website.github.api.repo }/${ environmentCommon.oth.social.github }/${ productKey }`;
+    const uri = `${ environmentCommon.website.github.api.repo }/${ environmentCommon.company.social.github }/${ productKey }`;
 
     const response = await this.util.corsRequest( uri );
     if ( response != null ) {
@@ -32,7 +32,7 @@ export class GithubProviderService {
   };
 
   getGithubCounters = async ( productKey: string ) => {
-    const uri = `${ environmentCommon.website.github.api.repo }/${ environmentCommon.oth.social.github }/${ productKey }`;
+    const uri = `${ environmentCommon.website.github.api.repo }/${ environmentCommon.company.social.github }/${ productKey }`;
 
     const counters = [];
 
@@ -67,7 +67,7 @@ export class GithubProviderService {
   };
 
   getReleaseVersion = async ( productKey: string ) => {
-    const uri = `${ environmentCommon.website.github.api.repo }/${ environmentCommon.oth.social.github }/${ productKey }/releases`;
+    const uri = `${ environmentCommon.website.github.api.repo }/${ environmentCommon.company.social.github }/${ productKey }/releases`;
     const response = await this.util.corsRequest( uri );
     if ( response != null ) {
       const json = JSON.parse( response as string );
@@ -81,7 +81,7 @@ export class GithubProviderService {
     const today = new Date();
     const lastYear = new Date( today.getFullYear() - 1, today.getMonth(), today.getDate() );
 
-    const uri = `${ environmentCommon.website.github.api.repo }/${ environmentCommon.oth.social.github }/${ productKey }/commits?per_page=100&since=${ lastYear.toISOString() }`;
+    const uri = `${ environmentCommon.website.github.api.repo }/${ environmentCommon.company.social.github }/${ productKey }/commits?per_page=100&since=${ lastYear.toISOString() }`;
     const response = await this.util.corsRequest( uri );
     if ( response != null ) {
       const json: any[] = JSON.parse( response as string );

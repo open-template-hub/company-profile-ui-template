@@ -5,8 +5,8 @@
     <!-- Body -->
     <ng-template #body>
       <div class="policy-content">
-        <p>This is the Cookie Policy for Open Template Hub, accessible from
-          <a href="https://opentemplatehub.com">opentemplatehub.com</a></p>
+        <p>This is the Cookie Policy for {{ BRAND.name }}, accessible from
+          <a [href]="environmentCommon.company.website">{{ environmentCommon.company.website }}</a></p>
         <p><strong>What Are Cookies</strong></p>
         <p>As is common practice with almost all professional websites this site uses cookies, which are tiny files
           that
@@ -19,9 +19,9 @@
           from
           being stored however this may downgrade or 'break' certain elements of the sites functionality.</p>
         <p>For more general information on cookies, please read <a
-          href="https://www.cookieconsent.com/what-are-cookies/">"What
+            href="https://www.cookieconsent.com/what-are-cookies/">"What
           Are Cookies"</a>. Information regarding cookies from this Cookies Policy are from <a
-          href="https://www.generateprivacypolicy.com/">the Privacy Policy Generator</a>.</p>
+            href="https://www.generateprivacypolicy.com/">the Privacy Policy Generator</a>.</p>
         <p><strong>How We Use Cookies</strong></p>
         <p>We use cookies for a variety of reasons detailed below. Unfortunately in most cases there are no industry
           standard
@@ -73,7 +73,7 @@
           of the
           features you use on our site.</p>
         <p>However if you are still looking for more information then you can contact us through <a
-          href="mailto:info@opentemplatehub.com">info@opentemplatehub.com</a></p>
+            [href]="'mailto:' + environmentCommon.company.email">{{ environmentCommon.company.email }}</a></p>
       </div>
     </ng-template>
   </app-policy-card>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environmentCommon } from '../../../../../environments/environment-common';
 import { URLS } from '../../../../data/navigation/navigation.data';
 
 @Component( {
@@ -9,6 +10,8 @@ import { URLS } from '../../../../data/navigation/navigation.data';
 export class PrivacyPolicyPageComponent {
 
   URLS = URLS;
+
+  environmentCommon = environmentCommon;
 
   constructor() {
     // Intentionally Blank

@@ -18,16 +18,20 @@ app.disable( "x-powered-by" );
 // directory that we will serve
 app.use( express.static( __dirname + "/dist/company-profile-ui-template" ) );
 
-app.get( "*", function ( req, res, next ) {
+// Not required for Cloudflare Flexible SSL configuration
+// https://support.cloudflare.com/hc/en-us/articles/115000219871-Troubleshooting-redirect-loop-errors-
+/*
+ app.get( "*", function ( req, res, next ) {
 
-  if ( "https" !== req.headers[ "x-forwarded-proto" ] && "production" === process.env.NODE_ENV ) {
-    res.redirect( "https://" + req.hostname + req.url );
-  } else {
-    // Continue to other routes if we're not redirecting
-    next();
-  }
+ if ( "https" !== req.headers[ "x-forwarded-proto" ] && "production" === process.env.NODE_ENV ) {
+ res.redirect( "https://" + req.hostname + req.url );
+ } else {
+ // Continue to other routes if we're not redirecting
+ next();
+ }
 
-} );
+ } );
+ */
 
 // redirect all requests to index.html
 app.get( "/*", function ( req, res ) {

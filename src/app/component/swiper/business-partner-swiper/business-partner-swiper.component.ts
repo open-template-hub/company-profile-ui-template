@@ -15,8 +15,9 @@ export class BusinessPartnerSwiperComponent {
   @Input() partners: Partner[] = [];
   @Input() isGrayscale = true;
 
-  isNavigationEnabled = true;
-  isPaginationEnabled = true;
+  @Input() isNavigationEnabled = true;
+  @Input() isPaginationEnabled = true;
+
   height = 100;
   breakpoints = {
     640: {

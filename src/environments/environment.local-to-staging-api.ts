@@ -9,8 +9,6 @@ export const environment: EnvironmentModel = {
 
   clientUrl: 'http://localhost:4200',
 
-  mockDataEnabled: true,
-
   oauth: {
     twitter: {
       tag: 'TWITTER_LOCAL'

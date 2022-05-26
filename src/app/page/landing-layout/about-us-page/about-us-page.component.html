@@ -13,7 +13,7 @@
 <div class="websites-wrapper">
   <ng-container *ngFor="let website of websites">
     <oth-brand-button (click)="redirect(website.url + '/' + website.handle)" [icon]="website.cssClass"
-                      [text]="website.name | titlecase">
+                      [text]="website.name">
     </oth-brand-button>
   </ng-container>
 </div>
@@ -22,7 +22,7 @@
 <oth-hero [contents]="contactInformationAppHeroContents">
 </oth-hero>
 <div class="contact-information-wrapper">
-    <app-contact-information-card></app-contact-information-card>
+  <app-contact-information-card></app-contact-information-card>
 </div>
 
 <!-- History of Us -->

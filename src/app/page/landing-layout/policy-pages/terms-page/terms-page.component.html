@@ -6,17 +6,14 @@
     <ng-template #body>
       <div class="policy-content">
 
-        <p>Welcome to opentemplatehub.com!</p>
+        <p>Welcome to {{ environmentCommon.company.website }}!</p>
 
-        <p>These terms and conditions outline the rules and regulations for the use of Open Template Hub's Website,
-          located
-          at
-          <a
-            [href]="'https://opentemplatehub.com'">https://opentemplatehub.com</a>.</p>
+        <p>These terms and conditions outline the rules and regulations for the use of {{ BRAND.name }}'s Website,
+          located at <a [href]="environmentCommon.company.website">{{ environmentCommon.company.website }}</a>.</p>
 
-        <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use
-          opentemplatehub.com
-          if you do not agree to take all of the terms and conditions stated on this page.</p>
+        <p>By accessing this website we assume you accept these terms and conditions. Do not continue to
+          use {{ environmentCommon.company.website }} if you do not agree to take all of the terms and conditions stated
+          on this page.</p>
 
         <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and
           all
@@ -33,35 +30,35 @@
 
         <p><strong>License</strong></p>
 
-        <p>Unless otherwise stated, Open Template Hub and/or its licensors own the intellectual property rights for all
-          material
-          on opentemplatehub.com. All intellectual property rights are reserved. You may access this from <a
-            [href]="'https://opentemplatehub.com'">opentemplatehub.com</a> for
+        <p>Unless otherwise stated, {{ BRAND.name }} and/or its licensors own the intellectual property rights for all
+          material on {{ environmentCommon.company.website }}. All intellectual property rights are reserved. You may
+          access this from <a
+              [href]="environmentCommon.company.website">{{ environmentCommon.company.website }}</a> for
           your own personal use subjected to restrictions set in these terms and conditions.</p>
 
         <p>You must not:</p>
         <p>- Republish material from <a
-          [href]="'https://opentemplatehub.com'">opentemplatehub.com</a></p>
+            [href]="environmentCommon.company.website">{{ environmentCommon.company.website }}</a></p>
         <p>- Sell, rent or sub-license material from <a
-          [href]="'https://opentemplatehub.com'">opentemplatehub.com</a></p>
+            [href]="environmentCommon.company.website">{{ environmentCommon.company.website }}</a></p>
         <p>- Reproduce, duplicate or copy material from <a
-          [href]="'https://opentemplatehub.com'">opentemplatehub.com</a></p>
+            [href]="environmentCommon.company.website">{{ environmentCommon.company.website }}</a></p>
         <p>- Redistribute content from <a
-          [href]="'https://opentemplatehub.com'">opentemplatehub.com</a></p>
+            [href]="environmentCommon.company.website">{{ environmentCommon.company.website }}</a></p>
 
         <p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain
-          areas of the website. Open Template Hub does not filter, edit, publish or review Comments prior to their
+          areas of the website. {{ BRAND.name }} does not filter, edit, publish or review Comments prior to their
           presence
           on
-          the website. Comments do not reflect the views and opinions of Open Template Hub,its agents and/or affiliates.
+          the website. Comments do not reflect the views and opinions of {{ BRAND.name }},its agents and/or affiliates.
           Comments
           reflect the views and opinions of the person who post their views and opinions. To the extent permitted by
-          applicable laws, Open Template Hub shall not be liable for the Comments or for any liability, damages or
+          applicable laws, {{ BRAND.name }} shall not be liable for the Comments or for any liability, damages or
           expenses
           caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this
           website.</p>
 
-        <p>Open Template Hub reserves the right to monitor all Comments and to remove any Comments which can be
+        <p>{{ BRAND.name }} reserves the right to monitor all Comments and to remove any Comments which can be
           considered
           inappropriate, offensive or causes breach of these Terms and Conditions.</p>
 
@@ -83,7 +80,7 @@
           </p>
         </ul>
 
-        <p>You hereby grant Open Template Hub a non-exclusive license to use, reproduce, edit and authorize others to
+        <p>You hereby grant {{ BRAND.name }} a non-exclusive license to use, reproduce, edit and authorize others to
           use,
           reproduce and edit any of your Comments in any and all forms, formats or media.</p>
 
@@ -137,7 +134,7 @@
 
         <p>If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website,
           you
-          must inform us by sending an e-mail to Open Template Hub. Please include your name, your organization name,
+          must inform us by sending an e-mail to {{ BRAND.name }}. Please include your name, your organization name,
           contact
           information as well as the URL of your site, a list of any URLs from which you intend to link to our Website,
           and
@@ -154,7 +151,7 @@
           </p>
         </ul>
 
-        <p>No use of Open Template Hub's logo or other artwork will be allowed for linking absent a trademark license
+        <p>No use of {{ BRAND.name }}'s logo or other artwork will be allowed for linking absent a trademark license
           agreement.</p>
 
         <p><strong>iFrames</strong></p>

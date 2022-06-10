@@ -7,10 +7,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
-import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
-import interactionPlugin from '@fullcalendar/interaction';
-
 import { AnimatedCodeEditorModule } from '@open-template-hub/animated-code-editor';
 import { ButtonModule } from '@open-template-hub/button';
 import { CardModule } from '@open-template-hub/card';
@@ -80,11 +76,6 @@ import { SitemapPageComponent } from './page/landing-layout/sitemap-page/sitemap
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
 
-FullCalendarModule.registerPlugins( [
-  dayGridPlugin,
-  interactionPlugin
-] );
-
 @NgModule( {
   declarations: [
     AppComponent,
@@ -153,7 +144,6 @@ FullCalendarModule.registerPlugins( [
     LayoutModule,
     FormsModule,
     BrowserModule,
-    FullCalendarModule,
     SwiperModule,
     CardModule,
     ButtonModule,

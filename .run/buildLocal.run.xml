@@ -1,14 +1,14 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="buildLocal" type="js.build_tools.npm" nameIsGenerated="true">
-    <package-json value="$PROJECT_DIR$/package.json"/>
-    <command value="run"/>
+    <package-json value="$PROJECT_DIR$/package.json" />
+    <command value="run" />
     <scripts>
-      <script value="buildLocal"/>
+      <script value="buildLocal" />
     </scripts>
-    <node-interpreter value="project"/>
+    <node-interpreter value="/usr/local/bin/node" />
     <envs>
-      <env name="NODE_MODULES_CACHE" value="false"/>
+      <env name="NODE_MODULES_CACHE" value="false" />
     </envs>
-    <method v="2"/>
+    <method v="2" />
   </configuration>
 </component>

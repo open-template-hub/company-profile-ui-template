@@ -88,6 +88,9 @@ export const environment: EnvironmentModel = {
     },
     matomo: {
       tag: ''
+    },
+    mixpanel: {
+      tag: ''
     }
   }
 };

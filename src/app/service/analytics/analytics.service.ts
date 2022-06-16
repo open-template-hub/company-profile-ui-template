@@ -6,13 +6,21 @@ import mixpanel from 'mixpanel-browser';
   providedIn: 'root',
 } )
 export class AnalyticsService {
+
+  mixpanelEnabled = false;
+
   constructor() {
     if ( environment.analytics.mixPanel.tag ) {
-      mixpanel.init( environment.analytics.mixPanel.tag, { debug: true } );
+      mixpanel.init( environment.analytics.mixPanel.tag );
+      this.mixpanelEnabled = true;
     }
   }
 
   logEvent( event: string, attributes: any ) {
-    mixpanel.track( event, attributes );
+    if ( this.mixpanelEnabled ) {
+      mixpanel.track( event, attributes );
+    } else {
+      console.log( 'Event: ', event, attributes );
+    }
   }
 }

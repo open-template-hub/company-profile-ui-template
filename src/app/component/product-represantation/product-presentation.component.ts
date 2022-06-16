@@ -54,7 +54,7 @@ export class ProductPresentationComponent implements OnInit {
         // filter only oauth configured websites
         if ( environmentCommon.website[ website ].logo ) {
           this.presentationPartners.push( {
-            name: website,
+            name: environmentCommon.website[ website ].name,
             src: environmentCommon.website[ website ].logo,
             website: environmentCommon.website[ website ].url
           } );
@@ -95,7 +95,7 @@ export class ProductPresentationComponent implements OnInit {
   }
 
   partnerNameFormat( name: string, isLast: boolean ) {
-    return name.split( /(?=[A-Z])/ ).join( ' ' ) + ( isLast ? '*' : ',' );
+    return name + ( isLast ? '*' : ',' );
   }
 
   getDemonstrationImg( product: Product ) {

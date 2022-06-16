@@ -47,6 +47,6 @@ export interface EnvironmentModel {
   analytics: {
     googleAnalytics: AnalyticsModel,
     matomo: AnalyticsModel,
-    mixpanel: AnalyticsModel
+    mixPanel: AnalyticsModel
   };
 }

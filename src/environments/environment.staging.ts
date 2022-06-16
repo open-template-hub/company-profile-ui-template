@@ -83,13 +83,16 @@ export const environment: EnvironmentModel = {
 
   analytics: {
     googleAnalytics: {
-      tag: 'GTM-P8BM922'
+      tag: 'GTM-P8BM922',
+      id: ''
     },
     matomo: {
-      tag: ''
+      tag: '',
+      id: ''
     },
-    mixpanel: {
-      tag: ''
+    mixPanel: {
+      tag: '',
+      id: ''
     }
   }
 };

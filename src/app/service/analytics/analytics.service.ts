@@ -7,12 +7,14 @@ import mixpanel from 'mixpanel-browser';
 } )
 export class AnalyticsService {
   constructor() {
-    if ( environment.analytics.mixPanel.tag ) {
-      mixpanel.init( environment.analytics.mixPanel.tag, { debug: true } );
-    }
+    mixpanel.init( environment.analytics.mixPanel.tag );
   }
 
   logEvent( event: string, attributes: any ) {
-    mixpanel.track( event, attributes );
+    if (mixpanel) {
+      mixpanel.track( event, attributes );
+    } else {
+      mixpanel.init( environment.analytics.mixPanel.tag );
+    }
   }
 }

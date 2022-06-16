@@ -13,8 +13,6 @@ export class AnalyticsService {
   logEvent( event: string, attributes: any ) {
     if (mixpanel) {
       mixpanel.track( event, attributes );
-    } else {
-      mixpanel.init( environment.analytics.mixPanel.tag );
     }
   }
 }

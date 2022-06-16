@@ -7,15 +7,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
-import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
-import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
-import interactionPlugin from '@fullcalendar/interaction';
-
 import { AnimatedCodeEditorModule } from '@open-template-hub/animated-code-editor';
 import { ButtonModule } from '@open-template-hub/button';
 import { CardModule } from '@open-template-hub/card';
 import { HeroModule } from '@open-template-hub/hero';
-import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { MarkdownModule } from 'ngx-markdown';
 import { ToastrModule } from 'ngx-toastr';
 import { SwiperModule } from 'swiper/angular';
@@ -79,11 +74,6 @@ import { NotFoundPageComponent } from './page/landing-layout/raw-content-pages/n
 import { SitemapPageComponent } from './page/landing-layout/sitemap-page/sitemap-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
-
-FullCalendarModule.registerPlugins( [
-  dayGridPlugin,
-  interactionPlugin
-] );
 
 @NgModule( {
   declarations: [
@@ -153,7 +143,6 @@ FullCalendarModule.registerPlugins( [
     LayoutModule,
     FormsModule,
     BrowserModule,
-    FullCalendarModule,
     SwiperModule,
     CardModule,
     ButtonModule,
@@ -161,13 +150,12 @@ FullCalendarModule.registerPlugins( [
     HeroModule,
     ToastrModule.forRoot( { preventDuplicates: true } ),
     MarkdownModule.forRoot( { loader: HttpClient } ),
-    GoogleTagManagerModule.forRoot( { id: environment.analytics.googleAnalytics.tag } ),
     ServiceWorkerModule.register( 'ngsw-worker.js', {
       enabled: [ 'production', 'staging' ].includes( environment.identity ),
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerImmediately'
-    } )
+    } ),
     /*HttpClientInMemoryWebApiModule.forRoot(
      InMemoryDataService, { dataEncapsulation: false } )*/
   ],

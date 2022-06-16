@@ -23,7 +23,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
 
       - name: Bump Version and Create Tag
         uses: phips28/gh-action-bump-version@master
@@ -46,7 +46,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 16
 
       - name: Run version-generator.ts
         run: |

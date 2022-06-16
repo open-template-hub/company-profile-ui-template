@@ -83,10 +83,16 @@ export const environment: EnvironmentModel = {
 
   analytics: {
     googleAnalytics: {
-      tag: 'GTM-NNRF845'
+      tag: 'GTM-NNRF845',
+      id: ''
     },
     matomo: {
-      tag: ''
+      tag: 'https://opentemplatehub.matomo.cloud',
+      id: '1'
+    },
+    mixPanel: {
+      tag: '042fa108006d212261621815382ca37c',
+      id: ''
     }
   }
 };

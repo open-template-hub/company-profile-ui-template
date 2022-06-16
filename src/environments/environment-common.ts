@@ -199,6 +199,14 @@ export const environmentCommon: EnvironmentCommonModel = {
       tag: environment.analytics.matomo.tag,
       websiteType: 'analytics'
     },
+    mixPanel: {
+      name: 'Mixpanel',
+      logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo/mixpanel.png',
+      cssClass: 'mixpanel',
+      url: 'https://mixpanel.com',
+      tag: environment.analytics.mixPanel.tag,
+      websiteType: 'analytics'
+    },
 
     // other
     instagram: {

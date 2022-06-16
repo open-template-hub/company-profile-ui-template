@@ -11,7 +11,6 @@ import { AnimatedCodeEditorModule } from '@open-template-hub/animated-code-edito
 import { ButtonModule } from '@open-template-hub/button';
 import { CardModule } from '@open-template-hub/card';
 import { HeroModule } from '@open-template-hub/hero';
-import { GoogleTagManagerModule } from 'angular-google-tag-manager';
 import { MarkdownModule } from 'ngx-markdown';
 import { ToastrModule } from 'ngx-toastr';
 import { SwiperModule } from 'swiper/angular';
@@ -151,13 +150,12 @@ import { SplashLayoutComponent } from './page/splash-layout/splash-layout.compon
     HeroModule,
     ToastrModule.forRoot( { preventDuplicates: true } ),
     MarkdownModule.forRoot( { loader: HttpClient } ),
-    GoogleTagManagerModule.forRoot( { id: environment.analytics.googleAnalytics.tag } ),
     ServiceWorkerModule.register( 'ngsw-worker.js', {
       enabled: [ 'production', 'staging' ].includes( environment.identity ),
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerImmediately'
-    } )
+    } ),
     /*HttpClientInMemoryWebApiModule.forRoot(
      InMemoryDataService, { dataEncapsulation: false } )*/
   ],

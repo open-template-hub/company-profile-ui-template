@@ -5,6 +5,8 @@ const lines = outdatedCmd.stdout.toString().split( '\n' );
 
 const columnIndexes = [ 0, 0, 0, 0 ];
 
+let indexOfDependedBy = -1;
+
 console.log(
     '<p align="center">\n' +
     '  <a href="https://opentemplatehub.com">\n' +
@@ -41,7 +43,17 @@ for ( const line of lines ) {
 
     modifiedLine += '| ';
 
-    for ( const part of stringParts ) {
+    for ( let i = 0; i < stringParts.length; ++i ) {
+      const part = stringParts[ i ];
+
+      if ( lines.indexOf( line ) === 0 && i < stringParts.length - 1 && stringParts[ i + 1 ] === 'Depended' ) {
+        indexOfDependedBy = i;
+      }
+
+      if ( indexOfDependedBy !== -1 && i >= indexOfDependedBy ) {
+        continue;
+      }
+
       if ( part.match( /\s+/ ) ) {
         modifiedLine += ' | ';
       } else {

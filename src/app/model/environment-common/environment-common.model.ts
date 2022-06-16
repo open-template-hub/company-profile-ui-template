@@ -46,6 +46,7 @@ export interface EnvironmentCommonModel {
     // analytics
     googleAnalytics: WebsiteModel
     matomo: WebsiteModel
+    mixPanel: WebsiteModel
 
     // other
     instagram: WebsiteModel

@@ -23,8 +23,7 @@
     "test": "ng test",
     "updateMessages": "ng extract-i18n && node ./src/messages-generator.js",
     "serve:local:en": "ng serve -c=local",
-    "serve:local:fr": "ng serve -c=fr",
-    "matomo": "ng add @ngx-matomo/tracker"
+    "serve:local:fr": "ng serve -c=fr"
   },
   "dependencies": {
     "@angular/animations": "^14.0.1",
@@ -38,8 +37,6 @@
     "@angular/router": "^14.0.1",
     "@angular/service-worker": "^14.0.1",
     "@fortawesome/fontawesome-free": "^6.1.1",
-    "@ngx-matomo/router": "^3.0.0",
-    "@ngx-matomo/tracker": "^3.0.0",
     "@open-template-hub/animated-code-editor": "^4.0.6",
     "@open-template-hub/button": "^4.0.5",
     "@open-template-hub/card": "^4.0.4",
@@ -55,6 +52,7 @@
     "helmet": "^5.1.0",
     "ics": "^2.35.0",
     "jsdom": "^19.0.0",
+    "mixpanel-browser": "^2.45.0",
     "ngx-markdown": "^14.0.0",
     "ngx-toastr": "^14.3.0",
     "path": "^0.12.7",

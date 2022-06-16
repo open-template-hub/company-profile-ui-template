@@ -91,7 +91,7 @@ export const environment: EnvironmentModel = {
       id: '1'
     },
     mixPanel: {
-      tag: '',
+      tag: '042fa108006d212261621815382ca37c',
       id: ''
     }
   }

@@ -74,8 +74,6 @@ import { NotFoundPageComponent } from './page/landing-layout/raw-content-pages/n
 import { SitemapPageComponent } from './page/landing-layout/sitemap-page/sitemap-page.component';
 import { ExternalRedirectPageComponent } from './page/splash-layout/external-redirect-page/external-redirect-page.component';
 import { SplashLayoutComponent } from './page/splash-layout/splash-layout.component';
-import { NgxMatomoTrackerModule } from '@ngx-matomo/tracker';
-import { NgxMatomoRouterModule } from '@ngx-matomo/router';
 
 @NgModule( {
   declarations: [
@@ -158,8 +156,6 @@ import { NgxMatomoRouterModule } from '@ngx-matomo/router';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerImmediately'
     } ),
-    NgxMatomoTrackerModule.forRoot({ trackerUrl: environment.analytics.matomo.tag, siteId: environment.analytics.matomo.id }),
-    NgxMatomoRouterModule
     /*HttpClientInMemoryWebApiModule.forRoot(
      InMemoryDataService, { dataEncapsulation: false } )*/
   ],

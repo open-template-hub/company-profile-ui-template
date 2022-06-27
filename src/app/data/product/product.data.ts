@@ -623,6 +623,14 @@ export const PRODUCT_LINES: ProductLine[] = [
         description: $localize`:@@productLinesData.cloudIntegrationServerTemplate.description:Coming soon..`,
         url: URLS.maintenance,
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/cloud-integration-server-logo.min.png'
+      },
+      {
+        key: 'saas-ui-template',
+        name: 'Saas UI',
+        color: ThemeColorSettings.gray,
+        description: $localize`:@@productLinesData.saasUITemplate.description:Coming soon..`,
+        url: URLS.maintenance,
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/saas-ui-logo.min.png'
       }
     ],
   }

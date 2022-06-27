@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { LIBRARIES, PLUGINS, PRODUCT_LINES, SERVICES } from 'src/app/data/product/product.data';
 import { URLS } from '../../../data/navigation/navigation.data';

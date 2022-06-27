@@ -103,8 +103,6 @@
 
   <ng-container [ngSwitch]="productLineKey">
     <ng-container *ngSwitchCase="'services'" [ngSwitch]="product.key">
-      <!-- Todo: Show something related with services instead of price plan -->
-
       <!-- Testimonials -->
       <oth-hero [contents]="testimonialsTitle"></oth-hero>
       <div class="cards-wrapper">

@@ -36,7 +36,6 @@ export class HomePageComponent implements AfterViewInit {
   LIBRARIES = LIBRARIES;
   PLUGINS = PLUGINS;
 
-  // Todo: Change this with customers
   PARTNERS: Partner[] = PARTNERS;
 
   TESTIMONIALS: Testimonial[] = TESTIMONIALS.slice( 0, TESTIMONIALS.length < 3 ? TESTIMONIALS.length : 3 );

@@ -120,6 +120,7 @@ p {
     @include util.flex-center-center;
 
     text-align: center;
+    padding: 0
   }
 
 
@@ -132,10 +133,6 @@ p {
     align-items: initial;
     flex-direction: column;
     padding: 12px;
-  }
-
-  .column-header-feature {
-    padding: 0
   }
 
   .feature-by-price-plan-wrapper {

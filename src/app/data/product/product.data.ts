@@ -381,29 +381,29 @@ export const PRODUCT_LINES: ProductLine[] = [
         urlDemo: 'https://admin.opentemplatehub.com',
         logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/admin-ui-logo.min.png',
         video: {
-          url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/web-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.webUITemplate.video.description:Modern, responsive and customisable admin ui template written with Angular`,
+          url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/admin-ui-video-1.mp4',
+          description: $localize`:@@userInterfaces.adminUITemplate.video.description:Modern, responsive and customisable admin ui template written with Angular`,
         },
         screenshots: [
           {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-light.min.png',
-            description: $localize`:@@userInterfaces.webUITemplate.screenshot.1:Responsive Design`
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/admin-ui-demo-light.min.png',
+            description: $localize`:@@userInterfaces.adminUITemplate.screenshot.1:Responsive Design`
           },
           {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/web-ui-demo-dark.min.png',
-            description: $localize`:@@userInterfaces.webUITemplate.screenshot.2:Dark Mode Support`
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/admin-ui-demo-dark.min.png',
+            description: $localize`:@@userInterfaces.adminUITemplate.screenshot.2:Dark Mode Support`
           },
           {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/web-ui-screenshot-1.min.png',
-            description: $localize`:@@userInterfaces.webUITemplate.screenshot.3:Integrated With OTH Servers`
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/admin-ui-screenshot-1.min.png',
+            description: $localize`:@@userInterfaces.adminUITemplate.screenshot.3:Integrated With OTH Servers`
           },
           {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/web-ui-screenshot-2.min.png',
-            description: $localize`:@@userInterfaces.webUITemplate.screenshot.4:Customisable Theme Colors`
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/admin-ui-screenshot-2.min.png',
+            description: $localize`:@@userInterfaces.adminUITemplate.screenshot.4:Customisable Theme Colors`
           },
           {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/web-ui-screenshot-3.min.png',
-            description: $localize`:@@userInterfaces.webUITemplate.screenshot.5:Customisable Theme Design`
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/admin-ui-screenshot-3.min.png',
+            description: $localize`:@@userInterfaces.adminUITemplate.screenshot.5:Customisable Theme Design`
           }
         ],
         openSource: true,

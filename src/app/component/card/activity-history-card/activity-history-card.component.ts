@@ -34,7 +34,7 @@ export class ActivityHistoryCardComponent implements OnChanges {
   }
 
 
-  ngOnChanges( changes: SimpleChanges ): void {
+  ngOnChanges( _changes: SimpleChanges ): void {
     this.activitySumByDate = new Map();
     this.days = new Array( 365 );
 

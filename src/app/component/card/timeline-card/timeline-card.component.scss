@@ -131,19 +131,15 @@
       }
 
       &.left::after {
-        border-left: {
-          width: 15px;
-          style: solid;
-        }
+        border-left-width: 15px;
+        border-left-style: solid;
 
         left: 100%;
       }
 
       &.right::after {
-        border-right: {
-          width: 15px;
-          style: solid;
-        }
+        border-right-width: 15px;
+        border-right-style: solid;
 
         right: 100%;
       }

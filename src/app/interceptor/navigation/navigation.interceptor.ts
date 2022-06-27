@@ -1,4 +1,3 @@
-import { Analytics } from '@angular/cli/lib/config/workspace-schema';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree, } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -15,7 +14,7 @@ export class NavigationInterceptor implements CanActivate {
   }
 
   canActivate(
-      next: ActivatedRouteSnapshot,
+      _next: ActivatedRouteSnapshot,
       state: RouterStateSnapshot
   ):
       | Observable<boolean | UrlTree>

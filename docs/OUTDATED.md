@@ -15,7 +15,7 @@ Following packages are not updated in the develop branch yet. So, if you want to
 
 | Package | Current | Wanted | Latest | Location |
 | --- | --- | --- | --- | --- |
-| @types/node | 17.0.45 | 17.0.45 | 18.0.0 | node_modules/@types/node |
+| @types/node | 17.0.45 | 17.0.45 | 18.0.1 | node_modules/@types/node |
 | jsdom | 19.0.0 | 19.0.0 | 20.0.0 | node_modules/jsdom |
 | ngx-toastr | 14.3.0 | 14.3.0 | 15.0.0 | node_modules/ngx-toastr |
 

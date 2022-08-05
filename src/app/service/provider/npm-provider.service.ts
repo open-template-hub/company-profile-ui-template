@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
 import { BRAND } from '../../data/brand/brand.data';
 import { LIBRARIES, PRODUCT_LINES } from '../../data/product/product.data';
@@ -29,6 +30,9 @@ export class NpmProviderService {
             const response = await this.util.corsRequest( uri );
             if ( response != null ) {
               const json = JSON.parse( response as string );
+              if ( environment.identity !== 'production' ) {
+                console.log( uri + ': ' + json.downloads );
+              }
               count += json.downloads;
             }
           }

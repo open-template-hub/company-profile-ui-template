@@ -1,0 +1,30 @@
+<oth-card
+    *ngIf="contributor.profile"
+    [bodyTemplate]="bodyTemplate"
+    [bottomWrapperTemplate]="bottomWrapperTemplate"
+    class="contributor-card">
+
+  <!-- Body -->
+  <ng-template #bodyTemplate>
+    <div class="body">
+      <app-image-content-loader
+          *ngIf="!contributorPhotoLoaded"
+          [imageContentLoaderClass]="'contributor-photo'"></app-image-content-loader>
+      <img
+          (load)="setContributorPhotoLoaded()"
+          [src]="contributor.profile.photoUri"
+          [style]="'display:' + (!contributorPhotoLoaded ? 'none;' : 'block;')"
+          alt="profile-img"
+          class="profile-image"
+          onerror="this.src='./assets/common/profile-img.png'"/>
+      <div class="right">
+        <p class="name">{{ contributor.profile.name }}</p>
+        <p class="title">{{ contributor.profile.level }}</p>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- Bottom Wrapper -->
+  <ng-template #bottomWrapperTemplate>
+  </ng-template>
+</oth-card>

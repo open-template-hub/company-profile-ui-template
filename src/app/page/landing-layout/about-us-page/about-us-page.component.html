@@ -7,6 +7,14 @@
   </ng-container>
 </div>
 
+<!-- Contributors -->
+<oth-hero [contents]="contributorAppHeroContents"></oth-hero>
+<div class="contributors-wrapper">
+  <ng-container *ngFor="let contributor of CONTRIBUTORS; last as isLast">
+    <app-contributor-card [contributor]="contributor"></app-contributor-card>
+  </ng-container>
+</div>
+
 <!-- Follow Us -->
 <oth-hero [contents]="followUsAppHeroContents">
 </oth-hero>

@@ -22,6 +22,7 @@ import { AssetCardComponent } from './component/card/asset-card/asset-card.compo
 import { BlogCardComponent } from './component/card/blog-card/blog-card.component';
 import { BlogHolderCardComponent } from './component/card/blog-holder-card/blog-holder-card.component';
 import { ContactInformationCardComponent } from './component/card/contact-information-card/contact-information-card.component';
+import { ContributorCardComponent } from './component/card/contributor-card/contributor-card.component';
 import { DocCardComponent } from './component/card/doc-card/doc-card.component';
 import { DocHolderCardComponent } from './component/card/doc-holder-card/doc-holder-cardcomponent';
 import { EmployeeCardComponent } from './component/card/employee-card/employee-card.component';
@@ -103,6 +104,7 @@ import { SplashLayoutComponent } from './page/splash-layout/splash-layout.compon
     ContactUsPageComponent,
     ProductPresentationComponent,
     EmployeeCardComponent,
+    ContributorCardComponent,
     ProductPresentationComponent,
     PolicyCardComponent,
     TimelineCardComponent,

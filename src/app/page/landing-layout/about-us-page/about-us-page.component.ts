@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CONTRIBUTORS } from 'src/app/data/contributor/contributor.data';
 import { EMPLOYEES } from 'src/app/data/employee/employee.data';
 import { OTH_TIME_LINE } from 'src/app/data/timeline/timeline.data';
 import { environmentCommon } from '../../../../environments/environment-common';
@@ -11,6 +12,7 @@ import { environmentCommon } from '../../../../environments/environment-common';
 export class AboutUsPageComponent {
   OTH_TIME_LINE = OTH_TIME_LINE;
   EMPLOYEES = EMPLOYEES;
+  CONTRIBUTORS = CONTRIBUTORS;
 
   websites = [];
 
@@ -18,6 +20,12 @@ export class AboutUsPageComponent {
     {
       text: $localize`:@@aboutUs.employeeAppHero.text:Team Behind the Open Template Hub`,
       level: 1,
+    },
+  ];
+  contributorAppHeroContents = [
+    {
+      text: $localize`Open Source Contributors`,
+      level: 2,
     },
   ];
   followUsAppHeroContents = [

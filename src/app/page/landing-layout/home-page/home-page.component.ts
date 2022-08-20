@@ -16,6 +16,7 @@ import { URLS } from '../../../data/navigation/navigation.data';
 import { LIBRARIES, PLUGINS, PRODUCT_LINES } from '../../../data/product/product.data';
 import { Partner } from '../../../model/partner/partner.model';
 import { AnalyticsService } from '../../../service/analytics/analytics.service';
+import { LoadingService } from '../../../service/loading/loading.service';
 import { GithubProviderService } from '../../../service/provider/github-provider.service';
 
 @Component( {
@@ -78,7 +79,8 @@ export class HomePageComponent implements AfterViewInit {
       public router: Router,
       private npmProviderService: NpmProviderService,
       private githubService: GithubProviderService,
-      private analyticsService: AnalyticsService
+      private analyticsService: AnalyticsService,
+      private loadingService: LoadingService
   ) {
   }
 
@@ -110,8 +112,9 @@ export class HomePageComponent implements AfterViewInit {
       decimalPlaces: 0
     };
 
-    this.analyticsService.getSystemInfo('npm-downloads').subscribe( ( count ) => {
+    this.analyticsService.getSystemInfo( 'npm-downloads' ).subscribe( ( count ) => {
       this.npmCounterLoading = false;
+      this.loadingService.setLoading(this.npmCounterLoading);
       this.npmDownloadCounter.count = count;
       this.startCounter( options, this.npmDownloadCounter );
     } );

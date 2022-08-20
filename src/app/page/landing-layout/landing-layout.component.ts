@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LoadingService } from '../../service/loading/loading.service';
 
 @Component( {
   selector: 'app-landing-layout',
@@ -8,9 +7,7 @@ import { LoadingService } from '../../service/loading/loading.service';
 } )
 export class LandingLayoutComponent {
 
-  loading = false;
-
-  constructor( private loadingService: LoadingService ) {
-    this.loadingService.sharedLoading.subscribe( loading => this.loading = loading );
+  constructor() {
+    // Intentionally blank
   }
 }

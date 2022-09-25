@@ -11,6 +11,7 @@
 <oth-hero [contents]="contributorAppHeroContents"></oth-hero>
 <div class="contributors-wrapper">
   <ng-container *ngFor="let contributor of CONTRIBUTORS; last as isLast">
+    <hr *ngIf="isLast"/>
     <app-contributor-card [contributor]="contributor"></app-contributor-card>
   </ng-container>
 </div>

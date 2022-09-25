@@ -20,8 +20,6 @@
 
     & .profile-image {
 
-      padding-right: 20px;
-
       width: 120px;
       height: 120px;
     }
@@ -33,6 +31,7 @@
       @include util.flex-layout-column;
 
       align-items: flex-start;
+      padding-left: 20px;
 
       & .name {
         font: {

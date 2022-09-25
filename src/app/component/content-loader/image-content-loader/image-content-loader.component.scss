@@ -17,9 +17,13 @@
     height: 30px;
   }
 
-  &.employee-photo {
+  &.employee-photo, &.contributor-photo {
     width: 120px;
     height: 120px;
     @include util.default-border-radius-image;
+  }
+
+  &.employee-photo {
+    margin: 5px;
   }
 }

@@ -20,6 +20,24 @@
       <div class="right">
         <p class="name">{{ contributor.profile.name }}</p>
         <p class="title">{{ contributor.profile.level }}</p>
+        <div class="social">
+          <app-ext-link
+              *ngIf="contributor.profile.social.linkedIn"
+              [href]="contributor.profile.social.linkedIn">
+            <i [class]="'fab fa-' + environmentCommon.website.linkedin.cssClass + ' fa-fw'"
+               aria-hidden="true"
+               body>
+            </i>
+          </app-ext-link>
+          <app-ext-link
+              *ngIf="contributor.profile.social.github"
+              [href]="contributor.profile.social.github">
+            <i [class]="'fab fa-' + environmentCommon.website.github.cssClass + ' fa-fw'"
+               aria-hidden="true"
+               body>
+            </i>
+          </app-ext-link>
+        </div>
       </div>
     </div>
   </ng-template>

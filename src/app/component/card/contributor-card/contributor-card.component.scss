@@ -44,6 +44,20 @@
         color: var(--lighter-contrast);
 
         font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      & .social {
+        @include util.flex-layout-row;
+        align-items: flex-start;
+
+        & i {
+          color: var(--theme-color-lighter-6);
+
+          &:hover {
+            color: var(--theme-color);
+          }
+        }
       }
     }
   }

@@ -17,7 +17,8 @@ export class ContributorCardComponent {
     profile: {
       name: '',
       photoUri: '',
-      level: ''
+      level: '',
+      social: {}
     },
   };
 

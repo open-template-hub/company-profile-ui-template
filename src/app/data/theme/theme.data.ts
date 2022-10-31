@@ -14,12 +14,14 @@ export const ThemeColorSettings = {
   orange: 'orange-theme',
   purple: 'purple-theme',
   pink: 'pink-theme',
-  gray: 'gray-theme'
+  gray: 'gray-theme',
+  brown: 'brown-theme'
 };
 
 export const ThemeDesignSettings = {
   round: 'round-theme',
   counterBorders: 'counter-borders-theme',
   sharp: 'sharp-theme',
-  leaf: 'leaf-theme'
+  leaf: 'leaf-theme',
+  circle: 'circle-theme'
 };

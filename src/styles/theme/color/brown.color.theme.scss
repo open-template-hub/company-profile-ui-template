@@ -1,0 +1,92 @@
+:root {
+  --theme-color-brown: #c75d24;
+  --theme-color-brown-secondary: #673113;
+  --theme-color-brown-tertiary: #e9a986;
+
+  --theme-color-brown-lighter-1: #cb6833;
+  --theme-color-brown-lighter-2: #cf7443;
+  --theme-color-brown-lighter-3: #d37f52;
+  --theme-color-brown-lighter-4: #d78b62;
+  --theme-color-brown-lighter-5: #db9672;
+  --theme-color-brown-lighter-6: #dfa281;
+  --theme-color-brown-lighter-7: #e7b9a1;
+  --theme-color-brown-lighter-8: #efd0c0;
+  --theme-color-brown-lighter-9: #f7e7df;
+
+  --theme-color-brown-darker-1: #bc5a25;
+  --theme-color-brown-darker-2: #b25726;
+  --theme-color-brown-darker-3: #a75427;
+  --theme-color-brown-darker-4: #9d5128;
+  --theme-color-brown-darker-5: #924e2a;
+  --theme-color-brown-darker-6: #884b2b;
+  --theme-color-brown-darker-7: #73462d;
+  --theme-color-brown-darker-8: #5e4030;
+  --theme-color-brown-darker-9: #493a32;
+
+  --hover-brown-theme-lighter: rgba(214, 127, 64, 0.3);
+  --hover-brown-theme-darker: rgba(214, 127, 64, 0.6);
+}
+
+:root .brown-theme, :root .light-theme.brown-theme {
+
+  --theme-color: var(--theme-color-brown);
+  --theme-color-secondary: var(--theme-color-brown-secondary);
+  --theme-color-tertiary: var(--theme-color-brown-tertiary);
+
+  --theme-color-lighter-1: var(--theme-color-brown-lighter-1);
+  --theme-color-lighter-2: var(--theme-color-brown-lighter-2);
+  --theme-color-lighter-3: var(--theme-color-brown-lighter-3);
+  --theme-color-lighter-4: var(--theme-color-brown-lighter-4);
+  --theme-color-lighter-5: var(--theme-color-brown-lighter-5);
+  --theme-color-lighter-6: var(--theme-color-brown-lighter-6);
+  --theme-color-lighter-7: var(--theme-color-brown-lighter-7);
+  --theme-color-lighter-8: var(--theme-color-brown-lighter-8);
+  --theme-color-lighter-9: var(--theme-color-brown-lighter-9);
+
+  --theme-color-darker-1: var(--theme-color-brown-darker-1);
+  --theme-color-darker-2: var(--theme-color-brown-darker-2);
+  --theme-color-darker-3: var(--theme-color-brown-darker-3);
+  --theme-color-darker-4: var(--theme-color-brown-darker-4);
+  --theme-color-darker-5: var(--theme-color-brown-darker-5);
+  --theme-color-darker-6: var(--theme-color-brown-darker-6);
+  --theme-color-darker-7: var(--theme-color-brown-darker-7);
+  --theme-color-darker-8: var(--theme-color-brown-darker-8);
+  --theme-color-darker-9: var(--theme-color-brown-darker-9);
+
+  --hover: var(--hover-brown-theme-lighter);
+}
+
+@mixin brown-theme-dark-mode {
+
+  --theme-color-lighter-1: var(--theme-color-brown-darker-1);
+  --theme-color-lighter-2: var(--theme-color-brown-darker-2);
+  --theme-color-lighter-3: var(--theme-color-brown-darker-3);
+  --theme-color-lighter-4: var(--theme-color-brown-darker-4);
+  --theme-color-lighter-5: var(--theme-color-brown-darker-5);
+  --theme-color-lighter-6: var(--theme-color-brown-darker-6);
+  --theme-color-lighter-7: var(--theme-color-brown-darker-7);
+  --theme-color-lighter-8: var(--theme-color-brown-darker-8);
+  --theme-color-lighter-9: var(--theme-color-brown-darker-9);
+
+  --theme-color-darker-1: var(--theme-color-brown-lighter-1);
+  --theme-color-darker-2: var(--theme-color-brown-lighter-2);
+  --theme-color-darker-3: var(--theme-color-brown-lighter-3);
+  --theme-color-darker-4: var(--theme-color-brown-lighter-4);
+  --theme-color-darker-5: var(--theme-color-brown-lighter-5);
+  --theme-color-darker-6: var(--theme-color-brown-lighter-6);
+  --theme-color-darker-7: var(--theme-color-brown-lighter-7);
+  --theme-color-darker-8: var(--theme-color-brown-lighter-8);
+  --theme-color-darker-9: var(--theme-color-brown-lighter-9);
+
+  --hover: var(--hover-brown-theme-darker);
+}
+
+.dark-theme.brown-theme {
+  @include brown-theme-dark-mode
+}
+
+@media (prefers-color-scheme: dark) {
+  :root .brown-theme {
+    @include brown-theme-dark-mode
+  }
+}

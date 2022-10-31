@@ -42,10 +42,10 @@ export const BRONZE_CONTRIBUTORS: Contributor[] = [
   {
     profile: {
       name: 'Ulas Arda Burak',
-      photoUri: 'https://avatars.githubusercontent.com/u/108762059?v=4',
+      photoUri: 'https://media-exp1.licdn.com/dms/image/C4E03AQGVNBJ_v3PK5A/profile-displayphoto-shrink_800_800/0/1628159346378?e=1672876800&v=beta&t=8LxzKxKtm40VOTKLWrVVFziBzjBg1kf5UVF_hoVOX94',
       level: CONTRIBUTION_LEVELS.bronze,
       social: {
-        linkedIn: 'https://www.linkedin.com/in/yunus-emre-yurtay-b3745316a/',
+        linkedIn: 'https://www.linkedin.com/in/ulasardaburak/',
         github: 'https://github.com/Zulk0rne1n',
       },
     },

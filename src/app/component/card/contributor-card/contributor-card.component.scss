@@ -45,6 +45,36 @@
 
         font-size: 18px;
         margin-bottom: 10px;
+
+        &.diamond {
+          & i {
+            color: var(--theme-color-blue);
+          }
+        }
+
+        &.platinum {
+          & i {
+            color: var(--theme-color-gray)
+          }
+        }
+
+        &.gold {
+          & i {
+            color: var(--theme-color-yellow);
+          }
+        }
+
+        &.silver {
+          & i {
+            color: var(--theme-color-gray-lighter-5);
+          }
+        }
+
+        &.bronze {
+          & i {
+            color: var(--theme-color-brown);
+          }
+        }
       }
 
       & .social {

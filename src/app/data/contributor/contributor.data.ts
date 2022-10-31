@@ -1,14 +1,20 @@
 import { Contributor } from '../../model/contributor/contributor.model';
 
 export const CONTRIBUTION_LEVELS = {
-  diamond: 'Diamond Contributor',
-  platinum: 'Platinum Contributor',
-  gold: 'Gold Contributor',
-  silver: 'Silver Contributor',
-  bronze: 'Bronze Contributor',
+  diamond: 'diamond',
+  platinum: 'platinum',
+  gold: 'gold',
+  silver: 'silver',
+  bronze: 'bronze',
 }
 
-export const CONTRIBUTORS: Contributor[] = [
+export const DIAMOND_CONTRIBUTORS: Contributor[] = [
+];
+export const PLATINUM_CONTRIBUTORS: Contributor[] = [
+];
+export const GOLD_CONTRIBUTORS: Contributor[] = [
+];
+export const SILVER_CONTRIBUTORS: Contributor[] = [
   {
     profile: {
       name: 'Kerim Alp Kaya',
@@ -28,6 +34,19 @@ export const CONTRIBUTORS: Contributor[] = [
       social: {
         linkedIn: 'https://www.linkedin.com/in/yunus-emre-yurtay-b3745316a/',
         github: 'https://github.com/emreyurtay',
+      },
+    },
+  },
+];
+export const BRONZE_CONTRIBUTORS: Contributor[] = [
+  {
+    profile: {
+      name: 'Ulas Arda Burak',
+      photoUri: 'https://avatars.githubusercontent.com/u/108762059?v=4',
+      level: CONTRIBUTION_LEVELS.bronze,
+      social: {
+        linkedIn: 'https://www.linkedin.com/in/yunus-emre-yurtay-b3745316a/',
+        github: 'https://github.com/Zulk0rne1n',
       },
     },
   },

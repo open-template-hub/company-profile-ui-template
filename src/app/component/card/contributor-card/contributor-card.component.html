@@ -19,7 +19,16 @@
           onerror="this.src='./assets/common/profile-img.png'"/>
       <div class="right">
         <p class="name">{{ contributor.profile.name }}</p>
-        <p class="title">{{ contributor.profile.level }}</p>
+        <p [classList]="contributor.profile.level + ' title'">
+          <ng-container [ngSwitch]=contributor.profile.level>
+            <i *ngSwitchCase="CONTRIBUTION_LEVELS.diamond" [class]="'fas fa-gem fa-fw'" aria-hidden="true"></i>
+            <i *ngSwitchCase="CONTRIBUTION_LEVELS.platinum" [class]="'fas fa-gem fa-fw'" aria-hidden="true"></i>
+            <i *ngSwitchCase="CONTRIBUTION_LEVELS.gold" [class]="'fas fa-gem fa-fw'" aria-hidden="true"></i>
+            <i *ngSwitchCase="CONTRIBUTION_LEVELS.silver" [class]="'fas fa-gem fa-fw'" aria-hidden="true"></i>
+            <i *ngSwitchCase="CONTRIBUTION_LEVELS.bronze" [class]="'fas fa-gem fa-fw'" aria-hidden="true"></i>
+          </ng-container>
+          {{ contributor.profile.level + ' contributor' | titlecase }}
+        </p>
         <div class="social">
           <app-ext-link
               *ngIf="contributor.profile.social.linkedIn"

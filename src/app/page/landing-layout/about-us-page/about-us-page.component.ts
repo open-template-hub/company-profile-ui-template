@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
-import { CONTRIBUTORS } from 'src/app/data/contributor/contributor.data';
+import {
+  BRONZE_CONTRIBUTORS,
+  DIAMOND_CONTRIBUTORS,
+  GOLD_CONTRIBUTORS,
+  PLATINUM_CONTRIBUTORS,
+  SILVER_CONTRIBUTORS
+} from 'src/app/data/contributor/contributor.data';
 import { EMPLOYEES } from 'src/app/data/employee/employee.data';
 import { OTH_TIME_LINE } from 'src/app/data/timeline/timeline.data';
 import { environmentCommon } from '../../../../environments/environment-common';
@@ -12,7 +18,11 @@ import { environmentCommon } from '../../../../environments/environment-common';
 export class AboutUsPageComponent {
   OTH_TIME_LINE = OTH_TIME_LINE;
   EMPLOYEES = EMPLOYEES;
-  CONTRIBUTORS = CONTRIBUTORS;
+  DIAMOND_CONTRIBUTORS = DIAMOND_CONTRIBUTORS;
+  PLATINUM_CONTRIBUTORS = PLATINUM_CONTRIBUTORS;
+  GOLD_CONTRIBUTORS = GOLD_CONTRIBUTORS;
+  SILVER_CONTRIBUTORS = SILVER_CONTRIBUTORS;
+  BRONZE_CONTRIBUTORS = BRONZE_CONTRIBUTORS;
 
   websites = [];
 

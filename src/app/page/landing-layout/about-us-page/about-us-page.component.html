@@ -10,7 +10,23 @@
 <!-- Contributors -->
 <oth-hero [contents]="contributorAppHeroContents"></oth-hero>
 <div class="contributors-wrapper">
-  <ng-container *ngFor="let contributor of CONTRIBUTORS; last as isLast">
+  <ng-container *ngFor="let contributor of DIAMOND_CONTRIBUTORS; last as isLast">
+    <app-contributor-card [contributor]="contributor"></app-contributor-card>
+  </ng-container>
+  <hr/>
+  <ng-container *ngFor="let contributor of PLATINUM_CONTRIBUTORS; last as isLast">
+    <app-contributor-card [contributor]="contributor"></app-contributor-card>
+  </ng-container>
+  <hr/>
+  <ng-container *ngFor="let contributor of GOLD_CONTRIBUTORS; last as isLast">
+    <app-contributor-card [contributor]="contributor"></app-contributor-card>
+  </ng-container>
+  <hr/>
+  <ng-container *ngFor="let contributor of SILVER_CONTRIBUTORS; last as isLast">
+    <app-contributor-card [contributor]="contributor"></app-contributor-card>
+  </ng-container>
+  <hr/>
+  <ng-container *ngFor="let contributor of BRONZE_CONTRIBUTORS; last as isLast">
     <hr *ngIf="isLast"/>
     <app-contributor-card [contributor]="contributor"></app-contributor-card>
   </ng-container>

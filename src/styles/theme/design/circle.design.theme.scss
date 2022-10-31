@@ -1,0 +1,17 @@
+@use '../../util/util';
+
+:root {
+  --border-radius-circle: 3em;
+  --border-radius-image-circle: 50%;
+  --border-radius-product-line-circle: 3em;
+  --height-bottom-line-circle: 0;
+  --padding-line-circle: 1.2em;
+}
+
+.circle-theme {
+  --border-radius: var(--border-radius-circle);
+  --border-radius-image: var(--border-radius-image-circle);
+  --border-radius-product-line: var(--border-radius-product-line-circle);
+  --height-bottom-line: var(--height-bottom-line-circle);
+  --padding-line: var(--padding-line-circle);
+}

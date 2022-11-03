@@ -7,7 +7,7 @@ export const environment: EnvironmentModel = {
 
   serverUrl: 'https://oth-server-orchestra-dev.herokuapp.com',
 
-  clientUrl: 'https://dev.opentemplatehub.com',
+  clientUrl: 'https://oth-ui-company-dev.herokuapp.com',
 
   oauth: {
     twitter: {

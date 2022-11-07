@@ -15,7 +15,8 @@ export const ThemeColorSettings = {
   purple: 'purple-theme',
   pink: 'pink-theme',
   gray: 'gray-theme',
-  brown: 'brown-theme'
+  brown: 'brown-theme',
+  turquoise: 'turquoise-theme',
 };
 
 export const ThemeDesignSettings = {

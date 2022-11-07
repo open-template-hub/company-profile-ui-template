@@ -1,0 +1,101 @@
+:root {
+  --theme-color-turquoise: #00ced1;
+  --theme-color-turquoise-secondary: #006466;
+  --theme-color-turquoise-tertiary: #5cfcff;
+
+  --theme-color-turquoise-lighter-1: #12d1d4;
+  --theme-color-turquoise-lighter-2: #24d5d7;
+  --theme-color-turquoise-lighter-3: #36d8da;
+  --theme-color-turquoise-lighter-4: #48dcde;
+  --theme-color-turquoise-lighter-5: #5bdfe1;
+  --theme-color-turquoise-lighter-6: #6de3e4;
+  --theme-color-turquoise-lighter-7: #91eaeb;
+  --theme-color-turquoise-lighter-8: #b6f1f1;
+  --theme-color-turquoise-lighter-9: #daf8f8;
+
+  --theme-color-turquoise-darker-1: #03c3c5;
+  --theme-color-turquoise-darker-2: #07b8ba;
+  --theme-color-turquoise-darker-3: #0badaf;
+  --theme-color-turquoise-darker-4: #0fa2a4;
+  --theme-color-turquoise-darker-5: #129799;
+  --theme-color-turquoise-darker-6: #168c8e;
+  --theme-color-turquoise-darker-7: #1e7677;
+  --theme-color-turquoise-darker-8: #256061;
+  --theme-color-turquoise-darker-9: #2d4a4b;
+
+  --hover-turquoise-theme-lighter: rgba(92, 252, 255, 0.3);
+  --hover-turquoise-theme-darker: rgba(92, 252, 255, 0.6);
+}
+
+@mixin turquoise-theme-light-mode {
+
+  --theme-color-lighter-1: var(--theme-color-turquoise-lighter-1);
+  --theme-color-lighter-2: var(--theme-color-turquoise-lighter-2);
+  --theme-color-lighter-3: var(--theme-color-turquoise-lighter-3);
+  --theme-color-lighter-4: var(--theme-color-turquoise-lighter-4);
+  --theme-color-lighter-5: var(--theme-color-turquoise-lighter-5);
+  --theme-color-lighter-6: var(--theme-color-turquoise-lighter-6);
+  --theme-color-lighter-7: var(--theme-color-turquoise-lighter-7);
+  --theme-color-lighter-8: var(--theme-color-turquoise-lighter-8);
+  --theme-color-lighter-9: var(--theme-color-turquoise-lighter-9);
+
+  --theme-color-darker-1: var(--theme-color-turquoise-darker-1);
+  --theme-color-darker-2: var(--theme-color-turquoise-darker-2);
+  --theme-color-darker-3: var(--theme-color-turquoise-darker-3);
+  --theme-color-darker-4: var(--theme-color-turquoise-darker-4);
+  --theme-color-darker-5: var(--theme-color-turquoise-darker-5);
+  --theme-color-darker-6: var(--theme-color-turquoise-darker-6);
+  --theme-color-darker-7: var(--theme-color-turquoise-darker-7);
+  --theme-color-darker-8: var(--theme-color-turquoise-darker-8);
+  --theme-color-darker-9: var(--theme-color-turquoise-darker-9);
+
+  --hover: var(--hover-turquoise-theme-lighter);
+}
+
+:root .turquoise-theme, :root .light-theme.turquoise-theme {
+
+  @include turquoise-theme-light-mode;
+
+  --theme-color: var(--theme-color-turquoise);
+  --theme-color-secondary: var(--theme-color-turquoise-secondary);
+  --theme-color-tertiary: var(--theme-color-turquoise-tertiary);
+}
+
+@mixin turquoise-theme-dark-mode {
+
+  --theme-color-lighter-1: var(--theme-color-turquoise-darker-1);
+  --theme-color-lighter-2: var(--theme-color-turquoise-darker-2);
+  --theme-color-lighter-3: var(--theme-color-turquoise-darker-3);
+  --theme-color-lighter-4: var(--theme-color-turquoise-darker-4);
+  --theme-color-lighter-5: var(--theme-color-turquoise-darker-5);
+  --theme-color-lighter-6: var(--theme-color-turquoise-darker-6);
+  --theme-color-lighter-7: var(--theme-color-turquoise-darker-7);
+  --theme-color-lighter-8: var(--theme-color-turquoise-darker-8);
+  --theme-color-lighter-9: var(--theme-color-turquoise-darker-9);
+
+  --theme-color-darker-1: var(--theme-color-turquoise-lighter-1);
+  --theme-color-darker-2: var(--theme-color-turquoise-lighter-2);
+  --theme-color-darker-3: var(--theme-color-turquoise-lighter-3);
+  --theme-color-darker-4: var(--theme-color-turquoise-lighter-4);
+  --theme-color-darker-5: var(--theme-color-turquoise-lighter-5);
+  --theme-color-darker-6: var(--theme-color-turquoise-lighter-6);
+  --theme-color-darker-7: var(--theme-color-turquoise-lighter-7);
+  --theme-color-darker-8: var(--theme-color-turquoise-lighter-8);
+  --theme-color-darker-9: var(--theme-color-turquoise-lighter-9);
+
+  --hover: var(--hover-turquoise-theme-darker);
+}
+
+.dark-theme.turquoise-theme {
+  @include turquoise-theme-dark-mode
+}
+
+@media (prefers-color-scheme: dark) {
+  :root .turquoise-theme {
+    @include turquoise-theme-dark-mode
+  }
+
+  :root .light-theme.turquoise-theme {
+    @include turquoise-theme-light-mode
+  }
+}

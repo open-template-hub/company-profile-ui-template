@@ -35,7 +35,7 @@ export const GOLD_CONTRIBUTORS: Contributor[] = [
   },
 ];
 export const SILVER_CONTRIBUTORS: Contributor[] = [
-/*  {
+  {
     profile: {
       name: 'Ulas Arda Burak',
       photoUri: 'https://media-exp1.licdn.com/dms/image/C4E03AQGVNBJ_v3PK5A/profile-displayphoto-shrink_800_800/0/1628159346378?e=1672876800&v=beta&t=8LxzKxKtm40VOTKLWrVVFziBzjBg1kf5UVF_hoVOX94',
@@ -45,7 +45,7 @@ export const SILVER_CONTRIBUTORS: Contributor[] = [
         github: 'https://github.com/Zulk0rne1n',
       },
     },
-  },*/
+  },
 ];
 export const BRONZE_CONTRIBUTORS: Contributor[] = [
   {

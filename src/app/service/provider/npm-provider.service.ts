@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../../environments/environment';
 import { environmentCommon } from '../../../environments/environment-common';
 import { BRAND } from '../../data/brand/brand.data';
 import { LIBRARIES, PRODUCT_LINES } from '../../data/product/product.data';
@@ -13,12 +12,12 @@ export class NpmProviderService {
   PRODUCT_LINES = PRODUCT_LINES;
   LIBRARIES = LIBRARIES;
 
-  constructor( private util: UtilService ) {
+  constructor( private utilService: UtilService ) {
     // Intentionally blank
   }
 
   getNpmPackagesDownloadCount = async () => {
-    const today = this.util.formatDate( new Date() );
+    const today = this.utilService.formatDate( new Date() );
     let count = 0;
     for ( const system of [ PRODUCT_LINES, LIBRARIES ] ) {
       for ( const productLine of system ) {
@@ -27,12 +26,10 @@ export class NpmProviderService {
             const uri = `${ environmentCommon.website.npm.api.download }/${ BRAND.establishDate }:${ today }/${ environmentCommon.company.social.npm }/${ product.key }`;
 
             // Using Xml Http Request because http.get cause CORS issue
-            const response = await this.util.corsRequest( uri );
+            const response = await this.utilService.corsRequest( uri );
             if ( response != null ) {
               const json = JSON.parse( response as string );
-              if ( environment.identity !== 'production' ) {
-                console.log( uri + ': ' + json.downloads );
-              }
+              this.utilService.log( uri + ': ' + json.downloads );
               count += json.downloads;
             }
           }

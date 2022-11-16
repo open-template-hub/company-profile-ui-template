@@ -720,6 +720,17 @@ export const LIBRARIES: ProductLine[] = [
     description: `Libraries for Server Templates on Open Template Hub`,
     products: [
       {
+        key: 'swagger-decorators',
+        name: 'Swagger Decorators',
+        description: `OTH library that contains methods and decorators to ease and automate Swagger documentation.`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.company.social.github + '/' + 'swagger-decorators',
+        urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.company.social.npm + '/' + 'swagger-decorators',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        openSource: true,
+        hasNpmPackage: true,
+        redirectToUrl: true
+      },
+      {
         key: 'common',
         name: 'Common',
         description: `This library contains common functionalities for Server Templates on Open Template Hub`,

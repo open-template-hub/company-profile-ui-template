@@ -1,4 +1,5 @@
 import { EnvironmentModel } from '../app/model/environment/environment.model';
+import { defaultEnvironmentConfigurations } from './environment-init';
 
 export const environment: EnvironmentModel = {
   identity: 'local',
@@ -9,91 +10,15 @@ export const environment: EnvironmentModel = {
 
   clientUrl: 'http://localhost:4200',
 
-  oauth: {
-    twitter: {
-      tag: 'TWITTER_LOCAL'
-    },
-    google: {
-      tag: 'GOOGLE_LOCAL'
-    },
-    facebook: {
-      // Facebook does not allow testing social login at localhost.
-      tag: ''
-    },
-    linkedin: {
-      tag: 'LINKEDIN_LOCAL'
-    },
-    twitch: {
-      tag: 'TWITCH_LOCAL'
-    },
-    github: {
-      tag: 'GITHUB_LOCAL'
-    },
-    dribbble: {
-      tag: 'DRIBBBLE_LOCAL'
-    },
-    reddit: {
-      tag: 'REDDIT_LOCAL'
-    }
-  },
+  oauth: defaultEnvironmentConfigurations.oauth,
 
-  payment: {
-    stripe: {
-      tag: 'STRIPE_LOCAL',
-      publishableKey: 'pk_test_51I4pFdJslj2vUcp7AkRtYwCPiZJbSvGK7lNFggSbLp9LQopdnUJU44mBKlREonmvszmASnyv4FMxQztzFedllxJO00wg7mHS85',
-    },
-    coinbase: {
-      tag: 'COINBASE_LOCAL'
-    },
-    paypal: {
-      tag: 'PAYPAL_LOCAL',
-      clientId: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
-      env: 'sandbox'
-    }
-  },
+  payment: defaultEnvironmentConfigurations.payment,
 
-  fileStorage: {
-    aws: {
-      tag: 'AWS_LOCAL'
-    },
-    googleCloud: {
-      tag: 'GOOGLE_CLOUD_LOCAL'
-    }
-  },
+  fileStorage: defaultEnvironmentConfigurations.fileStorage,
 
-  mail: {
-    gmail: {
-      tag: 'GMAIL_LOCAL'
-    },
-    yahoo: {
-      tag: 'YAHOO_LOCAL'
-    },
-    outlook: {
-      tag: 'OUTLOOK_LOCAL'
-    }
-  },
+  mail: defaultEnvironmentConfigurations.mail,
 
-  sms: {
-    twillio: {
-      tag: 'TWILLIO_LOCAL'
-    },
-    awsSns: {
-      tag: 'AWS_SNS_LOCAL'
-    }
-  },
+  sms: defaultEnvironmentConfigurations.sms,
 
-  analytics: {
-    googleAnalytics: {
-      tag: '',
-      id: ''
-    },
-    matomo: {
-      tag: '',
-      id: ''
-    },
-    mixPanel: {
-      tag: '',
-      id: ''
-    }
-  }
+  analytics: defaultEnvironmentConfigurations.analytics
 };

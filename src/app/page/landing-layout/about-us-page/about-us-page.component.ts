@@ -70,14 +70,22 @@ export class AboutUsPageComponent {
           name: environmentCommon.website[ website ].name,
           handle: environmentCommon.company.social[ website ],
           cssClass: environmentCommon.website[ website ].cssClass,
-          url: environmentCommon.website[ website ].companyUrl
-              ? environmentCommon.website[ website ].companyUrl
-              : ( environmentCommon.website[ website ].channelUrl
-                  ? environmentCommon.website[ website ].channelUrl
-                  : environmentCommon.website[ website ].url ),
+          url: this.getUrl( website ),
         } );
       }
     }
+  }
+
+  private getUrl( website: string ) {
+    let url = environmentCommon.website[ website ].url;
+
+    if ( environmentCommon.website[ website ].companyUrl ) {
+      url = environmentCommon.website[ website ].companyUrl;
+    } else if ( environmentCommon.website[ website ].channelUrl ) {
+      url = environmentCommon.website[ website ].channelUrl;
+    }
+
+    return url;
   }
 
   redirect( href: string ) {

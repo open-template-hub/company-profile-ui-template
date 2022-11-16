@@ -1,4 +1,5 @@
 import { EnvironmentModel } from '../app/model/environment/environment.model';
+import { defaultEnvironmentConfigurations } from './environment-init';
 
 export const environment: EnvironmentModel = {
   identity: 'staging',
@@ -9,90 +10,15 @@ export const environment: EnvironmentModel = {
 
   clientUrl: 'https://oth-ui-company-dev.herokuapp.com',
 
-  oauth: {
-    twitter: {
-      tag: 'TWITTER_DEVELOPMENT'
-    },
-    google: {
-      tag: 'GOOGLE_DEVELOPMENT'
-    },
-    facebook: {
-      tag: 'FACEBOOK_DEVELOPMENT'
-    },
-    linkedin: {
-      tag: 'LINKEDIN_DEVELOPMENT'
-    },
-    twitch: {
-      tag: 'TWITCH_DEVELOPMENT'
-    },
-    github: {
-      tag: 'GITHUB_DEVELOPMENT'
-    },
-    dribbble: {
-      tag: 'DRIBBBLE_DEVELOPMENT'
-    },
-    reddit: {
-      tag: 'REDDIT_DEVELOPMENT'
-    }
-  },
+  oauth: defaultEnvironmentConfigurations.oauth,
 
-  payment: {
-    stripe: {
-      tag: 'STRIPE_DEVELOPMENT',
-      publishableKey: 'pk_test_51I4pFdJslj2vUcp7AkRtYwCPiZJbSvGK7lNFggSbLp9LQopdnUJU44mBKlREonmvszmASnyv4FMxQztzFedllxJO00wg7mHS85',
-    },
-    coinbase: {
-      tag: 'COINBASE_DEVELOPMENT'
-    },
-    paypal: {
-      tag: 'PAYPAL_DEVELOPMENT',
-      clientId: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
-      env: 'sandbox'
-    }
-  },
+  payment: defaultEnvironmentConfigurations.payment,
 
-  fileStorage: {
-    aws: {
-      tag: 'AWS_DEVELOPMENT'
-    },
-    googleCloud: {
-      tag: 'GOOGLE_CLOUD_DEVELOPMENT'
-    }
-  },
+  fileStorage: defaultEnvironmentConfigurations.fileStorage,
 
-  mail: {
-    gmail: {
-      tag: 'GMAIL_DEVELOPMENT'
-    },
-    yahoo: {
-      tag: 'YAHOO_DEVELOPMENT'
-    },
-    outlook: {
-      tag: 'OUTLOOK_DEVELOPMENT'
-    }
-  },
+  mail: defaultEnvironmentConfigurations.mail,
 
-  sms: {
-    twillio: {
-      tag: 'TWILLIO_DEVELOPMENT'
-    },
-    awsSns: {
-      tag: 'AWS_SNS_DEVELOPMENT'
-    }
-  },
+  sms: defaultEnvironmentConfigurations.sms,
 
-  analytics: {
-    googleAnalytics: {
-      tag: '',
-      id: ''
-    },
-    matomo: {
-      tag: '',
-      id: ''
-    },
-    mixPanel: {
-      tag: '',
-      id: ''
-    }
-  }
+  analytics: defaultEnvironmentConfigurations.analytics
 };

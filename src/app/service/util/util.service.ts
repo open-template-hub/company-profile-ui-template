@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Injectable( {
   providedIn: 'root',
@@ -53,4 +54,10 @@ export class UtilService {
       xmlHttpRequest.send();
     } );
   };
+
+  log( log: string ) {
+    if ( environment.identity !== 'production' ) {
+      console.log( log );
+    }
+  }
 }

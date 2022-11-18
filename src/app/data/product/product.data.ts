@@ -648,7 +648,7 @@ export const LIBRARIES: ProductLine[] = [
         description: `This library contains animated code editor ui component for UI Templates on Open Template Hub`,
         url: environmentCommon.website.github.url + '/' + environmentCommon.company.social.github + '/' + 'animated-code-editor',
         urlAlter: environmentCommon.website.npm.url + '/package/' + environmentCommon.company.social.npm + '/' + 'animated-code-editor',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/brand-logo.min.png',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/generator/server-generator-logo.min.png',
         video: {
           url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/library/videos/animated-code-editor-video-1.mov',
           description: `Animated Code Editor demo`,

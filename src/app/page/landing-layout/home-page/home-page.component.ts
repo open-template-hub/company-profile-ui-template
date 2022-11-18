@@ -8,7 +8,6 @@ import { PARTNERS } from 'src/app/data/partner/partner.data';
 import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
 import { Feature } from 'src/app/model/feature/feature.model';
 import { Testimonial } from 'src/app/model/testimonial/testimonial.model';
-import { NpmProviderService } from 'src/app/service/provider/npm-provider.service';
 import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { BRAND } from '../../../data/brand/brand.data';
@@ -77,7 +76,6 @@ export class HomePageComponent implements AfterViewInit {
   constructor(
       private formBuilder: FormBuilder,
       public router: Router,
-      private npmProviderService: NpmProviderService,
       private githubService: GithubProviderService,
       private analyticsService: AnalyticsService,
       private loadingService: LoadingService
@@ -114,7 +112,7 @@ export class HomePageComponent implements AfterViewInit {
 
     this.analyticsService.getSystemInfo( 'npm-downloads' ).subscribe( ( count ) => {
       this.npmCounterLoading = false;
-      this.loadingService.setLoading(this.npmCounterLoading);
+      this.loadingService.setLoading( this.npmCounterLoading );
       this.npmDownloadCounter.count = count;
       this.startCounter( options, this.npmDownloadCounter );
     } );

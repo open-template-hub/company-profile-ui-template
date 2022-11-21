@@ -7,7 +7,7 @@ export const EMPLOYEES: Employee[] = [
       title: $localize `:@@employeesData.coFounder:Co-Founder`,
       bio: $localize`:@@employees.furkan.bio:Furkan is an experienced full-stack developer who has worked on various projects, including online payment solutions and fraud detection areas, in a well-known airline company. He\'s co-founded a startup to discover talents from the open-source community. After one year, Furkan successfully exited from his startup and then co-founded Open Template Hub.`,
       photoUri:
-          'https://raw.githubusercontent.com/furknyavuz/furknyavuz/master/assets/images/15114CB7-AD1E-480F-A547-8634109C620A_1_105_c.jpeg',
+          'https://avatars.githubusercontent.com/u/2248168?v=4',
       social: {
         linkedIn: 'https://www.linkedin.com/in/furkanyavuz',
         twitter: 'https://twitter.com/furknyavuz',

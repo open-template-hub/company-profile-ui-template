@@ -1,9 +1,7 @@
 <oth-card
     *ngIf="contributor.profile"
     [bodyTemplate]="bodyTemplate"
-    [bottomWrapperTemplate]="bottomWrapperTemplate"
     class="contributor-card">
-
   <!-- Body -->
   <ng-template #bodyTemplate>
     <div class="body">
@@ -49,9 +47,5 @@
         </div>
       </div>
     </div>
-  </ng-template>
-
-  <!-- Bottom Wrapper -->
-  <ng-template #bottomWrapperTemplate>
   </ng-template>
 </oth-card>

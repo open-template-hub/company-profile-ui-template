@@ -1,5 +1,4 @@
-<oth-card [bodyTemplate]="bodyTemplate" [bottomWrapperTemplate]="bottomWrapperTemplate"
-          [cardClass]="'transparent-card'" class="asset-card">
+<oth-card [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="asset-card">
   <!-- Body -->
   <ng-template #bodyTemplate>
     <div [class]="assetItemClass" class="asset-item">
@@ -16,5 +15,4 @@
       <p *ngIf="footerText" class="asset-footer">{{ footerText }}</p>
     </div>
   </ng-template>
-  <ng-template #bottomWrapperTemplate></ng-template>
 </oth-card>

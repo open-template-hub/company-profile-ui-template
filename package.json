@@ -41,7 +41,6 @@
     "@open-template-hub/button": "^4.0.5",
     "@open-template-hub/card": "^4.1.2",
     "@open-template-hub/hero": "^4.0.4",
-    "@stripe/stripe-js": "^1.44.1",
     "compression": "^1.7.4",
     "countup.js": "^2.3.2",
     "dotenv": "^16.0.3",

@@ -4,7 +4,8 @@ export const PARTNERS: Partner[] = [
   {
     name: 'github',
     src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/github.png',
-    website: 'https://github.com'
+    website: 'https://github.com',
+    badge: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/badge/github.png',
   },
   {
     name: 'aws',
@@ -14,7 +15,8 @@ export const PARTNERS: Partner[] = [
   {
     name: 'heroku',
     src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/logo-wide/heroku.png',
-    website: 'https://heroku.com'
+    website: 'https://heroku.com',
+    badge: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/third-parties/badge/heroku.png'
   },
   {
     name: 'google',

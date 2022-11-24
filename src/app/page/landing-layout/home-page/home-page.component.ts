@@ -73,6 +73,11 @@ export class HomePageComponent implements AfterViewInit {
     { text: `Open Source libraries and plugins..` }
   ];
 
+  partnershipBadgesTitle = [
+    { text: `Business Partners`, level: 2 },
+    { text: `Create and run your online business with us and our partners` }
+  ];
+
   constructor(
       private formBuilder: FormBuilder,
       public router: Router,

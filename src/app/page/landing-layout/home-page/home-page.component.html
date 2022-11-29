@@ -68,6 +68,14 @@
   </app-feature-card>
 </div>
 
+<!-- Partnership Badges -->
+<oth-hero [contents]="partnershipBadgesTitle"></oth-hero>
+<div class="cards-wrapper">
+  <ng-container *ngFor="let partner of PARTNERS; index as i">
+    <img class="partner" *ngIf="partner.badge" [src]="partner.badge" [alt]="partner.name"/>
+  </ng-container>
+</div>
+
 <!-- Explore -->
 <oth-hero [contents]="exploreTitle"></oth-hero>
 <ng-container *ngFor="let productLine of PRODUCT_LINES">
@@ -127,13 +135,5 @@
     </ng-container>
   </div>
 </ng-container>
-
-<!-- Partnership Badges -->
-<oth-hero [contents]="partnershipBadgesTitle"></oth-hero>
-<div class="cards-wrapper">
-  <ng-container *ngFor="let partner of PARTNERS; index as i">
-    <img class="partner" *ngIf="partner.badge" [src]="partner.badge" [alt]="partner.name"/>
-  </ng-container>
-</div>
 
 <app-cookies></app-cookies>

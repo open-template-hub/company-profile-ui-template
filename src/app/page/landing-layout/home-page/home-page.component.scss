@@ -184,6 +184,13 @@
 }
 
 @media only screen and (min-width: 1000px) {
+
+  .cards-wrapper {
+    & app-testimonial-card, img {
+      margin-top: 0;
+    }
+  }
+  
   .hero {
     flex-direction: row;
     padding-bottom: 50px;

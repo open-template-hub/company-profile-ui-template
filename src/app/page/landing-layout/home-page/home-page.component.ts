@@ -64,17 +64,17 @@ export class HomePageComponent implements AfterViewInit {
   ];
 
   exploreTitle = [
-    { text: $localize`:@@homePage.exploreTitle.1:Explore our Products`, level: 2 },
+    { text: $localize`:@@homePage.exploreTitle.1:Explore our Products`, level: 1 },
     { text: $localize`:@@homePage.exploreTitle.2:Explore our open source and premium products to get started today.` }
   ];
 
   andMoreTitle = [
-    { text: `And more..`, level: 2 },
+    { text: `And more..`, level: 1 },
     { text: `Open Source libraries and plugins..` }
   ];
 
   partnershipBadgesTitle = [
-    { text: `Business Partners`, level: 2 },
+    { text: `Business Partners`, level: 1 },
     { text: `Create and run your online business with us and our partners` }
   ];
 
@@ -129,7 +129,7 @@ export class HomePageComponent implements AfterViewInit {
     this.openSourceRatioCounter.count = 0;
 
     const promises: Promise<any>[] = [];
-    for ( const system of [ PRODUCT_LINES, LIBRARIES ] ) {
+    for ( const system of [ PRODUCT_LINES, LIBRARIES, PLUGINS ] ) {
 
       for ( const productLine of system ) {
 

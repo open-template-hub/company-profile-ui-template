@@ -16,9 +16,9 @@ export class NotFoundPageComponent {
   INFORMATION_TYPES = INFORMATION_TYPES;
 
   appHeroContents = [
-    {text: $localize `:@@notFound.appHero.1:404 Page not found`, level: 1},
-    {text: $localize `:@@notFound.appHero.2:Something went wrong!`}
-  ]
+    { text: $localize`:@@notFound.appHero.1:404 Page not found`, level: 1 },
+    { text: $localize`:@@notFound.appHero.2:Something went wrong!` }
+  ];
 
   constructor( public router: Router ) {
   }

@@ -6,13 +6,13 @@ const README = '/README.md';
 
 export const DOCS: Doc[] = [];
 
-for (const productLine of PRODUCT_LINES) {
-  if (productLine.key !== 'premium') {
-    for (const product of productLine.products) {
-      if (product.url === URLS.maintenance) {
+for ( const productLine of PRODUCT_LINES ) {
+  if ( productLine.key !== 'premium' ) {
+    for ( const product of productLine.products ) {
+      if ( product.url === URLS.maintenance ) {
         continue;
       }
-      DOCS.push({
+      DOCS.push( {
         key: product.key,
         url: product.url === URLS.maintenance ? URLS.maintenance : productLine.key + '/' + product.key + README,
         tag: productLine.key,
@@ -20,7 +20,7 @@ for (const productLine of PRODUCT_LINES) {
         title: product.name,
         excerpt: product.description,
         date: '',
-      } as Doc);
+      } as Doc );
     }
   }
 }

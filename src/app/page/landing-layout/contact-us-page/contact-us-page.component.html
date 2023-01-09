@@ -62,7 +62,7 @@
           </div>
           <div [class.error-input]="submitted && form.controls.companySize.invalid" class="input-with-label">
             <select (change)="changeCompanySize($event)" formControlName="companySize">
-              <option i18n="@@contactUs.rangeOfEmployees" class="default-option" disabled value="">
+              <option class="default-option" disabled i18n="@@contactUs.rangeOfEmployees" value="">
                 Select range of employees
               </option>
               <option *ngFor="let option of sizeOptions" [ngValue]="option">
@@ -73,7 +73,8 @@
           </div>
           <div [class.error-input]="submitted && form.controls.country.invalid" class="input-with-label">
             <select (change)="changeCountry($event)" formControlName="country">
-              <option i18n="@@contactUs.selectCountry" class="default-option" disabled value="">Select a country</option>
+              <option class="default-option" disabled i18n="@@contactUs.selectCountry" value="">Select a country
+              </option>
               <option *ngFor="let country of countries" [ngValue]="country">
                 {{ country }}
               </option>
@@ -86,8 +87,9 @@
           >
           <textarea
               formControlName="anythingElse"
+              i18n-placeholder="@@contactUs.yourMessage.placeholder"
               maxlength="500"
-              i18n-placeholder="@@contactUs.yourMessage.placeholder" placeholder="Tell us more about your project, needs, and timeline...."
+              placeholder="Tell us more about your project, needs, and timeline...."
               rows="5"
           ></textarea>
             <h4 i18n="@@contactUs.yourMessage">Your Message</h4>
@@ -113,7 +115,8 @@
     <i aria-hidden="true" class="fa fa-comments fa-fw"></i>
     <div class="footer-card-right-column">
       <h4 i18n="@@contactUs.generalCommunication.header">General Communication</h4>
-      <h4 i18n="@@contactUs.generalCommunication.description">For general queries, including partnership opportunities, please email
+      <h4 i18n="@@contactUs.generalCommunication.description">For general queries, including partnership opportunities,
+        please email
         <a [href]="'mailto: ' + environmentCommon.company.email" class="theme-color-link">
           {{ environmentCommon.company.email }}
         </a>

@@ -22,21 +22,21 @@
                   text="Open Source">
               </oth-brand-button>
 
-              <oth-button *ngIf="product.urlDemo"
-                          (click)="redirect(product.urlDemo)"
+              <oth-button (click)="redirect(product.urlDemo)"
+                          *ngIf="product.urlDemo"
                           i18n-text="@@productPage.demo.button"
                           text="Demo">
               </oth-button>
 
               <oth-button
-                  *ngIf="productLineKey !== 'generator'"
                   (click)="router.navigate([URLS.contactUs])"
+                  *ngIf="productLineKey !== 'generator'"
                   i18n-text="@@productPage.professional.button"
                   text="Professional Help">
               </oth-button>
               <oth-brand-button
-                  *ngIf="product.hasNpmPackage"
                   (click)="redirect(product.urlAlter)"
+                  *ngIf="product.hasNpmPackage"
                   [icon]="environmentCommon.website.npm.cssClass"
                   i18n-text="@@productPage.downloadPackage.button"
                   text="Download Package">
@@ -58,7 +58,7 @@
     </div>
   </div>
 
-  <div class="screenshots-wrapper" *ngIf="product.screenshots">
+  <div *ngIf="product.screenshots" class="screenshots-wrapper">
     <app-screenshot-swiper
         [screenshots]="product.screenshots"></app-screenshot-swiper>
   </div>
@@ -109,14 +109,14 @@
             [testimonial]="testimonial">
         </app-testimonial-card>
         <oth-button
-            i18n-text="@@productPage.readMoreStories"
-            text="Read More Stories"
-            [routerLink]="URLS.customers"
             [buttonClasses]="[
             'lighter-contrast-border-color',
             'lighter-contrast-font-color',
             'transparent-button'
-          ]">
+          ]"
+            [routerLink]="URLS.customers"
+            i18n-text="@@productPage.readMoreStories"
+            text="Read More Stories">
         </oth-button>
       </div>
     </ng-container>
@@ -128,10 +128,10 @@
         <div class="timeline-wrapper">
           <ng-container *ngFor="let step of product.steps; index as i">
             <app-step-timeline-card
-                [step]="step"
-                [num]="i + 1"
                 [class]="i % 2 === 0 ? 'left' : 'right'"
-                [rotation]="i % 2 === 0 ? 'left' : 'right'">
+                [num]="i + 1"
+                [rotation]="i % 2 === 0 ? 'left' : 'right'"
+                [step]="step">
             </app-step-timeline-card>
           </ng-container>
         </div>
@@ -146,9 +146,9 @@
       <div *ngIf="commitActivities.length > 0" class="activity-history-wrapper">
         <app-activity-history-card
             *ngIf="product.openSource"
+            [activities]="commitActivities"
             i18n-title="@@productPage.activityHistory.title"
-            title="Activity history"
-            [activities]="commitActivities">
+            title="Activity history">
         </app-activity-history-card>
       </div>
     </ng-container>
@@ -175,10 +175,10 @@
                 [footerText]="getPresentationCardFooter(relatedProduct.openSource)"
                 [href]="URLS.product + '/' + productLine.key + '/' + relatedProduct.key"
                 [imgHeight]="150"
+                [maintenance]="relatedProduct.url === URLS.maintenance"
                 [secondaryText]="relatedProduct.description"
                 [src]="relatedProduct.logo"
                 [title]="relatedProduct.name"
-                [maintenance]="relatedProduct.url === URLS.maintenance"
                 class="related-product"></app-presentation-card>
           </ng-container>
         </ng-container>
@@ -201,10 +201,10 @@
                 [footerText]="getPresentationCardFooter(relatedProduct.openSource)"
                 [href]="relatedProduct.url"
                 [imgHeight]="150"
+                [maintenance]="relatedProduct.url === URLS.maintenance"
                 [secondaryText]="relatedProduct.description"
                 [src]="relatedProduct.logo"
                 [title]="relatedProduct.name"
-                [maintenance]="relatedProduct.url === URLS.maintenance"
                 class="related-product"></app-presentation-card>
           </ng-container>
         </ng-container>

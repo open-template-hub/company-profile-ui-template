@@ -1674,8 +1674,13 @@
         </context-group>
       </trans-unit>
       <trans-unit id="navigationData.root.description" datatype="html">
-        <source>: Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates</source>
-        <target>: Minimise vos efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de micro-serveur GitHub open source et nos modèles d'interface utilisateur Web réactive + d'interface utilisateur mobile</target>
+        <source>: Minimizes your effort while building a new software business with our open source GitHub micro server
+          templates and responsive web UI + mobile UI templates
+        </source>
+        <target>: Minimise vos efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de
+          micro-serveur GitHub open source et nos modèles d'interface utilisateur Web réactive + d'interface utilisateur
+          mobile
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
           <context context-type="linenumber">9</context>
@@ -1964,30 +1969,14 @@
       </trans-unit>
       <trans-unit id="productData.openSource.description" datatype="html">
         <source>Customers that pay per user can send out as many signature requests as they want per month!</source>
-        <target>Les clients qui paient par utilisateur peuvent envoyer autant de demandes de signature qu'ils le souhaitent par mois !</target>
+        <target>Les clients qui paient par utilisateur peuvent envoyer autant de demandes de signature qu'ils le
+          souhaitent par mois !
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       <trans-unit id="productLinesData.servers.description" datatype="html">
@@ -2000,8 +1989,12 @@
       </trans-unit>
 
       <trans-unit id="productLinesData.paymentServerTemplate.description" datatype="html">
-        <source>Payment Server Template is an open source payment server that has simple and generic design to be able to integrated with payment solution providers like Stripe or Coinbase</source>
-        <target>Le modèle de serveur de paiement est un serveur de paiement open source qui a une conception simple et générique pour pouvoir s'intégrer aux fournisseurs de solutions de paiement comme Stripe ou Coinbase</target>
+        <source>Payment Server Template is an open source payment server that has simple and generic design to be able
+          to integrated with payment solution providers like Stripe or Coinbase
+        </source>
+        <target>Le modèle de serveur de paiement est un serveur de paiement open source qui a une conception simple et
+          générique pour pouvoir s'intégrer aux fournisseurs de solutions de paiement comme Stripe ou Coinbase
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">139</context>
@@ -2009,33 +2002,30 @@
       </trans-unit>
 
       <trans-unit id="productLinesData.mailServerTemplate.description" datatype="html">
-        <source>Mail Server Template supporting both regular public and private mail send processes in Message Queue Architecture</source>
-        <target>Modèle de serveur de messagerie prenant en charge les processus d'envoi de courrier public et privé standard dans Message Queue Architecture</target>
+        <source>Mail Server Template supporting both regular public and private mail send processes in Message Queue
+          Architecture
+        </source>
+        <target>Modèle de serveur de messagerie prenant en charge les processus d'envoi de courrier public et privé
+          standard dans Message Queue Architecture
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">171</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productLinesData.analyticsServerTemplate.description" datatype="html">
-        <source>Analytics Server Template is a generic open source analytics server that has simple yet powerful design to connect your business with third party analytics service providers (like Google Analytics or Matomo).</source>
-        <target>Le modèle de serveur d'analyse est un serveur d'analyse open source générique qui a une conception simple mais puissante pour connecter votre entreprise à des fournisseurs de services d'analyse tiers (comme Google Analytics ou Matomo).</target>
+        <source>Analytics Server Template is a generic open source analytics server that has simple yet powerful design
+          to connect your business with third party analytics service providers (like Google Analytics or Matomo).
+        </source>
+        <target>Le modèle de serveur d'analyse est un serveur d'analyse open source générique qui a une conception
+          simple mais puissante pour connecter votre entreprise à des fournisseurs de services d'analyse tiers (comme
+          Google Analytics ou Matomo).
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">186</context>
         </context-group>
       </trans-unit>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       <trans-unit id="ribbonData.new" datatype="html">
@@ -2070,12 +2060,13 @@
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
-      
+
       <trans-unit id="aboutUs.employeeAppHero.text" datatype="html">
         <source>Team Behind the Open Template Hub</source>
         <target>L'équipe derrière l'Open Template Hub</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts
+          </context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
@@ -2083,15 +2074,22 @@
         <source>Follow us on social media</source>
         <target>Suivez-nous sur les réseaux sociaux</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts
+          </context>
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
       <trans-unit id="aboutUs.followUsAppHero.descriptionText" datatype="html">
-        <source>Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates</source>
-        <target>Minimise vos efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de micro-serveur GitHub open source et nos modèles d'interface utilisateur Web réactive + d'interface utilisateur mobile</target>
+        <source>Minimizes your effort while building a new software business with our open source GitHub micro server
+          templates and responsive web UI + mobile UI templates
+        </source>
+        <target>Minimise vos efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de
+          micro-serveur GitHub open source et nos modèles d'interface utilisateur Web réactive + d'interface utilisateur
+          mobile
+        </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts
+          </context>
           <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
@@ -2099,23 +2097,149 @@
         <source>History of the Open Template Hub</source>
         <target>Histoire de l'Open Template Hub</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts
+          </context>
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
       <trans-unit id="aboutUs.historyOfUsAppHero.othDescription" datatype="html">
-        <source>Minimizes your effort while building a new software business with our open source GitHub micro server templates and responsive web UI + mobile UI templates</source>
-        <target>Minimise vos efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de micro-serveur GitHub open source et nos modèles d'interface utilisateur Web réactive + d'interface utilisateur mobile</target>
+        <source>Minimizes your effort while building a new software business with our open source GitHub micro server
+          templates and responsive web UI + mobile UI templates
+        </source>
+        <target>Minimise vos efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de
+          micro-serveur GitHub open source et nos modèles d'interface utilisateur Web réactive + d'interface utilisateur
+          mobile
+        </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts
+          </context>
           <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="brandingPage.policyContent" datatype="html">
-        <source><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> All of Open Template Hub’s brand features including <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>, <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>OTH<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> and the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> logo are protected by applicable trademark, copyright and other intellectual property laws. Any use of a <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub trademark<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> is subject to the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub Trademark Standards<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> for Use. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> Basic usage guidelines can be found below. If you have any questions or want to request approval to use these assets, please do not hesitate to contact us or email <x id="START_LINK" ctype="x-a" equiv-text="&lt;a             href=&quot;mailto:info@opentemplatehub.com&quot;&gt;"/>info@opentemplatehub.com<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/> Basic Usage Guidelines: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> - Do not rotate the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> logo. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> - Do not change the color of the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> logo. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> - Do not distort the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> logo (be sure to scale proportionately). <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> - Allow an appropriate amount of white space around the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>logo, at least as much as the x-height of the logo (suggested). <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> - Preferred minimum size for the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> logo is 100px wide. For smaller sizes, you must seek permission from the Open Template Hub team. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></source>
-            <target><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> All of Open Template Hub’s brand features including <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>, <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>OTH<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> and the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> logo are protected by applicable trademark, copyright and other intellectual property laws. Any use of a <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub trademark<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> is subject to the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub Trademark Standards<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> for Use. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> Basic usage guidelines can be found below. If you have any questions or want to request approval to use these assets, please do not hesitate to contact us or email <x id="START_LINK" ctype="x-a" equiv-text="&lt;a                                 href=&quot;mailto:info@opentemplatehub.com&quot;&gt;"/>info@opentemplatehub.com<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/><x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/> Basic Usage Guidelines: <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/><x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> - Do not rotate the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> logo. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> - Do not change the color of the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> logo. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> - Do not distort the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> logo (be sure to scale proportionately). <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> - Allow an appropriate amount of white space around the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>logo, at least as much as the x-height of the logo (suggested). <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/><x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/> - Preferred minimum size for the <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/> logo is 100px wide. For smaller sizes, you must seek permission from the Open Template Hub team. <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/></target>
+        <source>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          All of Open Template Hub’s brand features including<x id="START_TAG_STRONG" ctype="x-strong"
+                                                                equiv-text="&lt;strong&gt;"/>Open Template Hub<x
+            id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>,<x id="START_TAG_STRONG"
+                                                                                     ctype="x-strong"
+                                                                                     equiv-text="&lt;strong&gt;"/>OTH
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          and the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          logo are protected by applicable trademark, copyright and other intellectual property laws. Any use of a<x
+            id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub trademark
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          is subject to the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub
+          Trademark Standards
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          for Use.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          Basic usage guidelines can be found below. If you have any questions or want to request approval to use these
+          assets, please do not hesitate to contact us or email<x id="START_LINK" ctype="x-a"
+                                                                  equiv-text="&lt;a             href=&quot;mailto:info@opentemplatehub.com&quot;&gt;"/>
+          info@opentemplatehub.com
+          <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>
+          Basic Usage Guidelines:
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          - Do not rotate the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          logo.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          - Do not change the color of the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open
+          Template Hub
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          logo.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          - Do not distort the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          logo (be sure to scale proportionately).
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          - Allow an appropriate amount of white space around the<x id="START_TAG_STRONG" ctype="x-strong"
+                                                                    equiv-text="&lt;strong&gt;"/>Open Template Hub<x
+            id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>logo, at least as much as the x-height
+          of the logo (suggested).
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          - Preferred minimum size for the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open
+          Template Hub
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          logo is 100px wide. For smaller sizes, you must seek permission from the Open Template Hub team.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+        </source>
+        <target>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          All of Open Template Hub’s brand features including<x id="START_TAG_STRONG" ctype="x-strong"
+                                                                equiv-text="&lt;strong&gt;"/>Open Template Hub<x
+            id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>,<x id="START_TAG_STRONG"
+                                                                                     ctype="x-strong"
+                                                                                     equiv-text="&lt;strong&gt;"/>OTH
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          and the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          logo are protected by applicable trademark, copyright and other intellectual property laws. Any use of a<x
+            id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub trademark
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          is subject to the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub
+          Trademark Standards
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          for Use.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          Basic usage guidelines can be found below. If you have any questions or want to request approval to use these
+          assets, please do not hesitate to contact us or email<x id="START_LINK" ctype="x-a"
+                                                                  equiv-text="&lt;a                                 href=&quot;mailto:info@opentemplatehub.com&quot;&gt;"/>
+          info@opentemplatehub.com
+          <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>
+          Basic Usage Guidelines:
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          - Do not rotate the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          logo.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          - Do not change the color of the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open
+          Template Hub
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          logo.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          - Do not distort the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open Template Hub
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          logo (be sure to scale proportionately).
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          - Allow an appropriate amount of white space around the<x id="START_TAG_STRONG" ctype="x-strong"
+                                                                    equiv-text="&lt;strong&gt;"/>Open Template Hub<x
+            id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>logo, at least as much as the x-height
+          of the logo (suggested).
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+          <x id="START_PARAGRAPH" ctype="x-p" equiv-text="&lt;p&gt;"/>
+          - Preferred minimum size for the<x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Open
+          Template Hub
+          <x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>
+          logo is 100px wide. For smaller sizes, you must seek permission from the Open Template Hub team.
+          <x id="CLOSE_PARAGRAPH" ctype="x-p" equiv-text="&lt;/p&gt;"/>
+        </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/branding-page/branding-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/branding-page/branding-page.component.html
+          </context>
           <context context-type="linenumber">8,46</context>
         </context-group>
       </trans-unit>
@@ -2123,7 +2247,9 @@
         <source>Thank you for reaching us. Our team will contact with you soon.</source>
         <target>Merci de nous avoir rejoint. Notre équipe vous contactera bientôt.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
@@ -2131,7 +2257,9 @@
         <source>First Name</source>
         <target>Prénom</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
@@ -2139,7 +2267,9 @@
         <source>Last Name</source>
         <target>Nom de famille</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
@@ -2147,7 +2277,9 @@
         <source>Email</source>
         <target>Email</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
@@ -2155,7 +2287,9 @@
         <source>Phone Number</source>
         <target>Numéro de téléphone</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
@@ -2163,7 +2297,9 @@
         <source>Website</source>
         <target>Website</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">61</context>
         </context-group>
       </trans-unit>
@@ -2171,7 +2307,9 @@
         <source>Select range of employees</source>
         <target>Sélectionnez la gamme d'employés</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">66,67</context>
         </context-group>
       </trans-unit>
@@ -2179,7 +2317,9 @@
         <source>Company Size</source>
         <target>Taille de l'entreprise</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">72</context>
         </context-group>
       </trans-unit>
@@ -2187,7 +2327,9 @@
         <source>Country</source>
         <target>Pays</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">83</context>
         </context-group>
       </trans-unit>
@@ -2195,7 +2337,9 @@
         <source>Tell us more about your project, needs, and timeline....</source>
         <target>Parlez-nous de votre projet, de vos besoins et de votre échéancier....</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">92</context>
         </context-group>
       </trans-unit>
@@ -2203,7 +2347,9 @@
         <source>Your Message</source>
         <target>Votre message</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">95</context>
         </context-group>
       </trans-unit>
@@ -2211,7 +2357,9 @@
         <source>CONTACT US</source>
         <target>Votre message</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">98</context>
         </context-group>
       </trans-unit>
@@ -2219,15 +2367,29 @@
         <source>General Communication</source>
         <target>Communication générale</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">117</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.generalCommunication.description" datatype="html">
-        <source>For general queries, including partnership opportunities, please email <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [href]=&quot;&apos;mailto: &apos; + environmentCommon.oth.email&quot; class=&quot;theme-color-link&quot;&gt;"/> <x id="INTERPOLATION" equiv-text="{{ environmentCommon.oth.email }}"/> <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <target>Pour les questions générales, y compris les opportunités de partenariat, veuillez envoyer un e-mail à <x id="START_LINK" ctype="xa" equiv-text="&lt;a [href]=&quot;&apos;mailto: &apos; + environmentCommon.oth.email&quot; class =&quot;theme-color-link&quot;&gt;"/> <x id="INTERPOLATION" equiv-text="{{ environmentCommon.oth.email }}"/> <x id="CLOSE_LINK" ctype="xa" equiv-text="&lt;/a&gt;"/></target>
+        <source>For general queries, including partnership opportunities, please email
+          <x id="START_LINK" ctype="x-a"
+             equiv-text="&lt;a [href]=&quot;&apos;mailto: &apos; + environmentCommon.oth.email&quot; class=&quot;theme-color-link&quot;&gt;"/>
+          <x id="INTERPOLATION" equiv-text="{{ environmentCommon.oth.email }}"/>
+          <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+        </source>
+        <target>Pour les questions générales, y compris les opportunités de partenariat, veuillez envoyer un e-mail à
+          <x id="START_LINK" ctype="xa"
+             equiv-text="&lt;a [href]=&quot;&apos;mailto: &apos; + environmentCommon.oth.email&quot; class =&quot;theme-color-link&quot;&gt;"/>
+          <x id="INTERPOLATION" equiv-text="{{ environmentCommon.oth.email }}"/>
+          <x id="CLOSE_LINK" ctype="xa" equiv-text="&lt;/a&gt;"/>
+        </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">118,121</context>
         </context-group>
       </trans-unit>
@@ -2235,15 +2397,29 @@
         <source>Technical or account support</source>
         <target>Support technique ou de compte</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">128</context>
         </context-group>
       </trans-unit>
       <trans-unit id="contactUs.technicalSupport.description" datatype="html">
-        <source>We're here to help! If you have technical issues, <x id="START_LINK" ctype="x-a" equiv-text="&lt;a [href]=&quot;URLS.maintenance&quot; class=&quot;theme-color-link&quot;&gt;"/> contact support <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/></source>
-        <target>Nous sommes là pour vous aider ! Si vous rencontrez des problèmes techniques, <x id="START_LINK" ctype="xa" equiv-text="&lt;a [href]=&quot;URLS.maintenance&quot; class=&quot;theme-color-link&quot;&gt;"/> contacter l'assistance <x id="CLOSE_LINK" ctype="xa" equiv-text="&lt;/a&gt;"/></target>
+        <source>We're here to help! If you have technical issues,
+          <x id="START_LINK" ctype="x-a"
+             equiv-text="&lt;a [href]=&quot;URLS.maintenance&quot; class=&quot;theme-color-link&quot;&gt;"/>
+          contact support
+          <x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>
+        </source>
+        <target>Nous sommes là pour vous aider ! Si vous rencontrez des problèmes techniques,
+          <x id="START_LINK" ctype="xa"
+             equiv-text="&lt;a [href]=&quot;URLS.maintenance&quot; class=&quot;theme-color-link&quot;&gt;"/>
+          contacter l'assistance
+          <x id="CLOSE_LINK" ctype="xa" equiv-text="&lt;/a&gt;"/>
+        </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">129,132</context>
         </context-group>
       </trans-unit>
@@ -2251,52 +2427,20 @@
         <source>Please provide a first name</source>
         <target>Veuillez indiquer un prénom</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.ts
+          </context>
           <context context-type="linenumber">64</context>
         </context-group>
       </trans-unit>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
       <trans-unit id="homePage.oth.description" datatype="html">
-        <source>Open Source first organization that helps you to minimize the effort while building a new software business with our server and UI templates</source>
-        <target>Première organisation Open Source qui vous aide à minimiser les efforts tout en créant une nouvelle entreprise de logiciels avec nos modèles de serveur et d'interface utilisateur</target>
+        <source>Open Source first organization that helps you to minimize the effort while building a new software
+          business with our server and UI templates
+        </source>
+        <target>Première organisation Open Source qui vous aide à minimiser les efforts tout en créant une nouvelle
+          entreprise de logiciels avec nos modèles de serveur et d'interface utilisateur
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.html</context>
           <context context-type="linenumber">5,8</context>
@@ -2312,16 +2456,12 @@
       </trans-unit>
 
 
-
-
-
-
-
       <trans-unit id="pricingPage.appHero.1" datatype="html">
         <source>Pricing Plan</source>
         <target>Plan tarifaire</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/pricing-page/pricing-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/pricing-page/pricing-page.component.ts
+          </context>
           <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
@@ -2329,7 +2469,8 @@
         <source>No hidden fees. Cancel at any time.</source>
         <target>Pas de frais cachés. Annulez à tout moment.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/pricing-page/pricing-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/pricing-page/pricing-page.component.ts
+          </context>
           <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
@@ -2337,7 +2478,8 @@
         <source>Open Source</source>
         <target>Open source</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html
+          </context>
           <context context-type="linenumber">22</context>
         </context-group>
       </trans-unit>
@@ -2345,7 +2487,8 @@
         <source>Professional Help</source>
         <target>Aide professionnelle</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html
+          </context>
           <context context-type="linenumber">26</context>
         </context-group>
       </trans-unit>
@@ -2355,7 +2498,8 @@
         <source>Activity history</source>
         <target>Historique des activités</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html
+          </context>
           <context context-type="linenumber">92</context>
         </context-group>
       </trans-unit>
@@ -2363,7 +2507,8 @@
         <source>Related Products</source>
         <target>Produits connexes</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts
+          </context>
           <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
@@ -2371,7 +2516,8 @@
         <source>Contact Us</source>
         <target>Nous contacter</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts
+          </context>
           <context context-type="linenumber">122</context>
         </context-group>
       </trans-unit>
@@ -2379,7 +2525,8 @@
         <source>Request for Demo</source>
         <target>Demande de démo</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts
+          </context>
           <context context-type="linenumber">123</context>
         </context-group>
       </trans-unit>
@@ -2387,7 +2534,9 @@
         <source>HOME</source>
         <target>DOMICILE</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component.html
+          </context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
@@ -2395,7 +2544,9 @@
         <source>Under maintenance</source>
         <target>En maintenance</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component.ts</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component.ts
+          </context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
@@ -2403,7 +2554,9 @@
         <source>Please check again later</source>
         <target>Veuillez vérifier à nouveau plus tard</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component.ts</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/raw-content-pages/maintenance-page/maintenance-page.component.ts
+          </context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
@@ -2411,7 +2564,9 @@
         <source>HOME</source>
         <target>DOMICILE</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/not-found-page/not-found-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/raw-content-pages/not-found-page/not-found-page.component.html
+          </context>
           <context context-type="linenumber">10</context>
         </context-group>
       </trans-unit>
@@ -2419,7 +2574,9 @@
         <source>404 Page not found</source>
         <target>404 Page non trouvée</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/not-found-page/not-found-page.component.ts</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/raw-content-pages/not-found-page/not-found-page.component.ts
+          </context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
@@ -2427,24 +2584,20 @@
         <source>Something went wrong!</source>
         <target/>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/raw-content-pages/not-found-page/not-found-page.component.ts</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/raw-content-pages/not-found-page/not-found-page.component.ts
+          </context>
           <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
       <trans-unit id="sitemap.products" datatype="html">
         <source>Products</source>
         <target>Des produits</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">7</context>
         </context-group>
       </trans-unit>
@@ -2452,7 +2605,8 @@
         <source>Company</source>
         <target>Société</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
@@ -2460,7 +2614,8 @@
         <source>About</source>
         <target>Sur</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">34,35</context>
         </context-group>
       </trans-unit>
@@ -2468,7 +2623,8 @@
         <source>Customers</source>
         <target>Les clients</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">37,38</context>
         </context-group>
       </trans-unit>
@@ -2476,7 +2632,8 @@
         <source>Enterprise</source>
         <target>Entreprise</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">40,41</context>
         </context-group>
       </trans-unit>
@@ -2484,7 +2641,8 @@
         <source>Partners</source>
         <target>Les partenaires</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">43,44</context>
         </context-group>
       </trans-unit>
@@ -2492,7 +2650,8 @@
         <source>Branding</source>
         <target>l'image de marque</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">46,47</context>
         </context-group>
       </trans-unit>
@@ -2500,7 +2659,8 @@
         <source>Jobs</source>
         <target>Travaux</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">49,50</context>
         </context-group>
       </trans-unit>
@@ -2508,7 +2668,8 @@
         <source>Blog</source>
         <target>Blog</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">52,53</context>
         </context-group>
       </trans-unit>
@@ -2516,7 +2677,8 @@
         <source>Developers</source>
         <target>Développeurs</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">58</context>
         </context-group>
       </trans-unit>
@@ -2524,17 +2686,19 @@
         <source>Docs</source>
         <target>Documents</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">60,61</context>
         </context-group>
       </trans-unit>
-      
-      
+
+
       <trans-unit id="sitemap.resources" datatype="html">
         <source>Resources</source>
         <target>Ressources</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">70</context>
         </context-group>
       </trans-unit>
@@ -2542,7 +2706,8 @@
         <source>Support</source>
         <target>Soutien</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">72,73</context>
         </context-group>
       </trans-unit>
@@ -2550,7 +2715,8 @@
         <source>Contact</source>
         <target>Contact</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">75,76</context>
         </context-group>
       </trans-unit>
@@ -2558,7 +2724,8 @@
         <source>Terms &amp; Conditions</source>
         <target>Termes et; Conditions</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">78,79</context>
         </context-group>
       </trans-unit>
@@ -2566,7 +2733,8 @@
         <source>Privacy</source>
         <target>Intimité</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">81,82</context>
         </context-group>
       </trans-unit>
@@ -2574,24 +2742,20 @@
         <source>Cookies</source>
         <target>Cookies</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/sitemap-page/sitemap-page.component.html
+          </context>
           <context context-type="linenumber">84,85</context>
         </context-group>
       </trans-unit>
-      
-      
-      
-      
-      
-      
-      
-      
-      
+
+
       <trans-unit id="externalRedirect.home.button" datatype="html">
         <source>Home</source>
         <target>Accueil</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/splash-layout/external-redirect-page/external-redirect-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/splash-layout/external-redirect-page/external-redirect-page.component.html
+          </context>
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
@@ -2599,203 +2763,248 @@
         <source>Proceed</source>
         <target>Procéder</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/splash-layout/external-redirect-page/external-redirect-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/splash-layout/external-redirect-page/external-redirect-page.component.html
+          </context>
           <context context-type="linenumber">25</context>
         </context-group>
       </trans-unit>
       <trans-unit id="externalRedirect.redirected" datatype="html">
-        <source>Will be redirected to: </source>
-        <target>Sera redirigé vers : </target>
+        <source>Will be redirected to:</source>
+        <target>Sera redirigé vers :</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/splash-layout/external-redirect-page/external-redirect-page.component.ts</context>
+          <context context-type="sourcefile">
+            src/app/page/splash-layout/external-redirect-page/external-redirect-page.component.ts
+          </context>
           <context context-type="linenumber">65</context>
         </context-group>
       </trans-unit>
       <trans-unit id="externalRedirect.linkBroken" datatype="html">
-        <source>Looks like the link is broken: </source>
-        <target>On dirait que le lien est rompu : </target>
+        <source>Looks like the link is broken:</source>
+        <target>On dirait que le lien est rompu :</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/splash-layout/external-redirect-page/external-redirect-page.component.ts</context>
+          <context context-type="sourcefile">
+            src/app/page/splash-layout/external-redirect-page/external-redirect-page.component.ts
+          </context>
           <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
 
-    <trans-unit id="landingLayoutTopNav.products" datatype="html">
+      <trans-unit id="landingLayoutTopNav.products" datatype="html">
         <source>Products</source>
         <target>Des produits</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component.html</context>
+          <context context-type="sourcefile">
+            src/app/component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component.html
+          </context>
           <context context-type="linenumber">14</context>
         </context-group>
-      </trans-unit><trans-unit id="landingLayoutTopNav.services" datatype="html">
+      </trans-unit>
+      <trans-unit id="landingLayoutTopNav.services" datatype="html">
         <source>Services</source>
         <target>Prestations de service</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component.html</context>
+          <context context-type="sourcefile">
+            src/app/component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component.html
+          </context>
           <context context-type="linenumber">22</context>
         </context-group>
-      </trans-unit><trans-unit id="landingLayoutTopNav.about" datatype="html">
+      </trans-unit>
+      <trans-unit id="landingLayoutTopNav.about" datatype="html">
         <source>About</source>
         <target>Sur</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component.html</context>
+          <context context-type="sourcefile">
+            src/app/component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component.html
+          </context>
           <context context-type="linenumber">30</context>
         </context-group>
-      </trans-unit><trans-unit id="landingLayoutTopNav.contactUs" datatype="html">
+      </trans-unit>
+      <trans-unit id="landingLayoutTopNav.contactUs" datatype="html">
         <source>Contact Us</source>
         <target>Nous contacter</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component.html</context>
+          <context context-type="sourcefile">
+            src/app/component/nav/landing/landing-layout-top-nav/landing-layout-top-nav.component.html
+          </context>
           <context context-type="linenumber">37</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.products" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.products" datatype="html">
         <source>Products</source>
         <target>Des produits</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">4</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.company" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.company" datatype="html">
         <source>Company</source>
         <target>Société</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">29</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.about" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.about" datatype="html">
         <source>About</source>
         <target>Sur</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">30</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.customers" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.customers" datatype="html">
         <source>Customers</source>
         <target>Les clients</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">31</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.partners" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.partners" datatype="html">
         <source>Partners</source>
         <target>Les partenaires</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">33</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.branding" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.branding" datatype="html">
         <source>Branding</source>
         <target>l'image de marque</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">34</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.jobs" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.jobs" datatype="html">
         <source>Jobs</source>
         <target>Travaux</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">35</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.blog" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.blog" datatype="html">
         <source>Blog</source>
         <target>Blog</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">36</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.developers" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.developers" datatype="html">
         <source>Developers</source>
         <target>Développeurs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">41</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.openSource" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.openSource" datatype="html">
         <source>Open Source</source>
         <target>Open Source</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">44</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.docs" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.docs" datatype="html">
         <source>Docs</source>
         <target>Docs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">46</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.resources" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.resources" datatype="html">
         <source>Resources</source>
         <target>Ressources</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">53</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.support" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.support" datatype="html">
         <source>Support</source>
         <target>Soutien</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">54</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.contact" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.contact" datatype="html">
         <source>Contact</source>
         <target>Contact</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">55</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.termsAndConditions" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.termsAndConditions" datatype="html">
         <source>Terms &amp; Conditions</source>
         <target>Termes &amp; Conditions</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">56</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.privacy" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.privacy" datatype="html">
         <source>Privacy</source>
         <target>Intimité</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">57</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.cookies" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.cookies" datatype="html">
         <source>Cookies</source>
         <target>Cookies</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">58</context>
         </context-group>
-      </trans-unit><trans-unit id="footer.sitemap" datatype="html">
+      </trans-unit>
+      <trans-unit id="footer.sitemap" datatype="html">
         <source>Sitemap</source>
         <target>Plan du site</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/nav/footer/footer.component.html</context>
           <context context-type="linenumber">59</context>
         </context-group>
-      </trans-unit><trans-unit id="cookiePopup.description" datatype="html">
-        <source>By continuing to use this site you agree to our <x id="START_LINK" ctype="x-a" equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS.cookiePolicy}}&quot; target=&quot;_blank&quot;&gt;"/>Cookie Policy<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
-        <target>En continuant à utiliser ce site, vous acceptez notre <x id="START_LINK" ctype="xa" equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS .cookiePolicy}}&quot; target=&quot;_blank&quot;&gt;"/>Politique relative aux cookies<x id="CLOSE_LINK" ctype="xa" equiv-text="&lt;/a&gt;"/>.</target>
+      </trans-unit>
+      <trans-unit id="cookiePopup.description" datatype="html">
+        <source>By continuing to use this site you agree to our<x id="START_LINK" ctype="x-a"
+                                                                  equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS.cookiePolicy}}&quot; target=&quot;_blank&quot;&gt;"/>
+          Cookie Policy<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.
+        </source>
+        <target>En continuant à utiliser ce site, vous acceptez notre<x id="START_LINK" ctype="xa"
+                                                                        equiv-text="&lt;a class=&quot;theme-color-link&quot; rel=noopener routerLink=&quot;{{URLS .cookiePolicy}}&quot; target=&quot;_blank&quot;&gt;"/>
+          Politique relative aux cookies<x id="CLOSE_LINK" ctype="xa" equiv-text="&lt;/a&gt;"/>.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/popup/cookie-popup/cookie-popup.component.html</context>
           <context context-type="linenumber">2,4</context>
         </context-group>
-      </trans-unit><trans-unit id="cookiePopup.button" datatype="html">
+      </trans-unit>
+      <trans-unit id="cookiePopup.button" datatype="html">
         <source>Done</source>
         <target>Terminé</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/popup/cookie-popup/cookie-popup.component.html</context>
           <context context-type="linenumber">6</context>
         </context-group>
-      </trans-unit><trans-unit id="githubCounters.stars" datatype="html">
+      </trans-unit>
+      <trans-unit id="githubCounters.stars" datatype="html">
         <source>Stars</source>
         <target>Étoiles</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/constant.ts</context>
           <context context-type="linenumber">47</context>
         </context-group>
-      </trans-unit><trans-unit id="githubCounters.forks" datatype="html">
+      </trans-unit>
+      <trans-unit id="githubCounters.forks" datatype="html">
         <source>Forks</source>
         <target>Forks</target>
         <context-group purpose="location">
@@ -2807,10 +3016,13 @@
         <source>Some of the preconfigured systems:</source>
         <target>Certains des systèmes préconfigurés:</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.html</context>
+          <context context-type="sourcefile">
+            src/app/component/product-represantation/product-presentation.component.html
+          </context>
           <context context-type="linenumber">44</context>
         </context-group>
-      </trans-unit><trans-unit id="pricePlan.viewPricing.button" datatype="html">
+      </trans-unit>
+      <trans-unit id="pricePlan.viewPricing.button" datatype="html">
         <source>View Pricing</source>
         <target>Voir les prix</target>
         <context-group purpose="location">
@@ -2825,886 +3037,1206 @@
           <context context-type="sourcefile">src/app/component/price-plan/price-plan.component.html</context>
           <context context-type="linenumber">24</context>
         </context-group>
-      </trans-unit><trans-unit id="githubCounters.subscribers" datatype="html">
+      </trans-unit>
+      <trans-unit id="githubCounters.subscribers" datatype="html">
         <source>Subscribers</source>
         <target>Les abonnés</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/constant.ts</context>
           <context context-type="linenumber">49</context>
         </context-group>
-      </trans-unit><trans-unit id="githubCounters.releaseVersion" datatype="html">
+      </trans-unit>
+      <trans-unit id="githubCounters.releaseVersion" datatype="html">
         <source>Release Version</source>
         <target>Version finale</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/constant.ts</context>
           <context context-type="linenumber">50</context>
         </context-group>
-      </trans-unit><trans-unit id="employeesData.joinOurTeam" datatype="html">
+      </trans-unit>
+      <trans-unit id="employeesData.joinOurTeam" datatype="html">
         <source>Join our team</source>
         <target>Rejoins notre équipe</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/employees/employees.data.ts</context>
           <context context-type="linenumber">49</context>
         </context-group>
-      </trans-unit><trans-unit id="contactUs.appHero" datatype="html">
+      </trans-unit>
+      <trans-unit id="contactUs.appHero" datatype="html">
         <source>Contact Us</source>
         <target>Nous contacter</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.ts
+          </context>
           <context context-type="linenumber">30</context>
         </context-group>
-      </trans-unit><trans-unit id="employeesData.fullStackDeveloper" datatype="html">
+      </trans-unit>
+      <trans-unit id="employeesData.fullStackDeveloper" datatype="html">
         <source>Full-Stack Developer</source>
         <target/>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/employees/employees.data.ts</context>
           <context context-type="linenumber">35</context>
         </context-group>
-      </trans-unit><trans-unit id="contactUs.selectCountry" datatype="html">
+      </trans-unit>
+      <trans-unit id="contactUs.selectCountry" datatype="html">
         <source>Select a country</source>
         <target>Choisissez un pays</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/contact-us-page/contact-us-page.component.html</context>
+          <context context-type="sourcefile">
+            src/app/page/landing-layout/contact-us-page/contact-us-page.component.html
+          </context>
           <context context-type="linenumber">76</context>
         </context-group>
-      </trans-unit><trans-unit id="pricePlan.pageHeader" datatype="html">
+      </trans-unit>
+      <trans-unit id="pricePlan.pageHeader" datatype="html">
         <source>Available Plans</source>
         <target>Forfaits disponibles</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/component/price-plan/price-plan.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
-      </trans-unit><trans-unit id="productPresentation.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productPresentation.description" datatype="html">
         <source>*configuration still requires some level of developer experience</source>
         <target>*la configuration nécessite toujours un certain niveau d'expérience de développeur</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.html</context>
+          <context context-type="sourcefile">
+            src/app/component/product-represantation/product-presentation.component.html
+          </context>
           <context context-type="linenumber">27</context>
         </context-group>
-      </trans-unit><trans-unit id="navigationData.blog.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="navigationData.blog.description" datatype="html">
         <source>: Blog</source>
         <target>: Blog</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
           <context context-type="linenumber">93</context>
         </context-group>
-      </trans-unit><trans-unit id="navigationData.docs.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="navigationData.docs.description" datatype="html">
         <source>: Docs</source>
         <target>: Docs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
           <context context-type="linenumber">99</context>
         </context-group>
-      </trans-unit><trans-unit id="navigationData.partners.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="navigationData.partners.description" datatype="html">
         <source>: Partners</source>
         <target>: Les partenaires</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
           <context context-type="linenumber">105</context>
         </context-group>
-      </trans-unit><trans-unit id="navigationData.customers.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="navigationData.customers.description" datatype="html">
         <source>: Customers</source>
         <target>: Les clients</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/navigation/navigation.data.ts</context>
           <context context-type="linenumber">111</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.professionalHelp.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.professionalHelp.name" datatype="html">
         <source>Professional Help</source>
         <target>Aide professionnelle</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">13</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.ciCdAutomation.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.ciCdAutomation.name" datatype="html">
         <source>CI/CD Automation</source>
         <target>Automatisation CI/CD</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">23</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.ciCdAutomation.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.ciCdAutomation.description" datatype="html">
         <source>Get a CI/CD integration with automated API tests.</source>
         <target>Bénéficiez d'une intégration CI/CD avec des tests API automatisés.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">24</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.customisedAutomations.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.customisedAutomations.name" datatype="html">
         <source>Customised Automations</source>
         <target>Automatisations personnalisées</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">28</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.customisedAutomations.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.customisedAutomations.description" datatype="html">
         <source>Fully customised automation solutions for your needs.</source>
         <target>Solutions d'automatisation entièrement personnalisées pour vos besoins.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">29</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.customisedAutomationsSecurity.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.customisedAutomationsSecurity.name" datatype="html">
         <source>Reports</source>
         <target>Rapports</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">33</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.customSecurityCompliance.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.customSecurityCompliance.name" datatype="html">
         <source>Custom Security Compliance</source>
         <target>Conformité de sécurité personnalisée</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">38</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.defaultOpenSourceServerFeatures.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.defaultOpenSourceServerFeatures.1" datatype="html">
         <source>Core Features</source>
         <target>CARACTERISTIQUES de base</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">44</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.freePricingOption.title" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.freePricingOption.title" datatype="html">
         <source>Free</source>
         <target>Libérer</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">68</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.standardPricingOption.features.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.standardPricingOption.features.1" datatype="html">
         <source>Up to 10 users</source>
         <target>Jusqu'à 10 utilisateurs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">83</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.enterprisePricingOption.features.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.enterprisePricingOption.features.1" datatype="html">
         <source>Unlimited users</source>
         <target>Jusqu'à 10 utilisateurs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">90</context>
         </context-group>
-      </trans-unit><trans-unit id="productLinesData.fileStorageTemplate.description" datatype="html">
-        <source>File Storage Server Template is a generic open source file storage server that has simple yet powerful design to connect your business with third party file storage provider companies (like AWS S3).</source>
-        <target>Le modèle de serveur de stockage de fichiers est un serveur de stockage de fichiers open source générique doté d'une conception simple mais puissante pour connecter votre entreprise à des fournisseurs de stockage de fichiers tiers (comme AWS S3).</target>
+      </trans-unit>
+      <trans-unit id="productLinesData.fileStorageTemplate.description" datatype="html">
+        <source>File Storage Server Template is a generic open source file storage server that has simple yet powerful
+          design to connect your business with third party file storage provider companies (like AWS S3).
+        </source>
+        <target>Le modèle de serveur de stockage de fichiers est un serveur de stockage de fichiers open source
+          générique doté d'une conception simple mais puissante pour connecter votre entreprise à des fournisseurs de
+          stockage de fichiers tiers (comme AWS S3).
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">130</context>
         </context-group>
-      </trans-unit><trans-unit id="productLinesData.businessLogicServerTemplate.description" datatype="html">
-        <source>Business Logic Server Template is a generic open source server that encodes the real-world business rules that determine how data can be created, stored, and changed. It saves you from rewriting boilerplate code. It works best with other Open Template Hub products.</source>
-        <target>Le modèle de serveur de logique métier est un serveur open source générique qui code les règles métier du monde réel qui déterminent comment les données peuvent être créées, stockées et modifiées. Cela vous évite de réécrire du code passe-partout. Cela fonctionne mieux avec d'autres produits Open Template Hub.</target>
+      </trans-unit>
+      <trans-unit id="productLinesData.businessLogicServerTemplate.description" datatype="html">
+        <source>Business Logic Server Template is a generic open source server that encodes the real-world business
+          rules that determine how data can be created, stored, and changed. It saves you from rewriting boilerplate
+          code. It works best with other Open Template Hub products.
+        </source>
+        <target>Le modèle de serveur de logique métier est un serveur open source générique qui code les règles métier
+          du monde réel qui déterminent comment les données peuvent être créées, stockées et modifiées. Cela vous évite
+          de réécrire du code passe-partout. Cela fonctionne mieux avec d'autres produits Open Template Hub.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">163</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.companyProfileUITemplate.description" datatype="html">
-        <source>Company Profile UI Template is modern, responsive and customisable company profile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
-        <target>Le modèle d'interface utilisateur de profil d'entreprise est un modèle d'interface utilisateur de profil d'entreprise moderne, réactif et personnalisable pour votre entreprise. Il contient des composants réutilisables, une prise en charge de la couleur et de la conception du thème ainsi qu'une prise en charge du thème sombre.</target>
+      </trans-unit>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.description" datatype="html">
+        <source>Company Profile UI Template is modern, responsive and customisable company profile ui template for your
+          business. It contains reusable components, theme color and design support along with dark theme support.
+        </source>
+        <target>Le modèle d'interface utilisateur de profil d'entreprise est un modèle d'interface utilisateur de profil
+          d'entreprise moderne, réactif et personnalisable pour votre entreprise. Il contient des composants
+          réutilisables, une prise en charge de la couleur et de la conception du thème ainsi qu'une prise en charge du
+          thème sombre.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">181</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.1" datatype="html">
         <source>Responsive Design</source>
         <target>Conception réactive</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">189</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.2" datatype="html">
+      </trans-unit>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.2" datatype="html">
         <source>Dark Mode Support</source>
         <target>Prise en charge du mode sombre</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">193</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.webUITemplate.description" datatype="html">
-        <source>Web UI Template is modern, responsive and customisable web ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
-        <target>Le modèle d'interface utilisateur Web est un modèle d'interface utilisateur Web moderne, réactif et personnalisable pour votre entreprise. Il contient des composants réutilisables, une prise en charge de la couleur et de la conception du thème ainsi qu'une prise en charge du thème sombre.</target>
+      </trans-unit>
+      <trans-unit id="userInterfaces.webUITemplate.description" datatype="html">
+        <source>Web UI Template is modern, responsive and customisable web ui template for your business. It contains
+          reusable components, theme color and design support along with dark theme support.
+        </source>
+        <target>Le modèle d'interface utilisateur Web est un modèle d'interface utilisateur Web moderne, réactif et
+          personnalisable pour votre entreprise. Il contient des composants réutilisables, une prise en charge de la
+          couleur et de la conception du thème ainsi qu'une prise en charge du thème sombre.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">233</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.mobileUITemplate.description" datatype="html">
-        <source>Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It contains reusable components, theme color and design support along with dark theme support.</source>
-        <target>Le modèle d'interface utilisateur mobile est un modèle d'interface utilisateur mobile moderne, réactif et personnalisable pour votre entreprise. Il contient des composants réutilisables, une prise en charge de la couleur et de la conception du thème ainsi qu'une prise en charge du thème sombre.</target>
+      </trans-unit>
+      <trans-unit id="userInterfaces.mobileUITemplate.description" datatype="html">
+        <source>Mobile UI Template is modern, responsive and customisable mobile ui template for your business. It
+          contains reusable components, theme color and design support along with dark theme support.
+        </source>
+        <target>Le modèle d'interface utilisateur mobile est un modèle d'interface utilisateur mobile moderne, réactif
+          et personnalisable pour votre entreprise. Il contient des composants réutilisables, une prise en charge de la
+          couleur et de la conception du thème ainsi qu'une prise en charge du thème sombre.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">285</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.mobileUITemplate.screenshot.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="userInterfaces.mobileUITemplate.screenshot.1" datatype="html">
         <source>iOS Support</source>
         <target>Prise en charge iOS</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">293</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.mobileUITemplate.screenshot.2" datatype="html">
+      </trans-unit>
+      <trans-unit id="userInterfaces.mobileUITemplate.screenshot.2" datatype="html">
         <source>Dark Mode Support</source>
         <target>Prise en charge du mode sombre</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">297</context>
         </context-group>
-      </trans-unit><trans-unit id="generators.serverGenerator.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="generators.serverGenerator.description" datatype="html">
         <source>Command line interface generator of the servers at Open Template Hub</source>
         <target>Générateur d'interface de ligne de commande des serveurs d'Open Template Hub</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">344</context>
         </context-group>
-      </trans-unit><trans-unit id="generators.appGenerator.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="generators.appGenerator.description" datatype="html">
         <source>Command line interface generator of the user interfaces at Open Template Hub</source>
         <target>Générateur d'interface de ligne de commande des interfaces utilisateur à Open Template Hub</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">389</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServerTemplate.description" datatype="html">
-        <source>Orchestration Server Template is a middleware server that has simple yet powerful design to connect your business with all Open Template Hub servers (like Auth Server, Payment Server, File Storage Server or Mail Server). It also has generic design to integrate any other servers.</source>
-        <target>Orchestration Server Template est un serveur middleware doté d'une conception simple mais puissante pour connecter votre entreprise à tous les serveurs Open Template Hub (comme le serveur d'authentification, le serveur de paiement, le serveur de stockage de fichiers ou le serveur de messagerie). Il a également une conception générique pour intégrer d'autres serveurs.</target>
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServerTemplate.description" datatype="html">
+        <source>Orchestration Server Template is a middleware server that has simple yet powerful design to connect your
+          business with all Open Template Hub servers (like Auth Server, Payment Server, File Storage Server or Mail
+          Server). It also has generic design to integrate any other servers.
+        </source>
+        <target>Orchestration Server Template est un serveur middleware doté d'une conception simple mais puissante pour
+          connecter votre entreprise à tous les serveurs Open Template Hub (comme le serveur d'authentification, le
+          serveur de paiement, le serveur de stockage de fichiers ou le serveur de messagerie). Il a également une
+          conception générique pour intégrer d'autres serveurs.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">441</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServerTemplate.feature.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServerTemplate.feature.1" datatype="html">
         <source>Core Features</source>
         <target>CARACTERISTIQUES de base</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">447</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServerTemplate.feature.1.detail.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServerTemplate.feature.1.detail.1" datatype="html">
         <source>Integrated with OTH Servers</source>
         <target>Intégré aux serveurs OTH</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">450</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServerTemplate.feature.1.detail.2" datatype="html">
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServerTemplate.feature.1.detail.2" datatype="html">
         <source>Works seamlessly with Open Template Hub Servers.</source>
         <target>Fonctionne de manière transparente avec les serveurs Open Template Hub.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">451</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServer.basic.title" datatype="html">
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServer.basic.title" datatype="html">
         <source>Basic</source>
         <target>De base</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">474</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServer.basic.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServer.basic.description" datatype="html">
         <source>For Individuals</source>
         <target>Pour les particuliers</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">475</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServer.standard.title" datatype="html">
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServer.standard.title" datatype="html">
         <source>Standard</source>
         <target>Standard</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">484</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServer.standard.feature.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServer.standard.feature.1" datatype="html">
         <source>Up to 10 users</source>
         <target>Jusqu'à 10 utilisateurs</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">488</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServer.enterprise.title" datatype="html">
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServer.enterprise.title" datatype="html">
         <source>Enterprise</source>
         <target>Entreprise</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">491</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServer.enterprise.feature.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServer.enterprise.feature.1" datatype="html">
         <source>Unlimited users</source>
         <target>Utilisateurs illimités</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">494</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.description" datatype="html">
         <source>Services that we provide</source>
         <target>Services que nous fournissons</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">507</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareConsultancy.description" datatype="html">
-        <source>We perform world-class custom software development services from startups to enterprise businesses. Our highly experienced software developers have a deep understanding of how to leverage top programming languages, frameworks, and other software development tools to create the ideal solution for your business.</source>
-        <target>Nous proposons des services de développement de logiciels personnalisés de classe mondiale, des startups aux entreprises. Nos développeurs de logiciels hautement expérimentés ont une compréhension approfondie de la manière d'exploiter les meilleurs langages de programmation, frameworks et autres outils de développement de logiciels pour créer la solution idéale pour votre entreprise.</target>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.description" datatype="html">
+        <source>We perform world-class custom software development services from startups to enterprise businesses. Our
+          highly experienced software developers have a deep understanding of how to leverage top programming languages,
+          frameworks, and other software development tools to create the ideal solution for your business.
+        </source>
+        <target>Nous proposons des services de développement de logiciels personnalisés de classe mondiale, des startups
+          aux entreprises. Nos développeurs de logiciels hautement expérimentés ont une compréhension approfondie de la
+          manière d'exploiter les meilleurs langages de programmation, frameworks et autres outils de développement de
+          logiciels pour créer la solution idéale pour votre entreprise.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">512</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.name" datatype="html">
         <source>Features</source>
         <target>Caractéristiques</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">516</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.1.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.1.name" datatype="html">
         <source>Custom Application Development</source>
         <target>Développement d'applications personnalisées</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">519</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.2.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.2.name" datatype="html">
         <source>Application Maintenance</source>
         <target>Maintenance des applications</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">523</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.3.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.3.name" datatype="html">
         <source>Implementation &amp; Deployment</source>
         <target>Mise en œuvre &amp; Déploiement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">527</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareIntegration.description" datatype="html">
-        <source>When a company adopts a new technology or business process, they face many challenges between their current applications and systems and the complicated software implementation process. Our industry-specific software engineers handle all of your challenging integration &amp; implementation obstacles, including architectural design, testing, debugging, and execution.</source>
-        <target>Lorsqu'une entreprise adopte une nouvelle technologie ou un nouveau processus métier, elle est confrontée à de nombreux défis entre ses applications et systèmes actuels et le processus complexe de mise en œuvre du logiciel. Nos ingénieurs logiciels spécifiques à l'industrie gèrent tous vos défis d'intégration &amp; obstacles à la mise en œuvre, y compris la conception architecturale, les tests, le débogage et l'exécution.</target>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareIntegration.description" datatype="html">
+        <source>When a company adopts a new technology or business process, they face many challenges between their
+          current applications and systems and the complicated software implementation process. Our industry-specific
+          software engineers handle all of your challenging integration &amp; implementation obstacles, including
+          architectural design, testing, debugging, and execution.
+        </source>
+        <target>Lorsqu'une entreprise adopte une nouvelle technologie ou un nouveau processus métier, elle est
+          confrontée à de nombreux défis entre ses applications et systèmes actuels et le processus complexe de mise en
+          œuvre du logiciel. Nos ingénieurs logiciels spécifiques à l'industrie gèrent tous vos défis d'intégration
+          &amp; obstacles à la mise en œuvre, y compris la conception architecturale, les tests, le débogage et
+          l'exécution.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">538</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareIntegration.features.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.softwareIntegration.features.name" datatype="html">
         <source>Features</source>
         <target>Caractéristiques</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">542</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareIntegration.features.details.1.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.softwareIntegration.features.details.1.name" datatype="html">
         <source>Custom Application Development</source>
         <target>Développement d'applications personnalisées</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">545</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareIntegration.features.details.1.description" datatype="html">
-        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
-        <target>Nous nous appuyons sur notre expérience technologique spécifique à l'industrie pour fournir des applications Web, mobiles, de bureau et hybrides hautement évolutives, flexibles et interopérables.</target>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareIntegration.features.details.1.description" datatype="html">
+        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and
+          interoperable web, mobile, desktop, and hybrid applications.
+        </source>
+        <target>Nous nous appuyons sur notre expérience technologique spécifique à l'industrie pour fournir des
+          applications Web, mobiles, de bureau et hybrides hautement évolutives, flexibles et interopérables.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">546</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareIntegration.features.details.2.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.softwareIntegration.features.details.2.name" datatype="html">
         <source>Application Maintenance</source>
         <target>Maintenance des applications</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">549</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareIntegration.features.details.2.description" datatype="html">
-        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
-        <target>Notre maintenance d'applications &amp; Les services de modernisation sont conçus pour garantir l'évolutivité, les performances et la durabilité de l'ensemble de votre infrastructure logicielle.</target>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareIntegration.features.details.2.description" datatype="html">
+        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance,
+          and sustainability of your entire software infrastructure.
+        </source>
+        <target>Notre maintenance d'applications &amp; Les services de modernisation sont conçus pour garantir
+          l'évolutivité, les performances et la durabilité de l'ensemble de votre infrastructure logicielle.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">550</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareIntegration.features.details.3.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.softwareIntegration.features.details.3.name" datatype="html">
         <source>Implementation &amp; Deployment</source>
         <target>Mise en œuvre &amp; Déploiement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">553</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareIntegration.features.details.3.description" datatype="html">
-        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
-        <target>Nous concevons une implémentation logicielle approfondie et complète &amp; plan de déploiement, en évaluant vos besoins pour fournir des technologies améliorées aux utilisateurs finaux.</target>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareIntegration.features.details.3.description" datatype="html">
+        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs
+          to deliver enhanced technologies to end-users.
+        </source>
+        <target>Nous concevons une implémentation logicielle approfondie et complète &amp; plan de déploiement, en
+          évaluant vos besoins pour fournir des technologies améliorées aux utilisateurs finaux.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">554</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.qualityAssurance.description" datatype="html">
-        <source>We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease overall testing times.</source>
-        <target>Nous proposons des tests logiciels automatisés d'assurance qualité à cycle complet pour les applications Web, mobiles et de bureau afin d'améliorer la couverture des tests, d'améliorer la qualité des produits, d'optimiser les activités de test, d'augmenter la productivité et de réduire la durée globale des tests.</target>
+      </trans-unit>
+      <trans-unit id="servicesData.qualityAssurance.description" datatype="html">
+        <source>We deliver full-cycle QA automated software testing for web, mobile, and desktop applications to enable
+          improved test coverage, enhance product quality, optimize testing activities, boost productivity, and decrease
+          overall testing times.
+        </source>
+        <target>Nous proposons des tests logiciels automatisés d'assurance qualité à cycle complet pour les applications
+          Web, mobiles et de bureau afin d'améliorer la couverture des tests, d'améliorer la qualité des produits,
+          d'optimiser les activités de test, d'augmenter la productivité et de réduire la durée globale des tests.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">564</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.qualityAssurance.features.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.qualityAssurance.features.name" datatype="html">
         <source>Features</source>
         <target>Caractéristiques</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">568</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.qualityAssurance.features.details.1.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.qualityAssurance.features.details.1.name" datatype="html">
         <source>Custom Application Development</source>
         <target>Développement d'applications personnalisées</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">571</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.qualityAssurance.features.details.1.description" datatype="html">
-        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
-        <target>Nous nous appuyons sur notre expérience technologique spécifique à l'industrie pour fournir des applications Web, mobiles, de bureau et hybrides hautement évolutives, flexibles et interopérables.</target>
+      </trans-unit>
+      <trans-unit id="servicesData.qualityAssurance.features.details.1.description" datatype="html">
+        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and
+          interoperable web, mobile, desktop, and hybrid applications.
+        </source>
+        <target>Nous nous appuyons sur notre expérience technologique spécifique à l'industrie pour fournir des
+          applications Web, mobiles, de bureau et hybrides hautement évolutives, flexibles et interopérables.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">572</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.qualityAssurance.features.details.2.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.qualityAssurance.features.details.2.name" datatype="html">
         <source>Application Maintenance</source>
         <target>Maintenance des applications</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">575</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.qualityAssurance.features.details.2.description" datatype="html">
-        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
-        <target>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</target>
+      </trans-unit>
+      <trans-unit id="servicesData.qualityAssurance.features.details.2.description" datatype="html">
+        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance,
+          and sustainability of your entire software infrastructure.
+        </source>
+        <target>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance,
+          and sustainability of your entire software infrastructure.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">576</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.qualityAssurance.features.details.3.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.qualityAssurance.features.details.3.name" datatype="html">
         <source>Implementation &amp; Deployment</source>
         <target>Mise en œuvre &amp; Déploiement</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">579</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.qualityAssurance.features.details.3.description" datatype="html">
-        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
-        <target>Nous concevons une implémentation logicielle approfondie et complète &amp; plan de déploiement, en évaluant vos besoins pour fournir des technologies améliorées aux utilisateurs finaux</target>
+      </trans-unit>
+      <trans-unit id="servicesData.qualityAssurance.features.details.3.description" datatype="html">
+        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs
+          to deliver enhanced technologies to end-users.
+        </source>
+        <target>Nous concevons une implémentation logicielle approfondie et complète &amp; plan de déploiement, en
+          évaluant vos besoins pour fournir des technologies améliorées aux utilisateurs finaux
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">580</context>
         </context-group>
-      </trans-unit><trans-unit id="5708330713676244843" datatype="html">
+      </trans-unit>
+      <trans-unit id="5708330713676244843" datatype="html">
         <source>Customer Testimonials</source>
         <target>Témoignages de clients</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/customers-page/customers-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/customers-page/customers-page.component.ts
+          </context>
           <context context-type="linenumber">15</context>
         </context-group>
-      </trans-unit><trans-unit id="8649490763319023620" datatype="html">
+      </trans-unit>
+      <trans-unit id="8649490763319023620" datatype="html">
         <source>What our customers are saying...</source>
         <target>Ce que disent nos clients...</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/customers-page/customers-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/customers-page/customers-page.component.ts
+          </context>
           <context context-type="linenumber">16</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts
+          </context>
           <context context-type="linenumber">34</context>
         </context-group>
-      </trans-unit><trans-unit id="homePage.productTypes" datatype="html">
+      </trans-unit>
+      <trans-unit id="homePage.productTypes" datatype="html">
         <source>Product Types</source>
         <target>Types de produits</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.html</context>
           <context context-type="linenumber">33</context>
         </context-group>
-      </trans-unit><trans-unit id="homePage.openSourceRatio" datatype="html">
+      </trans-unit>
+      <trans-unit id="homePage.openSourceRatio" datatype="html">
         <source>Open Source Ratio</source>
         <target>Ratio open source</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.html</context>
           <context context-type="linenumber">40</context>
         </context-group>
-      </trans-unit><trans-unit id="homePage.testimonialsTitle.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="homePage.testimonialsTitle.1" datatype="html">
         <source>Customer testimonials</source>
         <target>Témoignages de clients</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
           <context context-type="linenumber">46</context>
         </context-group>
-      </trans-unit><trans-unit id="homePage.testimonialsTitle.2" datatype="html">
+      </trans-unit>
+      <trans-unit id="homePage.testimonialsTitle.2" datatype="html">
         <source>What our customers are saying...</source>
         <target>Ce que disent nos clients...</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
           <context context-type="linenumber">47</context>
         </context-group>
-      </trans-unit><trans-unit id="homePage.customersTitle.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="homePage.customersTitle.1" datatype="html">
         <source>From startups to the enterprise companies</source>
         <target>Des startups aux entreprises</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
           <context context-type="linenumber">51</context>
         </context-group>
-      </trans-unit><trans-unit id="homePage.customersTitle.2" datatype="html">
-        <source>Thousands of companies in over 50 countries use Open Template Hub to start, run, and scale their businesses.</source>
-        <target>Des milliers d'entreprises dans plus de 50 pays utilisent Open Template Hub pour démarrer, gérer et développer leurs activités.</target>
+      </trans-unit>
+      <trans-unit id="homePage.customersTitle.2" datatype="html">
+        <source>Thousands of companies in over 50 countries use Open Template Hub to start, run, and scale their
+          businesses.
+        </source>
+        <target>Des milliers d'entreprises dans plus de 50 pays utilisent Open Template Hub pour démarrer, gérer et
+          développer leurs activités.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
           <context context-type="linenumber">52</context>
         </context-group>
-      </trans-unit><trans-unit id="homePage.whyUsTitle.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="homePage.whyUsTitle.1" datatype="html">
         <source>Why Open Template Hub?</source>
         <target>Pourquoi ouvrir Template Hub ?</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
           <context context-type="linenumber">56</context>
         </context-group>
-      </trans-unit><trans-unit id="homePage.whyUsTitle.2" datatype="html">
+      </trans-unit>
+      <trans-unit id="homePage.whyUsTitle.2" datatype="html">
         <source>Just focus on your business and leave us all others</source>
         <target>Concentrez-vous simplement sur votre entreprise et laissez-nous tous les autres</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
           <context context-type="linenumber">57</context>
         </context-group>
-      </trans-unit><trans-unit id="homePage.exploreTitle.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="homePage.exploreTitle.1" datatype="html">
         <source>Explore our Products</source>
         <target>Explorez nos produits</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
           <context context-type="linenumber">61</context>
         </context-group>
-      </trans-unit><trans-unit id="homePage.exploreTitle.2" datatype="html">
+      </trans-unit>
+      <trans-unit id="homePage.exploreTitle.2" datatype="html">
         <source>Explore our open source and premium products to get started today.</source>
         <target>Découvrez nos produits open source et premium pour commencer dès aujourd'hui.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/page/landing-layout/home-page/home-page.component.ts</context>
           <context context-type="linenumber">62</context>
         </context-group>
-      </trans-unit><trans-unit id="productPage.downloadPackage.button" datatype="html">
+      </trans-unit>
+      <trans-unit id="productPage.downloadPackage.button" datatype="html">
         <source>Download Package</source>
         <target>Télécharger le package</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html
+          </context>
           <context context-type="linenumber">27</context>
         </context-group>
-      </trans-unit><trans-unit id="productPage.testimonialsTitle.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="productPage.testimonialsTitle.1" datatype="html">
         <source>Customer testimonials</source>
         <target>Témoignages de clients</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts
+          </context>
           <context context-type="linenumber">33</context>
         </context-group>
-      </trans-unit><trans-unit id="productPage.testimonialsTitle.2" datatype="html">
+      </trans-unit>
+      <trans-unit id="productPage.testimonialsTitle.2" datatype="html">
         <source>What our customers are saying...</source>
         <target>Ce que disent nos clients...</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts
+          </context>
           <context context-type="linenumber">34</context>
         </context-group>
-      </trans-unit><trans-unit id="partnersPage.partnersTitle.1" datatype="html">
+      </trans-unit>
+      <trans-unit id="partnersPage.partnersTitle.1" datatype="html">
         <source>Business Partners</source>
         <target>Partenaires d'affaires</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/partners-page/partners-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/partners-page/partners-page.component.ts
+          </context>
           <context context-type="linenumber">17</context>
         </context-group>
-      </trans-unit><trans-unit id="partnersPage.partnersTitle.2" datatype="html">
+      </trans-unit>
+      <trans-unit id="partnersPage.partnersTitle.2" datatype="html">
         <source>Create and run your online business with Open Template Hub and our partners.</source>
         <target>Créez et gérez votre entreprise en ligne avec Open Template Hub et nos partenaires.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/partners-page/partners-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/partners-page/partners-page.component.ts
+          </context>
           <context context-type="linenumber">18</context>
         </context-group>
-      </trans-unit><trans-unit id="productLinesData.authServerTemplate.description" datatype="html">
-        <source>Auth Server Template is a generic open source authentication server that has simple yet powerful design to connect your business with all OAuth 2.0 and OAuth supporting third party companies (like Google, Facebook, Twitter or LinkedIn). It also supports basic username password authentication system.</source>
-        <target>Le modèle de serveur d'authentification est un serveur d'authentification open source générique doté d'une conception simple mais puissante pour connecter votre entreprise à toutes les sociétés tierces prenant en charge OAuth 2.0 et OAuth (comme Google, Facebook, Twitter ou LinkedIn). Il prend également en charge le système d'authentification par mot de passe du nom d'utilisateur de base.</target>
+      </trans-unit>
+      <trans-unit id="productLinesData.authServerTemplate.description" datatype="html">
+        <source>Auth Server Template is a generic open source authentication server that has simple yet powerful design
+          to connect your business with all OAuth 2.0 and OAuth supporting third party companies (like Google, Facebook,
+          Twitter or LinkedIn). It also supports basic username password authentication system.
+        </source>
+        <target>Le modèle de serveur d'authentification est un serveur d'authentification open source générique doté
+          d'une conception simple mais puissante pour connecter votre entreprise à toutes les sociétés tierces prenant
+          en charge OAuth 2.0 et OAuth (comme Google, Facebook, Twitter ou LinkedIn). Il prend également en charge le
+          système d'authentification par mot de passe du nom d'utilisateur de base.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">108</context>
         </context-group>
-      </trans-unit><trans-unit id="productLinesData.userInterface.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productLinesData.userInterface.description" datatype="html">
         <source>User interface solutions for your needs</source>
         <target>Solutions d'interface utilisateur pour vos besoins</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">176</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.3" datatype="html">
+      </trans-unit>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.3" datatype="html">
         <source>Reusable components</source>
         <target>Composants réutilisables</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">197</context>
         </context-group>
-      </trans-unit><trans-unit id="productLinesData.generator.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productLinesData.generator.description" datatype="html">
         <source>Command line interface generators</source>
         <target>Générateurs d'interface de ligne de commande</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">339</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServer.standard.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServer.standard.description" datatype="html">
         <source>For Startups</source>
         <target>Pour les startups</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">485</context>
         </context-group>
-      </trans-unit><trans-unit id="premium.orchestrationServer.enterprise.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="premium.orchestrationServer.enterprise.description" datatype="html">
         <source>For Enterprises</source>
         <target>Pour les entreprises</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">492</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.customisedSolutions.name" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.customisedSolutions.name" datatype="html">
         <source>Customised Solutions</source>
         <target>Solutions personnalisées</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">18</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.customisedSolutions.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.customisedSolutions.description" datatype="html">
         <source>Fully customised functional solutions for your needs.</source>
         <target>Des solutions fonctionnelles entièrement personnalisées pour vos besoins.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">19</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.customisedAutomationsSecurity.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.customisedAutomationsSecurity.description" datatype="html">
         <source>Get a security report at the end of each month.</source>
         <target>Obtenez un rapport de sécurité à la fin de chaque mois.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.customSecurityCompliance.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.customSecurityCompliance.description" datatype="html">
         <source>Fully customised security compliance solutions for your needs.</source>
         <target>Des solutions de conformité de sécurité entièrement personnalisées pour vos besoins.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">39</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.defaultOpenSourceServerFeatures.2" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.defaultOpenSourceServerFeatures.2" datatype="html">
         <source>Quality and DX</source>
         <target>Qualité et DX</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">52</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.defaultOpenSourceServerFeatures.3" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.defaultOpenSourceServerFeatures.3" datatype="html">
         <source>Security</source>
         <target>Sécurité</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">59</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.freePricingOption.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.freePricingOption.description" datatype="html">
         <source>For Individuals</source>
         <target>Pour les particuliers</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">69</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.freePricingOption.price.subscriptionTime" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.freePricingOption.price.subscriptionTime" datatype="html">
         <source>mo.</source>
         <target>mo.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">73</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.standardPricingOption.title" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.standardPricingOption.title" datatype="html">
         <source>Standard</source>
         <target>Standard</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">79</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.standardPricingOption.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.standardPricingOption.description" datatype="html">
         <source>For Startups</source>
         <target>Pour les startups</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">80</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.enterprisePricingOption.title" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.enterprisePricingOption.title" datatype="html">
         <source>Enterprise</source>
         <target>Enterprise</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">87</context>
         </context-group>
-      </trans-unit><trans-unit id="productData.enterprisePricingOption.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productData.enterprisePricingOption.description" datatype="html">
         <source>For Enterprises</source>
         <target>Pour les entreprises</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">88</context>
         </context-group>
-      </trans-unit><trans-unit id="productPresentation.authServer.text" datatype="html">
+      </trans-unit>
+      <trans-unit id="productPresentation.authServer.text" datatype="html">
         <source>Integrate your servers with social login providers in minutes.</source>
         <target>Intégrez vos serveurs avec des fournisseurs de connexion sociale en quelques minutes.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.ts</context>
+          <context context-type="sourcefile">
+            src/app/component/product-represantation/product-presentation.component.ts
+          </context>
           <context context-type="linenumber">102</context>
         </context-group>
-      </trans-unit><trans-unit id="productPresentation.paymentServer.text" datatype="html">
+      </trans-unit>
+      <trans-unit id="productPresentation.paymentServer.text" datatype="html">
         <source>Integrate your servers with payment solution providers in minutes.</source>
         <target>Intégrez vos serveurs aux fournisseurs de solutions de paiement en quelques minutes.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.ts</context>
+          <context context-type="sourcefile">
+            src/app/component/product-represantation/product-presentation.component.ts
+          </context>
           <context context-type="linenumber">107</context>
         </context-group>
-      </trans-unit><trans-unit id="productPresentation.fileStorageServer.text" datatype="html">
+      </trans-unit>
+      <trans-unit id="productPresentation.fileStorageServer.text" datatype="html">
         <source>Integrate your servers with file storage solution providers in minutes.</source>
-        <target>Intégrez vos serveurs avec des fournisseurs de solutions de stockage de fichiers en quelques minutes.</target>
+        <target>Intégrez vos serveurs avec des fournisseurs de solutions de stockage de fichiers en quelques minutes.
+        </target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.ts</context>
+          <context context-type="sourcefile">
+            src/app/component/product-represantation/product-presentation.component.ts
+          </context>
           <context context-type="linenumber">112</context>
         </context-group>
-      </trans-unit><trans-unit id="productPresentation.mailServer.text" datatype="html">
+      </trans-unit>
+      <trans-unit id="productPresentation.mailServer.text" datatype="html">
         <source>Integrate your servers with email service providers in minutes.</source>
         <target>Intégrez vos serveurs avec des fournisseurs de services de messagerie en quelques minutes.</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/product-represantation/product-presentation.component.ts</context>
+          <context context-type="sourcefile">
+            src/app/component/product-represantation/product-presentation.component.ts
+          </context>
           <context context-type="linenumber">117</context>
         </context-group>
-      </trans-unit><trans-unit id="featureData.microServices.title" datatype="html">
+      </trans-unit>
+      <trans-unit id="featureData.microServices.title" datatype="html">
         <source>Lightweight Microservices</source>
         <target>Microservices légers</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/feature/feature.data.ts</context>
           <context context-type="linenumber">5</context>
         </context-group>
-      </trans-unit><trans-unit id="featuresData.microServices.description" datatype="html">
-        <source>Do not lost on functional dependencies, you can only focus on your business. All other layers like authentication, payment, mail, storage, analytics are covered by us with extremely lightweight and configurable microservices. Always be safe with encrypted service communications. Order your out-of-transaction requests with message queues. Do not spend your resources on performance enhancements, enjoy fastest service response times.</source>
-        <target>Ne vous perdez pas sur les dépendances fonctionnelles, vous ne pouvez vous concentrer que sur votre activité. Toutes les autres couches telles que l'authentification, le paiement, la messagerie, le stockage, l'analyse sont couvertes par nous avec des microservices extrêmement légers et configurables. Soyez toujours en sécurité avec les communications de service cryptées. Commandez vos demandes hors transaction avec des files d'attente de messages. Ne dépensez pas vos ressources en améliorations de performances, profitez des temps de réponse de service les plus rapides.</target>
+      </trans-unit>
+      <trans-unit id="featuresData.microServices.description" datatype="html">
+        <source>Do not lost on functional dependencies, you can only focus on your business. All other layers like
+          authentication, payment, mail, storage, analytics are covered by us with extremely lightweight and
+          configurable microservices. Always be safe with encrypted service communications. Order your
+          out-of-transaction requests with message queues. Do not spend your resources on performance enhancements,
+          enjoy fastest service response times.
+        </source>
+        <target>Ne vous perdez pas sur les dépendances fonctionnelles, vous ne pouvez vous concentrer que sur votre
+          activité. Toutes les autres couches telles que l'authentification, le paiement, la messagerie, le stockage,
+          l'analyse sont couvertes par nous avec des microservices extrêmement légers et configurables. Soyez toujours
+          en sécurité avec les communications de service cryptées. Commandez vos demandes hors transaction avec des
+          files d'attente de messages. Ne dépensez pas vos ressources en améliorations de performances, profitez des
+          temps de réponse de service les plus rapides.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/feature/feature.data.ts</context>
           <context context-type="linenumber">6</context>
         </context-group>
-      </trans-unit><trans-unit id="featureData.compactStorage.title" datatype="html">
+      </trans-unit>
+      <trans-unit id="featureData.compactStorage.title" datatype="html">
         <source>Compact Storage</source>
         <target>Stockage compact</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/feature/feature.data.ts</context>
           <context context-type="linenumber">10</context>
         </context-group>
-      </trans-unit><trans-unit id="featuresData.compactStorage.description" datatype="html">
-        <source>Store your data efficiently and do not waste your time on your data architecture and performance analysis. Open Template Hub provides you efficient storage, orients and keeps your data in NOSQL and RDBMS, handles connection pools and management.</source>
-        <target>Stockez vos données efficacement et ne perdez pas votre temps sur votre architecture de données et l'analyse des performances. Open Template Hub vous offre un stockage efficace, oriente et conserve vos données dans NOSQL et RDBMS, gère les pools de connexions et la gestion.</target>
+      </trans-unit>
+      <trans-unit id="featuresData.compactStorage.description" datatype="html">
+        <source>Store your data efficiently and do not waste your time on your data architecture and performance
+          analysis. Open Template Hub provides you efficient storage, orients and keeps your data in NOSQL and RDBMS,
+          handles connection pools and management.
+        </source>
+        <target>Stockez vos données efficacement et ne perdez pas votre temps sur votre architecture de données et
+          l'analyse des performances. Open Template Hub vous offre un stockage efficace, oriente et conserve vos données
+          dans NOSQL et RDBMS, gère les pools de connexions et la gestion.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/feature/feature.data.ts</context>
           <context context-type="linenumber">11</context>
         </context-group>
-      </trans-unit><trans-unit id="featuresData.reliableDesign.title" datatype="html">
+      </trans-unit>
+      <trans-unit id="featuresData.reliableDesign.title" datatype="html">
         <source>Reliable Design</source>
         <target>Conception fiable</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/feature/feature.data.ts</context>
           <context context-type="linenumber">15</context>
         </context-group>
-      </trans-unit><trans-unit id="featuresData.reliableDesign.description" datatype="html">
-        <source>Shout your business out to the world using responsive user interfaces with handy and highly customizable components.</source>
-        <target>Criez votre entreprise au monde entier à l'aide d'interfaces utilisateur réactives avec des composants pratiques et hautement personnalisables.</target>
+      </trans-unit>
+      <trans-unit id="featuresData.reliableDesign.description" datatype="html">
+        <source>Shout your business out to the world using responsive user interfaces with handy and highly customizable
+          components.
+        </source>
+        <target>Criez votre entreprise au monde entier à l'aide d'interfaces utilisateur réactives avec des composants
+          pratiques et hautement personnalisables.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/feature/feature.data.ts</context>
           <context context-type="linenumber">16</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.premium.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="servicesData.premium.description" datatype="html">
         <source>Get more things done with our premium solutions</source>
         <target>Faites plus de choses avec nos solutions premium</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">435</context>
         </context-group>
-      </trans-unit><trans-unit id="employees.furkan.bio" datatype="html">
-        <source>Furkan is an experienced full-stack developer who has worked on various projects, including online payment solutions and fraud detection areas, in a well-known airline company. He's co-founded a startup to discover talents from the open-source community. After one year, Furkan successfully exited from his startup and then co-founded Open Template Hub.</source>
-        <target>Furkan est un développeur full-stack expérimenté qui a travaillé sur divers projets, y compris des solutions de paiement en ligne et des domaines de détection de fraude, dans une compagnie aérienne bien connue. Il a co-fondé une startup pour découvrir les talents de la communauté open source. Après un an, Furkan a réussi à sortir de sa startup et a ensuite co-fondé Open Template Hub.</target>
+      </trans-unit>
+      <trans-unit id="employees.furkan.bio" datatype="html">
+        <source>Furkan is an experienced full-stack developer who has worked on various projects, including online
+          payment solutions and fraud detection areas, in a well-known airline company. He's co-founded a startup to
+          discover talents from the open-source community. After one year, Furkan successfully exited from his startup
+          and then co-founded Open Template Hub.
+        </source>
+        <target>Furkan est un développeur full-stack expérimenté qui a travaillé sur divers projets, y compris des
+          solutions de paiement en ligne et des domaines de détection de fraude, dans une compagnie aérienne bien
+          connue. Il a co-fondé une startup pour découvrir les talents de la communauté open source. Après un an, Furkan
+          a réussi à sortir de sa startup et a ensuite co-fondé Open Template Hub.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/employee/employee.data.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
-      </trans-unit><trans-unit id="employees.fatih.bio" datatype="html">
-        <source>Fatih is a young professional with wide-ranging experience in software design and technology. He worked several years on Finance and Telecom business areas. He is now a Founder and CEO at Remoklify. He also co-founded Open Template Hub.</source>
-        <target>Fatih est un jeune professionnel possédant une vaste expérience dans la conception et la technologie de logiciels. Il a travaillé plusieurs années sur les métiers de la Finance et des Télécoms. Il est maintenant fondateur et PDG de Remoklify. Il a également co-fondé Open Template Hub.</target>
+      </trans-unit>
+      <trans-unit id="employees.fatih.bio" datatype="html">
+        <source>Fatih is a young professional with wide-ranging experience in software design and technology. He worked
+          several years on Finance and Telecom business areas. He is now a Founder and CEO at Remoklify. He also
+          co-founded Open Template Hub.
+        </source>
+        <target>Fatih est un jeune professionnel possédant une vaste expérience dans la conception et la technologie de
+          logiciels. Il a travaillé plusieurs années sur les métiers de la Finance et des Télécoms. Il est maintenant
+          fondateur et PDG de Remoklify. Il a également co-fondé Open Template Hub.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/employee/employee.data.ts</context>
           <context context-type="linenumber">23</context>
         </context-group>
-      </trans-unit><trans-unit id="employees.???.bio" datatype="html">
-        <source>Would you like to join our team? Please feel free to reach us from info@opentemplatehub.com or from jobs page.</source>
-        <target>Vous souhaitez rejoindre notre équipe ? N'hésitez pas à nous contacter depuis info@opentemplatehub.com ou depuis la page des emplois.</target>
+      </trans-unit>
+      <trans-unit id="employees.???.bio" datatype="html">
+        <source>Would you like to join our team? Please feel free to reach us from info@opentemplatehub.com or from jobs
+          page.
+        </source>
+        <target>Vous souhaitez rejoindre notre équipe ? N'hésitez pas à nous contacter depuis info@opentemplatehub.com
+          ou depuis la page des emplois.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/employee/employee.data.ts</context>
           <context context-type="linenumber">53</context>
         </context-group>
-      </trans-unit><trans-unit id="testimonials.review.adamNolan" datatype="html">
-        <source>I can say, without a doubt, that Open Template Hub's products scale quickly and provide the best performance in the market. The best part is that we don't have to worry about any licensing fees at all... I highly recommend this affordable and reliable products!</source>
-        <target>Je peux dire, sans aucun doute, que les produits d'Open Template Hub évoluent rapidement et offrent les meilleures performances du marché. La meilleure partie est que nous n'avons pas du tout à nous soucier des frais de licence... Je recommande fortement ces produits abordables et fiables !</target>
+      </trans-unit>
+      <trans-unit id="testimonials.review.adamNolan" datatype="html">
+        <source>I can say, without a doubt, that Open Template Hub's products scale quickly and provide the best
+          performance in the market. The best part is that we don't have to worry about any licensing fees at all... I
+          highly recommend this affordable and reliable products!
+        </source>
+        <target>Je peux dire, sans aucun doute, que les produits d'Open Template Hub évoluent rapidement et offrent les
+          meilleures performances du marché. La meilleure partie est que nous n'avons pas du tout à nous soucier des
+          frais de licence... Je recommande fortement ces produits abordables et fiables !
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/testimonial/testimonial.data.ts</context>
           <context context-type="linenumber">8</context>
         </context-group>
-      </trans-unit><trans-unit id="testimonials.review.stephanieDoe" datatype="html">
-        <source>Working with the team at Open Template Hub has been a very satisfying experience. The team was communicative and supportive throughout the project, which made for a pleasant working environment. They were able to complete my project in an expert and timely manner.</source>
-        <target>Travailler avec l'équipe d'Open Template Hub a été une expérience très satisfaisante. L'équipe a été communicative et solidaire tout au long du projet, ce qui a créé un environnement de travail agréable. Ils ont pu mener à bien mon projet de manière experte et dans les délais.</target>
+      </trans-unit>
+      <trans-unit id="testimonials.review.stephanieDoe" datatype="html">
+        <source>Working with the team at Open Template Hub has been a very satisfying experience. The team was
+          communicative and supportive throughout the project, which made for a pleasant working environment. They were
+          able to complete my project in an expert and timely manner.
+        </source>
+        <target>Travailler avec l'équipe d'Open Template Hub a été une expérience très satisfaisante. L'équipe a été
+          communicative et solidaire tout au long du projet, ce qui a créé un environnement de travail agréable. Ils ont
+          pu mener à bien mon projet de manière experte et dans les délais.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/testimonial/testimonial.data.ts</context>
           <context context-type="linenumber">21</context>
         </context-group>
-      </trans-unit><trans-unit id="testimonials.review.jackAvery" datatype="html">
-        <source>I've been researching for days about microserver templates and didn't really find much. But then I found Open Template Hub... This is an excellent way to save money and time for startups or small companies who don't have the means to pay hefty prices for licenses. Thank you so much.</source>
-        <target>J'ai fait des recherches pendant des jours sur les modèles de microserveur et je n'ai pas vraiment trouvé grand-chose. Mais ensuite j'ai trouvé Open Template Hub... C'est un excellent moyen d'économiser de l'argent et du temps pour les startups ou les petites entreprises qui n'ont pas les moyens de payer le prix fort pour les licences. Merci beaucoup.</target>
+      </trans-unit>
+      <trans-unit id="testimonials.review.jackAvery" datatype="html">
+        <source>I've been researching for days about microserver templates and didn't really find much. But then I found
+          Open Template Hub... This is an excellent way to save money and time for startups or small companies who don't
+          have the means to pay hefty prices for licenses. Thank you so much.
+        </source>
+        <target>J'ai fait des recherches pendant des jours sur les modèles de microserveur et je n'ai pas vraiment
+          trouvé grand-chose. Mais ensuite j'ai trouvé Open Template Hub... C'est un excellent moyen d'économiser de
+          l'argent et du temps pour les startups ou les petites entreprises qui n'ont pas les moyens de payer le prix
+          fort pour les licences. Merci beaucoup.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/testimonial/testimonial.data.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
-      </trans-unit><trans-unit id="testimonials.review.claudiaGoodwin" datatype="html">
-        <source>As a startup, time is of the essence for us. That's why Open Template Hub has been so helpful for us. It has saved us hours of time when it comes to creating the perfect website for our company.</source>
-        <target>As a startup, time is of the essence for us. That's why Open Template Hub has been so helpful for us. It has saved us hours of time when it comes to creating the perfect website for our company.</target>
+      </trans-unit>
+      <trans-unit id="testimonials.review.claudiaGoodwin" datatype="html">
+        <source>As a startup, time is of the essence for us. That's why Open Template Hub has been so helpful for us. It
+          has saved us hours of time when it comes to creating the perfect website for our company.
+        </source>
+        <target>As a startup, time is of the essence for us. That's why Open Template Hub has been so helpful for us. It
+          has saved us hours of time when it comes to creating the perfect website for our company.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/testimonial/testimonial.data.ts</context>
           <context context-type="linenumber">47</context>
         </context-group>
-      </trans-unit><trans-unit id="testimonials.review.leeRees" datatype="html">
-        <source>Open Template Hub's Orchestration Server was easy to set up and integrate with our existing servers. I liked how the system automatically synced over all of the latest updates, it made managing our company's server so much easier. The customer service is also top-notch!</source>
-        <target>Le serveur d'orchestration d'Open Template Hub était facile à configurer et à intégrer à nos serveurs existants. J'ai aimé la façon dont le système se synchronisait automatiquement avec toutes les dernières mises à jour, cela facilitait grandement la gestion du serveur de notre entreprise. Le service client est également au top !</target>
+      </trans-unit>
+      <trans-unit id="testimonials.review.leeRees" datatype="html">
+        <source>Open Template Hub's Orchestration Server was easy to set up and integrate with our existing servers. I
+          liked how the system automatically synced over all of the latest updates, it made managing our company's
+          server so much easier. The customer service is also top-notch!
+        </source>
+        <target>Le serveur d'orchestration d'Open Template Hub était facile à configurer et à intégrer à nos serveurs
+          existants. J'ai aimé la façon dont le système se synchronisait automatiquement avec toutes les dernières mises
+          à jour, cela facilitait grandement la gestion du serveur de notre entreprise. Le service client est également
+          au top !
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/testimonial/testimonial.data.ts</context>
           <context context-type="linenumber">60</context>
         </context-group>
-      </trans-unit><trans-unit id="testimonials.review.caseyCarlson" datatype="html">
-        <source>I'm a big fan of Open Template Hub. The process was really easy, the team is efficient, and the payment service is really accurate. I would recommend this to any business owner.</source>
-        <target>Je suis un grand fan d'Open Template Hub. Le processus était vraiment simple, l'équipe est efficace et le service de paiement est vraiment précis. Je le recommanderais à tout propriétaire d'entreprise.</target>
+      </trans-unit>
+      <trans-unit id="testimonials.review.caseyCarlson" datatype="html">
+        <source>I'm a big fan of Open Template Hub. The process was really easy, the team is efficient, and the payment
+          service is really accurate. I would recommend this to any business owner.
+        </source>
+        <target>Je suis un grand fan d'Open Template Hub. Le processus était vraiment simple, l'équipe est efficace et
+          le service de paiement est vraiment précis. Je le recommanderais à tout propriétaire d'entreprise.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/testimonial/testimonial.data.ts</context>
           <context context-type="linenumber">73</context>
         </context-group>
-      </trans-unit><trans-unit id="testimonials.review.???" datatype="html">
-        <source>Would you like to tell us how was your Open Template Hub experience or are you planning to use our products but need some professional help? Please feel free to reach us from info@opentemplatehub.com or from contact us page.</source>
-        <target>Souhaitez-vous nous dire comment s'est passée votre expérience avec Open Template Hub ou envisagez-vous d'utiliser nos produits mais avez-vous besoin d'une aide professionnelle ? N'hésitez pas à nous contacter depuis info@opentemplatehub.com ou depuis la page contactez-nous.</target>
+      </trans-unit>
+      <trans-unit id="testimonials.review.???" datatype="html">
+        <source>Would you like to tell us how was your Open Template Hub experience or are you planning to use our
+          products but need some professional help? Please feel free to reach us from info@opentemplatehub.com or from
+          contact us page.
+        </source>
+        <target>Souhaitez-vous nous dire comment s'est passée votre expérience avec Open Template Hub ou envisagez-vous
+          d'utiliser nos produits mais avez-vous besoin d'une aide professionnelle ? N'hésitez pas à nous contacter
+          depuis info@opentemplatehub.com ou depuis la page contactez-nous.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/testimonial/testimonial.data.ts</context>
           <context context-type="linenumber">86</context>
         </context-group>
-      </trans-unit><trans-unit id="productTypeTag.openSource" datatype="html">
+      </trans-unit>
+      <trans-unit id="productTypeTag.openSource" datatype="html">
         <source>#opensource</source>
         <target>#opensource</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts
+          </context>
           <context context-type="linenumber">131</context>
         </context-group>
-      </trans-unit><trans-unit id="productTypeTag.premium" datatype="html">
+      </trans-unit>
+      <trans-unit id="productTypeTag.premium" datatype="html">
         <source>#premium</source>
         <target>#prime</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts
+          </context>
           <context context-type="linenumber">131</context>
         </context-group>
-      </trans-unit><trans-unit id="testimonials.title.???" datatype="html">
+      </trans-unit>
+      <trans-unit id="testimonials.title.???" datatype="html">
         <source>CEO @ Your Company</source>
         <target>CEO @ votre entreprise</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/testimonial/testimonial.data.ts</context>
           <context context-type="linenumber">89</context>
         </context-group>
-      </trans-unit><trans-unit id="productPage.readMoreStories" datatype="html">
+      </trans-unit>
+      <trans-unit id="productPage.readMoreStories" datatype="html">
         <source>Read More Stories</source>
         <target>Lire plus d'histoires</target>
         <context-group purpose="location">
@@ -3712,24 +4244,31 @@
           <context context-type="linenumber">51</context>
         </context-group>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.html
+          </context>
           <context context-type="linenumber">83</context>
         </context-group>
-      </trans-unit><trans-unit id="readMore.button" datatype="html">
+      </trans-unit>
+      <trans-unit id="readMore.button" datatype="html">
         <source>Read more</source>
         <target>Lire la suite</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/card/blog-holder-card/blog-holder-card.component.html</context>
+          <context context-type="sourcefile">src/app/component/card/blog-holder-card/blog-holder-card.component.html
+          </context>
           <context context-type="linenumber">22</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.companyProfileUITemplate.video.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.video.description" datatype="html">
         <source>Modern, responsive and customisable company profile ui template written with Angular</source>
-        <target>Modèle d'interface utilisateur de profil d'entreprise moderne, réactif et personnalisable écrit avec Angular</target>
+        <target>Modèle d'interface utilisateur de profil d'entreprise moderne, réactif et personnalisable écrit avec
+          Angular
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">236</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.4" datatype="html">
+      </trans-unit>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.4" datatype="html">
         <source>Customisable Theme Colors</source>
         <target>Couleurs de thème personnalisables</target>
         <context-group purpose="location">
@@ -3740,7 +4279,8 @@
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">302</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.5" datatype="html">
+      </trans-unit>
+      <trans-unit id="userInterfaces.companyProfileUITemplate.screenshot.5" datatype="html">
         <source>Customisable Theme Design</source>
         <target>Conception de thème personnalisable</target>
         <context-group purpose="location">
@@ -3751,84 +4291,120 @@
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">306</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.webUITemplate.video.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="userInterfaces.webUITemplate.video.description" datatype="html">
         <source>Modern, responsive and customisable company profile ui template written with Angular</source>
-        <target>Modèle d'interface utilisateur de profil d'entreprise moderne, réactif et personnalisable écrit avec Angular</target>
+        <target>Modèle d'interface utilisateur de profil d'entreprise moderne, réactif et personnalisable écrit avec
+          Angular
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">285</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.mobileUITemplate.video.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="userInterfaces.mobileUITemplate.video.description" datatype="html">
         <source>Modern, responsive and customisable company profile ui template written with React Native</source>
-        <target>Modèle d'interface utilisateur de profil d'entreprise moderne, réactif et personnalisable écrit avec React Native</target>
+        <target>Modèle d'interface utilisateur de profil d'entreprise moderne, réactif et personnalisable écrit avec
+          React Native
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">332</context>
         </context-group>
-      </trans-unit><trans-unit id="employees.mert.bio" datatype="html">
-        <source>Mert is a new grad software engineer who has been experienced various technologies in his bachelor years. He worked on e-commercial and banking areas. Now, he is a full-stack developer at Open Template Hub and also working on native iOS applications.</source>
-        <target>Mert est un nouvel ingénieur logiciel diplômé qui a expérimenté diverses technologies au cours de ses années de licence. Il a travaillé sur les domaines du commerce électronique et de la banque. Aujourd'hui, il est développeur full-stack chez Open Template Hub et travaille également sur des applications iOS natives.</target>
+      </trans-unit>
+      <trans-unit id="employees.mert.bio" datatype="html">
+        <source>Mert is a new grad software engineer who has been experienced various technologies in his bachelor
+          years. He worked on e-commercial and banking areas. Now, he is a full-stack developer at Open Template Hub and
+          also working on native iOS applications.
+        </source>
+        <target>Mert est un nouvel ingénieur logiciel diplômé qui a expérimenté diverses technologies au cours de ses
+          années de licence. Il a travaillé sur les domaines du commerce électronique et de la banque. Aujourd'hui, il
+          est développeur full-stack chez Open Template Hub et travaille également sur des applications iOS natives.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/employee/employee.data.ts</context>
           <context context-type="linenumber">38</context>
         </context-group>
-      </trans-unit><trans-unit id="userInterfaces.mobileUITemplate.screenshot.3" datatype="html">
+      </trans-unit>
+      <trans-unit id="userInterfaces.mobileUITemplate.screenshot.3" datatype="html">
         <source>Android Support</source>
         <target>Prise en charge d'Android</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">345</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.1.description" datatype="html">
-        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and interoperable web, mobile, desktop, and hybrid applications.</source>
-        <target>Nous nous appuyons sur notre expérience technologique spécifique à l'industrie pour fournir des applications Web, mobiles, de bureau et hybrides hautement évolutives, flexibles et interopérables.</target>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.1.description" datatype="html">
+        <source>We rely on our industry-specific technology experience to deliver highly scalable, flexible, and
+          interoperable web, mobile, desktop, and hybrid applications.
+        </source>
+        <target>Nous nous appuyons sur notre expérience technologique spécifique à l'industrie pour fournir des
+          applications Web, mobiles, de bureau et hybrides hautement évolutives, flexibles et interopérables.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">546</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.2.description" datatype="html">
-        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance, and sustainability of your entire software infrastructure.</source>
-        <target>Nos services de maintenance et de modernisation des applications sont conçus pour garantir l'évolutivité, les performances et la durabilité de l'ensemble de votre infrastructure logicielle.</target>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.2.description" datatype="html">
+        <source>Our app maintenance &amp; modernization services are designed to ensure the scalability, performance,
+          and sustainability of your entire software infrastructure.
+        </source>
+        <target>Nos services de maintenance et de modernisation des applications sont conçus pour garantir
+          l'évolutivité, les performances et la durabilité de l'ensemble de votre infrastructure logicielle.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">550</context>
         </context-group>
-      </trans-unit><trans-unit id="servicesData.softwareConsultancy.features.details.3.description" datatype="html">
-        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs to deliver enhanced technologies to end-users.</source>
-        <target>Nous concevons un plan de mise en œuvre et de déploiement de logiciels approfondi et complet, évaluant vos besoins pour fournir des technologies améliorées aux utilisateurs finaux.</target>
+      </trans-unit>
+      <trans-unit id="servicesData.softwareConsultancy.features.details.3.description" datatype="html">
+        <source>We devise an in-depth, comprehensive software implementation &amp; deployment plan, assessing your needs
+          to deliver enhanced technologies to end-users.
+        </source>
+        <target>Nous concevons un plan de mise en œuvre et de déploiement de logiciels approfondi et complet, évaluant
+          vos besoins pour fournir des technologies améliorées aux utilisateurs finaux.
+        </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">554</context>
         </context-group>
-      </trans-unit><trans-unit id="productPage.npmPackageInstallationAndUsage" datatype="html">
+      </trans-unit>
+      <trans-unit id="productPage.npmPackageInstallationAndUsage" datatype="html">
         <source>Package Installation &amp; Usage</source>
         <target>Installation et utilisation du paquet</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/product-page/product-page.component.ts
+          </context>
           <context context-type="linenumber">42</context>
         </context-group>
-      </trans-unit><trans-unit id="productLinesData.smsServerTemplate.description" datatype="html">
+      </trans-unit>
+      <trans-unit id="productLinesData.smsServerTemplate.description" datatype="html">
         <source>Coming soon..</source>
         <target>Bientôt disponible..</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/data/product/product.data.ts</context>
           <context context-type="linenumber">226</context>
         </context-group>
-      </trans-unit><trans-unit id="aboutUs.contactInfoAppHero.contactInfoText" datatype="html">
+      </trans-unit>
+      <trans-unit id="aboutUs.contactInfoAppHero.contactInfoText" datatype="html">
         <source>Contact Information</source>
         <target>Coordonnées</target>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts</context>
+          <context context-type="sourcefile">src/app/page/landing-layout/about-us-page/about-us-page.component.ts
+          </context>
           <context context-type="linenumber">43</context>
         </context-group>
-      </trans-unit></body>
-      <trans-unit id="learnMore.button" datatype="html">
-        <source>Learn more</source>
-        <target>En savoir plus</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/component/card/presentation-card/presentation-card.component.html</context>
-          <context context-type="linenumber">18</context>
-        </context-group>
       </trans-unit>
+    </body>
+    <trans-unit id="learnMore.button" datatype="html">
+      <source>Learn more</source>
+      <target>En savoir plus</target>
+      <context-group purpose="location">
+        <context context-type="sourcefile">src/app/component/card/presentation-card/presentation-card.component.html
+        </context>
+        <context context-type="linenumber">18</context>
+      </context-group>
+    </trans-unit>
   </file>
 </xliff>

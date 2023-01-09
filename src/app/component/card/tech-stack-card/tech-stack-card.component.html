@@ -3,8 +3,8 @@
   <!-- Body -->
   <ng-template #bodyTemplate>
     <div class="body">
-      <div class="row" *ngFor="let tech of techStack">
-        <img [src]="tech.src" height="35" [alt]="tech.description"/>
+      <div *ngFor="let tech of techStack" class="row">
+        <img [alt]="tech.description" [src]="tech.src" height="35"/>
         <p>{{ tech.description }}</p>
       </div>
     </div>

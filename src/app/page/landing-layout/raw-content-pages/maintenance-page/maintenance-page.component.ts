@@ -16,9 +16,9 @@ export class MaintenancePageComponent {
   INFORMATION_TYPES = INFORMATION_TYPES;
 
   appHeroContents = [
-    {text: $localize `:@@maintenance.appHero.1:Under maintenance`, level: 1},
-    {text: $localize `:@@maintenance.appHero.2:Please check again later`}
-  ]
+    { text: $localize`:@@maintenance.appHero.1:Under maintenance`, level: 1 },
+    { text: $localize`:@@maintenance.appHero.2:Please check again later` }
+  ];
 
   constructor( public router: Router ) {
   }

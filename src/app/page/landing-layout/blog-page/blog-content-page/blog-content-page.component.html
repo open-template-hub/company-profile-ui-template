@@ -5,8 +5,8 @@
         [src]="'./assets/blog/' + blog.url"></app-blog-card>
   </div>
 
-  <oth-button [text]="'Back'" [routerLink]="URLS.blog" [icon]="'chevron-left'"
-              [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']">
+  <oth-button [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']" [icon]="'chevron-left'" [routerLink]="URLS.blog"
+              [text]="'Back'">
   </oth-button>
 
   <oth-hero [contents]="[{ text: 'About the Author', level: 2 }]"></oth-hero>

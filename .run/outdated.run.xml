@@ -5,7 +5,7 @@
     <scripts>
       <script value="outdated" />
     </scripts>
-    <node-interpreter value="/usr/local/bin/node" />
+    <node-interpreter value="project" />
     <envs />
     <method v="2" />
   </configuration>

@@ -6,9 +6,9 @@
         <ng-container *ngFor="let productLine of PRODUCT_LINES">
           <p *ngIf="productLine.name"
              [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
-          <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+          <a (click)="redirectToProductUrl(product, productLine)"
+             *ngFor="let product of productLine.products; last as isLast; first as isFirst"
              [class]="productLine.color ? productLine.color : ''"
-             (click)="redirectToProductUrl(product, productLine)"
              class="footer-link-item">
             {{ product.name }}
           </a>
@@ -22,9 +22,9 @@
           <ng-container *ngFor="let productLine of LIBRARIES">
             <p *ngIf="productLine.name"
                [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
-            <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+            <a (click)="redirectToProductUrl(product, productLine)"
+               *ngFor="let product of productLine.products; last as isLast; first as isFirst"
                [class]="productLine.color ? productLine.color : ''"
-               (click)="redirectToProductUrl(product, productLine)"
                class="footer-link-item">
               {{ product.name }}
             </a>
@@ -33,9 +33,9 @@
         <div *ngFor="let productLine of PLUGINS" class="footer-link-group">
           <p *ngIf="productLine.name"
              [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
-          <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+          <a (click)="redirectToProductUrl(product, productLine)"
+             *ngFor="let product of productLine.products; last as isLast; first as isFirst"
              [class]="productLine.color ? productLine.color : ''"
-             (click)="redirectToProductUrl(product, productLine)"
              class="footer-link-item">
             {{ product.name }}
           </a>
@@ -43,9 +43,9 @@
         <div *ngFor="let productLine of SERVICES" class="footer-link-group">
           <p *ngIf="productLine.name"
              [class]="productLine.color ? productLine.color : ''">{{ productLine.name }}</p>
-          <a *ngFor="let product of productLine.products; last as isLast; first as isFirst"
+          <a (click)="redirectToProductUrl(product, productLine)"
+             *ngFor="let product of productLine.products; last as isLast; first as isFirst"
              [class]="productLine.color ? productLine.color : ''"
-             (click)="redirectToProductUrl(product, productLine)"
              class="footer-link-item">
             {{ product.name }}
           </a>
@@ -106,7 +106,7 @@
   <div class="footer-brand-row">
     <a class="brand" routerLink="{{URLS.root}}">
       <img [src]="BRAND.logo.main" alt="logo" class="brand-logo" height="40" width="40"/>
-      <h2>{{ BRAND.name }} <span class="copyright">&#169; 2022</span></h2>
+      <h2>{{ BRAND.name }} <span class="copyright">&#169; 2023</span></h2>
     </a>
     <div class="footer-social">
       <app-ext-link *ngFor="let brandPage of BRAND_PAGES" [href]="brandPage.url">

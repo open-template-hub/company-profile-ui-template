@@ -27,8 +27,8 @@ export class ContactUsPageComponent implements OnInit {
   loading = false;
 
   appHeroContent = [
-    {text: $localize `:@@contactUs.appHero:Contact Us`, level: 1}
-  ]
+    { text: $localize`:@@contactUs.appHero:Contact Us`, level: 1 }
+  ];
 
   constructor(
       private formBuilder: FormBuilder,
@@ -65,7 +65,7 @@ export class ContactUsPageComponent implements OnInit {
     this.submitted = true;
 
     const errorMessages = {
-      firstName: $localize `:@@contactUs.error.firstName:Please provide a first name`,
+      firstName: $localize`:@@contactUs.error.firstName:Please provide a first name`,
       secondName: ':@@contactUs.error.secondName:Please provide a second name',
       workEmail: ':@@contactUs.error.workEmail:Please provide a valid email',
       companySize: ':@@contactUs.error.companySize:Please provide a company size',

@@ -1,4 +1,4 @@
-<nav class="top-nav" #dropdownMenuParent>
+<nav #dropdownMenuParent class="top-nav">
   <a (click)="closeAllDropDowns()"
      [routerLink]="URLS.root"
      class="brand">
@@ -6,45 +6,45 @@
     <h2>{{ BRAND.name }}</h2>
   </a>
   <div class="left-item-wrapper">
-    <a (mouseenter)="dropdownMenuProducts.openDropdown(); closeOtherDropDowns(dropdownMenuProducts)"
-       (click)="dropdownMenuProducts.toggleDropdown(); closeOtherDropDowns(dropdownMenuProducts)">
+    <a (click)="dropdownMenuProducts.toggleDropdown(); closeOtherDropDowns(dropdownMenuProducts)"
+       (mouseenter)="dropdownMenuProducts.openDropdown(); closeOtherDropDowns(dropdownMenuProducts)">
       <app-dropdown-menu
           #dropdownMenuProducts
+          [dropdownParent]="dropdownMenuParent"
           [minimumColumns]="4"
-          [productLines]="PRODUCT_LINES"
-          [dropdownParent]="dropdownMenuParent">
+          [productLines]="PRODUCT_LINES">
         <span i18n="@@landingLayoutTopNav.products">Products</span>
         <i [class]="'caret fas fa-fw ' + (!dropdownMenuProducts.isDropdownOpen ? 'fa-chevron-down' : 'fa-chevron-up')"
            aria-hidden="true"></i>
       </app-dropdown-menu>
     </a>
-    <a (mouseenter)="dropdownMenuLibraries.openDropdown(); closeOtherDropDowns(dropdownMenuLibraries)"
-       (click)="dropdownMenuLibraries.toggleDropdown(); closeOtherDropDowns(dropdownMenuLibraries)">
+    <a (click)="dropdownMenuLibraries.toggleDropdown(); closeOtherDropDowns(dropdownMenuLibraries)"
+       (mouseenter)="dropdownMenuLibraries.openDropdown(); closeOtherDropDowns(dropdownMenuLibraries)">
       <app-dropdown-menu
           #dropdownMenuLibraries
+          [dropdownParent]="dropdownMenuParent"
           [minimumColumns]="2"
-          [productLines]="LIBRARIES"
-          [dropdownParent]="dropdownMenuParent">
+          [productLines]="LIBRARIES">
         <span i18n="@@landingLayoutTopNav.libraries">Libraries</span>
         <i [class]="'caret fas fa-fw ' + (!dropdownMenuLibraries.isDropdownOpen ? 'fa-chevron-down' : 'fa-chevron-up')"
            aria-hidden="true"></i>
       </app-dropdown-menu>
     </a>
-    <a (mouseenter)="dropdownMenuPlugins.openDropdown(); closeOtherDropDowns(dropdownMenuPlugins)"
-       (click)="dropdownMenuPlugins.toggleDropdown(); closeOtherDropDowns(dropdownMenuPlugins)">
+    <a (click)="dropdownMenuPlugins.toggleDropdown(); closeOtherDropDowns(dropdownMenuPlugins)"
+       (mouseenter)="dropdownMenuPlugins.openDropdown(); closeOtherDropDowns(dropdownMenuPlugins)">
       <app-dropdown-menu
           #dropdownMenuPlugins
+          [dropdownParent]="dropdownMenuParent"
           [minimumColumns]="1"
-          [productLines]="PLUGINS"
-          [dropdownParent]="dropdownMenuParent">
+          [productLines]="PLUGINS">
         <span i18n="@@landingLayoutTopNav.plugins">Plugins</span>
         <i [class]="'caret fas fa-fw ' + (!dropdownMenuPlugins.isDropdownOpen ? 'fa-chevron-down' : 'fa-chevron-up')"
            aria-hidden="true"></i>
       </app-dropdown-menu>
     </a>
-    <a (mouseenter)="dropdownMenuServices.openDropdown(); closeOtherDropDowns(dropdownMenuServices)"
-       (click)="dropdownMenuServices.toggleDropdown(); closeOtherDropDowns(dropdownMenuServices)">
-      <app-dropdown-menu #dropdownMenuServices [productLines]="SERVICES" [dropdownParent]="dropdownMenuParent">
+    <a (click)="dropdownMenuServices.toggleDropdown(); closeOtherDropDowns(dropdownMenuServices)"
+       (mouseenter)="dropdownMenuServices.openDropdown(); closeOtherDropDowns(dropdownMenuServices)">
+      <app-dropdown-menu #dropdownMenuServices [dropdownParent]="dropdownMenuParent" [productLines]="SERVICES">
         <span i18n="@@landingLayoutTopNav.services">Services</span>
         <i [class]="'caret fas fa-fw ' + (!dropdownMenuServices.isDropdownOpen ? 'fa-chevron-down' : 'fa-chevron-up')"
            aria-hidden="true"></i>

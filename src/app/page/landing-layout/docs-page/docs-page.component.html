@@ -3,9 +3,9 @@
   <div class="flexible-cards-wrapper">
     <ng-container *ngFor="let doc of DOCS">
       <app-doc-holder-card
-        [doc]="doc"
-        class="doc-holder-card"
-        (click)="openDoc(doc.tag, doc.key)"></app-doc-holder-card>
+          (click)="openDoc(doc.tag, doc.key)"
+          [doc]="doc"
+          class="doc-holder-card"></app-doc-holder-card>
     </ng-container>
   </div>
 </div>

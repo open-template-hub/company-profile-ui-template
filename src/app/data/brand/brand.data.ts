@@ -24,6 +24,5 @@ export const BRAND = {
     'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-light.min.png',
     'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-dark.min.png'
   ],
-  mobileWallpapers: [
-  ]
+  mobileWallpapers: []
 };

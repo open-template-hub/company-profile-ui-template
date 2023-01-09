@@ -1,18 +1,18 @@
 <div class="raw-content-page-layout">
   <div class="doc-content-wrapper">
     <app-doc-card
-      [date]="doc.date"
-      [src]="'./assets/docs/' + doc.url"></app-doc-card>
+        [date]="doc.date"
+        [src]="'./assets/docs/' + doc.url"></app-doc-card>
   </div>
 
   <oth-button
-    [text]="'Back'"
-    [routerLink]="URLS.docs"
-    [icon]="'chevron-left'"
-    [buttonClasses]="[
+      [buttonClasses]="[
       'lighter-contrast-border-color',
       'lighter-contrast-font-color',
       'transparent-button'
-    ]">
+    ]"
+      [icon]="'chevron-left'"
+      [routerLink]="URLS.docs"
+      [text]="'Back'">
   </oth-button>
 </div>

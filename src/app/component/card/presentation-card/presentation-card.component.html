@@ -1,11 +1,11 @@
-<oth-card [headerTemplate]="headerTemplate" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
-          class="presentation-card" (click)="redirect()">
+<oth-card (click)="redirect()" [bodyTemplate]="bodyTemplate" [footerTemplate]="footerTemplate"
+          [headerTemplate]="headerTemplate" class="presentation-card">
   <!-- Header -->
   <ng-template #headerTemplate>
     <div class="header">
       <div class="presentation-item-content">
-        <img *ngIf="src" [height]="imgHeight" [src]="src"
-             [class.logo-under-maintenance]="maintenance"
+        <img *ngIf="src" [class.logo-under-maintenance]="maintenance" [height]="imgHeight"
+             [src]="src"
              alt="logo">
         <p>{{ title }}</p>
       </div>
@@ -17,8 +17,8 @@
   <ng-template #bodyTemplate>
     <div class="body">
       <p class="presentation-description">{{ secondaryText }}</p>
-      <oth-button class="button" i18n-text="@@learnMore.button" text="Learn more"
-                  [buttonClasses]="['theme-color-border-color', 'theme-color-font-color', 'transparent-button']">
+      <oth-button [buttonClasses]="['theme-color-border-color', 'theme-color-font-color', 'transparent-button']" class="button" i18n-text="@@learnMore.button"
+                  text="Learn more">
       </oth-button>
     </div>
   </ng-template>

@@ -4,16 +4,16 @@
 
 Open Template Hub is an Open Source First Organization that aims minimizing the effort while building a new software business.
 
-### What does Open Template Hub provides to community? 
+### What does Open Template Hub provides to community?
 
 We, as Open Template Hub contributors, keep developing new functionalities and capabilities every week. You can create your microservices or create your mobile and web applications which are integrated with those microservices, that means you can create your own business ground up through Open Template Hub extremely fast.
 
-Let's assume you have a new software business idea. Once you start implementation, you will need several 
+Let's assume you have a new software business idea. Once you start implementation, you will need several
 common capabilities like authentication, payment, file storage, analytics, business logic and in the end, you will need a web and mobile applications which are integrated with those capabilities, each and every time you have a new idea. Open Template Hub gives you that power to create and make them alive just in a couple of minutes!
 
 ### You can create your microservices using Server Generator
 
-Server Generator provides you the capability to generate many types of microservices with just one command. 
+Server Generator provides you the capability to generate many types of microservices with just one command.
 
 These are the service types you are able to generate for now:
 
@@ -59,7 +59,7 @@ You can easily generate these servers, and deploy wherever you want; Heroku, GCP
 
 Application Generator provides you the capability to generate many types of applications with just one command.
 
-These are the application types you are able to generate for now: 
+These are the application types you are able to generate for now:
 
 <img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/web-ui-logo.min.png" alt="company-profile-ui-template" width="80"/>
 
@@ -82,7 +82,7 @@ Mobile UI Template is modern, responsive and customisable mobile ui template for
 You will have lots of components, screens and API calls are covered for authentication, payment, file storage, analytics, basic user profiles and controllers integrated with services endpoints.
 
 ### So, what's next?
- 
+
 We have so many plans to keep enhancing our functionalities, services and increasing external provider support. Implementing stream server for meetings and chat supporting significant providers like Zoom and Google, implementing MQ flow for all our servers, more components for user interfaces with enhancing UX, automated CI flows for builds and tests, automated deployment scripts using Terraform/Terragrunt or using some other proper tech to decrease build time of your business from minutes to second.
 
 ### Last Words..

@@ -6,7 +6,7 @@
 
 
 <h1 align="center">
-Open Template Hub - Company Profile UI Template v4
+Open Template Hub - Company Profile UI Template v5
   <br/>
 (favicon generation guide)
 </h1>
@@ -27,4 +27,4 @@ Follow the instructions below to be able to generate favicon.
 
 5. Check your favicon with the **[favicon checker](https://realfavicongenerator.net/favicon_checker?protocol=https&site=opentemplatehub.com)**
 
-<table align="right"><tr><td><a href="https://opentemplatehub.com"><img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png" width="50px" alt="oth"/></a></td><td><b>Open Template Hub © 2021</b></td></tr></table>
+<table align="right"><tr><td><a href="https://opentemplatehub.com"><img src="https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/logo/brand-logo.png" width="50px" alt="oth"/></a></td><td><b>Open Template Hub © 2023</b></td></tr></table>

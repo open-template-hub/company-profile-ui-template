@@ -76,6 +76,10 @@ export class AboutUsPageComponent {
     }
   }
 
+  redirect( href: string ) {
+    window.location.href = href;
+  }
+
   private getUrl( website: string ) {
     let url = environmentCommon.website[ website ].url;
 
@@ -86,9 +90,5 @@ export class AboutUsPageComponent {
     }
 
     return url;
-  }
-
-  redirect( href: string ) {
-    window.location.href = href;
   }
 }

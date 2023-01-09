@@ -1,5 +1,5 @@
 <div *ngIf="!accepted" class="cookie-popup">
-  <p i18n="@@cookiePopup.description" class="cookie-message">By continuing to use this site you agree to our
+  <p class="cookie-message" i18n="@@cookiePopup.description">By continuing to use this site you agree to our
     <a class="cookie-link" rel=noopener routerLink="{{URLS.cookiePolicy}}" target="_blank">Cookie Policy</a>.
   </p>
   <div (click)="setAccepted()" class="accept">

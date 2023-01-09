@@ -49,13 +49,13 @@
     "graphql-tag": "^2.12.6",
     "helmet": "^6.0.0",
     "ics": "^2.41.0",
-    "jsdom": "^20.0.3",
+    "jsdom": "^21.0.0",
     "mixpanel-browser": "^2.45.0",
     "ngx-markdown": "^15.0.0",
     "ngx-toastr": "^16.0.1",
     "path": "^0.12.7",
     "rxjs": "^7.5.7",
-    "simple-icons": "^7.20.0",
+    "simple-icons": "^8.2.0",
     "swiper": "^8.4.5",
     "tslib": "^2.4.1",
     "xmlserializer": "^0.6.1",
@@ -81,7 +81,7 @@
     "protractor": "^7.0.0",
     "ts-node": "^10.9.1",
     "tslint": "^6.1.3",
-    "typescript": "^4.8.4"
+    "typescript": "~4.8.4"
   },
   "git repository": "https://github.com/open-template-hub/company-profile-ui-template",
   "repository": {

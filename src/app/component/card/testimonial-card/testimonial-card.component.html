@@ -22,8 +22,8 @@
                 fill-opacity="0.4" transform="translate(100 100)"></path>
         </svg>
         <img [src]="testimonial.reviewer.photoUri"
-             alt="logo" class="profile-image" height="100" width="100"
-             onerror="this.src='./assets/common/profile-img.png'"/>
+             alt="logo" class="profile-image" height="100" onerror="this.src='./assets/common/profile-img.png'"
+             width="100"/>
         <div class="social">
           <app-ext-link [href]="testimonial.reviewer.social.twitter">
             <i [class]="'fab fa-' + environmentCommon.website.twitter.cssClass + ' fa-2x fa-fw'"

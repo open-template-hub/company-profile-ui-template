@@ -107,6 +107,10 @@ export class HomePageComponent implements AfterViewInit {
     this.brandLogoLoaded = true;
   };
 
+  getPresentationCardFooter( isOpenSource: boolean ): string {
+    return isOpenSource ? $localize`:@@productTypeTag.openSource:opensource` : $localize`:@@productTypeTag.premium:premium`;
+  }
+
   private initCountUps() {
     const options = {
       useGrouping: false,
@@ -179,9 +183,5 @@ export class HomePageComponent implements AfterViewInit {
     } else {
       console.error( eventCountUp.error );
     }
-  }
-
-  getPresentationCardFooter( isOpenSource: boolean ): string {
-    return isOpenSource ? $localize`:@@productTypeTag.openSource:opensource` : $localize`:@@productTypeTag.premium:premium`;
   }
 }

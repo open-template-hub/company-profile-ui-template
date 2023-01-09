@@ -12,26 +12,29 @@
         [imageContentLoaderClass]="'brand-logo-main'"></app-image-content-loader>
     <img
         (load)="setBrandLogoLoaded()"
+        [alt]="BRAND.heroImage.description"
         [src]="BRAND.heroImage.src"
         [style]="'display:' + (!brandLogoLoaded ? 'none;' : 'block;')"
-        [alt]="BRAND.heroImage.description"
         height="450"
         width="800"/>
   </div>
 </div>
 
 <div class="counters">
-  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.company.social.github" class="counter-wrapper" rel="noopener" target="_blank">
+  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.company.social.github"
+     class="counter-wrapper" rel="noopener" target="_blank">
     <app-text-content-loader *ngIf="npmCounterLoading" [size]="'30'" class="loader"></app-text-content-loader>
     <p [hidden]="npmCounterLoading" class="counter" id="npmDownloadCounterElement"></p>
-    <p i18n="@@homePage.npmDownloads" class="description">Npm Downloads</p>
+    <p class="description" i18n="@@homePage.npmDownloads">Npm Downloads</p>
   </a>
-  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.company.social.github" class="counter-wrapper counter-alter" rel="noopener" target="_blank">
+  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.company.social.github"
+     class="counter-wrapper counter-alter" rel="noopener" target="_blank">
     <app-text-content-loader *ngIf="githubCounterLoading" [size]="'30'" class="loader"></app-text-content-loader>
     <p [hidden]="githubCounterLoading" class="counter" id="totalStarsCounterElement">0</p>
     <p class="description" i18n="@@homePage.totalStars">Total GitHub Stars</p>
   </a>
-  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.company.social.github" class="counter-wrapper" rel="noopener" target="_blank">
+  <a [href]="environmentCommon.website.github.url + '/' + environmentCommon.company.social.github"
+     class="counter-wrapper" rel="noopener" target="_blank">
     <div class="ratio">
       <p class="counter" id="openSourceRatioCounterElement">0</p>
       <span class="counter">%</span>
@@ -47,8 +50,8 @@
       *ngFor="let testimonial of TESTIMONIALS"
       [testimonial]="testimonial">
   </app-testimonial-card>
-  <oth-button i18n-text="@@productPage.readMoreStories" text="Read More Stories" [routerLink]="URLS.customers"
-              [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']">
+  <oth-button [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']" [routerLink]="URLS.customers" i18n-text="@@productPage.readMoreStories"
+              text="Read More Stories">
   </oth-button>
 </div>
 
@@ -72,7 +75,7 @@
 <oth-hero [contents]="partnershipBadgesTitle"></oth-hero>
 <div class="cards-wrapper">
   <ng-container *ngFor="let partner of PARTNERS; index as i">
-    <img class="partner" *ngIf="partner.badge" [src]="partner.badge" [alt]="partner.name"/>
+    <img *ngIf="partner.badge" [alt]="partner.name" [src]="partner.badge" class="partner"/>
   </ng-container>
 </div>
 
@@ -87,10 +90,10 @@
           [footerText]=getPresentationCardFooter(product.openSource)
           [href]="URLS.product + '/' + productLine.key + '/' + product.key"
           [imgHeight]="150"
+          [maintenance]="product.url === URLS.maintenance"
           [secondaryText]="product.description"
           [src]="product.logo"
           [title]="product.name"
-          [maintenance]="product.url === URLS.maintenance"
           class="related-product">
       </app-presentation-card>
     </ng-container>
@@ -108,10 +111,10 @@
           [footerText]=getPresentationCardFooter(product.openSource)
           [href]="product.url"
           [imgHeight]="150"
+          [maintenance]="product.url === URLS.maintenance"
           [secondaryText]="product.description"
           [src]="product.logo"
           [title]="product.name"
-          [maintenance]="product.url === URLS.maintenance"
           class="related-product">
       </app-presentation-card>
     </ng-container>
@@ -126,10 +129,10 @@
           [footerText]=getPresentationCardFooter(product.openSource)
           [href]="product.urlAlter"
           [imgHeight]="150"
+          [maintenance]="product.url === URLS.maintenance"
           [secondaryText]="product.description"
           [src]="product.logo"
           [title]="product.name"
-          [maintenance]="product.url === URLS.maintenance"
           class="related-product">
       </app-presentation-card>
     </ng-container>

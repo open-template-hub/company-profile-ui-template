@@ -1,5 +1,5 @@
 <ng-container *ngIf="product">
-  <div class="product-presentation" [ngSwitch]="getPresentationModel()">
+  <div [ngSwitch]="getPresentationModel()" class="product-presentation">
     <!-- Command Line Presentation -->
     <ng-container *ngSwitchCase="'command-line'">
 
@@ -14,7 +14,7 @@
       <ng-template #bodyTemplate>
         <div class=" body">
           <video [src]="product.video.url" autoplay loop muted>
-            <track label="English" kind="captions" srclang="en" src="" default>
+            <track default kind="captions" label="English" src="" srclang="en">
             Your browser does not support HTML5 video.
           </video>
           <hr/>
@@ -32,8 +32,8 @@
           <div class="social-login-wrapper">
             <img [src]="product.logo" alt="logo" class="brand-logo" width="90"/>
             <i aria-hidden="true" class="fa fa-check-circle"></i>
-            <app-presentation-swiper [items]="getPresentationSwiperItems()"
-                                     [height]="product.key === 'orchestration-server-template' ? 90 : 75">
+            <app-presentation-swiper [height]="product.key === 'orchestration-server-template' ? 90 : 75"
+                                     [items]="getPresentationSwiperItems()">
             </app-presentation-swiper>
           </div>
           <p class="feature-title">{{ presentationText }}</p>
@@ -58,9 +58,9 @@
               class="demonstration-image-card">
       <ng-template #bodyTemplate>
         <div class=" body">
-          <a [href]="product.demonstrationImg.src.replace('min/', '').replace('.min', '')" target="_blank"
-             rel="noopener">
-            <img [src]="product.demonstrationImg.src" [alt]="product.demonstrationImg.description"/>
+          <a [href]="product.demonstrationImg.src.replace('min/', '').replace('.min', '')" rel="noopener"
+             target="_blank">
+            <img [alt]="product.demonstrationImg.description" [src]="product.demonstrationImg.src"/>
           </a>
           <hr/>
           <p class="feature-title">{{ product.demonstrationImg.description }}</p>
@@ -70,7 +70,8 @@
 
     <!-- Features Presentation -->
     <ng-container *ngSwitchDefault>
-      <oth-card *ngIf="product.features" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'" class="features-card">
+      <oth-card *ngIf="product.features" [bodyTemplate]="bodyTemplate" [cardClass]="'transparent-card'"
+                class="features-card">
         <ng-template #bodyTemplate>
           <div class="body">
             <ng-container *ngFor="let feature of product.features">

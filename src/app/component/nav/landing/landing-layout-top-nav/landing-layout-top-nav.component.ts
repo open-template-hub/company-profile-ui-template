@@ -39,10 +39,10 @@ export class LandingLayoutTopNavComponent {
 
   closeOtherDropDowns( dropDownMenu: DropdownMenuComponent ) {
     const dropdownMenus = [];
-    dropdownMenus.push(this.dropdownMenuProducts, this.dropdownMenuLibraries, this.dropdownMenuPlugins, this.dropdownMenuServices);
+    dropdownMenus.push( this.dropdownMenuProducts, this.dropdownMenuLibraries, this.dropdownMenuPlugins, this.dropdownMenuServices );
 
     dropdownMenus.forEach( menu => {
-      if ( menu !== dropDownMenu) {
+      if ( menu !== dropDownMenu ) {
         menu.closeDropdown();
       }
     } );

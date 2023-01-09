@@ -17,6 +17,7 @@ import { SwiperModule } from 'swiper/angular';
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { ActivityHistoryCardComponent } from './component/card/activity-history-card/activity-history-card.component';
 import { AssetCardComponent } from './component/card/asset-card/asset-card.component';
 import { BlogCardComponent } from './component/card/blog-card/blog-card.component';
@@ -53,7 +54,6 @@ import { PresentationSwiperComponent } from './component/swiper/presentation-swi
 import { ScreenshotSwiperComponent } from './component/swiper/screenshot-swiper/screenshot-swiper.component';
 import { RequestInterceptor } from './interceptor/request/request.interceptor';
 import { ResponseInterceptor } from './interceptor/response/response.interceptor';
-import { AppComponent } from './app.component';
 import { AboutUsPageComponent } from './page/landing-layout/about-us-page/about-us-page.component';
 import { BlogContentPageComponent } from './page/landing-layout/blog-page/blog-content-page/blog-content-page.component';
 import { BlogPageComponent } from './page/landing-layout/blog-page/blog-page.component';

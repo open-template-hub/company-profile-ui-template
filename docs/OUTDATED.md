@@ -15,6 +15,7 @@ Following packages are not updated in the develop branch yet. So, if you want to
 
 | Package | Current | Wanted | Latest | Location |
 | --- | --- | --- | --- | --- |
+| jsdom | 20.0.3 | 20.0.3 | 21.0.0 | node_modules/jsdom |
 | simple-icons | 7.21.0 | 7.21.0 | 8.2.0 | node_modules/simple-icons |
 | typescript | 4.8.4 | 4.9.4 | 4.9.4 | node_modules/typescript |
 

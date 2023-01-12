@@ -5,7 +5,7 @@
     <scripts>
       <script value="buildLocal" />
     </scripts>
-    <node-interpreter value="/usr/local/bin/node" />
+    <node-interpreter value="project" />
     <envs>
       <env name="NODE_MODULES_CACHE" value="false" />
     </envs>

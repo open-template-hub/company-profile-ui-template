@@ -43,7 +43,12 @@
               </oth-brand-button>
             </div>
             <div *ngIf="!product.openSource" class="button-wrapper">
-              <oth-button
+              <oth-button (click)="redirect(product.urlDemo)"
+                          *ngIf="product.urlDemo"
+                          i18n-text="@@productPage.demo.button"
+                          text="Demo">
+              </oth-button>
+              <oth-button *ngIf="!product.urlDemo"
                   (click)="router.navigate([URLS.contactUs])"
                   [text]="getContactUsButtonText(productLineKey)"></oth-button>
             </div>

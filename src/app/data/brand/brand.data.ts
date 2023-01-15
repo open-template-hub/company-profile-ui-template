@@ -22,7 +22,8 @@ export const BRAND = {
     'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/logo-text-v-dark.min.png',
     'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-color.min.png',
     'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-light.min.png',
-    'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-dark.min.png'
+    'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-dark.min.png',
+    'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/wallpaper/oth-packages-2-color.min.png',
   ],
   mobileWallpapers: []
 };

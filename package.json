@@ -51,7 +51,7 @@
     "ics": "^2.41.0",
     "jsdom": "^21.0.0",
     "mixpanel-browser": "^2.45.0",
-    "ngx-markdown": "^15.0.0",
+    "ngx-markdown": "^15.1.0",
     "ngx-toastr": "^16.0.2",
     "path": "^0.12.7",
     "rxjs": "^7.8.0",
@@ -62,8 +62,8 @@
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.1.0",
-    "@angular/cli": "^15.1.0",
+    "@angular-devkit/build-angular": "^15.1.1",
+    "@angular/cli": "^15.1.1",
     "@angular/compiler-cli": "^15.1.0",
     "@angular/language-service": "^15.1.0",
     "@angular/localize": "^15.1.0",

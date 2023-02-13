@@ -16,6 +16,13 @@ export const OTH_TIME_LINE: TimeLineItem[] = [
     footerText: '#hello-npm'
   },
   {
+    title: 'Startup Portal',
+    date: '12 Feb 2023',
+    paragraph: 'Development of \'Startup Portal\' project has began.',
+    img: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/timeline/ui/company-profile-ui-timeline-4.png',
+    footerText: '#startup-portal'
+  },
+  {
     title: 'What\'s next?',
     date: '???',
     paragraph: 'We dedicate ourselves to help you to minimize the effort while building a new software. So, we are keep adding new micro-servers, user interfaces and so on. Follow us on social media to not miss them.',

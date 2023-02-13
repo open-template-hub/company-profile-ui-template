@@ -53,12 +53,16 @@
   <a
       (click)="closeAllDropDowns()"
       *ngIf="pageTwoOpened"
-      [routerLink]="URLS.contactUs"
-      class="contact">
+      [routerLink]="URLS.contactUs">
     <i [class]="'fas fa-envelope fa-fw'" aria-hidden="true"></i>
     <span> Contact Us </span>
   </a>
-  <a *ngIf="pageTwoOpened" class="disabled">
-    <span></span>
+  <a
+      (click)="closeAllDropDowns()"
+      *ngIf="pageTwoOpened"
+      [href]="'https://portal.opentemplatehub.com'"
+      class="startup-portal">
+    <i [class]="'fas fa-arrow-up-right-from-square fa-fw'" aria-hidden="true"></i>
+    <span> Portal </span>
   </a>
 </nav>

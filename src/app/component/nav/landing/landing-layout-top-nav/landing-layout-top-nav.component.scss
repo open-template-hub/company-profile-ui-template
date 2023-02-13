@@ -23,9 +23,15 @@
   margin-right: 10px;
 }
 
-.top-nav .right-item-wrapper .contact {
+.top-nav .right-item-wrapper .startup-portal {
 
   border-bottom: var(--theme-color) 2px solid;
+  
+  & i {
+    color: var(--theme-color);
+    font-size: 18px;
+    margin: 3px 6px 3px 0;
+  }
 }
 
 .top-nav .brand > * {
@@ -77,20 +83,24 @@ app-dropdown-menu i {
     background: none;
   }
 
-  .top-nav .right-item-wrapper .contact:hover {
-    @include util.default-border-radius;
+  .top-nav .right-item-wrapper .startup-portal:hover {
 
     transition: 0.3s ease-in-out;
 
     color: white;
     background-color: var(--theme-color);
+    
+    & i {
+      transition: 0.3s ease-in-out;
+      color: white;
+    }
   }
 
   .bottom-nav a:hover {
     background: var(--hover);
   }
 
-  .bottom-nav .right-item-wrapper .contact:hover {
+  .bottom-nav .right-item-wrapper .startup-portal:hover {
     color: white;
     background: var(--theme-color);
   }

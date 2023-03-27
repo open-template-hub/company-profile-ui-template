@@ -120,7 +120,7 @@ export class HomePageComponent implements AfterViewInit {
         this.slides.push( {
           title: product.name,
           description: product.description,
-          img: product.logo,
+          img: product.logo.replace( '/min', '' ).replace( '.min', '' ),
           background: './assets/slide/background-1.jpg',
           url: productLine.key === 'premium' ? URLS.contactUs : product.url,
           buttonText: product.openSource ? 'Open Source' : 'Contact Us'

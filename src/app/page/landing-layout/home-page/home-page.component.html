@@ -1,23 +1,29 @@
-<div class="hero">
-  <div class="hero-left">
-    <h1>Open Template Hub</h1>
-    <p>
-      {{ BRAND.bio }}
-    </p>
-  </div>
+<div style="--swiper-navigation-color: var(--theme-color); --swiper-pagination-color: var(--theme-color)"
+     class="swiper mySwiper">
+  <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let slide of slides">
+      <img class="hero-bg" [src]="slide.background" alt="background"/>
+      <img [src]="slide.img" alt="img" class="hero-img"/>
+      <div class="hero-left">
+        <h2>{{ slide.title }}</h2>
+        <p>
+          {{ slide.description }}
+        </p>
+        <br/>
+        <a *ngIf="slide.url" [href]="slide.url" target="_blank" class="join">
+          <p>
+            {{ slide.buttonText }}
+          </p>
+          <i class="fas fa-caret-right" aria-hidden="true"></i>
+        </a>
+      </div>
 
-  <div class="hero-right">
-    <app-image-content-loader
-        *ngIf="!brandLogoLoaded"
-        [imageContentLoaderClass]="'brand-logo-main'"></app-image-content-loader>
-    <img
-        (load)="setBrandLogoLoaded()"
-        [alt]="BRAND.heroImage.description"
-        [src]="BRAND.heroImage.src"
-        [style]="'display:' + (!brandLogoLoaded ? 'none;' : 'block;')"
-        height="450"
-        width="800"/>
+    </div>
   </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
 </div>
 
 <div class="counters">
@@ -50,7 +56,8 @@
       *ngFor="let testimonial of TESTIMONIALS"
       [testimonial]="testimonial">
   </app-testimonial-card>
-  <oth-button [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']" [routerLink]="URLS.customers" i18n-text="@@productPage.readMoreStories"
+  <oth-button [buttonClasses]="['lighter-contrast-border-color', 'lighter-contrast-font-color', 'transparent-button']"
+              [routerLink]="URLS.customers" i18n-text="@@productPage.readMoreStories"
               text="Read More Stories">
   </oth-button>
 </div>

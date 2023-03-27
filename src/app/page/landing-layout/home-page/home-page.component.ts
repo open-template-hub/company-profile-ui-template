@@ -8,6 +8,7 @@ import { PARTNERS } from 'src/app/data/partner/partner.data';
 import { TESTIMONIALS } from 'src/app/data/testimonial/testimonial.data';
 import { Feature } from 'src/app/model/feature/feature.model';
 import { Testimonial } from 'src/app/model/testimonial/testimonial.model';
+import Swiper from 'swiper';
 import { environment } from '../../../../environments/environment';
 import { environmentCommon } from '../../../../environments/environment-common';
 import { BRAND } from '../../../data/brand/brand.data';
@@ -17,6 +18,15 @@ import { Partner } from '../../../model/partner/partner.model';
 import { AnalyticsService } from '../../../service/analytics/analytics.service';
 import { LoadingService } from '../../../service/loading/loading.service';
 import { GithubProviderService } from '../../../service/provider/github-provider.service';
+
+export interface SwiperData {
+  title: string;
+  description: string;
+  img: string;
+  background?: string;
+  url?: string;
+  buttonText?: string;
+}
 
 @Component( {
   selector: 'app-home-page',
@@ -29,13 +39,21 @@ export class HomePageComponent implements AfterViewInit {
   openSourceRatioCounter = { count: 0, id: 'openSourceRatioCounterElement' };
   npmCounterLoading = true;
   githubCounterLoading = true;
-  brandLogoLoaded = false;
 
   BRAND = BRAND;
   URLS = URLS;
   PRODUCT_LINES = PRODUCT_LINES;
   LIBRARIES = LIBRARIES;
   PLUGINS = PLUGINS;
+
+  slides: SwiperData[] = [ {
+    title: 'Startup Portal',
+    description: 'One central place that helps you to minimize the effort while managing your software projects.',
+    img: './assets/slide/image-1.png',
+    background: './assets/slide/background-1.jpg',
+    url: 'https://portal.opentemplatehub.com',
+    buttonText: 'Try Now'
+  } ];
 
   PARTNERS: Partner[] = PARTNERS;
 
@@ -85,10 +103,47 @@ export class HomePageComponent implements AfterViewInit {
       private analyticsService: AnalyticsService,
       private loadingService: LoadingService
   ) {
+    for ( const productLine of PRODUCT_LINES ) {
+      for ( const product of productLine.products ) {
+        this.slides.push( {
+          title: product.name,
+          description: product.description,
+          img: product.logo.replace('/min', '').replace('.min', ''),
+          background: './assets/slide/background-1.jpg',
+          url: productLine.key === 'premium' ? URLS.contactUs : product.url,
+          buttonText: product.openSource ? 'Open Source' : 'Contact Us'
+        } );
+      }
+    }
+    for ( const productLine of LIBRARIES ) {
+      for ( const product of productLine.products ) {
+        this.slides.push( {
+          title: product.name,
+          description: product.description,
+          img: product.logo,
+          background: './assets/slide/background-1.jpg',
+          url: productLine.key === 'premium' ? URLS.contactUs : product.url,
+          buttonText: product.openSource ? 'Open Source' : 'Contact Us'
+        } );
+      }
+    }
   }
 
   ngAfterViewInit() {
     this.initCountUps();
+
+    const swiper = new Swiper( '.mySwiper', {
+      speed: 600,
+      parallax: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    } );
   }
 
   countUpFormatter( n: number ) {
@@ -102,10 +157,6 @@ export class HomePageComponent implements AfterViewInit {
       }
     }
   }
-
-  setBrandLogoLoaded = () => {
-    this.brandLogoLoaded = true;
-  };
 
   getPresentationCardFooter( isOpenSource: boolean ): string {
     return isOpenSource ? $localize`:@@productTypeTag.openSource:opensource` : $localize`:@@productTypeTag.premium:premium`;

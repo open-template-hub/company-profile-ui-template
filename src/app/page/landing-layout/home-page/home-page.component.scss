@@ -4,32 +4,161 @@
 @use '../../../../styles/util/util';
 @use '../landing-layout.component';
 
-.hero {
+.swiper {
+  width: 100%;
+  max-width: 2000px;
+  height: 700px;
+}
+
+.swiper-slide {
   @include util.flex-layout-row;
+  @include util.flex-center-center;
   @include util.margin-x-auto;
 
-  align-items: center;
   justify-content: space-evenly;
 
   width: 100%;
 
-  padding-top: 7vh;
+  padding: 7vh 100px 50px;
+  position: relative;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  & .hero-left {
+    font-size: 38px;
+    max-width: 50%;
+    min-width: 450px;
+    padding-bottom: 50px;
+  }
+
+  & .hero-img {
+    max-width: 300px;
+    max-height: 300px;
+    padding-bottom: 100px;
+  }
+
+  & .hero-bg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: auto;
+    z-index: -1;
+    opacity: 0.1;
+  }
+
+  & .hero-left {
+    @include util.flex-layout-column;
+
+    align-items: flex-start;
+
+    & h2 {
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      border-bottom: 3px solid var(--theme-color);
+    }
+
+    & h2, & p {
+      color: var(--darker);
+    }
+
+    & p {
+      font-size: 24px;
+      text-align: left;
+    }
+
+    & .join {
+      @include util.flex-layout-row;
+      @include util.flex-center-center;
+
+      cursor: pointer;
+      gap: 6px;
+
+      border-radius: 5px;
+      width: 200px;
+      height: 40px;
+      background-color: var(--shine);
+      border: 2px solid var(--theme-color-lighter-6);
+
+      & p {
+        font-size: 20px;
+        color: var(--theme-color);
+      }
+
+      & i {
+        font-size: 24px;
+        color: var(--theme-color);
+
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: move-x;
+        animation-timing-function: ease-in-out;
+      }
+    }
+  }
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-slide .title {
+  font-size: 41px;
+  font-weight: 300;
+}
+
+.swiper-slide .subtitle {
+  font-size: 21px;
+}
+
+.swiper-slide .text {
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.3;
+}
+
+.screenshots-wrapper {
+  @include util.flex-layout-column;
+  @include util.flex-center-center;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  padding-left: 3vw;
+  padding-right: 3vw;
+
+  padding-bottom: 100px;
 
   text-align: center;
 
-  & .hero-left,
-  & .hero-right {
-    @include util.flex-layout-column;
-    @include util.flex-center-center;
-  }
+  .product-card {
+    & .header {
+      text-align: left;
+      font-size: 20px;
+    }
 
-  & .hero-left p {
-    font-size: 24px;
-  }
+    & .body {
+      justify-content: flex-start;
+      background-color: transparent;
+      box-shadow: none;
 
-  & .hero-right img {
-    width: 100%;
-    height: auto;
+      & app-screenshot-swiper {
+        margin-top: 50px;
+      }
+
+      height: 350px;
+      width: 84vw;
+    }
   }
 }
 
@@ -122,25 +251,49 @@
 }
 
 @media only screen and (max-width: 999px) {
-  .hero {
-    max-width: 94vw;
+
+  .swiper-slide {
+    width: auto;
     flex-direction: column;
+    box-sizing: border-box;
+
+    justify-content: flex-start;
 
     font-size: 25px;
 
+    text-align: center;
+
+    gap: 10px;
+    padding: 0 3vw 3vh;
+    height: auto;
+
+    & .hero-bg {
+      width: auto;
+      height: 100%;
+      min-height: 100%;
+    }
+
+    & .hero-img {
+      height: 250px;
+      padding-bottom: 0;
+      padding-top: 50px;
+    }
+
     & .hero-left {
-      & h1 {
-        padding: 30px 0;
+      align-items: center;
+
+      padding-bottom: 50px;
+      min-width: 90vw;
+
+      & h2 {
+        padding: 5px 0;
+        font-size: 30px;
       }
 
       & p {
+        text-align: center;
         font-size: 18px;
       }
-    }
-
-    & > * {
-      width: 94vw;
-      margin-bottom: 40px;
     }
   }
 
@@ -188,32 +341,6 @@
   .cards-wrapper {
     & app-testimonial-card, img {
       margin-top: 0;
-    }
-  }
-
-  .hero {
-    flex-direction: row;
-    padding-bottom: 50px;
-
-    box-sizing: border-box;
-
-    padding-left: 100px;
-    padding-right: 100px;
-
-    & .hero-left,
-    &.hero-right {
-      min-width: 450px;
-    }
-
-    & .hero-left {
-      font-size: 38px;
-      max-width: 50%;
-
-      padding-bottom: 50px;
-
-      & h1 {
-        padding: 40px 0;
-      }
     }
   }
 

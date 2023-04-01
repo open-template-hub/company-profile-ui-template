@@ -1,6 +1,6 @@
 <div style="--swiper-navigation-color: var(--theme-color); --swiper-pagination-color: var(--theme-color)"
-     class="swiper mySwiper">
-  <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+     class="swiper hero-swiper">
+  <div data-swiper-parallax="-23%"></div>
   <div class="swiper-wrapper">
     <div class="swiper-slide" *ngFor="let slide of slides">
       <img class="hero-bg" [src]="slide.background" alt="background"/>
@@ -11,7 +11,7 @@
           {{ slide.description }}
         </p>
         <br/>
-        <a *ngIf="slide.url" [href]="slide.url" target="_blank" class="join">
+        <a *ngIf="slide.url" [href]="slide.url" target="_blank" class="slide-button">
           <p>
             {{ slide.buttonText }}
           </p>

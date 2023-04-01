@@ -39,6 +39,7 @@ export class HomePageComponent implements AfterViewInit {
   openSourceRatioCounter = { count: 0, id: 'openSourceRatioCounterElement' };
   npmCounterLoading = true;
   githubCounterLoading = true;
+  swiper: Swiper;
 
   BRAND = BRAND;
   URLS = URLS;
@@ -48,11 +49,11 @@ export class HomePageComponent implements AfterViewInit {
 
   slides: SwiperData[] = [ {
     title: 'Startup Portal',
-    description: 'One central place that helps you to minimize the effort while managing your software projects.',
+    description: 'Transform your data into insights',
     img: './assets/slide/image-1.png',
     background: './assets/slide/background-1.jpg',
     url: 'https://portal.opentemplatehub.com',
-    buttonText: 'Try Now'
+    buttonText: 'Try For Free'
   } ];
 
   PARTNERS: Partner[] = PARTNERS;
@@ -132,7 +133,7 @@ export class HomePageComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.initCountUps();
 
-    const swiper = new Swiper( '.mySwiper', {
+    this.swiper = new Swiper( '.hero-swiper', {
       speed: 600,
       parallax: true,
       pagination: {

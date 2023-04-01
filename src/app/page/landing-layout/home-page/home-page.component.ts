@@ -47,14 +47,7 @@ export class HomePageComponent implements AfterViewInit {
   LIBRARIES = LIBRARIES;
   PLUGINS = PLUGINS;
 
-  slides: SwiperData[] = [ {
-    title: 'Startup Portal',
-    description: 'Transform your data into insights',
-    img: './assets/slide/image-1.png',
-    background: './assets/slide/background-1.jpg',
-    url: 'https://portal.opentemplatehub.com',
-    buttonText: 'Try For Free'
-  } ];
+  slides: SwiperData[] = [];
 
   PARTNERS: Partner[] = PARTNERS;
 
@@ -109,10 +102,10 @@ export class HomePageComponent implements AfterViewInit {
         this.slides.push( {
           title: product.name,
           description: product.description,
-          img: product.logo.replace('/min', '').replace('.min', ''),
+          img: product.logo.replace( '/min', '' ).replace( '.min', '' ),
           background: './assets/slide/background-1.jpg',
-          url: productLine.key === 'premium' ? URLS.contactUs : product.url,
-          buttonText: product.openSource ? 'Open Source' : 'Contact Us'
+          url: product.triable ? product.url : (productLine.key === 'premium' ? URLS.contactUs : product.url),
+          buttonText: product.triable ? 'Try For Free' : ( product.openSource ? 'Open Source' : 'Contact Us' )
         } );
       }
     }

@@ -101,6 +101,197 @@ const DEFAULT_OPEN_SOURCE_SERVER_PRICING_OPTIONS = [
 
 export const PRODUCT_LINES: ProductLine[] = [
   {
+    key: 'premium',
+    name: 'Premium',
+    description: $localize`:@@servicesData.premium.description:Get more things done with our premium solutions`,
+    color: ThemeColorSettings.yellow,
+    products: [
+      {
+        key: 'startup-portal',
+        name: 'Startup Portal',
+        description: `Transform your data into insights`,
+        url: 'https://portal.opentemplatehub.com',
+        logo: './assets/slide/image-1.png',
+        triable: true
+      },
+      {
+        key: 'orchestration-server-template',
+        name: 'Orchestration Server',
+        description: $localize`:@@premium.orchestrationServerTemplate.description:Orchestration Server Template is a middleware server that has simple yet powerful design to connect your business with all Open Template Hub servers (like Auth Server, Payment Server, File Storage Server or Mail Server). It also has generic design to integrate any other servers.`,
+        url: environmentCommon.website.github.url + '/' + environmentCommon.company.social.github,
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/orchestration-server-logo.min.png',
+        color: ThemeColorSettings.yellow,
+        demonstrationImg: {
+          src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/server/orchestration-server-demo.min.png',
+          description: 'Orchestration Server Architectural Design'
+        },
+        features: [
+          {
+            name: $localize`:@@premium.orchestrationServerTemplate.feature.1:Core Features`,
+            details: [
+              {
+                name: $localize`:@@premium.orchestrationServerTemplate.feature.1.detail.1:Integrated with OTH Servers`,
+                description: $localize`:@@premium.orchestrationServerTemplate.feature.1.detail.2:Works seamlessly with Open Template Hub Servers.`,
+              },
+              PROFESSIONAL_HELP_FEATURE,
+              CUSTOMISED_SOLUTIONS_FEATURE,
+            ],
+          },
+          {
+            name: `Quality and DX`,
+            details: [
+              CI_CD_AUTOMATION_FEATURE,
+              CUSTOMISED_AUTOMATIONS_FEATURE,
+            ],
+          },
+          {
+            name: `Security`,
+            details: [
+              SECURITY_REPORTS_FEATURE,
+              CUSTOM_SECURITY_COMPLIANCE_FEATURE,
+            ],
+          },
+        ],
+        pricingOptions: [
+          {
+            title: $localize`:@@premium.orchestrationServerTemplate.basic.title:Basic`,
+            description: $localize`:@@premium.orchestrationServerTemplate.basic.description:For Individuals`,
+            features: [ [ 'true', '', '' ], [ '', '' ], [ '', '' ] ],
+            price: {
+              currency: '$',
+              value: '99',
+              subscriptionTime: '',
+            },
+          },
+          {
+            title: $localize`:@@premium.orchestrationServerTemplate.standard.title:Standard`,
+            description: $localize`:@@premium.orchestrationServerTemplate.standard.description:For Startups`,
+            ribbon: PRODUCT_RIBBONS.get( 'deal' ),
+            contactRequired: true,
+            features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`:@@premium.orchestrationServerTemplate.standard.feature.1:Up to 10 users`, '' ] ]
+          },
+          {
+            title: $localize`:@@premium.orchestrationServerTemplate.enterprise.title:Enterprise`,
+            description: $localize`:@@premium.orchestrationServerTemplate.enterprise.description:For Enterprises`,
+            contactRequired: true,
+            features: [ [ 'true', 'true', 'true' ], [ 'true', 'true' ], [ $localize`:@@premium.orchestrationServerTemplate.enterprise.feature.1:Unlimited users`, 'true' ] ]
+          },
+        ],
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.node,
+          TECH_STACK.express,
+          TECH_STACK.heroku,
+          TECH_STACK.npm
+        ]
+      },
+      {
+        key: 'saas-ui-template',
+        name: 'Saas UI',
+        color: ThemeColorSettings.yellow,
+        description: `SaaS UI Template is modern, responsive and customisable software as a service ui template for your business. It contains reusable components, theme color and design support along with dark theme support.`,
+        url: 'https://saas.opentemplatehub.com',
+        urlDemo: 'https://saas.opentemplatehub.com',
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/saas-ui-logo.min.png',
+        video: {
+          url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/saas-ui-video-1.mp4',
+          description: $localize`:@@userInterfaces.companyProfileUITemplate.video.description:Modern, responsive and customisable saas ui template written with Angular`,
+        },
+        screenshots: [
+          {
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/saas-ui-demo-light.min.png',
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.1:Responsive Design`
+          },
+          {
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/saas-ui-demo-dark.min.png',
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.2:Dark Mode Support`
+          },
+          {
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/saas-ui-screenshot-1.min.png',
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.3:Reusable Components`
+          },
+          {
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/saas-ui-screenshot-2.min.png',
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.4:Customisable Theme Colors`
+          },
+          {
+            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/saas-ui-screenshot-3.min.png',
+            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.5:Customisable Theme Design`
+          }
+        ],
+        features: [
+          {
+            name: $localize`:@@premium.orchestrationServerTemplate.feature.1:Core Features`,
+            details: [
+              {
+                name: $localize`:@@premium.orchestrationServerTemplate.feature.1.detail.1:Integrated with OTH Servers`,
+                description: $localize`:@@premium.orchestrationServerTemplate.feature.1.detail.2:Works seamlessly with Open Template Hub Servers.`,
+              },
+              PROFESSIONAL_HELP_FEATURE,
+              CUSTOMISED_SOLUTIONS_FEATURE,
+            ],
+          },
+          {
+            name: `Quality and DX`,
+            details: [
+              CI_CD_AUTOMATION_FEATURE,
+              CUSTOMISED_AUTOMATIONS_FEATURE,
+            ],
+          },
+          {
+            name: `Security`,
+            details: [
+              SECURITY_REPORTS_FEATURE,
+              CUSTOM_SECURITY_COMPLIANCE_FEATURE,
+            ],
+          },
+        ],
+        pricingOptions: [
+          {
+            title: $localize`:@@premium.orchestrationServerTemplate.basic.title:Basic`,
+            description: $localize`:@@premium.orchestrationServerTemplate.basic.description:For Individuals`,
+            features: [ [ 'true', '', '' ], [ '', '' ], [ '', '' ] ],
+            price: {
+              currency: '$',
+              value: '99',
+              subscriptionTime: '',
+            },
+          },
+          {
+            title: $localize`:@@premium.orchestrationServerTemplate.standard.title:Standard`,
+            description: $localize`:@@premium.orchestrationServerTemplate.standard.description:For Startups`,
+            ribbon: PRODUCT_RIBBONS.get( 'deal' ),
+            contactRequired: true,
+            features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`:@@premium.orchestrationServerTemplate.standard.feature.1:Up to 10 users`, '' ] ]
+          },
+          {
+            title: $localize`:@@premium.orchestrationServerTemplate.enterprise.title:Enterprise`,
+            description: $localize`:@@premium.orchestrationServerTemplate.enterprise.description:For Enterprises`,
+            contactRequired: true,
+            features: [ [ 'true', 'true', 'true' ], [ 'true', 'true' ], [ $localize`:@@premium.orchestrationServerTemplate.enterprise.feature.1:Unlimited users`, 'true' ] ]
+          },
+        ],
+        techStack: [
+          TECH_STACK.typeScript,
+          TECH_STACK.angular,
+          TECH_STACK.fontAwesome,
+          TECH_STACK.heroku,
+          TECH_STACK.sass,
+          TECH_STACK.markdown,
+          TECH_STACK.npm
+        ],
+      },
+      {
+        key: 'cloud-integration-server-template',
+        name: 'Cloud Integration Server',
+        color: ThemeColorSettings.gray,
+        description: $localize`:@@productLinesData.cloudIntegrationServerTemplate.description:Coming soon..`,
+        url: URLS.maintenance,
+        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/cloud-integration-server-logo.min.png'
+      },
+    ],
+  },
+  {
     key: 'server',
     name: 'Servers',
     description: $localize`:@@productLinesData.servers.description:Micro server solutions for your needs`,
@@ -539,189 +730,6 @@ export const PRODUCT_LINES: ProductLine[] = [
       },
     ],
   },
-  {
-    key: 'premium',
-    name: 'Premium',
-    description: $localize`:@@servicesData.premium.description:Get more things done with our premium solutions`,
-    color: ThemeColorSettings.yellow,
-    products: [
-      {
-        key: 'orchestration-server-template',
-        name: 'Orchestration Server',
-        description: $localize`:@@premium.orchestrationServerTemplate.description:Orchestration Server Template is a middleware server that has simple yet powerful design to connect your business with all Open Template Hub servers (like Auth Server, Payment Server, File Storage Server or Mail Server). It also has generic design to integrate any other servers.`,
-        url: environmentCommon.website.github.url + '/' + environmentCommon.company.social.github,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/orchestration-server-logo.min.png',
-        color: ThemeColorSettings.yellow,
-        demonstrationImg: {
-          src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/server/orchestration-server-demo.min.png',
-          description: 'Orchestration Server Architectural Design'
-        },
-        features: [
-          {
-            name: $localize`:@@premium.orchestrationServerTemplate.feature.1:Core Features`,
-            details: [
-              {
-                name: $localize`:@@premium.orchestrationServerTemplate.feature.1.detail.1:Integrated with OTH Servers`,
-                description: $localize`:@@premium.orchestrationServerTemplate.feature.1.detail.2:Works seamlessly with Open Template Hub Servers.`,
-              },
-              PROFESSIONAL_HELP_FEATURE,
-              CUSTOMISED_SOLUTIONS_FEATURE,
-            ],
-          },
-          {
-            name: `Quality and DX`,
-            details: [
-              CI_CD_AUTOMATION_FEATURE,
-              CUSTOMISED_AUTOMATIONS_FEATURE,
-            ],
-          },
-          {
-            name: `Security`,
-            details: [
-              SECURITY_REPORTS_FEATURE,
-              CUSTOM_SECURITY_COMPLIANCE_FEATURE,
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: $localize`:@@premium.orchestrationServerTemplate.basic.title:Basic`,
-            description: $localize`:@@premium.orchestrationServerTemplate.basic.description:For Individuals`,
-            features: [ [ 'true', '', '' ], [ '', '' ], [ '', '' ] ],
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: '',
-            },
-          },
-          {
-            title: $localize`:@@premium.orchestrationServerTemplate.standard.title:Standard`,
-            description: $localize`:@@premium.orchestrationServerTemplate.standard.description:For Startups`,
-            ribbon: PRODUCT_RIBBONS.get( 'deal' ),
-            contactRequired: true,
-            features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`:@@premium.orchestrationServerTemplate.standard.feature.1:Up to 10 users`, '' ] ]
-          },
-          {
-            title: $localize`:@@premium.orchestrationServerTemplate.enterprise.title:Enterprise`,
-            description: $localize`:@@premium.orchestrationServerTemplate.enterprise.description:For Enterprises`,
-            contactRequired: true,
-            features: [ [ 'true', 'true', 'true' ], [ 'true', 'true' ], [ $localize`:@@premium.orchestrationServerTemplate.enterprise.feature.1:Unlimited users`, 'true' ] ]
-          },
-        ],
-        techStack: [
-          TECH_STACK.typeScript,
-          TECH_STACK.node,
-          TECH_STACK.express,
-          TECH_STACK.heroku,
-          TECH_STACK.npm
-        ]
-      },
-      {
-        key: 'saas-ui-template',
-        name: 'Saas UI',
-        color: ThemeColorSettings.yellow,
-        description: `SaaS UI Template is modern, responsive and customisable software as a service ui template for your business. It contains reusable components, theme color and design support along with dark theme support.`,
-        url: 'https://saas.opentemplatehub.com',
-        urlDemo: 'https://saas.opentemplatehub.com',
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/ui/saas-ui-logo.min.png',
-        video: {
-          url: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/demo/ui/videos/saas-ui-video-1.mp4',
-          description: $localize`:@@userInterfaces.companyProfileUITemplate.video.description:Modern, responsive and customisable saas ui template written with Angular`,
-        },
-        screenshots: [
-          {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/saas-ui-demo-light.min.png',
-            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.1:Responsive Design`
-          },
-          {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/saas-ui-demo-dark.min.png',
-            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.2:Dark Mode Support`
-          },
-          {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/saas-ui-screenshot-1.min.png',
-            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.3:Reusable Components`
-          },
-          {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/saas-ui-screenshot-2.min.png',
-            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.4:Customisable Theme Colors`
-          },
-          {
-            src: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/demo/ui/screenshots/saas-ui-screenshot-3.min.png',
-            description: $localize`:@@userInterfaces.companyProfileUITemplate.screenshot.5:Customisable Theme Design`
-          }
-        ],
-        features: [
-          {
-            name: $localize`:@@premium.orchestrationServerTemplate.feature.1:Core Features`,
-            details: [
-              {
-                name: $localize`:@@premium.orchestrationServerTemplate.feature.1.detail.1:Integrated with OTH Servers`,
-                description: $localize`:@@premium.orchestrationServerTemplate.feature.1.detail.2:Works seamlessly with Open Template Hub Servers.`,
-              },
-              PROFESSIONAL_HELP_FEATURE,
-              CUSTOMISED_SOLUTIONS_FEATURE,
-            ],
-          },
-          {
-            name: `Quality and DX`,
-            details: [
-              CI_CD_AUTOMATION_FEATURE,
-              CUSTOMISED_AUTOMATIONS_FEATURE,
-            ],
-          },
-          {
-            name: `Security`,
-            details: [
-              SECURITY_REPORTS_FEATURE,
-              CUSTOM_SECURITY_COMPLIANCE_FEATURE,
-            ],
-          },
-        ],
-        pricingOptions: [
-          {
-            title: $localize`:@@premium.orchestrationServerTemplate.basic.title:Basic`,
-            description: $localize`:@@premium.orchestrationServerTemplate.basic.description:For Individuals`,
-            features: [ [ 'true', '', '' ], [ '', '' ], [ '', '' ] ],
-            price: {
-              currency: '$',
-              value: '99',
-              subscriptionTime: '',
-            },
-          },
-          {
-            title: $localize`:@@premium.orchestrationServerTemplate.standard.title:Standard`,
-            description: $localize`:@@premium.orchestrationServerTemplate.standard.description:For Startups`,
-            ribbon: PRODUCT_RIBBONS.get( 'deal' ),
-            contactRequired: true,
-            features: [ [ 'true', 'true', '' ], [ 'true', '' ], [ $localize`:@@premium.orchestrationServerTemplate.standard.feature.1:Up to 10 users`, '' ] ]
-          },
-          {
-            title: $localize`:@@premium.orchestrationServerTemplate.enterprise.title:Enterprise`,
-            description: $localize`:@@premium.orchestrationServerTemplate.enterprise.description:For Enterprises`,
-            contactRequired: true,
-            features: [ [ 'true', 'true', 'true' ], [ 'true', 'true' ], [ $localize`:@@premium.orchestrationServerTemplate.enterprise.feature.1:Unlimited users`, 'true' ] ]
-          },
-        ],
-        techStack: [
-          TECH_STACK.typeScript,
-          TECH_STACK.angular,
-          TECH_STACK.fontAwesome,
-          TECH_STACK.heroku,
-          TECH_STACK.sass,
-          TECH_STACK.markdown,
-          TECH_STACK.npm
-        ],
-      },
-      {
-        key: 'cloud-integration-server-template',
-        name: 'Cloud Integration Server',
-        color: ThemeColorSettings.gray,
-        description: $localize`:@@productLinesData.cloudIntegrationServerTemplate.description:Coming soon..`,
-        url: URLS.maintenance,
-        logo: 'https://raw.githubusercontent.com/open-template-hub/open-template-hub.github.io/master/assets/min/logo/server/cloud-integration-server-logo.min.png'
-      },
-    ],
-  }
 ];
 
 export const LIBRARIES: ProductLine[] = [

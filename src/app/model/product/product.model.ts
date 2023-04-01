@@ -35,6 +35,7 @@ export interface Product {
   redirectToUrl?: boolean;
   redirectToUrlAlter?: boolean;
   hasNpmPackage?: boolean;
+  triable?: boolean;
 }
 
 export interface ProductLine {

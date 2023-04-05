@@ -95,7 +95,7 @@
       <app-presentation-card
           [class]="product.color ? product.color : ''"
           [footerText]=getPresentationCardFooter(product.openSource)
-          [href]="URLS.product + '/' + productLine.key + '/' + product.key"
+          [href]="product.redirectToUrl ? product.url : (URLS.product + '/' + productLine.key + '/' + product.key)"
           [imgHeight]="150"
           [maintenance]="product.url === URLS.maintenance"
           [secondaryText]="product.description"

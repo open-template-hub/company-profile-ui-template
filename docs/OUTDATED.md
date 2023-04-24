@@ -16,7 +16,7 @@ Following packages are not updated in the develop branch yet. So, if you want to
 | Package | Current | Wanted | Latest | Location |
 | --- | --- | --- | --- | --- |
 | ics | 2.44.0 | 2.44.0 | 3.1.0 | node_modules/ics |
-| swiper | 8.4.7 | 8.4.7 | 9.2.2 | node_modules/swiper |
+| swiper | 8.4.7 | 8.4.7 | 9.2.4 | node_modules/swiper |
 | typescript | 4.9.5 | 4.9.5 | 5.0.4 | node_modules/typescript |
 | zone.js | 0.12.0 | 0.12.0 | 0.13.0 | node_modules/zone.js |
 

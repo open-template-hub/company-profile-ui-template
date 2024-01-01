@@ -31,7 +31,7 @@ Following packages are not updated in the develop branch yet. So, if you want to
 | @angular/router | 15.2.10 | 15.2.10 | 17.0.8 | node_modules/@angular/router |
 | @angular/service-worker | 15.2.10 | 15.2.10 | 17.0.8 | node_modules/@angular/service-worker |
 | @types/jasmine | 4.6.4 | 4.6.4 | 5.1.4 | node_modules/@types/jasmine |
-| @types/node | 18.19.3 | 18.19.3 | 20.10.5 | node_modules/@types/node |
+| @types/node | 18.19.4 | 18.19.4 | 20.10.6 | node_modules/@types/node |
 | helmet | 6.2.0 | 6.2.0 | 7.1.0 | node_modules/helmet |
 | ics | 2.44.0 | 2.44.0 | 3.7.2 | node_modules/ics |
 | jasmine-core | 4.6.0 | 4.6.0 | 5.1.1 | node_modules/jasmine-core |

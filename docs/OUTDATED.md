@@ -15,10 +15,10 @@ Following packages are not updated in the develop branch yet. So, if you want to
 
 | Package | Current | Wanted | Latest | Location |
 | --- | --- | --- | --- | --- |
-| @angular-devkit/build-angular | 15.2.10 | 15.2.10 | 17.0.8 | node_modules/@angular-devkit/build-angular |
+| @angular-devkit/build-angular | 15.2.10 | 15.2.10 | 17.0.9 | node_modules/@angular-devkit/build-angular |
 | @angular/animations | 15.2.10 | 15.2.10 | 17.0.8 | node_modules/@angular/animations |
 | @angular/cdk | 15.2.9 | 15.2.9 | 17.0.4 | node_modules/@angular/cdk |
-| @angular/cli | 15.2.10 | 15.2.10 | 17.0.8 | node_modules/@angular/cli |
+| @angular/cli | 15.2.10 | 15.2.10 | 17.0.9 | node_modules/@angular/cli |
 | @angular/common | 15.2.10 | 15.2.10 | 17.0.8 | node_modules/@angular/common |
 | @angular/compiler | 15.2.10 | 15.2.10 | 17.0.8 | node_modules/@angular/compiler |
 | @angular/compiler-cli | 15.2.10 | 15.2.10 | 17.0.8 | node_modules/@angular/compiler-cli |
@@ -31,14 +31,14 @@ Following packages are not updated in the develop branch yet. So, if you want to
 | @angular/router | 15.2.10 | 15.2.10 | 17.0.8 | node_modules/@angular/router |
 | @angular/service-worker | 15.2.10 | 15.2.10 | 17.0.8 | node_modules/@angular/service-worker |
 | @types/jasmine | 4.6.4 | 4.6.4 | 5.1.4 | node_modules/@types/jasmine |
-| @types/node | 18.19.4 | 18.19.4 | 20.10.6 | node_modules/@types/node |
+| @types/node | 18.19.5 | 18.19.5 | 20.10.7 | node_modules/@types/node |
 | helmet | 6.2.0 | 6.2.0 | 7.1.0 | node_modules/helmet |
 | ics | 2.44.0 | 2.44.0 | 3.7.2 | node_modules/ics |
 | jasmine-core | 4.6.0 | 4.6.0 | 5.1.1 | node_modules/jasmine-core |
-| jsdom | 21.1.2 | 21.1.2 | 23.0.1 | node_modules/jsdom |
+| jsdom | 21.1.2 | 21.1.2 | 23.2.0 | node_modules/jsdom |
 | ngx-markdown | 15.1.2 | 15.1.2 | 17.1.1 | node_modules/ngx-markdown |
 | ngx-toastr | 16.2.0 | 16.2.0 | 18.0.0 | node_modules/ngx-toastr |
-| simple-icons | 8.15.0 | 8.15.0 | 10.4.0 | node_modules/simple-icons |
+| simple-icons | 8.15.0 | 8.15.0 | 11.0.0 | node_modules/simple-icons |
 | swiper | 8.4.7 | 8.4.7 | 11.0.5 | node_modules/swiper |
 | typescript | 4.9.5 | 4.9.5 | 5.3.3 | node_modules/typescript |
 | zone.js | 0.12.0 | 0.12.0 | 0.14.2 | node_modules/zone.js |

@@ -110,7 +110,7 @@ export const PRODUCT_LINES: ProductLine[] = [
         key: 'startup-portal',
         name: 'Startup Portal',
         description: `Transform your data into insights`,
-        url: 'https://startupportal.io',
+        url: 'https://portal.opentemplatehub.com',
         redirectToUrl: true,
         logo: './assets/slide/image-1.png',
         triable: true

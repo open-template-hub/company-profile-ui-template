@@ -38,10 +38,10 @@ Following packages are not updated in the develop branch yet. So, if you want to
 | helmet | 6.2.0 | 6.2.0 | 8.1.0 | node_modules/helmet |
 | ics | 2.44.0 | 2.44.0 | 3.8.1 | node_modules/ics |
 | jasmine-core | 4.6.1 | 4.6.1 | 5.13.0 | node_modules/jasmine-core |
-| jsdom | 21.1.2 | 21.1.2 | 27.3.0 | node_modules/jsdom |
+| jsdom | 21.1.2 | 21.1.2 | 27.4.0 | node_modules/jsdom |
 | ngx-markdown | 15.1.2 | 15.1.2 | 21.0.1 | node_modules/ngx-markdown |
 | ngx-toastr | 16.2.0 | 16.2.0 | 19.1.0 | node_modules/ngx-toastr |
-| simple-icons | 8.15.0 | 8.15.0 | 16.2.0 | node_modules/simple-icons |
+| simple-icons | 8.15.0 | 8.15.0 | 16.3.0 | node_modules/simple-icons |
 | swiper | 8.4.7 | 8.4.7 | 12.0.3 | node_modules/swiper |
 | typescript | 4.9.5 | 4.9.5 | 5.9.3 | node_modules/typescript |
 | zone.js | 0.12.0 | 0.12.0 | 0.16.0 | node_modules/zone.js |

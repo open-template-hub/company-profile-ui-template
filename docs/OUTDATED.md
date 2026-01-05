@@ -41,7 +41,7 @@ Following packages are not updated in the develop branch yet. So, if you want to
 | jsdom | 21.1.2 | 21.1.2 | 27.4.0 | node_modules/jsdom |
 | ngx-markdown | 15.1.2 | 15.1.2 | 21.0.1 | node_modules/ngx-markdown |
 | ngx-toastr | 16.2.0 | 16.2.0 | 19.1.0 | node_modules/ngx-toastr |
-| simple-icons | 8.15.0 | 8.15.0 | 16.3.0 | node_modules/simple-icons |
+| simple-icons | 8.15.0 | 8.15.0 | 16.4.0 | node_modules/simple-icons |
 | swiper | 8.4.7 | 8.4.7 | 12.0.3 | node_modules/swiper |
 | typescript | 4.9.5 | 4.9.5 | 5.9.3 | node_modules/typescript |
 | zone.js | 0.12.0 | 0.12.0 | 0.16.0 | node_modules/zone.js |
